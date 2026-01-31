@@ -82,7 +82,12 @@ PLATFORMS = {
 MAX_RETRIES = 3
 INITIAL_BACKOFF = 2
 MAX_WORKERS = 5  # Parallel installer checks
-CACHE_DIR = 'cached-data/trending'
+
+# Use absolute path from script location
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+REPO_ROOT = os.path.dirname(SCRIPT_DIR)  # Go up one level from scripts/
+CACHE_DIR = os.path.join(REPO_ROOT, 'cached-data', 'trending')
+
 CACHE_VALIDITY_HOURS = 23  # Slightly less than 24h to ensure fresh data
 
 @dataclass
@@ -359,7 +364,7 @@ def check_installers_batch(candidates: List[RepoCandidate], platform: str) -> Li
     
     return results
 
-def fetch_trending_repos(platform: str, desired_count: int = 70) -> List[Dict]:
+def fetch_trending_repos(platform: str, desired_count: int = 100) -> List[Dict]:
     """Fetch trending repositories with optimized search strategy"""
     print(f"\n{'='*60}")
     print(f"Fetching trending repos for {platform.upper()}")
@@ -378,7 +383,7 @@ def fetch_trending_repos(platform: str, desired_count: int = 70) -> List[Dict]:
             'days': 30,
             'min_stars': 100,
             'topics': topics,
-            'max_pages': 3,
+            'max_pages': 5,  # Increased from 3
             'weight': 1.5
         },
         # Strategy 2: Medium timeframe, broader (catch rising stars)
@@ -386,7 +391,7 @@ def fetch_trending_repos(platform: str, desired_count: int = 70) -> List[Dict]:
             'days': 90,
             'min_stars': 50,
             'topics': topics[:1],  # Primary topic only
-            'max_pages': 3,
+            'max_pages': 5,  # Increased from 3
             'weight': 1.2
         },
         # Strategy 3: Established projects (quality baseline)
@@ -394,8 +399,16 @@ def fetch_trending_repos(platform: str, desired_count: int = 70) -> List[Dict]:
             'days': 180,
             'min_stars': 500,
             'topics': [],
-            'max_pages': 2,
+            'max_pages': 3,  # Increased from 2
             'weight': 1.0
+        },
+        # Strategy 4: NEW - Longer timeframe for more coverage
+        {
+            'days': 365,
+            'min_stars': 200,
+            'topics': topics[:1] if topics else [],
+            'max_pages': 3,
+            'weight': 0.9
         }
     ]
     
@@ -455,8 +468,8 @@ def fetch_trending_repos(platform: str, desired_count: int = 70) -> List[Dict]:
                     # Apply strategy weight
                     weighted_score = int(base_score * strategy['weight'])
                     
-                    # Filter: minimum score threshold
-                    if weighted_score < 10:
+                    # Filter: minimum score threshold (lowered to get more results)
+                    if weighted_score < 5:  # Changed from 10
                         continue
                     
                     candidate = RepoCandidate(
@@ -497,7 +510,7 @@ def fetch_trending_repos(platform: str, desired_count: int = 70) -> List[Dict]:
     )
     
     # Take top N candidates for installer check (more than desired to account for filtering)
-    top_candidates = all_candidates[:min(len(all_candidates), desired_count * 3)]
+    top_candidates = all_candidates[:min(len(all_candidates), desired_count * 4)]  # Changed from 3x to 4x
     
     print(f"\nTop {len(top_candidates)} candidates selected for installer verification")
     
@@ -531,7 +544,7 @@ def load_cache(platform: str) -> Optional[Dict]:
         
         # Reject empty or invalid cache
         repo_count = data.get('totalCount', 0)
-        if repo_count < 10:  # Minimum threshold
+        if repo_count < 30:  # Minimum threshold (30% of target)
             print(f"Cache for {platform} has insufficient data ({repo_count} repos), refetching...")
             return None
         
@@ -573,7 +586,7 @@ def main():
             print(f"Skipping {platform} - using cache")
             continue
         
-        repos = fetch_trending_repos(platform, desired_count=70)
+        repos = fetch_trending_repos(platform, desired_count=100)
         
         output = {
             'platform': platform,
