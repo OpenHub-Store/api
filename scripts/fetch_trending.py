@@ -411,7 +411,9 @@ def fetch_trending_repos(platform: str, desired_count: int = 70) -> List[Dict]:
             topic_query = " OR ".join([f"topic:{t}" for t in strategy['topics']])
             query = f"{base_query} ({topic_query})"
         else:
-            query = f"{base_query} language:kotlin OR language:swift OR language:c++ OR language:rust OR language:c#"
+            # Strategy 3: Use primary language for the platform instead of complex OR
+            primary_lang = PLATFORMS[platform]['languages']['primary'][0]
+            query = f"{base_query} language:{primary_lang}"
         
         page = 1
         while page <= strategy['max_pages']:
