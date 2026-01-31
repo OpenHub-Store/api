@@ -65,6 +65,14 @@ jobs:
           ref: main
           fetch-depth: 0  # Full history for better change detection
 
+      - name: Initialize cached-data directory
+        run: |
+          mkdir -p cached-data/trending
+          # Add .gitkeep if directory is empty to ensure it's tracked
+          if [ ! "$(ls -A cached-data/trending)" ]; then
+            touch cached-data/trending/.gitkeep
+          fi
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
@@ -95,16 +103,24 @@ jobs:
           echo "Force refresh: $FORCE_REFRESH"
           echo "Platforms: $PLATFORMS"
           
+          # Ensure directory exists
+          mkdir -p cached-data/trending
+          
           # Run the optimized script
           python scripts/fetch_trending.py
           
-          # Check if any files were modified
-          if git diff --quiet cached-data/; then
-            echo "changed=false" >> $GITHUB_OUTPUT
-            echo "No changes detected"
-          else
+          # Debug: Show what files exist
+          echo "Files in cached-data/trending:"
+          ls -lah cached-data/trending/ || echo "Directory doesn't exist"
+          
+          # Check if any files were modified or created
+          if git status --porcelain cached-data/ | grep -q .; then
             echo "changed=true" >> $GITHUB_OUTPUT
             echo "Changes detected in cached data"
+            git status --porcelain cached-data/
+          else
+            echo "changed=false" >> $GITHUB_OUTPUT
+            echo "No changes detected"
           fi
 
       - name: Validate JSON outputs
