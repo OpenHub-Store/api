@@ -64,16 +64,16 @@ PLATFORMS = {
         }
     },
     'linux': {
-        'topics': ['linux', 'gtk', 'qt'],
-        'installer_extensions': ['.appimage', '.deb', '.rpm', '.flatpak', '.snap'],
+        'topics': ['linux', 'gtk', 'qt', 'gnome', 'kde'],
+        'installer_extensions': ['.appimage', '.deb', '.rpm', '.flatpak', '.snap', '.tar.gz', '.tar.xz', '.bin'],
         'score_keywords': {
-            'high': ['linux', 'gtk', 'qt'],
-            'medium': ['desktop', 'gnome', 'kde'],
-            'low': ['app', 'unix']
+            'high': ['linux', 'gtk', 'qt', 'gnome'],
+            'medium': ['desktop', 'gnome', 'kde', 'flatpak'],
+            'low': ['app', 'unix', 'gui']
         },
         'languages': {
             'primary': ['c++', 'rust', 'c'],
-            'secondary': ['python', 'go']
+            'secondary': ['python', 'go', 'vala']
         }
     }
 }
@@ -323,8 +323,19 @@ def check_repo_has_installers(owner: str, repo_name: str, platform: str) -> bool
             extensions = PLATFORMS[platform]['installer_extensions']
             for asset in assets:
                 asset_name = asset['name'].lower()
-                if any(asset_name.endswith(ext) for ext in extensions):
-                    return True
+                
+                # For Linux, be more lenient with tar archives
+                if platform == 'linux':
+                    # Accept any Linux-like archive/binary
+                    if any(asset_name.endswith(ext) for ext in extensions):
+                        return True
+                    # Also accept x86_64/amd64 binaries
+                    if any(arch in asset_name for arch in ['x86_64', 'amd64', 'linux']):
+                        if any(asset_name.endswith(ext) for ext in ['.tar.gz', '.tar.xz', '.tar.bz2', '.zip']):
+                            return True
+                else:
+                    if any(asset_name.endswith(ext) for ext in extensions):
+                        return True
 
         return False
 
