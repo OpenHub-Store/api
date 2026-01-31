@@ -529,12 +529,18 @@ def load_cache(platform: str) -> Optional[Dict]:
         with open(cache_file, 'r', encoding='utf-8') as f:
             data = json.load(f)
         
+        # Reject empty or invalid cache
+        repo_count = data.get('totalCount', 0)
+        if repo_count < 10:  # Minimum threshold
+            print(f"Cache for {platform} has insufficient data ({repo_count} repos), refetching...")
+            return None
+        
         # Check cache validity
         last_updated = datetime.fromisoformat(data['lastUpdated'].replace('Z', '+00:00'))
         age_hours = (datetime.now(last_updated.tzinfo) - last_updated).total_seconds() / 3600
         
         if age_hours < CACHE_VALIDITY_HOURS:
-            print(f"Using cached data for {platform} (age: {age_hours:.1f}h)")
+            print(f"Using cached data for {platform} (age: {age_hours:.1f}h, {repo_count} repos)")
             return data
         
     except Exception as e:
