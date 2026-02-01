@@ -1,4 +1,4 @@
-name: Fetch Trending Repositories
+name: Fetch All Repository Categories
 
 on:
   schedule:
@@ -7,10 +7,15 @@ on:
   workflow_dispatch:
     inputs:
       force_refresh:
-        description: 'Force refresh all platforms (ignore cache)'
+        description: 'Force refresh all categories (ignore cache)'
         required: false
         default: 'false'
         type: boolean
+      categories:
+        description: 'Specific categories to update (comma-separated: trending,new-releases,most-popular)'
+        required: false
+        default: 'all'
+        type: string
       platforms:
         description: 'Specific platforms to update (comma-separated: android,windows,macos,linux)'
         required: false
@@ -39,8 +44,8 @@ jobs:
           echo "remaining=$REMAINING" >> $GITHUB_OUTPUT
           echo "limit=$LIMIT" >> $GITHUB_OUTPUT
           
-          # Need at least 500 requests for a full run (safety margin)
-          if [ "$REMAINING" -gt 500 ]; then
+          # Need at least 1000 requests for all categories (safety margin)
+          if [ "$REMAINING" -gt 1000 ]; then
             echo "can_proceed=true" >> $GITHUB_OUTPUT
             echo "✓ Rate limit OK: $REMAINING/$LIMIT remaining"
           else
@@ -53,7 +58,7 @@ jobs:
     needs: check-rate-limit
     if: needs.check-rate-limit.outputs.can_proceed == 'true'
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 60
 
     permissions:
       contents: write
@@ -63,99 +68,128 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: main
-          fetch-depth: 0  # Full history for better change detection
+          fetch-depth: 0
 
-      - name: Initialize cached-data directory
+      - name: Initialize cached-data directory structure
         run: |
           mkdir -p cached-data/trending
-          # Add .gitkeep if directory is empty to ensure it's tracked
-          if [ ! "$(ls -A cached-data/trending)" ]; then
-            touch cached-data/trending/.gitkeep
-          fi
+          mkdir -p cached-data/new-releases
+          mkdir -p cached-data/most-popular
+          
+          # Add .gitkeep for empty directories
+          for dir in trending new-releases most-popular; do
+            if [ ! "$(ls -A cached-data/$dir 2>/dev/null)" ]; then
+              touch cached-data/$dir/.gitkeep
+            fi
+          done
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-          cache: 'pip'  # Cache pip dependencies
+          cache: 'pip'
 
       - name: Install dependencies
         run: |
           pip install --upgrade pip
           pip install -r scripts/requirements.txt
 
-      - name: Cache trending data
+      - name: Cache category data
         uses: actions/cache@v4
         with:
-          path: cached-data/trending
-          key: trending-data-${{ hashFiles('cached-data/trending/*.json') }}
+          path: cached-data
+          key: category-data-${{ hashFiles('cached-data/**/*.json') }}
           restore-keys: |
-            trending-data-
+            category-data-
 
-      - name: Fetch trending repositories
+      - name: Fetch all repository categories
         id: fetch
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           FORCE_REFRESH: ${{ inputs.force_refresh || 'false' }}
+          CATEGORIES: ${{ inputs.categories || 'all' }}
           PLATFORMS: ${{ inputs.platforms || 'all' }}
         run: |
-          echo "Starting trending repository fetch..."
+          echo "Starting repository fetch for all categories..."
           echo "Force refresh: $FORCE_REFRESH"
+          echo "Categories: $CATEGORIES"
           echo "Platforms: $PLATFORMS"
           
-          # Ensure directory exists
-          mkdir -p cached-data/trending
+          # Ensure directory structure exists
+          mkdir -p cached-data/trending cached-data/new-releases cached-data/most-popular
           
-          # Run the optimized script
-          python scripts/fetch_trending.py
+          # Run the comprehensive script
+          python scripts/fetch_all_categories.py
           
           # Debug: Show what files exist
-          echo "Files in cached-data/trending:"
-          ls -lah cached-data/trending/ || echo "Directory doesn't exist"
+          echo ""
+          echo "=== Files in cached-data ==="
+          find cached-data -type f -name "*.json" | sort
+          echo ""
           
           # Check if any files were modified or created
           if git status --porcelain cached-data/ | grep -q .; then
             echo "changed=true" >> $GITHUB_OUTPUT
-            echo "Changes detected in cached data"
+            echo "✓ Changes detected in cached data"
+            echo ""
+            echo "Changed files:"
             git status --porcelain cached-data/
           else
             echo "changed=false" >> $GITHUB_OUTPUT
-            echo "No changes detected"
+            echo "No changes detected - all caches still valid"
           fi
 
       - name: Validate JSON outputs
         if: steps.fetch.outputs.changed == 'true'
         run: |
           echo "Validating JSON files..."
-          for file in cached-data/trending/*.json; do
+          
+          error_count=0
+          for file in $(find cached-data -type f -name "*.json"); do
             if ! jq empty "$file" 2>/dev/null; then
               echo "::error::Invalid JSON in $file"
-              exit 1
+              error_count=$((error_count + 1))
+            else
+              count=$(jq '.totalCount' "$file")
+              echo "✓ Valid: $file ($count repos)"
             fi
-            echo "✓ Valid: $file"
           done
+          
+          if [ $error_count -gt 0 ]; then
+            echo "::error::Found $error_count invalid JSON files"
+            exit 1
+          fi
 
       - name: Generate summary
         if: steps.fetch.outputs.changed == 'true'
         run: |
-          echo "## Trending Repositories Update Summary" >> $GITHUB_STEP_SUMMARY
+          echo "## Repository Categories Update Summary" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "**Updated at:** $(date -u +'%Y-%m-%d %H:%M:%S UTC')" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "| Platform | Repositories | Status |" >> $GITHUB_STEP_SUMMARY
-          echo "|----------|--------------|--------|" >> $GITHUB_STEP_SUMMARY
           
-          for platform in android windows macos linux; do
-            file="cached-data/trending/$platform.json"
-            if [ -f "$file" ]; then
-              count=$(jq '.totalCount' "$file")
-              echo "| $platform | $count | ✓ Updated |" >> $GITHUB_STEP_SUMMARY
-            else
-              echo "| $platform | 0 | ✗ Missing |" >> $GITHUB_STEP_SUMMARY
-            fi
+          # Summary table for each category
+          for category in trending new-releases most-popular; do
+            category_title=$(echo $category | sed 's/-/ /g' | sed 's/\b\(.\)/\u\1/g')
+            echo "### 📊 $category_title" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "| Platform | Repositories | Status |" >> $GITHUB_STEP_SUMMARY
+            echo "|----------|--------------|--------|" >> $GITHUB_STEP_SUMMARY
+            
+            for platform in android windows macos linux; do
+              file="cached-data/$category/$platform.json"
+              if [ -f "$file" ]; then
+                count=$(jq '.totalCount' "$file")
+                echo "| $platform | $count | ✓ Updated |" >> $GITHUB_STEP_SUMMARY
+              else
+                echo "| $platform | 0 | ⏭️ Cached |" >> $GITHUB_STEP_SUMMARY
+              fi
+            done
+            
+            echo "" >> $GITHUB_STEP_SUMMARY
           done
           
-          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "---" >> $GITHUB_STEP_SUMMARY
           echo "**API Rate Limit Remaining:** ${{ needs.check-rate-limit.outputs.remaining }}" >> $GITHUB_STEP_SUMMARY
 
       - name: Commit and push changes
@@ -164,15 +198,28 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           
-          # Stage changes
-          git add cached-data/trending/*.json
+          # Stage all JSON files in cached-data
+          git add cached-data/**/*.json
+          
+          # Also add .gitkeep files if they exist
+          git add cached-data/*/.gitkeep 2>/dev/null || true
+          
+          # Count updates per category
+          trending_count=$(find cached-data/trending -name "*.json" | wc -l)
+          releases_count=$(find cached-data/new-releases -name "*.json" | wc -l)
+          popular_count=$(find cached-data/most-popular -name "*.json" | wc -l)
           
           # Create detailed commit message
           TIMESTAMP=$(date -u +'%Y-%m-%d %H:%M:%S UTC')
-          COMMIT_MSG="Update trending repositories - $TIMESTAMP
+          COMMIT_MSG="Update repository categories - $TIMESTAMP
 
+          📊 Categories updated:
+          - Trending: $trending_count platforms
+          - New Releases: $releases_count platforms
+          - Most Popular: $popular_count platforms
+          
           Updated platforms:
-          $(cd cached-data/trending && ls -1 *.json | sed 's/.json//' | sed 's/^/- /')"
+          $(cd cached-data && find . -name "*.json" -type f | sed 's|./||' | sort | sed 's/^/- /')"
           
           git commit -m "$COMMIT_MSG"
           
@@ -191,9 +238,17 @@ jobs:
       - name: No changes detected
         if: steps.fetch.outputs.changed == 'false'
         run: |
-          echo "No changes in trending repositories - cache is still valid"
+          echo "No changes in repository categories - all caches still valid"
           echo "## No Updates Required" >> $GITHUB_STEP_SUMMARY
-          echo "Cached data is still fresh (< 23 hours old)" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "All cached data is still fresh (< 23 hours old)" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "Cache status:" >> $GITHUB_STEP_SUMMARY
+          
+          for category in trending new-releases most-popular; do
+            category_title=$(echo $category | sed 's/-/ /g' | sed 's/\b\(.\)/\u\1/g')
+            echo "- **$category_title**: Using cache" >> $GITHUB_STEP_SUMMARY
+          done
 
   notify-on-failure:
     needs: [check-rate-limit, fetch-and-update]
@@ -205,11 +260,13 @@ jobs:
         uses: actions/github-script@v7
         with:
           script: |
-            const title = `Trending Repositories Fetch Failed - ${new Date().toISOString().split('T')[0]}`;
-            const body = `The scheduled trending repositories fetch job failed.
+            const title = `Repository Categories Fetch Failed - ${new Date().toISOString().split('T')[0]}`;
+            const body = `The scheduled repository categories fetch job failed.
             
             **Workflow run:** ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
             **Rate limit remaining:** ${{ needs.check-rate-limit.outputs.remaining || 'N/A' }}
+            
+            Categories affected: Trending, New Releases, Most Popular
             
             Please investigate and re-run manually if needed.`;
             
@@ -218,7 +275,7 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               state: 'open',
-              labels: 'automation,trending-fetch'
+              labels: 'automation,category-fetch'
             });
             
             const existingIssue = issues.data.find(issue => issue.title === title);
@@ -229,6 +286,6 @@ jobs:
                 repo: context.repo.repo,
                 title: title,
                 body: body,
-                labels: ['automation', 'trending-fetch', 'bug']
+                labels: ['automation', 'category-fetch', 'bug']
               });
             }
