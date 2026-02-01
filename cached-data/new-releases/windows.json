@@ -1,7 +1,43 @@
 {
   "category": "new-releases",
   "platform": "windows",
-  "lastUpdated": "2026-02-01T12:05:29.110551Z",
-  "totalCount": 0,
-  "repositories": []
+  "lastUpdated": "2026-02-01T12:15:34.308033Z",
+  "totalCount": 1,
+  "repositories": [
+    {
+      "id": 377163326,
+      "name": "UniGetUI",
+      "fullName": "marticliment/UniGetUI",
+      "owner": {
+        "login": "marticliment",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/53119851?v=4"
+      },
+      "description": "UniGetUI: The Graphical Interface for your package managers. Could be terribly described as a package manager manager to manage your package managers",
+      "defaultBranch": "main",
+      "htmlUrl": "https://github.com/marticliment/UniGetUI",
+      "stargazersCount": 20255,
+      "forksCount": 678,
+      "language": "C#",
+      "topics": [
+        "chocolatey",
+        "cli",
+        "npm",
+        "package",
+        "package-manager",
+        "pip",
+        "scoop",
+        "unigetui",
+        "windows",
+        "windows-10",
+        "windows-11",
+        "winget"
+      ],
+      "releasesUrl": "https://api.github.com/repos/marticliment/UniGetUI/releases{/id}",
+      "updatedAt": "2026-02-01T12:03:18Z",
+      "createdAt": "2021-06-15T12:57:58Z",
+      "latestReleaseDate": "2026-02-01T11:30:41Z",
+      "releaseRecency": 0,
+      "releaseRecencyText": "Released today"
+    }
+  ]
 }
