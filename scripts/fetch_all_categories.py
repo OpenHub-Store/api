@@ -574,43 +574,43 @@ def fetch_new_releases(platform: str, desired_count: int = 100) -> List[Dict]:
     verified_repos = check_installers_batch(all_candidates, platform, get_release_dates=True)
     
     fourteen_days_ago = datetime.utcnow() - timedelta(days=14)
-now = datetime.utcnow()
-recent_releases = []
+    now = datetime.utcnow()
+    recent_releases = []
 
-for repo in verified_repos:
-    if not repo.latest_release_date:
-        continue
-    
-    try:
-        # Parse and validate release date
-        release_date = datetime.fromisoformat(repo.latest_release_date.replace('Z', '+00:00'))
-        release_date_utc = release_date.replace(tzinfo=None)
+    for repo in verified_repos:
+        if not repo.latest_release_date:
+            continue
         
-        # Validate: release must be within last 14 days
-        if release_date_utc >= fourteen_days_ago:
-            # Validate: release must not be in the future (allow 1 hour clock skew)
-            if release_date_utc <= now + timedelta(hours=1):
-                recent_releases.append(repo)
-                days_ago = (now - release_date_utc).days
-                print(f"  ✓ {repo.full_name}: Released {days_ago}d ago")
-            else:
-                print(f"  ✗ {repo.full_name}: Future release date (skipped)")
-        else:
-            days_ago = (now - release_date_utc).days
-            print(f"  ✗ {repo.full_name}: Too old ({days_ago}d ago)")
+        try:
+            # Parse and validate release date
+            release_date = datetime.fromisoformat(repo.latest_release_date.replace('Z', '+00:00'))
+            release_date_utc = release_date.replace(tzinfo=None)
             
-    except Exception as e:
-        print(f"  ✗ {repo.full_name}: Invalid date format - {e}")
-        continue
-    
-    # Sort by release date (newest first)
-    recent_releases.sort(key=lambda r: r.latest_release_date or '', reverse=True)
-    final_repos = recent_releases[:desired_count]
-    
-    print(f"\n{'='*60}")
-    print(f"✓ Found {len(final_repos)} repos with new STABLE releases")
-    print(f"{'='*60}")
-    return [repo.to_summary('new-releases') for repo in final_repos]
+            # Validate: release must be within last 14 days
+            if release_date_utc >= fourteen_days_ago:
+                # Validate: release must not be in the future (allow 1 hour clock skew)
+                if release_date_utc <= now + timedelta(hours=1):
+                    recent_releases.append(repo)
+                    days_ago = (now - release_date_utc).days
+                    print(f"  ✓ {repo.full_name}: Released {days_ago}d ago")
+                else:
+                    print(f"  ✗ {repo.full_name}: Future release date (skipped)")
+            else:
+                days_ago = (now - release_date_utc).days
+                print(f"  ✗ {repo.full_name}: Too old ({days_ago}d ago)")
+                
+        except Exception as e:
+            print(f"  ✗ {repo.full_name}: Invalid date format - {e}")
+            continue
+        
+        # Sort by release date (newest first)
+        recent_releases.sort(key=lambda r: r.latest_release_date or '', reverse=True)
+        final_repos = recent_releases[:desired_count]
+        
+        print(f"\n{'='*60}")
+        print(f"✓ Found {len(final_repos)} repos with new STABLE releases")
+        print(f"{'='*60}")
+        return [repo.to_summary('new-releases') for repo in final_repos]
 
 def fetch_most_popular(platform: str, desired_count: int = 100) -> List[Dict]:
     """Fetch most popular (highest stars) mature repositories"""
