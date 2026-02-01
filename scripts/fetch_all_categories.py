@@ -137,7 +137,17 @@ class RepoCandidate:
             base['trendingScore'] = round(self.score + (self.recent_stars_velocity * 10), 2)
         elif category == 'new-releases':
             base['latestReleaseDate'] = self.latest_release_date
-            base['releaseRecency'] = self._calculate_release_age()
+            recency = self._calculate_release_age()
+            base['releaseRecency'] = recency
+            # Add human-readable time
+            if recency == 0:
+                base['releaseRecencyText'] = 'Released today'
+            elif recency == 1:
+                base['releaseRecencyText'] = 'Released yesterday'
+            elif recency < 7:
+                base['releaseRecencyText'] = f'Released {recency} days ago'
+            else:
+                base['releaseRecencyText'] = f'Released {recency} days ago'
         elif category == 'most-popular':
             base['popularityScore'] = self.stars + (self.forks * 2)
             
@@ -149,8 +159,8 @@ class RepoCandidate:
             return 999
         try:
             release_date = datetime.fromisoformat(self.latest_release_date.replace('Z', '+00:00'))
-            age = (datetime.now(release_date.tzinfo) - release_date).days
-            return age
+            age = (datetime.utcnow() - release_date.replace(tzinfo=None)).days
+            return max(0, age)  # Ensure non-negative
         except:
             return 999
 
@@ -295,65 +305,82 @@ def calculate_trending_metrics(repo: Dict) -> Tuple[float, float]:
     except Exception:
         return 0.0, 365
 
-def get_latest_release_date(owner: str, repo_name: str) -> Optional[str]:
-    """Get the latest release published date"""
-    url = f'https://api.github.com/repos/{owner}/{repo_name}/releases'
-    response, error = make_request_with_retry(url, params={'per_page': 1}, timeout=10)
+def get_latest_stable_release(owner: str, repo_name: str) -> Tuple[Optional[str], Optional[Dict]]:
+    """
+    Get the latest STABLE (non-prerelease, non-draft) release
+    Returns: (published_at, release_data)
+    """
+    # Try the /releases/latest endpoint first (fastest, gets latest stable)
+    latest_url = f'https://api.github.com/repos/{owner}/{repo_name}/releases/latest'
+    response, error = make_request_with_retry(latest_url, timeout=10)
+    
+    if response and response.status_code == 200:
+        try:
+            release = response.json()
+            # Double-check it's not a pre-release or draft
+            if not release.get('draft') and not release.get('prerelease'):
+                return release.get('published_at'), release
+        except:
+            pass
+    
+    # Fallback: manually search through releases
+    releases_url = f'https://api.github.com/repos/{owner}/{repo_name}/releases'
+    response, error = make_request_with_retry(releases_url, params={'per_page': 10}, timeout=10)
     
     if response is None:
-        return None
+        return None, None
     
     try:
         releases = response.json()
-        if releases and len(releases) > 0:
-            return releases[0].get('published_at')
+        
+        # Find first stable release (not draft, not prerelease)
+        for release in releases:
+            if not release.get('draft') and not release.get('prerelease'):
+                return release.get('published_at'), release
+        
+        return None, None
+        
     except:
-        pass
-    
-    return None
+        return None, None
 
 def check_repo_has_installers(owner: str, repo_name: str, platform: str, get_release_date: bool = False) -> Tuple[bool, Optional[str]]:
     """Check if repository has relevant installer files"""
-    url = f'https://api.github.com/repos/{owner}/{repo_name}/releases'
-    response, error = make_request_with_retry(url, params={'per_page': 5}, timeout=10)
-
-    if response is None:
+    
+    # Get latest stable release
+    published_at, release_data = get_latest_stable_release(owner, repo_name)
+    
+    if not release_data:
         return False, None
-
-    try:
-        releases = response.json()
-        latest_release_date = None
+    
+    # Check if release has installer assets
+    assets = release_data.get('assets', [])
+    if not assets:
+        return False, None
+    
+    extensions = PLATFORMS[platform]['installer_extensions']
+    has_installer = False
+    
+    for asset in assets:
+        asset_name = asset['name'].lower()
         
-        for release in releases[:3]:
-            if release.get('draft'):
-                continue
-            
-            # Store first non-draft release date
-            if get_release_date and latest_release_date is None:
-                latest_release_date = release.get('published_at')
-                
-            assets = release.get('assets', [])
-            if not assets:
-                continue
-
-            extensions = PLATFORMS[platform]['installer_extensions']
-            for asset in assets:
-                asset_name = asset['name'].lower()
-                
-                if platform == 'linux':
-                    if any(asset_name.endswith(ext) for ext in extensions):
-                        return True, latest_release_date
-                    if any(arch in asset_name for arch in ['x86_64', 'amd64', 'linux']):
-                        if any(asset_name.endswith(ext) for ext in ['.tar.gz', '.tar.xz', '.tar.bz2', '.zip']):
-                            return True, latest_release_date
-                else:
-                    if any(asset_name.endswith(ext) for ext in extensions):
-                        return True, latest_release_date
-
-        return False, None
-
-    except Exception:
-        return False, None
+        if platform == 'linux':
+            # More lenient for Linux
+            if any(asset_name.endswith(ext) for ext in extensions):
+                has_installer = True
+                break
+            if any(arch in asset_name for arch in ['x86_64', 'amd64', 'linux']):
+                if any(asset_name.endswith(ext) for ext in ['.tar.gz', '.tar.xz', '.tar.bz2', '.zip']):
+                    has_installer = True
+                    break
+        else:
+            if any(asset_name.endswith(ext) for ext in extensions):
+                has_installer = True
+                break
+    
+    if has_installer:
+        return True, published_at if get_release_date else None
+    
+    return False, None
 
 def check_installers_batch(candidates: List[RepoCandidate], platform: str, get_release_dates: bool = False) -> List[RepoCandidate]:
     """Check installers in parallel"""
@@ -540,27 +567,49 @@ def fetch_new_releases(platform: str, desired_count: int = 100) -> List[Dict]:
             time.sleep(0.3)
     
     # Check for installers AND get release dates
-    print(f"Checking {len(all_candidates)} candidates for recent releases...")
+    print(f"\n✓ Collected {len(all_candidates)} candidates")
+
+    # Check for installers AND get release dates (with validation)
+    print(f"Checking candidates for recent STABLE releases...")
     verified_repos = check_installers_batch(all_candidates, platform, get_release_dates=True)
     
-    # Filter: Only keep repos with releases in last 14 days
     fourteen_days_ago = datetime.utcnow() - timedelta(days=14)
-    recent_releases = []
+now = datetime.utcnow()
+recent_releases = []
+
+for repo in verified_repos:
+    if not repo.latest_release_date:
+        continue
     
-    for repo in verified_repos:
-        if repo.latest_release_date:
-            try:
-                release_date = datetime.fromisoformat(repo.latest_release_date.replace('Z', '+00:00'))
-                if release_date.replace(tzinfo=None) >= fourteen_days_ago:
-                    recent_releases.append(repo)
-            except:
-                pass
+    try:
+        # Parse and validate release date
+        release_date = datetime.fromisoformat(repo.latest_release_date.replace('Z', '+00:00'))
+        release_date_utc = release_date.replace(tzinfo=None)
+        
+        # Validate: release must be within last 14 days
+        if release_date_utc >= fourteen_days_ago:
+            # Validate: release must not be in the future (allow 1 hour clock skew)
+            if release_date_utc <= now + timedelta(hours=1):
+                recent_releases.append(repo)
+                days_ago = (now - release_date_utc).days
+                print(f"  ✓ {repo.full_name}: Released {days_ago}d ago")
+            else:
+                print(f"  ✗ {repo.full_name}: Future release date (skipped)")
+        else:
+            days_ago = (now - release_date_utc).days
+            print(f"  ✗ {repo.full_name}: Too old ({days_ago}d ago)")
+            
+    except Exception as e:
+        print(f"  ✗ {repo.full_name}: Invalid date format - {e}")
+        continue
     
     # Sort by release date (newest first)
     recent_releases.sort(key=lambda r: r.latest_release_date or '', reverse=True)
     final_repos = recent_releases[:desired_count]
     
-    print(f"✓ Found {len(final_repos)} repos with new releases")
+    print(f"\n{'='*60}")
+    print(f"✓ Found {len(final_repos)} repos with new STABLE releases")
+    print(f"{'='*60}")
     return [repo.to_summary('new-releases') for repo in final_repos]
 
 def fetch_most_popular(platform: str, desired_count: int = 100) -> List[Dict]:
