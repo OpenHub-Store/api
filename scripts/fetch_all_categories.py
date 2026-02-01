@@ -158,10 +158,20 @@ class RepoCandidate:
         if not self.latest_release_date:
             return 999
         try:
-            release_date = datetime.fromisoformat(self.latest_release_date.replace('Z', '+00:00'))
-            age = (datetime.utcnow() - release_date.replace(tzinfo=None)).days
+            # Parse the release date and convert to UTC naive datetime
+            release_date_str = self.latest_release_date.replace('Z', '')
+            if '+' in release_date_str:
+                release_date_str = release_date_str.split('+')[0]
+            release_date = datetime.fromisoformat(release_date_str)
+            
+            # Get current UTC time as naive datetime
+            now = datetime.utcnow()
+            
+            # Calculate difference
+            age = (now - release_date).days
             return max(0, age)  # Ensure non-negative
-        except:
+        except Exception as e:
+            print(f"Error calculating age for {self.latest_release_date}: {e}")
             return 999
 
 def exponential_backoff_sleep(attempt: int, retry_after: Optional[int] = None) -> None:
@@ -511,10 +521,10 @@ def fetch_new_releases(platform: str, desired_count: int = 100) -> List[Dict]:
     search_strategies = [
         # Very recent updates with platform topics
         {'days': 7, 'min_stars': 50, 'topics': topics, 'max_pages': 5},
-        # Slightly older but still recent
-        {'days': 14, 'min_stars': 100, 'topics': topics[:1] if topics else [], 'max_pages': 5},
-        # Catch established projects with new releases
-        {'days': 14, 'min_stars': 500, 'topics': [], 'max_pages': 3}
+        {'days': 14, 'min_stars': 30, 'topics': topics, 'max_pages': 5},
+        {'days': 21, 'min_stars': 100, 'topics': topics[:1] if topics else [], 'max_pages': 5},
+        {'days': 21, 'min_stars': 500, 'topics': [], 'max_pages': 5},
+        {'days': 14, 'min_stars': 10, 'topics': topics, 'max_pages': 3}
     ]
     
     for strategy_idx, strategy in enumerate(search_strategies):
@@ -572,7 +582,15 @@ def fetch_new_releases(platform: str, desired_count: int = 100) -> List[Dict]:
     # Check for installers AND get release dates (with validation)
     print(f"Checking candidates for recent STABLE releases...")
     print(f"Looking for releases published in last 21 days...")
-    verified_repos = check_installers_batch(all_candidates, platform, get_release_dates=True)
+    print(f"Current UTC time: {datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S')}")
+    print(f"Cutoff date: {twenty_one_days_ago.strftime('%Y-%m-%d %H:%M:%S')}")
+
+    all_candidates.sort(key=lambda c: c.updated_at, reverse=True)
+
+    # Check MORE candidates for new-releases since filtering is strict
+    top_candidates = all_candidates[:min(len(all_candidates), desired_count * 6)]
+
+    verified_repos = check_installers_batch(top_candidates, platform, get_release_dates=True)
     
     twenty_one_days_ago = datetime.utcnow() - timedelta(days=21)
     now = datetime.utcnow()
@@ -583,22 +601,25 @@ def fetch_new_releases(platform: str, desired_count: int = 100) -> List[Dict]:
             continue
         
         try:
-            # Parse and validate release date
-            release_date = datetime.fromisoformat(repo.latest_release_date.replace('Z', '+00:00'))
-            release_date_utc = release_date.replace(tzinfo=None)
+            # Parse release date - remove timezone info for consistent comparison
+            release_date_str = repo.latest_release_date.replace('Z', '')
+            if '+' in release_date_str:
+                release_date_str = release_date_str.split('+')[0]
+            release_date_utc = datetime.fromisoformat(release_date_str)
             
-            # Validate: release must be within last 14 days
-            if release_date_utc >= twenty_one_days_ago:
+            # Calculate actual age in days
+            days_ago = (now - release_date_utc).days
+            
+            # Validate: release must be within last 21 days
+            if days_ago <= 21:
                 # Validate: release must not be in the future (allow 1 hour clock skew)
                 if release_date_utc <= now + timedelta(hours=1):
                     recent_releases.append(repo)
-                    days_ago = (now - release_date_utc).days
                     print(f"  ✓ {repo.full_name}: Released {days_ago}d ago")
                 else:
                     print(f"  ✗ {repo.full_name}: Future release date (skipped)")
             else:
-                days_ago = (now - release_date_utc).days
-                print(f"  ✗ {repo.full_name}: Too old ({days_ago}d ago, need <21 d)")
+                print(f"  ✗ {repo.full_name}: Too old ({days_ago}d ago, need ≤21d)")
                 
         except Exception as e:
             print(f"  ✗ {repo.full_name}: Invalid date format - {e}")
