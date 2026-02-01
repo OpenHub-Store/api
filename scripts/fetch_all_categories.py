@@ -571,9 +571,10 @@ def fetch_new_releases(platform: str, desired_count: int = 100) -> List[Dict]:
 
     # Check for installers AND get release dates (with validation)
     print(f"Checking candidates for recent STABLE releases...")
+    print(f"Looking for releases published in last 21 days...")
     verified_repos = check_installers_batch(all_candidates, platform, get_release_dates=True)
     
-    fourteen_days_ago = datetime.utcnow() - timedelta(days=14)
+    twenty_one_days_ago = datetime.utcnow() - timedelta(days=21)
     now = datetime.utcnow()
     recent_releases = []
 
@@ -587,7 +588,7 @@ def fetch_new_releases(platform: str, desired_count: int = 100) -> List[Dict]:
             release_date_utc = release_date.replace(tzinfo=None)
             
             # Validate: release must be within last 14 days
-            if release_date_utc >= fourteen_days_ago:
+            if release_date_utc >= twenty_one_days_ago:
                 # Validate: release must not be in the future (allow 1 hour clock skew)
                 if release_date_utc <= now + timedelta(hours=1):
                     recent_releases.append(repo)
@@ -597,7 +598,7 @@ def fetch_new_releases(platform: str, desired_count: int = 100) -> List[Dict]:
                     print(f"  ✗ {repo.full_name}: Future release date (skipped)")
             else:
                 days_ago = (now - release_date_utc).days
-                print(f"  ✗ {repo.full_name}: Too old ({days_ago}d ago)")
+                print(f"  ✗ {repo.full_name}: Too old ({days_ago}d ago, need <21 d)")
                 
         except Exception as e:
             print(f"  ✗ {repo.full_name}: Invalid date format - {e}")
@@ -712,7 +713,9 @@ def load_cache(category: str, platform: str) -> Optional[Dict]:
             data = json.load(f)
         
         repo_count = data.get('totalCount', 0)
-        if repo_count < 30:
+        # Lower threshold for new-releases since it's more volatile
+        min_threshold = 10 if category == 'new-releases' else 30
+        if repo_count < min_threshold:
             print(f"Cache for {category}/{platform} has insufficient data ({repo_count} repos), refetching...")
             return None
         
