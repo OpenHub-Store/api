@@ -79,7 +79,7 @@ PLATFORMS = {
 # Configuration - optimized for QUALITY over speed
 MAX_RETRIES = 3
 INITIAL_BACKOFF = 2
-MAX_WORKERS = 8  # Increased for faster parallel checks
+MAX_WORKERS = 5
 
 # Use absolute path from script location
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -395,6 +395,8 @@ def check_repo_has_installers(owner: str, repo_name: str, platform: str, get_rel
 def check_installers_batch(candidates: List[RepoCandidate], platform: str, get_release_dates: bool = False) -> List[RepoCandidate]:
     """Check installers in parallel"""
     results = []
+
+        print(f"  Checking {len(candidates)} repos (this may take a few minutes)...")
     
     with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
         future_to_repo = {
@@ -408,10 +410,14 @@ def check_installers_batch(candidates: List[RepoCandidate], platform: str, get_r
             for candidate in candidates
         }
         
+        checked = 0
         for future in as_completed(future_to_repo):
             candidate = future_to_repo[future]
+            checked += 1
+            if checked % 50 == 0:
+                print(f"  Progress: {checked}/{len(candidates)} checked...")
             try:
-                has_installers, release_date = future.result()
+                has_installers, release_date = future.result(timeout=15)  # Add 15s timeout
                 candidate.has_installers = has_installers
                 candidate.latest_release_date = release_date
                 
@@ -585,7 +591,7 @@ def fetch_new_releases(platform: str, desired_count: int = 100) -> List[Dict]:
     
     # Sort and check MORE candidates for better coverage
     all_candidates.sort(key=lambda c: c.updated_at, reverse=True)
-    top_candidates = all_candidates[:min(len(all_candidates), desired_count * 8)]  # Check 8x candidates
+    top_candidates = all_candidates[:min(len(all_candidates), desired_count * 4)]  # Check 8x candidates
     
     print(f"Checking {len(top_candidates)} candidates for recent STABLE releases...")
     print(f"Looking for releases published in last 21 days")
