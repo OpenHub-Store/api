@@ -395,8 +395,8 @@ def check_repo_has_installers(owner: str, repo_name: str, platform: str, get_rel
 def check_installers_batch(candidates: List[RepoCandidate], platform: str, get_release_dates: bool = False) -> List[RepoCandidate]:
     """Check installers in parallel"""
     results = []
-
-        print(f"  Checking {len(candidates)} repos (this may take a few minutes)...")
+    
+    print(f"  Checking {len(candidates)} repos (this may take a few minutes)...")
     
     with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
         future_to_repo = {
@@ -417,7 +417,7 @@ def check_installers_batch(candidates: List[RepoCandidate], platform: str, get_r
             if checked % 50 == 0:
                 print(f"  Progress: {checked}/{len(candidates)} checked...")
             try:
-                has_installers, release_date = future.result(timeout=15)  # Add 15s timeout
+                has_installers, release_date = future.result(timeout=15)
                 candidate.has_installers = has_installers
                 candidate.latest_release_date = release_date
                 
