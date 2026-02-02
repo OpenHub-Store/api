@@ -63,7 +63,7 @@ PLATFORMS = {
     },
     'linux': {
         'topics': ['linux', 'gtk', 'qt', 'gnome', 'kde'],
-        'installer_extensions': ['.appimage', '.deb', '.rpm', '.flatpak', '.snap', '.tar.gz', '.tar.xz', '.bin'],
+        'installer_extensions': ['.appimage', '.deb', '.rpm'],
         'score_keywords': {
             'high': ['linux', 'gtk', 'qt', 'gnome'],
             'medium': ['desktop', 'gnome', 'kde', 'flatpak'],
@@ -367,6 +367,10 @@ def check_repo_has_installers(owner: str, repo_name: str, platform: str, get_rel
     if not assets:
         return False, None
     
+    # OPTIMIZATION: Limit assets checked for Linux (it often has 20+ files)
+    if platform == 'linux' and len(assets) > 15:
+        assets = assets[:15]  # Only check first 15 assets
+    
     extensions = PLATFORMS[platform]['installer_extensions']
     has_installer = False
     
@@ -374,14 +378,10 @@ def check_repo_has_installers(owner: str, repo_name: str, platform: str, get_rel
         asset_name = asset['name'].lower()
         
         if platform == 'linux':
-            # More lenient for Linux
-            if any(asset_name.endswith(ext) for ext in extensions):
+            # Check common extensions first (most likely to match)
+            if asset_name.endswith(('.appimage', '.deb', '.rpm')):
                 has_installer = True
                 break
-            if any(arch in asset_name for arch in ['x86_64', 'amd64', 'linux']):
-                if any(asset_name.endswith(ext) for ext in ['.tar.gz', '.tar.xz', '.tar.bz2', '.zip']):
-                    has_installer = True
-                    break
         else:
             if any(asset_name.endswith(ext) for ext in extensions):
                 has_installer = True
