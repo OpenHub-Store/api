@@ -4,7 +4,7 @@ import json
 import requests
 from datetime import datetime, timedelta
 from typing import List, Dict, Optional, Tuple, Set
-from dataclasses import dataclass, asdict
+from dataclasses import dataclass
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import time
 
@@ -76,10 +76,10 @@ PLATFORMS = {
     }
 }
 
-# Configuration
+# Configuration - optimized for QUALITY over speed
 MAX_RETRIES = 3
 INITIAL_BACKOFF = 2
-MAX_WORKERS = 5
+MAX_WORKERS = 8  # Increased for faster parallel checks
 
 # Use absolute path from script location
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -158,7 +158,7 @@ class RepoCandidate:
         if not self.latest_release_date:
             return 999
         try:
-            # Parse the release date and convert to UTC naive datetime
+            # Parse the release date - strip timezone for naive datetime
             release_date_str = self.latest_release_date.replace('Z', '')
             if '+' in release_date_str:
                 release_date_str = release_date_str.split('+')[0]
@@ -171,7 +171,7 @@ class RepoCandidate:
             age = (now - release_date).days
             return max(0, age)  # Ensure non-negative
         except Exception as e:
-            print(f"Error calculating age for {self.latest_release_date}: {e}")
+            print(f"  ⚠ Error calculating age for {self.latest_release_date}: {e}")
             return 999
 
 def exponential_backoff_sleep(attempt: int, retry_after: Optional[int] = None) -> None:
@@ -435,11 +435,12 @@ def fetch_trending_repos(platform: str, desired_count: int = 100) -> List[Dict]:
     all_candidates: List[RepoCandidate] = []
     seen: Set[str] = set()
     
+    # More comprehensive search strategies for quality
     search_strategies = [
-        {'days': 30, 'min_stars': 100, 'topics': topics, 'max_pages': 5, 'weight': 1.5},
-        {'days': 90, 'min_stars': 50, 'topics': topics[:1], 'max_pages': 5, 'weight': 1.2},
-        {'days': 180, 'min_stars': 500, 'topics': [], 'max_pages': 3, 'weight': 1.0},
-        {'days': 365, 'min_stars': 200, 'topics': topics[:1] if topics else [], 'max_pages': 3, 'weight': 0.9}
+        {'days': 30, 'min_stars': 100, 'topics': topics, 'max_pages': 8, 'weight': 1.5},
+        {'days': 90, 'min_stars': 50, 'topics': topics[:1], 'max_pages': 8, 'weight': 1.2},
+        {'days': 180, 'min_stars': 500, 'topics': [], 'max_pages': 5, 'weight': 1.0},
+        {'days': 365, 'min_stars': 200, 'topics': topics[:1] if topics else [], 'max_pages': 5, 'weight': 0.9}
     ]
     
     for strategy_idx, strategy in enumerate(search_strategies):
@@ -494,10 +495,11 @@ def fetch_trending_repos(platform: str, desired_count: int = 100) -> List[Dict]:
             except Exception:
                 break
             
-            time.sleep(0.3)
+            time.sleep(0.2)  # Reduced sleep for faster execution
     
     all_candidates.sort(key=lambda c: c.score + (c.recent_stars_velocity * 10), reverse=True)
-    top_candidates = all_candidates[:min(len(all_candidates), desired_count * 4)]
+    # Check MORE candidates (5x instead of 4x)
+    top_candidates = all_candidates[:min(len(all_candidates), desired_count * 5)]
     verified_repos = check_installers_batch(top_candidates, platform, get_release_dates=False)
     verified_repos.sort(key=lambda c: c.score + (c.recent_stars_velocity * 10), reverse=True)
     final_repos = verified_repos[:desired_count]
@@ -506,7 +508,7 @@ def fetch_trending_repos(platform: str, desired_count: int = 100) -> List[Dict]:
     return [repo.to_summary('trending') for repo in final_repos]
 
 def fetch_new_releases(platform: str, desired_count: int = 100) -> List[Dict]:
-    """Fetch repos with new releases in last 14 days"""
+    """Fetch repos with new STABLE releases in last 21 days"""
     print(f"\n{'='*60}")
     print(f"Fetching NEW RELEASES for {platform.upper()}")
     print(f"{'='*60}")
@@ -517,14 +519,13 @@ def fetch_new_releases(platform: str, desired_count: int = 100) -> List[Dict]:
     all_candidates: List[RepoCandidate] = []
     seen: Set[str] = set()
     
-    # Search for recently updated repos (likely to have new releases)
+    # Comprehensive search for new releases - prioritize quality over speed
     search_strategies = [
-        # Very recent updates with platform topics
-        {'days': 7, 'min_stars': 50, 'topics': topics, 'max_pages': 5},
-        {'days': 14, 'min_stars': 30, 'topics': topics, 'max_pages': 5},
-        {'days': 21, 'min_stars': 100, 'topics': topics[:1] if topics else [], 'max_pages': 5},
-        {'days': 21, 'min_stars': 500, 'topics': [], 'max_pages': 5},
-        {'days': 14, 'min_stars': 10, 'topics': topics, 'max_pages': 3}
+        {'days': 7, 'min_stars': 50, 'topics': topics, 'max_pages': 8},
+        {'days': 14, 'min_stars': 30, 'topics': topics, 'max_pages': 8},
+        {'days': 21, 'min_stars': 100, 'topics': topics[:1] if topics else [], 'max_pages': 8},
+        {'days': 21, 'min_stars': 500, 'topics': [], 'max_pages': 8},
+        {'days': 14, 'min_stars': 10, 'topics': topics, 'max_pages': 5}
     ]
     
     for strategy_idx, strategy in enumerate(search_strategies):
@@ -574,26 +575,26 @@ def fetch_new_releases(platform: str, desired_count: int = 100) -> List[Dict]:
             except Exception:
                 break
             
-            time.sleep(0.3)
+            time.sleep(0.2)
     
-    # Check for installers AND get release dates
     print(f"\n✓ Collected {len(all_candidates)} candidates")
-
-    # Check for installers AND get release dates (with validation)
-    print(f"Checking candidates for recent STABLE releases...")
-    print(f"Looking for releases published in last 21 days...")
-    print(f"Current UTC time: {datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S')}")
-    print(f"Cutoff date: {twenty_one_days_ago.strftime('%Y-%m-%d %H:%M:%S')}")
-
-    all_candidates.sort(key=lambda c: c.updated_at, reverse=True)
-
-    # Check MORE candidates for new-releases since filtering is strict
-    top_candidates = all_candidates[:min(len(all_candidates), desired_count * 6)]
-
-    verified_repos = check_installers_batch(top_candidates, platform, get_release_dates=True)
     
+    # Define cutoff BEFORE using it
     twenty_one_days_ago = datetime.utcnow() - timedelta(days=21)
     now = datetime.utcnow()
+    
+    # Sort and check MORE candidates for better coverage
+    all_candidates.sort(key=lambda c: c.updated_at, reverse=True)
+    top_candidates = all_candidates[:min(len(all_candidates), desired_count * 8)]  # Check 8x candidates
+    
+    print(f"Checking {len(top_candidates)} candidates for recent STABLE releases...")
+    print(f"Looking for releases published in last 21 days")
+    print(f"Current UTC: {now.strftime('%Y-%m-%d %H:%M:%S')}")
+    print(f"Cutoff date: {twenty_one_days_ago.strftime('%Y-%m-%d %H:%M:%S')}\n")
+    
+    verified_repos = check_installers_batch(top_candidates, platform, get_release_dates=True)
+    
+    print(f"\nValidating {len(verified_repos)} repos with releases...")
     recent_releases = []
 
     for repo in verified_repos:
@@ -601,7 +602,7 @@ def fetch_new_releases(platform: str, desired_count: int = 100) -> List[Dict]:
             continue
         
         try:
-            # Parse release date - remove timezone info for consistent comparison
+            # Parse release date - strip timezone for naive datetime
             release_date_str = repo.latest_release_date.replace('Z', '')
             if '+' in release_date_str:
                 release_date_str = release_date_str.split('+')[0]
@@ -622,17 +623,22 @@ def fetch_new_releases(platform: str, desired_count: int = 100) -> List[Dict]:
                 print(f"  ✗ {repo.full_name}: Too old ({days_ago}d ago, need ≤21d)")
                 
         except Exception as e:
-            print(f"  ✗ {repo.full_name}: Invalid date format - {e}")
+            print(f"  ✗ {repo.full_name}: Error - {e}")
             continue
-        
-        # Sort by release date (newest first)
-        recent_releases.sort(key=lambda r: r.latest_release_date or '', reverse=True)
-        final_repos = recent_releases[:desired_count]
-        
-        print(f"\n{'='*60}")
+    
+    # Sort by release date (newest first)
+    recent_releases.sort(key=lambda r: r.latest_release_date or '', reverse=True)
+    final_repos = recent_releases[:desired_count]
+    
+    print(f"\n{'='*60}")
+    if len(final_repos) > 0:
         print(f"✓ Found {len(final_repos)} repos with new STABLE releases")
-        print(f"{'='*60}")
-        return [repo.to_summary('new-releases') for repo in final_repos]
+    else:
+        print(f"⚠️  Found 0 repos with new releases in last 21 days")
+        print(f"   Checked {len(verified_repos)} repos with installers")
+    print(f"{'='*60}")
+    
+    return [repo.to_summary('new-releases') for repo in final_repos]
 
 def fetch_most_popular(platform: str, desired_count: int = 100) -> List[Dict]:
     """Fetch most popular (highest stars) mature repositories"""
@@ -650,19 +656,16 @@ def fetch_most_popular(platform: str, desired_count: int = 100) -> List[Dict]:
     six_months_ago = (datetime.utcnow() - timedelta(days=180)).strftime('%Y-%m-%d')
     one_year_ago = (datetime.utcnow() - timedelta(days=365)).strftime('%Y-%m-%d')
     
+    # More comprehensive search
     search_strategies = [
-        # Top tier: Very popular with platform topics
-        {'min_stars': 5000, 'topics': topics, 'max_pages': 5, 'created_before': six_months_ago},
-        # Second tier: Popular with primary topic
-        {'min_stars': 2000, 'topics': topics[:1] if topics else [], 'max_pages': 5, 'created_before': six_months_ago},
-        # Third tier: Established and popular
-        {'min_stars': 1000, 'topics': [], 'max_pages': 3, 'created_before': one_year_ago}
+        {'min_stars': 5000, 'topics': topics, 'max_pages': 8, 'created_before': six_months_ago},
+        {'min_stars': 2000, 'topics': topics[:1] if topics else [], 'max_pages': 8, 'created_before': six_months_ago},
+        {'min_stars': 1000, 'topics': [], 'max_pages': 5, 'created_before': one_year_ago}
     ]
     
     for strategy_idx, strategy in enumerate(search_strategies):
         print(f"Strategy {strategy_idx + 1}: {strategy['min_stars']}+ stars, created before {strategy['created_before']}")
         
-        # Ensure active in last year
         base_query = f"stars:>{strategy['min_stars']} archived:false pushed:>={one_year_ago} created:<{strategy['created_before']}"
         
         if strategy['topics']:
@@ -706,16 +709,15 @@ def fetch_most_popular(platform: str, desired_count: int = 100) -> List[Dict]:
             except Exception:
                 break
             
-            time.sleep(0.3)
+            time.sleep(0.2)
     
-    # Sort by stars first, then check installers
+    # Sort by stars and check MORE candidates
     all_candidates.sort(key=lambda c: c.stars, reverse=True)
-    top_candidates = all_candidates[:min(len(all_candidates), desired_count * 4)]
+    top_candidates = all_candidates[:min(len(all_candidates), desired_count * 5)]
     
     print(f"Checking {len(top_candidates)} candidates for installers...")
     verified_repos = check_installers_batch(top_candidates, platform, get_release_dates=False)
     
-    # Sort by stars (popularity)
     verified_repos.sort(key=lambda c: c.stars, reverse=True)
     final_repos = verified_repos[:desired_count]
     
@@ -808,7 +810,7 @@ def main():
             repos = fetch_func(platform, desired_count=100)
             save_category_data(category_name, platform, repos, timestamp)
             
-            time.sleep(2)
+            time.sleep(1)  # Small delay between platforms
     
     print("\n" + "="*70)
     print("✓ ALL CATEGORIES PROCESSED SUCCESSFULLY!")
