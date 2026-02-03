@@ -356,39 +356,21 @@ def get_latest_stable_release(owner: str, repo_name: str) -> Tuple[Optional[str]
 def check_repo_has_installers(owner: str, repo_name: str, platform: str, get_release_date: bool = False) -> Tuple[bool, Optional[str]]:
     """Check if repository has relevant installer files"""
     
-    # Get latest stable release
     published_at, release_data = get_latest_stable_release(owner, repo_name)
     
     if not release_data:
         return False, None
     
-    # Check if release has installer assets
     assets = release_data.get('assets', [])
     if not assets:
         return False, None
     
-    # OPTIMIZATION: Limit assets checked for Linux (it often has 20+ files)
-    if platform == 'linux' and len(assets) > 15:
-        assets = assets[:15]  # Only check first 15 assets
-    
     extensions = PLATFORMS[platform]['installer_extensions']
-    has_installer = False
     
     for asset in assets:
         asset_name = asset['name'].lower()
-        
-        if platform == 'linux':
-            # Check common extensions first (most likely to match)
-            if asset_name.endswith(('.appimage', '.deb', '.rpm')):
-                has_installer = True
-                break
-        else:
-            if any(asset_name.endswith(ext) for ext in extensions):
-                has_installer = True
-                break
-    
-    if has_installer:
-        return True, published_at if get_release_date else None
+        if any(asset_name.endswith(ext) for ext in extensions):
+            return True, published_at if get_release_date else None
     
     return False, None
 
@@ -443,9 +425,9 @@ def fetch_trending_repos(platform: str, desired_count: int = 100) -> List[Dict]:
     
     # More comprehensive search strategies for quality
     search_strategies = [
-        {'days': 30, 'min_stars': 100, 'topics': topics, 'max_pages': 8, 'weight': 1.5},
-        {'days': 90, 'min_stars': 50, 'topics': topics[:1], 'max_pages': 8, 'weight': 1.2},
-        {'days': 180, 'min_stars': 500, 'topics': [], 'max_pages': 5, 'weight': 1.0},
+        {'days': 30, 'min_stars': 100, 'topics': topics, 'max_pages': 4, 'weight': 1.5},
+        {'days': 90, 'min_stars': 50, 'topics': topics[:1], 'max_pages': 4, 'weight': 1.2},
+        {'days': 180, 'min_stars': 500, 'topics': [], 'max_pages': 3, 'weight': 1.0},
         {'days': 365, 'min_stars': 200, 'topics': topics[:1] if topics else [], 'max_pages': 5, 'weight': 0.9}
     ]
     
@@ -505,7 +487,7 @@ def fetch_trending_repos(platform: str, desired_count: int = 100) -> List[Dict]:
     
     all_candidates.sort(key=lambda c: c.score + (c.recent_stars_velocity * 10), reverse=True)
     # Check MORE candidates (5x instead of 4x)
-    top_candidates = all_candidates[:min(len(all_candidates), desired_count * 5)]
+    top_candidates = all_candidates[:min(len(all_candidates), desired_count * 3)]
     verified_repos = check_installers_batch(top_candidates, platform, get_release_dates=False)
     verified_repos.sort(key=lambda c: c.score + (c.recent_stars_velocity * 10), reverse=True)
     final_repos = verified_repos[:desired_count]
@@ -527,11 +509,9 @@ def fetch_new_releases(platform: str, desired_count: int = 100) -> List[Dict]:
     
     # Comprehensive search for new releases - prioritize quality over speed
     search_strategies = [
-        {'days': 7, 'min_stars': 50, 'topics': topics, 'max_pages': 8},
-        {'days': 14, 'min_stars': 30, 'topics': topics, 'max_pages': 8},
-        {'days': 21, 'min_stars': 100, 'topics': topics[:1] if topics else [], 'max_pages': 8},
-        {'days': 21, 'min_stars': 500, 'topics': [], 'max_pages': 8},
-        {'days': 14, 'min_stars': 10, 'topics': topics, 'max_pages': 5}
+        {'days': 7, 'min_stars': 50, 'topics': topics, 'max_pages': 4},
+        {'days': 14, 'min_stars': 30, 'topics': topics, 'max_pages': 4},
+        {'days': 21 'min_stars': 100, 'topics': topics[:1] if topics else [], 'max_pages': 4},
     ]
     
     for strategy_idx, strategy in enumerate(search_strategies):
@@ -719,7 +699,7 @@ def fetch_most_popular(platform: str, desired_count: int = 100) -> List[Dict]:
     
     # Sort by stars and check MORE candidates
     all_candidates.sort(key=lambda c: c.stars, reverse=True)
-    top_candidates = all_candidates[:min(len(all_candidates), desired_count * 5)]
+    top_candidates = all_candidates[:min(len(all_candidates), desired_count * 3)]
     
     print(f"Checking {len(top_candidates)} candidates for installers...")
     verified_repos = check_installers_batch(top_candidates, platform, get_release_dates=False)
