@@ -511,7 +511,7 @@ def fetch_new_releases(platform: str, desired_count: int = 100) -> List[Dict]:
     search_strategies = [
         {'days': 7, 'min_stars': 50, 'topics': topics, 'max_pages': 4},
         {'days': 14, 'min_stars': 30, 'topics': topics, 'max_pages': 4},
-        {'days': 21 'min_stars': 100, 'topics': topics[:1] if topics else [], 'max_pages': 4},
+        {'days': 21, 'min_stars': 100, 'topics': topics[:1] if topics else [], 'max_pages': 4},
     ]
     
     for strategy_idx, strategy in enumerate(search_strategies):
