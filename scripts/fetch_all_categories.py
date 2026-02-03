@@ -496,7 +496,7 @@ def fetch_trending_repos(platform: str, desired_count: int = 100) -> List[Dict]:
     return [repo.to_summary('trending') for repo in final_repos]
 
 def fetch_new_releases(platform: str, desired_count: int = 100) -> List[Dict]:
-    """Fetch repos with new STABLE releases in last 21 days"""
+    """Fetch repos with new STABLE releases in last 21 days - MULTI-ROUND APPROACH"""
     print(f"\n{'='*60}")
     print(f"Fetching NEW RELEASES for {platform.upper()}")
     print(f"{'='*60}")
@@ -504,124 +504,147 @@ def fetch_new_releases(platform: str, desired_count: int = 100) -> List[Dict]:
     url = 'https://api.github.com/search/repositories'
     topics = PLATFORMS[platform]['topics']
     
-    all_candidates: List[RepoCandidate] = []
-    seen: Set[str] = set()
-    
-    # Comprehensive search for new releases - prioritize quality over speed
-    search_strategies = [
-        {'days': 7, 'min_stars': 50, 'topics': topics, 'max_pages': 4},
-        {'days': 14, 'min_stars': 30, 'topics': topics, 'max_pages': 4},
-        {'days': 21, 'min_stars': 100, 'topics': topics[:1] if topics else [], 'max_pages': 4},
-    ]
-    
-    for strategy_idx, strategy in enumerate(search_strategies):
-        print(f"Strategy {strategy_idx + 1}: Last {strategy['days']} days, {strategy['min_stars']}+ stars")
-        
-        past_date = (datetime.utcnow() - timedelta(days=strategy['days'])).strftime('%Y-%m-%d')
-        base_query = f"stars:>{strategy['min_stars']} archived:false pushed:>={past_date}"
-        
-        if strategy['topics']:
-            topic_query = " OR ".join([f"topic:{t}" for t in strategy['topics']])
-            query = f"{base_query} ({topic_query})"
-        else:
-            primary_lang = PLATFORMS[platform]['languages']['primary'][0]
-            query = f"{base_query} language:{primary_lang}"
-        
-        for page in range(1, strategy['max_pages'] + 1):
-            params = {'q': query, 'sort': 'updated', 'order': 'desc', 'per_page': 100, 'page': page}
-            response, error = make_request_with_retry(url, params=params, timeout=30)
-            
-            if response is None:
-                break
-            
-            try:
-                items = response.json().get('items', [])
-                if not items:
-                    break
-                
-                for repo in items:
-                    full_name = repo['full_name']
-                    if full_name in seen:
-                        continue
-                    seen.add(full_name)
-                    
-                    score = calculate_platform_score(repo, platform)
-                    
-                    candidate = RepoCandidate(
-                        id=repo['id'], name=repo['name'], full_name=full_name,
-                        owner_login=repo['owner']['login'], owner_avatar=repo['owner']['avatar_url'],
-                        description=repo.get('description'), default_branch=repo.get('default_branch', 'main'),
-                        html_url=repo['html_url'], stars=repo['stargazers_count'], forks=repo['forks_count'],
-                        language=repo.get('language'), topics=repo.get('topics', []),
-                        releases_url=repo['releases_url'], updated_at=repo['updated_at'],
-                        created_at=repo['created_at'], score=score
-                    )
-                    all_candidates.append(candidate)
-                    
-            except Exception:
-                break
-            
-            time.sleep(0.2)
-    
-    print(f"\n✓ Collected {len(all_candidates)} candidates")
-    
-    # Define cutoff BEFORE using it
     twenty_one_days_ago = datetime.utcnow() - timedelta(days=21)
     now = datetime.utcnow()
     
-    # Sort and check MORE candidates for better coverage
-    all_candidates.sort(key=lambda c: c.updated_at, reverse=True)
-    top_candidates = all_candidates[:min(len(all_candidates), desired_count * 4)]  # Check 8x candidates
+    all_verified_repos = []
+    seen: Set[str] = set()
+    round_num = 0
     
-    print(f"Checking {len(top_candidates)} candidates for recent STABLE releases...")
-    print(f"Looking for releases published in last 21 days")
-    print(f"Current UTC: {now.strftime('%Y-%m-%d %H:%M:%S')}")
-    print(f"Cutoff date: {twenty_one_days_ago.strftime('%Y-%m-%d %H:%M:%S')}\n")
+    # MULTIPLE ROUNDS - keep fetching until we have enough
+    search_rounds = [
+        # Round 1: Recent updates, platform-specific
+        [
+            {'days': 7, 'min_stars': 20, 'topics': topics, 'max_pages': 8},
+            {'days': 14, 'min_stars': 10, 'topics': topics, 'max_pages': 8},
+            {'days': 21, 'min_stars': 30, 'topics': topics[:1] if topics else [], 'max_pages': 6},
+        ],
+        # Round 2: Broader search
+        [
+            {'days': 14, 'min_stars': 5, 'topics': topics, 'max_pages': 10},
+            {'days': 21, 'min_stars': 50, 'topics': [], 'max_pages': 8},
+            {'days': 10, 'min_stars': 2, 'topics': topics, 'max_pages': 6},
+        ],
+        # Round 3: Very aggressive
+        [
+            {'days': 21, 'min_stars': 1, 'topics': topics, 'max_pages': 12},
+            {'days': 7, 'min_stars': 0, 'topics': topics, 'max_pages': 10},
+        ]
+    ]
     
-    verified_repos = check_installers_batch(top_candidates, platform, get_release_dates=True)
-    
-    print(f"\nValidating {len(verified_repos)} repos with releases...")
-    recent_releases = []
-
-    for repo in verified_repos:
-        if not repo.latest_release_date:
+    for round_strategies in search_rounds:
+        round_num += 1
+        
+        if len(all_verified_repos) >= desired_count:
+            print(f"\n✅ Already have {len(all_verified_repos)} repos - stopping early")
+            break
+        
+        print(f"\n{'='*60}")
+        print(f"🔄 ROUND {round_num} - Need {desired_count - len(all_verified_repos)} more repos")
+        print(f"{'='*60}")
+        
+        round_candidates: List[RepoCandidate] = []
+        
+        for strategy_idx, strategy in enumerate(round_strategies):
+            print(f"Strategy {strategy_idx + 1}: Last {strategy['days']} days, {strategy['min_stars']}+ stars")
+            
+            past_date = (datetime.utcnow() - timedelta(days=strategy['days'])).strftime('%Y-%m-%d')
+            base_query = f"stars:>{strategy['min_stars']} archived:false pushed:>={past_date}"
+            
+            if strategy['topics']:
+                topic_query = " OR ".join([f"topic:{t}" for t in strategy['topics']])
+                query = f"{base_query} ({topic_query})"
+            else:
+                primary_lang = PLATFORMS[platform]['languages']['primary'][0]
+                query = f"{base_query} language:{primary_lang}"
+            
+            for page in range(1, strategy['max_pages'] + 1):
+                params = {'q': query, 'sort': 'updated', 'order': 'desc', 'per_page': 100, 'page': page}
+                response, error = make_request_with_retry(url, params=params, timeout=30)
+                
+                if response is None:
+                    break
+                
+                try:
+                    items = response.json().get('items', [])
+                    if not items:
+                        break
+                    
+                    for repo in items:
+                        full_name = repo['full_name']
+                        if full_name in seen:
+                            continue
+                        seen.add(full_name)
+                        
+                        score = calculate_platform_score(repo, platform)
+                        
+                        candidate = RepoCandidate(
+                            id=repo['id'], name=repo['name'], full_name=full_name,
+                            owner_login=repo['owner']['login'], owner_avatar=repo['owner']['avatar_url'],
+                            description=repo.get('description'), default_branch=repo.get('default_branch', 'main'),
+                            html_url=repo['html_url'], stars=repo['stargazers_count'], forks=repo['forks_count'],
+                            language=repo.get('language'), topics=repo.get('topics', []),
+                            releases_url=repo['releases_url'], updated_at=repo['updated_at'],
+                            created_at=repo['created_at'], score=score
+                        )
+                        round_candidates.append(candidate)
+                        
+                except Exception:
+                    break
+                
+                time.sleep(0.15)  # Faster
+        
+        print(f"\n✓ Round {round_num} collected {len(round_candidates)} new candidates")
+        
+        if len(round_candidates) == 0:
+            print(f"⚠️  No new candidates in round {round_num}, moving to next round...")
             continue
         
-        try:
-            # Parse release date - strip timezone for naive datetime
-            release_date_str = repo.latest_release_date.replace('Z', '')
-            if '+' in release_date_str:
-                release_date_str = release_date_str.split('+')[0]
-            release_date_utc = datetime.fromisoformat(release_date_str)
+        # Sort by recency and check ALL candidates (not just a subset)
+        round_candidates.sort(key=lambda c: c.updated_at, reverse=True)
+        
+        print(f"Checking ALL {len(round_candidates)} candidates for STABLE releases...")
+        print(f"Looking for releases ≤21 days old")
+        
+        verified_repos = check_installers_batch(round_candidates, platform, get_release_dates=True)
+        
+        print(f"\nValidating {len(verified_repos)} repos with releases...")
+        
+        for repo in verified_repos:
+            if not repo.latest_release_date:
+                continue
             
-            # Calculate actual age in days
-            days_ago = (now - release_date_utc).days
-            
-            # Validate: release must be within last 21 days
-            if days_ago <= 21:
-                # Validate: release must not be in the future (allow 1 hour clock skew)
-                if release_date_utc <= now + timedelta(hours=1):
-                    recent_releases.append(repo)
-                    print(f"  ✓ {repo.full_name}: Released {days_ago}d ago")
-                else:
-                    print(f"  ✗ {repo.full_name}: Future release date (skipped)")
-            else:
-                print(f"  ✗ {repo.full_name}: Too old ({days_ago}d ago, need ≤21d)")
+            try:
+                release_date_str = repo.latest_release_date.replace('Z', '')
+                if '+' in release_date_str:
+                    release_date_str = release_date_str.split('+')[0]
+                release_date_utc = datetime.fromisoformat(release_date_str)
                 
-        except Exception as e:
-            print(f"  ✗ {repo.full_name}: Error - {e}")
-            continue
+                days_ago = (now - release_date_utc).days
+                
+                if days_ago <= 21:
+                    if release_date_utc <= now + timedelta(hours=1):
+                        all_verified_repos.append(repo)
+                        print(f"  ✓ {repo.full_name}: Released {days_ago}d ago")
+                    else:
+                        print(f"  ✗ {repo.full_name}: Future date")
+                        
+            except Exception as e:
+                continue
+        
+        print(f"\n📊 Round {round_num} summary: Found {len(all_verified_repos)} total repos so far")
+        
+        if len(all_verified_repos) >= desired_count:
+            print(f"✅ Reached target of {desired_count} repos!")
+            break
     
     # Sort by release date (newest first)
-    recent_releases.sort(key=lambda r: r.latest_release_date or '', reverse=True)
-    final_repos = recent_releases[:desired_count]
+    all_verified_repos.sort(key=lambda r: r.latest_release_date or '', reverse=True)
+    final_repos = all_verified_repos[:desired_count]
     
     print(f"\n{'='*60}")
-    if len(final_repos) > 0:
-        print(f"✓ Found {len(final_repos)} repos with new STABLE releases")
-    else:
-        print(f"⚠️  Found 0 repos with new releases in last 21 days")
-        print(f"   Checked {len(verified_repos)} repos with installers")
+    print(f"✅ FINAL: Found {len(final_repos)} repos with new releases (≤21 days)")
+    print(f"Searched {len(seen)} unique repositories across {round_num} rounds")
     print(f"{'='*60}")
     
     return [repo.to_summary('new-releases') for repo in final_repos]
