@@ -1,9 +1,639 @@
 {
   "category": "new-releases",
   "platform": "android",
-  "lastUpdated": "2026-02-03T16:31:32.405458Z",
+  "lastUpdated": "2026-02-04T04:15:23.081348Z",
   "totalCount": 100,
   "repositories": [
+    {
+      "id": 598940882,
+      "name": "nextplayer",
+      "fullName": "anilbeesetti/nextplayer",
+      "owner": {
+        "login": "anilbeesetti",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/66936649?v=4"
+      },
+      "description": "An Android native video player",
+      "defaultBranch": "main",
+      "htmlUrl": "https://github.com/anilbeesetti/nextplayer",
+      "stargazersCount": 3525,
+      "forksCount": 210,
+      "language": "Kotlin",
+      "topics": [
+        "android",
+        "exoplayer",
+        "ffmpeg",
+        "ffmpeg-android",
+        "jetpack-compose",
+        "jni-android",
+        "kotlin",
+        "kotlin-android",
+        "kotlin-coroutines",
+        "media3",
+        "player",
+        "room-database",
+        "video-player"
+      ],
+      "releasesUrl": "https://api.github.com/repos/anilbeesetti/nextplayer/releases{/id}",
+      "updatedAt": "2026-02-04T03:53:51Z",
+      "createdAt": "2023-02-08T05:34:22Z",
+      "latestReleaseDate": "2026-02-04T04:09:58Z",
+      "releaseRecency": 0,
+      "releaseRecencyText": "Released today"
+    },
+    {
+      "id": 610083236,
+      "name": "capyreader",
+      "fullName": "jocmp/capyreader",
+      "owner": {
+        "login": "jocmp",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/9521010?v=4"
+      },
+      "description": "A smallish Android RSS reader",
+      "defaultBranch": "main",
+      "htmlUrl": "https://github.com/jocmp/capyreader",
+      "stargazersCount": 951,
+      "forksCount": 43,
+      "language": "Kotlin",
+      "topics": [
+        "android",
+        "f-droid",
+        "feed-reader",
+        "feedbin",
+        "freshrss",
+        "google-reader",
+        "jetpack-compose",
+        "kotlin",
+        "material-you",
+        "miniflux",
+        "miniflux2",
+        "rss",
+        "rss-feed-reader",
+        "rss-reader"
+      ],
+      "releasesUrl": "https://api.github.com/repos/jocmp/capyreader/releases{/id}",
+      "updatedAt": "2026-02-04T03:36:17Z",
+      "createdAt": "2023-03-06T03:41:04Z",
+      "latestReleaseDate": "2026-02-04T03:00:34Z",
+      "releaseRecency": 0,
+      "releaseRecencyText": "Released today"
+    },
+    {
+      "id": 122148947,
+      "name": "baresip-studio",
+      "fullName": "juha-h/baresip-studio",
+      "owner": {
+        "login": "juha-h",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/6271940?v=4"
+      },
+      "description": "baresip library based SIP client for Android",
+      "defaultBranch": "master",
+      "htmlUrl": "https://github.com/juha-h/baresip-studio",
+      "stargazersCount": 357,
+      "forksCount": 82,
+      "language": "Kotlin",
+      "topics": [
+        "android-application",
+        "baresip",
+        "sip-client",
+        "voip"
+      ],
+      "releasesUrl": "https://api.github.com/repos/juha-h/baresip-studio/releases{/id}",
+      "updatedAt": "2026-02-04T02:11:48Z",
+      "createdAt": "2018-02-20T02:59:45Z",
+      "latestReleaseDate": "2026-02-04T02:33:27Z",
+      "releaseRecency": 0,
+      "releaseRecencyText": "Released today"
+    },
+    {
+      "id": 1135343489,
+      "name": "FaceDown",
+      "fullName": "arekbauer/FaceDown",
+      "owner": {
+        "login": "arekbauer",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/144045814?v=4"
+      },
+      "description": "Showcase repository for FaceDown: A sensor-based focus timer. Demonstrating Jetpack Compose, Material 3 Expressive, Room, and raw SensorManager integration.",
+      "defaultBranch": "main",
+      "htmlUrl": "https://github.com/arekbauer/FaceDown",
+      "stargazersCount": 71,
+      "forksCount": 3,
+      "language": "Kotlin",
+      "topics": [
+        "android",
+        "hilt",
+        "jetpack-compose",
+        "kotlin",
+        "material3-expressive",
+        "mobile-development",
+        "mvvm",
+        "navigation-3",
+        "productivity-tools",
+        "room-database",
+        "sensor-manager"
+      ],
+      "releasesUrl": "https://api.github.com/repos/arekbauer/FaceDown/releases{/id}",
+      "updatedAt": "2026-02-04T02:19:30Z",
+      "createdAt": "2026-01-16T01:02:51Z",
+      "latestReleaseDate": "2026-02-04T00:40:01Z",
+      "releaseRecency": 0,
+      "releaseRecencyText": "Released today"
+    },
+    {
+      "id": 386777925,
+      "name": "Manager",
+      "fullName": "Aliucord/Manager",
+      "owner": {
+        "login": "Aliucord",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/78881422?v=4"
+      },
+      "description": "The new way to install Aliucord – in a user-friendly way",
+      "defaultBranch": "main",
+      "htmlUrl": "https://github.com/Aliucord/Manager",
+      "stargazersCount": 512,
+      "forksCount": 64,
+      "language": "Kotlin",
+      "topics": [
+        "android",
+        "compose",
+        "jetpack-compose",
+        "kotlin",
+        "modding"
+      ],
+      "releasesUrl": "https://api.github.com/repos/Aliucord/Manager/releases{/id}",
+      "updatedAt": "2026-02-03T23:22:07Z",
+      "createdAt": "2021-07-16T22:22:05Z",
+      "latestReleaseDate": "2026-02-03T23:30:27Z",
+      "releaseRecency": 0,
+      "releaseRecencyText": "Released today"
+    },
+    {
+      "id": 13862999,
+      "name": "apps-android-wikipedia",
+      "fullName": "wikimedia/apps-android-wikipedia",
+      "owner": {
+        "login": "wikimedia",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/56668?v=4"
+      },
+      "description": " 📱The official Wikipedia app for Android!",
+      "defaultBranch": "main",
+      "htmlUrl": "https://github.com/wikimedia/apps-android-wikipedia",
+      "stargazersCount": 2841,
+      "forksCount": 777,
+      "language": "Kotlin",
+      "topics": [
+        "android",
+        "android-app",
+        "coroutines",
+        "java",
+        "kotlin",
+        "mediawiki",
+        "mediawiki-api",
+        "rest-api",
+        "viewmodel",
+        "wiki",
+        "wikipedia",
+        "wikipedia-android"
+      ],
+      "releasesUrl": "https://api.github.com/repos/wikimedia/apps-android-wikipedia/releases{/id}",
+      "updatedAt": "2026-02-03T23:57:27Z",
+      "createdAt": "2013-10-25T14:31:39Z",
+      "latestReleaseDate": "2026-02-03T22:46:21Z",
+      "releaseRecency": 0,
+      "releaseRecencyText": "Released today"
+    },
+    {
+      "id": 29106538,
+      "name": "appteka-android",
+      "fullName": "solkin/appteka-android",
+      "owner": {
+        "login": "solkin",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/2144446?v=4"
+      },
+      "description": "💊 Appteka is an alternative store for Android",
+      "defaultBranch": "master",
+      "htmlUrl": "https://github.com/solkin/appteka-android",
+      "stargazersCount": 718,
+      "forksCount": 40,
+      "language": "Kotlin",
+      "topics": [
+        "android",
+        "apk",
+        "cloud",
+        "installer",
+        "share",
+        "store"
+      ],
+      "releasesUrl": "https://api.github.com/repos/solkin/appteka-android/releases{/id}",
+      "updatedAt": "2026-02-04T00:28:35Z",
+      "createdAt": "2015-01-11T21:20:30Z",
+      "latestReleaseDate": "2026-02-03T22:39:47Z",
+      "releaseRecency": 0,
+      "releaseRecencyText": "Released today"
+    },
+    {
+      "id": 992797528,
+      "name": "ToolNeuron",
+      "fullName": "Siddhesh2377/ToolNeuron",
+      "owner": {
+        "login": "Siddhesh2377",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/67579112?v=4"
+      },
+      "description": "Complete offline AI ecosystem for Android: Chat (GGUF/LLMs), Images (Stable Diffusion 1.5), Voice (TTS/STT), and Knowledge (RAG Data-Packs), zero subscriptions, no data harvesting. Open-source privacy-first AI on your terms.",
+      "defaultBranch": "re-write",
+      "htmlUrl": "https://github.com/Siddhesh2377/ToolNeuron",
+      "stargazersCount": 189,
+      "forksCount": 16,
+      "language": "Kotlin",
+      "topics": [
+        "ai-assistant",
+        "android",
+        "gguf-models",
+        "jetpack-compose",
+        "kotlin",
+        "llama-cpp",
+        "llm",
+        "local-ai",
+        "mobile-ai",
+        "offline-tts",
+        "open-source",
+        "openrouter",
+        "privacy-first",
+        "sherpa-onnx"
+      ],
+      "releasesUrl": "https://api.github.com/repos/Siddhesh2377/ToolNeuron/releases{/id}",
+      "updatedAt": "2026-02-04T03:22:03Z",
+      "createdAt": "2025-05-29T18:19:10Z",
+      "latestReleaseDate": "2026-02-03T21:27:56Z",
+      "releaseRecency": 0,
+      "releaseRecencyText": "Released today"
+    },
+    {
+      "id": 492611621,
+      "name": "Calendar",
+      "fullName": "FossifyOrg/Calendar",
+      "owner": {
+        "login": "FossifyOrg",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/152776864?v=4"
+      },
+      "description": "A simple calendar with events, customizable widgets and no ads.",
+      "defaultBranch": "main",
+      "htmlUrl": "https://github.com/FossifyOrg/Calendar",
+      "stargazersCount": 1725,
+      "forksCount": 141,
+      "language": "Kotlin",
+      "topics": [
+        "android",
+        "calendar",
+        "foss",
+        "kotlin",
+        "open-source"
+      ],
+      "releasesUrl": "https://api.github.com/repos/FossifyOrg/Calendar/releases{/id}",
+      "updatedAt": "2026-02-04T03:35:57Z",
+      "createdAt": "2022-05-15T21:47:59Z",
+      "latestReleaseDate": "2026-02-03T21:23:32Z",
+      "releaseRecency": 0,
+      "releaseRecencyText": "Released today"
+    },
+    {
+      "id": 529723544,
+      "name": "mytonwallet",
+      "fullName": "mytonwallet-org/mytonwallet",
+      "owner": {
+        "login": "mytonwallet-org",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/173468653?v=4"
+      },
+      "description": "The next-generation onchain wallet for secure everyday use",
+      "defaultBranch": "master",
+      "htmlUrl": "https://github.com/mytonwallet-org/mytonwallet",
+      "stargazersCount": 681,
+      "forksCount": 326,
+      "language": "Kotlin",
+      "topics": [
+        "blockchain",
+        "crypto",
+        "cryptocurrency",
+        "dapp",
+        "hacktoberfest",
+        "ton",
+        "wallet",
+        "web3"
+      ],
+      "releasesUrl": "https://api.github.com/repos/mytonwallet-org/mytonwallet/releases{/id}",
+      "updatedAt": "2026-02-03T20:51:08Z",
+      "createdAt": "2022-08-28T00:05:31Z",
+      "latestReleaseDate": "2026-02-03T21:14:30Z",
+      "releaseRecency": 0,
+      "releaseRecencyText": "Released today"
+    },
+    {
+      "id": 641599463,
+      "name": "Ackpine",
+      "fullName": "solrudev/Ackpine",
+      "owner": {
+        "login": "solrudev",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/82332840?v=4"
+      },
+      "description": "Android package installer library",
+      "defaultBranch": "master",
+      "htmlUrl": "https://github.com/solrudev/Ackpine",
+      "stargazersCount": 131,
+      "forksCount": 10,
+      "language": "Kotlin",
+      "topics": [
+        "android",
+        "android-library",
+        "apk",
+        "apk-installation",
+        "apk-installer",
+        "apks",
+        "coroutines",
+        "coroutines-android",
+        "coroutines-flow",
+        "flow",
+        "install-apk",
+        "java",
+        "kotlin",
+        "kotlin-library",
+        "library",
+        "package-installer",
+        "split-apk"
+      ],
+      "releasesUrl": "https://api.github.com/repos/solrudev/Ackpine/releases{/id}",
+      "updatedAt": "2026-02-03T21:04:35Z",
+      "createdAt": "2023-05-16T20:13:15Z",
+      "latestReleaseDate": "2026-02-03T21:09:27Z",
+      "releaseRecency": 0,
+      "releaseRecencyText": "Released today"
+    },
+    {
+      "id": 696033236,
+      "name": "JapaneseKeyboard",
+      "fullName": "KazumaProject/JapaneseKeyboard",
+      "owner": {
+        "login": "KazumaProject",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/59742125?v=4"
+      },
+      "description": "スミレ - 完全オフラインの日本語キーボードアプリ",
+      "defaultBranch": "master",
+      "htmlUrl": "https://github.com/KazumaProject/JapaneseKeyboard",
+      "stargazersCount": 199,
+      "forksCount": 12,
+      "language": "Kotlin",
+      "topics": [
+        "japanese-kana",
+        "keyboard"
+      ],
+      "releasesUrl": "https://api.github.com/repos/KazumaProject/JapaneseKeyboard/releases{/id}",
+      "updatedAt": "2026-02-03T19:57:51Z",
+      "createdAt": "2023-09-24T23:51:20Z",
+      "latestReleaseDate": "2026-02-03T20:33:33Z",
+      "releaseRecency": 0,
+      "releaseRecencyText": "Released today"
+    },
+    {
+      "id": 957470692,
+      "name": "FairScan",
+      "fullName": "pynicolas/FairScan",
+      "owner": {
+        "login": "pynicolas",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/6371790?v=4"
+      },
+      "description": "An Android app to scan your documents — simple and respectful",
+      "defaultBranch": "main",
+      "htmlUrl": "https://github.com/pynicolas/FairScan",
+      "stargazersCount": 279,
+      "forksCount": 23,
+      "language": "Kotlin",
+      "topics": [
+        "android",
+        "android-app",
+        "document-scanner",
+        "image-processing",
+        "opencv",
+        "pdf",
+        "privacy",
+        "segmentation",
+        "tflite"
+      ],
+      "releasesUrl": "https://api.github.com/repos/pynicolas/FairScan/releases{/id}",
+      "updatedAt": "2026-02-03T19:38:52Z",
+      "createdAt": "2025-03-30T13:07:54Z",
+      "latestReleaseDate": "2026-02-03T19:59:42Z",
+      "releaseRecency": 0,
+      "releaseRecencyText": "Released today"
+    },
+    {
+      "id": 1127140459,
+      "name": "aihub",
+      "fullName": "SilentCoderHere/aihub",
+      "owner": {
+        "login": "SilentCoderHere",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/142191827?v=4"
+      },
+      "description": "All-in-one Kotlin app that aggregates multiple AI assistants in a single tabbed interface, featuring webview integration, Material Design 3, and persistent session management.",
+      "defaultBranch": "main",
+      "htmlUrl": "https://github.com/SilentCoderHere/aihub",
+      "stargazersCount": 130,
+      "forksCount": 6,
+      "language": "Kotlin",
+      "topics": [],
+      "releasesUrl": "https://api.github.com/repos/SilentCoderHere/aihub/releases{/id}",
+      "updatedAt": "2026-02-03T19:22:09Z",
+      "createdAt": "2026-01-03T09:06:44Z",
+      "latestReleaseDate": "2026-02-03T19:44:03Z",
+      "releaseRecency": 0,
+      "releaseRecencyText": "Released today"
+    },
+    {
+      "id": 77396235,
+      "name": "bluemusic",
+      "fullName": "d4rken-org/bluemusic",
+      "owner": {
+        "login": "d4rken-org",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/109539113?v=4"
+      },
+      "description": "An Android app that automates Bluetooth device specific actions such as volume adjustments.",
+      "defaultBranch": "main",
+      "htmlUrl": "https://github.com/d4rken-org/bluemusic",
+      "stargazersCount": 169,
+      "forksCount": 9,
+      "language": "Kotlin",
+      "topics": [
+        "android",
+        "automation",
+        "bluetooth",
+        "volume-control"
+      ],
+      "releasesUrl": "https://api.github.com/repos/d4rken-org/bluemusic/releases{/id}",
+      "updatedAt": "2026-02-03T19:08:30Z",
+      "createdAt": "2016-12-26T16:52:43Z",
+      "latestReleaseDate": "2026-02-03T19:25:23Z",
+      "releaseRecency": 0,
+      "releaseRecencyText": "Released today"
+    },
+    {
+      "id": 528131210,
+      "name": "octi",
+      "fullName": "d4rken-org/octi",
+      "owner": {
+        "login": "d4rken-org",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/109539113?v=4"
+      },
+      "description": "A multi-device manager for Android",
+      "defaultBranch": "main",
+      "htmlUrl": "https://github.com/d4rken-org/octi",
+      "stargazersCount": 464,
+      "forksCount": 35,
+      "language": "Kotlin",
+      "topics": [
+        "android",
+        "android-app",
+        "sync"
+      ],
+      "releasesUrl": "https://api.github.com/repos/d4rken-org/octi/releases{/id}",
+      "updatedAt": "2026-02-03T19:59:46Z",
+      "createdAt": "2022-08-23T19:15:15Z",
+      "latestReleaseDate": "2026-02-03T18:24:38Z",
+      "releaseRecency": 0,
+      "releaseRecencyText": "Released today"
+    },
+    {
+      "id": 379033562,
+      "name": "LinkHub",
+      "fullName": "AmrDeveloper/LinkHub",
+      "owner": {
+        "login": "AmrDeveloper",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/23631699?v=4"
+      },
+      "description": "LinkHub is a simple and effective link management application that can help you to easily manage your app with no ads! ",
+      "defaultBranch": "master",
+      "htmlUrl": "https://github.com/AmrDeveloper/LinkHub",
+      "stargazersCount": 279,
+      "forksCount": 31,
+      "language": "Kotlin",
+      "topics": [
+        "android",
+        "coroutines",
+        "hacktoberfest",
+        "hilt",
+        "import-export",
+        "kotlin",
+        "link-collection",
+        "link-manager",
+        "mvvm",
+        "room"
+      ],
+      "releasesUrl": "https://api.github.com/repos/AmrDeveloper/LinkHub/releases{/id}",
+      "updatedAt": "2026-02-03T17:30:47Z",
+      "createdAt": "2021-06-21T18:54:43Z",
+      "latestReleaseDate": "2026-02-03T17:18:10Z",
+      "releaseRecency": 0,
+      "releaseRecencyText": "Released today"
+    },
+    {
+      "id": 387670249,
+      "name": "AppStore",
+      "fullName": "GrapheneOS/AppStore",
+      "owner": {
+        "login": "GrapheneOS",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/48847184?v=4"
+      },
+      "description": null,
+      "defaultBranch": "main",
+      "htmlUrl": "https://github.com/GrapheneOS/AppStore",
+      "stargazersCount": 482,
+      "forksCount": 48,
+      "language": "Kotlin",
+      "topics": [
+        "grapheneos",
+        "security"
+      ],
+      "releasesUrl": "https://api.github.com/repos/GrapheneOS/AppStore/releases{/id}",
+      "updatedAt": "2026-02-04T01:24:41Z",
+      "createdAt": "2021-07-20T04:20:59Z",
+      "latestReleaseDate": "2026-02-03T17:14:57Z",
+      "releaseRecency": 0,
+      "releaseRecencyText": "Released today"
+    },
+    {
+      "id": 608779443,
+      "name": "notification-listener-android",
+      "fullName": "Alfio010/notification-listener-android",
+      "owner": {
+        "login": "Alfio010",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/102170101?v=4"
+      },
+      "description": "This app saves your Android device`s notifications and allows you not to miss notifications that are accidentally deleted or that are deleted by the apps themselves. Feel free to recommend new features.",
+      "defaultBranch": "main",
+      "htmlUrl": "https://github.com/Alfio010/notification-listener-android",
+      "stargazersCount": 175,
+      "forksCount": 8,
+      "language": "Kotlin",
+      "topics": [
+        "android",
+        "kotlin-android",
+        "notifications"
+      ],
+      "releasesUrl": "https://api.github.com/repos/Alfio010/notification-listener-android/releases{/id}",
+      "updatedAt": "2026-02-03T16:43:31Z",
+      "createdAt": "2023-03-02T18:08:49Z",
+      "latestReleaseDate": "2026-02-03T16:56:48Z",
+      "releaseRecency": 0,
+      "releaseRecencyText": "Released today"
+    },
+    {
+      "id": 1145207835,
+      "name": "film_sims",
+      "fullName": "tqmane/film_sims",
+      "owner": {
+        "login": "tqmane",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/149690876?v=4"
+      },
+      "description": null,
+      "defaultBranch": "main",
+      "htmlUrl": "https://github.com/tqmane/film_sims",
+      "stargazersCount": 65,
+      "forksCount": 3,
+      "language": "Kotlin",
+      "topics": [],
+      "releasesUrl": "https://api.github.com/repos/tqmane/film_sims/releases{/id}",
+      "updatedAt": "2026-02-03T15:48:29Z",
+      "createdAt": "2026-01-29T15:00:45Z",
+      "latestReleaseDate": "2026-02-03T16:51:21Z",
+      "releaseRecency": 0,
+      "releaseRecencyText": "Released today"
+    },
+    {
+      "id": 401259651,
+      "name": "traewelldroid",
+      "fullName": "Traewelldroid/traewelldroid",
+      "owner": {
+        "login": "Traewelldroid",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/115536640?v=4"
+      },
+      "description": "Android app for @Traewelling public transport check-in service",
+      "defaultBranch": "dev",
+      "htmlUrl": "https://github.com/Traewelldroid/traewelldroid",
+      "stargazersCount": 131,
+      "forksCount": 22,
+      "language": "Kotlin",
+      "topics": [
+        "android",
+        "bahn",
+        "deutsche-bahn",
+        "public-transport",
+        "traewelling",
+        "transit",
+        "transport"
+      ],
+      "releasesUrl": "https://api.github.com/repos/Traewelldroid/traewelldroid/releases{/id}",
+      "updatedAt": "2026-02-03T16:23:44Z",
+      "createdAt": "2021-08-30T07:48:26Z",
+      "latestReleaseDate": "2026-02-03T16:45:39Z",
+      "releaseRecency": 0,
+      "releaseRecencyText": "Released today"
+    },
     {
       "id": 909047123,
       "name": "DroidPad",
@@ -15,7 +645,7 @@
       "description": "Build Android control interfaces for Bluetooth Low Energy, Bluetooth, WebSocket, MQTT, TCP, and UDP protocols for your project",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/UmerCodez/DroidPad",
-      "stargazersCount": 296,
+      "stargazersCount": 297,
       "forksCount": 21,
       "language": "Kotlin",
       "topics": [
@@ -41,7 +671,7 @@
         "websocket"
       ],
       "releasesUrl": "https://api.github.com/repos/UmerCodez/DroidPad/releases{/id}",
-      "updatedAt": "2026-02-03T16:24:12Z",
+      "updatedAt": "2026-02-04T02:22:12Z",
       "createdAt": "2024-12-27T16:10:04Z",
       "latestReleaseDate": "2026-02-03T16:29:29Z",
       "releaseRecency": 0,
@@ -58,12 +688,12 @@
       "description": "EUDI Wallet Prototype",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/eu-digital-identity-wallet/eudi-app-android-wallet-ui",
-      "stargazersCount": 161,
+      "stargazersCount": 162,
       "forksCount": 54,
       "language": "Kotlin",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/eu-digital-identity-wallet/eudi-app-android-wallet-ui/releases{/id}",
-      "updatedAt": "2026-02-03T15:49:44Z",
+      "updatedAt": "2026-02-04T02:36:22Z",
       "createdAt": "2023-11-06T08:02:36Z",
       "latestReleaseDate": "2026-02-03T16:13:22Z",
       "releaseRecency": 0,
@@ -85,7 +715,7 @@
       "language": "Kotlin",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/Econ01/HydroTracker/releases{/id}",
-      "updatedAt": "2026-02-03T16:11:39Z",
+      "updatedAt": "2026-02-03T22:53:15Z",
       "createdAt": "2025-08-07T11:15:10Z",
       "latestReleaseDate": "2026-02-03T16:10:36Z",
       "releaseRecency": 0,
@@ -111,7 +741,7 @@
         "android"
       ],
       "releasesUrl": "https://api.github.com/repos/d4rken-org/airplanes-live-app/releases{/id}",
-      "updatedAt": "2026-02-03T15:34:23Z",
+      "updatedAt": "2026-02-03T18:02:43Z",
       "createdAt": "2023-12-13T12:00:56Z",
       "latestReleaseDate": "2026-02-03T15:41:28Z",
       "releaseRecency": 0,
@@ -193,28 +823,6 @@
       "updatedAt": "2026-02-02T22:55:51Z",
       "createdAt": "2018-03-29T01:36:40Z",
       "latestReleaseDate": "2026-02-03T14:13:50Z",
-      "releaseRecency": 0,
-      "releaseRecencyText": "Released today"
-    },
-    {
-      "id": 1083187704,
-      "name": "mpv-android-anime4k",
-      "fullName": "azxcvn/mpv-android-anime4k",
-      "owner": {
-        "login": "azxcvn",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/90583891?v=4"
-      },
-      "description": "这是一个基于MPV播放器，支持Anime4K超分功能等多功能的安卓本地播放器，更多信息请看readme文件。This is a multifunctional Android local player based on MPV player, supporting Anime4K upscaling and more. For more information, please see the readme file.",
-      "defaultBranch": "master",
-      "htmlUrl": "https://github.com/azxcvn/mpv-android-anime4k",
-      "stargazersCount": 247,
-      "forksCount": 9,
-      "language": "Kotlin",
-      "topics": [],
-      "releasesUrl": "https://api.github.com/repos/azxcvn/mpv-android-anime4k/releases{/id}",
-      "updatedAt": "2026-02-03T12:29:15Z",
-      "createdAt": "2025-10-25T14:17:12Z",
-      "latestReleaseDate": "2026-02-03T14:09:07Z",
       "releaseRecency": 0,
       "releaseRecencyText": "Released today"
     },
@@ -317,7 +925,7 @@
       "description": "Android TV Client for Jellyfin",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/jellyfin/jellyfin-androidtv",
-      "stargazersCount": 4047,
+      "stargazersCount": 4048,
       "forksCount": 756,
       "language": "Kotlin",
       "topics": [
@@ -328,7 +936,7 @@
         "kotlin"
       ],
       "releasesUrl": "https://api.github.com/repos/jellyfin/jellyfin-androidtv/releases{/id}",
-      "updatedAt": "2026-02-03T13:03:10Z",
+      "updatedAt": "2026-02-04T04:06:01Z",
       "createdAt": "2018-12-13T14:33:32Z",
       "latestReleaseDate": "2026-02-03T13:07:17Z",
       "releaseRecency": 0,
@@ -346,7 +954,7 @@
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/CodeWorksCreativeHub/mLauncher",
       "stargazersCount": 221,
-      "forksCount": 23,
+      "forksCount": 24,
       "language": "Kotlin",
       "topics": [
         "ad-free",
@@ -389,7 +997,7 @@
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/code3-dev/CCloud",
       "stargazersCount": 292,
-      "forksCount": 30,
+      "forksCount": 31,
       "language": "Kotlin",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/code3-dev/CCloud/releases{/id}",
@@ -415,7 +1023,7 @@
       "language": "Kotlin",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/skepsun/Kototoro/releases{/id}",
-      "updatedAt": "2026-02-03T14:05:16Z",
+      "updatedAt": "2026-02-04T04:12:45Z",
       "createdAt": "2025-10-28T07:25:47Z",
       "latestReleaseDate": "2026-02-03T10:37:14Z",
       "releaseRecency": 0,
@@ -437,7 +1045,7 @@
       "language": "Kotlin",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/NEORUAA/XHS_Downloader_Android/releases{/id}",
-      "updatedAt": "2026-02-03T09:48:25Z",
+      "updatedAt": "2026-02-04T03:26:54Z",
       "createdAt": "2025-10-30T13:26:55Z",
       "latestReleaseDate": "2026-02-03T10:11:27Z",
       "releaseRecency": 0,
@@ -527,7 +1135,7 @@
       "description": "Lightning fast, ad free, super lightweight native video compressor for Android",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/JoshAtticus/Compressor",
-      "stargazersCount": 210,
+      "stargazersCount": 211,
       "forksCount": 8,
       "language": "Kotlin",
       "topics": [
@@ -538,7 +1146,7 @@
         "video"
       ],
       "releasesUrl": "https://api.github.com/repos/JoshAtticus/Compressor/releases{/id}",
-      "updatedAt": "2026-02-03T08:22:07Z",
+      "updatedAt": "2026-02-04T04:14:47Z",
       "createdAt": "2026-01-20T09:23:22Z",
       "latestReleaseDate": "2026-02-03T08:23:59Z",
       "releaseRecency": 0,
@@ -555,7 +1163,7 @@
       "description": "Minimalistic audiobook player",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/PaulWoitaschek/Voice",
-      "stargazersCount": 2853,
+      "stargazersCount": 2854,
       "forksCount": 412,
       "language": "Kotlin",
       "topics": [
@@ -569,7 +1177,7 @@
         "minimal"
       ],
       "releasesUrl": "https://api.github.com/repos/PaulWoitaschek/Voice/releases{/id}",
-      "updatedAt": "2026-02-02T21:10:58Z",
+      "updatedAt": "2026-02-03T17:45:25Z",
       "createdAt": "2014-08-02T22:01:39Z",
       "latestReleaseDate": "2026-02-03T06:24:24Z",
       "releaseRecency": 0,
@@ -586,8 +1194,8 @@
       "description": "The most powerful AI agent and AI chat software on Android/Operit是一款Android上目前能力最为强大的AI Agent",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/AAswordman/Operit",
-      "stargazersCount": 3224,
-      "forksCount": 241,
+      "stargazersCount": 3228,
+      "forksCount": 242,
       "language": "Kotlin",
       "topics": [
         "agent",
@@ -599,7 +1207,7 @@
         "terminal"
       ],
       "releasesUrl": "https://api.github.com/repos/AAswordman/Operit/releases{/id}",
-      "updatedAt": "2026-02-03T14:35:55Z",
+      "updatedAt": "2026-02-04T03:24:24Z",
       "createdAt": "2025-03-15T04:24:12Z",
       "latestReleaseDate": "2026-02-03T05:33:59Z",
       "releaseRecency": 0,
@@ -638,16 +1246,16 @@
       "description": null,
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/roseforljh/KunBox",
-      "stargazersCount": 190,
+      "stargazersCount": 193,
       "forksCount": 19,
       "language": "Kotlin",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/roseforljh/KunBox/releases{/id}",
-      "updatedAt": "2026-02-03T11:23:43Z",
+      "updatedAt": "2026-02-04T02:22:14Z",
       "createdAt": "2025-12-16T22:14:26Z",
       "latestReleaseDate": "2026-02-03T03:25:27Z",
-      "releaseRecency": 0,
-      "releaseRecencyText": "Released today"
+      "releaseRecency": 1,
+      "releaseRecencyText": "Released yesterday"
     },
     {
       "id": 502586319,
@@ -660,7 +1268,7 @@
       "description": "Browse your memories without any interruptions with this photo and video gallery",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/FossifyOrg/Gallery",
-      "stargazersCount": 3015,
+      "stargazersCount": 3017,
       "forksCount": 159,
       "language": "Kotlin",
       "topics": [
@@ -671,11 +1279,11 @@
         "open-source"
       ],
       "releasesUrl": "https://api.github.com/repos/FossifyOrg/Gallery/releases{/id}",
-      "updatedAt": "2026-02-03T12:39:02Z",
+      "updatedAt": "2026-02-04T03:32:25Z",
       "createdAt": "2022-06-12T10:39:25Z",
       "latestReleaseDate": "2026-02-03T02:36:36Z",
-      "releaseRecency": 0,
-      "releaseRecencyText": "Released today"
+      "releaseRecency": 1,
+      "releaseRecencyText": "Released yesterday"
     },
     {
       "id": 499759123,
@@ -688,7 +1296,7 @@
       "description": "A handy phone call manager with phonebook, number blocking and multi-SIM support",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/FossifyOrg/Phone",
-      "stargazersCount": 1075,
+      "stargazersCount": 1077,
       "forksCount": 125,
       "language": "Kotlin",
       "topics": [
@@ -699,11 +1307,11 @@
         "open-source"
       ],
       "releasesUrl": "https://api.github.com/repos/FossifyOrg/Phone/releases{/id}",
-      "updatedAt": "2026-02-03T12:39:27Z",
+      "updatedAt": "2026-02-04T03:40:54Z",
       "createdAt": "2022-06-04T07:42:47Z",
       "latestReleaseDate": "2026-02-03T02:36:25Z",
-      "releaseRecency": 0,
-      "releaseRecencyText": "Released today"
+      "releaseRecency": 1,
+      "releaseRecencyText": "Released yesterday"
     },
     {
       "id": 642519377,
@@ -730,8 +1338,8 @@
       "updatedAt": "2026-02-03T12:39:09Z",
       "createdAt": "2023-05-18T18:52:44Z",
       "latestReleaseDate": "2026-02-03T02:36:23Z",
-      "releaseRecency": 0,
-      "releaseRecencyText": "Released today"
+      "releaseRecency": 1,
+      "releaseRecencyText": "Released yesterday"
     },
     {
       "id": 235221262,
@@ -744,7 +1352,7 @@
       "description": "Android application for Meshtastic",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/meshtastic/Meshtastic-Android",
-      "stargazersCount": 1370,
+      "stargazersCount": 1372,
       "forksCount": 382,
       "language": "Kotlin",
       "topics": [
@@ -754,11 +1362,11 @@
         "meshtastic"
       ],
       "releasesUrl": "https://api.github.com/repos/meshtastic/Meshtastic-Android/releases{/id}",
-      "updatedAt": "2026-02-03T14:49:34Z",
+      "updatedAt": "2026-02-04T03:26:19Z",
       "createdAt": "2020-01-20T23:55:32Z",
       "latestReleaseDate": "2026-02-03T02:17:21Z",
-      "releaseRecency": 0,
-      "releaseRecencyText": "Released today"
+      "releaseRecency": 1,
+      "releaseRecencyText": "Released yesterday"
     },
     {
       "id": 735441880,
@@ -771,7 +1379,7 @@
       "description": "Un cliente de YouTube Music con Material Design 3, para Android",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/Arturo254/OpenTune",
-      "stargazersCount": 1152,
+      "stargazersCount": 1153,
       "forksCount": 85,
       "language": "Kotlin",
       "topics": [
@@ -784,11 +1392,11 @@
         "youtubemusic"
       ],
       "releasesUrl": "https://api.github.com/repos/Arturo254/OpenTune/releases{/id}",
-      "updatedAt": "2026-02-03T12:08:54Z",
+      "updatedAt": "2026-02-04T01:02:02Z",
       "createdAt": "2023-12-25T00:23:00Z",
       "latestReleaseDate": "2026-02-03T01:39:16Z",
-      "releaseRecency": 0,
-      "releaseRecencyText": "Released today"
+      "releaseRecency": 1,
+      "releaseRecencyText": "Released yesterday"
     },
     {
       "id": 1326671,
@@ -802,7 +1410,7 @@
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/thunderbird/thunderbird-android",
       "stargazersCount": 13088,
-      "forksCount": 2691,
+      "forksCount": 2692,
       "language": "Kotlin",
       "topics": [
         "android",
@@ -811,11 +1419,11 @@
         "mozilla"
       ],
       "releasesUrl": "https://api.github.com/repos/thunderbird/thunderbird-android/releases{/id}",
-      "updatedAt": "2026-02-03T15:55:31Z",
+      "updatedAt": "2026-02-03T18:03:27Z",
       "createdAt": "2011-02-04T02:40:00Z",
       "latestReleaseDate": "2026-02-03T01:19:27Z",
-      "releaseRecency": 0,
-      "releaseRecencyText": "Released today"
+      "releaseRecency": 1,
+      "releaseRecencyText": "Released yesterday"
     },
     {
       "id": 987161420,
@@ -836,8 +1444,8 @@
       "updatedAt": "2026-02-03T14:54:27Z",
       "createdAt": "2025-05-20T17:02:19Z",
       "latestReleaseDate": "2026-02-02T23:27:14Z",
-      "releaseRecency": 0,
-      "releaseRecencyText": "Released today"
+      "releaseRecency": 1,
+      "releaseRecencyText": "Released yesterday"
     },
     {
       "id": 976418363,
@@ -863,8 +1471,8 @@
       "updatedAt": "2026-02-02T23:01:09Z",
       "createdAt": "2025-05-02T04:36:07Z",
       "latestReleaseDate": "2026-02-02T23:01:15Z",
-      "releaseRecency": 0,
-      "releaseRecencyText": "Released today"
+      "releaseRecency": 1,
+      "releaseRecencyText": "Released yesterday"
     },
     {
       "id": 480047057,
@@ -885,8 +1493,8 @@
       "updatedAt": "2026-02-02T22:56:06Z",
       "createdAt": "2022-04-10T14:46:11Z",
       "latestReleaseDate": "2026-02-02T22:56:04Z",
-      "releaseRecency": 0,
-      "releaseRecencyText": "Released today"
+      "releaseRecency": 1,
+      "releaseRecencyText": "Released yesterday"
     },
     {
       "id": 732810432,
@@ -899,7 +1507,7 @@
       "description": "Android Music Streaming App suite in Material You style.  Connects to Ampache, Nextcloud Music and compatible backends (Ampache API 4 and above).",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/icefields/Power-Ampache-2",
-      "stargazersCount": 206,
+      "stargazersCount": 207,
       "forksCount": 11,
       "language": "Kotlin",
       "topics": [
@@ -917,11 +1525,11 @@
         "streaming-audio"
       ],
       "releasesUrl": "https://api.github.com/repos/icefields/Power-Ampache-2/releases{/id}",
-      "updatedAt": "2026-02-03T06:00:20Z",
+      "updatedAt": "2026-02-03T19:36:15Z",
       "createdAt": "2023-12-17T22:21:46Z",
       "latestReleaseDate": "2026-02-02T21:58:10Z",
-      "releaseRecency": 0,
-      "releaseRecencyText": "Released today"
+      "releaseRecency": 1,
+      "releaseRecencyText": "Released yesterday"
     },
     {
       "id": 478710402,
@@ -934,8 +1542,8 @@
       "description": "🖼️ Image Toolbox is a powerful app for advanced image manipulation. It offers dozens of features, from basic tools like crop and draw to filters, OCR, and a wide range of image processing options",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/T8RIN/ImageToolbox",
-      "stargazersCount": 11487,
-      "forksCount": 500,
+      "stargazersCount": 11506,
+      "forksCount": 501,
       "language": "Kotlin",
       "topics": [
         "ai",
@@ -960,46 +1568,11 @@
         "upscaling"
       ],
       "releasesUrl": "https://api.github.com/repos/T8RIN/ImageToolbox/releases{/id}",
-      "updatedAt": "2026-02-03T16:29:59Z",
+      "updatedAt": "2026-02-04T04:01:53Z",
       "createdAt": "2022-04-06T20:06:28Z",
       "latestReleaseDate": "2026-02-02T20:40:01Z",
-      "releaseRecency": 0,
-      "releaseRecencyText": "Released today"
-    },
-    {
-      "id": 13862999,
-      "name": "apps-android-wikipedia",
-      "fullName": "wikimedia/apps-android-wikipedia",
-      "owner": {
-        "login": "wikimedia",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/56668?v=4"
-      },
-      "description": " 📱The official Wikipedia app for Android!",
-      "defaultBranch": "main",
-      "htmlUrl": "https://github.com/wikimedia/apps-android-wikipedia",
-      "stargazersCount": 2840,
-      "forksCount": 776,
-      "language": "Kotlin",
-      "topics": [
-        "android",
-        "android-app",
-        "coroutines",
-        "java",
-        "kotlin",
-        "mediawiki",
-        "mediawiki-api",
-        "rest-api",
-        "viewmodel",
-        "wiki",
-        "wikipedia",
-        "wikipedia-android"
-      ],
-      "releasesUrl": "https://api.github.com/repos/wikimedia/apps-android-wikipedia/releases{/id}",
-      "updatedAt": "2026-02-02T19:05:14Z",
-      "createdAt": "2013-10-25T14:31:39Z",
-      "latestReleaseDate": "2026-02-02T19:25:56Z",
-      "releaseRecency": 0,
-      "releaseRecencyText": "Released today"
+      "releaseRecency": 1,
+      "releaseRecencyText": "Released yesterday"
     },
     {
       "id": 600355571,
@@ -1039,8 +1612,8 @@
       "updatedAt": "2026-02-02T16:11:12Z",
       "createdAt": "2023-02-11T08:24:53Z",
       "latestReleaseDate": "2026-02-02T19:03:40Z",
-      "releaseRecency": 0,
-      "releaseRecencyText": "Released today"
+      "releaseRecency": 1,
+      "releaseRecencyText": "Released yesterday"
     },
     {
       "id": 588005013,
@@ -1064,8 +1637,8 @@
       "updatedAt": "2026-02-02T18:40:00Z",
       "createdAt": "2023-01-12T05:01:30Z",
       "latestReleaseDate": "2026-02-02T18:50:23Z",
-      "releaseRecency": 0,
-      "releaseRecencyText": "Released today"
+      "releaseRecency": 1,
+      "releaseRecencyText": "Released yesterday"
     },
     {
       "id": 1132071995,
@@ -1078,12 +1651,12 @@
       "description": "一个使用原生Android开发的哔哩哔哩安卓客户端，支持触摸、遥控，以及安卓5",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/cat3399/blbl",
-      "stargazersCount": 227,
+      "stargazersCount": 231,
       "forksCount": 15,
       "language": "Kotlin",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/cat3399/blbl/releases{/id}",
-      "updatedAt": "2026-02-03T15:15:12Z",
+      "updatedAt": "2026-02-04T02:37:04Z",
       "createdAt": "2026-01-11T09:10:37Z",
       "latestReleaseDate": "2026-02-02T16:26:51Z",
       "releaseRecency": 1,
@@ -1127,7 +1700,7 @@
       "description": "DuckDuckGo Android App",
       "defaultBranch": "develop",
       "htmlUrl": "https://github.com/duckduckgo/Android",
-      "stargazersCount": 4523,
+      "stargazersCount": 4525,
       "forksCount": 1239,
       "language": "Kotlin",
       "topics": [
@@ -1138,7 +1711,7 @@
         "translations"
       ],
       "releasesUrl": "https://api.github.com/repos/duckduckgo/Android/releases{/id}",
-      "updatedAt": "2026-02-03T14:23:05Z",
+      "updatedAt": "2026-02-04T00:18:52Z",
       "createdAt": "2017-01-13T17:11:25Z",
       "latestReleaseDate": "2026-02-02T16:05:07Z",
       "releaseRecency": 1,
@@ -1215,12 +1788,12 @@
       "description": "原生、纯净、可扩展 —— 重新定义你的 B 站体验",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/jay3-yy/BiliPai",
-      "stargazersCount": 1275,
-      "forksCount": 42,
+      "stargazersCount": 1278,
+      "forksCount": 43,
       "language": "Kotlin",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/jay3-yy/BiliPai/releases{/id}",
-      "updatedAt": "2026-02-03T16:06:09Z",
+      "updatedAt": "2026-02-04T04:00:43Z",
       "createdAt": "2025-11-28T11:17:48Z",
       "latestReleaseDate": "2026-02-02T14:27:24Z",
       "releaseRecency": 1,
@@ -1237,8 +1810,8 @@
       "description": "1M+ downloads Linux reference app with basics, tips and formatted man pages",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/SimonSchubert/LinuxCommandLibrary",
-      "stargazersCount": 1465,
-      "forksCount": 117,
+      "stargazersCount": 1467,
+      "forksCount": 118,
       "language": "Kotlin",
       "topics": [
         "android",
@@ -1248,7 +1821,7 @@
         "linux"
       ],
       "releasesUrl": "https://api.github.com/repos/SimonSchubert/LinuxCommandLibrary/releases{/id}",
-      "updatedAt": "2026-02-03T11:57:58Z",
+      "updatedAt": "2026-02-04T00:47:36Z",
       "createdAt": "2014-06-19T00:11:40Z",
       "latestReleaseDate": "2026-02-02T14:04:12Z",
       "releaseRecency": 1,
@@ -1287,7 +1860,7 @@
       "description": "Discover and replace proprietary apps with FOSS alternatives",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/jksalcedo/librefind",
-      "stargazersCount": 302,
+      "stargazersCount": 305,
       "forksCount": 4,
       "language": "Kotlin",
       "topics": [
@@ -1300,7 +1873,7 @@
         "oss"
       ],
       "releasesUrl": "https://api.github.com/repos/jksalcedo/librefind/releases{/id}",
-      "updatedAt": "2026-02-03T16:26:33Z",
+      "updatedAt": "2026-02-04T02:40:00Z",
       "createdAt": "2026-01-07T12:13:40Z",
       "latestReleaseDate": "2026-02-02T12:45:47Z",
       "releaseRecency": 1,
@@ -1339,31 +1912,9 @@
         "mpv"
       ],
       "releasesUrl": "https://api.github.com/repos/MakD/AFinity/releases{/id}",
-      "updatedAt": "2026-02-03T03:21:12Z",
+      "updatedAt": "2026-02-03T19:12:53Z",
       "createdAt": "2025-10-01T10:50:36Z",
       "latestReleaseDate": "2026-02-02T12:24:38Z",
-      "releaseRecency": 1,
-      "releaseRecencyText": "Released yesterday"
-    },
-    {
-      "id": 1145207835,
-      "name": "film_sims",
-      "fullName": "tqmane/film_sims",
-      "owner": {
-        "login": "tqmane",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/149690876?v=4"
-      },
-      "description": null,
-      "defaultBranch": "main",
-      "htmlUrl": "https://github.com/tqmane/film_sims",
-      "stargazersCount": 65,
-      "forksCount": 3,
-      "language": "Kotlin",
-      "topics": [],
-      "releasesUrl": "https://api.github.com/repos/tqmane/film_sims/releases{/id}",
-      "updatedAt": "2026-02-03T15:48:29Z",
-      "createdAt": "2026-01-29T15:00:45Z",
-      "latestReleaseDate": "2026-02-02T11:46:27Z",
       "releaseRecency": 1,
       "releaseRecencyText": "Released yesterday"
     },
@@ -1378,7 +1929,7 @@
       "description": "Pocket Casts Android 🎧",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/Automattic/pocket-casts-android",
-      "stargazersCount": 2758,
+      "stargazersCount": 2759,
       "forksCount": 276,
       "language": "Kotlin",
       "topics": [
@@ -1386,7 +1937,7 @@
         "pocket-casts"
       ],
       "releasesUrl": "https://api.github.com/repos/Automattic/pocket-casts-android/releases{/id}",
-      "updatedAt": "2026-02-03T13:23:24Z",
+      "updatedAt": "2026-02-03T23:36:21Z",
       "createdAt": "2022-06-15T12:41:42Z",
       "latestReleaseDate": "2026-02-02T11:41:17Z",
       "releaseRecency": 1,
@@ -1425,12 +1976,12 @@
       "description": "基于 APatch 开发的内核级别ROOT方案!",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/matsuzaka-yuki/FolkPatch",
-      "stargazersCount": 424,
+      "stargazersCount": 426,
       "forksCount": 56,
       "language": "Kotlin",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/matsuzaka-yuki/FolkPatch/releases{/id}",
-      "updatedAt": "2026-02-03T15:49:30Z",
+      "updatedAt": "2026-02-04T00:36:56Z",
       "createdAt": "2025-11-29T05:10:51Z",
       "latestReleaseDate": "2026-02-02T10:19:48Z",
       "releaseRecency": 1,
@@ -1550,7 +2101,7 @@
       "description": "Easy keyboard for inserting all kinds of texts, special characters and numbers.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/FossifyOrg/Keyboard",
-      "stargazersCount": 547,
+      "stargazersCount": 546,
       "forksCount": 61,
       "language": "Kotlin",
       "topics": [
@@ -1561,7 +2112,7 @@
         "open-source"
       ],
       "releasesUrl": "https://api.github.com/repos/FossifyOrg/Keyboard/releases{/id}",
-      "updatedAt": "2026-02-03T12:39:05Z",
+      "updatedAt": "2026-02-03T16:46:08Z",
       "createdAt": "2022-07-21T16:11:26Z",
       "latestReleaseDate": "2026-02-02T06:05:10Z",
       "releaseRecency": 1,
@@ -1583,7 +2134,7 @@
       "language": "Kotlin",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/droidrun/droidrun-portal/releases{/id}",
-      "updatedAt": "2026-02-02T05:33:27Z",
+      "updatedAt": "2026-02-03T19:18:01Z",
       "createdAt": "2025-04-12T22:05:45Z",
       "latestReleaseDate": "2026-02-02T05:35:01Z",
       "releaseRecency": 1,
@@ -1600,16 +2151,16 @@
       "description": null,
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/Doryoku1223/TabulaV3",
-      "stargazersCount": 87,
+      "stargazersCount": 89,
       "forksCount": 4,
       "language": "Kotlin",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/Doryoku1223/TabulaV3/releases{/id}",
-      "updatedAt": "2026-02-03T13:43:23Z",
+      "updatedAt": "2026-02-04T03:42:42Z",
       "createdAt": "2026-01-25T09:09:25Z",
       "latestReleaseDate": "2026-02-02T02:23:51Z",
-      "releaseRecency": 1,
-      "releaseRecencyText": "Released yesterday"
+      "releaseRecency": 2,
+      "releaseRecencyText": "Released 2 days ago"
     },
     {
       "id": 550325731,
@@ -1639,8 +2190,8 @@
       "updatedAt": "2026-02-03T13:46:21Z",
       "createdAt": "2022-10-12T15:12:56Z",
       "latestReleaseDate": "2026-02-02T00:34:36Z",
-      "releaseRecency": 1,
-      "releaseRecencyText": "Released yesterday"
+      "releaseRecency": 2,
+      "releaseRecencyText": "Released 2 days ago"
     },
     {
       "id": 1055099862,
@@ -1677,8 +2228,8 @@
       "updatedAt": "2026-02-03T13:59:15Z",
       "createdAt": "2025-09-11T19:09:33Z",
       "latestReleaseDate": "2026-02-02T00:06:33Z",
-      "releaseRecency": 1,
-      "releaseRecencyText": "Released yesterday"
+      "releaseRecency": 2,
+      "releaseRecencyText": "Released 2 days ago"
     },
     {
       "id": 19924747,
@@ -1699,8 +2250,8 @@
       "updatedAt": "2026-02-02T20:18:54Z",
       "createdAt": "2014-05-19T00:41:19Z",
       "latestReleaseDate": "2026-02-01T23:20:22Z",
-      "releaseRecency": 1,
-      "releaseRecencyText": "Released yesterday"
+      "releaseRecency": 2,
+      "releaseRecencyText": "Released 2 days ago"
     },
     {
       "id": 372090397,
@@ -1713,16 +2264,16 @@
       "description": null,
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/izivkov/RemoteVideoCam",
-      "stargazersCount": 148,
+      "stargazersCount": 150,
       "forksCount": 14,
       "language": "Kotlin",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/izivkov/RemoteVideoCam/releases{/id}",
-      "updatedAt": "2026-02-03T13:14:15Z",
+      "updatedAt": "2026-02-04T03:29:48Z",
       "createdAt": "2021-05-30T00:01:07Z",
       "latestReleaseDate": "2026-02-01T23:06:36Z",
-      "releaseRecency": 1,
-      "releaseRecencyText": "Released yesterday"
+      "releaseRecency": 2,
+      "releaseRecencyText": "Released 2 days ago"
     },
     {
       "id": 747608524,
@@ -1743,8 +2294,8 @@
       "updatedAt": "2026-02-03T08:08:15Z",
       "createdAt": "2024-01-24T09:28:28Z",
       "latestReleaseDate": "2026-02-01T22:52:01Z",
-      "releaseRecency": 1,
-      "releaseRecencyText": "Released yesterday"
+      "releaseRecency": 2,
+      "releaseRecencyText": "Released 2 days ago"
     },
     {
       "id": 111605778,
@@ -1757,7 +2308,7 @@
       "description": "Open-source Android/Desktop remake of Civ V",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/yairm210/Unciv",
-      "stargazersCount": 10047,
+      "stargazersCount": 10050,
       "forksCount": 1778,
       "language": "Kotlin",
       "topics": [
@@ -1773,11 +2324,11 @@
         "strategy-game"
       ],
       "releasesUrl": "https://api.github.com/repos/yairm210/Unciv/releases{/id}",
-      "updatedAt": "2026-02-03T09:30:20Z",
+      "updatedAt": "2026-02-03T22:45:51Z",
       "createdAt": "2017-11-21T21:58:12Z",
       "latestReleaseDate": "2026-02-01T21:06:53Z",
-      "releaseRecency": 1,
-      "releaseRecencyText": "Released yesterday"
+      "releaseRecency": 2,
+      "releaseRecencyText": "Released 2 days ago"
     },
     {
       "id": 415397096,
@@ -1811,8 +2362,8 @@
       "updatedAt": "2026-02-01T19:25:17Z",
       "createdAt": "2021-10-09T18:59:09Z",
       "latestReleaseDate": "2026-02-01T19:33:07Z",
-      "releaseRecency": 1,
-      "releaseRecencyText": "Released yesterday"
+      "releaseRecency": 2,
+      "releaseRecencyText": "Released 2 days ago"
     },
     {
       "id": 831049613,
@@ -1830,11 +2381,11 @@
       "language": "Kotlin",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/r0adkll/Campfire/releases{/id}",
-      "updatedAt": "2026-02-03T09:29:58Z",
+      "updatedAt": "2026-02-03T20:12:15Z",
       "createdAt": "2024-07-19T14:41:33Z",
       "latestReleaseDate": "2026-02-01T18:51:53Z",
-      "releaseRecency": 1,
-      "releaseRecencyText": "Released yesterday"
+      "releaseRecency": 2,
+      "releaseRecencyText": "Released 2 days ago"
     },
     {
       "id": 1104767780,
@@ -1847,16 +2398,16 @@
       "description": "Fast Gesture based android launcher",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/Elnix90/Dragon-Launcher",
-      "stargazersCount": 123,
+      "stargazersCount": 124,
       "forksCount": 8,
       "language": "Kotlin",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/Elnix90/Dragon-Launcher/releases{/id}",
-      "updatedAt": "2026-02-03T15:13:54Z",
+      "updatedAt": "2026-02-03T17:27:23Z",
       "createdAt": "2025-11-26T16:56:54Z",
       "latestReleaseDate": "2026-02-01T17:09:39Z",
-      "releaseRecency": 1,
-      "releaseRecencyText": "Released yesterday"
+      "releaseRecency": 2,
+      "releaseRecencyText": "Released 2 days ago"
     },
     {
       "id": 800784399,
@@ -1877,8 +2428,8 @@
       "updatedAt": "2026-02-01T16:52:02Z",
       "createdAt": "2024-05-15T01:51:14Z",
       "latestReleaseDate": "2026-02-01T16:56:56Z",
-      "releaseRecency": 1,
-      "releaseRecencyText": "Released yesterday"
+      "releaseRecency": 2,
+      "releaseRecencyText": "Released 2 days ago"
     },
     {
       "id": 669697660,
@@ -1891,7 +2442,7 @@
       "description": "Alternative client for the Bitwarden® platform & KeePass (KDBX), created to provide the best user experience possible.",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/AChep/keyguard-app",
-      "stargazersCount": 2423,
+      "stargazersCount": 2425,
       "forksCount": 75,
       "language": "Kotlin",
       "topics": [
@@ -1904,11 +2455,11 @@
         "multiplatform"
       ],
       "releasesUrl": "https://api.github.com/repos/AChep/keyguard-app/releases{/id}",
-      "updatedAt": "2026-02-03T16:27:25Z",
+      "updatedAt": "2026-02-04T03:29:22Z",
       "createdAt": "2023-07-23T06:12:36Z",
       "latestReleaseDate": "2026-02-01T16:46:59Z",
-      "releaseRecency": 1,
-      "releaseRecencyText": "Released yesterday"
+      "releaseRecency": 2,
+      "releaseRecencyText": "Released 2 days ago"
     },
     {
       "id": 970046788,
@@ -1921,16 +2472,16 @@
       "description": "Lightweight unofficial Steam client for Android",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/utkarshdalal/GameNative",
-      "stargazersCount": 2280,
-      "forksCount": 90,
+      "stargazersCount": 2292,
+      "forksCount": 91,
       "language": "Kotlin",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/utkarshdalal/GameNative/releases{/id}",
-      "updatedAt": "2026-02-03T16:15:04Z",
+      "updatedAt": "2026-02-04T04:02:19Z",
       "createdAt": "2025-04-21T11:25:27Z",
       "latestReleaseDate": "2026-02-01T16:44:19Z",
-      "releaseRecency": 1,
-      "releaseRecencyText": "Released yesterday"
+      "releaseRecency": 2,
+      "releaseRecencyText": "Released 2 days ago"
     },
     {
       "id": 811353065,
@@ -1943,7 +2494,7 @@
       "description": "🔨 A Simple todo list and habit tracker for Android ",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/shub39/Grit",
-      "stargazersCount": 715,
+      "stargazersCount": 717,
       "forksCount": 54,
       "language": "Kotlin",
       "topics": [
@@ -1959,7 +2510,7 @@
         "todolist"
       ],
       "releasesUrl": "https://api.github.com/repos/shub39/Grit/releases{/id}",
-      "updatedAt": "2026-02-03T04:35:22Z",
+      "updatedAt": "2026-02-04T03:17:48Z",
       "createdAt": "2024-06-06T12:37:31Z",
       "latestReleaseDate": "2026-02-01T16:20:22Z",
       "releaseRecency": 2,
@@ -2018,8 +2569,8 @@
       "description": "A cross-platform music app using YouTube Music for backend",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/maxrave-dev/SimpMusic",
-      "stargazersCount": 7551,
-      "forksCount": 342,
+      "stargazersCount": 7564,
+      "forksCount": 343,
       "language": "Kotlin",
       "topics": [
         "android",
@@ -2042,7 +2593,7 @@
         "youtube-music"
       ],
       "releasesUrl": "https://api.github.com/repos/maxrave-dev/SimpMusic/releases{/id}",
-      "updatedAt": "2026-02-03T16:08:36Z",
+      "updatedAt": "2026-02-04T02:52:59Z",
       "createdAt": "2023-04-15T04:53:33Z",
       "latestReleaseDate": "2026-02-01T14:53:24Z",
       "releaseRecency": 2,
@@ -2059,12 +2610,12 @@
       "description": "A feature-rich weather app with good visualizations and more than 50 sources.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/breezy-weather/breezy-weather",
-      "stargazersCount": 9183,
+      "stargazersCount": 9186,
       "forksCount": 311,
       "language": "Kotlin",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/breezy-weather/breezy-weather/releases{/id}",
-      "updatedAt": "2026-02-03T15:27:50Z",
+      "updatedAt": "2026-02-04T02:54:00Z",
       "createdAt": "2022-04-16T13:45:06Z",
       "latestReleaseDate": "2026-02-01T14:30:47Z",
       "releaseRecency": 2,
@@ -2124,8 +2675,8 @@
       "description": "Video & Audio downloader for Android with web browser and player. M3U8 and MPD supported, live stream supported, using youtube-dlp and custom mp4/mp3/m3u8/mpd downloader, cookies supported, HTTP & SOCKS proxy chains supported, encrypted DNS",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/alexch33/super-video-downloader",
-      "stargazersCount": 550,
-      "forksCount": 73,
+      "stargazersCount": 553,
+      "forksCount": 74,
       "language": "Kotlin",
       "topics": [
         "ad-block",
@@ -2149,7 +2700,7 @@
         "youtube-dlp"
       ],
       "releasesUrl": "https://api.github.com/repos/alexch33/super-video-downloader/releases{/id}",
-      "updatedAt": "2026-02-03T14:07:43Z",
+      "updatedAt": "2026-02-04T00:23:09Z",
       "createdAt": "2024-08-16T13:33:09Z",
       "latestReleaseDate": "2026-02-01T14:04:50Z",
       "releaseRecency": 2,
@@ -2188,7 +2739,7 @@
       "description": "An Android RSS reader presented in Material You style.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/ReadYouApp/ReadYou",
-      "stargazersCount": 6809,
+      "stargazersCount": 6811,
       "forksCount": 271,
       "language": "Kotlin",
       "topics": [
@@ -2203,7 +2754,7 @@
         "rss-reader"
       ],
       "releasesUrl": "https://api.github.com/repos/ReadYouApp/ReadYou/releases{/id}",
-      "updatedAt": "2026-02-03T15:42:04Z",
+      "updatedAt": "2026-02-03T22:52:18Z",
       "createdAt": "2022-03-01T16:58:16Z",
       "latestReleaseDate": "2026-02-01T13:01:15Z",
       "releaseRecency": 2,
@@ -2220,7 +2771,7 @@
       "description": "An Android app to open map links in other map apps and copy coordinates",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/jakubvalenta/geoshare",
-      "stargazersCount": 210,
+      "stargazersCount": 212,
       "forksCount": 10,
       "language": "Kotlin",
       "topics": [
@@ -2237,7 +2788,7 @@
         "url"
       ],
       "releasesUrl": "https://api.github.com/repos/jakubvalenta/geoshare/releases{/id}",
-      "updatedAt": "2026-02-03T14:09:47Z",
+      "updatedAt": "2026-02-03T23:42:39Z",
       "createdAt": "2024-11-05T12:02:30Z",
       "latestReleaseDate": "2026-02-01T12:40:28Z",
       "releaseRecency": 2,
@@ -2297,545 +2848,6 @@
       "latestReleaseDate": "2026-02-01T11:12:25Z",
       "releaseRecency": 2,
       "releaseRecencyText": "Released 2 days ago"
-    },
-    {
-      "id": 598940882,
-      "name": "nextplayer",
-      "fullName": "anilbeesetti/nextplayer",
-      "owner": {
-        "login": "anilbeesetti",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/66936649?v=4"
-      },
-      "description": "An Android native video player",
-      "defaultBranch": "main",
-      "htmlUrl": "https://github.com/anilbeesetti/nextplayer",
-      "stargazersCount": 3521,
-      "forksCount": 210,
-      "language": "Kotlin",
-      "topics": [
-        "android",
-        "exoplayer",
-        "ffmpeg",
-        "ffmpeg-android",
-        "jetpack-compose",
-        "jni-android",
-        "kotlin",
-        "kotlin-android",
-        "kotlin-coroutines",
-        "media3",
-        "player",
-        "room-database",
-        "video-player"
-      ],
-      "releasesUrl": "https://api.github.com/repos/anilbeesetti/nextplayer/releases{/id}",
-      "updatedAt": "2026-02-03T15:38:10Z",
-      "createdAt": "2023-02-08T05:34:22Z",
-      "latestReleaseDate": "2026-02-01T07:49:40Z",
-      "releaseRecency": 2,
-      "releaseRecencyText": "Released 2 days ago"
-    },
-    {
-      "id": 1104751416,
-      "name": "morphe-manager",
-      "fullName": "MorpheApp/morphe-manager",
-      "owner": {
-        "login": "MorpheApp",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/246280111?v=4"
-      },
-      "description": "Morphe app patcher for Android",
-      "defaultBranch": "main",
-      "htmlUrl": "https://github.com/MorpheApp/morphe-manager",
-      "stargazersCount": 1811,
-      "forksCount": 20,
-      "language": "Kotlin",
-      "topics": [
-        "android",
-        "apk",
-        "app",
-        "morphe",
-        "patcher",
-        "patches",
-        "youtube"
-      ],
-      "releasesUrl": "https://api.github.com/repos/MorpheApp/morphe-manager/releases{/id}",
-      "updatedAt": "2026-02-03T16:10:20Z",
-      "createdAt": "2025-11-26T16:29:57Z",
-      "latestReleaseDate": "2026-02-01T07:48:58Z",
-      "releaseRecency": 2,
-      "releaseRecencyText": "Released 2 days ago"
-    },
-    {
-      "id": 789066441,
-      "name": "DNSNet",
-      "fullName": "t895/DNSNet",
-      "owner": {
-        "login": "t895",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/14132249?v=4"
-      },
-      "description": "DNS filter for Android",
-      "defaultBranch": "a-couple-updates",
-      "htmlUrl": "https://github.com/t895/DNSNet",
-      "stargazersCount": 733,
-      "forksCount": 30,
-      "language": "Kotlin",
-      "topics": [],
-      "releasesUrl": "https://api.github.com/repos/t895/DNSNet/releases{/id}",
-      "updatedAt": "2026-02-03T13:31:21Z",
-      "createdAt": "2024-04-19T16:36:07Z",
-      "latestReleaseDate": "2026-02-01T05:16:39Z",
-      "releaseRecency": 2,
-      "releaseRecencyText": "Released 2 days ago"
-    },
-    {
-      "id": 179008173,
-      "name": "android",
-      "fullName": "home-assistant/android",
-      "owner": {
-        "login": "home-assistant",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/13844975?v=4"
-      },
-      "description": "Home Assistant Companion for Android",
-      "defaultBranch": "main",
-      "htmlUrl": "https://github.com/home-assistant/android",
-      "stargazersCount": 3357,
-      "forksCount": 881,
-      "language": "Kotlin",
-      "topics": [
-        "android",
-        "automotive",
-        "compose",
-        "hacktoberfest",
-        "home-assistant",
-        "home-automation",
-        "kotlin",
-        "open-source-app",
-        "wear"
-      ],
-      "releasesUrl": "https://api.github.com/repos/home-assistant/android/releases{/id}",
-      "updatedAt": "2026-02-03T14:35:09Z",
-      "createdAt": "2019-04-02T05:52:50Z",
-      "latestReleaseDate": "2026-02-01T04:53:29Z",
-      "releaseRecency": 2,
-      "releaseRecencyText": "Released 2 days ago"
-    },
-    {
-      "id": 1070665896,
-      "name": "BiBi-Keyboard",
-      "fullName": "BryceWG/BiBi-Keyboard",
-      "owner": {
-        "login": "BryceWG",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/87651641?v=4"
-      },
-      "description": "说点啥（BiBi Keyboard）:一个基于 Kotlin 的 Android 平台的 LLM 与 ASR 语音输入法键盘应用  An LLM ASR voice input method keyboard application for the Android platform based on Kotlin",
-      "defaultBranch": "main",
-      "htmlUrl": "https://github.com/BryceWG/BiBi-Keyboard",
-      "stargazersCount": 480,
-      "forksCount": 39,
-      "language": "Kotlin",
-      "topics": [
-        "android-app",
-        "asr",
-        "doubao",
-        "elevenlabs",
-        "keyboard",
-        "kotlin",
-        "llm",
-        "qwen-asr",
-        "speech-to-text",
-        "whisper"
-      ],
-      "releasesUrl": "https://api.github.com/repos/BryceWG/BiBi-Keyboard/releases{/id}",
-      "updatedAt": "2026-02-03T13:58:04Z",
-      "createdAt": "2025-10-06T09:18:49Z",
-      "latestReleaseDate": "2026-02-01T03:54:07Z",
-      "releaseRecency": 2,
-      "releaseRecencyText": "Released 2 days ago"
-    },
-    {
-      "id": 1128777434,
-      "name": "LyricProvider",
-      "fullName": "proify/LyricProvider",
-      "owner": {
-        "login": "proify",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/247336249?v=4"
-      },
-      "description": "适用于词幕的歌词提供器插件",
-      "defaultBranch": "master",
-      "htmlUrl": "https://github.com/proify/LyricProvider",
-      "stargazersCount": 52,
-      "forksCount": 5,
-      "language": "Kotlin",
-      "topics": [
-        "163music",
-        "applemusic",
-        "qqmusic",
-        "xposed",
-        "xposed-module",
-        "xposedmodule"
-      ],
-      "releasesUrl": "https://api.github.com/repos/proify/LyricProvider/releases{/id}",
-      "updatedAt": "2026-02-03T15:11:41Z",
-      "createdAt": "2026-01-06T06:18:41Z",
-      "latestReleaseDate": "2026-02-01T01:56:28Z",
-      "releaseRecency": 2,
-      "releaseRecencyText": "Released 2 days ago"
-    },
-    {
-      "id": 1111814020,
-      "name": "lyricon",
-      "fullName": "proify/lyricon",
-      "owner": {
-        "login": "proify",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/247336249?v=4"
-      },
-      "description": "为 Android 系统扩展状态栏歌词显示功能的增强工具",
-      "defaultBranch": "master",
-      "htmlUrl": "https://github.com/proify/lyricon",
-      "stargazersCount": 144,
-      "forksCount": 9,
-      "language": "Kotlin",
-      "topics": [
-        "statusbar-lyric",
-        "xposed",
-        "xposed-module"
-      ],
-      "releasesUrl": "https://api.github.com/repos/proify/lyricon/releases{/id}",
-      "updatedAt": "2026-02-03T15:10:29Z",
-      "createdAt": "2025-12-07T17:23:42Z",
-      "latestReleaseDate": "2026-02-01T01:51:10Z",
-      "releaseRecency": 2,
-      "releaseRecencyText": "Released 2 days ago"
-    },
-    {
-      "id": 1063703913,
-      "name": "Mages",
-      "fullName": "mlm-games/Mages",
-      "owner": {
-        "login": "mlm-games",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/125530737?v=4"
-      },
-      "description": "Multiplatform Matrix chat client (experimental CMP+rust app)",
-      "defaultBranch": "main",
-      "htmlUrl": "https://github.com/mlm-games/Mages",
-      "stargazersCount": 52,
-      "forksCount": 8,
-      "language": "Kotlin",
-      "topics": [
-        "chat-application",
-        "chatting-app",
-        "compose-multiplatform",
-        "decentralized-applications",
-        "jni",
-        "kotlin-multiplatform",
-        "matrix",
-        "rust"
-      ],
-      "releasesUrl": "https://api.github.com/repos/mlm-games/Mages/releases{/id}",
-      "updatedAt": "2026-02-03T16:17:58Z",
-      "createdAt": "2025-09-25T02:18:40Z",
-      "latestReleaseDate": "2026-02-01T01:40:18Z",
-      "releaseRecency": 2,
-      "releaseRecencyText": "Released 2 days ago"
-    },
-    {
-      "id": 501738625,
-      "name": "LogFox",
-      "fullName": "F0x1d/LogFox",
-      "owner": {
-        "login": "F0x1d",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/39910552?v=4"
-      },
-      "description": "Yet another LogCat reader for Android",
-      "defaultBranch": "master",
-      "htmlUrl": "https://github.com/F0x1d/LogFox",
-      "stargazersCount": 1034,
-      "forksCount": 53,
-      "language": "Kotlin",
-      "topics": [
-        "log",
-        "logcat",
-        "logcat-viewer",
-        "logcatviewer",
-        "logging",
-        "logs"
-      ],
-      "releasesUrl": "https://api.github.com/repos/F0x1d/LogFox/releases{/id}",
-      "updatedAt": "2026-02-03T13:38:15Z",
-      "createdAt": "2022-06-09T16:58:15Z",
-      "latestReleaseDate": "2026-02-01T00:37:54Z",
-      "releaseRecency": 2,
-      "releaseRecencyText": "Released 2 days ago"
-    },
-    {
-      "id": 783998987,
-      "name": "SpamBlocker",
-      "fullName": "aj3423/SpamBlocker",
-      "owner": {
-        "login": "aj3423",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/4710875?v=4"
-      },
-      "description": "Android Call/SMS blocker.",
-      "defaultBranch": "master",
-      "htmlUrl": "https://github.com/aj3423/SpamBlocker",
-      "stargazersCount": 1232,
-      "forksCount": 61,
-      "language": "Kotlin",
-      "topics": [],
-      "releasesUrl": "https://api.github.com/repos/aj3423/SpamBlocker/releases{/id}",
-      "updatedAt": "2026-02-03T04:41:02Z",
-      "createdAt": "2024-04-09T01:36:48Z",
-      "latestReleaseDate": "2026-01-31T23:55:50Z",
-      "releaseRecency": 2,
-      "releaseRecencyText": "Released 2 days ago"
-    },
-    {
-      "id": 114480377,
-      "name": "VacationDays",
-      "fullName": "Crazy-Marvin/VacationDays",
-      "owner": {
-        "login": "Crazy-Marvin",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/15004275?v=4"
-      },
-      "description": "Know when you are free.",
-      "defaultBranch": "development",
-      "htmlUrl": "https://github.com/Crazy-Marvin/VacationDays",
-      "stargazersCount": 59,
-      "forksCount": 19,
-      "language": "Kotlin",
-      "topics": [
-        "hacktoberfest",
-        "ill",
-        "illdays",
-        "java",
-        "vacation",
-        "vacationdays",
-        "weblate"
-      ],
-      "releasesUrl": "https://api.github.com/repos/Crazy-Marvin/VacationDays/releases{/id}",
-      "updatedAt": "2026-02-03T07:57:05Z",
-      "createdAt": "2017-12-16T18:02:25Z",
-      "latestReleaseDate": "2026-01-31T21:36:52Z",
-      "releaseRecency": 2,
-      "releaseRecencyText": "Released 2 days ago"
-    },
-    {
-      "id": 412759104,
-      "name": "multiplatform-markdown-renderer",
-      "fullName": "mikepenz/multiplatform-markdown-renderer",
-      "owner": {
-        "login": "mikepenz",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/1476232?v=4"
-      },
-      "description": "Markdown renderer for Kotlin Multiplatform Projects (Android, iOS, Desktop), using Compose.",
-      "defaultBranch": "develop",
-      "htmlUrl": "https://github.com/mikepenz/multiplatform-markdown-renderer",
-      "stargazersCount": 844,
-      "forksCount": 64,
-      "language": "Kotlin",
-      "topics": [
-        "android",
-        "compose",
-        "hacktoberfest",
-        "jvm",
-        "kotlin",
-        "kotlin-multiplatform",
-        "markdown"
-      ],
-      "releasesUrl": "https://api.github.com/repos/mikepenz/multiplatform-markdown-renderer/releases{/id}",
-      "updatedAt": "2026-02-03T15:51:15Z",
-      "createdAt": "2021-10-02T10:09:41Z",
-      "latestReleaseDate": "2026-01-31T20:41:20Z",
-      "releaseRecency": 2,
-      "releaseRecencyText": "Released 2 days ago"
-    },
-    {
-      "id": 214885756,
-      "name": "Look4Sat",
-      "fullName": "rt-bishop/Look4Sat",
-      "owner": {
-        "login": "rt-bishop",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/44072814?v=4"
-      },
-      "description": "Satellite tracker and pass predictor for Android, inspired by Gpredict",
-      "defaultBranch": "main",
-      "htmlUrl": "https://github.com/rt-bishop/Look4Sat",
-      "stargazersCount": 975,
-      "forksCount": 105,
-      "language": "Kotlin",
-      "topics": [
-        "amsat",
-        "celestrak",
-        "gps",
-        "ham-radio",
-        "hamlib",
-        "hamradio",
-        "kotlin",
-        "nasa",
-        "radio",
-        "satellite",
-        "satellite-data",
-        "satellite-position",
-        "satellite-prediction",
-        "satellites",
-        "satnogs",
-        "sdr",
-        "space",
-        "spacex",
-        "starlink"
-      ],
-      "releasesUrl": "https://api.github.com/repos/rt-bishop/Look4Sat/releases{/id}",
-      "updatedAt": "2026-02-03T15:13:01Z",
-      "createdAt": "2019-10-13T20:04:01Z",
-      "latestReleaseDate": "2026-01-31T20:01:28Z",
-      "releaseRecency": 2,
-      "releaseRecencyText": "Released 2 days ago"
-    },
-    {
-      "id": 1133357548,
-      "name": "RepoStore",
-      "fullName": "samyak2403/RepoStore",
-      "owner": {
-        "login": "samyak2403",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/126759819?v=4"
-      },
-      "description": "Explore apps published on GitHub, view release details, and install APKs instantly — all in one place. Developed using pure Kotlin, optimized for modern Android devices.",
-      "defaultBranch": "main",
-      "htmlUrl": "https://github.com/samyak2403/RepoStore",
-      "stargazersCount": 147,
-      "forksCount": 8,
-      "language": "Kotlin",
-      "topics": [
-        "android",
-        "android-app",
-        "android-studio",
-        "api",
-        "github",
-        "github-app",
-        "kotlin"
-      ],
-      "releasesUrl": "https://api.github.com/repos/samyak2403/RepoStore/releases{/id}",
-      "updatedAt": "2026-02-03T12:36:19Z",
-      "createdAt": "2026-01-13T08:34:46Z",
-      "latestReleaseDate": "2026-01-31T19:27:33Z",
-      "releaseRecency": 2,
-      "releaseRecencyText": "Released 2 days ago"
-    },
-    {
-      "id": 992797528,
-      "name": "ToolNeuron",
-      "fullName": "Siddhesh2377/ToolNeuron",
-      "owner": {
-        "login": "Siddhesh2377",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/67579112?v=4"
-      },
-      "description": "Complete offline AI ecosystem for Android: Chat (GGUF/LLMs), Images (Stable Diffusion 1.5), Voice (TTS/STT), and Knowledge (RAG Data-Packs), zero subscriptions, no data harvesting. Open-source privacy-first AI on your terms.",
-      "defaultBranch": "re-write",
-      "htmlUrl": "https://github.com/Siddhesh2377/ToolNeuron",
-      "stargazersCount": 184,
-      "forksCount": 14,
-      "language": "Kotlin",
-      "topics": [
-        "ai-assistant",
-        "android",
-        "gguf-models",
-        "jetpack-compose",
-        "kotlin",
-        "llama-cpp",
-        "llm",
-        "local-ai",
-        "mobile-ai",
-        "offline-tts",
-        "open-source",
-        "openrouter",
-        "privacy-first",
-        "sherpa-onnx"
-      ],
-      "releasesUrl": "https://api.github.com/repos/Siddhesh2377/ToolNeuron/releases{/id}",
-      "updatedAt": "2026-02-03T15:04:15Z",
-      "createdAt": "2025-05-29T18:19:10Z",
-      "latestReleaseDate": "2026-01-31T17:07:58Z",
-      "releaseRecency": 2,
-      "releaseRecencyText": "Released 2 days ago"
-    },
-    {
-      "id": 743013512,
-      "name": "InstallWithOptions",
-      "fullName": "zacharee/InstallWithOptions",
-      "owner": {
-        "login": "zacharee",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/9020352?v=4"
-      },
-      "description": "Simple-ish app using Shizuku to install APKs on-device with advanced options",
-      "defaultBranch": "main",
-      "htmlUrl": "https://github.com/zacharee/InstallWithOptions",
-      "stargazersCount": 2516,
-      "forksCount": 114,
-      "language": "Kotlin",
-      "topics": [],
-      "releasesUrl": "https://api.github.com/repos/zacharee/InstallWithOptions/releases{/id}",
-      "updatedAt": "2026-02-02T21:46:48Z",
-      "createdAt": "2024-01-14T03:25:36Z",
-      "latestReleaseDate": "2026-01-31T16:19:55Z",
-      "releaseRecency": 3,
-      "releaseRecencyText": "Released 3 days ago"
-    },
-    {
-      "id": 954009150,
-      "name": "ZalithLauncher2",
-      "fullName": "ZalithLauncher/ZalithLauncher2",
-      "owner": {
-        "login": "ZalithLauncher",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/190403391?v=4"
-      },
-      "description": "A Minecraft: Java Edition Launcher for Android",
-      "defaultBranch": "main",
-      "htmlUrl": "https://github.com/ZalithLauncher/ZalithLauncher2",
-      "stargazersCount": 708,
-      "forksCount": 67,
-      "language": "Kotlin",
-      "topics": [
-        "android",
-        "compose",
-        "jetpack-compose",
-        "material3",
-        "minecraft",
-        "minecraft-launcher",
-        "zalith",
-        "zalith-launcher",
-        "zalithlauncher"
-      ],
-      "releasesUrl": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/releases{/id}",
-      "updatedAt": "2026-02-03T07:05:14Z",
-      "createdAt": "2025-03-24T12:30:06Z",
-      "latestReleaseDate": "2026-01-31T11:57:53Z",
-      "releaseRecency": 3,
-      "releaseRecencyText": "Released 3 days ago"
-    },
-    {
-      "id": 495234000,
-      "name": "android-launcher",
-      "fullName": "geode-sdk/android-launcher",
-      "owner": {
-        "login": "geode-sdk",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/88206422?v=4"
-      },
-      "description": "Launches an unmodified Geometry Dash with modifications",
-      "defaultBranch": "main",
-      "htmlUrl": "https://github.com/geode-sdk/android-launcher",
-      "stargazersCount": 74,
-      "forksCount": 33,
-      "language": "Kotlin",
-      "topics": [
-        "android",
-        "geometry-dash",
-        "launcher"
-      ],
-      "releasesUrl": "https://api.github.com/repos/geode-sdk/android-launcher/releases{/id}",
-      "updatedAt": "2026-02-03T09:06:28Z",
-      "createdAt": "2022-05-23T02:32:47Z",
-      "latestReleaseDate": "2026-01-31T11:31:02Z",
-      "releaseRecency": 3,
-      "releaseRecencyText": "Released 3 days ago"
     }
   ]
 }
