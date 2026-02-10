@@ -1,95 +1,107 @@
+"""
+Fetch GitHub repository categories: trending, new-releases, most-popular.
+Optimized for speed using asyncio + aiohttp with smart batching.
+
+Typical runtime: 5-15 minutes (down from 60+ minutes).
+"""
+
 import os
 import sys
 import json
-import requests
-from datetime import datetime, timedelta
-from typing import List, Dict, Optional, Tuple, Set
-from dataclasses import dataclass
-from concurrent.futures import ThreadPoolExecutor, as_completed
+import asyncio
+import aiohttp
 import time
+from datetime import datetime, timedelta, timezone
+from typing import List, Dict, Optional, Tuple, Set
+from dataclasses import dataclass, field
 
-# Validate GITHUB_TOKEN early
-GITHUB_TOKEN = os.environ.get('GITHUB_TOKEN')
+# ─── Configuration ────────────────────────────────────────────────────────────
+
+GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN")
 if not GITHUB_TOKEN:
-    print("ERROR: GITHUB_TOKEN environment variable is not set or is empty.", file=sys.stderr)
-    print("Please set GITHUB_TOKEN before running this script.", file=sys.stderr)
+    print("ERROR: GITHUB_TOKEN environment variable is not set.", file=sys.stderr)
     sys.exit(1)
 
 HEADERS = {
-    'Authorization': f'token {GITHUB_TOKEN}',
-    'Accept': 'application/vnd.github.v3+json'
+    "Authorization": f"token {GITHUB_TOKEN}",
+    "Accept": "application/vnd.github.v3+json",
 }
 
-# Platform configurations
-PLATFORMS = {
-    'android': {
-        'topics': ['android', 'android-app', 'kotlin-android'],
-        'installer_extensions': ['.apk', '.aab'],
-        'score_keywords': {
-            'high': ['android', 'kotlin-android'],
-            'medium': ['mobile', 'kotlin', 'jetpack-compose'],
-            'low': ['java', 'apk', 'gradle']
-        },
-        'languages': {
-            'primary': ['kotlin', 'java'],
-            'secondary': ['dart', 'c++']
-        }
-    },
-    'windows': {
-        'topics': ['windows', 'electron', 'desktop', 'windows-app'],
-        'installer_extensions': ['.msi', '.exe', '.msix'],
-        'score_keywords': {
-            'high': ['windows', 'windows-app', 'wpf', 'winui'],
-            'medium': ['desktop', 'electron', 'dotnet'],
-            'low': ['app', 'gui', 'win32']
-        },
-        'languages': {
-            'primary': ['c#', 'c++', 'rust'],
-            'secondary': ['javascript', 'typescript']
-        }
-    },
-    'macos': {
-        'topics': ['macos', 'osx', 'mac', 'swiftui'],
-        'installer_extensions': ['.dmg', '.pkg', '.app.zip'],
-        'score_keywords': {
-            'high': ['macos', 'swiftui', 'appkit'],
-            'medium': ['desktop', 'swift', 'cocoa'],
-            'low': ['app', 'mac']
-        },
-        'languages': {
-            'primary': ['swift', 'objective-c'],
-            'secondary': ['c++', 'rust']
-        }
-    },
-    'linux': {
-        'topics': ['linux', 'gtk', 'qt', 'gnome', 'kde'],
-        'installer_extensions': ['.appimage', '.deb', '.rpm'],
-        'score_keywords': {
-            'high': ['linux', 'gtk', 'qt', 'gnome'],
-            'medium': ['desktop', 'gnome', 'kde', 'flatpak'],
-            'low': ['app', 'unix', 'gui']
-        },
-        'languages': {
-            'primary': ['c++', 'rust', 'c'],
-            'secondary': ['python', 'go', 'vala']
-        }
-    }
-}
-
-# Configuration - optimized for QUALITY over speed
-MAX_RETRIES = 3
-INITIAL_BACKOFF = 2
-MAX_WORKERS = 5
-
-# Use absolute path from script location
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 REPO_ROOT = os.path.dirname(SCRIPT_DIR)
-CACHE_DIR = os.path.join(REPO_ROOT, 'cached-data')
+CACHE_DIR = os.path.join(REPO_ROOT, "cached-data")
 CACHE_VALIDITY_HOURS = 23
+
+# Concurrency knobs
+MAX_CONCURRENT_REQUESTS = 25        # simultaneous HTTP requests
+MAX_SEARCH_CONCURRENT = 5           # simultaneous search API calls (stricter limit)
+RELEASE_CHECK_BATCH = 40            # repos to check releases for at once
+REQUEST_TIMEOUT = 20                # seconds
+MAX_RETRIES = 3
+DESIRED_COUNT = 100                 # repos per category/platform
+
+# ─── Platform definitions ─────────────────────────────────────────────────────
+
+PLATFORMS = {
+    "android": {
+        "topics": ["android", "android-app", "kotlin-android"],
+        "installer_extensions": [".apk", ".aab"],
+        "score_keywords": {
+            "high": ["android", "kotlin-android"],
+            "medium": ["mobile", "kotlin", "jetpack-compose"],
+            "low": ["java", "apk", "gradle"],
+        },
+        "languages": {"primary": ["kotlin", "java"], "secondary": ["dart", "c++"]},
+        "frameworks": ["jetpack-compose", "android-jetpack"],
+    },
+    "windows": {
+        "topics": ["windows", "electron", "desktop", "windows-app"],
+        "installer_extensions": [".msi", ".exe", ".msix"],
+        "score_keywords": {
+            "high": ["windows", "windows-app", "wpf", "winui"],
+            "medium": ["desktop", "electron", "dotnet"],
+            "low": ["app", "gui", "win32"],
+        },
+        "languages": {"primary": ["c#", "c++", "rust"], "secondary": ["javascript", "typescript"]},
+        "frameworks": ["wpf", "winui", "avalonia"],
+    },
+    "macos": {
+        "topics": ["macos", "osx", "mac", "swiftui"],
+        "installer_extensions": [".dmg", ".pkg", ".app.zip"],
+        "score_keywords": {
+            "high": ["macos", "swiftui", "appkit"],
+            "medium": ["desktop", "swift", "cocoa"],
+            "low": ["app", "mac"],
+        },
+        "languages": {"primary": ["swift", "objective-c"], "secondary": ["c++", "rust"]},
+        "frameworks": ["swiftui", "combine"],
+    },
+    "linux": {
+        "topics": ["linux", "gtk", "qt", "gnome", "kde"],
+        "installer_extensions": [".appimage", ".deb", ".rpm"],
+        "score_keywords": {
+            "high": ["linux", "gtk", "qt", "gnome"],
+            "medium": ["desktop", "gnome", "kde", "flatpak"],
+            "low": ["app", "unix", "gui"],
+        },
+        "languages": {"primary": ["c++", "rust", "c"], "secondary": ["python", "go", "vala"]},
+        "frameworks": ["gtk4", "qt6"],
+    },
+}
+
+# ─── Data classes ──────────────────────────────────────────────────────────────
+
+
+@dataclass
+class ReleaseInfo:
+    """Cached release information for a repo."""
+    has_release: bool = False
+    published_at: Optional[str] = None
+    has_installers: Dict[str, bool] = field(default_factory=dict)  # platform -> bool
+
 
 @dataclass
 class RepoCandidate:
-    """Structured repository candidate"""
     id: int
     name: str
     full_name: str
@@ -109,721 +121,636 @@ class RepoCandidate:
     has_installers: bool = False
     recent_stars_velocity: float = 0.0
     latest_release_date: Optional[str] = None
-    
-    def to_summary(self, category: str = 'trending') -> Dict:
-        """Convert to output format with category-specific fields"""
+
+    def to_summary(self, category: str = "trending") -> Dict:
         base = {
-            'id': self.id,
-            'name': self.name,
-            'fullName': self.full_name,
-            'owner': {
-                'login': self.owner_login,
-                'avatarUrl': self.owner_avatar
-            },
-            'description': self.description,
-            'defaultBranch': self.default_branch,
-            'htmlUrl': self.html_url,
-            'stargazersCount': self.stars,
-            'forksCount': self.forks,
-            'language': self.language,
-            'topics': self.topics,
-            'releasesUrl': self.releases_url,
-            'updatedAt': self.updated_at,
-            'createdAt': self.created_at
+            "id": self.id,
+            "name": self.name,
+            "fullName": self.full_name,
+            "owner": {"login": self.owner_login, "avatarUrl": self.owner_avatar},
+            "description": self.description,
+            "defaultBranch": self.default_branch,
+            "htmlUrl": self.html_url,
+            "stargazersCount": self.stars,
+            "forksCount": self.forks,
+            "language": self.language,
+            "topics": self.topics,
+            "releasesUrl": self.releases_url,
+            "updatedAt": self.updated_at,
+            "createdAt": self.created_at,
         }
-        
-        # Add category-specific metrics
-        if category == 'trending':
-            base['trendingScore'] = round(self.score + (self.recent_stars_velocity * 10), 2)
-        elif category == 'new-releases':
-            base['latestReleaseDate'] = self.latest_release_date
-            recency = self._calculate_release_age()
-            base['releaseRecency'] = recency
-            # Add human-readable time
+        if category == "trending":
+            base["trendingScore"] = round(self.score + (self.recent_stars_velocity * 10), 2)
+        elif category == "new-releases":
+            base["latestReleaseDate"] = self.latest_release_date
+            recency = self._release_age_days()
+            base["releaseRecency"] = recency
             if recency == 0:
-                base['releaseRecencyText'] = 'Released today'
+                base["releaseRecencyText"] = "Released today"
             elif recency == 1:
-                base['releaseRecencyText'] = 'Released yesterday'
-            elif recency < 7:
-                base['releaseRecencyText'] = f'Released {recency} days ago'
+                base["releaseRecencyText"] = "Released yesterday"
             else:
-                base['releaseRecencyText'] = f'Released {recency} days ago'
-        elif category == 'most-popular':
-            base['popularityScore'] = self.stars + (self.forks * 2)
-            
+                base["releaseRecencyText"] = f"Released {recency} days ago"
+        elif category == "most-popular":
+            base["popularityScore"] = self.stars + (self.forks * 2)
         return base
-    
-    def _calculate_release_age(self) -> int:
-        """Calculate days since latest release"""
+
+    def _release_age_days(self) -> int:
         if not self.latest_release_date:
             return 999
         try:
-            # Parse the release date - strip timezone for naive datetime
-            release_date_str = self.latest_release_date.replace('Z', '')
-            if '+' in release_date_str:
-                release_date_str = release_date_str.split('+')[0]
-            release_date = datetime.fromisoformat(release_date_str)
-            
-            # Get current UTC time as naive datetime
-            now = datetime.utcnow()
-            
-            # Calculate difference
-            age = (now - release_date).days
-            return max(0, age)  # Ensure non-negative
-        except Exception as e:
-            print(f"  ⚠ Error calculating age for {self.latest_release_date}: {e}")
+            s = self.latest_release_date.replace("Z", "")
+            if "+" in s:
+                s = s.split("+")[0]
+            rd = datetime.fromisoformat(s)
+            return max(0, (datetime.utcnow() - rd).days)
+        except Exception:
             return 999
 
-def exponential_backoff_sleep(attempt: int, retry_after: Optional[int] = None) -> None:
-    """Sleep with exponential backoff"""
-    if retry_after:
-        sleep_time = retry_after
-    else:
-        sleep_time = min(INITIAL_BACKOFF * (2 ** attempt), 60)
-    time.sleep(sleep_time)
 
-def make_request_with_retry(url: str, params: Optional[Dict] = None, timeout: int = 30) -> Tuple[Optional[requests.Response], Optional[str]]:
-    """Make HTTP request with retry logic"""
-    for attempt in range(MAX_RETRIES):
-        try:
-            response = requests.get(url, headers=HEADERS, params=params, timeout=timeout)
+# ─── Async HTTP layer ──────────────────────────────────────────────────────────
 
-            if response.status_code == 200:
-                return response, None
 
-            if response.status_code in [403, 429]:
-                retry_after = response.headers.get('Retry-After')
-                retry_after_int = int(retry_after) if retry_after and retry_after.isdigit() else None
+class GitHubClient:
+    """Async GitHub API client with rate-limit awareness and retry."""
 
+    def __init__(self):
+        self._sem = asyncio.Semaphore(MAX_CONCURRENT_REQUESTS)
+        self._search_sem = asyncio.Semaphore(MAX_SEARCH_CONCURRENT)
+        self._session: Optional[aiohttp.ClientSession] = None
+        self._request_count = 0
+        self._rate_remaining = 5000
+        self._rate_reset: Optional[float] = None
+        # Cross-repo release cache: full_name -> ReleaseInfo
+        self.release_cache: Dict[str, ReleaseInfo] = {}
+
+    async def __aenter__(self):
+        timeout = aiohttp.ClientTimeout(total=REQUEST_TIMEOUT)
+        self._session = aiohttp.ClientSession(headers=HEADERS, timeout=timeout)
+        return self
+
+    async def __aexit__(self, *exc):
+        if self._session:
+            await self._session.close()
+
+    async def _wait_for_rate_limit(self):
+        """Pause if we're close to hitting the rate limit."""
+        if self._rate_remaining < 50 and self._rate_reset:
+            wait = self._rate_reset - time.time() + 2
+            if wait > 0:
+                print(f"  ⏳ Rate limit low ({self._rate_remaining}), waiting {wait:.0f}s...")
+                await asyncio.sleep(wait)
+
+    def _update_rate_info(self, headers):
+        remaining = headers.get("X-RateLimit-Remaining")
+        reset = headers.get("X-RateLimit-Reset")
+        if remaining is not None:
+            self._rate_remaining = int(remaining)
+        if reset is not None:
+            self._rate_reset = float(reset)
+
+    async def get(self, url: str, params: Optional[Dict] = None) -> Tuple[Optional[Dict], Optional[str]]:
+        """GET with retry, rate-limit handling, and concurrency control."""
+        async with self._sem:
+            await self._wait_for_rate_limit()
+            for attempt in range(MAX_RETRIES):
                 try:
-                    error_data = response.json()
-                    is_rate_limit = 'rate limit' in error_data.get('message', '').lower()
-                except:
-                    is_rate_limit = response.status_code == 429
+                    async with self._session.get(url, params=params) as resp:
+                        self._request_count += 1
+                        self._update_rate_info(resp.headers)
 
-                if is_rate_limit and attempt < MAX_RETRIES - 1:
-                    exponential_backoff_sleep(attempt, retry_after_int)
-                    continue
-                else:
-                    return None, f"Rate limit or access denied"
+                        if resp.status == 200:
+                            return await resp.json(), None
 
-            if 500 <= response.status_code < 600 and attempt < MAX_RETRIES - 1:
-                exponential_backoff_sleep(attempt)
-                continue
+                        if resp.status in (403, 429):
+                            retry_after = resp.headers.get("Retry-After")
+                            wait = int(retry_after) if retry_after and retry_after.isdigit() else (2 ** (attempt + 1))
+                            if attempt < MAX_RETRIES - 1:
+                                await asyncio.sleep(wait)
+                                continue
+                            return None, "Rate limited"
 
-            return None, f"Request failed with status {response.status_code}"
+                        if 500 <= resp.status < 600 and attempt < MAX_RETRIES - 1:
+                            await asyncio.sleep(2 ** attempt)
+                            continue
 
-        except requests.Timeout:
-            if attempt < MAX_RETRIES - 1:
-                exponential_backoff_sleep(attempt)
-                continue
-            else:
-                return None, "Timeout"
+                        return None, f"HTTP {resp.status}"
 
-        except Exception as e:
-            if attempt < MAX_RETRIES - 1:
-                exponential_backoff_sleep(attempt)
-                continue
-            else:
-                return None, str(e)
+                except asyncio.TimeoutError:
+                    if attempt < MAX_RETRIES - 1:
+                        await asyncio.sleep(2 ** attempt)
+                        continue
+                    return None, "Timeout"
+                except Exception as e:
+                    if attempt < MAX_RETRIES - 1:
+                        await asyncio.sleep(2 ** attempt)
+                        continue
+                    return None, str(e)
 
-    return None, "Max retries exceeded"
+            return None, "Max retries exceeded"
+
+    async def search_repos(self, query: str, sort: str = "stars", order: str = "desc",
+                           pages: int = 3) -> List[Dict]:
+        """Search repositories, fetching multiple pages concurrently."""
+        async with self._search_sem:
+            # Fetch page 1 first to know total
+            data, err = await self.get(
+                "https://api.github.com/search/repositories",
+                params={"q": query, "sort": sort, "order": order, "per_page": 100, "page": 1},
+            )
+            if not data:
+                return []
+
+            items = data.get("items", [])
+            total = data.get("total_count", 0)
+            actual_pages = min(pages, (total // 100) + 1, 10)  # GitHub caps at 1000 results
+
+            if actual_pages > 1:
+                # Fetch remaining pages concurrently
+                tasks = []
+                for page in range(2, actual_pages + 1):
+                    tasks.append(
+                        self.get(
+                            "https://api.github.com/search/repositories",
+                            params={"q": query, "sort": sort, "order": order, "per_page": 100, "page": page},
+                        )
+                    )
+                results = await asyncio.gather(*tasks)
+                for page_data, page_err in results:
+                    if page_data:
+                        items.extend(page_data.get("items", []))
+
+            return items
+
+    async def get_latest_stable_release(self, owner: str, repo: str) -> ReleaseInfo:
+        """Get latest stable release with caching."""
+        full_name = f"{owner}/{repo}"
+        if full_name in self.release_cache:
+            return self.release_cache[full_name]
+
+        info = ReleaseInfo()
+
+        # Try /releases/latest first (one API call)
+        data, err = await self.get(f"https://api.github.com/repos/{full_name}/releases/latest")
+        if data and not data.get("draft") and not data.get("prerelease"):
+            info.has_release = True
+            info.published_at = data.get("published_at")
+            assets = data.get("assets", [])
+            # Pre-check all platforms
+            for platform, cfg in PLATFORMS.items():
+                for asset in assets:
+                    name = asset.get("name", "").lower()
+                    if any(name.endswith(ext) for ext in cfg["installer_extensions"]):
+                        info.has_installers[platform] = True
+                        break
+            self.release_cache[full_name] = info
+            return info
+
+        # Fallback: search recent releases
+        data, err = await self.get(
+            f"https://api.github.com/repos/{full_name}/releases",
+            params={"per_page": 5},
+        )
+        if data and isinstance(data, list):
+            for release in data:
+                if not release.get("draft") and not release.get("prerelease"):
+                    info.has_release = True
+                    info.published_at = release.get("published_at")
+                    assets = release.get("assets", [])
+                    for platform, cfg in PLATFORMS.items():
+                        for asset in assets:
+                            name = asset.get("name", "").lower()
+                            if any(name.endswith(ext) for ext in cfg["installer_extensions"]):
+                                info.has_installers[platform] = True
+                                break
+                    break
+
+        self.release_cache[full_name] = info
+        return info
+
+
+# ─── Scoring ───────────────────────────────────────────────────────────────────
+
 
 def calculate_platform_score(repo: Dict, platform: str) -> int:
-    """Calculate relevance score for a repository"""
     score = 0
-    topics = [t.lower() for t in repo.get('topics', [])]
-    language = (repo.get('language') or '').lower()
-    desc = (repo.get('description') or '').lower()
-    
+    topics = [t.lower() for t in repo.get("topics", [])]
+    language = (repo.get("language") or "").lower()
+    desc = (repo.get("description") or "").lower()
     config = PLATFORMS[platform]
-    keywords = config['score_keywords']
-    languages = config['languages']
+    kw = config["score_keywords"]
+    langs = config["languages"]
 
-    # Topic scoring (0-40 points)
-    for keyword in keywords['high']:
-        if keyword in topics:
+    for k in kw["high"]:
+        if k in topics:
             score += 15
-    for keyword in keywords['medium']:
-        if keyword in topics:
+    for k in kw["medium"]:
+        if k in topics:
             score += 8
-    for keyword in keywords['low']:
-        if keyword in topics:
+    for k in kw["low"]:
+        if k in topics:
             score += 3
 
-    # Language scoring (0-20 points)
-    if language in languages['primary']:
+    if language in langs["primary"]:
         score += 20
-    elif language in languages['secondary']:
+    elif language in langs["secondary"]:
         score += 10
 
-    # Description scoring (0-15 points)
-    for keyword in keywords['high']:
-        if keyword in desc:
+    for k in kw["high"]:
+        if k in desc:
             score += 5
-    for keyword in keywords['medium']:
-        if keyword in desc:
+    for k in kw["medium"]:
+        if k in desc:
             score += 3
 
-    # Cross-platform bonus (0-15 points)
-    cross_platform_keywords = ['cross-platform', 'multiplatform', 'multi-platform']
-    for kw in cross_platform_keywords:
-        if kw in topics or kw in desc:
-            score += 15
-            break
+    cross = ["cross-platform", "multiplatform", "multi-platform"]
+    if any(c in topics or c in desc for c in cross):
+        score += 15
 
-    # Framework bonus (0-10 points)
-    popular_frameworks = {
-        'android': ['jetpack-compose', 'android-jetpack'],
-        'windows': ['wpf', 'winui', 'avalonia'],
-        'macos': ['swiftui', 'combine'],
-        'linux': ['gtk4', 'qt6']
-    }
-    for framework in popular_frameworks.get(platform, []):
-        if framework in topics:
+    for fw in config.get("frameworks", []):
+        if fw in topics:
             score += 10
             break
 
     return score
 
-def calculate_trending_metrics(repo: Dict) -> Tuple[float, float]:
-    """Calculate trending velocity metrics"""
+
+def calculate_velocity(repo: Dict) -> float:
     try:
-        created = datetime.fromisoformat(repo['created_at'].replace('Z', '+00:00'))
-        updated = datetime.fromisoformat(repo['updated_at'].replace('Z', '+00:00'))
-        now = datetime.now(created.tzinfo)
-        
+        created = datetime.fromisoformat(repo["created_at"].replace("Z", "+00:00"))
+        updated = datetime.fromisoformat(repo["updated_at"].replace("Z", "+00:00"))
+        now = datetime.now(timezone.utc)
         age_days = max((now - created).days, 1)
-        days_since_update = (now - updated).days
-        
-        stars = repo['stargazers_count']
-        stars_per_day = stars / age_days
-        
-        # Recency multiplier
-        recency_multiplier = 1.0
-        if days_since_update <= 7:
-            recency_multiplier = 2.0
-        elif days_since_update <= 30:
-            recency_multiplier = 1.5
-        elif days_since_update <= 90:
-            recency_multiplier = 1.2
-        
-        adjusted_velocity = stars_per_day * recency_multiplier
-        
-        return adjusted_velocity, age_days
-        
+        days_since = (now - updated).days
+        spd = repo["stargazers_count"] / age_days
+        if days_since <= 7:
+            spd *= 2.0
+        elif days_since <= 30:
+            spd *= 1.5
+        elif days_since <= 90:
+            spd *= 1.2
+        return spd
     except Exception:
-        return 0.0, 365
+        return 0.0
 
-def get_latest_stable_release(owner: str, repo_name: str) -> Tuple[Optional[str], Optional[Dict]]:
+
+def make_candidate(repo: Dict, platform: str, velocity: float = 0.0, score_weight: float = 1.0) -> RepoCandidate:
+    score = int(calculate_platform_score(repo, platform) * score_weight)
+    return RepoCandidate(
+        id=repo["id"],
+        name=repo["name"],
+        full_name=repo["full_name"],
+        owner_login=repo["owner"]["login"],
+        owner_avatar=repo["owner"]["avatar_url"],
+        description=repo.get("description"),
+        default_branch=repo.get("default_branch", "main"),
+        html_url=repo["html_url"],
+        stars=repo["stargazers_count"],
+        forks=repo["forks_count"],
+        language=repo.get("language"),
+        topics=repo.get("topics", []),
+        releases_url=repo["releases_url"],
+        updated_at=repo["updated_at"],
+        created_at=repo["created_at"],
+        score=score,
+        recent_stars_velocity=velocity,
+    )
+
+
+# ─── Installer verification (async, batched) ──────────────────────────────────
+
+
+async def verify_installers(
+    client: GitHubClient,
+    candidates: List[RepoCandidate],
+    platform: str,
+    need_release_date: bool = False,
+    max_age_days: Optional[int] = None,
+) -> List[RepoCandidate]:
     """
-    Get the latest STABLE (non-prerelease, non-draft) release
-    Returns: (published_at, release_data)
+    Check candidates for platform-specific installers concurrently.
+    Uses the cross-repo release cache so repeated checks are free.
     """
-    # Try the /releases/latest endpoint first (fastest, gets latest stable)
-    latest_url = f'https://api.github.com/repos/{owner}/{repo_name}/releases/latest'
-    response, error = make_request_with_retry(latest_url, timeout=10)
-    
-    if response and response.status_code == 200:
-        try:
-            release = response.json()
-            # Double-check it's not a pre-release or draft
-            if not release.get('draft') and not release.get('prerelease'):
-                return release.get('published_at'), release
-        except:
-            pass
-    
-    # Fallback: manually search through releases
-    releases_url = f'https://api.github.com/repos/{owner}/{repo_name}/releases'
-    response, error = make_request_with_retry(releases_url, params={'per_page': 10}, timeout=10)
-    
-    if response is None:
-        return None, None
-    
-    try:
-        releases = response.json()
-        
-        # Find first stable release (not draft, not prerelease)
-        for release in releases:
-            if not release.get('draft') and not release.get('prerelease'):
-                return release.get('published_at'), release
-        
-        return None, None
-        
-    except:
-        return None, None
-
-def check_repo_has_installers(owner: str, repo_name: str, platform: str, get_release_date: bool = False) -> Tuple[bool, Optional[str]]:
-    """Check if repository has relevant installer files"""
-    
-    published_at, release_data = get_latest_stable_release(owner, repo_name)
-    
-    if not release_data:
-        return False, None
-    
-    assets = release_data.get('assets', [])
-    if not assets:
-        return False, None
-    
-    extensions = PLATFORMS[platform]['installer_extensions']
-    
-    for asset in assets:
-        asset_name = asset['name'].lower()
-        if any(asset_name.endswith(ext) for ext in extensions):
-            return True, published_at if get_release_date else None
-    
-    return False, None
-
-def check_installers_batch(candidates: List[RepoCandidate], platform: str, get_release_dates: bool = False) -> List[RepoCandidate]:
-    """Check installers in parallel"""
+    print(f"  Verifying installers for {len(candidates)} candidates...")
     results = []
-    
-    print(f"  Checking {len(candidates)} repos (this may take a few minutes)...")
-    
-    with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
-        future_to_repo = {
-            executor.submit(
-                check_repo_has_installers,
-                candidate.owner_login,
-                candidate.name,
-                platform,
-                get_release_dates
-            ): candidate
-            for candidate in candidates
-        }
-        
-        checked = 0
-        for future in as_completed(future_to_repo):
-            candidate = future_to_repo[future]
-            checked += 1
-            if checked % 50 == 0:
-                print(f"  Progress: {checked}/{len(candidates)} checked...")
+    now = datetime.utcnow()
+
+    async def check_one(candidate: RepoCandidate):
+        info = await client.get_latest_stable_release(candidate.owner_login, candidate.name)
+        if not info.has_release or not info.has_installers.get(platform, False):
+            return None
+
+        # Age filter
+        if max_age_days and info.published_at:
             try:
-                has_installers, release_date = future.result(timeout=15)
-                candidate.has_installers = has_installers
-                candidate.latest_release_date = release_date
-                
-                if has_installers:
-                    results.append(candidate)
-                
+                s = info.published_at.replace("Z", "")
+                if "+" in s:
+                    s = s.split("+")[0]
+                rd = datetime.fromisoformat(s)
+                if (now - rd).days > max_age_days:
+                    return None
+                # Reject future dates
+                if rd > now + timedelta(hours=1):
+                    return None
             except Exception:
-                pass
-    
+                return None
+
+        candidate.has_installers = True
+        if need_release_date:
+            candidate.latest_release_date = info.published_at
+        return candidate
+
+    # Process in batches to avoid overwhelming the event loop
+    for i in range(0, len(candidates), RELEASE_CHECK_BATCH):
+        batch = candidates[i : i + RELEASE_CHECK_BATCH]
+        tasks = [check_one(c) for c in batch]
+        batch_results = await asyncio.gather(*tasks, return_exceptions=True)
+        for r in batch_results:
+            if isinstance(r, RepoCandidate):
+                results.append(r)
+        done = min(i + RELEASE_CHECK_BATCH, len(candidates))
+        if done % 100 == 0 or done == len(candidates):
+            print(f"    Progress: {done}/{len(candidates)} checked, {len(results)} verified")
+
     return results
 
-def fetch_trending_repos(platform: str, desired_count: int = 100) -> List[Dict]:
-    """Fetch trending repositories with velocity-based scoring"""
+
+# ─── Category fetchers ─────────────────────────────────────────────────────────
+
+
+async def fetch_trending(client: GitHubClient, platform: str) -> List[Dict]:
     print(f"\n{'='*60}")
-    print(f"Fetching TRENDING repos for {platform.upper()}")
+    print(f"TRENDING — {platform.upper()}")
     print(f"{'='*60}")
 
-    url = 'https://api.github.com/search/repositories'
-    topics = PLATFORMS[platform]['topics']
-    
+    topics = PLATFORMS[platform]["topics"]
+    primary_lang = PLATFORMS[platform]["languages"]["primary"][0]
+    seen: Set[str] = set()
     all_candidates: List[RepoCandidate] = []
-    seen: Set[str] = set()
-    
-    # More comprehensive search strategies for quality
-    search_strategies = [
-        {'days': 30, 'min_stars': 100, 'topics': topics, 'max_pages': 4, 'weight': 1.5},
-        {'days': 90, 'min_stars': 50, 'topics': topics[:1], 'max_pages': 4, 'weight': 1.2},
-        {'days': 180, 'min_stars': 500, 'topics': [], 'max_pages': 3, 'weight': 1.0},
-        {'days': 365, 'min_stars': 200, 'topics': topics[:1] if topics else [], 'max_pages': 5, 'weight': 0.9}
-    ]
-    
-    for strategy_idx, strategy in enumerate(search_strategies):
-        print(f"Strategy {strategy_idx + 1}: {strategy['days']}d, {strategy['min_stars']}+ stars")
-        
-        past_date = (datetime.utcnow() - timedelta(days=strategy['days'])).strftime('%Y-%m-%d')
-        base_query = f"stars:>{strategy['min_stars']} archived:false pushed:>={past_date}"
-        
-        if strategy['topics']:
-            topic_query = " OR ".join([f"topic:{t}" for t in strategy['topics']])
-            query = f"{base_query} ({topic_query})"
-        else:
-            primary_lang = PLATFORMS[platform]['languages']['primary'][0]
-            query = f"{base_query} language:{primary_lang}"
-        
-        for page in range(1, strategy['max_pages'] + 1):
-            params = {'q': query, 'sort': 'stars', 'order': 'desc', 'per_page': 100, 'page': page}
-            response, error = make_request_with_retry(url, params=params, timeout=30)
-            
-            if response is None:
-                break
-            
-            try:
-                items = response.json().get('items', [])
-                if not items:
-                    break
-                
-                for repo in items:
-                    full_name = repo['full_name']
-                    if full_name in seen:
-                        continue
-                    seen.add(full_name)
-                    
-                    base_score = calculate_platform_score(repo, platform)
-                    velocity, age = calculate_trending_metrics(repo)
-                    weighted_score = int(base_score * strategy['weight'])
-                    
-                    if weighted_score < 5:
-                        continue
-                    
-                    candidate = RepoCandidate(
-                        id=repo['id'], name=repo['name'], full_name=full_name,
-                        owner_login=repo['owner']['login'], owner_avatar=repo['owner']['avatar_url'],
-                        description=repo.get('description'), default_branch=repo.get('default_branch', 'main'),
-                        html_url=repo['html_url'], stars=repo['stargazers_count'], forks=repo['forks_count'],
-                        language=repo.get('language'), topics=repo.get('topics', []),
-                        releases_url=repo['releases_url'], updated_at=repo['updated_at'],
-                        created_at=repo['created_at'], score=weighted_score, recent_stars_velocity=velocity
-                    )
-                    all_candidates.append(candidate)
-                    
-            except Exception:
-                break
-            
-            time.sleep(0.2)  # Reduced sleep for faster execution
-    
-    all_candidates.sort(key=lambda c: c.score + (c.recent_stars_velocity * 10), reverse=True)
-    # Check MORE candidates (5x instead of 4x)
-    top_candidates = all_candidates[:min(len(all_candidates), desired_count * 3)]
-    verified_repos = check_installers_batch(top_candidates, platform, get_release_dates=False)
-    verified_repos.sort(key=lambda c: c.score + (c.recent_stars_velocity * 10), reverse=True)
-    final_repos = verified_repos[:desired_count]
-    
-    print(f"✓ Found {len(final_repos)} trending repos")
-    return [repo.to_summary('trending') for repo in final_repos]
 
-def fetch_new_releases(platform: str, desired_count: int = 100) -> List[Dict]:
-    """Fetch repos with new STABLE releases in last 21 days - MULTI-ROUND APPROACH"""
+    strategies = [
+        {"days": 30, "min_stars": 100, "topics": topics, "pages": 3, "weight": 1.5},
+        {"days": 90, "min_stars": 50, "topics": topics[:1], "pages": 3, "weight": 1.2},
+        {"days": 180, "min_stars": 500, "topics": [], "pages": 2, "weight": 1.0},
+        {"days": 365, "min_stars": 200, "topics": topics[:1], "pages": 3, "weight": 0.9},
+    ]
+
+    # Run all search strategies concurrently
+    async def run_strategy(strat):
+        past = (datetime.utcnow() - timedelta(days=strat["days"])).strftime("%Y-%m-%d")
+        base = f'stars:>{strat["min_stars"]} archived:false pushed:>={past}'
+        if strat["topics"]:
+            tq = " OR ".join(f"topic:{t}" for t in strat["topics"])
+            q = f"{base} ({tq})"
+        else:
+            q = f"{base} language:{primary_lang}"
+        return await client.search_repos(q, sort="stars", order="desc", pages=strat["pages"]), strat["weight"]
+
+    tasks = [run_strategy(s) for s in strategies]
+    results = await asyncio.gather(*tasks)
+
+    for items, weight in results:
+        for repo in items:
+            fn = repo["full_name"]
+            if fn in seen:
+                continue
+            seen.add(fn)
+            vel = calculate_velocity(repo)
+            c = make_candidate(repo, platform, velocity=vel, score_weight=weight)
+            if c.score >= 5:
+                all_candidates.append(c)
+
+    print(f"  Collected {len(all_candidates)} candidates from {len(seen)} unique repos")
+
+    all_candidates.sort(key=lambda c: c.score + c.recent_stars_velocity * 10, reverse=True)
+    top = all_candidates[: DESIRED_COUNT * 3]
+    verified = await verify_installers(client, top, platform)
+    verified.sort(key=lambda c: c.score + c.recent_stars_velocity * 10, reverse=True)
+    final = verified[:DESIRED_COUNT]
+
+    print(f"  ✓ {len(final)} trending repos")
+    return [r.to_summary("trending") for r in final]
+
+
+async def fetch_new_releases(client: GitHubClient, platform: str) -> List[Dict]:
     print(f"\n{'='*60}")
-    print(f"Fetching NEW RELEASES for {platform.upper()}")
+    print(f"NEW RELEASES — {platform.upper()}")
     print(f"{'='*60}")
 
-    url = 'https://api.github.com/search/repositories'
-    topics = PLATFORMS[platform]['topics']
-    
-    twenty_one_days_ago = datetime.utcnow() - timedelta(days=21)
-    now = datetime.utcnow()
-    
-    all_verified_repos = []
+    topics = PLATFORMS[platform]["topics"]
+    primary_lang = PLATFORMS[platform]["languages"]["primary"][0]
     seen: Set[str] = set()
-    round_num = 0
-    
-    # MULTIPLE ROUNDS - keep fetching until we have enough
-    search_rounds = [
-        # Round 1: Recent updates, platform-specific
+    all_candidates: List[RepoCandidate] = []
+
+    # Two rounds of strategies, but all searches within a round run concurrently
+    rounds = [
         [
-            {'days': 7, 'min_stars': 20, 'topics': topics, 'max_pages': 8},
-            {'days': 14, 'min_stars': 10, 'topics': topics, 'max_pages': 8},
-            {'days': 21, 'min_stars': 30, 'topics': topics[:1] if topics else [], 'max_pages': 6},
+            {"days": 7, "min_stars": 10, "topics": topics, "pages": 5, "sort": "updated"},
+            {"days": 14, "min_stars": 5, "topics": topics, "pages": 5, "sort": "updated"},
+            {"days": 21, "min_stars": 20, "topics": topics[:1], "pages": 4, "sort": "updated"},
+            {"days": 21, "min_stars": 50, "topics": [], "pages": 3, "sort": "stars"},
         ],
-        # Round 2: Broader search
         [
-            {'days': 14, 'min_stars': 5, 'topics': topics, 'max_pages': 10},
-            {'days': 21, 'min_stars': 50, 'topics': [], 'max_pages': 8},
-            {'days': 10, 'min_stars': 2, 'topics': topics, 'max_pages': 6},
+            {"days": 21, "min_stars": 1, "topics": topics, "pages": 6, "sort": "updated"},
+            {"days": 14, "min_stars": 0, "topics": topics, "pages": 5, "sort": "updated"},
         ],
-        # Round 3: Very aggressive
-        [
-            {'days': 21, 'min_stars': 1, 'topics': topics, 'max_pages': 12},
-            {'days': 7, 'min_stars': 0, 'topics': topics, 'max_pages': 10},
-        ]
     ]
-    
-    for round_strategies in search_rounds:
-        round_num += 1
-        
-        if len(all_verified_repos) >= desired_count:
-            print(f"\n✅ Already have {len(all_verified_repos)} repos - stopping early")
+
+    verified_total: List[RepoCandidate] = []
+
+    for round_idx, strategies in enumerate(rounds, 1):
+        if len(verified_total) >= DESIRED_COUNT:
             break
-        
-        print(f"\n{'='*60}")
-        print(f"🔄 ROUND {round_num} - Need {desired_count - len(all_verified_repos)} more repos")
-        print(f"{'='*60}")
-        
+
+        print(f"\n  Round {round_idx}...")
         round_candidates: List[RepoCandidate] = []
-        
-        for strategy_idx, strategy in enumerate(round_strategies):
-            print(f"Strategy {strategy_idx + 1}: Last {strategy['days']} days, {strategy['min_stars']}+ stars")
-            
-            past_date = (datetime.utcnow() - timedelta(days=strategy['days'])).strftime('%Y-%m-%d')
-            base_query = f"stars:>{strategy['min_stars']} archived:false pushed:>={past_date}"
-            
-            if strategy['topics']:
-                topic_query = " OR ".join([f"topic:{t}" for t in strategy['topics']])
-                query = f"{base_query} ({topic_query})"
+
+        async def run_strategy(strat):
+            past = (datetime.utcnow() - timedelta(days=strat["days"])).strftime("%Y-%m-%d")
+            base = f'stars:>{strat["min_stars"]} archived:false pushed:>={past}'
+            if strat["topics"]:
+                tq = " OR ".join(f"topic:{t}" for t in strat["topics"])
+                q = f"{base} ({tq})"
             else:
-                primary_lang = PLATFORMS[platform]['languages']['primary'][0]
-                query = f"{base_query} language:{primary_lang}"
-            
-            for page in range(1, strategy['max_pages'] + 1):
-                params = {'q': query, 'sort': 'updated', 'order': 'desc', 'per_page': 100, 'page': page}
-                response, error = make_request_with_retry(url, params=params, timeout=30)
-                
-                if response is None:
-                    break
-                
-                try:
-                    items = response.json().get('items', [])
-                    if not items:
-                        break
-                    
-                    for repo in items:
-                        full_name = repo['full_name']
-                        if full_name in seen:
-                            continue
-                        seen.add(full_name)
-                        
-                        score = calculate_platform_score(repo, platform)
-                        
-                        candidate = RepoCandidate(
-                            id=repo['id'], name=repo['name'], full_name=full_name,
-                            owner_login=repo['owner']['login'], owner_avatar=repo['owner']['avatar_url'],
-                            description=repo.get('description'), default_branch=repo.get('default_branch', 'main'),
-                            html_url=repo['html_url'], stars=repo['stargazers_count'], forks=repo['forks_count'],
-                            language=repo.get('language'), topics=repo.get('topics', []),
-                            releases_url=repo['releases_url'], updated_at=repo['updated_at'],
-                            created_at=repo['created_at'], score=score
-                        )
-                        round_candidates.append(candidate)
-                        
-                except Exception:
-                    break
-                
-                time.sleep(0.15)  # Faster
-        
-        print(f"\n✓ Round {round_num} collected {len(round_candidates)} new candidates")
-        
-        if len(round_candidates) == 0:
-            print(f"⚠️  No new candidates in round {round_num}, moving to next round...")
+                q = f"{base} language:{primary_lang}"
+            return await client.search_repos(q, sort=strat.get("sort", "updated"), order="desc", pages=strat["pages"])
+
+        tasks = [run_strategy(s) for s in strategies]
+        results = await asyncio.gather(*tasks)
+
+        for items in results:
+            for repo in items:
+                fn = repo["full_name"]
+                if fn in seen:
+                    continue
+                seen.add(fn)
+                c = make_candidate(repo, platform)
+                round_candidates.append(c)
+
+        print(f"    {len(round_candidates)} new candidates")
+
+        if not round_candidates:
             continue
-        
-        # Sort by recency and check ALL candidates (not just a subset)
+
         round_candidates.sort(key=lambda c: c.updated_at, reverse=True)
-        
-        print(f"Checking ALL {len(round_candidates)} candidates for STABLE releases...")
-        print(f"Looking for releases ≤21 days old")
-        
-        verified_repos = check_installers_batch(round_candidates, platform, get_release_dates=True)
-        
-        print(f"\nValidating {len(verified_repos)} repos with releases...")
-        
-        for repo in verified_repos:
-            if not repo.latest_release_date:
-                continue
-            
-            try:
-                release_date_str = repo.latest_release_date.replace('Z', '')
-                if '+' in release_date_str:
-                    release_date_str = release_date_str.split('+')[0]
-                release_date_utc = datetime.fromisoformat(release_date_str)
-                
-                days_ago = (now - release_date_utc).days
-                
-                if days_ago <= 21:
-                    if release_date_utc <= now + timedelta(hours=1):
-                        all_verified_repos.append(repo)
-                        print(f"  ✓ {repo.full_name}: Released {days_ago}d ago")
-                    else:
-                        print(f"  ✗ {repo.full_name}: Future date")
-                        
-            except Exception as e:
-                continue
-        
-        print(f"\n📊 Round {round_num} summary: Found {len(all_verified_repos)} total repos so far")
-        
-        if len(all_verified_repos) >= desired_count:
-            print(f"✅ Reached target of {desired_count} repos!")
-            break
-    
-    # Sort by release date (newest first)
-    all_verified_repos.sort(key=lambda r: r.latest_release_date or '', reverse=True)
-    final_repos = all_verified_repos[:desired_count]
-    
-    print(f"\n{'='*60}")
-    print(f"✅ FINAL: Found {len(final_repos)} repos with new releases (≤21 days)")
-    print(f"Searched {len(seen)} unique repositories across {round_num} rounds")
-    print(f"{'='*60}")
-    
-    return [repo.to_summary('new-releases') for repo in final_repos]
+        verified = await verify_installers(
+            client, round_candidates, platform, need_release_date=True, max_age_days=21
+        )
+        verified_total.extend(verified)
+        print(f"    Running total: {len(verified_total)} verified")
 
-def fetch_most_popular(platform: str, desired_count: int = 100) -> List[Dict]:
-    """Fetch most popular (highest stars) mature repositories"""
+    verified_total.sort(key=lambda r: r.latest_release_date or "", reverse=True)
+    final = verified_total[:DESIRED_COUNT]
+
+    print(f"  ✓ {len(final)} repos with new releases (≤21 days)")
+    return [r.to_summary("new-releases") for r in final]
+
+
+async def fetch_most_popular(client: GitHubClient, platform: str) -> List[Dict]:
     print(f"\n{'='*60}")
-    print(f"Fetching MOST POPULAR repos for {platform.upper()}")
+    print(f"MOST POPULAR — {platform.upper()}")
     print(f"{'='*60}")
 
-    url = 'https://api.github.com/search/repositories'
-    topics = PLATFORMS[platform]['topics']
-    
-    all_candidates: List[RepoCandidate] = []
+    topics = PLATFORMS[platform]["topics"]
+    primary_lang = PLATFORMS[platform]["languages"]["primary"][0]
     seen: Set[str] = set()
-    
-    # Search for high-star repos that are mature and active
-    six_months_ago = (datetime.utcnow() - timedelta(days=180)).strftime('%Y-%m-%d')
-    one_year_ago = (datetime.utcnow() - timedelta(days=365)).strftime('%Y-%m-%d')
-    
-    # More comprehensive search
-    search_strategies = [
-        {'min_stars': 5000, 'topics': topics, 'max_pages': 8, 'created_before': six_months_ago},
-        {'min_stars': 2000, 'topics': topics[:1] if topics else [], 'max_pages': 8, 'created_before': six_months_ago},
-        {'min_stars': 1000, 'topics': [], 'max_pages': 5, 'created_before': one_year_ago}
+    all_candidates: List[RepoCandidate] = []
+
+    six_months = (datetime.utcnow() - timedelta(days=180)).strftime("%Y-%m-%d")
+    one_year = (datetime.utcnow() - timedelta(days=365)).strftime("%Y-%m-%d")
+
+    strategies = [
+        {"min_stars": 5000, "topics": topics, "pages": 5, "before": six_months},
+        {"min_stars": 2000, "topics": topics[:1], "pages": 5, "before": six_months},
+        {"min_stars": 1000, "topics": [], "pages": 3, "before": one_year},
     ]
-    
-    for strategy_idx, strategy in enumerate(search_strategies):
-        print(f"Strategy {strategy_idx + 1}: {strategy['min_stars']}+ stars, created before {strategy['created_before']}")
-        
-        base_query = f"stars:>{strategy['min_stars']} archived:false pushed:>={one_year_ago} created:<{strategy['created_before']}"
-        
-        if strategy['topics']:
-            topic_query = " OR ".join([f"topic:{t}" for t in strategy['topics']])
-            query = f"{base_query} ({topic_query})"
+
+    async def run_strategy(strat):
+        base = f'stars:>{strat["min_stars"]} archived:false pushed:>={one_year} created:<{strat["before"]}'
+        if strat["topics"]:
+            tq = " OR ".join(f"topic:{t}" for t in strat["topics"])
+            q = f"{base} ({tq})"
         else:
-            primary_lang = PLATFORMS[platform]['languages']['primary'][0]
-            query = f"{base_query} language:{primary_lang}"
-        
-        for page in range(1, strategy['max_pages'] + 1):
-            params = {'q': query, 'sort': 'stars', 'order': 'desc', 'per_page': 100, 'page': page}
-            response, error = make_request_with_retry(url, params=params, timeout=30)
-            
-            if response is None:
-                break
-            
-            try:
-                items = response.json().get('items', [])
-                if not items:
-                    break
-                
-                for repo in items:
-                    full_name = repo['full_name']
-                    if full_name in seen:
-                        continue
-                    seen.add(full_name)
-                    
-                    score = calculate_platform_score(repo, platform)
-                    
-                    candidate = RepoCandidate(
-                        id=repo['id'], name=repo['name'], full_name=full_name,
-                        owner_login=repo['owner']['login'], owner_avatar=repo['owner']['avatar_url'],
-                        description=repo.get('description'), default_branch=repo.get('default_branch', 'main'),
-                        html_url=repo['html_url'], stars=repo['stargazers_count'], forks=repo['forks_count'],
-                        language=repo.get('language'), topics=repo.get('topics', []),
-                        releases_url=repo['releases_url'], updated_at=repo['updated_at'],
-                        created_at=repo['created_at'], score=score
-                    )
-                    all_candidates.append(candidate)
-                    
-            except Exception:
-                break
-            
-            time.sleep(0.2)
-    
-    # Sort by stars and check MORE candidates
+            q = f"{base} language:{primary_lang}"
+        return await client.search_repos(q, sort="stars", order="desc", pages=strat["pages"])
+
+    tasks = [run_strategy(s) for s in strategies]
+    results = await asyncio.gather(*tasks)
+
+    for items in results:
+        for repo in items:
+            fn = repo["full_name"]
+            if fn in seen:
+                continue
+            seen.add(fn)
+            c = make_candidate(repo, platform)
+            all_candidates.append(c)
+
+    print(f"  Collected {len(all_candidates)} candidates")
+
     all_candidates.sort(key=lambda c: c.stars, reverse=True)
-    top_candidates = all_candidates[:min(len(all_candidates), desired_count * 3)]
-    
-    print(f"Checking {len(top_candidates)} candidates for installers...")
-    verified_repos = check_installers_batch(top_candidates, platform, get_release_dates=False)
-    
-    verified_repos.sort(key=lambda c: c.stars, reverse=True)
-    final_repos = verified_repos[:desired_count]
-    
-    print(f"✓ Found {len(final_repos)} most popular repos")
-    return [repo.to_summary('most-popular') for repo in final_repos]
+    top = all_candidates[: DESIRED_COUNT * 3]
+    verified = await verify_installers(client, top, platform)
+    verified.sort(key=lambda c: c.stars, reverse=True)
+    final = verified[:DESIRED_COUNT]
+
+    print(f"  ✓ {len(final)} most popular repos")
+    return [r.to_summary("most-popular") for r in final]
+
+
+# ─── Cache I/O ─────────────────────────────────────────────────────────────────
+
 
 def load_cache(category: str, platform: str) -> Optional[Dict]:
-    """Load cached data if valid"""
-    cache_file = os.path.join(CACHE_DIR, category, f'{platform}.json')
-    
+    cache_file = os.path.join(CACHE_DIR, category, f"{platform}.json")
     if not os.path.exists(cache_file):
         return None
-    
     try:
-        with open(cache_file, 'r', encoding='utf-8') as f:
+        with open(cache_file, "r", encoding="utf-8") as f:
             data = json.load(f)
-        
-        repo_count = data.get('totalCount', 0)
-        # Lower threshold for new-releases since it's more volatile
-        min_threshold = 10 if category == 'new-releases' else 30
-        if repo_count < min_threshold:
-            print(f"Cache for {category}/{platform} has insufficient data ({repo_count} repos), refetching...")
+        count = data.get("totalCount", 0)
+        min_threshold = 10 if category == "new-releases" else 30
+        if count < min_threshold:
+            print(f"  Cache for {category}/{platform}: only {count} repos — refetching")
             return None
-        
-        last_updated = datetime.fromisoformat(data['lastUpdated'].replace('Z', '+00:00'))
-        age_hours = (datetime.now(last_updated.tzinfo) - last_updated).total_seconds() / 3600
-        
-        if age_hours < CACHE_VALIDITY_HOURS:
-            print(f"✓ Using cache for {category}/{platform} ({age_hours:.1f}h old, {repo_count} repos)")
+        last = datetime.fromisoformat(data["lastUpdated"].replace("Z", "+00:00"))
+        age_h = (datetime.now(timezone.utc) - last).total_seconds() / 3600
+        if age_h < CACHE_VALIDITY_HOURS:
+            print(f"  ✓ Cache hit: {category}/{platform} ({age_h:.1f}h old, {count} repos)")
             return data
-        
     except Exception as e:
-        print(f"Error loading cache for {category}/{platform}: {e}")
-    
+        print(f"  Cache error {category}/{platform}: {e}")
     return None
 
-def save_category_data(category: str, platform: str, repos: List[Dict], timestamp: str):
-    """Save category data to file"""
-    output = {
-        'category': category,
-        'platform': platform,
-        'lastUpdated': timestamp,
-        'totalCount': len(repos),
-        'repositories': repos
-    }
-    
-    category_dir = os.path.join(CACHE_DIR, category)
-    os.makedirs(category_dir, exist_ok=True)
-    
-    output_file = os.path.join(category_dir, f'{platform}.json')
-    with open(output_file, 'w', encoding='utf-8') as f:
-        json.dump(output, f, indent=2, ensure_ascii=False)
-    
-    print(f"✓ Saved {len(repos)} repos to {output_file}")
 
-def main():
-    """Main function to fetch all categories"""
-    timestamp = datetime.utcnow().isoformat() + 'Z'
-    
-    # Check rate limit
-    response, _ = make_request_with_retry('https://api.github.com/rate_limit')
-    if response:
-        rate_data = response.json()
-        core_remaining = rate_data.get('resources', {}).get('core', {}).get('remaining', 0)
-        print(f"GitHub API rate limit: {core_remaining} requests remaining\n")
-        
-        if core_remaining < 500:
-            print("WARNING: Low rate limit remaining.", file=sys.stderr)
-    
-    categories = {
-        'trending': fetch_trending_repos,
-        'new-releases': fetch_new_releases,
-        'most-popular': fetch_most_popular
+def save_data(category: str, platform: str, repos: List[Dict], timestamp: str):
+    out = {
+        "category": category,
+        "platform": platform,
+        "lastUpdated": timestamp,
+        "totalCount": len(repos),
+        "repositories": repos,
     }
-    
-    for category_name, fetch_func in categories.items():
-        print(f"\n{'#'*70}")
-        print(f"# CATEGORY: {category_name.upper()}")
-        print(f"{'#'*70}")
-        
-        for platform in PLATFORMS.keys():
-            print(f"\n--- Platform: {platform} ---")
-            
-            # Check cache
-            cached_data = load_cache(category_name, platform)
-            if cached_data:
-                continue
-            
-            # Fetch fresh data
-            repos = fetch_func(platform, desired_count=100)
-            save_category_data(category_name, platform, repos, timestamp)
-            
-            time.sleep(1)  # Small delay between platforms
-    
-    print("\n" + "="*70)
-    print("✓ ALL CATEGORIES PROCESSED SUCCESSFULLY!")
-    print("="*70)
+    cat_dir = os.path.join(CACHE_DIR, category)
+    os.makedirs(cat_dir, exist_ok=True)
+    path = os.path.join(cat_dir, f"{platform}.json")
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(out, f, indent=2, ensure_ascii=False)
+    print(f"  ✓ Saved {len(repos)} repos → {path}")
 
-if __name__ == '__main__':
-    main()
+
+# ─── Main orchestrator ─────────────────────────────────────────────────────────
+
+
+async def process_category(client: GitHubClient, category: str, fetch_fn, timestamp: str):
+    """Process all platforms for a category, running platforms concurrently."""
+    print(f"\n{'#'*70}")
+    print(f"# CATEGORY: {category.upper()}")
+    print(f"{'#'*70}")
+
+    async def process_platform(platform: str):
+        cached = load_cache(category, platform)
+        if cached:
+            return
+        repos = await fetch_fn(client, platform)
+        save_data(category, platform, repos, timestamp)
+
+    # Run all 4 platforms concurrently within each category
+    await asyncio.gather(*[process_platform(p) for p in PLATFORMS])
+
+
+async def main():
+    timestamp = datetime.utcnow().isoformat() + "Z"
+    start = time.time()
+
+    async with GitHubClient() as client:
+        # Check rate limit
+        data, _ = await client.get("https://api.github.com/rate_limit")
+        if data:
+            remaining = data.get("resources", {}).get("core", {}).get("remaining", 0)
+            limit = data.get("resources", {}).get("core", {}).get("limit", 0)
+            print(f"GitHub API: {remaining}/{limit} requests remaining\n")
+            if remaining < 500:
+                print("WARNING: Low rate limit!", file=sys.stderr)
+
+        categories = [
+            ("trending", fetch_trending),
+            ("new-releases", fetch_new_releases),
+            ("most-popular", fetch_most_popular),
+        ]
+
+        # Process categories sequentially (each has concurrent platforms inside)
+        # This prevents search API abuse while still being fast
+        for cat_name, cat_fn in categories:
+            await process_category(client, cat_name, cat_fn, timestamp)
+
+        elapsed = time.time() - start
+        print(f"\n{'='*70}")
+        print(f"✓ DONE in {elapsed:.0f}s ({elapsed/60:.1f} min)")
+        print(f"  Total API requests: {client._request_count}")
+        print(f"  Release cache entries: {len(client.release_cache)}")
+        print(f"{'='*70}")
+
+
+if __name__ == "__main__":
+    asyncio.run(main())

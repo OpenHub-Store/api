@@ -2,7 +2,6 @@ name: Fetch All Repository Categories
 
 on:
   schedule:
-    # Run once daily at 2 AM UTC (low traffic time)
     - cron: '0 2 * * *'
   workflow_dispatch:
     inputs:
@@ -11,16 +10,6 @@ on:
         required: false
         default: 'false'
         type: boolean
-      categories:
-        description: 'Specific categories to update (comma-separated: trending,new-releases,most-popular)'
-        required: false
-        default: 'all'
-        type: string
-      platforms:
-        description: 'Specific platforms to update (comma-separated: android,windows,macos,linux)'
-        required: false
-        default: 'all'
-        type: string
 
 jobs:
   check-rate-limit:
@@ -28,7 +17,6 @@ jobs:
     outputs:
       can_proceed: ${{ steps.check.outputs.can_proceed }}
       remaining: ${{ steps.check.outputs.remaining }}
-    
     steps:
       - name: Check GitHub API Rate Limit
         id: check
@@ -37,29 +25,21 @@ jobs:
         run: |
           RATE_LIMIT=$(curl -s -H "Authorization: token $GITHUB_TOKEN" \
             https://api.github.com/rate_limit)
-          
           REMAINING=$(echo $RATE_LIMIT | jq -r '.resources.core.remaining')
-          LIMIT=$(echo $RATE_LIMIT | jq -r '.resources.core.limit')
-          
           echo "remaining=$REMAINING" >> $GITHUB_OUTPUT
-          echo "limit=$LIMIT" >> $GITHUB_OUTPUT
-          
-          # Need at least 1000 requests for all categories (safety margin)
           if [ "$REMAINING" -gt 1000 ]; then
             echo "can_proceed=true" >> $GITHUB_OUTPUT
-            echo "✓ Rate limit OK: $REMAINING/$LIMIT remaining"
+            echo "✓ Rate limit OK: $REMAINING remaining"
           else
             echo "can_proceed=false" >> $GITHUB_OUTPUT
-            echo "✗ Rate limit low: $REMAINING/$LIMIT remaining"
-            echo "::warning::Skipping run due to low rate limit ($REMAINING remaining)"
+            echo "::warning::Low rate limit ($REMAINING remaining)"
           fi
 
   fetch-and-update:
     needs: check-rate-limit
     if: needs.check-rate-limit.outputs.can_proceed == 'true'
     runs-on: ubuntu-latest
-    timeout-minutes: 60
-
+    timeout-minutes: 30
     permissions:
       contents: write
 
@@ -70,18 +50,9 @@ jobs:
           ref: main
           fetch-depth: 0
 
-      - name: Initialize cached-data directory structure
+      - name: Initialize cached-data directories
         run: |
-          mkdir -p cached-data/trending
-          mkdir -p cached-data/new-releases
-          mkdir -p cached-data/most-popular
-          
-          # Add .gitkeep for empty directories
-          for dir in trending new-releases most-popular; do
-            if [ ! "$(ls -A cached-data/$dir 2>/dev/null)" ]; then
-              touch cached-data/$dir/.gitkeep
-            fi
-          done
+          mkdir -p cached-data/{trending,new-releases,most-popular}
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -90,202 +61,93 @@ jobs:
           cache: 'pip'
 
       - name: Install dependencies
-        run: |
-          pip install --upgrade pip
-          pip install -r scripts/requirements.txt
+        run: pip install --upgrade pip && pip install -r scripts/requirements.txt
 
-      - name: Cache category data
-        uses: actions/cache@v4
-        with:
-          path: cached-data
-          key: category-data-${{ hashFiles('cached-data/**/*.json') }}
-          restore-keys: |
-            category-data-
+      - name: Optionally clear cache for force refresh
+        if: inputs.force_refresh == 'true'
+        run: |
+          echo "Force refresh requested — clearing cached JSON..."
+          find cached-data -name "*.json" -delete
 
       - name: Fetch all repository categories
         id: fetch
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          FORCE_REFRESH: ${{ inputs.force_refresh || 'false' }}
-          CATEGORIES: ${{ inputs.categories || 'all' }}
-          PLATFORMS: ${{ inputs.platforms || 'all' }}
         run: |
-          echo "Starting repository fetch for all categories..."
-          echo "Force refresh: $FORCE_REFRESH"
-          echo "Categories: $CATEGORIES"
-          echo "Platforms: $PLATFORMS"
-          
-          # Ensure directory structure exists
-          mkdir -p cached-data/trending cached-data/new-releases cached-data/most-popular
-          
-          # Run the comprehensive script
           python scripts/fetch_all_categories.py
           
-          # Debug: Show what files exist
-          echo ""
-          echo "=== Files in cached-data ==="
-          find cached-data -type f -name "*.json" | sort
-          echo ""
-          
-          # Check if any files were modified or created
           if git status --porcelain cached-data/ | grep -q .; then
             echo "changed=true" >> $GITHUB_OUTPUT
-            echo "✓ Changes detected in cached data"
-            echo ""
-            echo "Changed files:"
-            git status --porcelain cached-data/
           else
             echo "changed=false" >> $GITHUB_OUTPUT
-            echo "No changes detected - all caches still valid"
+            echo "No changes — caches still valid"
           fi
 
       - name: Validate JSON outputs
         if: steps.fetch.outputs.changed == 'true'
         run: |
-          echo "Validating JSON files..."
-          
-          error_count=0
-          for file in $(find cached-data -type f -name "*.json"); do
-            if ! jq empty "$file" 2>/dev/null; then
-              echo "::error::Invalid JSON in $file"
-              error_count=$((error_count + 1))
+          errors=0
+          for f in $(find cached-data -name "*.json"); do
+            if ! jq empty "$f" 2>/dev/null; then
+              echo "::error::Invalid JSON: $f"
+              errors=$((errors + 1))
             else
-              count=$(jq '.totalCount' "$file")
-              echo "✓ Valid: $file ($count repos)"
+              echo "✓ $f ($(jq .totalCount "$f") repos)"
             fi
           done
-          
-          if [ $error_count -gt 0 ]; then
-            echo "::error::Found $error_count invalid JSON files"
-            exit 1
-          fi
+          [ $errors -eq 0 ] || exit 1
 
       - name: Generate summary
         if: steps.fetch.outputs.changed == 'true'
         run: |
-          echo "## Repository Categories Update Summary" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "**Updated at:** $(date -u +'%Y-%m-%d %H:%M:%S UTC')" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          
-          # Summary table for each category
-          for category in trending new-releases most-popular; do
-            category_title=$(echo $category | sed 's/-/ /g' | sed 's/\b\(.\)/\u\1/g')
-            echo "### 📊 $category_title" >> $GITHUB_STEP_SUMMARY
-            echo "" >> $GITHUB_STEP_SUMMARY
-            echo "| Platform | Repositories | Status |" >> $GITHUB_STEP_SUMMARY
-            echo "|----------|--------------|--------|" >> $GITHUB_STEP_SUMMARY
-            
-            for platform in android windows macos linux; do
-              file="cached-data/$category/$platform.json"
-              if [ -f "$file" ]; then
-                count=$(jq '.totalCount' "$file")
-                echo "| $platform | $count | ✓ Updated |" >> $GITHUB_STEP_SUMMARY
-              else
-                echo "| $platform | 0 | ⏭️ Cached |" >> $GITHUB_STEP_SUMMARY
-              fi
+          {
+            echo "## Repository Categories Update"
+            echo "**$(date -u +'%Y-%m-%d %H:%M UTC')**"
+            echo ""
+            echo "| Category | Platform | Repos |"
+            echo "|----------|----------|-------|"
+            for cat in trending new-releases most-popular; do
+              for plat in android windows macos linux; do
+                f="cached-data/$cat/$plat.json"
+                if [ -f "$f" ]; then
+                  echo "| $cat | $plat | $(jq .totalCount "$f") |"
+                fi
+              done
             done
-            
-            echo "" >> $GITHUB_STEP_SUMMARY
-          done
-          
-          echo "---" >> $GITHUB_STEP_SUMMARY
-          echo "**API Rate Limit Remaining:** ${{ needs.check-rate-limit.outputs.remaining }}" >> $GITHUB_STEP_SUMMARY
+            echo ""
+            echo "API remaining: ${{ needs.check-rate-limit.outputs.remaining }}"
+          } >> $GITHUB_STEP_SUMMARY
 
-      - name: Commit and push changes
+      - name: Commit and push
         if: steps.fetch.outputs.changed == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          
-          # Stage all JSON files in cached-data
           git add cached-data/**/*.json
-          
-          # Also add .gitkeep files if they exist
-          git add cached-data/*/.gitkeep 2>/dev/null || true
-          
-          # Count updates per category
-          trending_count=$(find cached-data/trending -name "*.json" | wc -l)
-          releases_count=$(find cached-data/new-releases -name "*.json" | wc -l)
-          popular_count=$(find cached-data/most-popular -name "*.json" | wc -l)
-          
-          # Create detailed commit message
-          TIMESTAMP=$(date -u +'%Y-%m-%d %H:%M:%S UTC')
-          COMMIT_MSG="Update repository categories - $TIMESTAMP
-
-          📊 Categories updated:
-          - Trending: $trending_count platforms
-          - New Releases: $releases_count platforms
-          - Most Popular: $popular_count platforms
-          
-          Updated platforms:
-          $(cd cached-data && find . -name "*.json" -type f | sed 's|./||' | sort | sed 's/^/- /')"
-          
-          git commit -m "$COMMIT_MSG"
-          
-          # Push with retry logic
-          for i in {1..3}; do
-            if git push origin main; then
-              echo "✓ Successfully pushed changes"
-              break
-            else
-              echo "Push attempt $i failed, retrying..."
-              sleep 5
-              git pull --rebase origin main
-            fi
-          done
-
-      - name: No changes detected
-        if: steps.fetch.outputs.changed == 'false'
-        run: |
-          echo "No changes in repository categories - all caches still valid"
-          echo "## No Updates Required" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "All cached data is still fresh (< 23 hours old)" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "Cache status:" >> $GITHUB_STEP_SUMMARY
-          
-          for category in trending new-releases most-popular; do
-            category_title=$(echo $category | sed 's/-/ /g' | sed 's/\b\(.\)/\u\1/g')
-            echo "- **$category_title**: Using cache" >> $GITHUB_STEP_SUMMARY
+          git commit -m "Update repository categories — $(date -u +'%Y-%m-%d %H:%M UTC')"
+          for i in 1 2 3; do
+            git push origin main && break
+            sleep 5 && git pull --rebase origin main
           done
 
   notify-on-failure:
     needs: [check-rate-limit, fetch-and-update]
     if: failure()
     runs-on: ubuntu-latest
-    
     steps:
       - name: Create failure issue
         uses: actions/github-script@v7
         with:
           script: |
-            const title = `Repository Categories Fetch Failed - ${new Date().toISOString().split('T')[0]}`;
-            const body = `The scheduled repository categories fetch job failed.
-            
-            **Workflow run:** ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
-            **Rate limit remaining:** ${{ needs.check-rate-limit.outputs.remaining || 'N/A' }}
-            
-            Categories affected: Trending, New Releases, Most Popular
-            
-            Please investigate and re-run manually if needed.`;
-            
-            // Check if issue already exists
+            const title = `Repo fetch failed — ${new Date().toISOString().split('T')[0]}`;
             const issues = await github.rest.issues.listForRepo({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              state: 'open',
-              labels: 'automation,category-fetch'
+              owner: context.repo.owner, repo: context.repo.repo,
+              state: 'open', labels: 'automation,category-fetch'
             });
-            
-            const existingIssue = issues.data.find(issue => issue.title === title);
-            
-            if (!existingIssue) {
+            if (!issues.data.find(i => i.title === title)) {
               await github.rest.issues.create({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                title: title,
-                body: body,
-                labels: ['automation', 'category-fetch', 'bug']
+                owner: context.repo.owner, repo: context.repo.repo,
+                title, labels: ['automation', 'category-fetch', 'bug'],
+                body: `Workflow run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}\nRate limit: ${{ needs.check-rate-limit.outputs.remaining || 'N/A' }}`
               });
             }
