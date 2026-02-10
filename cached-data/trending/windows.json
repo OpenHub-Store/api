@@ -1,8 +1,8 @@
 {
   "category": "trending",
   "platform": "windows",
-  "lastUpdated": "2026-02-03T16:07:37.057304Z",
-  "totalCount": 60,
+  "lastUpdated": "2026-02-10T04:40:28.342571Z",
+  "totalCount": 43,
   "repositories": [
     {
       "id": 184456251,
@@ -15,8 +15,8 @@
       "description": "Microsoft PowerToys is a collection of utilities that supercharge productivity and customization on Windows",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/microsoft/PowerToys",
-      "stargazersCount": 128946,
-      "forksCount": 7670,
+      "stargazersCount": 129184,
+      "forksCount": 7679,
       "language": "C#",
       "topics": [
         "advanced-paste",
@@ -33,9 +33,9 @@
         "windows-11"
       ],
       "releasesUrl": "https://api.github.com/repos/microsoft/PowerToys/releases{/id}",
-      "updatedAt": "2026-02-03T15:58:45Z",
+      "updatedAt": "2026-02-10T04:36:22Z",
       "createdAt": "2019-05-01T17:44:02Z",
-      "trendingScore": 1092.52
+      "trendingScore": 1091.49
     },
     {
       "id": 971243074,
@@ -48,8 +48,8 @@
       "description": "Context-aware AI assistant for your desktop. Ready to respond intelligently, seamlessly integrating multiple LLMs and MCP tools.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/DearVa/Everywhere",
-      "stargazersCount": 5394,
-      "forksCount": 315,
+      "stargazersCount": 5455,
+      "forksCount": 318,
       "language": "C#",
       "topics": [
         "agent",
@@ -68,9 +68,9 @@
         "ui-automation"
       ],
       "releasesUrl": "https://api.github.com/repos/DearVa/Everywhere/releases{/id}",
-      "updatedAt": "2026-02-03T15:33:36Z",
+      "updatedAt": "2026-02-09T23:22:47Z",
       "createdAt": "2025-04-23T08:19:33Z",
-      "trendingScore": 410.2
+      "trendingScore": 406.63
     },
     {
       "id": 321682465,
@@ -83,8 +83,8 @@
       "description": "🛠「Watt Toolkit」是一个开源跨平台的多功能 Steam 工具箱。",
       "defaultBranch": "develop",
       "htmlUrl": "https://github.com/BeyondDimension/SteamTools",
-      "stargazersCount": 24398,
-      "forksCount": 1584,
+      "stargazersCount": 24455,
+      "forksCount": 1590,
       "language": "C#",
       "topics": [
         "android-app",
@@ -106,38 +106,9 @@
         "xaml"
       ],
       "releasesUrl": "https://api.github.com/repos/BeyondDimension/SteamTools/releases{/id}",
-      "updatedAt": "2026-02-03T15:21:34Z",
+      "updatedAt": "2026-02-10T04:13:48Z",
       "createdAt": "2020-12-15T13:52:11Z",
-      "trendingScore": 343.11
-    },
-    {
-      "id": 49609581,
-      "name": "PowerShell",
-      "fullName": "PowerShell/PowerShell",
-      "owner": {
-        "login": "PowerShell",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/11524380?v=4"
-      },
-      "description": "PowerShell for every system!",
-      "defaultBranch": "master",
-      "htmlUrl": "https://github.com/PowerShell/PowerShell",
-      "stargazersCount": 51345,
-      "forksCount": 8156,
-      "language": "C#",
-      "topics": [
-        "command-line",
-        "hacktoberfest",
-        "linux",
-        "macos",
-        "netcore",
-        "powershell",
-        "shell",
-        "windows"
-      ],
-      "releasesUrl": "https://api.github.com/repos/PowerShell/PowerShell/releases{/id}",
-      "updatedAt": "2026-02-03T15:58:30Z",
-      "createdAt": "2016-01-13T23:41:35Z",
-      "trendingScore": 314.58
+      "trendingScore": 342.88
     },
     {
       "id": 916105685,
@@ -150,8 +121,8 @@
       "description": "Application designed to optimize, customize and enhance your Windows experience.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/memstechtips/Winhance",
-      "stargazersCount": 5476,
-      "forksCount": 262,
+      "stargazersCount": 5726,
+      "forksCount": 272,
       "language": "C#",
       "topics": [
         "windows-10",
@@ -162,9 +133,38 @@
         "windows-11-optimization"
       ],
       "releasesUrl": "https://api.github.com/repos/memstechtips/Winhance/releases{/id}",
-      "updatedAt": "2026-02-03T16:07:02Z",
+      "updatedAt": "2026-02-10T03:11:32Z",
       "createdAt": "2025-01-13T13:20:05Z",
-      "trendingScore": 308.73
+      "trendingScore": 317.14
+    },
+    {
+      "id": 49609581,
+      "name": "PowerShell",
+      "fullName": "PowerShell/PowerShell",
+      "owner": {
+        "login": "PowerShell",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/11524380?v=4"
+      },
+      "description": "PowerShell for every system!",
+      "defaultBranch": "master",
+      "htmlUrl": "https://github.com/PowerShell/PowerShell",
+      "stargazersCount": 51410,
+      "forksCount": 8164,
+      "language": "C#",
+      "topics": [
+        "command-line",
+        "hacktoberfest",
+        "linux",
+        "macos",
+        "netcore",
+        "powershell",
+        "shell",
+        "windows"
+      ],
+      "releasesUrl": "https://api.github.com/repos/PowerShell/PowerShell/releases{/id}",
+      "updatedAt": "2026-02-10T03:31:31Z",
+      "createdAt": "2016-01-13T23:41:35Z",
+      "trendingScore": 314.4
     },
     {
       "id": 683560668,
@@ -177,8 +177,8 @@
       "description": "📦BetterGI · 更好的原神 - 自动拾取 | 自动剧情 | 全自动钓鱼(AI) | 全自动七圣召唤 | 自动伐木 | 自动刷本 | 自动采集/挖矿/锄地 | 一条龙 | 全连音游 - UI Automation Testing Tools For Genshin Impact",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/babalae/better-genshin-impact",
-      "stargazersCount": 12369,
-      "forksCount": 865,
+      "stargazersCount": 12512,
+      "forksCount": 874,
       "language": "C#",
       "topics": [
         "auto-play-game",
@@ -189,9 +189,9 @@
         "yuanshen"
       ],
       "releasesUrl": "https://api.github.com/repos/babalae/better-genshin-impact/releases{/id}",
-      "updatedAt": "2026-02-03T15:59:53Z",
+      "updatedAt": "2026-02-10T03:57:10Z",
       "createdAt": "2023-08-27T01:02:45Z",
-      "trendingScore": 297.64
+      "trendingScore": 298.66
     },
     {
       "id": 377163326,
@@ -204,8 +204,8 @@
       "description": "UniGetUI: The Graphical Interface for your package managers. Could be terribly described as a package manager manager to manage your package managers",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/marticliment/UniGetUI",
-      "stargazersCount": 20355,
-      "forksCount": 682,
+      "stargazersCount": 20858,
+      "forksCount": 705,
       "language": "C#",
       "topics": [
         "chocolatey",
@@ -222,9 +222,9 @@
         "winget"
       ],
       "releasesUrl": "https://api.github.com/repos/marticliment/UniGetUI/releases{/id}",
-      "updatedAt": "2026-02-03T16:06:36Z",
+      "updatedAt": "2026-02-10T04:33:47Z",
       "createdAt": "2021-06-15T12:57:58Z",
-      "trendingScore": 275.32
+      "trendingScore": 280.39
     },
     {
       "id": 600246354,
@@ -237,8 +237,8 @@
       "description": "Lightweight, open-source control tool for ASUS laptops and ROG Ally. Manage performance modes, fans, GPU, battery, and RGB lighting across Zephyrus, Flow, TUF, Strix, Scar, and other models.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/seerge/g-helper",
-      "stargazersCount": 12111,
-      "forksCount": 440,
+      "stargazersCount": 12170,
+      "forksCount": 441,
       "language": "C#",
       "topics": [
         "ally",
@@ -263,9 +263,9 @@
         "tuf"
       ],
       "releasesUrl": "https://api.github.com/repos/seerge/g-helper/releases{/id}",
-      "updatedAt": "2026-02-03T15:36:29Z",
+      "updatedAt": "2026-02-10T03:29:09Z",
       "createdAt": "2023-02-10T23:11:28Z",
-      "trendingScore": 242.63
+      "trendingScore": 242.28
     },
     {
       "id": 201188122,
@@ -278,7 +278,7 @@
       "description": "Free and open-source software that allows users to set animated desktop wallpapers and screensavers powered by WinUI 3.",
       "defaultBranch": "core-separation",
       "htmlUrl": "https://github.com/rocksdanister/lively",
-      "stargazersCount": 18121,
+      "stargazersCount": 18182,
       "forksCount": 1234,
       "language": "C#",
       "topics": [
@@ -304,9 +304,9 @@
         "winui3"
       ],
       "releasesUrl": "https://api.github.com/repos/rocksdanister/lively/releases{/id}",
-      "updatedAt": "2026-02-03T15:21:30Z",
+      "updatedAt": "2026-02-10T03:05:46Z",
       "createdAt": "2019-08-08T05:57:26Z",
-      "trendingScore": 228.86
+      "trendingScore": 228.98
     },
     {
       "id": 295200728,
@@ -319,8 +319,8 @@
       "description": "Everything integration for the Windows taskbar.",
       "defaultBranch": "develop",
       "htmlUrl": "https://github.com/srwi/EverythingToolbar",
-      "stargazersCount": 13352,
-      "forksCount": 525,
+      "stargazersCount": 13426,
+      "forksCount": 527,
       "language": "C#",
       "topics": [
         "deskband",
@@ -335,9 +335,9 @@
         "wpf"
       ],
       "releasesUrl": "https://api.github.com/repos/srwi/EverythingToolbar/releases{/id}",
-      "updatedAt": "2026-02-03T13:04:10Z",
+      "updatedAt": "2026-02-10T03:11:09Z",
       "createdAt": "2020-09-13T17:20:21Z",
-      "trendingScore": 200.69
+      "trendingScore": 200.96
     },
     {
       "id": 64713769,
@@ -350,8 +350,8 @@
       "description": "🎬 ScreenToGif allows you to record a selected area of your screen, edit and save it as a gif or video.",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/NickeManarin/ScreenToGif",
-      "stargazersCount": 26320,
-      "forksCount": 2320,
+      "stargazersCount": 26355,
+      "forksCount": 2322,
       "language": "C#",
       "topics": [
         "editor",
@@ -363,9 +363,9 @@
         "wpf"
       ],
       "releasesUrl": "https://api.github.com/repos/NickeManarin/ScreenToGif/releases{/id}",
-      "updatedAt": "2026-02-03T13:03:30Z",
+      "updatedAt": "2026-02-10T03:31:24Z",
       "createdAt": "2016-08-02T01:28:59Z",
-      "trendingScore": 196.61
+      "trendingScore": 196.51
     },
     {
       "id": 165548191,
@@ -378,8 +378,8 @@
       "description": "PEASS - Privilege Escalation Awesome Scripts SUITE (with colors)",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/peass-ng/PEASS-ng",
-      "stargazersCount": 19223,
-      "forksCount": 3341,
+      "stargazersCount": 19274,
+      "forksCount": 3343,
       "language": "C#",
       "topics": [
         "bash",
@@ -403,9 +403,9 @@
         "winpeas"
       ],
       "releasesUrl": "https://api.github.com/repos/peass-ng/PEASS-ng/releases{/id}",
-      "updatedAt": "2026-02-03T15:58:08Z",
+      "updatedAt": "2026-02-09T21:40:27Z",
       "createdAt": "2019-01-13T19:58:24Z",
-      "trendingScore": 184.19
+      "trendingScore": 184.18
     },
     {
       "id": 13428264,
@@ -418,8 +418,8 @@
       "description": "ShareX is a free and open-source application that enables users to capture or record any area of their screen with a single keystroke. It also supports uploading images, text, and various file types to a wide range of destinations.",
       "defaultBranch": "develop",
       "htmlUrl": "https://github.com/ShareX/ShareX",
-      "stargazersCount": 35490,
-      "forksCount": 3597,
+      "stargazersCount": 35570,
+      "forksCount": 3600,
       "language": "C#",
       "topics": [
         "capture",
@@ -444,9 +444,9 @@
         "url-shortener"
       ],
       "releasesUrl": "https://api.github.com/repos/ShareX/ShareX/releases{/id}",
-      "updatedAt": "2026-02-03T14:14:58Z",
+      "updatedAt": "2026-02-10T03:20:19Z",
       "createdAt": "2013-10-08T23:32:10Z",
-      "trendingScore": 177.73
+      "trendingScore": 177.84
     },
     {
       "id": 257526212,
@@ -459,8 +459,8 @@
       "description": ":mag: Quick file search & app launcher for Windows with community-made plugins",
       "defaultBranch": "dev",
       "htmlUrl": "https://github.com/Flow-Launcher/Flow.Launcher",
-      "stargazersCount": 13644,
-      "forksCount": 543,
+      "stargazersCount": 13752,
+      "forksCount": 547,
       "language": "C#",
       "topics": [
         "alfred",
@@ -484,48 +484,9 @@
         "wox"
       ],
       "releasesUrl": "https://api.github.com/repos/Flow-Launcher/Flow.Launcher/releases{/id}",
-      "updatedAt": "2026-02-03T14:59:46Z",
+      "updatedAt": "2026-02-10T03:44:52Z",
       "createdAt": "2020-04-21T08:12:15Z",
-      "trendingScore": 177.08
-    },
-    {
-      "id": 737346182,
-      "name": "RyTuneX",
-      "fullName": "rayenghanmi/RyTuneX",
-      "owner": {
-        "login": "rayenghanmi",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/108760398?v=4"
-      },
-      "description": "RyTuneX is a cutting-edge optimizer built with the WinUI 3 framework, designed to amplify the performance of Windows devices. Crafted for both Windows 10 and 11.",
-      "defaultBranch": "main",
-      "htmlUrl": "https://github.com/rayenghanmi/RyTuneX",
-      "stargazersCount": 3989,
-      "forksCount": 130,
-      "language": "C#",
-      "topics": [
-        "customization-tool",
-        "debloat",
-        "disk-cleaner",
-        "gaming-optimization",
-        "optimization-tool",
-        "performance-tool",
-        "privacy-enhancer",
-        "productivity-tool",
-        "ram-cleaner",
-        "system-optimizer",
-        "system-tweaks",
-        "system-utility",
-        "windows",
-        "windows-optimization",
-        "windows-performance",
-        "windows10",
-        "windows11",
-        "winui"
-      ],
-      "releasesUrl": "https://api.github.com/repos/rayenghanmi/RyTuneX/releases{/id}",
-      "updatedAt": "2026-02-03T01:36:17Z",
-      "createdAt": "2023-12-30T17:41:41Z",
-      "trendingScore": 174.29
+      "trendingScore": 177.74
     },
     {
       "id": 88064357,
@@ -538,16 +499,16 @@
       "description": "Bring macOS “Quick Look” feature to Windows",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/QL-Win/QuickLook",
-      "stargazersCount": 22240,
-      "forksCount": 1225,
+      "stargazersCount": 22330,
+      "forksCount": 1226,
       "language": "C#",
       "topics": [
         "quicklook"
       ],
       "releasesUrl": "https://api.github.com/repos/QL-Win/QuickLook/releases{/id}",
-      "updatedAt": "2026-02-03T15:00:39Z",
+      "updatedAt": "2026-02-10T02:29:59Z",
       "createdAt": "2017-04-12T14:57:38Z",
-      "trendingScore": 163.18
+      "trendingScore": 163.48
     },
     {
       "id": 579375422,
@@ -560,7 +521,7 @@
       "description": "A ready-to-go translation ocr tool developed with WPF/WPF 开发的一款即用即走的翻译、OCR工具",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/STranslate/STranslate",
-      "stargazersCount": 5574,
+      "stargazersCount": 5606,
       "forksCount": 304,
       "language": "C#",
       "topics": [
@@ -571,9 +532,9 @@
         "wpf"
       ],
       "releasesUrl": "https://api.github.com/repos/STranslate/STranslate/releases{/id}",
-      "updatedAt": "2026-02-03T14:52:52Z",
+      "updatedAt": "2026-02-09T21:52:16Z",
       "createdAt": "2022-12-17T13:40:24Z",
-      "trendingScore": 147.45
+      "trendingScore": 147.5
     },
     {
       "id": 64677873,
@@ -586,8 +547,8 @@
       "description": "Remove large amounts of unwanted applications quickly.",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/Klocman/Bulk-Crap-Uninstaller",
-      "stargazersCount": 17294,
-      "forksCount": 763,
+      "stargazersCount": 17420,
+      "forksCount": 765,
       "language": "C#",
       "topics": [
         "application-manager",
@@ -611,9 +572,9 @@
         "windows-forms"
       ],
       "releasesUrl": "https://api.github.com/repos/Klocman/Bulk-Crap-Uninstaller/releases{/id}",
-      "updatedAt": "2026-02-03T15:23:33Z",
+      "updatedAt": "2026-02-10T04:21:11Z",
       "createdAt": "2016-08-01T15:17:05Z",
-      "trendingScore": 134.59
+      "trendingScore": 135.14
     },
     {
       "id": 158025849,
@@ -626,8 +587,8 @@
       "description": "Automatically switches between the dark and light theme of Windows 10 and Windows 11",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/AutoDarkMode/Windows-Auto-Night-Mode",
-      "stargazersCount": 9087,
-      "forksCount": 292,
+      "stargazersCount": 9102,
+      "forksCount": 291,
       "language": "C#",
       "topics": [
         "csharp",
@@ -646,9 +607,9 @@
         "wpf"
       ],
       "releasesUrl": "https://api.github.com/repos/AutoDarkMode/Windows-Auto-Night-Mode/releases{/id}",
-      "updatedAt": "2026-02-03T10:30:02Z",
+      "updatedAt": "2026-02-09T12:47:22Z",
       "createdAt": "2018-11-17T21:19:37Z",
-      "trendingScore": 134.0
+      "trendingScore": 133.93
     },
     {
       "id": 1327739,
@@ -661,8 +622,8 @@
       "description": ".NET Decompiler with support for PDB generation, ReadyToRun, Metadata (&more) - cross-platform!",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/icsharpcode/ILSpy",
-      "stargazersCount": 24532,
-      "forksCount": 3600,
+      "stargazersCount": 24561,
+      "forksCount": 3603,
       "language": "C#",
       "topics": [
         "c-sharp",
@@ -677,7 +638,7 @@
         "unity"
       ],
       "releasesUrl": "https://api.github.com/repos/icsharpcode/ILSpy/releases{/id}",
-      "updatedAt": "2026-02-03T15:12:20Z",
+      "updatedAt": "2026-02-10T04:04:37Z",
       "createdAt": "2011-02-04T11:24:20Z",
       "trendingScore": 132.57
     },
@@ -692,8 +653,8 @@
       "description": "Video game library manager with support for wide range of 3rd party libraries and game emulation support, providing one unified interface for your games.",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/JosefNemec/Playnite",
-      "stargazersCount": 12385,
-      "forksCount": 599,
+      "stargazersCount": 12436,
+      "forksCount": 601,
       "language": "C#",
       "topics": [
         "csharp",
@@ -702,38 +663,9 @@
         "wpf"
       ],
       "releasesUrl": "https://api.github.com/repos/JosefNemec/Playnite/releases{/id}",
-      "updatedAt": "2026-02-03T15:57:48Z",
+      "updatedAt": "2026-02-10T02:15:41Z",
       "createdAt": "2017-03-25T19:16:06Z",
-      "trendingScore": 121.55
-    },
-    {
-      "id": 317531562,
-      "name": "Text-Grab",
-      "fullName": "TheJoeFin/Text-Grab",
-      "owner": {
-        "login": "TheJoeFin",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/7809853?v=4"
-      },
-      "description": "Use OCR in Windows quickly and easily with Text Grab. With optional background process and notifications.",
-      "defaultBranch": "main",
-      "htmlUrl": "https://github.com/TheJoeFin/Text-Grab",
-      "stargazersCount": 4576,
-      "forksCount": 297,
-      "language": "C#",
-      "topics": [
-        "dotnet",
-        "local-ai",
-        "msix",
-        "ocr",
-        "window-10",
-        "windows",
-        "windows-11",
-        "wpf"
-      ],
-      "releasesUrl": "https://api.github.com/repos/TheJoeFin/Text-Grab/releases{/id}",
-      "updatedAt": "2026-02-03T14:40:11Z",
-      "createdAt": "2020-12-01T12:18:26Z",
-      "trendingScore": 121.42
+      "trendingScore": 121.69
     },
     {
       "id": 89527614,
@@ -746,8 +678,8 @@
       "description": "A powerful tool for managing networks and troubleshoot network problems!",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/BornToBeRoot/NETworkManager",
-      "stargazersCount": 8022,
-      "forksCount": 797,
+      "stargazersCount": 8032,
+      "forksCount": 799,
       "language": "C#",
       "topics": [
         "aws-ssm",
@@ -772,37 +704,9 @@
         "wpf"
       ],
       "releasesUrl": "https://api.github.com/repos/BornToBeRoot/NETworkManager/releases{/id}",
-      "updatedAt": "2026-02-03T06:59:44Z",
+      "updatedAt": "2026-02-10T03:47:15Z",
       "createdAt": "2017-04-26T21:20:08Z",
-      "trendingScore": 110.07
-    },
-    {
-      "id": 437636034,
-      "name": "MicaForEveryone",
-      "fullName": "MicaForEveryone/MicaForEveryone",
-      "owner": {
-        "login": "MicaForEveryone",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/103479527?v=4"
-      },
-      "description": "Mica For Everyone is a tool to enable backdrop effects on the title bars of Win32 apps on Windows 11.",
-      "defaultBranch": "reset-winui3",
-      "htmlUrl": "https://github.com/MicaForEveryone/MicaForEveryone",
-      "stargazersCount": 4965,
-      "forksCount": 157,
-      "language": "C#",
-      "topics": [
-        "acrylic",
-        "backdrop",
-        "mica",
-        "win32",
-        "windows",
-        "windows-11",
-        "xaml-islands"
-      ],
-      "releasesUrl": "https://api.github.com/repos/MicaForEveryone/MicaForEveryone/releases{/id}",
-      "updatedAt": "2026-02-03T02:36:51Z",
-      "createdAt": "2021-12-12T19:22:58Z",
-      "trendingScore": 108.63
+      "trendingScore": 110.03
     },
     {
       "id": 959908,
@@ -815,8 +719,8 @@
       "description": "Open Source real-time strategy game engine for early Westwood games such as Command & Conquer: Red Alert written in C# using SDL and OpenGL. Runs on Windows, Linux, *BSD and Mac OS X.",
       "defaultBranch": "bleed",
       "htmlUrl": "https://github.com/OpenRA/OpenRA",
-      "stargazersCount": 16385,
-      "forksCount": 2852,
+      "stargazersCount": 16408,
+      "forksCount": 2856,
       "language": "C#",
       "topics": [
         "command-and-conquer",
@@ -836,49 +740,9 @@
         "tiberian-dawn"
       ],
       "releasesUrl": "https://api.github.com/repos/OpenRA/OpenRA/releases{/id}",
-      "updatedAt": "2026-02-03T15:17:09Z",
+      "updatedAt": "2026-02-10T02:18:33Z",
       "createdAt": "2010-10-04T07:38:05Z",
-      "trendingScore": 106.51
-    },
-    {
-      "id": 101537172,
-      "name": "mpv.net",
-      "fullName": "mpvnet-player/mpv.net",
-      "owner": {
-        "login": "mpvnet-player",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/100841561?v=4"
-      },
-      "description": "🎞 mpv.net is a media player for Windows with a modern GUI.",
-      "defaultBranch": "main",
-      "htmlUrl": "https://github.com/mpvnet-player/mpv.net",
-      "stargazersCount": 4693,
-      "forksCount": 203,
-      "language": "C#",
-      "topics": [
-        "audio-player",
-        "command-line",
-        "dotnet",
-        "ffmpeg",
-        "gui",
-        "javascript",
-        "libmpv",
-        "lua",
-        "media-player",
-        "mediainfo",
-        "mpv",
-        "music-player",
-        "terminal",
-        "video",
-        "video-player",
-        "windows",
-        "winforms",
-        "wpf",
-        "yt-dlp"
-      ],
-      "releasesUrl": "https://api.github.com/repos/mpvnet-player/mpv.net/releases{/id}",
-      "updatedAt": "2026-02-03T12:50:32Z",
-      "createdAt": "2017-08-27T07:36:32Z",
-      "trendingScore": 106.45
+      "trendingScore": 106.53
     },
     {
       "id": 22456440,
@@ -891,8 +755,8 @@
       "description": "rhythm is just a *click* away!",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/ppy/osu",
-      "stargazersCount": 17872,
-      "forksCount": 2603,
+      "stargazersCount": 17898,
+      "forksCount": 2610,
       "language": "C#",
       "topics": [
         "beatmap",
@@ -904,37 +768,9 @@
         "taiko"
       ],
       "releasesUrl": "https://api.github.com/repos/ppy/osu/releases{/id}",
-      "updatedAt": "2026-02-03T15:57:42Z",
+      "updatedAt": "2026-02-10T04:34:49Z",
       "createdAt": "2014-07-31T04:26:30Z",
-      "trendingScore": 105.0
-    },
-    {
-      "id": 177127386,
-      "name": "qttabbar",
-      "fullName": "indiff/qttabbar",
-      "owner": {
-        "login": "indiff",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/501276?v=4"
-      },
-      "description": "QTTabBar is a small tool that allows you to use tab multi label function in Windows Explorer.   https://www.yuque.com/indiff/qttabbar",
-      "defaultBranch": "master",
-      "htmlUrl": "https://github.com/indiff/qttabbar",
-      "stargazersCount": 4632,
-      "forksCount": 311,
-      "language": "C#",
-      "topics": [
-        "cpp",
-        "csharp",
-        "explorer",
-        "qttabbar",
-        "tab",
-        "windows",
-        "wpf"
-      ],
-      "releasesUrl": "https://api.github.com/repos/indiff/qttabbar/releases{/id}",
-      "updatedAt": "2026-02-03T12:48:37Z",
-      "createdAt": "2019-03-22T11:21:33Z",
-      "trendingScore": 101.91
+      "trendingScore": 104.99
     },
     {
       "id": 158405551,
@@ -947,8 +783,8 @@
       "description": "Secure, cross-platform Git credential storage with authentication to GitHub, Azure Repos, and other popular Git hosting services.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/git-ecosystem/git-credential-manager",
-      "stargazersCount": 8538,
-      "forksCount": 2608,
+      "stargazersCount": 8563,
+      "forksCount": 2620,
       "language": "C#",
       "topics": [
         "aad",
@@ -963,9 +799,9 @@
         "gitlab"
       ],
       "releasesUrl": "https://api.github.com/repos/git-ecosystem/git-credential-manager/releases{/id}",
-      "updatedAt": "2026-02-03T08:04:09Z",
+      "updatedAt": "2026-02-09T21:16:43Z",
       "createdAt": "2018-11-20T14:50:07Z",
-      "trendingScore": 99.88
+      "trendingScore": 99.92
     },
     {
       "id": 45195614,
@@ -978,8 +814,8 @@
       "description": "API Support for your favorite torrent trackers",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/Jackett/Jackett",
-      "stargazersCount": 14839,
-      "forksCount": 1467,
+      "stargazersCount": 14884,
+      "forksCount": 1476,
       "language": "C#",
       "topics": [
         "api",
@@ -1004,9 +840,9 @@
         "trackers"
       ],
       "releasesUrl": "https://api.github.com/repos/Jackett/Jackett/releases{/id}",
-      "updatedAt": "2026-02-03T11:21:03Z",
+      "updatedAt": "2026-02-10T04:30:18Z",
       "createdAt": "2015-10-29T16:23:19Z",
-      "trendingScore": 99.16
+      "trendingScore": 99.25
     },
     {
       "id": 77323220,
@@ -1019,8 +855,8 @@
       "description": "Movie organizer/manager for usenet and torrent users.",
       "defaultBranch": "develop",
       "htmlUrl": "https://github.com/Radarr/Radarr",
-      "stargazersCount": 12988,
-      "forksCount": 1125,
+      "stargazersCount": 13030,
+      "forksCount": 1127,
       "language": "C#",
       "topics": [
         "bittorrent",
@@ -1033,9 +869,9 @@
         "usenet"
       ],
       "releasesUrl": "https://api.github.com/repos/Radarr/Radarr/releases{/id}",
-      "updatedAt": "2026-02-03T14:37:27Z",
+      "updatedAt": "2026-02-10T04:20:11Z",
       "createdAt": "2016-12-25T11:38:26Z",
-      "trendingScore": 98.08
+      "trendingScore": 98.19
     },
     {
       "id": 28647218,
@@ -1048,8 +884,8 @@
       "description": "Chocolatey - the package manager for Windows",
       "defaultBranch": "develop",
       "htmlUrl": "https://github.com/chocolatey/choco",
-      "stargazersCount": 11231,
-      "forksCount": 931,
+      "stargazersCount": 11246,
+      "forksCount": 932,
       "language": "C#",
       "topics": [
         "c-sharp",
@@ -1066,9 +902,9 @@
         "windows-server"
       ],
       "releasesUrl": "https://api.github.com/repos/chocolatey/choco/releases{/id}",
-      "updatedAt": "2026-02-03T07:35:59Z",
+      "updatedAt": "2026-02-09T11:41:48Z",
       "createdAt": "2014-12-30T22:12:11Z",
-      "trendingScore": 95.43
+      "trendingScore": 95.41
     },
     {
       "id": 305202189,
@@ -1081,8 +917,8 @@
       "description": "Windows software for sharing locally connected USB devices to other machines, including Hyper-V guests and WSL 2.",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/dorssel/usbipd-win",
-      "stargazersCount": 5356,
-      "forksCount": 322,
+      "stargazersCount": 5375,
+      "forksCount": 325,
       "language": "C#",
       "topics": [
         "hyper-v",
@@ -1095,9 +931,9 @@
         "wsl2"
       ],
       "releasesUrl": "https://api.github.com/repos/dorssel/usbipd-win/releases{/id}",
-      "updatedAt": "2026-02-03T14:16:21Z",
+      "updatedAt": "2026-02-10T01:25:03Z",
       "createdAt": "2020-10-18T21:44:11Z",
-      "trendingScore": 95.42
+      "trendingScore": 95.41
     },
     {
       "id": 393538656,
@@ -1110,14 +946,14 @@
       "description": null,
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/beeradmoore/dlss-swapper",
-      "stargazersCount": 6154,
-      "forksCount": 179,
+      "stargazersCount": 6183,
+      "forksCount": 181,
       "language": "C#",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/beeradmoore/dlss-swapper/releases{/id}",
-      "updatedAt": "2026-02-03T14:48:13Z",
+      "updatedAt": "2026-02-09T09:26:04Z",
       "createdAt": "2021-08-07T00:33:57Z",
-      "trendingScore": 95.0
+      "trendingScore": 95.04
     },
     {
       "id": 33476566,
@@ -1130,14 +966,14 @@
       "description": "File Converter is a very simple tool which allows you to convert and compress files using the context menu in windows explorer.",
       "defaultBranch": "integration",
       "htmlUrl": "https://github.com/Tichau/FileConverter",
-      "stargazersCount": 13499,
-      "forksCount": 847,
+      "stargazersCount": 13551,
+      "forksCount": 848,
       "language": "C#",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/Tichau/FileConverter/releases{/id}",
-      "updatedAt": "2026-02-03T14:19:57Z",
+      "updatedAt": "2026-02-10T03:06:14Z",
       "createdAt": "2015-04-06T10:15:53Z",
-      "trendingScore": 93.25
+      "trendingScore": 93.4
     },
     {
       "id": 220251820,
@@ -1150,7 +986,7 @@
       "description": "Sudo for Windows",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/gerardog/gsudo",
-      "stargazersCount": 5842,
+      "stargazersCount": 5848,
       "forksCount": 161,
       "language": "C#",
       "topics": [
@@ -1168,9 +1004,9 @@
         "wsl"
       ],
       "releasesUrl": "https://api.github.com/repos/gerardog/gsudo/releases{/id}",
-      "updatedAt": "2026-02-03T15:33:08Z",
+      "updatedAt": "2026-02-09T17:23:54Z",
       "createdAt": "2019-11-07T14:10:34Z",
-      "trendingScore": 91.25
+      "trendingScore": 91.16
     },
     {
       "id": 22636263,
@@ -1183,8 +1019,8 @@
       "description": "Store securely encrypted backups in the cloud!",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/duplicati/duplicati",
-      "stargazersCount": 14158,
-      "forksCount": 1027,
+      "stargazersCount": 14204,
+      "forksCount": 1031,
       "language": "C#",
       "topics": [
         "backup",
@@ -1200,38 +1036,9 @@
         "webdav"
       ],
       "releasesUrl": "https://api.github.com/repos/duplicati/duplicati/releases{/id}",
-      "updatedAt": "2026-02-03T14:01:49Z",
+      "updatedAt": "2026-02-10T04:05:43Z",
       "createdAt": "2014-08-05T08:28:16Z",
-      "trendingScore": 87.42
-    },
-    {
-      "id": 136674885,
-      "name": "WinDynamicDesktop",
-      "fullName": "t1m0thyj/WinDynamicDesktop",
-      "owner": {
-        "login": "t1m0thyj",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/22344007?v=4"
-      },
-      "description": "Port of macOS Mojave Dynamic Desktop feature to Windows",
-      "defaultBranch": "main",
-      "htmlUrl": "https://github.com/t1m0thyj/WinDynamicDesktop",
-      "stargazersCount": 4835,
-      "forksCount": 303,
-      "language": "C#",
-      "topics": [
-        "desktop",
-        "dynamic-desktop",
-        "lockscreen",
-        "wallpaper",
-        "wallpaper-changer",
-        "windows",
-        "windows-10",
-        "windows-11"
-      ],
-      "releasesUrl": "https://api.github.com/repos/t1m0thyj/WinDynamicDesktop/releases{/id}",
-      "updatedAt": "2026-02-03T02:04:41Z",
-      "createdAt": "2018-06-08T23:32:27Z",
-      "trendingScore": 85.59
+      "trendingScore": 87.54
     },
     {
       "id": 305021589,
@@ -1244,7 +1051,7 @@
       "description": "Prowlarr is an indexer manager/proxy built on the popular *arr .net/reactjs base stack to integrate with your various PVR apps, supporting management of both Torrent Trackers and Usenet Indexers.",
       "defaultBranch": "develop",
       "htmlUrl": "https://github.com/Prowlarr/Prowlarr",
-      "stargazersCount": 5974,
+      "stargazersCount": 6018,
       "forksCount": 286,
       "language": "C#",
       "topics": [
@@ -1256,9 +1063,9 @@
         "torrent"
       ],
       "releasesUrl": "https://api.github.com/repos/Prowlarr/Prowlarr/releases{/id}",
-      "updatedAt": "2026-02-03T04:42:15Z",
+      "updatedAt": "2026-02-10T02:41:33Z",
       "createdAt": "2020-10-18T04:26:27Z",
-      "trendingScore": 81.78
+      "trendingScore": 82.01
     },
     {
       "id": 500093,
@@ -1271,7 +1078,7 @@
       "description": "A wrapper executable that can run any executable as a Windows service, in a permissive license.",
       "defaultBranch": "v3",
       "htmlUrl": "https://github.com/winsw/winsw",
-      "stargazersCount": 13670,
+      "stargazersCount": 13690,
       "forksCount": 1669,
       "language": "C#",
       "topics": [
@@ -1283,9 +1090,9 @@
         "windows-service-wrapper"
       ],
       "releasesUrl": "https://api.github.com/repos/winsw/winsw/releases{/id}",
-      "updatedAt": "2026-02-03T14:43:41Z",
+      "updatedAt": "2026-02-09T22:19:13Z",
       "createdAt": "2010-02-03T02:49:39Z",
-      "trendingScore": 79.78
+      "trendingScore": 79.8
     },
     {
       "id": 7377936,
@@ -1298,7 +1105,7 @@
       "description": "🏞 A lightweight, versatile image viewer",
       "defaultBranch": "develop",
       "htmlUrl": "https://github.com/d2phap/ImageGlass",
-      "stargazersCount": 12150,
+      "stargazersCount": 12199,
       "forksCount": 668,
       "language": "C#",
       "topics": [
@@ -1322,9 +1129,9 @@
         "winforms"
       ],
       "releasesUrl": "https://api.github.com/repos/d2phap/ImageGlass/releases{/id}",
-      "updatedAt": "2026-02-03T12:27:37Z",
+      "updatedAt": "2026-02-10T02:50:20Z",
       "createdAt": "2012-12-30T16:13:14Z",
-      "trendingScore": 78.82
+      "trendingScore": 78.95
     },
     {
       "id": 16473585,
@@ -1337,14 +1144,14 @@
       "description": "the subtitle editor :)",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/SubtitleEdit/subtitleedit",
-      "stargazersCount": 12069,
-      "forksCount": 1160,
+      "stargazersCount": 12117,
+      "forksCount": 1159,
       "language": "C#",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/SubtitleEdit/subtitleedit/releases{/id}",
-      "updatedAt": "2026-02-03T15:06:36Z",
+      "updatedAt": "2026-02-10T03:55:17Z",
       "createdAt": "2014-02-03T08:17:41Z",
-      "trendingScore": 75.07
+      "trendingScore": 75.22
     },
     {
       "id": 152307081,
@@ -1357,8 +1164,8 @@
       "description": "PixiEditor is a Universal Editor for all your 2D needs",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/PixiEditor/PixiEditor",
-      "stargazersCount": 7108,
-      "forksCount": 279,
+      "stargazersCount": 7123,
+      "forksCount": 278,
       "language": "C#",
       "topics": [
         "2d",
@@ -1382,9 +1189,9 @@
         "vector-graphics"
       ],
       "releasesUrl": "https://api.github.com/repos/PixiEditor/PixiEditor/releases{/id}",
-      "updatedAt": "2026-02-03T15:57:53Z",
+      "updatedAt": "2026-02-09T21:57:57Z",
       "createdAt": "2018-10-09T19:11:51Z",
-      "trendingScore": 73.18
+      "trendingScore": 73.16
     },
     {
       "id": 460848,
@@ -1397,8 +1204,8 @@
       "description": "mRemoteNG is the next generation of mRemote, open source, tabbed, multi-protocol, remote connections manager.",
       "defaultBranch": "v1.78.2-dev",
       "htmlUrl": "https://github.com/mRemoteNG/mRemoteNG",
-      "stargazersCount": 10538,
-      "forksCount": 1544,
+      "stargazersCount": 10558,
+      "forksCount": 1547,
       "language": "C#",
       "topics": [
         "c-sharp",
@@ -1411,41 +1218,9 @@
         "windows"
       ],
       "releasesUrl": "https://api.github.com/repos/mRemoteNG/mRemoteNG/releases{/id}",
-      "updatedAt": "2026-02-03T13:11:17Z",
+      "updatedAt": "2026-02-10T01:39:18Z",
       "createdAt": "2010-01-06T15:53:17Z",
-      "trendingScore": 70.89
-    },
-    {
-      "id": 271116132,
-      "name": "GalaxyBudsClient",
-      "fullName": "timschneeb/GalaxyBudsClient",
-      "owner": {
-        "login": "timschneeb",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/38386967?v=4"
-      },
-      "description": "Unofficial Galaxy Buds Manager for Windows, macOS, Linux, and Android",
-      "defaultBranch": "master",
-      "htmlUrl": "https://github.com/timschneeb/GalaxyBudsClient",
-      "stargazersCount": 4705,
-      "forksCount": 254,
-      "language": "C#",
-      "topics": [
-        "bluetooth",
-        "buds-live",
-        "buds-plus",
-        "buds-pro",
-        "earbuds",
-        "firmware",
-        "galaxy-buds",
-        "manager",
-        "reverse-engineering",
-        "rfcomm",
-        "samsung"
-      ],
-      "releasesUrl": "https://api.github.com/repos/timschneeb/GalaxyBudsClient/releases{/id}",
-      "updatedAt": "2026-02-03T15:59:58Z",
-      "createdAt": "2020-06-09T21:44:20Z",
-      "trendingScore": 70.59
+      "trendingScore": 70.92
     },
     {
       "id": 2465723,
@@ -1458,40 +1233,14 @@
       "description": "Smart PVR for newsgroup and bittorrent users.",
       "defaultBranch": "v5-develop",
       "htmlUrl": "https://github.com/Sonarr/Sonarr",
-      "stargazersCount": 13198,
-      "forksCount": 1740,
+      "stargazersCount": 13246,
+      "forksCount": 1742,
       "language": "C#",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/Sonarr/Sonarr/releases{/id}",
-      "updatedAt": "2026-02-03T01:34:09Z",
+      "updatedAt": "2026-02-10T03:44:46Z",
       "createdAt": "2011-09-27T05:57:16Z",
-      "trendingScore": 70.35
-    },
-    {
-      "id": 33010673,
-      "name": "perfview",
-      "fullName": "microsoft/perfview",
-      "owner": {
-        "login": "microsoft",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/6154722?v=4"
-      },
-      "description": "PerfView is a CPU and memory performance-analysis tool",
-      "defaultBranch": "main",
-      "htmlUrl": "https://github.com/microsoft/perfview",
-      "stargazersCount": 4623,
-      "forksCount": 755,
-      "language": "C#",
-      "topics": [
-        "dotnet",
-        "dotnet-core",
-        "performance",
-        "performance-analysis",
-        "windows"
-      ],
-      "releasesUrl": "https://api.github.com/repos/microsoft/perfview/releases{/id}",
-      "updatedAt": "2026-02-02T10:45:33Z",
-      "createdAt": "2015-03-27T21:48:45Z",
-      "trendingScore": 66.32
+      "trendingScore": 70.47
     },
     {
       "id": 41822320,
@@ -1504,8 +1253,8 @@
       "description": "The Swagger/OpenAPI toolchain for .NET, ASP.NET Core and TypeScript. ",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/RicoSuter/NSwag",
-      "stargazersCount": 7263,
-      "forksCount": 1345,
+      "stargazersCount": 7270,
+      "forksCount": 1346,
       "language": "C#",
       "topics": [
         "angular",
@@ -1522,142 +1271,9 @@
         "webapi"
       ],
       "releasesUrl": "https://api.github.com/repos/RicoSuter/NSwag/releases{/id}",
-      "updatedAt": "2026-02-03T07:26:36Z",
+      "updatedAt": "2026-02-09T12:48:53Z",
       "createdAt": "2015-09-02T19:11:57Z",
-      "trendingScore": 66.17
-    },
-    {
-      "id": 60672374,
-      "name": "NanUI",
-      "fullName": "XuanchenLin/NanUI",
-      "owner": {
-        "login": "XuanchenLin",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/16586330?v=4"
-      },
-      "description": "NanUI is an open source .NET project for developers who want to create Windows desktop applications with HTML, CSS and JavaScript.",
-      "defaultBranch": "master",
-      "htmlUrl": "https://github.com/XuanchenLin/NanUI",
-      "stargazersCount": 3792,
-      "forksCount": 663,
-      "language": "C#",
-      "topics": [
-        "cef",
-        "cefglue",
-        "chromium",
-        "desktop",
-        "dotnet",
-        "dotnet-core",
-        "formium",
-        "html-window",
-        "nanui",
-        "winforms"
-      ],
-      "releasesUrl": "https://api.github.com/repos/XuanchenLin/NanUI/releases{/id}",
-      "updatedAt": "2026-02-03T07:26:24Z",
-      "createdAt": "2016-06-08T05:57:40Z",
-      "trendingScore": 65.5
-    },
-    {
-      "id": 39348622,
-      "name": "naps2",
-      "fullName": "cyanfish/naps2",
-      "owner": {
-        "login": "cyanfish",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/3195342?v=4"
-      },
-      "description": "Scan documents to PDF and more, as simply as possible.",
-      "defaultBranch": "master",
-      "htmlUrl": "https://github.com/cyanfish/naps2",
-      "stargazersCount": 3923,
-      "forksCount": 398,
-      "language": "C#",
-      "topics": [
-        "csharp",
-        "dotnet",
-        "escl",
-        "linux",
-        "macos",
-        "ocr",
-        "pdf",
-        "sane",
-        "scanner",
-        "twain",
-        "wia",
-        "windows"
-      ],
-      "releasesUrl": "https://api.github.com/repos/cyanfish/naps2/releases{/id}",
-      "updatedAt": "2026-02-03T15:34:45Z",
-      "createdAt": "2015-07-19T20:54:38Z",
-      "trendingScore": 63.37
-    },
-    {
-      "id": 256651878,
-      "name": "MelonLoader",
-      "fullName": "LavaGang/MelonLoader",
-      "owner": {
-        "login": "LavaGang",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/70487270?v=4"
-      },
-      "description": "The World's First Universal Mod Loader for Unity Games compatible with both Il2Cpp and Mono",
-      "defaultBranch": "master",
-      "htmlUrl": "https://github.com/LavaGang/MelonLoader",
-      "stargazersCount": 3670,
-      "forksCount": 598,
-      "language": "C#",
-      "topics": [
-        "dll",
-        "dotnet",
-        "framework",
-        "il2cpp",
-        "melonloader",
-        "mod",
-        "mod-loader",
-        "modding",
-        "mono",
-        "plugin",
-        "unity"
-      ],
-      "releasesUrl": "https://api.github.com/repos/LavaGang/MelonLoader/releases{/id}",
-      "updatedAt": "2026-02-03T11:58:23Z",
-      "createdAt": "2020-04-18T02:16:35Z",
-      "trendingScore": 62.67
-    },
-    {
-      "id": 194985543,
-      "name": "WinMemoryCleaner",
-      "fullName": "IgorMundstein/WinMemoryCleaner",
-      "owner": {
-        "login": "IgorMundstein",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/3512138?v=4"
-      },
-      "description": "This free RAM cleaner uses native Windows features to optimize memory areas. It's a compact, portable, and smart application.",
-      "defaultBranch": "main",
-      "htmlUrl": "https://github.com/IgorMundstein/WinMemoryCleaner",
-      "stargazersCount": 4288,
-      "forksCount": 266,
-      "language": "C#",
-      "topics": [
-        "cleaner",
-        "foss",
-        "gaming-performance",
-        "memory",
-        "memory-cache",
-        "memory-cleaner",
-        "memory-leak",
-        "memory-management",
-        "memory-manager",
-        "memory-monitoring",
-        "memory-optimization",
-        "memory-optimizer",
-        "ram",
-        "ram-cleaner",
-        "rammap",
-        "windows-optimization-tool"
-      ],
-      "releasesUrl": "https://api.github.com/repos/IgorMundstein/WinMemoryCleaner/releases{/id}",
-      "updatedAt": "2026-02-03T13:59:04Z",
-      "createdAt": "2019-07-03T05:29:57Z",
-      "trendingScore": 60.63
+      "trendingScore": 66.13
     },
     {
       "id": 80058269,
@@ -1670,14 +1286,14 @@
       "description": "Virtual File System for Git: Enable Git at Enterprise Scale",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/microsoft/VFSForGit",
-      "stargazersCount": 6079,
+      "stargazersCount": 6082,
       "forksCount": 461,
       "language": "C#",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/microsoft/VFSForGit/releases{/id}",
-      "updatedAt": "2026-02-03T01:55:37Z",
+      "updatedAt": "2026-02-10T00:59:45Z",
       "createdAt": "2017-01-25T21:10:29Z",
-      "trendingScore": 56.9
+      "trendingScore": 56.84
     },
     {
       "id": 85953,
@@ -1690,8 +1306,8 @@
       "description": "Git Extensions is a standalone UI tool for managing git repositories. It also integrates with Windows Explorer and Microsoft Visual Studio (2015/2017/2019).",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/gitextensions/gitextensions",
-      "stargazersCount": 8347,
-      "forksCount": 2179,
+      "stargazersCount": 8353,
+      "forksCount": 2181,
       "language": "C#",
       "topics": [
         "git",
@@ -1701,86 +1317,9 @@
         "hacktoberfest"
       ],
       "releasesUrl": "https://api.github.com/repos/gitextensions/gitextensions/releases{/id}",
-      "updatedAt": "2026-02-03T08:40:19Z",
+      "updatedAt": "2026-02-09T10:24:54Z",
       "createdAt": "2008-12-06T09:18:59Z",
       "trendingScore": 51.63
-    },
-    {
-      "id": 90468352,
-      "name": "Lidarr",
-      "fullName": "Lidarr/Lidarr",
-      "owner": {
-        "login": "Lidarr",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/28475832?v=4"
-      },
-      "description": "Looks and smells like Sonarr but made for music.",
-      "defaultBranch": "develop",
-      "htmlUrl": "https://github.com/Lidarr/Lidarr",
-      "stargazersCount": 4978,
-      "forksCount": 338,
-      "language": "C#",
-      "topics": [
-        "hacktoberfest",
-        "music",
-        "nzb",
-        "torrent"
-      ],
-      "releasesUrl": "https://api.github.com/repos/Lidarr/Lidarr/releases{/id}",
-      "updatedAt": "2026-02-03T01:34:18Z",
-      "createdAt": "2017-05-06T14:25:41Z",
-      "trendingScore": 51.16
-    },
-    {
-      "id": 94652781,
-      "name": "tixl",
-      "fullName": "tixl3d/tixl",
-      "owner": {
-        "login": "tixl3d",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/68075353?v=4"
-      },
-      "description": "TiXL is an open source software to create realtime motion graphics.",
-      "defaultBranch": "main",
-      "htmlUrl": "https://github.com/tixl3d/tixl",
-      "stargazersCount": 4756,
-      "forksCount": 255,
-      "language": "C#",
-      "topics": [
-        "animation",
-        "design",
-        "directx",
-        "directx-11",
-        "imgui",
-        "motion-design",
-        "realtime",
-        "realtime-rendering"
-      ],
-      "releasesUrl": "https://api.github.com/repos/tixl3d/tixl/releases{/id}",
-      "updatedAt": "2026-02-03T15:57:49Z",
-      "createdAt": "2017-06-17T22:37:11Z",
-      "trendingScore": 50.18
-    },
-    {
-      "id": 36756917,
-      "name": "greenshot",
-      "fullName": "greenshot/greenshot",
-      "owner": {
-        "login": "greenshot",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/5614224?v=4"
-      },
-      "description": "Greenshot for Windows - for more information look here:",
-      "defaultBranch": "main",
-      "htmlUrl": "https://github.com/greenshot/greenshot",
-      "stargazersCount": 4788,
-      "forksCount": 668,
-      "language": "C#",
-      "topics": [
-        "hacktoberfest",
-        "hacktoberfest2021"
-      ],
-      "releasesUrl": "https://api.github.com/repos/greenshot/greenshot/releases{/id}",
-      "updatedAt": "2026-02-03T10:43:12Z",
-      "createdAt": "2015-06-02T19:34:01Z",
-      "trendingScore": 49.57
     },
     {
       "id": 30456575,
@@ -1793,77 +1332,14 @@
       "description": "DPI Aware mouse move across screens",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/mgth/LittleBigMouse",
-      "stargazersCount": 5131,
-      "forksCount": 229,
+      "stargazersCount": 5179,
+      "forksCount": 233,
       "language": "C#",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/mgth/LittleBigMouse/releases{/id}",
-      "updatedAt": "2026-02-03T10:05:22Z",
+      "updatedAt": "2026-02-10T03:21:12Z",
       "createdAt": "2015-02-07T13:30:07Z",
-      "trendingScore": 45.57
-    },
-    {
-      "id": 23891194,
-      "name": "azure-powershell",
-      "fullName": "Azure/azure-powershell",
-      "owner": {
-        "login": "Azure",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/6844498?v=4"
-      },
-      "description": "Microsoft Azure PowerShell",
-      "defaultBranch": "main",
-      "htmlUrl": "https://github.com/Azure/azure-powershell",
-      "stargazersCount": 4636,
-      "forksCount": 4108,
-      "language": "C#",
-      "topics": [
-        "arm",
-        "azure",
-        "microsoft",
-        "microsoft-azure-powershell",
-        "powershell"
-      ],
-      "releasesUrl": "https://api.github.com/repos/Azure/azure-powershell/releases{/id}",
-      "updatedAt": "2026-02-03T15:22:14Z",
-      "createdAt": "2014-09-10T20:35:18Z",
-      "trendingScore": 42.27
-    },
-    {
-      "id": 21836148,
-      "name": "OptiKey",
-      "fullName": "OptiKey/OptiKey",
-      "owner": {
-        "login": "OptiKey",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/15629872?v=4"
-      },
-      "description": "OptiKey - Full computer control and speech with your eyes",
-      "defaultBranch": "main",
-      "htmlUrl": "https://github.com/OptiKey/OptiKey",
-      "stargazersCount": 4372,
-      "forksCount": 508,
-      "language": "C#",
-      "topics": [
-        "aac",
-        "accessibility",
-        "accessible",
-        "als",
-        "assistive-technology",
-        "c-sharp",
-        "communication",
-        "disabilities",
-        "disabilty",
-        "eye-tracker",
-        "eye-tracking",
-        "eyes",
-        "eyetracking",
-        "mnd",
-        "optikey",
-        "screen-keyboard"
-      ],
-      "releasesUrl": "https://api.github.com/repos/OptiKey/OptiKey/releases{/id}",
-      "updatedAt": "2026-02-03T14:31:27Z",
-      "createdAt": "2014-07-14T21:23:52Z",
-      "trendingScore": 40.72
+      "trendingScore": 45.77
     }
   ]
 }
