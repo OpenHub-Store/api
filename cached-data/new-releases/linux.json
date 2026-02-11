@@ -1,9 +1,35 @@
 {
   "category": "new-releases",
   "platform": "linux",
-  "lastUpdated": "2026-02-10T04:40:28.342571Z",
-  "totalCount": 13,
+  "lastUpdated": "2026-02-11T04:34:48.664726Z",
+  "totalCount": 14,
   "repositories": [
+    {
+      "id": 384520418,
+      "name": "MaaAssistantArknights",
+      "fullName": "MaaAssistantArknights/MaaAssistantArknights",
+      "owner": {
+        "login": "MaaAssistantArknights",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/97677443?v=4"
+      },
+      "description": "《明日方舟》小助手，全日常一键长草！| A one-click tool for the daily tasks of Arknights, supporting all clients.",
+      "defaultBranch": "dev",
+      "htmlUrl": "https://github.com/MaaAssistantArknights/MaaAssistantArknights",
+      "stargazersCount": 19473,
+      "forksCount": 2475,
+      "language": "C++",
+      "topics": [
+        "arknights",
+        "computer-vision",
+        "maa"
+      ],
+      "releasesUrl": "https://api.github.com/repos/MaaAssistantArknights/MaaAssistantArknights/releases{/id}",
+      "updatedAt": "2026-02-11T04:28:52Z",
+      "createdAt": "2021-07-09T18:26:38Z",
+      "latestReleaseDate": "2026-02-10T16:57:59Z",
+      "releaseRecency": 0,
+      "releaseRecencyText": "Released today"
+    },
     {
       "id": 1027461827,
       "name": "vicinae",
@@ -15,8 +41,8 @@
       "description": "A focused launcher for your desktop — native, fast, extensible",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/vicinaehq/vicinae",
-      "stargazersCount": 6218,
-      "forksCount": 143,
+      "stargazersCount": 6235,
+      "forksCount": 145,
       "language": "C++",
       "topics": [
         "app-launcher",
@@ -29,11 +55,11 @@
         "react"
       ],
       "releasesUrl": "https://api.github.com/repos/vicinaehq/vicinae/releases{/id}",
-      "updatedAt": "2026-02-10T03:58:20Z",
+      "updatedAt": "2026-02-11T02:41:08Z",
       "createdAt": "2025-07-28T03:49:03Z",
       "latestReleaseDate": "2026-02-09T22:31:36Z",
-      "releaseRecency": 0,
-      "releaseRecencyText": "Released today"
+      "releaseRecency": 1,
+      "releaseRecencyText": "Released yesterday"
     },
     {
       "id": 207245092,
@@ -46,7 +72,7 @@
       "description": "Fast PlayStation 1 emulator for x86-64/AArch32/AArch64/RV64",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/stenzek/duckstation",
-      "stargazersCount": 9684,
+      "stargazersCount": 9688,
       "forksCount": 880,
       "language": "C++",
       "topics": [
@@ -63,11 +89,11 @@
         "vulkan"
       ],
       "releasesUrl": "https://api.github.com/repos/stenzek/duckstation/releases{/id}",
-      "updatedAt": "2026-02-10T00:47:00Z",
+      "updatedAt": "2026-02-11T02:40:16Z",
       "createdAt": "2019-09-09T07:00:39Z",
       "latestReleaseDate": "2026-02-05T03:12:17Z",
-      "releaseRecency": 5,
-      "releaseRecencyText": "Released 5 days ago"
+      "releaseRecency": 6,
+      "releaseRecencyText": "Released 6 days ago"
     },
     {
       "id": 11986447,
@@ -80,7 +106,7 @@
       "description": "Xournal++ is a handwriting notetaking software with PDF annotation support. Written in C++ with GTK3, supporting Linux (e.g. Ubuntu, Debian, Arch, SUSE), macOS and Windows 10. Supports pen input from devices such as Wacom Tablets.",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/xournalpp/xournalpp",
-      "stargazersCount": 14278,
+      "stargazersCount": 14282,
       "forksCount": 1004,
       "language": "C++",
       "topics": [
@@ -94,11 +120,11 @@
         "pen"
       ],
       "releasesUrl": "https://api.github.com/repos/xournalpp/xournalpp/releases{/id}",
-      "updatedAt": "2026-02-10T02:41:58Z",
+      "updatedAt": "2026-02-10T09:20:37Z",
       "createdAt": "2013-08-08T20:58:27Z",
       "latestReleaseDate": "2026-02-03T20:49:28Z",
-      "releaseRecency": 6,
-      "releaseRecencyText": "Released 6 days ago"
+      "releaseRecency": 7,
+      "releaseRecencyText": "Released 7 days ago"
     },
     {
       "id": 985839104,
@@ -111,8 +137,8 @@
       "description": "🌐 The open-source Agentic browser; alternative to ChatGPT Atlas, Perplexity Comet, Dia.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/browseros-ai/BrowserOS",
-      "stargazersCount": 9294,
-      "forksCount": 893,
+      "stargazersCount": 9314,
+      "forksCount": 894,
       "language": "C++",
       "topics": [
         "agent",
@@ -128,11 +154,11 @@
         "windows"
       ],
       "releasesUrl": "https://api.github.com/repos/browseros-ai/BrowserOS/releases{/id}",
-      "updatedAt": "2026-02-10T03:41:41Z",
+      "updatedAt": "2026-02-11T03:44:38Z",
       "createdAt": "2025-05-18T16:23:54Z",
       "latestReleaseDate": "2026-02-03T20:19:14Z",
-      "releaseRecency": 6,
-      "releaseRecencyText": "Released 6 days ago"
+      "releaseRecency": 7,
+      "releaseRecencyText": "Released 7 days ago"
     },
     {
       "id": 60246359,
@@ -145,8 +171,8 @@
       "description": "ClickHouse® is a real-time analytics database management system",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/ClickHouse/ClickHouse",
-      "stargazersCount": 45759,
-      "forksCount": 8055,
+      "stargazersCount": 45797,
+      "forksCount": 8061,
       "language": "C++",
       "topics": [
         "ai",
@@ -168,11 +194,11 @@
         "sql"
       ],
       "releasesUrl": "https://api.github.com/repos/ClickHouse/ClickHouse/releases{/id}",
-      "updatedAt": "2026-02-10T04:20:47Z",
+      "updatedAt": "2026-02-11T04:08:45Z",
       "createdAt": "2016-06-02T08:28:18Z",
       "latestReleaseDate": "2026-02-02T15:21:51Z",
-      "releaseRecency": 7,
-      "releaseRecencyText": "Released 7 days ago"
+      "releaseRecency": 8,
+      "releaseRecencyText": "Released 8 days ago"
     },
     {
       "id": 18348651,
@@ -185,8 +211,8 @@
       "description": "An open source re-implementation of RollerCoaster Tycoon 2 🎢",
       "defaultBranch": "develop",
       "htmlUrl": "https://github.com/OpenRCT2/OpenRCT2",
-      "stargazersCount": 15188,
-      "forksCount": 1736,
+      "stargazersCount": 15190,
+      "forksCount": 1737,
       "language": "C++",
       "topics": [
         "c-plus-plus",
@@ -209,11 +235,11 @@
         "windows"
       ],
       "releasesUrl": "https://api.github.com/repos/OpenRCT2/OpenRCT2/releases{/id}",
-      "updatedAt": "2026-02-09T18:31:09Z",
+      "updatedAt": "2026-02-11T04:42:02Z",
       "createdAt": "2014-04-01T23:32:25Z",
       "latestReleaseDate": "2026-02-01T15:39:20Z",
-      "releaseRecency": 8,
-      "releaseRecencyText": "Released 8 days ago"
+      "releaseRecency": 9,
+      "releaseRecencyText": "Released 9 days ago"
     },
     {
       "id": 305089628,
@@ -226,7 +252,7 @@
       "description": "Cross-platform telemetry visualization application for real-time data monitoring and analysis from multiple sources.",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/Serial-Studio/Serial-Studio",
-      "stargazersCount": 6368,
+      "stargazersCount": 6370,
       "forksCount": 963,
       "language": "C++",
       "topics": [
@@ -246,11 +272,11 @@
         "serial-studio"
       ],
       "releasesUrl": "https://api.github.com/repos/Serial-Studio/Serial-Studio/releases{/id}",
-      "updatedAt": "2026-02-10T00:42:08Z",
+      "updatedAt": "2026-02-11T02:28:00Z",
       "createdAt": "2020-10-18T11:49:02Z",
       "latestReleaseDate": "2026-02-01T12:39:48Z",
-      "releaseRecency": 8,
-      "releaseRecencyText": "Released 8 days ago"
+      "releaseRecency": 9,
+      "releaseRecencyText": "Released 9 days ago"
     },
     {
       "id": 4118776,
@@ -263,7 +289,7 @@
       "description": "cross-platform (Qt), open-source (GPLv3) video editor",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/mltframework/shotcut",
-      "stargazersCount": 13417,
+      "stargazersCount": 13421,
       "forksCount": 1315,
       "language": "C++",
       "topics": [
@@ -274,11 +300,11 @@
         "video-editor"
       ],
       "releasesUrl": "https://api.github.com/repos/mltframework/shotcut/releases{/id}",
-      "updatedAt": "2026-02-10T03:18:37Z",
+      "updatedAt": "2026-02-10T20:07:57Z",
       "createdAt": "2012-04-23T22:37:04Z",
       "latestReleaseDate": "2026-01-31T20:57:41Z",
-      "releaseRecency": 9,
-      "releaseRecencyText": "Released 9 days ago"
+      "releaseRecency": 10,
+      "releaseRecencyText": "Released 10 days ago"
     },
     {
       "id": 224468265,
@@ -291,7 +317,7 @@
       "description": "A cross-platform, reimplementation of Notepad++",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/dail8859/NotepadNext",
-      "stargazersCount": 13400,
+      "stargazersCount": 13411,
       "forksCount": 810,
       "language": "C++",
       "topics": [
@@ -305,11 +331,11 @@
         "qt6"
       ],
       "releasesUrl": "https://api.github.com/repos/dail8859/NotepadNext/releases{/id}",
-      "updatedAt": "2026-02-10T02:52:58Z",
+      "updatedAt": "2026-02-11T03:51:05Z",
       "createdAt": "2019-11-27T16:06:10Z",
       "latestReleaseDate": "2026-01-31T15:26:53Z",
-      "releaseRecency": 9,
-      "releaseRecencyText": "Released 9 days ago"
+      "releaseRecency": 10,
+      "releaseRecencyText": "Released 10 days ago"
     },
     {
       "id": 767183985,
@@ -322,16 +348,16 @@
       "description": "An open-source 3DS emulator project based on Citra.",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/azahar-emu/azahar",
-      "stargazersCount": 6468,
+      "stargazersCount": 6477,
       "forksCount": 404,
       "language": "C++",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/azahar-emu/azahar/releases{/id}",
-      "updatedAt": "2026-02-10T00:41:41Z",
+      "updatedAt": "2026-02-11T03:06:15Z",
       "createdAt": "2024-03-04T21:08:59Z",
       "latestReleaseDate": "2026-01-29T13:35:00Z",
-      "releaseRecency": 11,
-      "releaseRecencyText": "Released 11 days ago"
+      "releaseRecency": 12,
+      "releaseRecencyText": "Released 12 days ago"
     },
     {
       "id": 15926180,
@@ -344,16 +370,16 @@
       "description": "Linux system exploration and troubleshooting tool with first class support for containers",
       "defaultBranch": "dev",
       "htmlUrl": "https://github.com/draios/sysdig",
-      "stargazersCount": 8195,
-      "forksCount": 751,
+      "stargazersCount": 8196,
+      "forksCount": 752,
       "language": "C++",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/draios/sysdig/releases{/id}",
-      "updatedAt": "2026-02-09T12:18:49Z",
+      "updatedAt": "2026-02-10T08:19:50Z",
       "createdAt": "2014-01-15T05:45:17Z",
       "latestReleaseDate": "2026-01-29T12:17:41Z",
-      "releaseRecency": 11,
-      "releaseRecencyText": "Released 11 days ago"
+      "releaseRecency": 12,
+      "releaseRecencyText": "Released 12 days ago"
     },
     {
       "id": 15379620,
@@ -366,8 +392,8 @@
       "description": "PCSX2 - The Playstation 2 Emulator",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/PCSX2/pcsx2",
-      "stargazersCount": 14380,
-      "forksCount": 1877,
+      "stargazersCount": 14387,
+      "forksCount": 1878,
       "language": "C++",
       "topics": [
         "cpp",
@@ -377,11 +403,11 @@
         "ps2"
       ],
       "releasesUrl": "https://api.github.com/repos/PCSX2/pcsx2/releases{/id}",
-      "updatedAt": "2026-02-10T00:08:07Z",
+      "updatedAt": "2026-02-11T04:37:24Z",
       "createdAt": "2013-12-22T17:56:48Z",
       "latestReleaseDate": "2026-01-28T17:40:45Z",
-      "releaseRecency": 12,
-      "releaseRecencyText": "Released 12 days ago"
+      "releaseRecency": 13,
+      "releaseRecencyText": "Released 13 days ago"
     },
     {
       "id": 372536760,
@@ -394,8 +420,8 @@
       "description": "The Fastest Distributed Database for Transactional, Analytical, and  AI Workloads.",
       "defaultBranch": "develop",
       "htmlUrl": "https://github.com/oceanbase/oceanbase",
-      "stargazersCount": 9970,
-      "forksCount": 1868,
+      "stargazersCount": 9975,
+      "forksCount": 1869,
       "language": "C++",
       "topics": [
         "analytics",
@@ -420,11 +446,11 @@
         "vectors"
       ],
       "releasesUrl": "https://api.github.com/repos/oceanbase/oceanbase/releases{/id}",
-      "updatedAt": "2026-02-09T17:02:40Z",
+      "updatedAt": "2026-02-10T13:05:41Z",
       "createdAt": "2021-05-31T14:36:17Z",
       "latestReleaseDate": "2026-01-28T07:59:02Z",
-      "releaseRecency": 12,
-      "releaseRecencyText": "Released 12 days ago"
+      "releaseRecency": 13,
+      "releaseRecencyText": "Released 13 days ago"
     }
   ]
 }

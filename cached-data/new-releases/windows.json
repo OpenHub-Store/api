@@ -1,43 +1,78 @@
 {
   "category": "new-releases",
   "platform": "windows",
-  "lastUpdated": "2026-02-10T04:40:28.342571Z",
-  "totalCount": 20,
+  "lastUpdated": "2026-02-11T04:34:48.664726Z",
+  "totalCount": 19,
   "repositories": [
     {
-      "id": 439665747,
-      "name": "Parabolic",
-      "fullName": "NickvisionApps/Parabolic",
+      "id": 971243074,
+      "name": "Everywhere",
+      "fullName": "DearVa/Everywhere",
       "owner": {
-        "login": "NickvisionApps",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/130815181?v=4"
+        "login": "DearVa",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/55902546?v=4"
       },
-      "description": "Download web video and audio",
+      "description": "Context-aware AI assistant for your desktop. Ready to respond intelligently, seamlessly integrating multiple LLMs and MCP tools.",
       "defaultBranch": "main",
-      "htmlUrl": "https://github.com/NickvisionApps/Parabolic",
-      "stargazersCount": 5030,
-      "forksCount": 230,
+      "htmlUrl": "https://github.com/DearVa/Everywhere",
+      "stargazersCount": 5466,
+      "forksCount": 319,
       "language": "C#",
       "topics": [
-        "csharp",
-        "downloader",
-        "flathub",
-        "gnome",
-        "gtk4",
-        "libadwaita",
-        "music",
-        "videos",
-        "windows",
-        "windowsappsdk",
-        "winui3",
-        "youtube",
-        "youtube-dl",
-        "yt-dlp"
+        "agent",
+        "ai",
+        "avalonia",
+        "chat",
+        "claude",
+        "cowork",
+        "deepseek",
+        "gemini",
+        "llm",
+        "mcp",
+        "ollama",
+        "openai",
+        "rag",
+        "ui-automation"
       ],
-      "releasesUrl": "https://api.github.com/repos/NickvisionApps/Parabolic/releases{/id}",
-      "updatedAt": "2026-02-10T04:16:33Z",
-      "createdAt": "2021-12-18T16:43:09Z",
-      "latestReleaseDate": "2026-02-10T04:13:52Z",
+      "releasesUrl": "https://api.github.com/repos/DearVa/Everywhere/releases{/id}",
+      "updatedAt": "2026-02-11T02:58:53Z",
+      "createdAt": "2025-04-23T08:19:33Z",
+      "latestReleaseDate": "2026-02-10T18:41:50Z",
+      "releaseRecency": 0,
+      "releaseRecencyText": "Released today"
+    },
+    {
+      "id": 184456251,
+      "name": "PowerToys",
+      "fullName": "microsoft/PowerToys",
+      "owner": {
+        "login": "microsoft",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/6154722?v=4"
+      },
+      "description": "Microsoft PowerToys is a collection of utilities that supercharge productivity and customization on Windows",
+      "defaultBranch": "main",
+      "htmlUrl": "https://github.com/microsoft/PowerToys",
+      "stargazersCount": 129221,
+      "forksCount": 7687,
+      "language": "C#",
+      "topics": [
+        "advanced-paste",
+        "color-picker",
+        "command-palette",
+        "desktop",
+        "fancyzones",
+        "keyboard-manager",
+        "microsoft-powertoys",
+        "powerrename",
+        "powertoys",
+        "windows",
+        "windows-10",
+        "windows-11"
+      ],
+      "releasesUrl": "https://api.github.com/repos/microsoft/PowerToys/releases{/id}",
+      "updatedAt": "2026-02-11T04:00:11Z",
+      "createdAt": "2019-05-01T17:44:02Z",
+      "latestReleaseDate": "2026-02-10T07:37:29Z",
       "releaseRecency": 0,
       "releaseRecencyText": "Released today"
     },
@@ -52,8 +87,8 @@
       "description": "API Support for your favorite torrent trackers",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/Jackett/Jackett",
-      "stargazersCount": 14884,
-      "forksCount": 1476,
+      "stargazersCount": 14891,
+      "forksCount": 1475,
       "language": "C#",
       "topics": [
         "api",
@@ -78,11 +113,48 @@
         "trackers"
       ],
       "releasesUrl": "https://api.github.com/repos/Jackett/Jackett/releases{/id}",
-      "updatedAt": "2026-02-10T04:30:18Z",
+      "updatedAt": "2026-02-11T03:39:28Z",
       "createdAt": "2015-10-29T16:23:19Z",
-      "latestReleaseDate": "2026-02-09T06:01:19Z",
+      "latestReleaseDate": "2026-02-10T05:55:59Z",
       "releaseRecency": 0,
       "releaseRecencyText": "Released today"
+    },
+    {
+      "id": 439665747,
+      "name": "Parabolic",
+      "fullName": "NickvisionApps/Parabolic",
+      "owner": {
+        "login": "NickvisionApps",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/130815181?v=4"
+      },
+      "description": "Download web video and audio",
+      "defaultBranch": "main",
+      "htmlUrl": "https://github.com/NickvisionApps/Parabolic",
+      "stargazersCount": 5042,
+      "forksCount": 230,
+      "language": "C#",
+      "topics": [
+        "csharp",
+        "downloader",
+        "flathub",
+        "gnome",
+        "gtk4",
+        "libadwaita",
+        "music",
+        "videos",
+        "windows",
+        "windowsappsdk",
+        "winui3",
+        "youtube",
+        "youtube-dl",
+        "yt-dlp"
+      ],
+      "releasesUrl": "https://api.github.com/repos/NickvisionApps/Parabolic/releases{/id}",
+      "updatedAt": "2026-02-11T04:17:06Z",
+      "createdAt": "2021-12-18T16:43:09Z",
+      "latestReleaseDate": "2026-02-10T04:13:52Z",
+      "releaseRecency": 1,
+      "releaseRecencyText": "Released yesterday"
     },
     {
       "id": 16473585,
@@ -95,16 +167,16 @@
       "description": "the subtitle editor :)",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/SubtitleEdit/subtitleedit",
-      "stargazersCount": 12117,
-      "forksCount": 1159,
+      "stargazersCount": 12122,
+      "forksCount": 1161,
       "language": "C#",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/SubtitleEdit/subtitleedit/releases{/id}",
-      "updatedAt": "2026-02-10T03:55:17Z",
+      "updatedAt": "2026-02-11T01:30:14Z",
       "createdAt": "2014-02-03T08:17:41Z",
       "latestReleaseDate": "2026-02-06T15:19:28Z",
-      "releaseRecency": 3,
-      "releaseRecencyText": "Released 3 days ago"
+      "releaseRecency": 4,
+      "releaseRecencyText": "Released 4 days ago"
     },
     {
       "id": 79786795,
@@ -117,7 +189,7 @@
       "description": "Fast, free and customizable picture viewer",
       "defaultBranch": "dev",
       "htmlUrl": "https://github.com/Ruben2776/PicView",
-      "stargazersCount": 2934,
+      "stargazersCount": 2938,
       "forksCount": 165,
       "language": "C#",
       "topics": [
@@ -139,11 +211,11 @@
         "xaml"
       ],
       "releasesUrl": "https://api.github.com/repos/Ruben2776/PicView/releases{/id}",
-      "updatedAt": "2026-02-09T23:53:44Z",
+      "updatedAt": "2026-02-11T03:32:23Z",
       "createdAt": "2017-01-23T08:52:18Z",
       "latestReleaseDate": "2026-02-05T14:45:57Z",
-      "releaseRecency": 4,
-      "releaseRecencyText": "Released 4 days ago"
+      "releaseRecency": 5,
+      "releaseRecencyText": "Released 5 days ago"
     },
     {
       "id": 86182490,
@@ -156,8 +228,8 @@
       "description": "Video game library manager with support for wide range of 3rd party libraries and game emulation support, providing one unified interface for your games.",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/JosefNemec/Playnite",
-      "stargazersCount": 12436,
-      "forksCount": 601,
+      "stargazersCount": 12452,
+      "forksCount": 605,
       "language": "C#",
       "topics": [
         "csharp",
@@ -166,11 +238,11 @@
         "wpf"
       ],
       "releasesUrl": "https://api.github.com/repos/JosefNemec/Playnite/releases{/id}",
-      "updatedAt": "2026-02-10T02:15:41Z",
+      "updatedAt": "2026-02-11T04:22:28Z",
       "createdAt": "2017-03-25T19:16:06Z",
       "latestReleaseDate": "2026-02-05T12:54:09Z",
-      "releaseRecency": 4,
-      "releaseRecencyText": "Released 4 days ago"
+      "releaseRecency": 5,
+      "releaseRecencyText": "Released 5 days ago"
     },
     {
       "id": 683560668,
@@ -183,8 +255,8 @@
       "description": "📦BetterGI · 更好的原神 - 自动拾取 | 自动剧情 | 全自动钓鱼(AI) | 全自动七圣召唤 | 自动伐木 | 自动刷本 | 自动采集/挖矿/锄地 | 一条龙 | 全连音游 - UI Automation Testing Tools For Genshin Impact",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/babalae/better-genshin-impact",
-      "stargazersCount": 12512,
-      "forksCount": 874,
+      "stargazersCount": 12526,
+      "forksCount": 875,
       "language": "C#",
       "topics": [
         "auto-play-game",
@@ -195,11 +267,11 @@
         "yuanshen"
       ],
       "releasesUrl": "https://api.github.com/repos/babalae/better-genshin-impact/releases{/id}",
-      "updatedAt": "2026-02-10T03:57:10Z",
+      "updatedAt": "2026-02-11T04:15:26Z",
       "createdAt": "2023-08-27T01:02:45Z",
       "latestReleaseDate": "2026-02-03T16:10:00Z",
-      "releaseRecency": 6,
-      "releaseRecencyText": "Released 6 days ago"
+      "releaseRecency": 7,
+      "releaseRecencyText": "Released 7 days ago"
     },
     {
       "id": 579375422,
@@ -212,7 +284,7 @@
       "description": "A ready-to-go translation ocr tool developed with WPF/WPF 开发的一款即用即走的翻译、OCR工具",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/STranslate/STranslate",
-      "stargazersCount": 5606,
+      "stargazersCount": 5609,
       "forksCount": 303,
       "language": "C#",
       "topics": [
@@ -223,48 +295,11 @@
         "wpf"
       ],
       "releasesUrl": "https://api.github.com/repos/STranslate/STranslate/releases{/id}",
-      "updatedAt": "2026-02-09T21:52:16Z",
+      "updatedAt": "2026-02-11T03:06:06Z",
       "createdAt": "2022-12-17T13:40:24Z",
       "latestReleaseDate": "2026-02-03T13:14:22Z",
-      "releaseRecency": 6,
-      "releaseRecencyText": "Released 6 days ago"
-    },
-    {
-      "id": 971243074,
-      "name": "Everywhere",
-      "fullName": "DearVa/Everywhere",
-      "owner": {
-        "login": "DearVa",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/55902546?v=4"
-      },
-      "description": "Context-aware AI assistant for your desktop. Ready to respond intelligently, seamlessly integrating multiple LLMs and MCP tools.",
-      "defaultBranch": "main",
-      "htmlUrl": "https://github.com/DearVa/Everywhere",
-      "stargazersCount": 5455,
-      "forksCount": 318,
-      "language": "C#",
-      "topics": [
-        "agent",
-        "ai",
-        "avalonia",
-        "chat",
-        "claude",
-        "cowork",
-        "deepseek",
-        "gemini",
-        "llm",
-        "mcp",
-        "ollama",
-        "openai",
-        "rag",
-        "ui-automation"
-      ],
-      "releasesUrl": "https://api.github.com/repos/DearVa/Everywhere/releases{/id}",
-      "updatedAt": "2026-02-09T23:22:47Z",
-      "createdAt": "2025-04-23T08:19:33Z",
-      "latestReleaseDate": "2026-02-03T06:22:41Z",
-      "releaseRecency": 6,
-      "releaseRecencyText": "Released 6 days ago"
+      "releaseRecency": 7,
+      "releaseRecencyText": "Released 7 days ago"
     },
     {
       "id": 251227221,
@@ -277,16 +312,16 @@
       "description": "a tool for pentesters to help find delicious candy, by @l0ss and @Sh3r4 ( Twitter: @/mikeloss and @/sh3r4_hax )",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/SnaffCon/Snaffler",
-      "stargazersCount": 2719,
+      "stargazersCount": 2721,
       "forksCount": 260,
       "language": "C#",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/SnaffCon/Snaffler/releases{/id}",
-      "updatedAt": "2026-02-06T16:19:05Z",
+      "updatedAt": "2026-02-10T15:25:45Z",
       "createdAt": "2020-03-30T07:03:47Z",
       "latestReleaseDate": "2026-02-02T01:07:04Z",
-      "releaseRecency": 8,
-      "releaseRecencyText": "Released 8 days ago"
+      "releaseRecency": 9,
+      "releaseRecencyText": "Released 9 days ago"
     },
     {
       "id": 377163326,
@@ -299,8 +334,8 @@
       "description": "UniGetUI: The Graphical Interface for your package managers. Could be terribly described as a package manager manager to manage your package managers",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/marticliment/UniGetUI",
-      "stargazersCount": 20858,
-      "forksCount": 705,
+      "stargazersCount": 20931,
+      "forksCount": 706,
       "language": "C#",
       "topics": [
         "chocolatey",
@@ -317,11 +352,11 @@
         "winget"
       ],
       "releasesUrl": "https://api.github.com/repos/marticliment/UniGetUI/releases{/id}",
-      "updatedAt": "2026-02-10T04:33:47Z",
+      "updatedAt": "2026-02-11T03:48:43Z",
       "createdAt": "2021-06-15T12:57:58Z",
       "latestReleaseDate": "2026-02-01T11:30:41Z",
-      "releaseRecency": 8,
-      "releaseRecencyText": "Released 8 days ago"
+      "releaseRecency": 9,
+      "releaseRecencyText": "Released 9 days ago"
     },
     {
       "id": 165548191,
@@ -334,8 +369,8 @@
       "description": "PEASS - Privilege Escalation Awesome Scripts SUITE (with colors)",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/peass-ng/PEASS-ng",
-      "stargazersCount": 19274,
-      "forksCount": 3343,
+      "stargazersCount": 19279,
+      "forksCount": 3344,
       "language": "C#",
       "topics": [
         "bash",
@@ -359,11 +394,11 @@
         "winpeas"
       ],
       "releasesUrl": "https://api.github.com/repos/peass-ng/PEASS-ng/releases{/id}",
-      "updatedAt": "2026-02-09T21:40:27Z",
+      "updatedAt": "2026-02-10T20:06:09Z",
       "createdAt": "2019-01-13T19:58:24Z",
       "latestReleaseDate": "2026-02-01T05:19:05Z",
-      "releaseRecency": 8,
-      "releaseRecencyText": "Released 8 days ago"
+      "releaseRecency": 9,
+      "releaseRecencyText": "Released 9 days ago"
     },
     {
       "id": 317531562,
@@ -376,7 +411,7 @@
       "description": "Use OCR in Windows quickly and easily with Text Grab. With optional background process and notifications.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/TheJoeFin/Text-Grab",
-      "stargazersCount": 4597,
+      "stargazersCount": 4598,
       "forksCount": 300,
       "language": "C#",
       "topics": [
@@ -390,11 +425,11 @@
         "wpf"
       ],
       "releasesUrl": "https://api.github.com/repos/TheJoeFin/Text-Grab/releases{/id}",
-      "updatedAt": "2026-02-10T01:05:51Z",
+      "updatedAt": "2026-02-10T19:12:00Z",
       "createdAt": "2020-12-01T12:18:26Z",
       "latestReleaseDate": "2026-01-31T16:22:59Z",
-      "releaseRecency": 9,
-      "releaseRecencyText": "Released 9 days ago"
+      "releaseRecency": 10,
+      "releaseRecencyText": "Released 10 days ago"
     },
     {
       "id": 23891194,
@@ -418,11 +453,11 @@
         "powershell"
       ],
       "releasesUrl": "https://api.github.com/repos/Azure/azure-powershell/releases{/id}",
-      "updatedAt": "2026-02-10T02:02:44Z",
+      "updatedAt": "2026-02-11T01:30:19Z",
       "createdAt": "2014-09-10T20:35:18Z",
       "latestReleaseDate": "2026-01-29T02:42:06Z",
-      "releaseRecency": 12,
-      "releaseRecencyText": "Released 12 days ago"
+      "releaseRecency": 13,
+      "releaseRecencyText": "Released 13 days ago"
     },
     {
       "id": 33010673,
@@ -435,7 +470,7 @@
       "description": "PerfView is a CPU and memory performance-analysis tool",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/microsoft/perfview",
-      "stargazersCount": 4628,
+      "stargazersCount": 4629,
       "forksCount": 757,
       "language": "C#",
       "topics": [
@@ -446,46 +481,11 @@
         "windows"
       ],
       "releasesUrl": "https://api.github.com/repos/microsoft/perfview/releases{/id}",
-      "updatedAt": "2026-02-09T08:42:54Z",
+      "updatedAt": "2026-02-11T02:59:53Z",
       "createdAt": "2015-03-27T21:48:45Z",
       "latestReleaseDate": "2026-01-28T21:09:02Z",
-      "releaseRecency": 12,
-      "releaseRecencyText": "Released 12 days ago"
-    },
-    {
-      "id": 184456251,
-      "name": "PowerToys",
-      "fullName": "microsoft/PowerToys",
-      "owner": {
-        "login": "microsoft",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/6154722?v=4"
-      },
-      "description": "Microsoft PowerToys is a collection of utilities that supercharge productivity and customization on Windows",
-      "defaultBranch": "main",
-      "htmlUrl": "https://github.com/microsoft/PowerToys",
-      "stargazersCount": 129184,
-      "forksCount": 7679,
-      "language": "C#",
-      "topics": [
-        "advanced-paste",
-        "color-picker",
-        "command-palette",
-        "desktop",
-        "fancyzones",
-        "keyboard-manager",
-        "microsoft-powertoys",
-        "powerrename",
-        "powertoys",
-        "windows",
-        "windows-10",
-        "windows-11"
-      ],
-      "releasesUrl": "https://api.github.com/repos/microsoft/PowerToys/releases{/id}",
-      "updatedAt": "2026-02-10T04:36:22Z",
-      "createdAt": "2019-05-01T17:44:02Z",
-      "latestReleaseDate": "2026-01-28T07:04:21Z",
-      "releaseRecency": 12,
-      "releaseRecencyText": "Released 12 days ago"
+      "releaseRecency": 13,
+      "releaseRecencyText": "Released 13 days ago"
     },
     {
       "id": 13428264,
@@ -498,8 +498,8 @@
       "description": "ShareX is a free and open-source application that enables users to capture or record any area of their screen with a single keystroke. It also supports uploading images, text, and various file types to a wide range of destinations.",
       "defaultBranch": "develop",
       "htmlUrl": "https://github.com/ShareX/ShareX",
-      "stargazersCount": 35570,
-      "forksCount": 3600,
+      "stargazersCount": 35583,
+      "forksCount": 3602,
       "language": "C#",
       "topics": [
         "capture",
@@ -524,11 +524,11 @@
         "url-shortener"
       ],
       "releasesUrl": "https://api.github.com/repos/ShareX/ShareX/releases{/id}",
-      "updatedAt": "2026-02-10T03:20:19Z",
+      "updatedAt": "2026-02-11T04:35:41Z",
       "createdAt": "2013-10-08T23:32:10Z",
       "latestReleaseDate": "2026-01-28T01:49:35Z",
-      "releaseRecency": 13,
-      "releaseRecencyText": "Released 13 days ago"
+      "releaseRecency": 14,
+      "releaseRecencyText": "Released 14 days ago"
     },
     {
       "id": 916105685,
@@ -541,8 +541,8 @@
       "description": "Application designed to optimize, customize and enhance your Windows experience.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/memstechtips/Winhance",
-      "stargazersCount": 5726,
-      "forksCount": 272,
+      "stargazersCount": 5747,
+      "forksCount": 273,
       "language": "C#",
       "topics": [
         "windows-10",
@@ -553,11 +553,11 @@
         "windows-11-optimization"
       ],
       "releasesUrl": "https://api.github.com/repos/memstechtips/Winhance/releases{/id}",
-      "updatedAt": "2026-02-10T03:11:32Z",
+      "updatedAt": "2026-02-11T03:59:39Z",
       "createdAt": "2025-01-13T13:20:05Z",
       "latestReleaseDate": "2026-01-26T15:40:02Z",
-      "releaseRecency": 14,
-      "releaseRecencyText": "Released 14 days ago"
+      "releaseRecency": 15,
+      "releaseRecencyText": "Released 15 days ago"
     },
     {
       "id": 295200728,
@@ -570,7 +570,7 @@
       "description": "Everything integration for the Windows taskbar.",
       "defaultBranch": "develop",
       "htmlUrl": "https://github.com/srwi/EverythingToolbar",
-      "stargazersCount": 13426,
+      "stargazersCount": 13431,
       "forksCount": 527,
       "language": "C#",
       "topics": [
@@ -586,11 +586,11 @@
         "wpf"
       ],
       "releasesUrl": "https://api.github.com/repos/srwi/EverythingToolbar/releases{/id}",
-      "updatedAt": "2026-02-10T03:11:09Z",
+      "updatedAt": "2026-02-11T02:56:50Z",
       "createdAt": "2020-09-13T17:20:21Z",
       "latestReleaseDate": "2026-01-25T16:01:54Z",
-      "releaseRecency": 15,
-      "releaseRecencyText": "Released 15 days ago"
+      "releaseRecency": 16,
+      "releaseRecencyText": "Released 16 days ago"
     },
     {
       "id": 600246354,
@@ -603,7 +603,7 @@
       "description": "Lightweight, open-source control tool for ASUS laptops and ROG Ally. Manage performance modes, fans, GPU, battery, and RGB lighting across Zephyrus, Flow, TUF, Strix, Scar, and other models.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/seerge/g-helper",
-      "stargazersCount": 12170,
+      "stargazersCount": 12174,
       "forksCount": 441,
       "language": "C#",
       "topics": [
@@ -629,41 +629,11 @@
         "tuf"
       ],
       "releasesUrl": "https://api.github.com/repos/seerge/g-helper/releases{/id}",
-      "updatedAt": "2026-02-10T03:29:09Z",
+      "updatedAt": "2026-02-10T22:01:25Z",
       "createdAt": "2023-02-10T23:11:28Z",
       "latestReleaseDate": "2026-01-23T20:59:01Z",
-      "releaseRecency": 17,
-      "releaseRecencyText": "Released 17 days ago"
-    },
-    {
-      "id": 22456440,
-      "name": "osu",
-      "fullName": "ppy/osu",
-      "owner": {
-        "login": "ppy",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/995763?v=4"
-      },
-      "description": "rhythm is just a *click* away!",
-      "defaultBranch": "master",
-      "htmlUrl": "https://github.com/ppy/osu",
-      "stargazersCount": 17898,
-      "forksCount": 2610,
-      "language": "C#",
-      "topics": [
-        "beatmap",
-        "catch",
-        "game",
-        "mania",
-        "osu",
-        "rhythm",
-        "taiko"
-      ],
-      "releasesUrl": "https://api.github.com/repos/ppy/osu/releases{/id}",
-      "updatedAt": "2026-02-10T04:34:49Z",
-      "createdAt": "2014-07-31T04:26:30Z",
-      "latestReleaseDate": "2026-01-19T11:27:30Z",
-      "releaseRecency": 21,
-      "releaseRecencyText": "Released 21 days ago"
+      "releaseRecency": 18,
+      "releaseRecencyText": "Released 18 days ago"
     }
   ]
 }
