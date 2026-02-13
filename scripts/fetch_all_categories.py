@@ -435,12 +435,17 @@ async def verify_installers(
     platform: str,
     need_release_date: bool = False,
     max_age_days: Optional[int] = None,
+    target_count: Optional[int] = None,
 ) -> List[RepoCandidate]:
     """
     Check candidates for platform-specific installers concurrently.
     Uses the cross-repo release cache so repeated checks are free.
+
+    If target_count is set, stops early once that many are verified
+    (with a small overshoot buffer to avoid cutting off mid-batch).
     """
-    print(f"  Verifying installers for {len(candidates)} candidates...")
+    print(f"  Verifying installers for {len(candidates)} candidates" +
+          (f" (target: {target_count})" if target_count else "") + "...")
     results = []
     now = datetime.utcnow()
 
@@ -480,6 +485,12 @@ async def verify_installers(
         done = min(i + RELEASE_CHECK_BATCH, len(candidates))
         if done % 100 == 0 or done == len(candidates):
             print(f"    Progress: {done}/{len(candidates)} checked, {len(results)} verified")
+
+        # Early termination: stop once we have well above the target
+        # Use 1.5x buffer so we don't under-collect
+        if target_count and len(results) >= int(target_count * 1.5):
+            print(f"    ✓ Early stop: {len(results)} verified (target {target_count}) after {done}/{len(candidates)} checked")
+            break
 
     return results
 
@@ -556,11 +567,10 @@ async def fetch_trending(client: GitHubClient, platform: str) -> List[Dict]:
 
     topics = PLATFORMS[platform]["topics"]
     all_langs = PLATFORMS[platform]["languages"]["primary"] + PLATFORMS[platform]["languages"]["secondary"]
-    broad_terms = PLATFORMS[platform].get("broad_terms", ["app"])
     seen: Set[str] = set()
     verified_all: List[RepoCandidate] = []
 
-    # ── Round 1: topic-based + language-based searches ────────────────────────
+    # ── Round 1: topic-based + language-based + high-star catch-all ────────────
     specs_r1 = []
     for days, min_stars, weight in [
         (30, 100, 1.5),
@@ -570,45 +580,28 @@ async def fetch_trending(client: GitHubClient, platform: str) -> List[Dict]:
     ]:
         past = (datetime.utcnow() - timedelta(days=days)).strftime("%Y-%m-%d")
         base = f"stars:>{min_stars} archived:false pushed:>={past}"
-        # Topic-based query for each topic subset
+        # Topic-based query (all topics combined)
         specs_r1.append({
             "query": _build_query(base, topics=topics),
             "sort": "stars", "pages": 3, "weight": weight,
         })
-        # Also try just the primary topic with more pages
-        if len(topics) > 1:
-            specs_r1.append({
-                "query": _build_query(base, topics=topics[:1]),
-                "sort": "stars", "pages": 3, "weight": weight,
-            })
 
-    # Language-only queries (catches repos like ollama that lack platform topics
-    # but are relevant because they ship platform installers)
-    for lang in all_langs[:3]:
-        for days, min_stars in [(180, 500), (365, 1000)]:
-            past = (datetime.utcnow() - timedelta(days=days)).strftime("%Y-%m-%d")
-            base = f"stars:>{min_stars} archived:false pushed:>={past}"
-            specs_r1.append({
-                "query": _build_query(base, language=lang),
-                "sort": "stars", "pages": 3, "weight": 0.8,
-            })
-
-    # Broad keyword queries for cross-platform apps
-    for kw in broad_terms[:2]:
-        past = (datetime.utcnow() - timedelta(days=180)).strftime("%Y-%m-%d")
+    # Language-only queries (catches repos like ollama that lack platform topics)
+    for lang in all_langs[:2]:
+        past = (datetime.utcnow() - timedelta(days=365)).strftime("%Y-%m-%d")
         base = f"stars:>500 archived:false pushed:>={past}"
         specs_r1.append({
-            "query": _build_query(base, description_kw=kw),
-            "sort": "stars", "pages": 2, "weight": 0.7,
+            "query": _build_query(base, language=lang),
+            "sort": "stars", "pages": 3, "weight": 0.8,
         })
 
-    # Very-high-star catch-all (finds mega-popular repos regardless of topic)
+    # High-star catch-all (no topic/language filter — finds mega-popular repos)
     for min_stars in [10000, 5000]:
         past = (datetime.utcnow() - timedelta(days=365)).strftime("%Y-%m-%d")
         base = f"stars:>{min_stars} archived:false pushed:>={past}"
         specs_r1.append({
             "query": base,
-            "sort": "stars", "pages": 5, "weight": 0.6,
+            "sort": "stars", "pages": 3, "weight": 0.6,
         })
 
     r1_candidates = await _collect_candidates(
@@ -616,10 +609,14 @@ async def fetch_trending(client: GitHubClient, platform: str) -> List[Dict]:
     )
     print(f"  Round 1: {len(r1_candidates)} candidates from {len(seen)} unique repos")
 
-    # Sort by trending score and verify a generous pool
+    # Sort by trending score; take top pool for verification
     r1_candidates.sort(key=lambda c: c.score + c.recent_stars_velocity * 10, reverse=True)
-    pool = r1_candidates[: max(DESIRED_COUNT * 5, len(r1_candidates))]
-    verified_r1 = await verify_installers(client, pool, platform, need_release_date=True)
+    pool_size = min(len(r1_candidates), DESIRED_COUNT * 5)
+    pool = r1_candidates[:pool_size]
+    verified_r1 = await verify_installers(
+        client, pool, platform, need_release_date=True,
+        target_count=DESIRED_COUNT,
+    )
     verified_all.extend(verified_r1)
     print(f"  Round 1 verified: {len(verified_r1)}")
 
@@ -659,8 +656,13 @@ async def fetch_trending(client: GitHubClient, platform: str) -> List[Dict]:
 
         if r2_candidates:
             r2_candidates.sort(key=lambda c: c.score + c.recent_stars_velocity * 10, reverse=True)
-            pool2 = r2_candidates[: max(DESIRED_COUNT * 5, len(r2_candidates))]
-            verified_r2 = await verify_installers(client, pool2, platform, need_release_date=True)
+            remaining_needed = DESIRED_COUNT - len(verified_all)
+            pool_size = min(len(r2_candidates), remaining_needed * 5)
+            pool2 = r2_candidates[:pool_size]
+            verified_r2 = await verify_installers(
+                client, pool2, platform, need_release_date=True,
+                target_count=remaining_needed,
+            )
             verified_all.extend(verified_r2)
             print(f"  Round 2 verified: {len(verified_r2)}")
 
@@ -668,7 +670,6 @@ async def fetch_trending(client: GitHubClient, platform: str) -> List[Dict]:
     if len(verified_all) < DESIRED_COUNT:
         print(f"\n  ⚠ Still only {len(verified_all)} — running last-resort round...")
         specs_r3 = []
-        # All-language, even lower thresholds
         for days, min_stars in [(365, 20), (730, 100)]:
             past = (datetime.utcnow() - timedelta(days=days)).strftime("%Y-%m-%d")
             base = f"stars:>{min_stars} archived:false pushed:>={past}"
@@ -690,7 +691,12 @@ async def fetch_trending(client: GitHubClient, platform: str) -> List[Dict]:
 
         if r3_candidates:
             r3_candidates.sort(key=lambda c: c.score + c.recent_stars_velocity * 10, reverse=True)
-            verified_r3 = await verify_installers(client, r3_candidates, platform, need_release_date=True)
+            remaining_needed = DESIRED_COUNT - len(verified_all)
+            pool_size = min(len(r3_candidates), remaining_needed * 5)
+            verified_r3 = await verify_installers(
+                client, r3_candidates[:pool_size], platform, need_release_date=True,
+                target_count=remaining_needed,
+            )
             verified_all.extend(verified_r3)
             print(f"  Round 3 verified: {len(verified_r3)}")
 
@@ -721,11 +727,10 @@ async def fetch_new_releases(client: GitHubClient, platform: str) -> List[Dict]:
 
     topics = PLATFORMS[platform]["topics"]
     all_langs = PLATFORMS[platform]["languages"]["primary"] + PLATFORMS[platform]["languages"]["secondary"]
-    broad_terms = PLATFORMS[platform].get("broad_terms", ["app"])
     seen: Set[str] = set()
     verified_all: List[RepoCandidate] = []
 
-    # ── Round 1: aggressive topic + language searches ─────────────────────────
+    # ── Round 1: topic + language + high-star searches ────────────────────────
     specs_r1 = []
 
     for days, min_stars, sort in [
@@ -741,12 +746,6 @@ async def fetch_new_releases(client: GitHubClient, platform: str) -> List[Dict]:
             "query": _build_query(base, topics=topics),
             "sort": sort, "pages": 5,
         })
-        if len(topics) > 1:
-            for t in topics:
-                specs_r1.append({
-                    "query": _build_query(base, topics=[t]),
-                    "sort": sort, "pages": 3,
-                })
 
     # Language queries
     for lang in all_langs[:3]:
@@ -764,7 +763,7 @@ async def fetch_new_releases(client: GitHubClient, platform: str) -> List[Dict]:
         base = f"stars:>{min_stars} archived:false pushed:>={past}"
         specs_r1.append({
             "query": base,
-            "sort": "updated", "pages": 5,
+            "sort": "updated", "pages": 3,
         })
 
     r1_candidates = await _collect_candidates(
@@ -772,16 +771,18 @@ async def fetch_new_releases(client: GitHubClient, platform: str) -> List[Dict]:
     )
     print(f"  Round 1: {len(r1_candidates)} candidates")
 
-    # Sort by update recency for new-releases
+    # Sort by update recency; cap pool
     r1_candidates.sort(key=lambda c: c.updated_at, reverse=True)
+    pool_size = min(len(r1_candidates), DESIRED_COUNT * 5)
     verified_r1 = await verify_installers(
-        client, r1_candidates, platform,
+        client, r1_candidates[:pool_size], platform,
         need_release_date=True, max_age_days=MAX_RELEASE_AGE_DAYS,
+        target_count=DESIRED_COUNT,
     )
     verified_all.extend(verified_r1)
     print(f"  Round 1 verified: {len(verified_r1)}")
 
-    # ── Round 2: escalation with even broader queries ─────────────────────────
+    # ── Round 2: escalation with broader queries ──────────────────────────────
     if len(verified_all) < DESIRED_COUNT:
         print(f"\n  ⚠ Only {len(verified_all)} verified — running escalation round...")
         specs_r2 = []
@@ -794,11 +795,6 @@ async def fetch_new_releases(client: GitHubClient, platform: str) -> List[Dict]:
                 "query": _build_query(base, topics=topics),
                 "sort": "updated", "pages": 8,
             })
-            for t in topics:
-                specs_r2.append({
-                    "query": _build_query(base, topics=[t]),
-                    "sort": "updated", "pages": 5,
-                })
 
         # Cross-platform framework repos
         cross_topics = ["electron", "flutter", "tauri", "react-native"]
@@ -810,15 +806,6 @@ async def fetch_new_releases(client: GitHubClient, platform: str) -> List[Dict]:
                 "sort": "updated", "pages": 3,
             })
 
-        # Broad keyword searches
-        for kw in broad_terms[:3]:
-            past = (datetime.utcnow() - timedelta(days=14)).strftime("%Y-%m-%d")
-            base = f"stars:>50 archived:false pushed:>={past}"
-            specs_r2.append({
-                "query": _build_query(base, description_kw=kw),
-                "sort": "updated", "pages": 3,
-            })
-
         r2_candidates = await _collect_candidates(
             client, specs_r2, platform, seen, compute_velocity=False, min_score=0,
         )
@@ -826,9 +813,12 @@ async def fetch_new_releases(client: GitHubClient, platform: str) -> List[Dict]:
 
         if r2_candidates:
             r2_candidates.sort(key=lambda c: c.updated_at, reverse=True)
+            remaining_needed = DESIRED_COUNT - len(verified_all)
+            pool_size = min(len(r2_candidates), remaining_needed * 5)
             verified_r2 = await verify_installers(
-                client, r2_candidates, platform,
+                client, r2_candidates[:pool_size], platform,
                 need_release_date=True, max_age_days=MAX_RELEASE_AGE_DAYS,
+                target_count=remaining_needed,
             )
             verified_all.extend(verified_r2)
             print(f"  Round 2 verified: {len(verified_r2)}")
@@ -851,9 +841,12 @@ async def fetch_new_releases(client: GitHubClient, platform: str) -> List[Dict]:
         print(f"  Round 3: {len(r3_candidates)} new candidates")
         if r3_candidates:
             r3_candidates.sort(key=lambda c: c.updated_at, reverse=True)
+            remaining_needed = DESIRED_COUNT - len(verified_all)
+            pool_size = min(len(r3_candidates), remaining_needed * 5)
             verified_r3 = await verify_installers(
-                client, r3_candidates, platform,
+                client, r3_candidates[:pool_size], platform,
                 need_release_date=True, max_age_days=MAX_RELEASE_AGE_DAYS,
+                target_count=remaining_needed,
             )
             verified_all.extend(verified_r3)
             print(f"  Round 3 verified: {len(verified_r3)}")
@@ -882,7 +875,7 @@ async def fetch_most_popular(client: GitHubClient, platform: str) -> List[Dict]:
     Uses an aggressive multi-strategy approach:
       1. Topic-filtered queries (narrow but precise)
       2. Language-only queries (catches repos like ollama)
-      3. Mega-star catch-all (no topic/language filter at all)
+      3. High-star catch-all (no topic/language filter at all)
       4. Cross-platform framework queries
       5. Escalation rounds if needed
     """
@@ -894,11 +887,9 @@ async def fetch_most_popular(client: GitHubClient, platform: str) -> List[Dict]:
 
     topics = PLATFORMS[platform]["topics"]
     all_langs = PLATFORMS[platform]["languages"]["primary"] + PLATFORMS[platform]["languages"]["secondary"]
-    broad_terms = PLATFORMS[platform].get("broad_terms", ["app"])
     seen: Set[str] = set()
     verified_all: List[RepoCandidate] = []
 
-    six_months = (datetime.utcnow() - timedelta(days=180)).strftime("%Y-%m-%d")
     one_year = (datetime.utcnow() - timedelta(days=365)).strftime("%Y-%m-%d")
     two_years = (datetime.utcnow() - timedelta(days=730)).strftime("%Y-%m-%d")
 
@@ -906,35 +897,29 @@ async def fetch_most_popular(client: GitHubClient, platform: str) -> List[Dict]:
     specs_r1 = []
 
     # Topic-based at various star thresholds
-    for min_stars, pages in [(MIN_STARS, 5), (10000, 5), (50000, 3)]:
+    for min_stars in [MIN_STARS, 10000]:
         base = f"stars:>{min_stars} archived:false pushed:>={one_year}"
         specs_r1.append({
             "query": _build_query(base, topics=topics),
-            "sort": "stars", "pages": pages,
+            "sort": "stars", "pages": 5,
         })
-        if len(topics) > 1:
-            for t in topics:
-                specs_r1.append({
-                    "query": _build_query(base, topics=[t]),
-                    "sort": "stars", "pages": 3,
-                })
 
-    # Language-only queries — this is the key to finding repos like ollama
-    for lang in all_langs:
-        for min_stars in [MIN_STARS, 10000, 30000]:
+    # Language-only queries — key to finding repos like ollama
+    for lang in all_langs[:3]:
+        for min_stars in [MIN_STARS, 10000]:
             base = f"stars:>{min_stars} archived:false pushed:>={one_year}"
             specs_r1.append({
                 "query": _build_query(base, language=lang),
-                "sort": "stars", "pages": 5,
+                "sort": "stars", "pages": 3,
             })
 
-    # Mega-star catch-all: no topic or language filter at all!
-    # These are the most-starred repos on GitHub; many ship multi-platform installers.
-    for min_stars in [50000, 30000, 15000, MIN_STARS]:
+    # High-star catch-all: no topic or language filter
+    # These find mega-popular repos that ship multi-platform installers.
+    for min_stars in [30000, 15000, MIN_STARS]:
         base = f"stars:>{min_stars} archived:false pushed:>={one_year}"
         specs_r1.append({
             "query": base,
-            "sort": "stars", "pages": 10,  # max pages for broad net
+            "sort": "stars", "pages": 5,
         })
 
     # Cross-platform framework repos
@@ -943,14 +928,6 @@ async def fetch_most_popular(client: GitHubClient, platform: str) -> List[Dict]:
         base = f"stars:>{MIN_STARS} archived:false pushed:>={one_year}"
         specs_r1.append({
             "query": _build_query(base, topics=[ct]),
-            "sort": "stars", "pages": 5,
-        })
-
-    # Broad keyword in description
-    for kw in broad_terms[:2]:
-        base = f"stars:>{MIN_STARS} archived:false pushed:>={one_year}"
-        specs_r1.append({
-            "query": _build_query(base, description_kw=kw),
             "sort": "stars", "pages": 3,
         })
 
@@ -959,9 +936,13 @@ async def fetch_most_popular(client: GitHubClient, platform: str) -> List[Dict]:
     )
     print(f"  Round 1: {len(r1_candidates)} candidates from {len(seen)} unique repos")
 
-    # Sort by stars and verify ALL candidates (no premature truncation)
+    # Sort by stars; cap pool to avoid rate-limit exhaustion
     r1_candidates.sort(key=lambda c: c.stars, reverse=True)
-    verified_r1 = await verify_installers(client, r1_candidates, platform, need_release_date=True)
+    pool_size = min(len(r1_candidates), DESIRED_COUNT * 5)
+    verified_r1 = await verify_installers(
+        client, r1_candidates[:pool_size], platform, need_release_date=True,
+        target_count=DESIRED_COUNT,
+    )
     verified_all.extend(verified_r1)
     print(f"  Round 1 verified: {len(verified_r1)}")
 
@@ -970,7 +951,7 @@ async def fetch_most_popular(client: GitHubClient, platform: str) -> List[Dict]:
         print(f"\n  ⚠ Only {len(verified_all)} verified — running escalation round...")
         specs_r2 = []
 
-        # Wider date range
+        # Wider date range + remaining unchecked from round 1
         base = f"stars:>{MIN_STARS} archived:false pushed:>={two_years}"
         specs_r2.append({
             "query": _build_query(base, topics=topics),
@@ -983,16 +964,8 @@ async def fetch_most_popular(client: GitHubClient, platform: str) -> List[Dict]:
             })
         specs_r2.append({
             "query": base,
-            "sort": "stars", "pages": 10,
+            "sort": "stars", "pages": 5,
         })
-
-        # Also try created-before filter for established projects
-        for created_before in [six_months, one_year, two_years]:
-            base2 = f"stars:>{MIN_STARS} archived:false created:<{created_before} pushed:>={two_years}"
-            specs_r2.append({
-                "query": _build_query(base2, topics=topics),
-                "sort": "stars", "pages": 5,
-            })
 
         r2_candidates = await _collect_candidates(
             client, specs_r2, platform, seen, compute_velocity=False, min_score=0,
@@ -1001,9 +974,27 @@ async def fetch_most_popular(client: GitHubClient, platform: str) -> List[Dict]:
 
         if r2_candidates:
             r2_candidates.sort(key=lambda c: c.stars, reverse=True)
-            verified_r2 = await verify_installers(client, r2_candidates, platform, need_release_date=True)
+            remaining_needed = DESIRED_COUNT - len(verified_all)
+            pool_size = min(len(r2_candidates), remaining_needed * 5)
+            verified_r2 = await verify_installers(
+                client, r2_candidates[:pool_size], platform, need_release_date=True,
+                target_count=remaining_needed,
+            )
             verified_all.extend(verified_r2)
             print(f"  Round 2 verified: {len(verified_r2)}")
+
+        # Also verify remaining unchecked from round 1 if we had capped
+        if len(verified_all) < DESIRED_COUNT and len(r1_candidates) > DESIRED_COUNT * 5:
+            leftover = r1_candidates[DESIRED_COUNT * 5:]
+            print(f"  Checking {len(leftover)} leftover candidates from round 1...")
+            remaining_needed = DESIRED_COUNT - len(verified_all)
+            pool_size = min(len(leftover), remaining_needed * 5)
+            verified_leftover = await verify_installers(
+                client, leftover[:pool_size], platform, need_release_date=True,
+                target_count=remaining_needed,
+            )
+            verified_all.extend(verified_leftover)
+            print(f"  Leftover verified: {len(verified_leftover)}")
 
     # De-duplicate
     seen_ids: Set[int] = set()
