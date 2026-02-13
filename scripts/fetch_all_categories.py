@@ -139,9 +139,8 @@ class RepoCandidate:
             "updatedAt": self.updated_at,
             "createdAt": self.created_at,
         }
-        if category == "trending":
-            base["trendingScore"] = round(self.score + (self.recent_stars_velocity * 10), 2)
-        elif category == "new-releases":
+        
+        if self.latest_release_date:
             base["latestReleaseDate"] = self.latest_release_date
             recency = self._release_age_days()
             base["releaseRecency"] = recency
@@ -151,8 +150,12 @@ class RepoCandidate:
                 base["releaseRecencyText"] = "Released yesterday"
             else:
                 base["releaseRecencyText"] = f"Released {recency} days ago"
+        
+        if category == "trending":
+            base["trendingScore"] = round(self.score + (self.recent_stars_velocity * 10), 2)
         elif category == "most-popular":
             base["popularityScore"] = self.stars + (self.forks * 2)
+        
         return base
 
     def _release_age_days(self) -> int:
@@ -524,7 +527,7 @@ async def fetch_trending(client: GitHubClient, platform: str) -> List[Dict]:
 
     all_candidates.sort(key=lambda c: c.score + c.recent_stars_velocity * 10, reverse=True)
     top = all_candidates[: DESIRED_COUNT * 3]
-    verified = await verify_installers(client, top, platform)
+    verified = await verify_installers(client, top, platform, need_release_date=True)
     verified.sort(key=lambda c: c.score + c.recent_stars_velocity * 10, reverse=True)
     final = verified[:DESIRED_COUNT]
 
@@ -650,7 +653,7 @@ async def fetch_most_popular(client: GitHubClient, platform: str) -> List[Dict]:
 
     all_candidates.sort(key=lambda c: c.stars, reverse=True)
     top = all_candidates[: DESIRED_COUNT * 3]
-    verified = await verify_installers(client, top, platform)
+    verified = await verify_installers(client, top, platform, need_release_date=True)
     verified.sort(key=lambda c: c.stars, reverse=True)
     final = verified[:DESIRED_COUNT]
 
