@@ -482,15 +482,25 @@ async def verify_installers(
     platform: str,
     need_release_date: bool = False,
     max_age_days: Optional[int] = None,
+    budget: Optional[int] = None,
 ) -> List[RepoCandidate]:
     """
     Check candidates for platform-specific installers concurrently.
     Uses the cross-repo release cache so repeated checks are free.
-    Stops when rate limit drops below RATE_LIMIT_FLOOR.
+    Stops when rate limit drops below RATE_LIMIT_FLOOR or when
+    the per-platform budget is exhausted.
     """
     print(f"  Verifying installers for {len(candidates)} candidates...")
     results = []
     now = datetime.utcnow()
+    start_requests = client._request_count
+
+    # Effective floor: the higher of RATE_LIMIT_FLOOR or (remaining - budget)
+    if budget is not None:
+        budget_floor = max(RATE_LIMIT_FLOOR, client._rate_remaining - budget)
+        print(f"  Per-platform budget: ~{budget} requests (floor at {budget_floor})")
+    else:
+        budget_floor = RATE_LIMIT_FLOOR
 
     async def check_one(candidate: RepoCandidate):
         info = await client.get_latest_stable_release(candidate.owner_login, candidate.name)
@@ -530,9 +540,12 @@ async def verify_installers(
             print(f"    Progress: {done}/{len(candidates)} checked, {len(results)} verified "
                   f"(rate limit: {client._rate_remaining})")
 
-        # Stop when rate limit is running low
-        if client._rate_remaining < RATE_LIMIT_FLOOR:
-            print(f"    ⚠ Rate limit low ({client._rate_remaining} remaining), "
+        # Stop when rate limit is running low or budget exhausted
+        if client._rate_remaining < budget_floor:
+            used = client._request_count - start_requests
+            reason = "budget exhausted" if budget is not None else "rate limit low"
+            print(f"    ⚠ {reason.capitalize()} ({client._rate_remaining} remaining, "
+                  f"used {used} this platform), "
                   f"stopping after {done}/{len(candidates)} checked, {len(results)} verified")
             break
 
@@ -606,7 +619,7 @@ async def _collect_candidates(
 # ─── Category fetchers ─────────────────────────────────────────────────────────
 
 
-async def fetch_trending(client: GitHubClient, platform: str) -> List[Dict]:
+async def fetch_trending(client: GitHubClient, platform: str, budget: Optional[int] = None) -> List[Dict]:
     print(f"\n{'='*60}")
     print(f"TRENDING — {platform.upper()}")
     print(f"{'='*60}")
@@ -669,12 +682,12 @@ async def fetch_trending(client: GitHubClient, platform: str) -> List[Dict]:
 
     # Sort by trending score and verify ALL
     candidates.sort(key=lambda c: c.score + c.recent_stars_velocity * 10, reverse=True)
-    verified = await verify_installers(client, candidates, platform, need_release_date=True)
+    verified = await verify_installers(client, candidates, platform, need_release_date=True, budget=budget)
     print(f"  ✓ {len(verified)} trending repos verified")
     return [r.to_summary("trending") for r in verified]
 
 
-async def fetch_new_releases(client: GitHubClient, platform: str) -> List[Dict]:
+async def fetch_new_releases(client: GitHubClient, platform: str, budget: Optional[int] = None) -> List[Dict]:
     """Fetch repos with new releases in the last 14 days."""
     print(f"\n{'='*60}")
     print(f"NEW RELEASES — {platform.upper()}")
@@ -740,7 +753,7 @@ async def fetch_new_releases(client: GitHubClient, platform: str) -> List[Dict]:
     candidates.sort(key=lambda c: c.updated_at, reverse=True)
     verified = await verify_installers(
         client, candidates, platform,
-        need_release_date=True, max_age_days=MAX_RELEASE_AGE_DAYS,
+        need_release_date=True, max_age_days=MAX_RELEASE_AGE_DAYS, budget=budget,
     )
 
     verified.sort(key=lambda r: r.latest_release_date or "", reverse=True)
@@ -748,7 +761,7 @@ async def fetch_new_releases(client: GitHubClient, platform: str) -> List[Dict]:
     return [r.to_summary("new-releases") for r in verified]
 
 
-async def fetch_most_popular(client: GitHubClient, platform: str) -> List[Dict]:
+async def fetch_most_popular(client: GitHubClient, platform: str, budget: Optional[int] = None) -> List[Dict]:
     """Fetch the most popular repos — minimum 5000 stars."""
     print(f"\n{'='*60}")
     print(f"MOST POPULAR — {platform.upper()}")
@@ -801,7 +814,7 @@ async def fetch_most_popular(client: GitHubClient, platform: str) -> List[Dict]:
 
     # Sort by stars and verify ALL
     candidates.sort(key=lambda c: c.stars, reverse=True)
-    verified = await verify_installers(client, candidates, platform, need_release_date=True)
+    verified = await verify_installers(client, candidates, platform, need_release_date=True, budget=budget)
 
     verified.sort(key=lambda c: c.stars, reverse=True)
     print(f"  ✓ {len(verified)} most popular repos")
@@ -836,6 +849,17 @@ def load_cache(category: str, platform: str) -> Optional[Dict]:
     return None
 
 
+def _load_existing_count(category: str, platform: str) -> int:
+    """Return the repo count from an existing cache file, or 0 if none."""
+    cache_file = os.path.join(CACHE_DIR, category, f"{platform}.json")
+    try:
+        with open(cache_file, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        return data.get("totalCount", 0)
+    except Exception:
+        return 0
+
+
 def save_data(category: str, platform: str, repos: List[Dict], timestamp: str):
     out = {
         "category": category,
@@ -861,17 +885,39 @@ async def process_category(client: GitHubClient, category: str, fetch_fn, timest
     print(f"# CATEGORY: {category.upper()}")
     print(f"{'#'*70}")
 
-    async def process_platform(platform: str):
+    num_platforms = len(PLATFORMS)
+
+    async def process_platform(platform: str, budget: int):
         cached = load_cache(category, platform)
         if cached:
             return
-        repos = await fetch_fn(client, platform)
+        repos = await fetch_fn(client, platform, budget)
+
+        # Never overwrite good cached data with empty results
+        min_threshold = 10 if category == "new-releases" else 30
+        if len(repos) < min_threshold:
+            existing = _load_existing_count(category, platform)
+            if existing >= min_threshold:
+                print(f"  ⚠ Only {len(repos)} repos fetched but cache has {existing} — keeping cached data")
+                return
+            elif len(repos) == 0:
+                print(f"  ⚠ 0 repos fetched and no good cache — saving empty result")
+
         save_data(category, platform, repos, timestamp)
+
+    # Compute per-platform budget: divide remaining requests evenly
+    remaining = client._rate_remaining
+    per_platform = max(remaining // num_platforms, 100)  # at least 100 each
+    print(f"  Rate limit: {remaining} remaining, ~{per_platform} per platform")
 
     # Process platforms SEQUENTIALLY to avoid rate-limit thrashing.
     # The release cache still benefits later platforms from earlier ones.
-    for p in PLATFORMS:
-        await process_platform(p)
+    platforms_left = list(PLATFORMS.keys())
+    for i, p in enumerate(platforms_left):
+        # Recalculate budget for remaining platforms so unused budget carries forward
+        platforms_remaining = num_platforms - i
+        budget = max((client._rate_remaining - RATE_LIMIT_FLOOR) // platforms_remaining, 100)
+        await process_platform(p, budget)
 
 
 async def main():
