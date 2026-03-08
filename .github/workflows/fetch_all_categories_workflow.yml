@@ -18,21 +18,33 @@ jobs:
       can_proceed: ${{ steps.check.outputs.can_proceed }}
       remaining: ${{ steps.check.outputs.remaining }}
     steps:
-      - name: Check GitHub API Rate Limit
+      - name: Check GitHub API Rate Limit (all tokens)
         id: check
         env:
+          GH_TOKEN_TRENDING: ${{ secrets.GH_TOKEN_TRENDING }}
+          GH_TOKEN_NEW_RELEASES: ${{ secrets.GH_TOKEN_NEW_RELEASES }}
+          GH_TOKEN_MOST_POPULAR: ${{ secrets.GH_TOKEN_MOST_POPULAR }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          RATE_LIMIT=$(curl -s -H "Authorization: token $GITHUB_TOKEN" \
-            https://api.github.com/rate_limit)
-          REMAINING=$(echo $RATE_LIMIT | jq -r '.resources.core.remaining')
-          echo "remaining=$REMAINING" >> $GITHUB_OUTPUT
-          if [ "$REMAINING" -gt 1000 ]; then
+          MIN_REMAINING=99999
+          for label in TRENDING NEW_RELEASES MOST_POPULAR; do
+            VAR="GH_TOKEN_${label}"
+            TOKEN="${!VAR:-$GITHUB_TOKEN}"
+            RATE_LIMIT=$(curl -s -H "Authorization: token $TOKEN" \
+              https://api.github.com/rate_limit)
+            REMAINING=$(echo $RATE_LIMIT | jq -r '.resources.core.remaining')
+            echo "$label: $REMAINING remaining"
+            if [ "$REMAINING" -lt "$MIN_REMAINING" ]; then
+              MIN_REMAINING=$REMAINING
+            fi
+          done
+          echo "remaining=$MIN_REMAINING" >> $GITHUB_OUTPUT
+          if [ "$MIN_REMAINING" -gt 1000 ]; then
             echo "can_proceed=true" >> $GITHUB_OUTPUT
-            echo "✓ Rate limit OK: $REMAINING remaining"
+            echo "✓ All tokens OK (lowest: $MIN_REMAINING)"
           else
             echo "can_proceed=false" >> $GITHUB_OUTPUT
-            echo "::warning::Low rate limit ($REMAINING remaining)"
+            echo "::warning::Low rate limit on at least one token ($MIN_REMAINING remaining)"
           fi
 
   fetch-and-update:
@@ -72,6 +84,9 @@ jobs:
       - name: Fetch all repository categories
         id: fetch
         env:
+          GH_TOKEN_TRENDING: ${{ secrets.GH_TOKEN_TRENDING }}
+          GH_TOKEN_NEW_RELEASES: ${{ secrets.GH_TOKEN_NEW_RELEASES }}
+          GH_TOKEN_MOST_POPULAR: ${{ secrets.GH_TOKEN_MOST_POPULAR }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           python scripts/fetch_all_categories.py
