@@ -11,6 +11,7 @@ import json
 import asyncio
 import aiohttp
 import time
+import collections
 from datetime import datetime, timedelta, timezone
 from typing import List, Dict, Optional, Tuple, Set
 from dataclasses import dataclass, field
@@ -55,6 +56,8 @@ RELEASE_CHECK_BATCH = 40            # repos to check releases for at once
 REQUEST_TIMEOUT = 20                # seconds
 MAX_RETRIES = 3
 RATE_LIMIT_FLOOR = 50               # stop verifying when remaining requests drop below this
+SEARCH_RATE_LIMIT = 28              # max search API calls per window (GitHub allows 30, leave buffer)
+SEARCH_RATE_WINDOW = 60             # sliding window in seconds
 FORCE_REFRESH = os.environ.get("FORCE_REFRESH", "").lower() in ("true", "1", "yes")
 
 # Topics / keywords that indicate NSFW or inappropriate content.
@@ -244,6 +247,9 @@ class GitHubClient:
         self._request_count = 0
         self._rate_remaining = 5000
         self._rate_reset: Optional[float] = None
+        # Search API rate limiter (sliding window)
+        self._search_call_times: collections.deque = collections.deque()
+        self._search_rate_lock = asyncio.Lock()
         # Cross-repo release cache: full_name -> ReleaseInfo
         self.release_cache: Dict[str, ReleaseInfo] = {}
 
@@ -282,8 +288,24 @@ class GitHubClient:
         if reset is not None:
             self._rate_reset = float(reset)
 
+    async def _acquire_search_slot(self):
+        """Ensure we stay within the search API rate limit (30 req/min)."""
+        async with self._search_rate_lock:
+            now = time.time()
+            while self._search_call_times and now - self._search_call_times[0] >= SEARCH_RATE_WINDOW:
+                self._search_call_times.popleft()
+            if len(self._search_call_times) >= SEARCH_RATE_LIMIT:
+                oldest = self._search_call_times[0]
+                wait = SEARCH_RATE_WINDOW - (now - oldest) + 1
+                if wait > 0:
+                    print(f"    ⏳ Search rate limit: {len(self._search_call_times)}/{SEARCH_RATE_LIMIT} in last 60s, pausing {wait:.0f}s")
+                    await asyncio.sleep(wait)
+            self._search_call_times.append(time.time())
+
     async def get(self, url: str, params: Optional[Dict] = None) -> Tuple[Optional[Dict], Optional[str]]:
         """GET with retry, rate-limit handling, and concurrency control."""
+        if "/search/" in url:
+            await self._acquire_search_slot()
         async with self._sem:
             await self._wait_for_rate_limit()
             for attempt in range(MAX_RETRIES):
@@ -333,6 +355,7 @@ class GitHubClient:
                 params={"q": query, "sort": sort, "order": order, "per_page": 100, "page": 1},
             )
             if not data:
+                print(f"    ⚠ Search query failed: {err}")
                 return []
 
             items = data.get("items", [])
@@ -941,21 +964,14 @@ async def process_category(client: GitHubClient, category: str, fetch_fn, timest
 
     # Process platforms SEQUENTIALLY to avoid rate-limit thrashing.
     # The release cache still benefits later platforms from earlier ones.
-    # Pause between platforms so the search API rate limit (30 req/min) can reset.
+    # Search API pacing is handled by _acquire_search_slot() (sliding window rate limiter).
     platforms_left = list(PLATFORMS.keys())
-    prev_ran_searches = False
     for i, p in enumerate(platforms_left):
         # Recalculate budget for remaining platforms so unused budget carries forward
         platforms_remaining = num_platforms - i
         budget = max((client._rate_remaining - RATE_LIMIT_FLOOR) // platforms_remaining, 100)
 
-        # Wait for search rate limit (30 req/min) to reset between platforms
-        if prev_ran_searches:
-            print(f"  ⏳ Waiting 65s for search API rate limit reset...")
-            await asyncio.sleep(65)
-
-        ran = await process_platform(p, budget)
-        prev_ran_searches = ran
+        await process_platform(p, budget)
 
 
 async def main():
