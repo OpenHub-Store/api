@@ -112,7 +112,7 @@ PLATFORMS = {
     },
     "macos": {
         "topics": ["macos", "osx", "mac", "swiftui"],
-        "installer_extensions": [".dmg", ".pkg", ".app.zip"],
+        "installer_extensions": [".dmg", ".pkg"],
         "score_keywords": {
             "high": ["macos", "swiftui", "appkit"],
             "medium": ["desktop", "swift", "cocoa"],
@@ -134,18 +134,6 @@ PLATFORMS = {
     },
 }
 
-# Keyword patterns in release asset filenames that indicate a platform build.
-# Matched against lowercased asset names for files ending in .zip / .tar.gz / .7z etc.
-# These catch cross-platform releases like "myapp-macos-arm64.zip" or "myapp-win-x64.zip"
-PLATFORM_ASSET_KEYWORDS = {
-    "android": ["android"],
-    "windows": ["win64", "win32", "windows", "-win-", "-win.", "win-x64", "win-arm64", "windows-x64"],
-    "macos": ["macos", "darwin", "osx", "mac-x64", "mac-arm64", "mac-universal", "-mac-", "-mac."],
-    "linux": ["linux", "linux-x64", "linux-arm64", "-linux-", "-linux."],
-}
-
-# Generic archive extensions to check for platform keyword matching
-_ARCHIVE_EXTENSIONS = (".zip", ".tar.gz", ".tar.xz", ".tar.bz2", ".7z")
 
 # ─── Data classes ──────────────────────────────────────────────────────────────
 
@@ -394,16 +382,9 @@ class GitHubClient:
                     continue
                 for asset in assets:
                     name = asset.get("name", "").lower()
-                    # Match by dedicated installer extension (.exe, .dmg, .deb, etc.)
                     if any(name.endswith(ext) for ext in cfg["installer_extensions"]):
                         info.has_installers[platform] = True
                         break
-                    # Match generic archives (.zip, .tar.gz) by platform keyword in name
-                    if any(name.endswith(ext) for ext in _ARCHIVE_EXTENSIONS):
-                        keywords = PLATFORM_ASSET_KEYWORDS.get(platform, [])
-                        if any(kw in name for kw in keywords):
-                            info.has_installers[platform] = True
-                            break
 
         # Try /releases/latest first (one API call)
         data, err = await self.get(f"https://api.github.com/repos/{full_name}/releases/latest")
