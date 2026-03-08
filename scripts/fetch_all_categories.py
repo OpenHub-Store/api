@@ -911,16 +911,17 @@ async def process_category(client: GitHubClient, category: str, fetch_fn, timest
     num_platforms = len(PLATFORMS)
 
     async def process_platform(platform: str, budget: int):
+        """Fetch and save repos for one platform. Returns True if searches were run."""
         cached = load_cache(category, platform)
         if cached:
-            return
+            return False
         repos = await fetch_fn(client, platform, budget)
 
         # Never save 0 repos — preserve whatever exists in cache
         if len(repos) == 0:
             existing = _load_existing_count(category, platform)
             print(f"  ⚠ 0 repos fetched — skipping save (existing cache: {existing} repos)")
-            return
+            return True
 
         # Don't overwrite good cached data with poor results
         min_threshold = 10 if category == "new-releases" else 30
@@ -928,9 +929,10 @@ async def process_category(client: GitHubClient, category: str, fetch_fn, timest
             existing = _load_existing_count(category, platform)
             if existing >= min_threshold:
                 print(f"  ⚠ Only {len(repos)} repos fetched but cache has {existing} — keeping cached data")
-                return
+                return True
 
         save_data(category, platform, repos, timestamp)
+        return True
 
     # Compute per-platform budget: divide remaining requests evenly
     remaining = client._rate_remaining
@@ -939,12 +941,21 @@ async def process_category(client: GitHubClient, category: str, fetch_fn, timest
 
     # Process platforms SEQUENTIALLY to avoid rate-limit thrashing.
     # The release cache still benefits later platforms from earlier ones.
+    # Pause between platforms so the search API rate limit (30 req/min) can reset.
     platforms_left = list(PLATFORMS.keys())
+    prev_ran_searches = False
     for i, p in enumerate(platforms_left):
         # Recalculate budget for remaining platforms so unused budget carries forward
         platforms_remaining = num_platforms - i
         budget = max((client._rate_remaining - RATE_LIMIT_FLOOR) // platforms_remaining, 100)
-        await process_platform(p, budget)
+
+        # Wait for search rate limit (30 req/min) to reset between platforms
+        if prev_ran_searches:
+            print(f"  ⏳ Waiting 65s for search API rate limit reset...")
+            await asyncio.sleep(65)
+
+        ran = await process_platform(p, budget)
+        prev_ran_searches = ran
 
 
 async def main():
