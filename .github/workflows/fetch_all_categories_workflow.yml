@@ -75,12 +75,6 @@ jobs:
       - name: Install dependencies
         run: pip install --upgrade pip && pip install -r scripts/requirements.txt
 
-      - name: Optionally clear cache for force refresh
-        if: inputs.force_refresh == 'true'
-        run: |
-          echo "Force refresh requested — clearing cached JSON..."
-          find cached-data -name "*.json" -delete
-
       - name: Fetch all repository categories
         id: fetch
         env:
@@ -88,6 +82,7 @@ jobs:
           GH_TOKEN_NEW_RELEASES: ${{ secrets.GH_TOKEN_NEW_RELEASES }}
           GH_TOKEN_MOST_POPULAR: ${{ secrets.GH_TOKEN_MOST_POPULAR }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          FORCE_REFRESH: ${{ inputs.force_refresh || 'false' }}
         run: |
           python scripts/fetch_all_categories.py
           

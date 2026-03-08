@@ -55,6 +55,7 @@ RELEASE_CHECK_BATCH = 40            # repos to check releases for at once
 REQUEST_TIMEOUT = 20                # seconds
 MAX_RETRIES = 3
 RATE_LIMIT_FLOOR = 50               # stop verifying when remaining requests drop below this
+FORCE_REFRESH = os.environ.get("FORCE_REFRESH", "").lower() in ("true", "1", "yes")
 
 # ─── Platform definitions ─────────────────────────────────────────────────────
 
@@ -785,6 +786,9 @@ async def fetch_most_popular(client: GitHubClient, platform: str) -> List[Dict]:
 
 
 def load_cache(category: str, platform: str) -> Optional[Dict]:
+    if FORCE_REFRESH:
+        print(f"  Force refresh: skipping cache for {category}/{platform}")
+        return None
     cache_file = os.path.join(CACHE_DIR, category, f"{platform}.json")
     if not os.path.exists(cache_file):
         return None
