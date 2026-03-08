@@ -937,16 +937,37 @@ async def main():
         ("most-popular", fetch_most_popular),
     ]
 
-    # Each category gets its own client with its own token (dedicated rate limit)
-    for cat_name, cat_fn in categories:
-        token = get_token(cat_name)
+    # Detect shared tokens so we can split the budget fairly across categories
+    tokens = [get_token(name) for name, _ in categories]
+    num_categories = len(categories)
+    shared_token = len(set(tokens)) < num_categories
+
+    if shared_token:
+        print(f"\n⚠ Some categories share the same token — budget will be split evenly")
+        print(f"  TIP: Set GH_TOKEN_TRENDING, GH_TOKEN_NEW_RELEASES, GH_TOKEN_MOST_POPULAR "
+              f"to 3 separate PATs for 3× the rate limit")
+
+    for cat_idx, (cat_name, cat_fn) in enumerate(categories):
+        token = tokens[cat_idx]
+
         async with GitHubClient(token) as client:
-            # Check rate limit for this token
+            # Check actual rate limit for this token
             data, _ = await client.get("https://api.github.com/rate_limit")
             if data:
                 remaining = data.get("resources", {}).get("core", {}).get("remaining", 0)
                 limit = data.get("resources", {}).get("core", {}).get("limit", 0)
-                print(f"\n[{cat_name}] API budget: {remaining}/{limit} requests remaining")
+
+                if shared_token:
+                    # Token is shared — only use this category's fair share
+                    categories_left = num_categories - cat_idx
+                    category_budget = (remaining - RATE_LIMIT_FLOOR) // categories_left
+                    # Cap _rate_remaining so process_category divides only our share
+                    client._rate_remaining = category_budget + RATE_LIMIT_FLOOR
+                    print(f"\n[{cat_name}] API budget: {remaining}/{limit} remaining, "
+                          f"category share: ~{category_budget} (1/{categories_left} of shared token)")
+                else:
+                    print(f"\n[{cat_name}] API budget: {remaining}/{limit} requests remaining (dedicated token)")
+
                 if remaining < 500:
                     print(f"WARNING: Low rate limit for {cat_name}!", file=sys.stderr)
 
