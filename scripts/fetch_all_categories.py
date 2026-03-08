@@ -284,6 +284,7 @@ class GitHubClient:
     async def search_repos(self, query: str, sort: str = "stars", order: str = "desc",
                            pages: int = 3) -> List[Dict]:
         """Search repositories, fetching multiple pages concurrently."""
+        query = f"fork:true {query}"
         async with self._search_sem:
             # Fetch page 1 first to know total
             data, err = await self.get(
