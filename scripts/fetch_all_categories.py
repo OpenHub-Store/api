@@ -131,6 +131,19 @@ PLATFORMS = {
     },
 }
 
+# Keyword patterns in release asset filenames that indicate a platform build.
+# Matched against lowercased asset names for files ending in .zip / .tar.gz / .7z etc.
+# These catch cross-platform releases like "myapp-macos-arm64.zip" or "myapp-win-x64.zip"
+PLATFORM_ASSET_KEYWORDS = {
+    "android": ["android"],
+    "windows": ["win64", "win32", "windows", "-win-", "-win.", "win-x64", "win-arm64", "windows-x64"],
+    "macos": ["macos", "darwin", "osx", "mac-x64", "mac-arm64", "mac-universal", "-mac-", "-mac."],
+    "linux": ["linux", "linux-x64", "linux-arm64", "-linux-", "-linux."],
+}
+
+# Generic archive extensions to check for platform keyword matching
+_ARCHIVE_EXTENSIONS = (".zip", ".tar.gz", ".tar.xz", ".tar.bz2", ".7z")
+
 # ─── Data classes ──────────────────────────────────────────────────────────────
 
 
@@ -351,19 +364,30 @@ class GitHubClient:
 
         info = ReleaseInfo()
 
+        def _check_assets(assets: List[Dict]):
+            """Detect platform installers from release assets."""
+            for platform, cfg in PLATFORMS.items():
+                if info.has_installers.get(platform):
+                    continue
+                for asset in assets:
+                    name = asset.get("name", "").lower()
+                    # Match by dedicated installer extension (.exe, .dmg, .deb, etc.)
+                    if any(name.endswith(ext) for ext in cfg["installer_extensions"]):
+                        info.has_installers[platform] = True
+                        break
+                    # Match generic archives (.zip, .tar.gz) by platform keyword in name
+                    if any(name.endswith(ext) for ext in _ARCHIVE_EXTENSIONS):
+                        keywords = PLATFORM_ASSET_KEYWORDS.get(platform, [])
+                        if any(kw in name for kw in keywords):
+                            info.has_installers[platform] = True
+                            break
+
         # Try /releases/latest first (one API call)
         data, err = await self.get(f"https://api.github.com/repos/{full_name}/releases/latest")
         if data and not data.get("draft") and not data.get("prerelease"):
             info.has_release = True
             info.published_at = data.get("published_at")
-            assets = data.get("assets", [])
-            # Pre-check all platforms
-            for platform, cfg in PLATFORMS.items():
-                for asset in assets:
-                    name = asset.get("name", "").lower()
-                    if any(name.endswith(ext) for ext in cfg["installer_extensions"]):
-                        info.has_installers[platform] = True
-                        break
+            _check_assets(data.get("assets", []))
             self.release_cache[full_name] = info
             return info
 
@@ -377,13 +401,7 @@ class GitHubClient:
                 if not release.get("draft") and not release.get("prerelease"):
                     info.has_release = True
                     info.published_at = release.get("published_at")
-                    assets = release.get("assets", [])
-                    for platform, cfg in PLATFORMS.items():
-                        for asset in assets:
-                            name = asset.get("name", "").lower()
-                            if any(name.endswith(ext) for ext in cfg["installer_extensions"]):
-                                info.has_installers[platform] = True
-                                break
+                    _check_assets(release.get("assets", []))
                     break
 
         self.release_cache[full_name] = info
@@ -898,15 +916,19 @@ async def process_category(client: GitHubClient, category: str, fetch_fn, timest
             return
         repos = await fetch_fn(client, platform, budget)
 
-        # Never overwrite good cached data with empty results
+        # Never save 0 repos — preserve whatever exists in cache
+        if len(repos) == 0:
+            existing = _load_existing_count(category, platform)
+            print(f"  ⚠ 0 repos fetched — skipping save (existing cache: {existing} repos)")
+            return
+
+        # Don't overwrite good cached data with poor results
         min_threshold = 10 if category == "new-releases" else 30
         if len(repos) < min_threshold:
             existing = _load_existing_count(category, platform)
             if existing >= min_threshold:
                 print(f"  ⚠ Only {len(repos)} repos fetched but cache has {existing} — keeping cached data")
                 return
-            elif len(repos) == 0:
-                print(f"  ⚠ 0 repos fetched and no good cache — saving empty result")
 
         save_data(category, platform, repos, timestamp)
 
