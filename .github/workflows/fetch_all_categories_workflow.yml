@@ -27,17 +27,33 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           MIN_REMAINING=99999
+          DEDICATED=0
+          FALLBACK=0
           for label in TRENDING NEW_RELEASES MOST_POPULAR; do
             VAR="GH_TOKEN_${label}"
-            TOKEN="${!VAR:-$GITHUB_TOKEN}"
+            TOKEN="${!VAR}"
+            if [ -z "$TOKEN" ]; then
+              echo "::warning::$VAR not set — falling back to GITHUB_TOKEN"
+              TOKEN="$GITHUB_TOKEN"
+              FALLBACK=$((FALLBACK + 1))
+            else
+              DEDICATED=$((DEDICATED + 1))
+            fi
             RATE_LIMIT=$(curl -s -H "Authorization: token $TOKEN" \
               https://api.github.com/rate_limit)
             REMAINING=$(echo $RATE_LIMIT | jq -r '.resources.core.remaining')
-            echo "$label: $REMAINING remaining"
+            LIMIT=$(echo $RATE_LIMIT | jq -r '.resources.core.limit')
+            SRC="dedicated"
+            [ -z "${!VAR}" ] && SRC="fallback"
+            echo "$label: $REMAINING/$LIMIT remaining ($SRC)"
             if [ "$REMAINING" -lt "$MIN_REMAINING" ]; then
               MIN_REMAINING=$REMAINING
             fi
           done
+          if [ "$FALLBACK" -gt 0 ]; then
+            echo "::warning::$FALLBACK of 3 categories using shared GITHUB_TOKEN fallback — set GH_TOKEN_* secrets for independent rate limits"
+          fi
+          echo "$DEDICATED dedicated tokens, $FALLBACK using fallback"
           echo "remaining=$MIN_REMAINING" >> $GITHUB_OUTPUT
           if [ "$MIN_REMAINING" -gt 1000 ]; then
             echo "can_proceed=true" >> $GITHUB_OUTPUT
@@ -51,7 +67,7 @@ jobs:
     needs: check-rate-limit
     if: needs.check-rate-limit.outputs.can_proceed == 'true'
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 45
     permissions:
       contents: write
 

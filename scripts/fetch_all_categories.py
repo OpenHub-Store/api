@@ -244,11 +244,16 @@ class GitHubClient:
             await self._session.close()
 
     async def _wait_for_rate_limit(self):
-        """Pause if we're close to hitting the core rate limit."""
+        """Short pause for temporary rate-limit dips. Never waits more than 60s."""
         if self._rate_remaining < 10 and self._rate_reset:
             wait = self._rate_reset - time.time() + 2
+            if wait > 60:
+                # Don't block for long resets — let the budget system handle it
+                print(f"  ⚠ Rate limit exhausted ({self._rate_remaining} remaining, "
+                      f"reset in {wait:.0f}s) — skipping wait")
+                return
             if wait > 0:
-                print(f"  ⏳ Core rate limit low ({self._rate_remaining}), waiting {wait:.0f}s...")
+                print(f"  ⏳ Rate limit low ({self._rate_remaining}), short wait {wait:.0f}s...")
                 await asyncio.sleep(wait)
 
     def _update_rate_info(self, headers, url: str):
