@@ -57,6 +57,29 @@ MAX_RETRIES = 3
 RATE_LIMIT_FLOOR = 50               # stop verifying when remaining requests drop below this
 FORCE_REFRESH = os.environ.get("FORCE_REFRESH", "").lower() in ("true", "1", "yes")
 
+# Topics / keywords that indicate NSFW or inappropriate content.
+# Repos whose topics or description match any of these are excluded.
+BLOCKED_TOPICS = {
+    "nsfw", "porn", "pornography", "hentai", "e-hentai", "ehentai",
+    "adult", "adult-content", "xxx", "erotic", "erotica", "sex",
+    "nude", "nudes", "nudity", "lewd", "r18", "r-18",
+    "rule34", "rule-34", "booru", "gelbooru", "danbooru",
+    "nhentai", "hanime", "ecchi", "yaoi", "yuri", "doujin", "doujinshi",
+    "onlyfans", "fansly", "chaturbate", "xvideos", "pornhub",
+    "xhamster", "xnxx", "redtube", "cam-girl", "camgirl",
+    "fetish", "bdsm", "harem", "waifu", "18+",
+}
+
+
+def _is_blocked(repo: Dict) -> bool:
+    """Return True if the repo's topics or description contain blocked terms."""
+    topics = {t.lower() for t in repo.get("topics", [])}
+    if topics & BLOCKED_TOPICS:
+        return True
+    desc = (repo.get("description") or "").lower()
+    return any(term in desc for term in BLOCKED_TOPICS)
+
+
 # ─── Platform definitions ─────────────────────────────────────────────────────
 
 PLATFORMS = {
@@ -570,6 +593,8 @@ async def _collect_candidates(
             if fn in seen:
                 continue
             seen.add(fn)
+            if _is_blocked(repo):
+                continue
             vel = calculate_velocity(repo) if compute_velocity else 0.0
             c = make_candidate(repo, platform, velocity=vel, score_weight=weight)
             if c.score >= min_score:
