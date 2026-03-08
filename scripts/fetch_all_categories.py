@@ -220,14 +220,19 @@ class GitHubClient:
             await self._session.close()
 
     async def _wait_for_rate_limit(self):
-        """Pause if we're close to hitting the rate limit."""
+        """Pause if we're close to hitting the core rate limit."""
         if self._rate_remaining < 10 and self._rate_reset:
             wait = self._rate_reset - time.time() + 2
             if wait > 0:
-                print(f"  ⏳ Rate limit low ({self._rate_remaining}), waiting {wait:.0f}s...")
+                print(f"  ⏳ Core rate limit low ({self._rate_remaining}), waiting {wait:.0f}s...")
                 await asyncio.sleep(wait)
 
-    def _update_rate_info(self, headers):
+    def _update_rate_info(self, headers, url: str):
+        # Only track the core rate limit; ignore search API headers
+        # (search has its own 30/min limit that would pollute _rate_remaining)
+        resource = headers.get("X-RateLimit-Resource", "")
+        if resource == "search" or "/search/" in url:
+            return
         remaining = headers.get("X-RateLimit-Remaining")
         reset = headers.get("X-RateLimit-Reset")
         if remaining is not None:
@@ -243,7 +248,7 @@ class GitHubClient:
                 try:
                     async with self._session.get(url, params=params) as resp:
                         self._request_count += 1
-                        self._update_rate_info(resp.headers)
+                        self._update_rate_info(resp.headers, url)
 
                         if resp.status == 200:
                             return await resp.json(), None
