@@ -1,6 +1,6 @@
-# OpenHub Store API
+# GitHub Store API
 
-Automated pipeline that discovers open-source desktop and mobile applications on GitHub and categorizes them by platform and popularity. Runs daily via GitHub Actions and outputs structured JSON consumed by the OpenHub Store frontend.
+Automated pipeline that discovers open-source desktop and mobile applications on GitHub and categorizes them by platform and popularity. Runs daily via GitHub Actions and outputs structured JSON consumed by the GitHub Store frontend.
 
 ## What It Does
 
