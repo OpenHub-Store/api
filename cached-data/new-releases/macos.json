@@ -1,9 +1,108 @@
 {
   "category": "new-releases",
   "platform": "macos",
-  "lastUpdated": "2026-03-14T04:16:09.264244Z",
-  "totalCount": 102,
+  "lastUpdated": "2026-03-15T04:37:38.350531Z",
+  "totalCount": 101,
   "repositories": [
+    {
+      "id": 1151774192,
+      "name": "open-dronelog",
+      "fullName": "arpanghosh8453/open-dronelog",
+      "owner": {
+        "login": "arpanghosh8453",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/26424944?v=4"
+      },
+      "description": "Drone Log analyzer: A high-performance universal dashboard application for organizing and analyzing DJI/Litchi flight logs privately in one place. Built with Tauri v2, DuckDB, and React.",
+      "defaultBranch": "main",
+      "htmlUrl": "https://github.com/arpanghosh8453/open-dronelog",
+      "stargazersCount": 1181,
+      "forksCount": 148,
+      "language": "TypeScript",
+      "topics": [
+        "dashboard",
+        "data-analysis",
+        "data-visualization",
+        "database",
+        "desktop",
+        "dji",
+        "docker",
+        "drone",
+        "duckdb",
+        "flight",
+        "linux",
+        "logs",
+        "macos",
+        "react",
+        "self-hosted",
+        "statistics",
+        "tauri",
+        "uav",
+        "windows"
+      ],
+      "releasesUrl": "https://api.github.com/repos/arpanghosh8453/open-dronelog/releases{/id}",
+      "updatedAt": "2026-03-15T04:02:15Z",
+      "createdAt": "2026-02-06T22:06:59Z",
+      "latestReleaseDate": "2026-03-15T04:06:58Z",
+      "releaseRecency": 0,
+      "releaseRecencyText": "Released today"
+    },
+    {
+      "id": 1104535633,
+      "name": "Antigravity-Manager",
+      "fullName": "lbjlaq/Antigravity-Manager",
+      "owner": {
+        "login": "lbjlaq",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/22748003?v=4"
+      },
+      "description": "Professional Antigravity Account Manager & Switcher. One-click seamless account switching for Antigravity Tools. Built with Tauri v2 + React (Rust).专业的 Antigravity 账号管理与切换工具。为 Antigravity 提供一键无缝账号切换功能。",
+      "defaultBranch": "main",
+      "htmlUrl": "https://github.com/lbjlaq/Antigravity-Manager",
+      "stargazersCount": 26277,
+      "forksCount": 2882,
+      "language": "Rust",
+      "topics": [
+        "account-manager",
+        "antigravity"
+      ],
+      "releasesUrl": "https://api.github.com/repos/lbjlaq/Antigravity-Manager/releases{/id}",
+      "updatedAt": "2026-03-15T04:40:52Z",
+      "createdAt": "2025-11-26T10:47:13Z",
+      "latestReleaseDate": "2026-03-15T04:06:25Z",
+      "releaseRecency": 0,
+      "releaseRecencyText": "Released today"
+    },
+    {
+      "id": 1116398203,
+      "name": "PHTV",
+      "fullName": "PhamHungTien/PHTV",
+      "owner": {
+        "login": "PhamHungTien",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/181301764?v=4"
+      },
+      "description": "PHTV - Precision Hybrid Typing Vietnamese | Bộ gõ Tiếng Việt Đa năng & Chuẩn xác cho macOS",
+      "defaultBranch": "main",
+      "htmlUrl": "https://github.com/PhamHungTien/PHTV",
+      "stargazersCount": 130,
+      "forksCount": 21,
+      "language": "Swift",
+      "topics": [
+        "gotiengviet",
+        "input-method",
+        "macos",
+        "macosinput",
+        "phtv",
+        "swift",
+        "telex",
+        "vietnamese",
+        "vni"
+      ],
+      "releasesUrl": "https://api.github.com/repos/PhamHungTien/PHTV/releases{/id}",
+      "updatedAt": "2026-03-15T03:58:40Z",
+      "createdAt": "2025-12-14T19:26:44Z",
+      "latestReleaseDate": "2026-03-15T03:58:24Z",
+      "releaseRecency": 0,
+      "releaseRecencyText": "Released today"
+    },
     {
       "id": 1135492298,
       "name": "cockpit-tools",
@@ -15,8 +114,8 @@
       "description": " 🚀 通用 AI IDE 账号管理工具：支持 Antigravity / Codex / GitHub Copilot / Windsurf / Kiro / Cursor / Gemini-cli / CodeBuddy，多账号切换、配额监控、自动唤醒与多开实例管理。 🚀 Universal AI IDE account manager for Antigravity / Codex / GitHub Copilot / Windsurf / Kiro / Cursor / Gemini-cli / CodeBuddy, with multi-account switching, quota monitoring, wake-up automation, and multi-insta",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/jlcodes99/cockpit-tools",
-      "stargazersCount": 1560,
-      "forksCount": 139,
+      "stargazersCount": 1645,
+      "forksCount": 145,
       "language": "Rust",
       "topics": [
         "account-manager",
@@ -30,92 +129,228 @@
         "windsurf"
       ],
       "releasesUrl": "https://api.github.com/repos/jlcodes99/cockpit-tools/releases{/id}",
-      "updatedAt": "2026-03-14T04:17:02Z",
+      "updatedAt": "2026-03-15T04:42:10Z",
       "createdAt": "2026-01-16T07:09:32Z",
-      "latestReleaseDate": "2026-03-14T04:16:38Z",
+      "latestReleaseDate": "2026-03-15T03:31:59Z",
       "releaseRecency": 0,
       "releaseRecencyText": "Released today"
     },
     {
-      "id": 1138666663,
-      "name": "screenize",
-      "fullName": "syi0808/screenize",
+      "id": 1133911335,
+      "name": "openwork",
+      "fullName": "different-ai/openwork",
       "owner": {
-        "login": "syi0808",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/66503450?v=4"
+        "login": "different-ai",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/118544361?v=4"
       },
-      "description": "Open-source macOS screen recording app with auto-zoom, cursor effects, and timeline editing — Screen Studio alternative.",
-      "defaultBranch": "main",
-      "htmlUrl": "https://github.com/syi0808/screenize",
-      "stargazersCount": 255,
-      "forksCount": 11,
-      "language": "Swift",
+      "description": "An open-source alternative to Claude Cowork built for teams, powered by opencode",
+      "defaultBranch": "dev",
+      "htmlUrl": "https://github.com/different-ai/openwork",
+      "stargazersCount": 11760,
+      "forksCount": 1069,
+      "language": "TypeScript",
       "topics": [],
-      "releasesUrl": "https://api.github.com/repos/syi0808/screenize/releases{/id}",
-      "updatedAt": "2026-03-14T04:00:42Z",
-      "createdAt": "2026-01-21T00:57:07Z",
-      "latestReleaseDate": "2026-03-14T04:01:49Z",
+      "releasesUrl": "https://api.github.com/repos/different-ai/openwork/releases{/id}",
+      "updatedAt": "2026-03-15T04:30:57Z",
+      "createdAt": "2026-01-14T01:39:31Z",
+      "latestReleaseDate": "2026-03-15T03:20:31Z",
       "releaseRecency": 0,
       "releaseRecencyText": "Released today"
     },
     {
-      "id": 1135203978,
-      "name": "Snapzy",
-      "fullName": "duongductrong/Snapzy",
+      "id": 1166139870,
+      "name": "openfang",
+      "fullName": "RightNow-AI/openfang",
       "owner": {
-        "login": "duongductrong",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/39333905?v=4"
+        "login": "RightNow-AI",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/226207176?v=4"
       },
-      "description": "An open-source native macOS screenshot and screen recording app. A CleanShot X alternative.",
-      "defaultBranch": "master",
-      "htmlUrl": "https://github.com/duongductrong/Snapzy",
+      "description": "Open-source Agent Operating System",
+      "defaultBranch": "main",
+      "htmlUrl": "https://github.com/RightNow-AI/openfang",
+      "stargazersCount": 14425,
+      "forksCount": 1702,
+      "language": "Rust",
+      "topics": [
+        "agent-framework",
+        "ai-agents",
+        "llm",
+        "mcp",
+        "open-source",
+        "openclaw",
+        "operating-system",
+        "rust"
+      ],
+      "releasesUrl": "https://api.github.com/repos/RightNow-AI/openfang/releases{/id}",
+      "updatedAt": "2026-03-15T04:35:21Z",
+      "createdAt": "2026-02-24T23:12:38Z",
+      "latestReleaseDate": "2026-03-15T03:00:17Z",
+      "releaseRecency": 0,
+      "releaseRecencyText": "Released today"
+    },
+    {
+      "id": 1167315844,
+      "name": "petal",
+      "fullName": "Aayush9029/petal",
+      "owner": {
+        "login": "Aayush9029",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/43297314?v=4"
+      },
+      "description": "Petal is a native macOS menu bar app for fast, local-first audio transcription.",
+      "defaultBranch": "main",
+      "htmlUrl": "https://github.com/Aayush9029/petal",
       "stargazersCount": 85,
+      "forksCount": 6,
+      "language": "Swift",
+      "topics": [
+        "macos",
+        "menu-bar",
+        "speech-to-text",
+        "swift",
+        "swiftui",
+        "transcription"
+      ],
+      "releasesUrl": "https://api.github.com/repos/Aayush9029/petal/releases{/id}",
+      "updatedAt": "2026-03-15T02:53:34Z",
+      "createdAt": "2026-02-26T06:53:55Z",
+      "latestReleaseDate": "2026-03-15T02:45:06Z",
+      "releaseRecency": 0,
+      "releaseRecencyText": "Released today"
+    },
+    {
+      "id": 893684207,
+      "name": "Termix",
+      "fullName": "Termix-SSH/Termix",
+      "owner": {
+        "login": "Termix-SSH",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/236961563?v=4"
+      },
+      "description": "Termix is a web-based server management platform with SSH terminal, tunneling, and file editing capabilities.",
+      "defaultBranch": "main",
+      "htmlUrl": "https://github.com/Termix-SSH/Termix",
+      "stargazersCount": 11321,
+      "forksCount": 459,
+      "language": "TypeScript",
+      "topics": [
+        "docker",
+        "file-management",
+        "self-hosted",
+        "ssh",
+        "ssh-tunnel",
+        "termix"
+      ],
+      "releasesUrl": "https://api.github.com/repos/Termix-SSH/Termix/releases{/id}",
+      "updatedAt": "2026-03-15T04:28:17Z",
+      "createdAt": "2024-11-25T02:46:36Z",
+      "latestReleaseDate": "2026-03-15T01:12:01Z",
+      "releaseRecency": 0,
+      "releaseRecencyText": "Released today"
+    },
+    {
+      "id": 1136864674,
+      "name": "cc-status-bar",
+      "fullName": "usedhonda/cc-status-bar",
+      "owner": {
+        "login": "usedhonda",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/70754?v=4"
+      },
+      "description": "macOS menu bar app for real-time Claude Code session monitoring",
+      "defaultBranch": "main",
+      "htmlUrl": "https://github.com/usedhonda/cc-status-bar",
+      "stargazersCount": 68,
       "forksCount": 3,
       "language": "Swift",
-      "topics": [
-        "capture",
-        "cleanshot-alternative",
-        "recording-app",
-        "screenshot",
-        "screenshot-capture",
-        "swiftui"
-      ],
-      "releasesUrl": "https://api.github.com/repos/duongductrong/Snapzy/releases{/id}",
-      "updatedAt": "2026-03-14T03:52:20Z",
-      "createdAt": "2026-01-15T19:29:33Z",
-      "latestReleaseDate": "2026-03-14T03:52:09Z",
+      "topics": [],
+      "releasesUrl": "https://api.github.com/repos/usedhonda/cc-status-bar/releases{/id}",
+      "updatedAt": "2026-03-15T01:07:45Z",
+      "createdAt": "2026-01-18T13:58:57Z",
+      "latestReleaseDate": "2026-03-15T01:09:07Z",
       "releaseRecency": 0,
       "releaseRecencyText": "Released today"
     },
     {
-      "id": 904534974,
-      "name": "go-stock",
-      "fullName": "ArvinLovegood/go-stock",
+      "id": 1131928615,
+      "name": "proxmoxbar-macos",
+      "fullName": "ryzenixx/proxmoxbar-macos",
       "owner": {
-        "login": "ArvinLovegood",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/7401917?v=4"
+        "login": "ryzenixx",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/96339570?v=4"
       },
-      "description": "🦄🦄🦄AI赋能股票分析：AI加持的股票分析/选股工具。股票行情获取，AI热点资讯分析，AI资金/财务分析，涨跌报警推送。支持A股，港股，美股。支持市场整体/个股情绪分析，AI辅助选股等。数据全部保留在本地。支持DeepSeek，OpenAI， Ollama，LMStudio，AnythingLLM，硅基流动，火山方舟，阿里云百炼等平台或模型。",
-      "defaultBranch": "dev",
-      "htmlUrl": "https://github.com/ArvinLovegood/go-stock",
-      "stargazersCount": 4901,
-      "forksCount": 820,
-      "language": "Go",
+      "description": "Native macOS menu bar app for monitoring and controlling Proxmox VE resources.",
+      "defaultBranch": "develop",
+      "htmlUrl": "https://github.com/ryzenixx/proxmoxbar-macos",
+      "stargazersCount": 143,
+      "forksCount": 6,
+      "language": "Swift",
       "topics": [
-        "anythingllm",
-        "deepseek",
-        "golang",
-        "lmstudio",
-        "naiveui",
-        "ollama",
-        "openai",
-        "stock",
-        "wails"
+        "macos",
+        "menubar",
+        "proxmox",
+        "swift",
+        "swiftui"
       ],
-      "releasesUrl": "https://api.github.com/repos/ArvinLovegood/go-stock/releases{/id}",
-      "updatedAt": "2026-03-14T03:55:22Z",
-      "createdAt": "2024-12-17T04:46:28Z",
-      "latestReleaseDate": "2026-03-14T03:49:58Z",
+      "releasesUrl": "https://api.github.com/repos/ryzenixx/proxmoxbar-macos/releases{/id}",
+      "updatedAt": "2026-03-15T02:03:56Z",
+      "createdAt": "2026-01-11T00:58:36Z",
+      "latestReleaseDate": "2026-03-15T00:34:16Z",
+      "releaseRecency": 0,
+      "releaseRecencyText": "Released today"
+    },
+    {
+      "id": 1130907046,
+      "name": "ltx-video-mac",
+      "fullName": "james-see/ltx-video-mac",
+      "owner": {
+        "login": "james-see",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/616585?v=4"
+      },
+      "description": "Native macOS app for AI video generation using LTX-Video model, optimized for Apple Silicon",
+      "defaultBranch": "main",
+      "htmlUrl": "https://github.com/james-see/ltx-video-mac",
+      "stargazersCount": 66,
+      "forksCount": 9,
+      "language": "Swift",
+      "topics": [
+        "image-to-video",
+        "ltx-2",
+        "ltx-video",
+        "mac-app",
+        "mac-native",
+        "text-to-video"
+      ],
+      "releasesUrl": "https://api.github.com/repos/james-see/ltx-video-mac/releases{/id}",
+      "updatedAt": "2026-03-15T03:53:44Z",
+      "createdAt": "2026-01-09T07:27:26Z",
+      "latestReleaseDate": "2026-03-15T00:16:57Z",
+      "releaseRecency": 0,
+      "releaseRecencyText": "Released today"
+    },
+    {
+      "id": 1069446208,
+      "name": "vibeproxy",
+      "fullName": "automazeio/vibeproxy",
+      "owner": {
+        "login": "automazeio",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/125381035?v=4"
+      },
+      "description": "Native macOS menu bar app to use your Claude Code & ChatGPT subscriptions with AI coding tools - no API keys needed",
+      "defaultBranch": "main",
+      "htmlUrl": "https://github.com/automazeio/vibeproxy",
+      "stargazersCount": 1719,
+      "forksCount": 115,
+      "language": "Swift",
+      "topics": [
+        "claude-code",
+        "claudecode",
+        "cli-proxy",
+        "codex",
+        "factory-droids",
+        "gpt-5-codex"
+      ],
+      "releasesUrl": "https://api.github.com/repos/automazeio/vibeproxy/releases{/id}",
+      "updatedAt": "2026-03-15T00:13:32Z",
+      "createdAt": "2025-10-04T00:36:21Z",
+      "latestReleaseDate": "2026-03-15T00:13:30Z",
       "releaseRecency": 0,
       "releaseRecencyText": "Released today"
     },
@@ -130,8 +365,8 @@
       "description": "Own your AI. The native macOS harness for AI agents -- any model, persistent memory, autonomous execution, cryptographic identity. Built in Swift. Fully offline. Open source.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/osaurus-ai/osaurus",
-      "stargazersCount": 4158,
-      "forksCount": 175,
+      "stargazersCount": 4237,
+      "forksCount": 182,
       "language": "Swift",
       "topics": [
         "anthropic",
@@ -146,11 +381,594 @@
         "swift"
       ],
       "releasesUrl": "https://api.github.com/repos/osaurus-ai/osaurus/releases{/id}",
-      "updatedAt": "2026-03-14T04:14:58Z",
+      "updatedAt": "2026-03-15T04:38:41Z",
       "createdAt": "2025-08-17T15:05:39Z",
-      "latestReleaseDate": "2026-03-14T03:14:30Z",
+      "latestReleaseDate": "2026-03-14T23:22:27Z",
       "releaseRecency": 0,
       "releaseRecencyText": "Released today"
+    },
+    {
+      "id": 776121034,
+      "name": "omi",
+      "fullName": "BasedHardware/omi",
+      "owner": {
+        "login": "BasedHardware",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/162546372?v=4"
+      },
+      "description": "AI wearables. Put it on, speak, transcribe, automatically",
+      "defaultBranch": "main",
+      "htmlUrl": "https://github.com/BasedHardware/omi",
+      "stargazersCount": 7809,
+      "forksCount": 1414,
+      "language": "Dart",
+      "topics": [
+        "ai",
+        "app",
+        "bci",
+        "c",
+        "flutter",
+        "friend",
+        "mobile",
+        "necklace",
+        "nextjs",
+        "omi",
+        "personas",
+        "python",
+        "smartglasses",
+        "summary",
+        "transcription",
+        "wearable"
+      ],
+      "releasesUrl": "https://api.github.com/repos/BasedHardware/omi/releases{/id}",
+      "updatedAt": "2026-03-15T04:01:02Z",
+      "createdAt": "2024-03-22T18:12:25Z",
+      "latestReleaseDate": "2026-03-14T23:09:21Z",
+      "releaseRecency": 0,
+      "releaseRecencyText": "Released today"
+    },
+    {
+      "id": 1176047082,
+      "name": "bromure",
+      "fullName": "rderaison/bromure",
+      "owner": {
+        "login": "rderaison",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/4990775?v=4"
+      },
+      "description": "Secure, ephemeral browsing in a disposable VM (macOS only)",
+      "defaultBranch": "main",
+      "htmlUrl": "https://github.com/rderaison/bromure",
+      "stargazersCount": 124,
+      "forksCount": 4,
+      "language": "Swift",
+      "topics": [],
+      "releasesUrl": "https://api.github.com/repos/rderaison/bromure/releases{/id}",
+      "updatedAt": "2026-03-15T02:32:39Z",
+      "createdAt": "2026-03-08T14:47:29Z",
+      "latestReleaseDate": "2026-03-14T22:53:29Z",
+      "releaseRecency": 0,
+      "releaseRecencyText": "Released today"
+    },
+    {
+      "id": 1139168040,
+      "name": "supacode",
+      "fullName": "supabitapp/supacode",
+      "owner": {
+        "login": "supabitapp",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/255815177?v=4"
+      },
+      "description": "Native terminal coding agents command center.",
+      "defaultBranch": "main",
+      "htmlUrl": "https://github.com/supabitapp/supacode",
+      "stargazersCount": 482,
+      "forksCount": 36,
+      "language": "Swift",
+      "topics": [],
+      "releasesUrl": "https://api.github.com/repos/supabitapp/supacode/releases{/id}",
+      "updatedAt": "2026-03-14T22:52:20Z",
+      "createdAt": "2026-01-21T15:59:32Z",
+      "latestReleaseDate": "2026-03-14T22:52:39Z",
+      "releaseRecency": 0,
+      "releaseRecencyText": "Released today"
+    },
+    {
+      "id": 51050486,
+      "name": "Monal",
+      "fullName": "monal-im/Monal",
+      "owner": {
+        "login": "monal-im",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/47145452?v=4"
+      },
+      "description": "Monal for XMPP (iOS and macOS)",
+      "defaultBranch": "develop",
+      "htmlUrl": "https://github.com/monal-im/Monal",
+      "stargazersCount": 638,
+      "forksCount": 127,
+      "language": "Objective-C",
+      "topics": [
+        "apple",
+        "chat",
+        "instant-messaging",
+        "ios",
+        "jabber",
+        "macos",
+        "messenger",
+        "swift",
+        "xmpp",
+        "xmpp-client"
+      ],
+      "releasesUrl": "https://api.github.com/repos/monal-im/Monal/releases{/id}",
+      "updatedAt": "2026-03-14T22:38:23Z",
+      "createdAt": "2016-02-04T03:49:45Z",
+      "latestReleaseDate": "2026-03-14T19:24:18Z",
+      "releaseRecency": 0,
+      "releaseRecencyText": "Released today"
+    },
+    {
+      "id": 471226425,
+      "name": "MaaEnd",
+      "fullName": "MaaEnd/MaaEnd",
+      "owner": {
+        "login": "MaaEnd",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/246811593?v=4"
+      },
+      "description": "《明日方舟：终末地》游戏小助手",
+      "defaultBranch": "v2",
+      "htmlUrl": "https://github.com/MaaEnd/MaaEnd",
+      "stargazersCount": 1847,
+      "forksCount": 138,
+      "language": "Python",
+      "topics": [],
+      "releasesUrl": "https://api.github.com/repos/MaaEnd/MaaEnd/releases{/id}",
+      "updatedAt": "2026-03-15T03:07:23Z",
+      "createdAt": "2022-03-18T03:43:10Z",
+      "latestReleaseDate": "2026-03-14T16:59:22Z",
+      "releaseRecency": 0,
+      "releaseRecencyText": "Released today"
+    },
+    {
+      "id": 1117420738,
+      "name": "LaunchX",
+      "fullName": "twotwoba/LaunchX",
+      "owner": {
+        "login": "twotwoba",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/43981489?v=4"
+      },
+      "description": "🚀 A modern,lightly and intelligent macOS launcher. 一个现代的、设计简洁且智能的 macOS 启动器",
+      "defaultBranch": "main",
+      "htmlUrl": "https://github.com/twotwoba/LaunchX",
+      "stargazersCount": 53,
+      "forksCount": 2,
+      "language": "Swift",
+      "topics": [],
+      "releasesUrl": "https://api.github.com/repos/twotwoba/LaunchX/releases{/id}",
+      "updatedAt": "2026-03-14T16:26:23Z",
+      "createdAt": "2025-12-16T09:39:44Z",
+      "latestReleaseDate": "2026-03-14T16:26:14Z",
+      "releaseRecency": 0,
+      "releaseRecencyText": "Released today"
+    },
+    {
+      "id": 384520418,
+      "name": "MaaAssistantArknights",
+      "fullName": "MaaAssistantArknights/MaaAssistantArknights",
+      "owner": {
+        "login": "MaaAssistantArknights",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/97677443?v=4"
+      },
+      "description": "《明日方舟》小助手，全日常一键长草！| A one-click tool for the daily tasks of Arknights, supporting all clients.",
+      "defaultBranch": "dev-v2",
+      "htmlUrl": "https://github.com/MaaAssistantArknights/MaaAssistantArknights",
+      "stargazersCount": 19897,
+      "forksCount": 2516,
+      "language": "C++",
+      "topics": [
+        "arknights",
+        "computer-vision",
+        "maa"
+      ],
+      "releasesUrl": "https://api.github.com/repos/MaaAssistantArknights/MaaAssistantArknights/releases{/id}",
+      "updatedAt": "2026-03-15T04:30:14Z",
+      "createdAt": "2021-07-09T18:26:38Z",
+      "latestReleaseDate": "2026-03-14T15:12:16Z",
+      "releaseRecency": 0,
+      "releaseRecencyText": "Released today"
+    },
+    {
+      "id": 1080157453,
+      "name": "plezy",
+      "fullName": "edde746/plezy",
+      "owner": {
+        "login": "edde746",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/86283021?v=4"
+      },
+      "description": "Modern cross-platform Plex client built with Flutter",
+      "defaultBranch": "main",
+      "htmlUrl": "https://github.com/edde746/plezy",
+      "stargazersCount": 1568,
+      "forksCount": 100,
+      "language": "Dart",
+      "topics": [
+        "cross-platform",
+        "flutter",
+        "plex",
+        "plex-api",
+        "plex-client",
+        "plex-media-server",
+        "plexmediaserver"
+      ],
+      "releasesUrl": "https://api.github.com/repos/edde746/plezy/releases{/id}",
+      "updatedAt": "2026-03-15T04:06:35Z",
+      "createdAt": "2025-10-21T00:37:03Z",
+      "latestReleaseDate": "2026-03-14T15:05:02Z",
+      "releaseRecency": 0,
+      "releaseRecencyText": "Released today"
+    },
+    {
+      "id": 942663396,
+      "name": "snapgrid",
+      "fullName": "gustavscirulis/snapgrid",
+      "owner": {
+        "login": "gustavscirulis",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/3236203?v=4"
+      },
+      "description": "SnapGrid is an open-source Mac app for collecting, organizing, and analyzing UI screenshots. It uses AI to automatically detect UI components and patterns, making it a powerful tool for designers and developers.",
+      "defaultBranch": "main",
+      "htmlUrl": "https://github.com/gustavscirulis/snapgrid",
+      "stargazersCount": 105,
+      "forksCount": 7,
+      "language": "Swift",
+      "topics": [],
+      "releasesUrl": "https://api.github.com/repos/gustavscirulis/snapgrid/releases{/id}",
+      "updatedAt": "2026-03-14T14:15:49Z",
+      "createdAt": "2025-03-04T13:22:10Z",
+      "latestReleaseDate": "2026-03-14T14:46:51Z",
+      "releaseRecency": 0,
+      "releaseRecencyText": "Released today"
+    },
+    {
+      "id": 1167178106,
+      "name": "voxt",
+      "fullName": "hehehai/voxt",
+      "owner": {
+        "login": "hehehai",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/12692552?v=4"
+      },
+      "description": "🎙️Voice input and translation app for macOS. Press to talk, release to paste.",
+      "defaultBranch": "main",
+      "htmlUrl": "https://github.com/hehehai/voxt",
+      "stargazersCount": 325,
+      "forksCount": 25,
+      "language": "Swift",
+      "topics": [
+        "ai",
+        "ai-writer",
+        "asr",
+        "speaker",
+        "stt",
+        "typeless"
+      ],
+      "releasesUrl": "https://api.github.com/repos/hehehai/voxt/releases{/id}",
+      "updatedAt": "2026-03-15T03:41:57Z",
+      "createdAt": "2026-02-26T02:45:43Z",
+      "latestReleaseDate": "2026-03-14T14:07:13Z",
+      "releaseRecency": 0,
+      "releaseRecencyText": "Released today"
+    },
+    {
+      "id": 1136724882,
+      "name": "opencode-bar",
+      "fullName": "opgginc/opencode-bar",
+      "owner": {
+        "login": "opgginc",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/29659061?v=4"
+      },
+      "description": "Effortless token usage tracker for OpenCode",
+      "defaultBranch": "main",
+      "htmlUrl": "https://github.com/opgginc/opencode-bar",
+      "stargazersCount": 203,
+      "forksCount": 15,
+      "language": "Swift",
+      "topics": [
+        "antigravity",
+        "claude-code",
+        "copilot",
+        "gemini",
+        "mac-app",
+        "opencode"
+      ],
+      "releasesUrl": "https://api.github.com/repos/opgginc/opencode-bar/releases{/id}",
+      "updatedAt": "2026-03-15T03:15:00Z",
+      "createdAt": "2026-01-18T08:22:21Z",
+      "latestReleaseDate": "2026-03-14T13:59:27Z",
+      "releaseRecency": 0,
+      "releaseRecencyText": "Released today"
+    },
+    {
+      "id": 1099232644,
+      "name": "AppPorts",
+      "fullName": "wzh4869/AppPorts",
+      "owner": {
+        "login": "wzh4869",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/36331468?v=4"
+      },
+      "description": "📦 A macOS utility to seamlessly migrate applications to external storage and reclaim local disk space.【一款 macOS 工具，无缝迁移应用到外部存储并自动建立链接，释放宝贵的本地空间】",
+      "defaultBranch": "main",
+      "htmlUrl": "https://github.com/wzh4869/AppPorts",
+      "stargazersCount": 837,
+      "forksCount": 40,
+      "language": "Swift",
+      "topics": [
+        "app-manager",
+        "disk-cleaner",
+        "external-storage",
+        "full-disk-access",
+        "macos",
+        "macos-app",
+        "swift",
+        "swiftui",
+        "symbolic-links",
+        "utility"
+      ],
+      "releasesUrl": "https://api.github.com/repos/wzh4869/AppPorts/releases{/id}",
+      "updatedAt": "2026-03-15T02:06:01Z",
+      "createdAt": "2025-11-18T18:32:00Z",
+      "latestReleaseDate": "2026-03-14T13:00:06Z",
+      "releaseRecency": 0,
+      "releaseRecencyText": "Released today"
+    },
+    {
+      "id": 1144115288,
+      "name": "cmux",
+      "fullName": "manaflow-ai/cmux",
+      "owner": {
+        "login": "manaflow-ai",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/171392238?v=4"
+      },
+      "description": "Ghostty-based macOS terminal with vertical tabs and notifications for AI coding agents",
+      "defaultBranch": "main",
+      "htmlUrl": "https://github.com/manaflow-ai/cmux",
+      "stargazersCount": 6359,
+      "forksCount": 394,
+      "language": "Swift",
+      "topics": [
+        "amp",
+        "claude-code",
+        "codex",
+        "gemini",
+        "ghostty",
+        "opencode",
+        "terminal",
+        "tmux"
+      ],
+      "releasesUrl": "https://api.github.com/repos/manaflow-ai/cmux/releases{/id}",
+      "updatedAt": "2026-03-15T04:41:22Z",
+      "createdAt": "2026-01-28T10:03:24Z",
+      "latestReleaseDate": "2026-03-14T10:54:48Z",
+      "releaseRecency": 0,
+      "releaseRecencyText": "Released today"
+    },
+    {
+      "id": 1159332577,
+      "name": "LocalPorts",
+      "fullName": "onderk-motion/LocalPorts",
+      "owner": {
+        "login": "onderk-motion",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/18551167?v=4"
+      },
+      "description": null,
+      "defaultBranch": "main",
+      "htmlUrl": "https://github.com/onderk-motion/LocalPorts",
+      "stargazersCount": 71,
+      "forksCount": 3,
+      "language": "Swift",
+      "topics": [],
+      "releasesUrl": "https://api.github.com/repos/onderk-motion/LocalPorts/releases{/id}",
+      "updatedAt": "2026-03-14T10:41:56Z",
+      "createdAt": "2026-02-16T15:52:26Z",
+      "latestReleaseDate": "2026-03-14T10:38:43Z",
+      "releaseRecency": 0,
+      "releaseRecencyText": "Released today"
+    },
+    {
+      "id": 1117195875,
+      "name": "xkey",
+      "fullName": "xmannv/xkey",
+      "owner": {
+        "login": "xmannv",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/6252311?v=4"
+      },
+      "description": "Vietnamese Input for macOS - Bộ gõ Tiếng Việt mã nguồn mở cho macOS",
+      "defaultBranch": "main",
+      "htmlUrl": "https://github.com/xmannv/xkey",
+      "stargazersCount": 365,
+      "forksCount": 41,
+      "language": "Swift",
+      "topics": [],
+      "releasesUrl": "https://api.github.com/repos/xmannv/xkey/releases{/id}",
+      "updatedAt": "2026-03-15T04:19:29Z",
+      "createdAt": "2025-12-16T01:07:48Z",
+      "latestReleaseDate": "2026-03-14T08:17:05Z",
+      "releaseRecency": 0,
+      "releaseRecencyText": "Released today"
+    },
+    {
+      "id": 1169858409,
+      "name": "masko-code",
+      "fullName": "RousselPaul/masko-code",
+      "owner": {
+        "login": "RousselPaul",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/80116675?v=4"
+      },
+      "description": "Masko Code — a living mascot companion for your terminal",
+      "defaultBranch": "main",
+      "htmlUrl": "https://github.com/RousselPaul/masko-code",
+      "stargazersCount": 98,
+      "forksCount": 18,
+      "language": "Swift",
+      "topics": [],
+      "releasesUrl": "https://api.github.com/repos/RousselPaul/masko-code/releases{/id}",
+      "updatedAt": "2026-03-15T04:31:07Z",
+      "createdAt": "2026-03-01T10:31:59Z",
+      "latestReleaseDate": "2026-03-14T06:26:33Z",
+      "releaseRecency": 0,
+      "releaseRecencyText": "Released today"
+    },
+    {
+      "id": 1135203978,
+      "name": "Snapzy",
+      "fullName": "duongductrong/Snapzy",
+      "owner": {
+        "login": "duongductrong",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/39333905?v=4"
+      },
+      "description": "An open-source native macOS screenshot and screen recording app. A CleanShot X alternative.",
+      "defaultBranch": "master",
+      "htmlUrl": "https://github.com/duongductrong/Snapzy",
+      "stargazersCount": 96,
+      "forksCount": 5,
+      "language": "Swift",
+      "topics": [
+        "capture",
+        "cleanshot-alternative",
+        "recording-app",
+        "screenshot",
+        "screenshot-capture",
+        "swiftui"
+      ],
+      "releasesUrl": "https://api.github.com/repos/duongductrong/Snapzy/releases{/id}",
+      "updatedAt": "2026-03-14T22:38:02Z",
+      "createdAt": "2026-01-15T19:29:33Z",
+      "latestReleaseDate": "2026-03-14T06:08:46Z",
+      "releaseRecency": 0,
+      "releaseRecencyText": "Released today"
+    },
+    {
+      "id": 1111053300,
+      "name": "Deck",
+      "fullName": "yuzeguitarist/Deck",
+      "owner": {
+        "login": "yuzeguitarist",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/145409865?v=4"
+      },
+      "description": "A modern, native, privacy-first clipboard manager for macOS.",
+      "defaultBranch": "main",
+      "htmlUrl": "https://github.com/yuzeguitarist/Deck",
+      "stargazersCount": 528,
+      "forksCount": 13,
+      "language": "Swift",
+      "topics": [
+        "automation",
+        "clipboard",
+        "clipboard-manager",
+        "deck",
+        "deckclipboard",
+        "developer-tools",
+        "encryption",
+        "local-first",
+        "mac",
+        "macos",
+        "macos-app",
+        "macos-application",
+        "privacy-first",
+        "productivity",
+        "swift",
+        "swiftui"
+      ],
+      "releasesUrl": "https://api.github.com/repos/yuzeguitarist/Deck/releases{/id}",
+      "updatedAt": "2026-03-15T03:46:47Z",
+      "createdAt": "2025-12-06T07:06:53Z",
+      "latestReleaseDate": "2026-03-14T05:08:10Z",
+      "releaseRecency": 0,
+      "releaseRecencyText": "Released today"
+    },
+    {
+      "id": 643445235,
+      "name": "lobehub",
+      "fullName": "lobehub/lobehub",
+      "owner": {
+        "login": "lobehub",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/131470832?v=4"
+      },
+      "description": "The ultimate space for work and life — to find, build, and collaborate with agent teammates that grow with you. We are taking agent harness to the next level — enabling multi-agent collaboration, effortless agent team design, and introducing agents as the unit of work interaction.",
+      "defaultBranch": "canary",
+      "htmlUrl": "https://github.com/lobehub/lobehub",
+      "stargazersCount": 73659,
+      "forksCount": 14791,
+      "language": "TypeScript",
+      "topics": [
+        "agent",
+        "agent-collaboration",
+        "agent-harness",
+        "ai",
+        "chatgpt",
+        "claude",
+        "deepseek",
+        "gemini",
+        "gpt",
+        "knowledge-base",
+        "mcp",
+        "openai"
+      ],
+      "releasesUrl": "https://api.github.com/repos/lobehub/lobehub/releases{/id}",
+      "updatedAt": "2026-03-15T04:22:06Z",
+      "createdAt": "2023-05-21T07:19:12Z",
+      "latestReleaseDate": "2026-03-14T04:04:28Z",
+      "releaseRecency": 1,
+      "releaseRecencyText": "Released yesterday"
+    },
+    {
+      "id": 1138666663,
+      "name": "screenize",
+      "fullName": "syi0808/screenize",
+      "owner": {
+        "login": "syi0808",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/66503450?v=4"
+      },
+      "description": "Open-source macOS screen recording app with auto-zoom, cursor effects, and timeline editing — Screen Studio alternative.",
+      "defaultBranch": "main",
+      "htmlUrl": "https://github.com/syi0808/screenize",
+      "stargazersCount": 263,
+      "forksCount": 12,
+      "language": "Swift",
+      "topics": [],
+      "releasesUrl": "https://api.github.com/repos/syi0808/screenize/releases{/id}",
+      "updatedAt": "2026-03-15T03:28:40Z",
+      "createdAt": "2026-01-21T00:57:07Z",
+      "latestReleaseDate": "2026-03-14T04:01:49Z",
+      "releaseRecency": 1,
+      "releaseRecencyText": "Released yesterday"
+    },
+    {
+      "id": 904534974,
+      "name": "go-stock",
+      "fullName": "ArvinLovegood/go-stock",
+      "owner": {
+        "login": "ArvinLovegood",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/7401917?v=4"
+      },
+      "description": "🦄🦄🦄AI赋能股票分析：AI加持的股票分析/选股工具。股票行情获取，AI热点资讯分析，AI资金/财务分析，涨跌报警推送。支持A股，港股，美股。支持市场整体/个股情绪分析，AI辅助选股等。数据全部保留在本地。支持DeepSeek，OpenAI， Ollama，LMStudio，AnythingLLM，硅基流动，火山方舟，阿里云百炼等平台或模型。",
+      "defaultBranch": "dev",
+      "htmlUrl": "https://github.com/ArvinLovegood/go-stock",
+      "stargazersCount": 4919,
+      "forksCount": 823,
+      "language": "Go",
+      "topics": [
+        "anythingllm",
+        "deepseek",
+        "golang",
+        "lmstudio",
+        "naiveui",
+        "ollama",
+        "openai",
+        "stock",
+        "wails"
+      ],
+      "releasesUrl": "https://api.github.com/repos/ArvinLovegood/go-stock/releases{/id}",
+      "updatedAt": "2026-03-15T04:23:38Z",
+      "createdAt": "2024-12-17T04:46:28Z",
+      "latestReleaseDate": "2026-03-14T03:49:58Z",
+      "releaseRecency": 1,
+      "releaseRecencyText": "Released yesterday"
     },
     {
       "id": 1141375692,
@@ -171,36 +989,8 @@
       "updatedAt": "2026-03-14T03:19:56Z",
       "createdAt": "2026-01-24T18:40:06Z",
       "latestReleaseDate": "2026-03-14T02:33:41Z",
-      "releaseRecency": 0,
-      "releaseRecencyText": "Released today"
-    },
-    {
-      "id": 1131928615,
-      "name": "proxmoxbar-macos",
-      "fullName": "ryzenixx/proxmoxbar-macos",
-      "owner": {
-        "login": "ryzenixx",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/96339570?v=4"
-      },
-      "description": "Native macOS menu bar app for monitoring and controlling Proxmox VE resources.",
-      "defaultBranch": "develop",
-      "htmlUrl": "https://github.com/ryzenixx/proxmoxbar-macos",
-      "stargazersCount": 139,
-      "forksCount": 6,
-      "language": "Swift",
-      "topics": [
-        "macos",
-        "menubar",
-        "proxmox",
-        "swift",
-        "swiftui"
-      ],
-      "releasesUrl": "https://api.github.com/repos/ryzenixx/proxmoxbar-macos/releases{/id}",
-      "updatedAt": "2026-03-14T01:56:06Z",
-      "createdAt": "2026-01-11T00:58:36Z",
-      "latestReleaseDate": "2026-03-14T01:47:28Z",
-      "releaseRecency": 0,
-      "releaseRecencyText": "Released today"
+      "releaseRecency": 1,
+      "releaseRecencyText": "Released yesterday"
     },
     {
       "id": 103010090,
@@ -213,46 +1003,16 @@
       "description": "LuLu is the free open-source macOS firewall",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/objective-see/LuLu",
-      "stargazersCount": 12140,
+      "stargazersCount": 12144,
       "forksCount": 549,
       "language": "Objective-C",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/objective-see/LuLu/releases{/id}",
-      "updatedAt": "2026-03-14T03:59:39Z",
+      "updatedAt": "2026-03-15T01:41:05Z",
       "createdAt": "2017-09-10T06:56:23Z",
       "latestReleaseDate": "2026-03-14T01:24:58Z",
-      "releaseRecency": 0,
-      "releaseRecencyText": "Released today"
-    },
-    {
-      "id": 1080157453,
-      "name": "plezy",
-      "fullName": "edde746/plezy",
-      "owner": {
-        "login": "edde746",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/86283021?v=4"
-      },
-      "description": "Modern cross-platform Plex client built with Flutter",
-      "defaultBranch": "main",
-      "htmlUrl": "https://github.com/edde746/plezy",
-      "stargazersCount": 1566,
-      "forksCount": 101,
-      "language": "Dart",
-      "topics": [
-        "cross-platform",
-        "flutter",
-        "plex",
-        "plex-api",
-        "plex-client",
-        "plex-media-server",
-        "plexmediaserver"
-      ],
-      "releasesUrl": "https://api.github.com/repos/edde746/plezy/releases{/id}",
-      "updatedAt": "2026-03-14T04:03:37Z",
-      "createdAt": "2025-10-21T00:37:03Z",
-      "latestReleaseDate": "2026-03-14T01:16:48Z",
-      "releaseRecency": 0,
-      "releaseRecencyText": "Released today"
+      "releaseRecency": 1,
+      "releaseRecencyText": "Released yesterday"
     },
     {
       "id": 1060421643,
@@ -265,7 +1025,7 @@
       "description": "Session browser + Agent Cockpit +  Analytics + Limits tracker for Codex CLI,  Claude Code, OpenCode, Gemini CLI, Factory Droid , GitHub Copilot CLI & OpenClaw. Search/filter ALL past sessions,  archive sessions, resume instantly, see rate limits in real-time. Native macOS app.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/jazzyalex/agent-sessions",
-      "stargazersCount": 312,
+      "stargazersCount": 315,
       "forksCount": 14,
       "language": "Swift",
       "topics": [
@@ -287,11 +1047,11 @@
         "vibe-coding"
       ],
       "releasesUrl": "https://api.github.com/repos/jazzyalex/agent-sessions/releases{/id}",
-      "updatedAt": "2026-03-14T03:27:42Z",
+      "updatedAt": "2026-03-15T03:30:45Z",
       "createdAt": "2025-09-19T22:15:22Z",
       "latestReleaseDate": "2026-03-14T01:12:38Z",
-      "releaseRecency": 0,
-      "releaseRecencyText": "Released today"
+      "releaseRecency": 1,
+      "releaseRecencyText": "Released yesterday"
     },
     {
       "id": 9243402,
@@ -304,8 +1064,8 @@
       "description": "Lightweight Plain-Text Editor for macOS",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/coteditor/CotEditor",
-      "stargazersCount": 7701,
-      "forksCount": 477,
+      "stargazersCount": 7704,
+      "forksCount": 478,
       "language": "Swift",
       "topics": [
         "cocoa",
@@ -318,11 +1078,11 @@
         "texteditor"
       ],
       "releasesUrl": "https://api.github.com/repos/coteditor/CotEditor/releases{/id}",
-      "updatedAt": "2026-03-14T01:33:29Z",
+      "updatedAt": "2026-03-15T02:41:58Z",
       "createdAt": "2013-04-05T14:51:28Z",
       "latestReleaseDate": "2026-03-13T23:41:31Z",
-      "releaseRecency": 0,
-      "releaseRecencyText": "Released today"
+      "releaseRecency": 1,
+      "releaseRecencyText": "Released yesterday"
     },
     {
       "id": 1173211761,
@@ -343,78 +1103,8 @@
       "updatedAt": "2026-03-13T23:37:36Z",
       "createdAt": "2026-03-05T05:50:57Z",
       "latestReleaseDate": "2026-03-13T23:40:36Z",
-      "releaseRecency": 0,
-      "releaseRecencyText": "Released today"
-    },
-    {
-      "id": 633262635,
-      "name": "onyx",
-      "fullName": "onyx-dot-app/onyx",
-      "owner": {
-        "login": "onyx-dot-app",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/131946000?v=4"
-      },
-      "description": "Open Source AI Platform - AI Chat with advanced features that works with every LLM",
-      "defaultBranch": "main",
-      "htmlUrl": "https://github.com/onyx-dot-app/onyx",
-      "stargazersCount": 17864,
-      "forksCount": 2420,
-      "language": "Python",
-      "topics": [
-        "ai",
-        "ai-chat",
-        "chatgpt",
-        "chatui",
-        "enterprise-search",
-        "gen-ai",
-        "information-retrieval",
-        "llm",
-        "llm-ui",
-        "nextjs",
-        "python",
-        "rag",
-        "self-hosted",
-        "vector-search"
-      ],
-      "releasesUrl": "https://api.github.com/repos/onyx-dot-app/onyx/releases{/id}",
-      "updatedAt": "2026-03-14T04:15:55Z",
-      "createdAt": "2023-04-27T06:04:01Z",
-      "latestReleaseDate": "2026-03-13T23:24:32Z",
-      "releaseRecency": 0,
-      "releaseRecencyText": "Released today"
-    },
-    {
-      "id": 1156604835,
-      "name": "typewhisper-mac",
-      "fullName": "TypeWhisper/typewhisper-mac",
-      "owner": {
-        "login": "TypeWhisper",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/261256343?v=4"
-      },
-      "description": "Local speech-to-text for macOS — on-device AI, fully private, no cloud",
-      "defaultBranch": "main",
-      "htmlUrl": "https://github.com/TypeWhisper/typewhisper-mac",
-      "stargazersCount": 98,
-      "forksCount": 12,
-      "language": "Swift",
-      "topics": [
-        "apple-silicon",
-        "dictation",
-        "macos",
-        "on-device",
-        "privacy",
-        "speech-to-text",
-        "swiftui",
-        "transcription",
-        "whisper",
-        "whisperkit"
-      ],
-      "releasesUrl": "https://api.github.com/repos/TypeWhisper/typewhisper-mac/releases{/id}",
-      "updatedAt": "2026-03-14T03:02:40Z",
-      "createdAt": "2026-02-12T20:54:53Z",
-      "latestReleaseDate": "2026-03-13T23:09:09Z",
-      "releaseRecency": 0,
-      "releaseRecencyText": "Released today"
+      "releaseRecency": 1,
+      "releaseRecencyText": "Released yesterday"
     },
     {
       "id": 1142813663,
@@ -447,8 +1137,8 @@
       "updatedAt": "2026-03-14T03:05:53Z",
       "createdAt": "2026-01-26T22:15:21Z",
       "latestReleaseDate": "2026-03-13T22:26:39Z",
-      "releaseRecency": 0,
-      "releaseRecencyText": "Released today"
+      "releaseRecency": 1,
+      "releaseRecencyText": "Released yesterday"
     },
     {
       "id": 1120133815,
@@ -486,8 +1176,8 @@
       "updatedAt": "2026-03-13T22:12:02Z",
       "createdAt": "2025-12-20T15:01:37Z",
       "latestReleaseDate": "2026-03-13T22:12:50Z",
-      "releaseRecency": 0,
-      "releaseRecencyText": "Released today"
+      "releaseRecency": 1,
+      "releaseRecencyText": "Released yesterday"
     },
     {
       "id": 1035210905,
@@ -500,16 +1190,16 @@
       "description": "Less noise, more browsing.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/the-ora/browser",
-      "stargazersCount": 1988,
-      "forksCount": 73,
+      "stargazersCount": 1989,
+      "forksCount": 74,
       "language": "Swift",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/the-ora/browser/releases{/id}",
-      "updatedAt": "2026-03-13T23:41:24Z",
+      "updatedAt": "2026-03-14T19:45:49Z",
       "createdAt": "2025-08-09T22:25:31Z",
       "latestReleaseDate": "2026-03-13T18:40:18Z",
-      "releaseRecency": 0,
-      "releaseRecencyText": "Released today"
+      "releaseRecency": 1,
+      "releaseRecencyText": "Released yesterday"
     },
     {
       "id": 1165411755,
@@ -522,110 +1212,16 @@
       "description": "Local speech to text app - Talk instead of typing.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/fayazara/Kaze",
-      "stargazersCount": 108,
+      "stargazersCount": 112,
       "forksCount": 7,
       "language": "Swift",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/fayazara/Kaze/releases{/id}",
-      "updatedAt": "2026-03-14T00:51:51Z",
+      "updatedAt": "2026-03-15T00:17:28Z",
       "createdAt": "2026-02-24T06:15:19Z",
       "latestReleaseDate": "2026-03-13T17:17:02Z",
-      "releaseRecency": 0,
-      "releaseRecencyText": "Released today"
-    },
-    {
-      "id": 1157171418,
-      "name": "omlx",
-      "fullName": "jundot/omlx",
-      "owner": {
-        "login": "jundot",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/64250138?v=4"
-      },
-      "description": "LLM inference server with continuous batching & SSD caching for Apple Silicon — managed from the macOS menu bar",
-      "defaultBranch": "main",
-      "htmlUrl": "https://github.com/jundot/omlx",
-      "stargazersCount": 4306,
-      "forksCount": 325,
-      "language": "Python",
-      "topics": [
-        "apple-silicon",
-        "inference-server",
-        "llm",
-        "macos",
-        "mlx",
-        "openai-api"
-      ],
-      "releasesUrl": "https://api.github.com/repos/jundot/omlx/releases{/id}",
-      "updatedAt": "2026-03-14T04:18:44Z",
-      "createdAt": "2026-02-13T14:13:27Z",
-      "latestReleaseDate": "2026-03-13T17:00:17Z",
-      "releaseRecency": 0,
-      "releaseRecencyText": "Released today"
-    },
-    {
-      "id": 1080370450,
-      "name": "superset",
-      "fullName": "superset-sh/superset",
-      "owner": {
-        "login": "superset-sh",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/242687620?v=4"
-      },
-      "description": "IDE for the AI Agents Era - Run an army of Claude Code, Codex, etc. on your machine",
-      "defaultBranch": "main",
-      "htmlUrl": "https://github.com/superset-sh/superset",
-      "stargazersCount": 6890,
-      "forksCount": 475,
-      "language": "TypeScript",
-      "topics": [
-        "agentic-ai",
-        "ai-agents",
-        "claude-code",
-        "cli",
-        "codex",
-        "coding-agents",
-        "cursor-agent",
-        "desktop-app",
-        "developer-tools",
-        "electron",
-        "git-worktree",
-        "llm",
-        "mcp",
-        "opencode",
-        "orchestration",
-        "parallel-agents",
-        "terminal",
-        "tui",
-        "vibe-coding",
-        "worktrees"
-      ],
-      "releasesUrl": "https://api.github.com/repos/superset-sh/superset/releases{/id}",
-      "updatedAt": "2026-03-14T03:57:05Z",
-      "createdAt": "2025-10-21T09:16:51Z",
-      "latestReleaseDate": "2026-03-13T16:53:16Z",
-      "releaseRecency": 0,
-      "releaseRecencyText": "Released today"
-    },
-    {
-      "id": 1169858409,
-      "name": "masko-code",
-      "fullName": "RousselPaul/masko-code",
-      "owner": {
-        "login": "RousselPaul",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/80116675?v=4"
-      },
-      "description": "Masko Code — a living mascot companion for your terminal",
-      "defaultBranch": "main",
-      "htmlUrl": "https://github.com/RousselPaul/masko-code",
-      "stargazersCount": 70,
-      "forksCount": 13,
-      "language": "Swift",
-      "topics": [],
-      "releasesUrl": "https://api.github.com/repos/RousselPaul/masko-code/releases{/id}",
-      "updatedAt": "2026-03-14T01:41:44Z",
-      "createdAt": "2026-03-01T10:31:59Z",
-      "latestReleaseDate": "2026-03-13T16:53:09Z",
-      "releaseRecency": 0,
-      "releaseRecencyText": "Released today"
+      "releaseRecency": 1,
+      "releaseRecencyText": "Released yesterday"
     },
     {
       "id": 975734319,
@@ -638,47 +1234,49 @@
       "description": "The open source coding agent.",
       "defaultBranch": "dev",
       "htmlUrl": "https://github.com/anomalyco/opencode",
-      "stargazersCount": 121769,
-      "forksCount": 12610,
+      "stargazersCount": 122274,
+      "forksCount": 12689,
       "language": "TypeScript",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/anomalyco/opencode/releases{/id}",
-      "updatedAt": "2026-03-14T04:19:29Z",
+      "updatedAt": "2026-03-15T04:34:18Z",
       "createdAt": "2025-04-30T20:08:00Z",
       "latestReleaseDate": "2026-03-13T16:33:18Z",
-      "releaseRecency": 0,
-      "releaseRecencyText": "Released today"
+      "releaseRecency": 1,
+      "releaseRecencyText": "Released yesterday"
     },
     {
-      "id": 951357857,
-      "name": "NipaPlay-Reload",
-      "fullName": "MCDFsteve/NipaPlay-Reload",
+      "id": 1178318154,
+      "name": "mac-download-manager",
+      "fullName": "ephraimduncan/mac-download-manager",
       "owner": {
-        "login": "MCDFsteve",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/71605531?v=4"
+        "login": "ephraimduncan",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/55143799?v=4"
       },
-      "description": "NipaPlay-Reload 是一个现代化的跨平台本地视频播放器，支持 Windows、macOS、Linux、Android 和 iOS。集成了弹幕显示、多格式字幕支持、多音频轨道切换，新番查看等功能，支持挂载Emby/Jellyfin媒体库。采用 Flutter 开发，提供统一的用户体验。",
+      "description": "Open source download manager for Mac",
       "defaultBranch": "main",
-      "htmlUrl": "https://github.com/MCDFsteve/NipaPlay-Reload",
-      "stargazersCount": 1329,
-      "forksCount": 65,
-      "language": "Dart",
+      "htmlUrl": "https://github.com/ephraimduncan/mac-download-manager",
+      "stargazersCount": 61,
+      "forksCount": 3,
+      "language": "Swift",
       "topics": [
-        "bangumi",
-        "dandanplay",
-        "danmaku",
-        "dart",
-        "flutter",
-        "mpv",
-        "nipaplay",
-        "video"
+        "download-manager",
+        "download-manager-tools",
+        "downloader",
+        "free-download-manager",
+        "mac-download-manager",
+        "macos",
+        "manager",
+        "moltix",
+        "swift",
+        "swiftui"
       ],
-      "releasesUrl": "https://api.github.com/repos/MCDFsteve/NipaPlay-Reload/releases{/id}",
-      "updatedAt": "2026-03-14T04:05:03Z",
-      "createdAt": "2025-03-19T14:54:12Z",
-      "latestReleaseDate": "2026-03-13T16:14:51Z",
-      "releaseRecency": 0,
-      "releaseRecencyText": "Released today"
+      "releasesUrl": "https://api.github.com/repos/ephraimduncan/mac-download-manager/releases{/id}",
+      "updatedAt": "2026-03-15T04:26:19Z",
+      "createdAt": "2026-03-10T23:01:03Z",
+      "latestReleaseDate": "2026-03-13T15:01:37Z",
+      "releaseRecency": 1,
+      "releaseRecencyText": "Released yesterday"
     },
     {
       "id": 1044870411,
@@ -691,7 +1289,7 @@
       "description": "A lightweight and modern macOS code editor built for speed and simplicity - focused on speed, readability, and automatic syntax highlighting.  Minimal by design: quick edits, fast file access.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/h3pdesign/Neon-Vision-Editor",
-      "stargazersCount": 163,
+      "stargazersCount": 169,
       "forksCount": 8,
       "language": "Swift",
       "topics": [
@@ -707,92 +1305,11 @@
         "text-editor"
       ],
       "releasesUrl": "https://api.github.com/repos/h3pdesign/Neon-Vision-Editor/releases{/id}",
-      "updatedAt": "2026-03-14T00:49:23Z",
+      "updatedAt": "2026-03-15T00:59:33Z",
       "createdAt": "2025-08-26T10:24:41Z",
       "latestReleaseDate": "2026-03-13T14:26:55Z",
-      "releaseRecency": 0,
-      "releaseRecencyText": "Released today"
-    },
-    {
-      "id": 1117195875,
-      "name": "xkey",
-      "fullName": "xmannv/xkey",
-      "owner": {
-        "login": "xmannv",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/6252311?v=4"
-      },
-      "description": "Vietnamese Input for macOS - Bộ gõ Tiếng Việt mã nguồn mở cho macOS",
-      "defaultBranch": "main",
-      "htmlUrl": "https://github.com/xmannv/xkey",
-      "stargazersCount": 361,
-      "forksCount": 41,
-      "language": "Swift",
-      "topics": [],
-      "releasesUrl": "https://api.github.com/repos/xmannv/xkey/releases{/id}",
-      "updatedAt": "2026-03-14T01:33:11Z",
-      "createdAt": "2025-12-16T01:07:48Z",
-      "latestReleaseDate": "2026-03-13T13:13:04Z",
-      "releaseRecency": 0,
-      "releaseRecencyText": "Released today"
-    },
-    {
-      "id": 900550981,
-      "name": "char",
-      "fullName": "fastrepl/char",
-      "owner": {
-        "login": "fastrepl",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/142983232?v=4"
-      },
-      "description": "AI notepad for meetings",
-      "defaultBranch": "main",
-      "htmlUrl": "https://github.com/fastrepl/char",
-      "stargazersCount": 7943,
-      "forksCount": 556,
-      "language": "TypeScript",
-      "topics": [
-        "local-first",
-        "notetaking",
-        "open-source",
-        "react",
-        "rust",
-        "tauri",
-        "typescript"
-      ],
-      "releasesUrl": "https://api.github.com/repos/fastrepl/char/releases{/id}",
-      "updatedAt": "2026-03-14T03:50:34Z",
-      "createdAt": "2024-12-09T02:51:21Z",
-      "latestReleaseDate": "2026-03-13T12:14:19Z",
-      "releaseRecency": 0,
-      "releaseRecencyText": "Released today"
-    },
-    {
-      "id": 1069446208,
-      "name": "vibeproxy",
-      "fullName": "automazeio/vibeproxy",
-      "owner": {
-        "login": "automazeio",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/125381035?v=4"
-      },
-      "description": "Native macOS menu bar app to use your Claude Code & ChatGPT subscriptions with AI coding tools - no API keys needed",
-      "defaultBranch": "main",
-      "htmlUrl": "https://github.com/automazeio/vibeproxy",
-      "stargazersCount": 1709,
-      "forksCount": 114,
-      "language": "Swift",
-      "topics": [
-        "claude-code",
-        "claudecode",
-        "cli-proxy",
-        "codex",
-        "factory-droids",
-        "gpt-5-codex"
-      ],
-      "releasesUrl": "https://api.github.com/repos/automazeio/vibeproxy/releases{/id}",
-      "updatedAt": "2026-03-13T22:59:12Z",
-      "createdAt": "2025-10-04T00:36:21Z",
-      "latestReleaseDate": "2026-03-13T12:10:49Z",
-      "releaseRecency": 0,
-      "releaseRecencyText": "Released today"
+      "releaseRecency": 1,
+      "releaseRecencyText": "Released yesterday"
     },
     {
       "id": 951702218,
@@ -805,7 +1322,7 @@
       "description": "Transform your Mac. One icon at a time.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/Bengerthelorf/macIconChanger",
-      "stargazersCount": 463,
+      "stargazersCount": 464,
       "forksCount": 14,
       "language": "Swift",
       "topics": [
@@ -821,11 +1338,11 @@
         "swiftui"
       ],
       "releasesUrl": "https://api.github.com/repos/Bengerthelorf/macIconChanger/releases{/id}",
-      "updatedAt": "2026-03-13T12:00:44Z",
+      "updatedAt": "2026-03-14T09:19:02Z",
       "createdAt": "2025-03-20T05:29:11Z",
       "latestReleaseDate": "2026-03-13T12:00:43Z",
-      "releaseRecency": 0,
-      "releaseRecencyText": "Released today"
+      "releaseRecency": 1,
+      "releaseRecencyText": "Released yesterday"
     },
     {
       "id": 1030824017,
@@ -835,10 +1352,10 @@
         "login": "suhang12332",
         "avatarUrl": "https://avatars.githubusercontent.com/u/48873455?v=4"
       },
-      "description": "Swift Craft Launcher 是一个现代化的，使用Swift+SwiftUI开发的原生的 macOS 版 Minecraft 启动器",
+      "description": "Swift Craft Launcher is a modern, native macOS launcher for Minecraft, developed using Swift and SwiftUI.(Swift Craft Launcher 是一个现代化的，使用Swift+SwiftUI开发的原生的 macOS 版 Minecraft 启动器)",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/suhang12332/Swift-Craft-Launcher",
-      "stargazersCount": 195,
+      "stargazersCount": 196,
       "forksCount": 20,
       "language": "Swift",
       "topics": [
@@ -850,11 +1367,11 @@
         "swiftui"
       ],
       "releasesUrl": "https://api.github.com/repos/suhang12332/Swift-Craft-Launcher/releases{/id}",
-      "updatedAt": "2026-03-13T09:45:12Z",
+      "updatedAt": "2026-03-14T20:02:41Z",
       "createdAt": "2025-08-02T12:01:55Z",
       "latestReleaseDate": "2026-03-13T09:52:57Z",
-      "releaseRecency": 0,
-      "releaseRecencyText": "Released today"
+      "releaseRecency": 1,
+      "releaseRecencyText": "Released yesterday"
     },
     {
       "id": 385891121,
@@ -881,8 +1398,8 @@
       "updatedAt": "2026-03-13T05:39:56Z",
       "createdAt": "2021-07-14T09:54:07Z",
       "latestReleaseDate": "2026-03-13T09:31:01Z",
-      "releaseRecency": 0,
-      "releaseRecencyText": "Released today"
+      "releaseRecency": 1,
+      "releaseRecencyText": "Released yesterday"
     },
     {
       "id": 805155266,
@@ -895,8 +1412,8 @@
       "description": "AI productivity studio with smart chat, autonomous agents, and 300+ assistants. Unified access to frontier LLMs",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/CherryHQ/cherry-studio",
-      "stargazersCount": 41441,
-      "forksCount": 3831,
+      "stargazersCount": 41503,
+      "forksCount": 3839,
       "language": "TypeScript",
       "topics": [
         "ai-agent",
@@ -912,11 +1429,11 @@
         "vibe-coding"
       ],
       "releasesUrl": "https://api.github.com/repos/CherryHQ/cherry-studio/releases{/id}",
-      "updatedAt": "2026-03-14T04:17:57Z",
+      "updatedAt": "2026-03-15T04:16:32Z",
       "createdAt": "2024-05-24T01:56:26Z",
       "latestReleaseDate": "2026-03-13T09:08:21Z",
-      "releaseRecency": 0,
-      "releaseRecencyText": "Released today"
+      "releaseRecency": 1,
+      "releaseRecencyText": "Released yesterday"
     },
     {
       "id": 49502031,
@@ -947,8 +1464,8 @@
       "updatedAt": "2026-03-13T21:54:32Z",
       "createdAt": "2016-01-12T13:34:30Z",
       "latestReleaseDate": "2026-03-13T08:57:01Z",
-      "releaseRecency": 0,
-      "releaseRecencyText": "Released today"
+      "releaseRecency": 1,
+      "releaseRecencyText": "Released yesterday"
     },
     {
       "id": 748550413,
@@ -972,8 +1489,8 @@
       "updatedAt": "2026-03-13T09:45:01Z",
       "createdAt": "2024-01-26T08:24:37Z",
       "latestReleaseDate": "2026-03-13T08:29:10Z",
-      "releaseRecency": 0,
-      "releaseRecencyText": "Released today"
+      "releaseRecency": 1,
+      "releaseRecencyText": "Released yesterday"
     },
     {
       "id": 1121211038,
@@ -994,8 +1511,8 @@
       "updatedAt": "2026-03-13T15:49:37Z",
       "createdAt": "2025-12-22T16:03:05Z",
       "latestReleaseDate": "2026-03-13T07:28:56Z",
-      "releaseRecency": 0,
-      "releaseRecencyText": "Released today"
+      "releaseRecency": 1,
+      "releaseRecencyText": "Released yesterday"
     },
     {
       "id": 926811501,
@@ -1008,7 +1525,7 @@
       "description": "HiPixel is a native macOS application for AI-powered image super-resolution, built with SwiftUI and leveraging Upscayl's powerful AI models.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/okooo5km/HiPixel",
-      "stargazersCount": 1004,
+      "stargazersCount": 1007,
       "forksCount": 42,
       "language": "Swift",
       "topics": [
@@ -1017,143 +1534,9 @@
         "swiftui"
       ],
       "releasesUrl": "https://api.github.com/repos/okooo5km/HiPixel/releases{/id}",
-      "updatedAt": "2026-03-13T20:00:12Z",
+      "updatedAt": "2026-03-15T03:11:01Z",
       "createdAt": "2025-02-03T22:32:01Z",
       "latestReleaseDate": "2026-03-13T06:56:22Z",
-      "releaseRecency": 0,
-      "releaseRecencyText": "Released today"
-    },
-    {
-      "id": 1167178106,
-      "name": "voxt",
-      "fullName": "hehehai/voxt",
-      "owner": {
-        "login": "hehehai",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/12692552?v=4"
-      },
-      "description": "🎙️Voice input and translation app for macOS. Press to talk, release to paste.",
-      "defaultBranch": "main",
-      "htmlUrl": "https://github.com/hehehai/voxt",
-      "stargazersCount": 321,
-      "forksCount": 23,
-      "language": "Swift",
-      "topics": [
-        "ai",
-        "ai-writer",
-        "asr",
-        "speaker",
-        "stt",
-        "typeless"
-      ],
-      "releasesUrl": "https://api.github.com/repos/hehehai/voxt/releases{/id}",
-      "updatedAt": "2026-03-13T23:39:44Z",
-      "createdAt": "2026-02-26T02:45:43Z",
-      "latestReleaseDate": "2026-03-13T06:41:56Z",
-      "releaseRecency": 0,
-      "releaseRecencyText": "Released today"
-    },
-    {
-      "id": 1103012935,
-      "name": "openclaw",
-      "fullName": "openclaw/openclaw",
-      "owner": {
-        "login": "openclaw",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/252820863?v=4"
-      },
-      "description": "Your own personal AI assistant. Any OS. Any Platform. The lobster way. 🦞 ",
-      "defaultBranch": "main",
-      "htmlUrl": "https://github.com/openclaw/openclaw",
-      "stargazersCount": 311136,
-      "forksCount": 59186,
-      "language": "TypeScript",
-      "topics": [
-        "ai",
-        "assistant",
-        "crustacean",
-        "molty",
-        "openclaw",
-        "own-your-data",
-        "personal"
-      ],
-      "releasesUrl": "https://api.github.com/repos/openclaw/openclaw/releases{/id}",
-      "updatedAt": "2026-03-14T04:20:25Z",
-      "createdAt": "2025-11-24T10:16:47Z",
-      "latestReleaseDate": "2026-03-13T04:26:46Z",
-      "releaseRecency": 0,
-      "releaseRecencyText": "Released today"
-    },
-    {
-      "id": 291438522,
-      "name": "siyuan",
-      "fullName": "siyuan-note/siyuan",
-      "owner": {
-        "login": "siyuan-note",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/70468694?v=4"
-      },
-      "description": "A privacy-first, self-hosted, fully open source personal knowledge management software, written in typescript and golang.",
-      "defaultBranch": "master",
-      "htmlUrl": "https://github.com/siyuan-note/siyuan",
-      "stargazersCount": 41844,
-      "forksCount": 2609,
-      "language": "TypeScript",
-      "topics": [
-        "anki",
-        "chatgpt",
-        "deepseek",
-        "electron",
-        "evernote",
-        "knowledge-base",
-        "local-first",
-        "markdown",
-        "note-taking",
-        "notes-app",
-        "notion",
-        "obsidian",
-        "ocr",
-        "ollama",
-        "openclaw",
-        "pdf",
-        "s3",
-        "self-hosted",
-        "webdav"
-      ],
-      "releasesUrl": "https://api.github.com/repos/siyuan-note/siyuan/releases{/id}",
-      "updatedAt": "2026-03-14T04:01:53Z",
-      "createdAt": "2020-08-30T09:21:35Z",
-      "latestReleaseDate": "2026-03-13T03:43:52Z",
-      "releaseRecency": 1,
-      "releaseRecencyText": "Released yesterday"
-    },
-    {
-      "id": 10332822,
-      "name": "calibre",
-      "fullName": "kovidgoyal/calibre",
-      "owner": {
-        "login": "kovidgoyal",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/1308621?v=4"
-      },
-      "description": "The official source code repository for the calibre ebook manager",
-      "defaultBranch": "master",
-      "htmlUrl": "https://github.com/kovidgoyal/calibre",
-      "stargazersCount": 24370,
-      "forksCount": 2565,
-      "language": "Python",
-      "topics": [
-        "calibre",
-        "ebook",
-        "ebook-formats",
-        "ebook-manager",
-        "ebook-reader",
-        "ebooks",
-        "epub",
-        "epub-generation",
-        "kindle",
-        "python"
-      ],
-      "releasesUrl": "https://api.github.com/repos/kovidgoyal/calibre/releases{/id}",
-      "updatedAt": "2026-03-14T03:33:44Z",
-      "createdAt": "2013-05-28T10:03:23Z",
-      "latestReleaseDate": "2026-03-13T03:22:39Z",
       "releaseRecency": 1,
       "releaseRecencyText": "Released yesterday"
     },
@@ -1168,7 +1551,7 @@
       "description": "基于 SwiftUI + AppKit 构建、由 mihomo 驱动的原生 macOS 菜单栏代理客户端，专注轻量、稳定与可观测。",
       "defaultBranch": "dev",
       "htmlUrl": "https://github.com/Sitoi/ClashBar",
-      "stargazersCount": 684,
+      "stargazersCount": 697,
       "forksCount": 44,
       "language": "Swift",
       "topics": [
@@ -1178,11 +1561,11 @@
         "proxy"
       ],
       "releasesUrl": "https://api.github.com/repos/Sitoi/ClashBar/releases{/id}",
-      "updatedAt": "2026-03-14T03:07:41Z",
+      "updatedAt": "2026-03-15T04:27:13Z",
       "createdAt": "2026-02-10T01:37:09Z",
       "latestReleaseDate": "2026-03-13T03:04:35Z",
-      "releaseRecency": 1,
-      "releaseRecencyText": "Released yesterday"
+      "releaseRecency": 2,
+      "releaseRecencyText": "Released 2 days ago"
     },
     {
       "id": 809906907,
@@ -1195,47 +1578,16 @@
       "description": "Window peeking, alt-tab and other enhancements for macOS",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/ejbills/DockDoor",
-      "stargazersCount": 4034,
-      "forksCount": 121,
+      "stargazersCount": 4041,
+      "forksCount": 122,
       "language": "Swift",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/ejbills/DockDoor/releases{/id}",
-      "updatedAt": "2026-03-13T12:53:08Z",
+      "updatedAt": "2026-03-15T04:15:39Z",
       "createdAt": "2024-06-03T17:18:17Z",
       "latestReleaseDate": "2026-03-13T01:21:29Z",
-      "releaseRecency": 1,
-      "releaseRecencyText": "Released yesterday"
-    },
-    {
-      "id": 1144115288,
-      "name": "cmux",
-      "fullName": "manaflow-ai/cmux",
-      "owner": {
-        "login": "manaflow-ai",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/171392238?v=4"
-      },
-      "description": "Ghostty-based macOS terminal with vertical tabs and notifications for AI coding agents",
-      "defaultBranch": "main",
-      "htmlUrl": "https://github.com/manaflow-ai/cmux",
-      "stargazersCount": 6059,
-      "forksCount": 363,
-      "language": "Swift",
-      "topics": [
-        "amp",
-        "claude-code",
-        "codex",
-        "gemini",
-        "ghostty",
-        "opencode",
-        "terminal",
-        "tmux"
-      ],
-      "releasesUrl": "https://api.github.com/repos/manaflow-ai/cmux/releases{/id}",
-      "updatedAt": "2026-03-14T04:17:52Z",
-      "createdAt": "2026-01-28T10:03:24Z",
-      "latestReleaseDate": "2026-03-13T01:07:21Z",
-      "releaseRecency": 1,
-      "releaseRecencyText": "Released yesterday"
+      "releaseRecency": 2,
+      "releaseRecencyText": "Released 2 days ago"
     },
     {
       "id": 971679969,
@@ -1248,16 +1600,16 @@
       "description": "macOS app for screen-to-text OCR (Markdown, LaTeX, etc.)",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/SamuelZ12/screen-scribe",
-      "stargazersCount": 78,
+      "stargazersCount": 79,
       "forksCount": 8,
       "language": "Swift",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/SamuelZ12/screen-scribe/releases{/id}",
-      "updatedAt": "2026-03-13T01:30:14Z",
+      "updatedAt": "2026-03-14T05:33:20Z",
       "createdAt": "2025-04-23T22:33:18Z",
       "latestReleaseDate": "2026-03-13T00:43:45Z",
-      "releaseRecency": 1,
-      "releaseRecencyText": "Released yesterday"
+      "releaseRecency": 2,
+      "releaseRecencyText": "Released 2 days ago"
     },
     {
       "id": 1175139853,
@@ -1270,16 +1622,16 @@
       "description": "A MacAdmin-focused QuickLook plugin with GitOps in mind",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/macadmins/pique",
-      "stargazersCount": 71,
+      "stargazersCount": 73,
       "forksCount": 2,
       "language": "Swift",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/macadmins/pique/releases{/id}",
-      "updatedAt": "2026-03-14T00:45:56Z",
+      "updatedAt": "2026-03-15T04:20:17Z",
       "createdAt": "2026-03-07T09:33:23Z",
       "latestReleaseDate": "2026-03-13T00:34:38Z",
-      "releaseRecency": 1,
-      "releaseRecencyText": "Released yesterday"
+      "releaseRecency": 2,
+      "releaseRecencyText": "Released 2 days ago"
     },
     {
       "id": 1152798823,
@@ -1292,7 +1644,7 @@
       "description": "Sync Obsidian Tasks or TaskNotes with Apple Reminders or Things 3 — two-way sync, surgical edits, tag mapping, menu-bar app for macOS",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/Santofer/Remindian",
-      "stargazersCount": 128,
+      "stargazersCount": 129,
       "forksCount": 6,
       "language": "Swift",
       "topics": [
@@ -1308,11 +1660,11 @@
         "things3"
       ],
       "releasesUrl": "https://api.github.com/repos/Santofer/Remindian/releases{/id}",
-      "updatedAt": "2026-03-14T01:07:23Z",
+      "updatedAt": "2026-03-14T17:49:01Z",
       "createdAt": "2026-02-08T13:04:31Z",
       "latestReleaseDate": "2026-03-12T23:47:24Z",
-      "releaseRecency": 1,
-      "releaseRecencyText": "Released yesterday"
+      "releaseRecency": 2,
+      "releaseRecencyText": "Released 2 days ago"
     },
     {
       "id": 253461233,
@@ -1325,7 +1677,7 @@
       "description": "⛷ Lightweight Markdown app to help you write great sentences.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/tw93/MiaoYan",
-      "stargazersCount": 7724,
+      "stargazersCount": 7729,
       "forksCount": 452,
       "language": "Swift",
       "topics": [
@@ -1338,11 +1690,11 @@
         "swift"
       ],
       "releasesUrl": "https://api.github.com/repos/tw93/MiaoYan/releases{/id}",
-      "updatedAt": "2026-03-13T20:50:08Z",
+      "updatedAt": "2026-03-15T02:18:06Z",
       "createdAt": "2020-04-06T10:12:33Z",
       "latestReleaseDate": "2026-03-12T23:46:14Z",
-      "releaseRecency": 1,
-      "releaseRecencyText": "Released yesterday"
+      "releaseRecency": 2,
+      "releaseRecencyText": "Released 2 days ago"
     },
     {
       "id": 1133795531,
@@ -1355,16 +1707,72 @@
       "description": "Manage all sessions in Claude Code and Codex. Easily create new worktrees, run multiple terminals in parallel, preview edits before accepting them, make inline changes directly from diffs, and more.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/jamesrochabrun/AgentHub",
-      "stargazersCount": 283,
+      "stargazersCount": 286,
       "forksCount": 20,
       "language": "Swift",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/jamesrochabrun/AgentHub/releases{/id}",
-      "updatedAt": "2026-03-14T04:14:30Z",
+      "updatedAt": "2026-03-14T20:11:38Z",
       "createdAt": "2026-01-13T20:38:46Z",
       "latestReleaseDate": "2026-03-12T23:18:10Z",
-      "releaseRecency": 1,
-      "releaseRecencyText": "Released yesterday"
+      "releaseRecency": 2,
+      "releaseRecencyText": "Released 2 days ago"
+    },
+    {
+      "id": 985839104,
+      "name": "BrowserOS",
+      "fullName": "browseros-ai/BrowserOS",
+      "owner": {
+        "login": "browseros-ai",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/218857586?v=4"
+      },
+      "description": "🌐 The open-source Agentic browser; alternative to ChatGPT Atlas, Perplexity Comet, Dia.",
+      "defaultBranch": "main",
+      "htmlUrl": "https://github.com/browseros-ai/BrowserOS",
+      "stargazersCount": 9780,
+      "forksCount": 931,
+      "language": "TypeScript",
+      "topics": [
+        "agent",
+        "browser",
+        "browseros",
+        "chromium",
+        "hacktoberfest",
+        "linux",
+        "llm",
+        "lmstudio",
+        "macos",
+        "ollama",
+        "windows"
+      ],
+      "releasesUrl": "https://api.github.com/repos/browseros-ai/BrowserOS/releases{/id}",
+      "updatedAt": "2026-03-15T04:42:14Z",
+      "createdAt": "2025-05-18T16:23:54Z",
+      "latestReleaseDate": "2026-03-12T18:06:59Z",
+      "releaseRecency": 2,
+      "releaseRecencyText": "Released 2 days ago"
+    },
+    {
+      "id": 1156137396,
+      "name": "LobsterAI",
+      "fullName": "netease-youdao/LobsterAI",
+      "owner": {
+        "login": "netease-youdao",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/3909232?v=4"
+      },
+      "description": "Your 24/7 all-scenario AI agent that gets work done for you.",
+      "defaultBranch": "main",
+      "htmlUrl": "https://github.com/netease-youdao/LobsterAI",
+      "stargazersCount": 3939,
+      "forksCount": 453,
+      "language": "TypeScript",
+      "topics": [],
+      "releasesUrl": "https://api.github.com/repos/netease-youdao/LobsterAI/releases{/id}",
+      "updatedAt": "2026-03-15T03:15:44Z",
+      "createdAt": "2026-02-12T09:56:20Z",
+      "latestReleaseDate": "2026-03-12T17:01:48Z",
+      "releaseRecency": 2,
+      "releaseRecencyText": "Released 2 days ago"
     },
     {
       "id": 564801043,
@@ -1377,7 +1785,7 @@
       "description": "A macOS command-line tool to work with default apps",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/scriptingosx/utiluti",
-      "stargazersCount": 193,
+      "stargazersCount": 194,
       "forksCount": 5,
       "language": "Swift",
       "topics": [
@@ -1389,11 +1797,11 @@
         "terminal"
       ],
       "releasesUrl": "https://api.github.com/repos/scriptingosx/utiluti/releases{/id}",
-      "updatedAt": "2026-03-13T12:46:38Z",
+      "updatedAt": "2026-03-14T22:21:45Z",
       "createdAt": "2022-11-11T14:28:21Z",
       "latestReleaseDate": "2026-03-12T15:24:33Z",
-      "releaseRecency": 1,
-      "releaseRecencyText": "Released yesterday"
+      "releaseRecency": 2,
+      "releaseRecencyText": "Released 2 days ago"
     },
     {
       "id": 1117934569,
@@ -1406,45 +1814,16 @@
       "description": "A beautiful macOS file browser with classic Cover Flow view",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/elliotttate/CoverFlowFinder",
-      "stargazersCount": 139,
+      "stargazersCount": 140,
       "forksCount": 7,
       "language": "Swift",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/elliotttate/CoverFlowFinder/releases{/id}",
-      "updatedAt": "2026-03-12T16:19:30Z",
+      "updatedAt": "2026-03-15T02:36:46Z",
       "createdAt": "2025-12-17T03:05:07Z",
       "latestReleaseDate": "2026-03-12T15:15:34Z",
-      "releaseRecency": 1,
-      "releaseRecencyText": "Released yesterday"
-    },
-    {
-      "id": 1136724882,
-      "name": "opencode-bar",
-      "fullName": "opgginc/opencode-bar",
-      "owner": {
-        "login": "opgginc",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/29659061?v=4"
-      },
-      "description": "Effortless token usage tracker for OpenCode",
-      "defaultBranch": "main",
-      "htmlUrl": "https://github.com/opgginc/opencode-bar",
-      "stargazersCount": 202,
-      "forksCount": 15,
-      "language": "Swift",
-      "topics": [
-        "antigravity",
-        "claude-code",
-        "copilot",
-        "gemini",
-        "mac-app",
-        "opencode"
-      ],
-      "releasesUrl": "https://api.github.com/repos/opgginc/opencode-bar/releases{/id}",
-      "updatedAt": "2026-03-14T03:13:58Z",
-      "createdAt": "2026-01-18T08:22:21Z",
-      "latestReleaseDate": "2026-03-12T15:06:16Z",
-      "releaseRecency": 1,
-      "releaseRecencyText": "Released yesterday"
+      "releaseRecency": 2,
+      "releaseRecencyText": "Released 2 days ago"
     },
     {
       "id": 1120106077,
@@ -1457,7 +1836,7 @@
       "description": "A macOS menu bar application that monitors AI coding assistant usage quotas. Keep track of your Claude, Codex, Antigravity ,and Gemini usage at a glance.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/tddworks/ClaudeBar",
-      "stargazersCount": 779,
+      "stargazersCount": 787,
       "forksCount": 65,
       "language": "Swift",
       "topics": [
@@ -1471,11 +1850,11 @@
         "kimi"
       ],
       "releasesUrl": "https://api.github.com/repos/tddworks/ClaudeBar/releases{/id}",
-      "updatedAt": "2026-03-13T16:52:42Z",
+      "updatedAt": "2026-03-15T02:37:48Z",
       "createdAt": "2025-12-20T13:58:06Z",
       "latestReleaseDate": "2026-03-12T13:23:21Z",
-      "releaseRecency": 1,
-      "releaseRecencyText": "Released yesterday"
+      "releaseRecency": 2,
+      "releaseRecencyText": "Released 2 days ago"
     },
     {
       "id": 1124131175,
@@ -1488,7 +1867,7 @@
       "description": "Music is meant to sound good. Use an EQ to hear that difference.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/Torteous44/radioform",
-      "stargazersCount": 94,
+      "stargazersCount": 96,
       "forksCount": 5,
       "language": "Swift",
       "topics": [
@@ -1498,33 +1877,11 @@
         "swift"
       ],
       "releasesUrl": "https://api.github.com/repos/Torteous44/radioform/releases{/id}",
-      "updatedAt": "2026-03-13T22:34:54Z",
+      "updatedAt": "2026-03-14T05:05:04Z",
       "createdAt": "2025-12-28T12:01:50Z",
       "latestReleaseDate": "2026-03-12T12:10:59Z",
-      "releaseRecency": 1,
-      "releaseRecencyText": "Released yesterday"
-    },
-    {
-      "id": 1159332577,
-      "name": "LocalPorts",
-      "fullName": "onderk-motion/LocalPorts",
-      "owner": {
-        "login": "onderk-motion",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/18551167?v=4"
-      },
-      "description": null,
-      "defaultBranch": "main",
-      "htmlUrl": "https://github.com/onderk-motion/LocalPorts",
-      "stargazersCount": 71,
-      "forksCount": 3,
-      "language": "Swift",
-      "topics": [],
-      "releasesUrl": "https://api.github.com/repos/onderk-motion/LocalPorts/releases{/id}",
-      "updatedAt": "2026-03-12T08:14:19Z",
-      "createdAt": "2026-02-16T15:52:26Z",
-      "latestReleaseDate": "2026-03-12T08:04:21Z",
-      "releaseRecency": 1,
-      "releaseRecencyText": "Released yesterday"
+      "releaseRecency": 2,
+      "releaseRecencyText": "Released 2 days ago"
     },
     {
       "id": 1075287174,
@@ -1537,64 +1894,14 @@
       "description": "Clash X",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/ClashX-Pro/ClashX",
-      "stargazersCount": 272,
-      "forksCount": 26,
+      "stargazersCount": 274,
+      "forksCount": 27,
       "language": "Swift",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/ClashX-Pro/ClashX/releases{/id}",
-      "updatedAt": "2026-03-13T07:47:17Z",
+      "updatedAt": "2026-03-15T03:41:11Z",
       "createdAt": "2025-10-13T09:44:16Z",
       "latestReleaseDate": "2026-03-12T06:13:43Z",
-      "releaseRecency": 1,
-      "releaseRecencyText": "Released yesterday"
-    },
-    {
-      "id": 1136864674,
-      "name": "cc-status-bar",
-      "fullName": "usedhonda/cc-status-bar",
-      "owner": {
-        "login": "usedhonda",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/70754?v=4"
-      },
-      "description": "macOS menu bar app for real-time Claude Code session monitoring",
-      "defaultBranch": "main",
-      "htmlUrl": "https://github.com/usedhonda/cc-status-bar",
-      "stargazersCount": 68,
-      "forksCount": 3,
-      "language": "Swift",
-      "topics": [],
-      "releasesUrl": "https://api.github.com/repos/usedhonda/cc-status-bar/releases{/id}",
-      "updatedAt": "2026-03-12T05:53:22Z",
-      "createdAt": "2026-01-18T13:58:57Z",
-      "latestReleaseDate": "2026-03-12T05:54:47Z",
-      "releaseRecency": 1,
-      "releaseRecencyText": "Released yesterday"
-    },
-    {
-      "id": 1102197464,
-      "name": "Maestro",
-      "fullName": "RunMaestro/Maestro",
-      "owner": {
-        "login": "RunMaestro",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/259239772?v=4"
-      },
-      "description": "Agent Orchestration Command Center",
-      "defaultBranch": "main",
-      "htmlUrl": "https://github.com/RunMaestro/Maestro",
-      "stargazersCount": 2483,
-      "forksCount": 246,
-      "language": "TypeScript",
-      "topics": [
-        "ai-agents",
-        "claude-code",
-        "codex",
-        "generative-ai",
-        "opencode"
-      ],
-      "releasesUrl": "https://api.github.com/repos/RunMaestro/Maestro/releases{/id}",
-      "updatedAt": "2026-03-14T03:31:58Z",
-      "createdAt": "2025-11-23T01:59:55Z",
-      "latestReleaseDate": "2026-03-12T04:12:32Z",
       "releaseRecency": 2,
       "releaseRecencyText": "Released 2 days ago"
     },
@@ -1609,7 +1916,7 @@
       "description": "Native macOS app to monitor Claude AI usage limits and watch your coding sessions live",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/AThevon/TokenEater",
-      "stargazersCount": 176,
+      "stargazersCount": 177,
       "forksCount": 13,
       "language": "Swift",
       "topics": [
@@ -1627,75 +1934,11 @@
         "widgetkit"
       ],
       "releasesUrl": "https://api.github.com/repos/AThevon/TokenEater/releases{/id}",
-      "updatedAt": "2026-03-13T20:54:40Z",
+      "updatedAt": "2026-03-14T12:26:09Z",
       "createdAt": "2026-02-21T15:58:30Z",
       "latestReleaseDate": "2026-03-11T23:04:18Z",
-      "releaseRecency": 2,
-      "releaseRecencyText": "Released 2 days ago"
-    },
-    {
-      "id": 660776503,
-      "name": "paradedb",
-      "fullName": "paradedb/paradedb",
-      "owner": {
-        "login": "paradedb",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/124464601?v=4"
-      },
-      "description": "Simple, Elastic-quality search for Postgres",
-      "defaultBranch": "main",
-      "htmlUrl": "https://github.com/paradedb/paradedb",
-      "stargazersCount": 8537,
-      "forksCount": 351,
-      "language": "Rust",
-      "topics": [
-        "aggregations",
-        "analytics",
-        "bm25",
-        "database",
-        "elasticsearch",
-        "full-text-search",
-        "htap",
-        "hybrid-search",
-        "olap",
-        "postgresql",
-        "real-time-analytics",
-        "similarity-search",
-        "sparse-vector",
-        "sql"
-      ],
-      "releasesUrl": "https://api.github.com/repos/paradedb/paradedb/releases{/id}",
-      "updatedAt": "2026-03-14T03:36:17Z",
-      "createdAt": "2023-06-30T20:21:47Z",
-      "latestReleaseDate": "2026-03-11T22:19:47Z",
-      "releaseRecency": 2,
-      "releaseRecencyText": "Released 2 days ago"
-    },
-    {
-      "id": 340547520,
-      "name": "zed",
-      "fullName": "zed-industries/zed",
-      "owner": {
-        "login": "zed-industries",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/79345384?v=4"
-      },
-      "description": "Code at the speed of thought – Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter.",
-      "defaultBranch": "main",
-      "htmlUrl": "https://github.com/zed-industries/zed",
-      "stargazersCount": 77095,
-      "forksCount": 7365,
-      "language": "Rust",
-      "topics": [
-        "gpui",
-        "rust-lang",
-        "text-editor",
-        "zed"
-      ],
-      "releasesUrl": "https://api.github.com/repos/zed-industries/zed/releases{/id}",
-      "updatedAt": "2026-03-14T03:57:36Z",
-      "createdAt": "2021-02-20T03:01:06Z",
-      "latestReleaseDate": "2026-03-11T15:41:38Z",
-      "releaseRecency": 2,
-      "releaseRecencyText": "Released 2 days ago"
+      "releaseRecency": 3,
+      "releaseRecencyText": "Released 3 days ago"
     },
     {
       "id": 1100379107,
@@ -1716,8 +1959,8 @@
       "updatedAt": "2026-03-11T14:56:38Z",
       "createdAt": "2025-11-20T07:49:43Z",
       "latestReleaseDate": "2026-03-11T14:44:03Z",
-      "releaseRecency": 2,
-      "releaseRecencyText": "Released 2 days ago"
+      "releaseRecency": 3,
+      "releaseRecencyText": "Released 3 days ago"
     },
     {
       "id": 21910366,
@@ -1730,16 +1973,16 @@
       "description": "This package allows macOS Finder to display thumbnails, static QuickLook previews, cover art and metadata for most types of video files.",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/Marginal/QuickLookVideo",
-      "stargazersCount": 3322,
-      "forksCount": 111,
+      "stargazersCount": 3324,
+      "forksCount": 112,
       "language": "Swift",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/Marginal/QuickLookVideo/releases{/id}",
-      "updatedAt": "2026-03-14T02:10:19Z",
+      "updatedAt": "2026-03-14T23:32:38Z",
       "createdAt": "2014-07-16T17:31:33Z",
       "latestReleaseDate": "2026-03-11T13:44:01Z",
-      "releaseRecency": 2,
-      "releaseRecencyText": "Released 2 days ago"
+      "releaseRecency": 3,
+      "releaseRecencyText": "Released 3 days ago"
     },
     {
       "id": 1061207099,
@@ -1771,106 +2014,33 @@
       "updatedAt": "2026-03-13T16:21:28Z",
       "createdAt": "2025-09-21T13:12:35Z",
       "latestReleaseDate": "2026-03-11T12:51:27Z",
-      "releaseRecency": 2,
-      "releaseRecencyText": "Released 2 days ago"
+      "releaseRecency": 3,
+      "releaseRecencyText": "Released 3 days ago"
     },
     {
-      "id": 679086250,
-      "name": "Ghost-Downloader-3",
-      "fullName": "XiaoYouChR/Ghost-Downloader-3",
+      "id": 31547508,
+      "name": "compass",
+      "fullName": "mongodb-js/compass",
       "owner": {
-        "login": "XiaoYouChR",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/87308195?v=4"
+        "login": "mongodb-js",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/11214950?v=4"
       },
-      "description": "A cross-platform QUIC AI-boost fluent-design multi-threaded downloader built with Python.",
+      "description": "The GUI for MongoDB.",
       "defaultBranch": "main",
-      "htmlUrl": "https://github.com/XiaoYouChR/Ghost-Downloader-3",
-      "stargazersCount": 4646,
-      "forksCount": 254,
-      "language": "Python",
+      "htmlUrl": "https://github.com/mongodb-js/compass",
+      "stargazersCount": 1443,
+      "forksCount": 255,
+      "language": "TypeScript",
       "topics": [
-        "async",
-        "asyncio",
-        "cross-platform",
-        "downloader",
         "gui",
-        "http3",
-        "multithreading",
-        "pyqt",
-        "pyside6",
-        "python",
-        "qt",
-        "quic",
-        "software",
-        "streaming"
+        "mongodb"
       ],
-      "releasesUrl": "https://api.github.com/repos/XiaoYouChR/Ghost-Downloader-3/releases{/id}",
-      "updatedAt": "2026-03-14T04:08:08Z",
-      "createdAt": "2023-08-16T04:23:44Z",
-      "latestReleaseDate": "2026-03-11T12:11:51Z",
-      "releaseRecency": 2,
-      "releaseRecencyText": "Released 2 days ago"
-    },
-    {
-      "id": 1111053300,
-      "name": "Deck",
-      "fullName": "yuzeguitarist/Deck",
-      "owner": {
-        "login": "yuzeguitarist",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/145409865?v=4"
-      },
-      "description": "A modern, native, privacy-first clipboard manager for macOS.",
-      "defaultBranch": "main",
-      "htmlUrl": "https://github.com/yuzeguitarist/Deck",
-      "stargazersCount": 513,
-      "forksCount": 12,
-      "language": "Swift",
-      "topics": [
-        "automation",
-        "clipboard",
-        "clipboard-manager",
-        "deck",
-        "deckclipboard",
-        "developer-tools",
-        "encryption",
-        "local-first",
-        "mac",
-        "macos",
-        "macos-app",
-        "macos-application",
-        "privacy-first",
-        "productivity",
-        "swift",
-        "swiftui"
-      ],
-      "releasesUrl": "https://api.github.com/repos/yuzeguitarist/Deck/releases{/id}",
-      "updatedAt": "2026-03-14T03:46:48Z",
-      "createdAt": "2025-12-06T07:06:53Z",
-      "latestReleaseDate": "2026-03-11T10:59:11Z",
-      "releaseRecency": 2,
-      "releaseRecencyText": "Released 2 days ago"
-    },
-    {
-      "id": 1117420738,
-      "name": "LaunchX",
-      "fullName": "twotwoba/LaunchX",
-      "owner": {
-        "login": "twotwoba",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/43981489?v=4"
-      },
-      "description": "🚀 A modern,lightly and intelligent macOS launcher. 一个现代的、设计简洁且智能的 macOS 启动器",
-      "defaultBranch": "main",
-      "htmlUrl": "https://github.com/twotwoba/LaunchX",
-      "stargazersCount": 53,
-      "forksCount": 2,
-      "language": "Swift",
-      "topics": [],
-      "releasesUrl": "https://api.github.com/repos/twotwoba/LaunchX/releases{/id}",
-      "updatedAt": "2026-03-13T15:45:33Z",
-      "createdAt": "2025-12-16T09:39:44Z",
-      "latestReleaseDate": "2026-03-11T06:19:07Z",
-      "releaseRecency": 2,
-      "releaseRecencyText": "Released 2 days ago"
+      "releasesUrl": "https://api.github.com/repos/mongodb-js/compass/releases{/id}",
+      "updatedAt": "2026-03-15T04:06:26Z",
+      "createdAt": "2015-03-02T15:39:55Z",
+      "latestReleaseDate": "2026-03-11T12:47:21Z",
+      "releaseRecency": 3,
+      "releaseRecencyText": "Released 3 days ago"
     },
     {
       "id": 345094038,
@@ -1898,8 +2068,8 @@
       "updatedAt": "2026-03-13T06:09:12Z",
       "createdAt": "2021-03-06T12:57:13Z",
       "latestReleaseDate": "2026-03-11T05:32:40Z",
-      "releaseRecency": 2,
-      "releaseRecencyText": "Released 2 days ago"
+      "releaseRecency": 3,
+      "releaseRecencyText": "Released 3 days ago"
     },
     {
       "id": 996418623,
@@ -1920,8 +2090,43 @@
       "updatedAt": "2026-03-11T20:12:34Z",
       "createdAt": "2025-06-04T23:34:26Z",
       "latestReleaseDate": "2026-03-11T04:39:33Z",
-      "releaseRecency": 2,
-      "releaseRecencyText": "Released 2 days ago"
+      "releaseRecency": 4,
+      "releaseRecencyText": "Released 4 days ago"
+    },
+    {
+      "id": 71056775,
+      "name": "kitty",
+      "fullName": "kovidgoyal/kitty",
+      "owner": {
+        "login": "kovidgoyal",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/1308621?v=4"
+      },
+      "description": "If you live in the terminal, kitty is made for you! Cross-platform, fast, feature-rich, GPU based.",
+      "defaultBranch": "master",
+      "htmlUrl": "https://github.com/kovidgoyal/kitty",
+      "stargazersCount": 31813,
+      "forksCount": 1307,
+      "language": "Python",
+      "topics": [
+        "c",
+        "go",
+        "golang",
+        "golang-application",
+        "kitty",
+        "kitty-terminal",
+        "opengl",
+        "python",
+        "terminal",
+        "terminal-emulators",
+        "terminfo",
+        "vt100"
+      ],
+      "releasesUrl": "https://api.github.com/repos/kovidgoyal/kitty/releases{/id}",
+      "updatedAt": "2026-03-15T04:35:36Z",
+      "createdAt": "2016-10-16T14:48:28Z",
+      "latestReleaseDate": "2026-03-11T03:18:24Z",
+      "releaseRecency": 4,
+      "releaseRecencyText": "Released 4 days ago"
     },
     {
       "id": 965415649,
@@ -1934,115 +2139,16 @@
       "description": "Lightweight coding agent that runs in your terminal",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/openai/codex",
-      "stargazersCount": 65147,
-      "forksCount": 8706,
+      "stargazersCount": 65299,
+      "forksCount": 8725,
       "language": "Rust",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/openai/codex/releases{/id}",
-      "updatedAt": "2026-03-14T04:17:39Z",
+      "updatedAt": "2026-03-15T04:38:43Z",
       "createdAt": "2025-04-13T05:37:54Z",
       "latestReleaseDate": "2026-03-11T00:28:42Z",
-      "releaseRecency": 3,
-      "releaseRecencyText": "Released 3 days ago"
-    },
-    {
-      "id": 1114814210,
-      "name": "GoogleDriveSync",
-      "fullName": "saihgupr/GoogleDriveSync",
-      "owner": {
-        "login": "saihgupr",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/121105543?v=4"
-      },
-      "description": "A native macOS menu bar app for seamless Google Drive syncing",
-      "defaultBranch": "main",
-      "htmlUrl": "https://github.com/saihgupr/GoogleDriveSync",
-      "stargazersCount": 330,
-      "forksCount": 17,
-      "language": "Swift",
-      "topics": [
-        "mac-app",
-        "macos"
-      ],
-      "releasesUrl": "https://api.github.com/repos/saihgupr/GoogleDriveSync/releases{/id}",
-      "updatedAt": "2026-03-13T20:52:01Z",
-      "createdAt": "2025-12-11T23:32:07Z",
-      "latestReleaseDate": "2026-03-10T15:34:56Z",
-      "releaseRecency": 3,
-      "releaseRecencyText": "Released 3 days ago"
-    },
-    {
-      "id": 40092232,
-      "name": "mas",
-      "fullName": "mas-cli/mas",
-      "owner": {
-        "login": "mas-cli",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/22406844?v=4"
-      },
-      "description": ":package: Mac App Store command-line interface",
-      "defaultBranch": "main",
-      "htmlUrl": "https://github.com/mas-cli/mas",
-      "stargazersCount": 12034,
-      "forksCount": 288,
-      "language": "Swift",
-      "topics": [
-        "app-store",
-        "homebrew",
-        "mac-app-store",
-        "macos",
-        "mas",
-        "osx",
-        "software-update"
-      ],
-      "releasesUrl": "https://api.github.com/repos/mas-cli/mas/releases{/id}",
-      "updatedAt": "2026-03-13T23:54:07Z",
-      "createdAt": "2015-08-02T20:43:12Z",
-      "latestReleaseDate": "2026-03-10T14:29:20Z",
-      "releaseRecency": 3,
-      "releaseRecencyText": "Released 3 days ago"
-    },
-    {
-      "id": 1176047082,
-      "name": "bromure",
-      "fullName": "rderaison/bromure",
-      "owner": {
-        "login": "rderaison",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/4990775?v=4"
-      },
-      "description": "Secure, ephemeral browsing in a disposable VM (macOS only)",
-      "defaultBranch": "main",
-      "htmlUrl": "https://github.com/rderaison/bromure",
-      "stargazersCount": 120,
-      "forksCount": 4,
-      "language": "Swift",
-      "topics": [],
-      "releasesUrl": "https://api.github.com/repos/rderaison/bromure/releases{/id}",
-      "updatedAt": "2026-03-14T01:13:50Z",
-      "createdAt": "2026-03-08T14:47:29Z",
-      "latestReleaseDate": "2026-03-10T14:01:38Z",
-      "releaseRecency": 3,
-      "releaseRecencyText": "Released 3 days ago"
-    },
-    {
-      "id": 240818838,
-      "name": "AlDente-Battery_Care_and_Monitoring",
-      "fullName": "AppHouseKitchen/AlDente-Battery_Care_and_Monitoring",
-      "owner": {
-        "login": "AppHouseKitchen",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/92392310?v=4"
-      },
-      "description": "Menubar Tool to set Charge Limits and Prolong Battery Lifespan",
-      "defaultBranch": "master",
-      "htmlUrl": "https://github.com/AppHouseKitchen/AlDente-Battery_Care_and_Monitoring",
-      "stargazersCount": 8988,
-      "forksCount": 332,
-      "language": "Swift",
-      "topics": [],
-      "releasesUrl": "https://api.github.com/repos/AppHouseKitchen/AlDente-Battery_Care_and_Monitoring/releases{/id}",
-      "updatedAt": "2026-03-13T18:51:46Z",
-      "createdAt": "2020-02-16T02:24:34Z",
-      "latestReleaseDate": "2026-03-10T13:46:31Z",
-      "releaseRecency": 3,
-      "releaseRecencyText": "Released 3 days ago"
+      "releaseRecency": 4,
+      "releaseRecencyText": "Released 4 days ago"
     },
     {
       "id": 1007217328,
@@ -2076,57 +2182,8 @@
       "updatedAt": "2026-03-13T16:56:16Z",
       "createdAt": "2025-06-23T16:34:47Z",
       "latestReleaseDate": "2026-03-10T10:50:12Z",
-      "releaseRecency": 3,
-      "releaseRecencyText": "Released 3 days ago"
-    },
-    {
-      "id": 1173005173,
-      "name": "claude-usage-bar",
-      "fullName": "Blimp-Labs/claude-usage-bar",
-      "owner": {
-        "login": "Blimp-Labs",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/265637409?v=4"
-      },
-      "description": "A macOS menu bar app that shows your Claude API usage at a glance",
-      "defaultBranch": "main",
-      "htmlUrl": "https://github.com/Blimp-Labs/claude-usage-bar",
-      "stargazersCount": 175,
-      "forksCount": 19,
-      "language": "Swift",
-      "topics": [],
-      "releasesUrl": "https://api.github.com/repos/Blimp-Labs/claude-usage-bar/releases{/id}",
-      "updatedAt": "2026-03-13T02:55:59Z",
-      "createdAt": "2026-03-04T23:08:00Z",
-      "latestReleaseDate": "2026-03-10T08:16:09Z",
-      "releaseRecency": 3,
-      "releaseRecencyText": "Released 3 days ago"
-    },
-    {
-      "id": 931888694,
-      "name": "Handy",
-      "fullName": "cjpais/Handy",
-      "owner": {
-        "login": "cjpais",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/1559480?v=4"
-      },
-      "description": "A free, open source, and extensible speech-to-text application that works completely offline.",
-      "defaultBranch": "main",
-      "htmlUrl": "https://github.com/cjpais/Handy",
-      "stargazersCount": 17582,
-      "forksCount": 1333,
-      "language": "Rust",
-      "topics": [
-        "accessibility",
-        "cross-platform",
-        "speech-to-text",
-        "tauri-v2"
-      ],
-      "releasesUrl": "https://api.github.com/repos/cjpais/Handy/releases{/id}",
-      "updatedAt": "2026-03-14T04:19:10Z",
-      "createdAt": "2025-02-13T02:42:29Z",
-      "latestReleaseDate": "2026-03-10T05:47:32Z",
-      "releaseRecency": 3,
-      "releaseRecencyText": "Released 3 days ago"
+      "releaseRecency": 4,
+      "releaseRecencyText": "Released 4 days ago"
     },
     {
       "id": 75876315,
@@ -2151,40 +2208,8 @@
       "updatedAt": "2026-03-13T03:34:13Z",
       "createdAt": "2016-12-07T21:16:03Z",
       "latestReleaseDate": "2026-03-10T05:38:00Z",
-      "releaseRecency": 3,
-      "releaseRecencyText": "Released 3 days ago"
-    },
-    {
-      "id": 1116398203,
-      "name": "PHTV",
-      "fullName": "PhamHungTien/PHTV",
-      "owner": {
-        "login": "PhamHungTien",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/181301764?v=4"
-      },
-      "description": "PHTV - Precision Hybrid Typing Vietnamese | Bộ gõ Tiếng Việt Đa năng & Chuẩn xác cho macOS",
-      "defaultBranch": "main",
-      "htmlUrl": "https://github.com/PhamHungTien/PHTV",
-      "stargazersCount": 130,
-      "forksCount": 21,
-      "language": "Swift",
-      "topics": [
-        "gotiengviet",
-        "input-method",
-        "macos",
-        "macosinput",
-        "phtv",
-        "swift",
-        "telex",
-        "vietnamese",
-        "vni"
-      ],
-      "releasesUrl": "https://api.github.com/repos/PhamHungTien/PHTV/releases{/id}",
-      "updatedAt": "2026-03-13T22:49:01Z",
-      "createdAt": "2025-12-14T19:26:44Z",
-      "latestReleaseDate": "2026-03-10T04:25:04Z",
-      "releaseRecency": 3,
-      "releaseRecencyText": "Released 3 days ago"
+      "releaseRecency": 4,
+      "releaseRecencyText": "Released 4 days ago"
     },
     {
       "id": 139616172,
@@ -2197,7 +2222,7 @@
       "description": "Intelligent adaptive brightness for your external monitors",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/alin23/Lunar",
-      "stargazersCount": 5462,
+      "stargazersCount": 5464,
       "forksCount": 134,
       "language": "Swift",
       "topics": [
@@ -2217,33 +2242,11 @@
         "xdr"
       ],
       "releasesUrl": "https://api.github.com/repos/alin23/Lunar/releases{/id}",
-      "updatedAt": "2026-03-13T15:24:11Z",
+      "updatedAt": "2026-03-14T14:42:50Z",
       "createdAt": "2018-07-03T17:23:54Z",
       "latestReleaseDate": "2026-03-09T20:48:04Z",
-      "releaseRecency": 4,
-      "releaseRecencyText": "Released 4 days ago"
-    },
-    {
-      "id": 1139168040,
-      "name": "supacode",
-      "fullName": "supabitapp/supacode",
-      "owner": {
-        "login": "supabitapp",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/255815177?v=4"
-      },
-      "description": "Native terminal coding agents command center.",
-      "defaultBranch": "main",
-      "htmlUrl": "https://github.com/supabitapp/supacode",
-      "stargazersCount": 480,
-      "forksCount": 36,
-      "language": "Swift",
-      "topics": [],
-      "releasesUrl": "https://api.github.com/repos/supabitapp/supacode/releases{/id}",
-      "updatedAt": "2026-03-13T15:35:43Z",
-      "createdAt": "2026-01-21T15:59:32Z",
-      "latestReleaseDate": "2026-03-09T20:42:17Z",
-      "releaseRecency": 4,
-      "releaseRecencyText": "Released 4 days ago"
+      "releaseRecency": 5,
+      "releaseRecencyText": "Released 5 days ago"
     },
     {
       "id": 1152974041,
@@ -2256,7 +2259,7 @@
       "description": "Screen recording on macOS, from capture to delivery, no detours. ",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/jkuri/Reframed",
-      "stargazersCount": 70,
+      "stargazersCount": 71,
       "forksCount": 4,
       "language": "Swift",
       "topics": [
@@ -2278,52 +2281,11 @@
         "zoom"
       ],
       "releasesUrl": "https://api.github.com/repos/jkuri/Reframed/releases{/id}",
-      "updatedAt": "2026-03-14T01:11:23Z",
+      "updatedAt": "2026-03-14T17:23:15Z",
       "createdAt": "2026-02-08T18:00:11Z",
       "latestReleaseDate": "2026-03-09T20:04:34Z",
-      "releaseRecency": 4,
-      "releaseRecencyText": "Released 4 days ago"
-    },
-    {
-      "id": 245049028,
-      "name": "koodo-reader",
-      "fullName": "koodo-reader/koodo-reader",
-      "owner": {
-        "login": "koodo-reader",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/149913075?v=4"
-      },
-      "description": "A modern ebook manager and reader with sync and backup capacities for Windows, macOS, Linux, Android, iOS and Web",
-      "defaultBranch": "dev",
-      "htmlUrl": "https://github.com/koodo-reader/koodo-reader",
-      "stargazersCount": 26260,
-      "forksCount": 1941,
-      "language": "JavaScript",
-      "topics": [
-        "book",
-        "cb7",
-        "cbr",
-        "cbt",
-        "cbz",
-        "comic",
-        "docx",
-        "ebook",
-        "epub",
-        "fb2",
-        "html",
-        "markdown",
-        "mobi",
-        "pdf",
-        "reader",
-        "rtf",
-        "txt",
-        "xml"
-      ],
-      "releasesUrl": "https://api.github.com/repos/koodo-reader/koodo-reader/releases{/id}",
-      "updatedAt": "2026-03-14T03:11:59Z",
-      "createdAt": "2020-03-05T02:18:30Z",
-      "latestReleaseDate": "2026-03-09T08:39:52Z",
-      "releaseRecency": 4,
-      "releaseRecencyText": "Released 4 days ago"
+      "releaseRecency": 5,
+      "releaseRecencyText": "Released 5 days ago"
     },
     {
       "id": 1146022095,
@@ -2336,19 +2298,19 @@
       "description": "notch app for coding tools",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/sk-ruban/notchi",
-      "stargazersCount": 204,
-      "forksCount": 22,
+      "stargazersCount": 207,
+      "forksCount": 23,
       "language": "Swift",
       "topics": [
         "claude-code",
         "swift"
       ],
       "releasesUrl": "https://api.github.com/repos/sk-ruban/notchi/releases{/id}",
-      "updatedAt": "2026-03-13T22:23:46Z",
+      "updatedAt": "2026-03-14T19:49:11Z",
       "createdAt": "2026-01-30T14:19:52Z",
       "latestReleaseDate": "2026-03-09T04:16:49Z",
-      "releaseRecency": 5,
-      "releaseRecencyText": "Released 5 days ago"
+      "releaseRecency": 6,
+      "releaseRecencyText": "Released 6 days ago"
     },
     {
       "id": 189285554,
@@ -2361,8 +2323,8 @@
       "description": "macOS system monitor in your menu bar",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/exelban/stats",
-      "stargazersCount": 37011,
-      "forksCount": 1206,
+      "stargazersCount": 37034,
+      "forksCount": 1208,
       "language": "Swift",
       "topics": [
         "battery",
@@ -2381,11 +2343,11 @@
         "temperature"
       ],
       "releasesUrl": "https://api.github.com/repos/exelban/stats/releases{/id}",
-      "updatedAt": "2026-03-14T03:58:25Z",
+      "updatedAt": "2026-03-15T04:15:20Z",
       "createdAt": "2019-05-29T19:24:56Z",
       "latestReleaseDate": "2026-03-08T18:06:03Z",
-      "releaseRecency": 5,
-      "releaseRecencyText": "Released 5 days ago"
+      "releaseRecency": 6,
+      "releaseRecencyText": "Released 6 days ago"
     },
     {
       "id": 881723326,
@@ -2398,7 +2360,7 @@
       "description": "Dynamic Island for macOS",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/Ebullioscopic/Atoll",
-      "stargazersCount": 1356,
+      "stargazersCount": 1369,
       "forksCount": 79,
       "language": "Swift",
       "topics": [
@@ -2408,11 +2370,11 @@
         "macos"
       ],
       "releasesUrl": "https://api.github.com/repos/Ebullioscopic/Atoll/releases{/id}",
-      "updatedAt": "2026-03-14T03:06:13Z",
+      "updatedAt": "2026-03-15T02:03:07Z",
       "createdAt": "2024-11-01T05:06:09Z",
       "latestReleaseDate": "2026-03-08T13:53:21Z",
-      "releaseRecency": 5,
-      "releaseRecencyText": "Released 5 days ago"
+      "releaseRecency": 6,
+      "releaseRecencyText": "Released 6 days ago"
     },
     {
       "id": 1092839234,
@@ -2425,7 +2387,7 @@
       "description": "Zedis: A blazing-fast, native Redis GUI built with Rust and GPUI.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/vicanso/zedis",
-      "stargazersCount": 1724,
+      "stargazersCount": 1726,
       "forksCount": 39,
       "language": "Rust",
       "topics": [
@@ -2434,44 +2396,70 @@
         "redis-client"
       ],
       "releasesUrl": "https://api.github.com/repos/vicanso/zedis/releases{/id}",
-      "updatedAt": "2026-03-14T04:10:45Z",
+      "updatedAt": "2026-03-15T04:08:02Z",
       "createdAt": "2025-11-09T12:21:15Z",
       "latestReleaseDate": "2026-03-08T12:09:05Z",
-      "releaseRecency": 5,
-      "releaseRecencyText": "Released 5 days ago"
-    },
-    {
-      "id": 1099232644,
-      "name": "AppPorts",
-      "fullName": "wzh4869/AppPorts",
-      "owner": {
-        "login": "wzh4869",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/36331468?v=4"
-      },
-      "description": "📦 A macOS utility to seamlessly migrate applications to external storage and reclaim local disk space.【一款 macOS 工具，无缝迁移应用到外部存储并自动建立链接，释放宝贵的本地空间】",
-      "defaultBranch": "main",
-      "htmlUrl": "https://github.com/wzh4869/AppPorts",
-      "stargazersCount": 828,
-      "forksCount": 40,
-      "language": "Swift",
-      "topics": [
-        "app-manager",
-        "disk-cleaner",
-        "external-storage",
-        "full-disk-access",
-        "macos",
-        "macos-app",
-        "swift",
-        "swiftui",
-        "symbolic-links",
-        "utility"
-      ],
-      "releasesUrl": "https://api.github.com/repos/wzh4869/AppPorts/releases{/id}",
-      "updatedAt": "2026-03-14T04:07:24Z",
-      "createdAt": "2025-11-18T18:32:00Z",
-      "latestReleaseDate": "2026-03-07T21:50:16Z",
       "releaseRecency": 6,
       "releaseRecencyText": "Released 6 days ago"
+    },
+    {
+      "id": 409931049,
+      "name": "macSKK",
+      "fullName": "mtgto/macSKK",
+      "owner": {
+        "login": "mtgto",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/1213991?v=4"
+      },
+      "description": "Yet Another macOS SKK Input Method",
+      "defaultBranch": "main",
+      "htmlUrl": "https://github.com/mtgto/macSKK",
+      "stargazersCount": 278,
+      "forksCount": 18,
+      "language": "Swift",
+      "topics": [
+        "inputmethod",
+        "japanese-language",
+        "macos",
+        "skk"
+      ],
+      "releasesUrl": "https://api.github.com/repos/mtgto/macSKK/releases{/id}",
+      "updatedAt": "2026-03-15T03:04:46Z",
+      "createdAt": "2021-09-24T10:58:22Z",
+      "latestReleaseDate": "2026-03-08T11:53:45Z",
+      "releaseRecency": 6,
+      "releaseRecencyText": "Released 6 days ago"
+    },
+    {
+      "id": 1028492186,
+      "name": "eigent",
+      "fullName": "eigent-ai/eigent",
+      "owner": {
+        "login": "eigent-ai",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/163795819?v=4"
+      },
+      "description": "Eigent: The Open Source Cowork Desktop to Unlock Your Exceptional Productivity. Local and Free Alternative to Claude Cowork.",
+      "defaultBranch": "main",
+      "htmlUrl": "https://github.com/eigent-ai/eigent",
+      "stargazersCount": 12994,
+      "forksCount": 1494,
+      "language": "TypeScript",
+      "topics": [
+        "agent-framework",
+        "agent-skills",
+        "agentic-ai",
+        "agentic-workflow",
+        "claude-cowork",
+        "claude-cowork-alternative",
+        "claude-cowork-free",
+        "desktop-agent",
+        "multi-agent-systems"
+      ],
+      "releasesUrl": "https://api.github.com/repos/eigent-ai/eigent/releases{/id}",
+      "updatedAt": "2026-03-15T04:40:02Z",
+      "createdAt": "2025-07-29T15:56:02Z",
+      "latestReleaseDate": "2026-03-07T14:50:12Z",
+      "releaseRecency": 7,
+      "releaseRecencyText": "Released 7 days ago"
     },
     {
       "id": 115446081,
@@ -2484,7 +2472,7 @@
       "description": "Your One-Stop Publication Workbench",
       "defaultBranch": "develop",
       "htmlUrl": "https://github.com/Zettlr/Zettlr",
-      "stargazersCount": 12661,
+      "stargazersCount": 12668,
       "forksCount": 774,
       "language": "TypeScript",
       "topics": [
@@ -2507,11 +2495,33 @@
         "zettlr"
       ],
       "releasesUrl": "https://api.github.com/repos/Zettlr/Zettlr/releases{/id}",
-      "updatedAt": "2026-03-14T03:23:27Z",
+      "updatedAt": "2026-03-15T04:02:52Z",
       "createdAt": "2017-12-26T18:34:19Z",
       "latestReleaseDate": "2026-03-07T11:32:22Z",
-      "releaseRecency": 6,
-      "releaseRecencyText": "Released 6 days ago"
+      "releaseRecency": 7,
+      "releaseRecencyText": "Released 7 days ago"
+    },
+    {
+      "id": 509091576,
+      "name": "sing-box",
+      "fullName": "SagerNet/sing-box",
+      "owner": {
+        "login": "SagerNet",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/83217677?v=4"
+      },
+      "description": "The universal proxy platform",
+      "defaultBranch": "testing",
+      "htmlUrl": "https://github.com/SagerNet/sing-box",
+      "stargazersCount": 31404,
+      "forksCount": 3679,
+      "language": "Go",
+      "topics": [],
+      "releasesUrl": "https://api.github.com/repos/SagerNet/sing-box/releases{/id}",
+      "updatedAt": "2026-03-15T03:49:57Z",
+      "createdAt": "2022-06-30T13:27:22Z",
+      "latestReleaseDate": "2026-03-07T09:33:24Z",
+      "releaseRecency": 7,
+      "releaseRecencyText": "Released 7 days ago"
     },
     {
       "id": 152491432,
@@ -2548,8 +2558,8 @@
       "updatedAt": "2026-03-11T09:59:11Z",
       "createdAt": "2018-10-10T21:20:52Z",
       "latestReleaseDate": "2026-03-07T09:06:11Z",
-      "releaseRecency": 6,
-      "releaseRecencyText": "Released 6 days ago"
+      "releaseRecency": 7,
+      "releaseRecencyText": "Released 7 days ago"
     },
     {
       "id": 1163563766,
@@ -2579,11 +2589,11 @@
         "voice-synthesis"
       ],
       "releasesUrl": "https://api.github.com/repos/PowerBeef/QwenVoice/releases{/id}",
-      "updatedAt": "2026-03-13T15:20:29Z",
+      "updatedAt": "2026-03-15T01:56:19Z",
       "createdAt": "2026-02-21T20:22:38Z",
       "latestReleaseDate": "2026-03-07T02:33:42Z",
-      "releaseRecency": 7,
-      "releaseRecencyText": "Released 7 days ago"
+      "releaseRecency": 8,
+      "releaseRecencyText": "Released 8 days ago"
     },
     {
       "id": 1033165012,
@@ -2596,7 +2606,7 @@
       "description": "OneClip——A simple and professional native clipboard manager for macOS ｜简单专业的macOS原生剪贴板软件",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/Wcowin/OneClip",
-      "stargazersCount": 137,
+      "stargazersCount": 140,
       "forksCount": 8,
       "language": "Swift",
       "topics": [
@@ -2609,11 +2619,11 @@
         "swiftui"
       ],
       "releasesUrl": "https://api.github.com/repos/Wcowin/OneClip/releases{/id}",
-      "updatedAt": "2026-03-13T10:25:05Z",
+      "updatedAt": "2026-03-14T17:34:48Z",
       "createdAt": "2025-08-06T11:52:02Z",
       "latestReleaseDate": "2026-03-06T12:00:35Z",
-      "releaseRecency": 7,
-      "releaseRecencyText": "Released 7 days ago"
+      "releaseRecency": 8,
+      "releaseRecencyText": "Released 8 days ago"
     },
     {
       "id": 666075482,
@@ -2634,30 +2644,62 @@
       "updatedAt": "2026-03-12T21:15:07Z",
       "createdAt": "2023-07-13T16:46:53Z",
       "latestReleaseDate": "2026-03-04T18:01:13Z",
-      "releaseRecency": 9,
-      "releaseRecencyText": "Released 9 days ago"
+      "releaseRecency": 10,
+      "releaseRecencyText": "Released 10 days ago"
     },
     {
-      "id": 684985729,
-      "name": "biliLive-tools",
-      "fullName": "renmu123/biliLive-tools",
+      "id": 47203045,
+      "name": "integrations-core",
+      "fullName": "DataDog/integrations-core",
       "owner": {
-        "login": "renmu123",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/26896790?v=4"
+        "login": "DataDog",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/365230?v=4"
       },
-      "description": "直播一站式处理工具，支持直播录制&视频处理&弹幕处理&录播姬自动上传",
+      "description": "Core integrations of the Datadog Agent",
       "defaultBranch": "master",
-      "htmlUrl": "https://github.com/renmu123/biliLive-tools",
-      "stargazersCount": 1209,
-      "forksCount": 80,
-      "language": "TypeScript",
-      "topics": [],
-      "releasesUrl": "https://api.github.com/repos/renmu123/biliLive-tools/releases{/id}",
-      "updatedAt": "2026-03-14T03:22:31Z",
-      "createdAt": "2023-08-30T09:09:44Z",
-      "latestReleaseDate": "2026-03-02T12:39:07Z",
+      "htmlUrl": "https://github.com/DataDog/integrations-core",
+      "stargazersCount": 1095,
+      "forksCount": 1512,
+      "language": "Python",
+      "topics": [
+        "datadog",
+        "datadog-agent",
+        "dd",
+        "integrations"
+      ],
+      "releasesUrl": "https://api.github.com/repos/DataDog/integrations-core/releases{/id}",
+      "updatedAt": "2026-03-15T04:27:40Z",
+      "createdAt": "2015-12-01T16:41:45Z",
+      "latestReleaseDate": "2026-03-03T16:43:28Z",
       "releaseRecency": 11,
       "releaseRecencyText": "Released 11 days ago"
+    },
+    {
+      "id": 486815039,
+      "name": "actual",
+      "fullName": "actualbudget/actual",
+      "owner": {
+        "login": "actualbudget",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/37879538?v=4"
+      },
+      "description": "A local-first personal finance app",
+      "defaultBranch": "master",
+      "htmlUrl": "https://github.com/actualbudget/actual",
+      "stargazersCount": 25479,
+      "forksCount": 2229,
+      "language": "TypeScript",
+      "topics": [
+        "budgeting",
+        "finance",
+        "money",
+        "personal-finance"
+      ],
+      "releasesUrl": "https://api.github.com/repos/actualbudget/actual/releases{/id}",
+      "updatedAt": "2026-03-15T04:14:05Z",
+      "createdAt": "2022-04-29T02:41:34Z",
+      "latestReleaseDate": "2026-03-03T02:30:32Z",
+      "releaseRecency": 12,
+      "releaseRecencyText": "Released 12 days ago"
     },
     {
       "id": 138925737,
@@ -2679,33 +2721,11 @@
         "privileges"
       ],
       "releasesUrl": "https://api.github.com/repos/SAP/macOS-enterprise-privileges/releases{/id}",
-      "updatedAt": "2026-03-13T15:21:49Z",
+      "updatedAt": "2026-03-14T11:17:06Z",
       "createdAt": "2018-06-27T19:43:51Z",
       "latestReleaseDate": "2026-03-02T10:56:29Z",
-      "releaseRecency": 11,
-      "releaseRecencyText": "Released 11 days ago"
-    },
-    {
-      "id": 1169737527,
-      "name": "tvbox-Swift",
-      "fullName": "Jstrom2022/tvbox-Swift",
-      "owner": {
-        "login": "Jstrom2022",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/118660761?v=4"
-      },
-      "description": "TVBox-Swift 是一套基于原生 Swift & SwiftUI 构建的跨平台多媒体应用核心工程。它同时支持 macOS 和 iOS 设备，致力于在双端提供无缝、现代且极其流畅的视听体验。",
-      "defaultBranch": "main",
-      "htmlUrl": "https://github.com/Jstrom2022/tvbox-Swift",
-      "stargazersCount": 95,
-      "forksCount": 14,
-      "language": "Swift",
-      "topics": [],
-      "releasesUrl": "https://api.github.com/repos/Jstrom2022/tvbox-Swift/releases{/id}",
-      "updatedAt": "2026-03-10T13:37:59Z",
-      "createdAt": "2026-03-01T06:00:54Z",
-      "latestReleaseDate": "2026-03-02T04:59:56Z",
-      "releaseRecency": 11,
-      "releaseRecencyText": "Released 11 days ago"
+      "releaseRecency": 12,
+      "releaseRecencyText": "Released 12 days ago"
     },
     {
       "id": 1130564872,
@@ -2718,8 +2738,8 @@
       "description": "Real-time global intelligence dashboard — AI-powered news aggregation, geopolitical monitoring, and infrastructure tracking in a unified situational awareness interface",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/koala73/worldmonitor",
-      "stargazersCount": 37413,
-      "forksCount": 6243,
+      "stargazersCount": 38044,
+      "forksCount": 6329,
       "language": "TypeScript",
       "topics": [
         "ai",
@@ -2733,44 +2753,11 @@
         "situation"
       ],
       "releasesUrl": "https://api.github.com/repos/koala73/worldmonitor/releases{/id}",
-      "updatedAt": "2026-03-14T04:18:28Z",
+      "updatedAt": "2026-03-15T04:41:40Z",
       "createdAt": "2026-01-08T17:26:06Z",
       "latestReleaseDate": "2026-03-01T23:34:08Z",
-      "releaseRecency": 12,
-      "releaseRecencyText": "Released 12 days ago"
-    },
-    {
-      "id": 449738859,
-      "name": "geode",
-      "fullName": "geode-sdk/geode",
-      "owner": {
-        "login": "geode-sdk",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/88206422?v=4"
-      },
-      "description": "The ultimate Geometry Dash modding framework",
-      "defaultBranch": "main",
-      "htmlUrl": "https://github.com/geode-sdk/geode",
-      "stargazersCount": 2002,
-      "forksCount": 362,
-      "language": "C++",
-      "topics": [
-        "cpp",
-        "cross-platform",
-        "geode",
-        "geode-sdk",
-        "geometry-dash",
-        "low-level",
-        "mod",
-        "modding",
-        "modding-framework",
-        "modding-library"
-      ],
-      "releasesUrl": "https://api.github.com/repos/geode-sdk/geode/releases{/id}",
-      "updatedAt": "2026-03-14T03:45:20Z",
-      "createdAt": "2022-01-19T15:05:21Z",
-      "latestReleaseDate": "2026-03-01T21:51:39Z",
-      "releaseRecency": 12,
-      "releaseRecencyText": "Released 12 days ago"
+      "releaseRecency": 13,
+      "releaseRecencyText": "Released 13 days ago"
     },
     {
       "id": 597609111,
@@ -2783,7 +2770,7 @@
       "description": "Just like TextEdit on Mac but dedicated to Markdown.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/MarkEdit-app/MarkEdit",
-      "stargazersCount": 3849,
+      "stargazersCount": 3856,
       "forksCount": 149,
       "language": "Swift",
       "topics": [
@@ -2798,11 +2785,11 @@
         "typescript"
       ],
       "releasesUrl": "https://api.github.com/repos/MarkEdit-app/MarkEdit/releases{/id}",
-      "updatedAt": "2026-03-14T03:26:16Z",
+      "updatedAt": "2026-03-15T01:56:20Z",
       "createdAt": "2023-02-05T03:51:15Z",
       "latestReleaseDate": "2026-03-01T05:28:52Z",
-      "releaseRecency": 12,
-      "releaseRecencyText": "Released 12 days ago"
+      "releaseRecency": 13,
+      "releaseRecencyText": "Released 13 days ago"
     },
     {
       "id": 578685027,
@@ -2815,7 +2802,7 @@
       "description": "Run Stable Diffusion on Mac natively",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/MochiDiffusion/MochiDiffusion",
-      "stargazersCount": 7856,
+      "stargazersCount": 7858,
       "forksCount": 362,
       "language": "Swift",
       "topics": [
@@ -2830,33 +2817,11 @@
         "swiftui"
       ],
       "releasesUrl": "https://api.github.com/repos/MochiDiffusion/MochiDiffusion/releases{/id}",
-      "updatedAt": "2026-03-13T08:51:30Z",
+      "updatedAt": "2026-03-14T19:28:03Z",
       "createdAt": "2022-12-15T16:30:56Z",
       "latestReleaseDate": "2026-02-28T18:28:27Z",
-      "releaseRecency": 13,
-      "releaseRecencyText": "Released 13 days ago"
-    },
-    {
-      "id": 1145022970,
-      "name": "Toonflow-app",
-      "fullName": "HBAI-Ltd/Toonflow-app",
-      "owner": {
-        "login": "HBAI-Ltd",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/257465404?v=4"
-      },
-      "description": "Toonflow 是一款 AI 短剧漫剧工具，能够利用 AI 技术将小说自动转化为剧本，并结合 AI 生成的图片和视频，实现高效的短剧创作。借助 Toonflow，可以轻松完成从文字到影像的全流程，让短剧制作变得更加智能与便捷。",
-      "defaultBranch": "master",
-      "htmlUrl": "https://github.com/HBAI-Ltd/Toonflow-app",
-      "stargazersCount": 4395,
-      "forksCount": 603,
-      "language": "HTML",
-      "topics": [],
-      "releasesUrl": "https://api.github.com/repos/HBAI-Ltd/Toonflow-app/releases{/id}",
-      "updatedAt": "2026-03-14T03:56:01Z",
-      "createdAt": "2026-01-29T10:25:45Z",
-      "latestReleaseDate": "2026-02-28T14:41:38Z",
-      "releaseRecency": 13,
-      "releaseRecencyText": "Released 13 days ago"
+      "releaseRecency": 14,
+      "releaseRecencyText": "Released 14 days ago"
     },
     {
       "id": 1124106079,
@@ -2869,54 +2834,16 @@
       "description": "Keyboard & Mouse Stats for macOS/Windows",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/debugtheworldbot/keyStats",
-      "stargazersCount": 871,
+      "stargazersCount": 874,
       "forksCount": 39,
       "language": "Swift",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/debugtheworldbot/keyStats/releases{/id}",
-      "updatedAt": "2026-03-14T03:23:47Z",
+      "updatedAt": "2026-03-14T17:24:45Z",
       "createdAt": "2025-12-28T10:51:54Z",
       "latestReleaseDate": "2026-02-28T13:54:26Z",
-      "releaseRecency": 13,
-      "releaseRecencyText": "Released 13 days ago"
-    },
-    {
-      "id": 871781831,
-      "name": "readest",
-      "fullName": "readest/readest",
-      "owner": {
-        "login": "readest",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/190965649?v=4"
-      },
-      "description": "Readest is a modern, feature-rich ebook reader designed for avid readers offering seamless cross-platform access, powerful tools, and an intuitive interface to elevate your reading experience.",
-      "defaultBranch": "main",
-      "htmlUrl": "https://github.com/readest/readest",
-      "stargazersCount": 18676,
-      "forksCount": 1007,
-      "language": "TypeScript",
-      "topics": [
-        "android",
-        "cross-platform",
-        "ebook",
-        "ebook-reader",
-        "epub",
-        "foliate",
-        "ios",
-        "koreader",
-        "nextjs",
-        "opds",
-        "pdf",
-        "reader",
-        "sync",
-        "tauri",
-        "tts"
-      ],
-      "releasesUrl": "https://api.github.com/repos/readest/readest/releases{/id}",
-      "updatedAt": "2026-03-14T03:37:46Z",
-      "createdAt": "2024-10-12T23:16:55Z",
-      "latestReleaseDate": "2026-02-28T08:51:24Z",
-      "releaseRecency": 13,
-      "releaseRecencyText": "Released 13 days ago"
+      "releaseRecency": 14,
+      "releaseRecencyText": "Released 14 days ago"
     },
     {
       "id": 1158831437,
@@ -2929,7 +2856,7 @@
       "description": null,
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/saif0200/notchprompt",
-      "stargazersCount": 441,
+      "stargazersCount": 442,
       "forksCount": 38,
       "language": "Swift",
       "topics": [
@@ -2938,11 +2865,11 @@
         "teleprompter"
       ],
       "releasesUrl": "https://api.github.com/repos/saif0200/notchprompt/releases{/id}",
-      "updatedAt": "2026-03-13T18:32:35Z",
+      "updatedAt": "2026-03-15T02:27:42Z",
       "createdAt": "2026-02-16T01:00:35Z",
       "latestReleaseDate": "2026-02-28T05:56:01Z",
-      "releaseRecency": 13,
-      "releaseRecencyText": "Released 13 days ago"
+      "releaseRecency": 14,
+      "releaseRecencyText": "Released 14 days ago"
     }
   ]
 }
