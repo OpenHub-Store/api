@@ -24,6 +24,7 @@ CATEGORY_TOKENS = {
     "trending": os.environ.get("GH_TOKEN_TRENDING"),
     "new-releases": os.environ.get("GH_TOKEN_NEW_RELEASES"),
     "most-popular": os.environ.get("GH_TOKEN_MOST_POPULAR"),
+    "topics": os.environ.get("GH_TOKEN_TOPICS"),
 }
 FALLBACK_TOKEN = os.environ.get("GITHUB_TOKEN")
 
@@ -31,7 +32,7 @@ FALLBACK_TOKEN = os.environ.get("GITHUB_TOKEN")
 _any_token = any(CATEGORY_TOKENS.values()) or FALLBACK_TOKEN
 if not _any_token:
     print("ERROR: No GitHub tokens set. Set GH_TOKEN_TRENDING / GH_TOKEN_NEW_RELEASES / "
-          "GH_TOKEN_MOST_POPULAR, or GITHUB_TOKEN as fallback.", file=sys.stderr)
+          "GH_TOKEN_MOST_POPULAR / GH_TOKEN_TOPICS, or GITHUB_TOKEN as fallback.", file=sys.stderr)
     sys.exit(1)
 
 
@@ -848,6 +849,165 @@ async def fetch_most_popular(client: GitHubClient, platform: str, budget: Option
     return [r.to_summary("most-popular") for r in verified]
 
 
+# ─── Topic definitions ─────────────────────────────────────────────────────
+
+# Maps topic category name → list of GitHub topics to search for.
+# Mirrors TopicCategory enum in the app (feature/home/domain/model/TopicCategory.kt).
+TOPIC_CATEGORIES = {
+    "privacy": {
+        "topics": [
+            "privacy", "security", "encryption", "vpn", "firewall",
+            "password-manager", "privacy-tools", "e2ee", "secure",
+            "anonymity", "tor", "pgp", "2fa", "auth",
+        ],
+        "keywords": ["privacy", "security", "encryption", "vpn", "firewall"],
+    },
+    "media": {
+        "topics": [
+            "music-player", "video-player", "media", "podcast", "streaming",
+            "audio", "video", "media-player", "music", "player",
+            "mpv", "vlc", "recorder", "screen-recorder", "gallery",
+        ],
+        "keywords": ["music-player", "video-player", "media", "podcast", "audio"],
+    },
+    "productivity": {
+        "topics": [
+            "productivity", "file-manager", "notes", "launcher", "keyboard",
+            "browser", "calendar", "todo", "note-taking", "editor",
+            "organizer", "task-manager", "markdown", "writing",
+        ],
+        "keywords": ["productivity", "file-manager", "notes", "launcher", "browser"],
+    },
+    "networking": {
+        "topics": [
+            "proxy", "dns", "ad-blocker", "torrent", "downloader",
+            "network", "ssh", "wireguard", "adblock", "download-manager",
+            "firewall", "socks5", "http-proxy", "p2p", "ftp",
+        ],
+        "keywords": ["proxy", "dns", "ad-blocker", "torrent", "downloader", "network"],
+    },
+    "dev-tools": {
+        "topics": [
+            "terminal", "developer-tools", "git-client", "editor", "cli",
+            "ide", "devtools", "code-editor", "terminal-emulator", "development",
+            "adb", "debugger", "api-client", "shell", "sdk",
+        ],
+        "keywords": ["terminal", "developer-tools", "git-client", "code-editor", "cli"],
+    },
+}
+
+
+async def fetch_topic(
+    client: GitHubClient,
+    platform: str,
+    topic_name: str,
+    topic_config: Dict,
+    budget: Optional[int] = None,
+) -> List[Dict]:
+    """Fetch repos matching a topic category for a platform."""
+    print(f"\n{'='*60}")
+    print(f"TOPIC: {topic_name.upper()} — {platform.upper()}")
+    print(f"{'='*60}")
+
+    topics = topic_config["topics"]
+    keywords = topic_config["keywords"]
+    platform_topics = PLATFORMS[platform]["topics"]
+    all_langs = PLATFORMS[platform]["languages"]["primary"] + PLATFORMS[platform]["languages"]["secondary"]
+    seen: Set[str] = set()
+
+    one_year = (datetime.utcnow() - timedelta(days=365)).strftime("%Y-%m-%d")
+    two_years = (datetime.utcnow() - timedelta(days=730)).strftime("%Y-%m-%d")
+
+    specs = []
+
+    # 1) Topic-based searches: cross topic categories with platform topics
+    #    e.g. "topic:privacy topic:android" — most relevant results
+    for topic in topics[:8]:  # top 8 topics to avoid too many queries
+        base = f"stars:>10 archived:false pushed:>={one_year}"
+        specs.append({
+            "query": _build_query(base, topics=[topic] + platform_topics[:2]),
+            "sort": "stars", "pages": 3, "weight": 1.5,
+        })
+
+    # 2) Keyword in description/name + platform topic
+    for kw in keywords[:3]:
+        base = f"stars:>20 archived:false pushed:>={one_year}"
+        specs.append({
+            "query": _build_query(base, topics=platform_topics[:2], description_kw=kw),
+            "sort": "stars", "pages": 3, "weight": 1.2,
+        })
+
+    # 3) Topic + primary language (catches repos without platform topic)
+    for topic in topics[:5]:
+        for lang in all_langs[:2]:
+            base = f"stars:>20 archived:false pushed:>={one_year}"
+            specs.append({
+                "query": _build_query(base, topics=[topic], language=lang),
+                "sort": "stars", "pages": 3, "weight": 1.0,
+            })
+
+    # 4) Broader: topic only, high stars (platform-agnostic gems)
+    for topic in topics[:5]:
+        base = f"stars:>500 archived:false pushed:>={two_years}"
+        specs.append({
+            "query": _build_query(base, topics=[topic]),
+            "sort": "stars", "pages": 3, "weight": 0.8,
+        })
+
+    candidates = await _collect_candidates(
+        client, specs, platform, seen, compute_velocity=False, min_score=0,
+    )
+    print(f"  {len(candidates)} candidates from {len(seen)} unique repos")
+
+    # Sort by score (platform relevance) then stars
+    candidates.sort(key=lambda c: (c.score, c.stars), reverse=True)
+    verified = await verify_installers(client, candidates, platform, need_release_date=True, budget=budget)
+
+    verified.sort(key=lambda c: (c.score, c.stars), reverse=True)
+    print(f"  ✓ {len(verified)} {topic_name} repos verified for {platform}")
+    return [r.to_summary("topic") for r in verified]
+
+
+async def process_topics(client: GitHubClient, timestamp: str):
+    """Process all 5 topic categories across all platforms."""
+    print(f"\n{'#'*70}")
+    print(f"# TOPICS (5 categories × {len(PLATFORMS)} platforms)")
+    print(f"{'#'*70}")
+
+    num_topics = len(TOPIC_CATEGORIES)
+    num_platforms = len(PLATFORMS)
+    total_slots = num_topics * num_platforms
+
+    for topic_idx, (topic_name, topic_config) in enumerate(TOPIC_CATEGORIES.items()):
+        print(f"\n--- Topic {topic_idx + 1}/{num_topics}: {topic_name} ---")
+
+        for platform_idx, platform in enumerate(PLATFORMS.keys()):
+            slot = topic_idx * num_platforms + platform_idx
+            slots_remaining = total_slots - slot
+            budget = max((client._rate_remaining - RATE_LIMIT_FLOOR) // slots_remaining, 50)
+
+            cached = load_cache(f"topics/{topic_name}", platform)
+            if cached:
+                continue
+
+            repos = await fetch_topic(client, platform, topic_name, topic_config, budget)
+
+            if len(repos) == 0:
+                existing = _load_existing_count(f"topics/{topic_name}", platform)
+                print(f"  ⚠ 0 repos fetched — skipping save (existing cache: {existing} repos)")
+                continue
+
+            # Lower threshold for topics — even 5 repos is useful
+            min_threshold = 5
+            if len(repos) < min_threshold:
+                existing = _load_existing_count(f"topics/{topic_name}", platform)
+                if existing >= min_threshold:
+                    print(f"  ⚠ Only {len(repos)} repos fetched but cache has {existing} — keeping cached data")
+                    continue
+
+            save_data(f"topics/{topic_name}", platform, repos, timestamp)
+
+
 # ─── Cache I/O ─────────────────────────────────────────────────────────────────
 
 
@@ -1008,6 +1168,81 @@ async def main():
             print(f"  [{cat_name}] Used {client._request_count} API requests, "
                   f"{len(client.release_cache)} release cache entries, "
                   f"{client._rate_remaining} requests remaining")
+
+    # ─── Phase 2: Topics ─────────────────────────────────────────────────────
+    # Use GH_TOKEN_TOPICS (dedicated) plus scavenge leftover budget from
+    # the 3 category tokens.
+
+    topics_token = CATEGORY_TOKENS.get("topics") or FALLBACK_TOKEN
+    if topics_token:
+        print(f"\n{'#'*70}")
+        print(f"# PHASE 2: TOPICS")
+        print(f"{'#'*70}")
+
+        # Collect all usable tokens: dedicated topics token + leftover from category tokens
+        topic_tokens = [topics_token]
+        for cat_name in ["trending", "new-releases", "most-popular"]:
+            cat_token = CATEGORY_TOKENS.get(cat_name)
+            if cat_token and cat_token != topics_token:
+                topic_tokens.append(cat_token)
+
+        # Deduplicate while preserving order
+        seen_tokens: Set[str] = set()
+        unique_tokens = []
+        for t in topic_tokens:
+            if t not in seen_tokens:
+                seen_tokens.add(t)
+                unique_tokens.append(t)
+
+        print(f"  Using {len(unique_tokens)} token(s) for topics")
+
+        # Check remaining budget on each token
+        usable_clients = []
+        for i, tok in enumerate(unique_tokens):
+            async with GitHubClient(tok) as probe:
+                data, _ = await probe.get("https://api.github.com/rate_limit")
+                if data:
+                    remaining = data.get("resources", {}).get("core", {}).get("remaining", 0)
+                    limit = data.get("resources", {}).get("core", {}).get("limit", 0)
+                    label = "dedicated" if i == 0 else f"leftover-{i}"
+                    print(f"  Token {label}: {remaining}/{limit} remaining")
+                    if remaining > RATE_LIMIT_FLOOR + 100:
+                        usable_clients.append((tok, remaining))
+
+        if usable_clients:
+            # Use the token with the most remaining budget first
+            usable_clients.sort(key=lambda x: x[1], reverse=True)
+            best_token, best_remaining = usable_clients[0]
+            print(f"  Selected token with {best_remaining} remaining requests")
+
+            async with GitHubClient(best_token) as client:
+                client._rate_remaining = best_remaining
+                await process_topics(client, timestamp)
+                total_requests += client._request_count
+                total_cache_entries += len(client.release_cache)
+                print(f"  [topics] Used {client._request_count} API requests, "
+                      f"{len(client.release_cache)} release cache entries, "
+                      f"{client._rate_remaining} requests remaining")
+
+                # If first token ran low, try remaining tokens
+                if client._rate_remaining <= RATE_LIMIT_FLOOR + 50 and len(usable_clients) > 1:
+                    for tok, rem in usable_clients[1:]:
+                        print(f"\n  Switching to next token ({rem} remaining)...")
+                        async with GitHubClient(tok) as fallback_client:
+                            fallback_client._rate_remaining = rem
+                            # Share release cache for efficiency
+                            fallback_client.release_cache = client.release_cache
+                            await process_topics(fallback_client, timestamp)
+                            total_requests += fallback_client._request_count
+                            total_cache_entries += len(fallback_client.release_cache)
+                            print(f"  [topics-fallback] Used {fallback_client._request_count} API requests, "
+                                  f"{fallback_client._rate_remaining} remaining")
+                            if fallback_client._rate_remaining > RATE_LIMIT_FLOOR + 50:
+                                break  # Still has budget, done
+        else:
+            print("  ⚠ No tokens with enough budget for topics — skipping")
+    else:
+        print("\n⚠ No token available for topics — set GH_TOKEN_TOPICS or GITHUB_TOKEN")
 
     elapsed = time.time() - start
     print(f"\n{'='*70}")
