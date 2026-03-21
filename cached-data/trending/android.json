@@ -1,8 +1,8 @@
 {
   "category": "trending",
   "platform": "android",
-  "lastUpdated": "2026-03-21T13:41:42.778357Z",
-  "totalCount": 200,
+  "lastUpdated": "2026-03-21T14:55:51.166298Z",
+  "totalCount": 189,
   "repositories": [
     {
       "id": 1101281251,
@@ -15,8 +15,8 @@
       "description": "A free, open-source app store for GitHub releases — browse, discover, and install apps with one click. Powered by Kotlin and Compose Multiplatform for Android & Desktop (Linux, MacOS, Windows).",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/OpenHub-Store/GitHub-Store",
-      "stargazersCount": 9335,
-      "forksCount": 349,
+      "stargazersCount": 9343,
+      "forksCount": 350,
       "language": "Kotlin",
       "topics": [
         "android",
@@ -36,12 +36,12 @@
         "windows"
       ],
       "releasesUrl": "https://api.github.com/repos/OpenHub-Store/GitHub-Store/releases{/id}",
-      "updatedAt": "2026-03-21T12:33:04Z",
+      "updatedAt": "2026-03-21T14:53:37Z",
       "createdAt": "2025-11-21T13:03:23Z",
       "latestReleaseDate": "2026-03-08T06:40:15Z",
       "releaseRecency": 13,
       "releaseRecencyText": "Released 13 days ago",
-      "trendingScore": 1619.83
+      "trendingScore": 1621.17
     },
     {
       "id": 578822531,
@@ -54,7 +54,7 @@
       "description": "An open-source cross-platform alternative to AirDrop",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/localsend/localsend",
-      "stargazersCount": 76810,
+      "stargazersCount": 76816,
       "forksCount": 4080,
       "language": "Dart",
       "topics": [
@@ -64,12 +64,12 @@
         "flutter-apps"
       ],
       "releasesUrl": "https://api.github.com/repos/localsend/localsend/releases{/id}",
-      "updatedAt": "2026-03-21T13:40:30Z",
+      "updatedAt": "2026-03-21T14:38:49Z",
       "createdAt": "2022-12-16T00:46:07Z",
       "latestReleaseDate": "2025-02-20T01:23:55Z",
       "releaseRecency": 394,
       "releaseRecencyText": "Released 394 days ago",
-      "trendingScore": 1304.84
+      "trendingScore": 1304.94
     },
     {
       "id": 455229168,
@@ -82,8 +82,8 @@
       "description": "High performance self-hosted photo and video management solution.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/immich-app/immich",
-      "stargazersCount": 95332,
-      "forksCount": 5159,
+      "stargazersCount": 95337,
+      "forksCount": 5160,
       "language": "TypeScript",
       "topics": [
         "backup-tool",
@@ -104,12 +104,12 @@
         "videos"
       ],
       "releasesUrl": "https://api.github.com/repos/immich-app/immich/releases{/id}",
-      "updatedAt": "2026-03-21T13:41:12Z",
+      "updatedAt": "2026-03-21T14:43:40Z",
       "createdAt": "2022-02-03T15:56:27Z",
       "latestReleaseDate": "2026-03-19T20:00:38Z",
       "releaseRecency": 1,
       "releaseRecencyText": "Released yesterday",
-      "trendingScore": 1266.03
+      "trendingScore": 1266.1
     },
     {
       "id": 299354207,
@@ -122,8 +122,8 @@
       "description": "An open-source remote desktop application designed for self-hosting, as an alternative to TeamViewer.",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/rustdesk/rustdesk",
-      "stargazersCount": 109745,
-      "forksCount": 16383,
+      "stargazersCount": 109748,
+      "forksCount": 16384,
       "language": "Rust",
       "topics": [
         "android",
@@ -147,12 +147,12 @@
         "windows"
       ],
       "releasesUrl": "https://api.github.com/repos/rustdesk/rustdesk/releases{/id}",
-      "updatedAt": "2026-03-21T13:35:20Z",
+      "updatedAt": "2026-03-21T14:45:49Z",
       "createdAt": "2020-09-28T15:36:08Z",
       "latestReleaseDate": "2026-03-05T05:05:30Z",
       "releaseRecency": 16,
       "releaseRecencyText": "Released 16 days ago",
-      "trendingScore": 1107.0
+      "trendingScore": 1107.03
     },
     {
       "id": 863717537,
@@ -165,7 +165,7 @@
       "description": "AirPods liberated from Apple's ecosystem.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/kavishdevar/librepods",
-      "stargazersCount": 25986,
+      "stargazersCount": 25988,
       "forksCount": 1413,
       "language": "Kotlin",
       "topics": [
@@ -181,12 +181,35 @@
         "reverse-engineering"
       ],
       "releasesUrl": "https://api.github.com/repos/kavishdevar/librepods/releases{/id}",
-      "updatedAt": "2026-03-21T12:57:05Z",
+      "updatedAt": "2026-03-21T14:17:24Z",
       "createdAt": "2024-09-26T19:31:11Z",
       "latestReleaseDate": "2025-06-03T14:54:39Z",
-      "releaseRecency": 290,
-      "releaseRecencyText": "Released 290 days ago",
-      "trendingScore": 990.44
+      "releaseRecency": 291,
+      "releaseRecencyText": "Released 291 days ago",
+      "trendingScore": 990.52
+    },
+    {
+      "id": 958136139,
+      "name": "gallery",
+      "fullName": "google-ai-edge/gallery",
+      "owner": {
+        "login": "google-ai-edge",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/150697620?v=4"
+      },
+      "description": "A gallery that showcases on-device ML/GenAI use cases and allows people to try and use models locally.",
+      "defaultBranch": "main",
+      "htmlUrl": "https://github.com/google-ai-edge/gallery",
+      "stargazersCount": 15423,
+      "forksCount": 1351,
+      "language": "Kotlin",
+      "topics": [],
+      "releasesUrl": "https://api.github.com/repos/google-ai-edge/gallery/releases{/id}",
+      "updatedAt": "2026-03-21T12:38:13Z",
+      "createdAt": "2025-03-31T17:47:28Z",
+      "latestReleaseDate": "2026-02-26T19:03:18Z",
+      "releaseRecency": 22,
+      "releaseRecencyText": "Released 22 days ago",
+      "trendingScore": 887.36
     },
     {
       "id": 1155424764,
@@ -219,30 +242,7 @@
       "latestReleaseDate": "2026-02-25T23:12:51Z",
       "releaseRecency": 23,
       "releaseRecencyText": "Released 23 days ago",
-      "trendingScore": 892.32
-    },
-    {
-      "id": 958136139,
-      "name": "gallery",
-      "fullName": "google-ai-edge/gallery",
-      "owner": {
-        "login": "google-ai-edge",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/150697620?v=4"
-      },
-      "description": "A gallery that showcases on-device ML/GenAI use cases and allows people to try and use models locally.",
-      "defaultBranch": "main",
-      "htmlUrl": "https://github.com/google-ai-edge/gallery",
-      "stargazersCount": 15423,
-      "forksCount": 1351,
-      "language": "Kotlin",
-      "topics": [],
-      "releasesUrl": "https://api.github.com/repos/google-ai-edge/gallery/releases{/id}",
-      "updatedAt": "2026-03-21T12:38:13Z",
-      "createdAt": "2025-03-31T17:47:28Z",
-      "latestReleaseDate": "2026-02-26T19:03:18Z",
-      "releaseRecency": 22,
-      "releaseRecencyText": "Released 22 days ago",
-      "trendingScore": 887.36
+      "trendingScore": 869.58
     },
     {
       "id": 661957079,
@@ -289,7 +289,7 @@
       "description": "Bring projects, wikis, and teams together with AI. AppFlowy is the AI collaborative workspace where you achieve more without losing control of your data. The leading open source Notion alternative.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/AppFlowy-IO/AppFlowy",
-      "stargazersCount": 68712,
+      "stargazersCount": 68713,
       "forksCount": 4964,
       "language": "Dart",
       "topics": [
@@ -307,12 +307,12 @@
         "wiki"
       ],
       "releasesUrl": "https://api.github.com/repos/AppFlowy-IO/AppFlowy/releases{/id}",
-      "updatedAt": "2026-03-21T13:27:50Z",
+      "updatedAt": "2026-03-21T14:47:00Z",
       "createdAt": "2021-06-16T12:56:48Z",
       "latestReleaseDate": "2026-03-09T12:03:33Z",
       "releaseRecency": 12,
       "releaseRecencyText": "Released 12 days ago",
-      "trendingScore": 796.25
+      "trendingScore": 796.26
     },
     {
       "id": 1104751416,
@@ -325,7 +325,7 @@
       "description": "Morphe app patcher for Android",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/MorpheApp/morphe-manager",
-      "stargazersCount": 3202,
+      "stargazersCount": 3206,
       "forksCount": 40,
       "language": "Kotlin",
       "topics": [
@@ -338,12 +338,12 @@
         "youtube"
       ],
       "releasesUrl": "https://api.github.com/repos/MorpheApp/morphe-manager/releases{/id}",
-      "updatedAt": "2026-03-21T12:43:18Z",
+      "updatedAt": "2026-03-21T14:30:58Z",
       "createdAt": "2025-11-26T16:29:57Z",
       "latestReleaseDate": "2026-03-07T19:07:03Z",
       "releaseRecency": 13,
       "releaseRecencyText": "Released 13 days ago",
-      "trendingScore": 595.75
+      "trendingScore": 596.46
     },
     {
       "id": 500719319,
@@ -356,17 +356,17 @@
       "description": "A rule-based tunnel for Android.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/MetaCubeX/ClashMetaForAndroid",
-      "stargazersCount": 35728,
-      "forksCount": 2352,
+      "stargazersCount": 35748,
+      "forksCount": 2353,
       "language": "Kotlin",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/MetaCubeX/ClashMetaForAndroid/releases{/id}",
-      "updatedAt": "2026-03-21T13:39:04Z",
+      "updatedAt": "2026-03-21T14:47:26Z",
       "createdAt": "2022-06-07T06:38:00Z",
       "latestReleaseDate": "2026-03-09T16:55:59Z",
       "releaseRecency": 11,
       "releaseRecencyText": "Released 11 days ago",
-      "trendingScore": 536.67
+      "trendingScore": 536.96
     },
     {
       "id": 743704912,
@@ -379,7 +379,7 @@
       "description": "Free and open source manga reader for Android",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/mihonapp/mihon",
-      "stargazersCount": 19274,
+      "stargazersCount": 19277,
       "forksCount": 1013,
       "language": "Kotlin",
       "topics": [
@@ -394,12 +394,12 @@
         "tachiyomi-alternative"
       ],
       "releasesUrl": "https://api.github.com/repos/mihonapp/mihon/releases{/id}",
-      "updatedAt": "2026-03-21T13:37:11Z",
+      "updatedAt": "2026-03-21T14:51:03Z",
       "createdAt": "2024-01-15T20:03:57Z",
       "latestReleaseDate": "2026-03-21T09:31:04Z",
       "releaseRecency": 0,
       "releaseRecencyText": "Released today",
-      "trendingScore": 522.88
+      "trendingScore": 522.96
     },
     {
       "id": 338719962,
@@ -412,7 +412,7 @@
       "description": "🎧 Open source music streaming app! Available for both desktop & mobile!",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/KRTirtho/spotube",
-      "stargazersCount": 45128,
+      "stargazersCount": 45129,
       "forksCount": 2019,
       "language": "Dart",
       "topics": [
@@ -431,12 +431,12 @@
         "youtube"
       ],
       "releasesUrl": "https://api.github.com/repos/KRTirtho/spotube/releases{/id}",
-      "updatedAt": "2026-03-21T13:41:27Z",
+      "updatedAt": "2026-03-21T14:10:52Z",
       "createdAt": "2021-02-14T03:17:58Z",
       "latestReleaseDate": "2026-02-24T13:15:09Z",
       "releaseRecency": 25,
       "releaseRecencyText": "Released 25 days ago",
-      "trendingScore": 500.99
+      "trendingScore": 501.0
     },
     {
       "id": 15634981,
@@ -449,7 +449,7 @@
       "description": "Godot Engine – Multi-platform 2D and 3D game engine",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/godotengine/godot",
-      "stargazersCount": 108209,
+      "stargazersCount": 108213,
       "forksCount": 24729,
       "language": "C++",
       "topics": [
@@ -462,12 +462,12 @@
         "open-source"
       ],
       "releasesUrl": "https://api.github.com/repos/godotengine/godot/releases{/id}",
-      "updatedAt": "2026-03-21T13:13:30Z",
+      "updatedAt": "2026-03-21T14:45:19Z",
       "createdAt": "2014-01-04T16:05:36Z",
       "latestReleaseDate": "2026-03-19T14:32:41Z",
-      "releaseRecency": 1,
-      "releaseRecencyText": "Released yesterday",
-      "trendingScore": 500.46
+      "releaseRecency": 2,
+      "releaseRecencyText": "Released 2 days ago",
+      "trendingScore": 500.48
     },
     {
       "id": 825187044,
@@ -519,8 +519,8 @@
       "description": "A V2Ray client for Android, support Xray core and v2fly core",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/2dust/v2rayNG",
-      "stargazersCount": 52479,
-      "forksCount": 7051,
+      "stargazersCount": 52488,
+      "forksCount": 7052,
       "language": "Kotlin",
       "topics": [
         "android",
@@ -537,12 +537,12 @@
         "xtls"
       ],
       "releasesUrl": "https://api.github.com/repos/2dust/v2rayNG/releases{/id}",
-      "updatedAt": "2026-03-21T13:38:06Z",
+      "updatedAt": "2026-03-21T14:46:30Z",
       "createdAt": "2019-05-15T02:15:31Z",
       "latestReleaseDate": "2026-03-13T09:13:28Z",
       "releaseRecency": 8,
       "releaseRecencyText": "Released 8 days ago",
-      "trendingScore": 451.5
+      "trendingScore": 451.57
     },
     {
       "id": 1016267036,
@@ -610,7 +610,7 @@
       "description": "A privacy-first, self-hosted, fully open source personal knowledge management software, written in typescript and golang.",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/siyuan-note/siyuan",
-      "stargazersCount": 42012,
+      "stargazersCount": 42011,
       "forksCount": 2614,
       "language": "TypeScript",
       "topics": [
@@ -635,12 +635,12 @@
         "webdav"
       ],
       "releasesUrl": "https://api.github.com/repos/siyuan-note/siyuan/releases{/id}",
-      "updatedAt": "2026-03-21T12:58:54Z",
+      "updatedAt": "2026-03-21T13:52:17Z",
       "createdAt": "2020-08-30T09:21:35Z",
       "latestReleaseDate": "2026-03-17T02:43:50Z",
       "releaseRecency": 4,
       "releaseRecencyText": "Released 4 days ago",
-      "trendingScore": 414.12
+      "trendingScore": 414.11
     },
     {
       "id": 471494981,
@@ -653,7 +653,7 @@
       "description": "💊 Application to use ReVanced on Android ",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/ReVanced/revanced-manager",
-      "stargazersCount": 26837,
+      "stargazersCount": 26841,
       "forksCount": 1061,
       "language": "Kotlin",
       "topics": [
@@ -665,12 +665,12 @@
         "revanced"
       ],
       "releasesUrl": "https://api.github.com/repos/ReVanced/revanced-manager/releases{/id}",
-      "updatedAt": "2026-03-21T11:15:16Z",
+      "updatedAt": "2026-03-21T14:30:58Z",
       "createdAt": "2022-03-18T19:38:55Z",
       "latestReleaseDate": "2026-03-20T19:55:11Z",
       "releaseRecency": 0,
       "releaseRecencyText": "Released today",
-      "trendingScore": 412.88
+      "trendingScore": 412.93
     },
     {
       "id": 481797111,
@@ -683,7 +683,7 @@
       "description": "🦭 Video/Audio Downloader for Android, based on yt-dlp",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/JunkFood02/Seal",
-      "stargazersCount": 25228,
+      "stargazersCount": 25231,
       "forksCount": 1098,
       "language": "Kotlin",
       "topics": [
@@ -697,12 +697,12 @@
         "yt-dlp"
       ],
       "releasesUrl": "https://api.github.com/repos/JunkFood02/Seal/releases{/id}",
-      "updatedAt": "2026-03-21T13:27:19Z",
+      "updatedAt": "2026-03-21T14:40:29Z",
       "createdAt": "2022-04-15T01:15:25Z",
       "latestReleaseDate": "2024-10-16T17:00:00Z",
       "releaseRecency": 520,
       "releaseRecencyText": "Released 520 days ago",
-      "trendingScore": 403.36
+      "trendingScore": 403.41
     },
     {
       "id": 266231149,
@@ -715,7 +715,7 @@
       "description": "A privacy-first, open-source platform for knowledge management and collaboration. Download link:  http://github.com/logseq/logseq/releases. roadmap: https://discuss.logseq.com/t/logseq-product-roadmap/34267",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/logseq/logseq",
-      "stargazersCount": 41669,
+      "stargazersCount": 41671,
       "forksCount": 2508,
       "language": "Clojure",
       "topics": [
@@ -732,12 +732,12 @@
         "pkm"
       ],
       "releasesUrl": "https://api.github.com/repos/logseq/logseq/releases{/id}",
-      "updatedAt": "2026-03-21T12:58:33Z",
+      "updatedAt": "2026-03-21T14:53:01Z",
       "createdAt": "2020-05-23T00:06:06Z",
       "latestReleaseDate": "2025-12-01T12:33:43Z",
       "releaseRecency": 110,
       "releaseRecencyText": "Released 110 days ago",
-      "trendingScore": 391.63
+      "trendingScore": 391.64
     },
     {
       "id": 609535399,
@@ -750,7 +750,7 @@
       "description": "NekoBox for Android / sing-box / universal proxy toolchain for Android",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/MatsuriDayo/NekoBoxForAndroid",
-      "stargazersCount": 19391,
+      "stargazersCount": 19401,
       "forksCount": 1510,
       "language": "Kotlin",
       "topics": [
@@ -764,12 +764,12 @@
         "vpn"
       ],
       "releasesUrl": "https://api.github.com/repos/MatsuriDayo/NekoBoxForAndroid/releases{/id}",
-      "updatedAt": "2026-03-21T13:12:39Z",
+      "updatedAt": "2026-03-21T14:55:24Z",
       "createdAt": "2023-03-04T13:26:16Z",
       "latestReleaseDate": "2026-02-09T03:55:00Z",
       "releaseRecency": 40,
       "releaseRecencyText": "Released 40 days ago",
-      "trendingScore": 380.45
+      "trendingScore": 380.63
     },
     {
       "id": 187961907,
@@ -782,17 +782,17 @@
       "description": "Legado 3.0 Book Reader with powerful controls & full functions❤️阅读3.0, 阅读是一款可以自定义来源阅读网络内容的工具，为广大网络文学爱好者提供一种方便、快捷舒适的试读体验。",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/gedoor/legado",
-      "stargazersCount": 44982,
-      "forksCount": 4966,
+      "stargazersCount": 44986,
+      "forksCount": 4967,
       "language": "Kotlin",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/gedoor/legado/releases{/id}",
-      "updatedAt": "2026-03-21T13:14:35Z",
+      "updatedAt": "2026-03-21T14:49:01Z",
       "createdAt": "2019-05-22T04:18:58Z",
       "latestReleaseDate": "2024-08-16T04:49:21Z",
       "releaseRecency": 582,
       "releaseRecencyText": "Released 582 days ago",
-      "trendingScore": 376.58
+      "trendingScore": 376.61
     },
     {
       "id": 67702184,
@@ -805,17 +805,17 @@
       "description": "The Magic Mask for Android",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/topjohnwu/Magisk",
-      "stargazersCount": 59419,
-      "forksCount": 17033,
+      "stargazersCount": 59421,
+      "forksCount": 17034,
       "language": "Kotlin",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/topjohnwu/Magisk/releases{/id}",
-      "updatedAt": "2026-03-21T13:36:20Z",
+      "updatedAt": "2026-03-21T14:25:02Z",
       "createdAt": "2016-09-08T12:42:53Z",
       "latestReleaseDate": "2026-02-23T08:07:01Z",
       "releaseRecency": 26,
       "releaseRecencyText": "Released 26 days ago",
-      "trendingScore": 361.39
+      "trendingScore": 361.4
     },
     {
       "id": 1105932355,
@@ -828,17 +828,17 @@
       "description": "原生、纯净、可扩展 —— 重新定义你的 B 站体验",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/jay3-yy/BiliPai",
-      "stargazersCount": 1832,
+      "stargazersCount": 1834,
       "forksCount": 67,
       "language": "Kotlin",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/jay3-yy/BiliPai/releases{/id}",
-      "updatedAt": "2026-03-21T11:47:02Z",
+      "updatedAt": "2026-03-21T14:47:06Z",
       "createdAt": "2025-11-28T11:17:48Z",
       "latestReleaseDate": "2026-03-21T06:20:56Z",
       "releaseRecency": 0,
       "releaseRecencyText": "Released today",
-      "trendingScore": 340.25
+      "trendingScore": 340.6
     },
     {
       "id": 910702543,
@@ -851,17 +851,17 @@
       "description": "🌍 免 Root 的 SIM 卡国家码修改工具 | 解决国际漫游时的兼容性问题，帮助使用海外 SIM 卡获得更好的本地化体验，解锁运营商限制，突破区域限制",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/Ackites/Nrfr",
-      "stargazersCount": 6901,
+      "stargazersCount": 6902,
       "forksCount": 541,
       "language": "Kotlin",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/Ackites/Nrfr/releases{/id}",
-      "updatedAt": "2026-03-21T13:37:48Z",
+      "updatedAt": "2026-03-21T14:38:20Z",
       "createdAt": "2025-01-01T05:57:30Z",
       "latestReleaseDate": "2025-01-05T11:05:27Z",
       "releaseRecency": 440,
       "releaseRecencyText": "Released 440 days ago",
-      "trendingScore": 326.86
+      "trendingScore": 326.9
     },
     {
       "id": 1104341840,
@@ -874,17 +874,17 @@
       "description": "A native Android application that converts any website URL into a standalone Android App.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/shiahonb777/web-to-app",
-      "stargazersCount": 1754,
+      "stargazersCount": 1755,
       "forksCount": 226,
       "language": "Kotlin",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/shiahonb777/web-to-app/releases{/id}",
-      "updatedAt": "2026-03-21T12:02:23Z",
+      "updatedAt": "2026-03-21T14:29:52Z",
       "createdAt": "2025-11-26T04:45:16Z",
       "latestReleaseDate": "2025-11-26T08:49:40Z",
       "releaseRecency": 115,
       "releaseRecencyText": "Released 115 days ago",
-      "trendingScore": 325.04
+      "trendingScore": 325.22
     },
     {
       "id": 283211901,
@@ -897,7 +897,7 @@
       "description": "Browse media content with your own rules on Android TV",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/yuliskov/SmartTube",
-      "stargazersCount": 29012,
+      "stargazersCount": 29011,
       "forksCount": 1556,
       "language": "Java",
       "topics": [
@@ -910,12 +910,12 @@
         "rxjava-android"
       ],
       "releasesUrl": "https://api.github.com/repos/yuliskov/SmartTube/releases{/id}",
-      "updatedAt": "2026-03-21T13:41:08Z",
+      "updatedAt": "2026-03-21T13:50:51Z",
       "createdAt": "2020-07-28T12:53:52Z",
       "latestReleaseDate": "2026-03-17T20:20:58Z",
       "releaseRecency": 3,
       "releaseRecencyText": "Released 3 days ago",
-      "trendingScore": 321.4
+      "trendingScore": 321.39
     },
     {
       "id": 44804216,
@@ -928,7 +928,7 @@
       "description": "Termux - a terminal emulator application for Android OS extendible by variety of packages.",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/termux/termux-app",
-      "stargazersCount": 52272,
+      "stargazersCount": 52273,
       "forksCount": 6238,
       "language": "Java",
       "topics": [
@@ -939,12 +939,12 @@
         "termux"
       ],
       "releasesUrl": "https://api.github.com/repos/termux/termux-app/releases{/id}",
-      "updatedAt": "2026-03-21T13:01:27Z",
+      "updatedAt": "2026-03-21T14:15:23Z",
       "createdAt": "2015-10-23T09:42:46Z",
       "latestReleaseDate": "2025-05-22T22:47:26Z",
       "releaseRecency": 302,
       "releaseRecencyText": "Released 302 days ago",
-      "trendingScore": 306.97
+      "trendingScore": 306.98
     },
     {
       "id": 519845229,
@@ -957,7 +957,7 @@
       "description": "集找番、追番、看番的一站式弹幕追番平台，云收藏同步 (Bangumi)，离线缓存，BitTorrent，弹幕云过滤。100% Kotlin/Compose Multiplatform",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/open-ani/animeko",
-      "stargazersCount": 16152,
+      "stargazersCount": 16156,
       "forksCount": 411,
       "language": "Kotlin",
       "topics": [
@@ -982,12 +982,12 @@
         "windows"
       ],
       "releasesUrl": "https://api.github.com/repos/open-ani/animeko/releases{/id}",
-      "updatedAt": "2026-03-21T13:01:37Z",
+      "updatedAt": "2026-03-21T14:23:08Z",
       "createdAt": "2022-07-31T17:38:49Z",
       "latestReleaseDate": "2026-02-26T06:02:14Z",
       "releaseRecency": 23,
       "releaseRecencyText": "Released 23 days ago",
-      "trendingScore": 306.25
+      "trendingScore": 306.31
     },
     {
       "id": 337594329,
@@ -1041,7 +1041,7 @@
       "description": "A Kernel based root solution for Android",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/tiann/KernelSU",
-      "stargazersCount": 15587,
+      "stargazersCount": 15589,
       "forksCount": 3272,
       "language": "Kotlin",
       "topics": [
@@ -1052,12 +1052,12 @@
         "su"
       ],
       "releasesUrl": "https://api.github.com/repos/tiann/KernelSU/releases{/id}",
-      "updatedAt": "2026-03-21T13:15:38Z",
+      "updatedAt": "2026-03-21T14:21:03Z",
       "createdAt": "2022-12-09T14:03:54Z",
       "latestReleaseDate": "2026-02-04T15:16:55Z",
       "releaseRecency": 44,
       "releaseRecencyText": "Released 44 days ago",
-      "trendingScore": 292.43
+      "trendingScore": 292.25
     },
     {
       "id": 1088320038,
@@ -1070,7 +1070,7 @@
       "description": "A beautiful media player for android, based on mpv-android and built with Jetpack Compose. Forked from mpvKt",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/marlboro-advance/mpvEx",
-      "stargazersCount": 1650,
+      "stargazersCount": 1652,
       "forksCount": 86,
       "language": "Kotlin",
       "topics": [
@@ -1085,12 +1085,12 @@
         "videoplayer"
       ],
       "releasesUrl": "https://api.github.com/repos/marlboro-advance/mpvEx/releases{/id}",
-      "updatedAt": "2026-03-21T12:30:44Z",
+      "updatedAt": "2026-03-21T14:38:11Z",
       "createdAt": "2025-11-02T18:34:51Z",
       "latestReleaseDate": "2026-03-10T19:35:14Z",
       "releaseRecency": 10,
       "releaseRecencyText": "Released 10 days ago",
-      "trendingScore": 291.13
+      "trendingScore": 291.42
     },
     {
       "id": 957055748,
@@ -1103,17 +1103,17 @@
       "description": "Kernel-based Android Root Solution & KPM",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/SukiSU-Ultra/SukiSU-Ultra",
-      "stargazersCount": 4796,
-      "forksCount": 1069,
+      "stargazersCount": 4799,
+      "forksCount": 1070,
       "language": "Kotlin",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/SukiSU-Ultra/SukiSU-Ultra/releases{/id}",
-      "updatedAt": "2026-03-21T13:14:00Z",
+      "updatedAt": "2026-03-21T14:16:46Z",
       "createdAt": "2025-03-29T12:56:40Z",
       "latestReleaseDate": "2026-03-09T10:11:49Z",
       "releaseRecency": 12,
       "releaseRecencyText": "Released 12 days ago",
-      "trendingScore": 288.68
+      "trendingScore": 288.85
     },
     {
       "id": 970046788,
@@ -1126,7 +1126,7 @@
       "description": "Native PC gaming with Steam, Epic, GOG and Amazon integrations on Android",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/utkarshdalal/GameNative",
-      "stargazersCount": 4356,
+      "stargazersCount": 4358,
       "forksCount": 168,
       "language": "Kotlin",
       "topics": [
@@ -1136,12 +1136,12 @@
         "steam"
       ],
       "releasesUrl": "https://api.github.com/repos/utkarshdalal/GameNative/releases{/id}",
-      "updatedAt": "2026-03-21T13:36:47Z",
+      "updatedAt": "2026-03-21T14:33:54Z",
       "createdAt": "2025-04-21T11:25:27Z",
       "latestReleaseDate": "2026-03-15T17:23:57Z",
       "releaseRecency": 5,
       "releaseRecencyText": "Released 5 days ago",
-      "trendingScore": 280.84
+      "trendingScore": 280.96
     },
     {
       "id": 1046496211,
@@ -1154,17 +1154,17 @@
       "description": "使用 Material Design 3 全新设计的阅读 3.0",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/HapeLee/legado-with-MD3",
-      "stargazersCount": 2530,
-      "forksCount": 82,
+      "stargazersCount": 2531,
+      "forksCount": 83,
       "language": "Kotlin",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/HapeLee/legado-with-MD3/releases{/id}",
-      "updatedAt": "2026-03-21T13:09:23Z",
+      "updatedAt": "2026-03-21T13:44:35Z",
       "createdAt": "2025-08-28T19:16:22Z",
       "latestReleaseDate": "2026-01-17T21:12:19Z",
       "releaseRecency": 62,
       "releaseRecencyText": "Released 62 days ago",
-      "trendingScore": 264.04
+      "trendingScore": 264.14
     },
     {
       "id": 987110251,
@@ -1177,17 +1177,17 @@
       "description": "privacy-first Android music player built with Material 3 Expressive. Play offline, sync lyrics, fine-tune with equalizer presets, and cast to your devices.",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/theovilardo/PixelPlayer",
-      "stargazersCount": 3550,
+      "stargazersCount": 3551,
       "forksCount": 257,
       "language": "Kotlin",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/theovilardo/PixelPlayer/releases{/id}",
-      "updatedAt": "2026-03-21T13:27:25Z",
+      "updatedAt": "2026-03-21T14:41:34Z",
       "createdAt": "2025-05-20T15:33:18Z",
       "latestReleaseDate": "2026-03-10T05:00:56Z",
       "releaseRecency": 11,
       "releaseRecencyText": "Released 11 days ago",
-      "trendingScore": 253.55
+      "trendingScore": 253.62
     },
     {
       "id": 1082792611,
@@ -1200,17 +1200,17 @@
       "description": "Install any apk on the device you own. ",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/sam1am/anyapk",
-      "stargazersCount": 1697,
+      "stargazersCount": 1698,
       "forksCount": 64,
       "language": "Kotlin",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/sam1am/anyapk/releases{/id}",
-      "updatedAt": "2026-03-21T13:35:10Z",
+      "updatedAt": "2026-03-21T14:48:34Z",
       "createdAt": "2025-10-24T19:23:52Z",
       "latestReleaseDate": "2025-10-27T00:10:42Z",
       "releaseRecency": 145,
       "releaseRecencyText": "Released 145 days ago",
-      "trendingScore": 246.88
+      "trendingScore": 247.02
     },
     {
       "id": 948839453,
@@ -1238,7 +1238,7 @@
         "terminal"
       ],
       "releasesUrl": "https://api.github.com/repos/AAswordman/Operit/releases{/id}",
-      "updatedAt": "2026-03-21T13:34:48Z",
+      "updatedAt": "2026-03-21T14:34:44Z",
       "createdAt": "2025-03-15T04:24:12Z",
       "latestReleaseDate": "2026-03-18T13:27:05Z",
       "releaseRecency": 3,
@@ -1256,7 +1256,7 @@
       "description": "RikkaHub is an Android APP that supports for multiple LLM providers.",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/rikkahub/rikkahub",
-      "stargazersCount": 3599,
+      "stargazersCount": 3601,
       "forksCount": 230,
       "language": "Kotlin",
       "topics": [
@@ -1275,12 +1275,12 @@
         "web-ui"
       ],
       "releasesUrl": "https://api.github.com/repos/rikkahub/rikkahub/releases{/id}",
-      "updatedAt": "2026-03-21T13:27:49Z",
+      "updatedAt": "2026-03-21T14:43:31Z",
       "createdAt": "2025-03-11T14:46:55Z",
       "latestReleaseDate": "2026-03-18T16:27:21Z",
       "releaseRecency": 2,
       "releaseRecencyText": "Released 2 days ago",
-      "trendingScore": 238.46
+      "trendingScore": 238.05
     },
     {
       "id": 41889031,
@@ -1293,8 +1293,8 @@
       "description": "A libre lightweight streaming front-end for Android.",
       "defaultBranch": "dev",
       "htmlUrl": "https://github.com/TeamNewPipe/NewPipe",
-      "stargazersCount": 37606,
-      "forksCount": 3511,
+      "stargazersCount": 37608,
+      "forksCount": 3512,
       "language": "Java",
       "topics": [
         "4k",
@@ -1310,12 +1310,12 @@
         "youtube-video"
       ],
       "releasesUrl": "https://api.github.com/repos/TeamNewPipe/NewPipe/releases{/id}",
-      "updatedAt": "2026-03-21T13:34:12Z",
+      "updatedAt": "2026-03-21T14:51:09Z",
       "createdAt": "2015-09-03T23:39:26Z",
       "latestReleaseDate": "2026-03-08T20:15:17Z",
       "releaseRecency": 12,
       "releaseRecencyText": "Released 12 days ago",
-      "trendingScore": 227.31
+      "trendingScore": 227.32
     },
     {
       "id": 677376114,
@@ -1328,8 +1328,8 @@
       "description": "YouTube Music client for Android",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/MetrolistGroup/Metrolist",
-      "stargazersCount": 7715,
-      "forksCount": 468,
+      "stargazersCount": 7718,
+      "forksCount": 469,
       "language": "Kotlin",
       "topics": [
         "android",
@@ -1354,12 +1354,12 @@
         "ytmusic"
       ],
       "releasesUrl": "https://api.github.com/repos/MetrolistGroup/Metrolist/releases{/id}",
-      "updatedAt": "2026-03-21T13:36:20Z",
+      "updatedAt": "2026-03-21T14:53:27Z",
       "createdAt": "2023-08-11T12:19:23Z",
       "latestReleaseDate": "2026-03-09T01:34:01Z",
       "releaseRecency": 12,
       "releaseRecencyText": "Released 12 days ago",
-      "trendingScore": 225.91
+      "trendingScore": 225.97
     },
     {
       "id": 29219243,
@@ -1372,8 +1372,8 @@
       "description": "翻墙-科学上网",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/bannedbook/fanqiang",
-      "stargazersCount": 42655,
-      "forksCount": 7592,
+      "stargazersCount": 42659,
+      "forksCount": 7596,
       "language": "Kotlin",
       "topics": [
         "brook",
@@ -1389,12 +1389,12 @@
         "v2ray"
       ],
       "releasesUrl": "https://api.github.com/repos/bannedbook/fanqiang/releases{/id}",
-      "updatedAt": "2026-03-21T13:35:51Z",
+      "updatedAt": "2026-03-21T14:49:45Z",
       "createdAt": "2015-01-14T00:34:25Z",
       "latestReleaseDate": "2024-08-18T07:10:04Z",
       "releaseRecency": 580,
       "releaseRecencyText": "Released 580 days ago",
-      "trendingScore": 224.89
+      "trendingScore": 224.91
     },
     {
       "id": 478710402,
@@ -1407,7 +1407,7 @@
       "description": "🖼️ Image Toolbox is a powerful app for advanced image manipulation. It offers dozens of features, from basic tools like crop and draw to filters, OCR, and a wide range of image processing options",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/T8RIN/ImageToolbox",
-      "stargazersCount": 12212,
+      "stargazersCount": 12215,
       "forksCount": 527,
       "language": "Kotlin",
       "topics": [
@@ -1433,12 +1433,12 @@
         "upscaling"
       ],
       "releasesUrl": "https://api.github.com/repos/T8RIN/ImageToolbox/releases{/id}",
-      "updatedAt": "2026-03-21T13:06:34Z",
+      "updatedAt": "2026-03-21T14:43:52Z",
       "createdAt": "2022-04-06T20:06:28Z",
       "latestReleaseDate": "2026-03-14T17:09:33Z",
       "releaseRecency": 6,
       "releaseRecencyText": "Released 6 days ago",
-      "trendingScore": 217.14
+      "trendingScore": 217.18
     },
     {
       "id": 979081678,
@@ -1451,17 +1451,17 @@
       "description": "哔哩哔哩 的第三方 Android TV 应用 BV 的个人修改版",
       "defaultBranch": "feature",
       "htmlUrl": "https://github.com/Frost819/bv",
-      "stargazersCount": 2997,
+      "stargazersCount": 2998,
       "forksCount": 98,
       "language": "Kotlin",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/Frost819/bv/releases{/id}",
-      "updatedAt": "2026-03-21T13:08:36Z",
+      "updatedAt": "2026-03-21T13:57:12Z",
       "createdAt": "2025-05-07T01:07:31Z",
       "latestReleaseDate": "2026-03-15T05:23:33Z",
       "releaseRecency": 6,
       "releaseRecencyText": "Released 6 days ago",
-      "trendingScore": 208.49
+      "trendingScore": 208.55
     },
     {
       "id": 628160489,
@@ -1474,7 +1474,7 @@
       "description": "A cross-platform music app using YouTube Music for backend",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/maxrave-dev/SimpMusic",
-      "stargazersCount": 8410,
+      "stargazersCount": 8411,
       "forksCount": 375,
       "language": "Kotlin",
       "topics": [
@@ -1498,12 +1498,12 @@
         "youtube-music"
       ],
       "releasesUrl": "https://api.github.com/repos/maxrave-dev/SimpMusic/releases{/id}",
-      "updatedAt": "2026-03-21T12:51:40Z",
+      "updatedAt": "2026-03-21T14:02:37Z",
       "createdAt": "2023-04-15T04:53:33Z",
       "latestReleaseDate": "2026-03-20T08:00:13Z",
       "releaseRecency": 1,
       "releaseRecencyText": "Released yesterday",
-      "trendingScore": 203.05
+      "trendingScore": 203.07
     },
     {
       "id": 1029712303,
@@ -1516,17 +1516,17 @@
       "description": "Using system APIs directly with adb/root privileges from normal apps through a Java process started with app_process.",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/thedjchi/Shizuku",
-      "stargazersCount": 2106,
+      "stargazersCount": 2107,
       "forksCount": 39,
       "language": "Kotlin",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/thedjchi/Shizuku/releases{/id}",
-      "updatedAt": "2026-03-21T08:54:36Z",
+      "updatedAt": "2026-03-21T13:43:46Z",
       "createdAt": "2025-07-31T13:05:06Z",
       "latestReleaseDate": "2026-02-17T15:23:11Z",
       "releaseRecency": 31,
       "releaseRecencyText": "Released 31 days ago",
-      "trendingScore": 196.77
+      "trendingScore": 196.86
     },
     {
       "id": 884278258,
@@ -1539,8 +1539,8 @@
       "description": "More Expressive InstallerX !",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/wxxsfxyzm/InstallerX-Revived",
-      "stargazersCount": 4167,
-      "forksCount": 164,
+      "stargazersCount": 4170,
+      "forksCount": 165,
       "language": "Kotlin",
       "topics": [
         "android",
@@ -1554,12 +1554,12 @@
         "shizuku"
       ],
       "releasesUrl": "https://api.github.com/repos/wxxsfxyzm/InstallerX-Revived/releases{/id}",
-      "updatedAt": "2026-03-21T13:30:56Z",
+      "updatedAt": "2026-03-21T14:39:58Z",
       "createdAt": "2024-11-06T13:19:18Z",
       "latestReleaseDate": "2026-02-10T06:48:05Z",
       "releaseRecency": 39,
       "releaseRecencyText": "Released 39 days ago",
-      "trendingScore": 196.68
+      "trendingScore": 196.8
     },
     {
       "id": 850339360,
@@ -1572,7 +1572,7 @@
       "description": "Приложение локально запускает ByeDPI и перенаправляет весь трафик через него",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/romanvht/ByeByeDPI",
-      "stargazersCount": 4635,
+      "stargazersCount": 4639,
       "forksCount": 225,
       "language": "Kotlin",
       "topics": [
@@ -1580,12 +1580,12 @@
         "byedpi"
       ],
       "releasesUrl": "https://api.github.com/repos/romanvht/ByeByeDPI/releases{/id}",
-      "updatedAt": "2026-03-21T13:11:52Z",
+      "updatedAt": "2026-03-21T14:44:56Z",
       "createdAt": "2024-08-31T13:56:18Z",
       "latestReleaseDate": "2026-02-25T10:29:27Z",
       "releaseRecency": 24,
       "releaseRecencyText": "Released 24 days ago",
-      "trendingScore": 191.78
+      "trendingScore": 191.63
     },
     {
       "id": 799994079,
@@ -1613,7 +1613,7 @@
       "latestReleaseDate": "2025-12-19T04:38:56Z",
       "releaseRecency": 92,
       "releaseRecencyText": "Released 92 days ago",
-      "trendingScore": 189.05
+      "trendingScore": 188.84
     },
     {
       "id": 915203368,
@@ -1626,8 +1626,8 @@
       "description": "An advanced Kernel based root solution for Android",
       "defaultBranch": "dev",
       "htmlUrl": "https://github.com/KernelSU-Next/KernelSU-Next",
-      "stargazersCount": 3352,
-      "forksCount": 819,
+      "stargazersCount": 3353,
+      "forksCount": 820,
       "language": "Kotlin",
       "topics": [
         "android",
@@ -1638,12 +1638,12 @@
         "su"
       ],
       "releasesUrl": "https://api.github.com/repos/KernelSU-Next/KernelSU-Next/releases{/id}",
-      "updatedAt": "2026-03-21T12:19:15Z",
+      "updatedAt": "2026-03-21T14:05:17Z",
       "createdAt": "2025-01-11T08:30:02Z",
       "latestReleaseDate": "2026-02-26T00:02:45Z",
       "releaseRecency": 23,
       "releaseRecencyText": "Released 23 days ago",
-      "trendingScore": 186.47
+      "trendingScore": 186.52
     },
     {
       "id": 436609718,
@@ -1686,7 +1686,7 @@
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/bmax121/APatch",
       "stargazersCount": 7253,
-      "forksCount": 678,
+      "forksCount": 679,
       "language": "Kotlin",
       "topics": [
         "android",
@@ -1703,7 +1703,7 @@
       "latestReleaseDate": "2025-11-12T09:35:50Z",
       "releaseRecency": 129,
       "releaseRecencyText": "Released 129 days ago",
-      "trendingScore": 185.99
+      "trendingScore": 185.83
     },
     {
       "id": 7190986,
@@ -1716,7 +1716,7 @@
       "description": "A shadowsocks client for Android",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/shadowsocks/shadowsocks-android",
-      "stargazersCount": 36722,
+      "stargazersCount": 36723,
       "forksCount": 11526,
       "language": "Kotlin",
       "topics": [
@@ -1724,7 +1724,7 @@
         "shadowsocks"
       ],
       "releasesUrl": "https://api.github.com/repos/shadowsocks/shadowsocks-android/releases{/id}",
-      "updatedAt": "2026-03-21T13:15:56Z",
+      "updatedAt": "2026-03-21T14:45:51Z",
       "createdAt": "2012-12-16T13:40:29Z",
       "latestReleaseDate": "2026-02-10T06:47:17Z",
       "releaseRecency": 39,
@@ -1742,7 +1742,7 @@
       "description": "An OSS Android TV client for Jellyfin",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/damontecres/Wholphin",
-      "stargazersCount": 1442,
+      "stargazersCount": 1445,
       "forksCount": 59,
       "language": "Kotlin",
       "topics": [
@@ -1752,12 +1752,12 @@
         "jellyfin-client"
       ],
       "releasesUrl": "https://api.github.com/repos/damontecres/Wholphin/releases{/id}",
-      "updatedAt": "2026-03-21T13:03:17Z",
+      "updatedAt": "2026-03-21T14:17:02Z",
       "createdAt": "2025-09-20T20:31:30Z",
       "latestReleaseDate": "2026-03-17T17:05:41Z",
       "releaseRecency": 3,
       "releaseRecencyText": "Released 3 days ago",
-      "trendingScore": 179.34
+      "trendingScore": 179.67
     },
     {
       "id": 521189491,
@@ -1771,7 +1771,7 @@
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/recloudstream/cloudstream",
       "stargazersCount": 9147,
-      "forksCount": 816,
+      "forksCount": 817,
       "language": "Kotlin",
       "topics": [
         "android",
@@ -1800,7 +1800,7 @@
       "description": "一个基于 Android 调试 API + 百度地图实现的虚拟定位工具，并且同时实现了一个可以自由移动的摇杆",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/ZCShou/GoGoGo",
-      "stargazersCount": 10088,
+      "stargazersCount": 10091,
       "forksCount": 1154,
       "language": "Java",
       "topics": [
@@ -1816,12 +1816,12 @@
         "virtual-location"
       ],
       "releasesUrl": "https://api.github.com/repos/ZCShou/GoGoGo/releases{/id}",
-      "updatedAt": "2026-03-21T13:35:05Z",
+      "updatedAt": "2026-03-21T14:53:34Z",
       "createdAt": "2021-12-03T06:59:39Z",
       "latestReleaseDate": "2025-08-09T05:47:11Z",
       "releaseRecency": 224,
       "releaseRecencyText": "Released 224 days ago",
-      "trendingScore": 162.59
+      "trendingScore": 162.63
     },
     {
       "id": 337054443,
@@ -1860,17 +1860,17 @@
       "description": "Using system APIs directly with adb/root privileges from normal apps through a Java process started with app_process.",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/RikkaApps/Shizuku",
-      "stargazersCount": 23152,
-      "forksCount": 2150,
+      "stargazersCount": 23154,
+      "forksCount": 2151,
       "language": "Kotlin",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/RikkaApps/Shizuku/releases{/id}",
-      "updatedAt": "2026-03-21T13:39:36Z",
+      "updatedAt": "2026-03-21T14:53:56Z",
       "createdAt": "2017-05-24T13:53:49Z",
       "latestReleaseDate": "2025-05-25T13:19:47Z",
       "releaseRecency": 300,
       "releaseRecencyText": "Released 300 days ago",
-      "trendingScore": 159.71
+      "trendingScore": 159.68
     },
     {
       "id": 497133950,
@@ -1883,7 +1883,7 @@
       "description": "Full-featured audio/video downloader for Android using yt-dlp",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/deniscerri/ytdlnis",
-      "stargazersCount": 8053,
+      "stargazersCount": 8054,
       "forksCount": 341,
       "language": "Kotlin",
       "topics": [
@@ -1901,12 +1901,12 @@
         "yt-dlp-gui"
       ],
       "releasesUrl": "https://api.github.com/repos/deniscerri/ytdlnis/releases{/id}",
-      "updatedAt": "2026-03-21T08:22:23Z",
+      "updatedAt": "2026-03-21T14:32:14Z",
       "createdAt": "2022-05-27T20:46:51Z",
       "latestReleaseDate": "2026-03-11T14:00:20Z",
-      "releaseRecency": 9,
-      "releaseRecencyText": "Released 9 days ago",
-      "trendingScore": 153.62
+      "releaseRecency": 10,
+      "releaseRecencyText": "Released 10 days ago",
+      "trendingScore": 153.64
     },
     {
       "id": 73614722,
@@ -1953,7 +1953,7 @@
       "description": "A ROOT REQUIRED LSPosed module to hide your app list, settings, package installers and more. It is a fork of Hide My Applist project.",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/frknkrc44/HMA-OSS",
-      "stargazersCount": 1341,
+      "stargazersCount": 1342,
       "forksCount": 121,
       "language": "Kotlin",
       "topics": [
@@ -1961,12 +1961,12 @@
         "requires-root"
       ],
       "releasesUrl": "https://api.github.com/repos/frknkrc44/HMA-OSS/releases{/id}",
-      "updatedAt": "2026-03-21T13:31:45Z",
+      "updatedAt": "2026-03-21T14:18:43Z",
       "createdAt": "2025-09-05T20:21:21Z",
       "latestReleaseDate": "2026-02-18T16:56:05Z",
       "releaseRecency": 30,
       "releaseRecencyText": "Released 30 days ago",
-      "trendingScore": 152.84
+      "trendingScore": 152.94
     },
     {
       "id": 795739621,
@@ -1979,7 +1979,7 @@
       "description": "App to AntiSplit (merge) split APKs (APKS/XAPK/APKM) to regular .APK file on Android",
       "defaultBranch": "redesign",
       "htmlUrl": "https://github.com/AbdurazaaqMohammed/AntiSplit-M",
-      "stargazersCount": 4010,
+      "stargazersCount": 4013,
       "forksCount": 139,
       "language": "Java",
       "topics": [
@@ -1993,12 +1993,12 @@
         "xapk"
       ],
       "releasesUrl": "https://api.github.com/repos/AbdurazaaqMohammed/AntiSplit-M/releases{/id}",
-      "updatedAt": "2026-03-21T09:58:03Z",
+      "updatedAt": "2026-03-21T14:47:11Z",
       "createdAt": "2024-05-03T23:44:22Z",
       "latestReleaseDate": "2025-04-21T17:41:48Z",
       "releaseRecency": 333,
       "releaseRecencyText": "Released 333 days ago",
-      "trendingScore": 150.91
+      "trendingScore": 151.0
     },
     {
       "id": 482265185,
@@ -2011,17 +2011,17 @@
       "description": "A feature-rich weather app with good visualizations and more than 50 sources.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/breezy-weather/breezy-weather",
-      "stargazersCount": 9633,
+      "stargazersCount": 9634,
       "forksCount": 321,
       "language": "Kotlin",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/breezy-weather/breezy-weather/releases{/id}",
-      "updatedAt": "2026-03-21T10:47:22Z",
+      "updatedAt": "2026-03-21T14:53:31Z",
       "createdAt": "2022-04-16T13:45:06Z",
       "latestReleaseDate": "2026-02-12T16:55:54Z",
       "releaseRecency": 36,
       "releaseRecencyText": "Released 36 days ago",
-      "trendingScore": 150.35
+      "trendingScore": 150.27
     },
     {
       "id": 510342492,
@@ -2201,7 +2201,7 @@
       "description": "An Android RSS reader presented in Material You style.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/ReadYouApp/ReadYou",
-      "stargazersCount": 6997,
+      "stargazersCount": 6998,
       "forksCount": 284,
       "language": "Kotlin",
       "topics": [
@@ -2216,12 +2216,12 @@
         "rss-reader"
       ],
       "releasesUrl": "https://api.github.com/repos/ReadYouApp/ReadYou/releases{/id}",
-      "updatedAt": "2026-03-21T11:45:02Z",
+      "updatedAt": "2026-03-21T14:51:06Z",
       "createdAt": "2022-03-01T16:58:16Z",
       "latestReleaseDate": "2026-02-01T13:01:15Z",
       "releaseRecency": 48,
       "releaseRecencyText": "Released 48 days ago",
-      "trendingScore": 132.55
+      "trendingScore": 132.57
     },
     {
       "id": 2990192,
@@ -2234,12 +2234,12 @@
       "description": "A private messenger for Android.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/signalapp/Signal-Android",
-      "stargazersCount": 28522,
+      "stargazersCount": 28523,
       "forksCount": 6690,
       "language": "Kotlin",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/signalapp/Signal-Android/releases{/id}",
-      "updatedAt": "2026-03-21T13:15:12Z",
+      "updatedAt": "2026-03-21T14:12:07Z",
       "createdAt": "2011-12-15T20:01:12Z",
       "latestReleaseDate": "2026-03-18T17:39:32Z",
       "releaseRecency": 2,
@@ -2257,7 +2257,7 @@
       "description": "An Android native video player",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/anilbeesetti/nextplayer",
-      "stargazersCount": 3710,
+      "stargazersCount": 3711,
       "forksCount": 222,
       "language": "Kotlin",
       "topics": [
@@ -2276,12 +2276,12 @@
         "video-player"
       ],
       "releasesUrl": "https://api.github.com/repos/anilbeesetti/nextplayer/releases{/id}",
-      "updatedAt": "2026-03-21T10:35:49Z",
+      "updatedAt": "2026-03-21T14:27:10Z",
       "createdAt": "2023-02-08T05:34:22Z",
       "latestReleaseDate": "2026-02-07T09:24:34Z",
       "releaseRecency": 42,
       "releaseRecencyText": "Released 42 days ago",
-      "trendingScore": 129.26
+      "trendingScore": 129.28
     },
     {
       "id": 293227683,
@@ -2327,8 +2327,8 @@
       "description": "Free and open source manga reader for Android",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/komikku-app/komikku",
-      "stargazersCount": 3537,
-      "forksCount": 149,
+      "stargazersCount": 3538,
+      "forksCount": 148,
       "language": "Kotlin",
       "topics": [
         "android",
@@ -2348,12 +2348,12 @@
         "tachiyomisy"
       ],
       "releasesUrl": "https://api.github.com/repos/komikku-app/komikku/releases{/id}",
-      "updatedAt": "2026-03-21T12:12:43Z",
+      "updatedAt": "2026-03-21T14:45:34Z",
       "createdAt": "2024-01-14T16:25:54Z",
       "latestReleaseDate": "2025-12-30T08:42:00Z",
       "releaseRecency": 81,
       "releaseRecencyText": "Released 81 days ago",
-      "trendingScore": 126.87
+      "trendingScore": 126.89
     },
     {
       "id": 684744357,
@@ -2406,7 +2406,7 @@
         "kotlin-android"
       ],
       "releasesUrl": "https://api.github.com/repos/florisboard/florisboard/releases{/id}",
-      "updatedAt": "2026-03-21T09:26:45Z",
+      "updatedAt": "2026-03-21T13:54:05Z",
       "createdAt": "2020-04-08T21:18:23Z",
       "latestReleaseDate": "2025-11-28T15:17:55Z",
       "releaseRecency": 112,
@@ -2456,7 +2456,7 @@
       "description": "HyperOS enhancement module - Make HyperOS Great Again!",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/ReChronoRain/HyperCeiler",
-      "stargazersCount": 4517,
+      "stargazersCount": 4519,
       "forksCount": 343,
       "language": "Java",
       "topics": [
@@ -2464,12 +2464,12 @@
         "xposed-module"
       ],
       "releasesUrl": "https://api.github.com/repos/ReChronoRain/HyperCeiler/releases{/id}",
-      "updatedAt": "2026-03-21T13:41:27Z",
+      "updatedAt": "2026-03-21T14:43:25Z",
       "createdAt": "2023-10-27T17:17:42Z",
       "latestReleaseDate": "2025-08-29T13:49:00Z",
-      "releaseRecency": 203,
-      "releaseRecencyText": "Released 203 days ago",
-      "trendingScore": 119.25
+      "releaseRecency": 204,
+      "releaseRecencyText": "Released 204 days ago",
+      "trendingScore": 119.29
     },
     {
       "id": 228162278,
@@ -2508,7 +2508,7 @@
       "description": "Free implementation of Play Services",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/microg/GmsCore",
-      "stargazersCount": 12646,
+      "stargazersCount": 12645,
       "forksCount": 2656,
       "language": "Java",
       "topics": [
@@ -2528,12 +2528,12 @@
         "push-notifications"
       ],
       "releasesUrl": "https://api.github.com/repos/microg/GmsCore/releases{/id}",
-      "updatedAt": "2026-03-21T13:34:40Z",
+      "updatedAt": "2026-03-21T13:42:06Z",
       "createdAt": "2014-04-23T19:28:47Z",
       "latestReleaseDate": "2026-02-09T10:17:47Z",
       "releaseRecency": 40,
       "releaseRecencyText": "Released 40 days ago",
-      "trendingScore": 113.16
+      "trendingScore": 113.15
     },
     {
       "id": 805199381,
@@ -2623,7 +2623,7 @@
       "latestReleaseDate": "2026-02-07T09:27:13Z",
       "releaseRecency": 42,
       "releaseRecencyText": "Released 42 days ago",
-      "trendingScore": 112.22
+      "trendingScore": 112.15
     },
     {
       "id": 83799439,
@@ -2637,7 +2637,7 @@
       "defaultBranch": "16-dev",
       "htmlUrl": "https://github.com/LawnchairLauncher/lawnchair",
       "stargazersCount": 12405,
-      "forksCount": 1461,
+      "forksCount": 1462,
       "language": "Java",
       "topics": [
         "android",
@@ -2696,7 +2696,7 @@
       "description": "An app for manga and anime",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/aniyomiorg/aniyomi",
-      "stargazersCount": 7082,
+      "stargazersCount": 7083,
       "forksCount": 535,
       "language": "Kotlin",
       "topics": [
@@ -2705,12 +2705,12 @@
         "manga"
       ],
       "releasesUrl": "https://api.github.com/repos/aniyomiorg/aniyomi/releases{/id}",
-      "updatedAt": "2026-03-21T13:08:07Z",
+      "updatedAt": "2026-03-21T13:55:03Z",
       "createdAt": "2021-04-17T13:35:37Z",
       "latestReleaseDate": "2025-10-28T22:09:44Z",
       "releaseRecency": 143,
       "releaseRecencyText": "Released 143 days ago",
-      "trendingScore": 106.73
+      "trendingScore": 106.74
     },
     {
       "id": 135088590,
@@ -2782,7 +2782,7 @@
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/MuntashirAkon/AppManager",
       "stargazersCount": 7660,
-      "forksCount": 429,
+      "forksCount": 430,
       "language": "Java",
       "topics": [
         "adb",
@@ -2810,7 +2810,7 @@
       "description": "A FOSS WireGuard & AmneziaWG Android client with auto-tunneling, lockdown & proxying.",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/wgtunnel/android",
-      "stargazersCount": 2506,
+      "stargazersCount": 2507,
       "forksCount": 137,
       "language": "Kotlin",
       "topics": [
@@ -2833,12 +2833,12 @@
         "wireguard-vpn"
       ],
       "releasesUrl": "https://api.github.com/repos/wgtunnel/android/releases{/id}",
-      "updatedAt": "2026-03-21T13:09:36Z",
+      "updatedAt": "2026-03-21T13:43:32Z",
       "createdAt": "2023-05-24T05:14:12Z",
       "latestReleaseDate": "2026-03-10T00:44:11Z",
       "releaseRecency": 11,
       "releaseRecencyText": "Released 11 days ago",
-      "trendingScore": 103.57
+      "trendingScore": 103.59
     },
     {
       "id": 65757761,
@@ -2851,7 +2851,7 @@
       "description": "A free, secure and open source app for Android to manage your 2-step verification tokens.",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/beemdevelopment/Aegis",
-      "stargazersCount": 12159,
+      "stargazersCount": 12157,
       "forksCount": 513,
       "language": "Java",
       "topics": [
@@ -2866,12 +2866,12 @@
         "totp"
       ],
       "releasesUrl": "https://api.github.com/repos/beemdevelopment/Aegis/releases{/id}",
-      "updatedAt": "2026-03-21T12:00:49Z",
+      "updatedAt": "2026-03-21T14:03:44Z",
       "createdAt": "2016-08-15T19:10:31Z",
       "latestReleaseDate": "2026-02-24T20:02:52Z",
       "releaseRecency": 24,
       "releaseRecencyText": "Released 24 days ago",
-      "trendingScore": 101.4
+      "trendingScore": 101.39
     },
     {
       "id": 669697660,
@@ -2949,17 +2949,17 @@
       "description": "Free implementation of Play Services",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/ReVanced/GmsCore",
-      "stargazersCount": 4130,
+      "stargazersCount": 4131,
       "forksCount": 630,
       "language": "Java",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/ReVanced/GmsCore/releases{/id}",
-      "updatedAt": "2026-03-21T13:34:06Z",
+      "updatedAt": "2026-03-21T14:06:07Z",
       "createdAt": "2023-06-23T04:04:59Z",
       "latestReleaseDate": "2026-02-16T01:57:27Z",
       "releaseRecency": 33,
       "releaseRecencyText": "Released 33 days ago",
-      "trendingScore": 98.44
+      "trendingScore": 98.46
     },
     {
       "id": 433695154,
@@ -2987,8 +2987,8 @@
       "updatedAt": "2026-03-21T11:49:49Z",
       "createdAt": "2021-12-01T05:27:22Z",
       "latestReleaseDate": "2026-03-14T14:45:17Z",
-      "releaseRecency": 6,
-      "releaseRecencyText": "Released 6 days ago",
+      "releaseRecency": 7,
+      "releaseRecencyText": "Released 7 days ago",
       "trendingScore": 98.08
     },
     {
@@ -3002,7 +3002,7 @@
       "description": "ReVanced LSPosed module. YouTube & YT Music Remove ads, Background playback",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/chsbuffer/ReVancedXposed",
-      "stargazersCount": 2233,
+      "stargazersCount": 2234,
       "forksCount": 93,
       "language": "Kotlin",
       "topics": [
@@ -3013,12 +3013,12 @@
         "youtube-music"
       ],
       "releasesUrl": "https://api.github.com/repos/chsbuffer/ReVancedXposed/releases{/id}",
-      "updatedAt": "2026-03-21T10:00:59Z",
+      "updatedAt": "2026-03-21T14:03:26Z",
       "createdAt": "2024-06-16T13:36:30Z",
       "latestReleaseDate": "2026-02-27T01:52:22Z",
       "releaseRecency": 22,
       "releaseRecencyText": "Released 22 days ago",
-      "trendingScore": 97.46
+      "trendingScore": 97.49
     },
     {
       "id": 397334149,
@@ -3031,7 +3031,7 @@
       "description": "The main repository of Telegram X — official alternative Telegram client for Android.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/TGX-Android/Telegram-X",
-      "stargazersCount": 5410,
+      "stargazersCount": 5411,
       "forksCount": 955,
       "language": "Java",
       "topics": [
@@ -3040,12 +3040,12 @@
         "telegram-x"
       ],
       "releasesUrl": "https://api.github.com/repos/TGX-Android/Telegram-X/releases{/id}",
-      "updatedAt": "2026-03-21T11:41:01Z",
+      "updatedAt": "2026-03-21T13:44:54Z",
       "createdAt": "2021-08-17T17:09:25Z",
       "latestReleaseDate": "2026-01-08T15:33:16Z",
       "releaseRecency": 71,
       "releaseRecencyText": "Released 71 days ago",
-      "trendingScore": 96.56
+      "trendingScore": 96.57
     },
     {
       "id": 395236152,
@@ -3058,7 +3058,7 @@
       "description": "Disable / Hide / Suspend / Uninstall Android apps without root.",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/aistra0528/Hail",
-      "stargazersCount": 5376,
+      "stargazersCount": 5377,
       "forksCount": 184,
       "language": "Kotlin",
       "topics": [
@@ -3071,12 +3071,12 @@
         "shizuku"
       ],
       "releasesUrl": "https://api.github.com/repos/aistra0528/Hail/releases{/id}",
-      "updatedAt": "2026-03-21T10:17:18Z",
+      "updatedAt": "2026-03-21T14:52:33Z",
       "createdAt": "2021-08-12T07:39:40Z",
       "latestReleaseDate": "2026-01-01T07:30:05Z",
       "releaseRecency": 79,
       "releaseRecencyText": "Released 79 days ago",
-      "trendingScore": 95.92
+      "trendingScore": 95.94
     },
     {
       "id": 248400799,
@@ -3102,8 +3102,8 @@
       "updatedAt": "2026-03-21T09:25:53Z",
       "createdAt": "2020-03-19T03:21:14Z",
       "latestReleaseDate": "2025-11-23T13:56:30Z",
-      "releaseRecency": 117,
-      "releaseRecencyText": "Released 117 days ago",
+      "releaseRecency": 118,
+      "releaseRecencyText": "Released 118 days ago",
       "trendingScore": 95.11
     },
     {
@@ -3179,7 +3179,7 @@
       "description": "A media player for android, based on mpv-android and built with Jetpack Compose.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/abdallahmehiz/mpvKt",
-      "stargazersCount": 1348,
+      "stargazersCount": 1349,
       "forksCount": 79,
       "language": "Kotlin",
       "topics": [
@@ -3194,12 +3194,12 @@
         "mpv-player"
       ],
       "releasesUrl": "https://api.github.com/repos/abdallahmehiz/mpvKt/releases{/id}",
-      "updatedAt": "2026-03-21T03:33:37Z",
+      "updatedAt": "2026-03-21T14:37:59Z",
       "createdAt": "2024-05-12T22:30:23Z",
       "latestReleaseDate": "2024-09-14T16:22:37Z",
       "releaseRecency": 552,
       "releaseRecencyText": "Released 552 days ago",
-      "trendingScore": 91.82
+      "trendingScore": 91.85
     },
     {
       "id": 614314251,
@@ -3362,7 +3362,7 @@
       "latestReleaseDate": "2025-11-01T08:21:22Z",
       "releaseRecency": 140,
       "releaseRecencyText": "Released 140 days ago",
-      "trendingScore": 89.25
+      "trendingScore": 89.21
     },
     {
       "id": 84631679,
@@ -3501,8 +3501,8 @@
       "updatedAt": "2026-03-21T04:51:10Z",
       "createdAt": "2020-10-12T10:43:58Z",
       "latestReleaseDate": "2025-07-06T14:07:07Z",
-      "releaseRecency": 257,
-      "releaseRecencyText": "Released 257 days ago",
+      "releaseRecency": 258,
+      "releaseRecencyText": "Released 258 days ago",
       "trendingScore": 87.72
     },
     {
@@ -3516,7 +3516,7 @@
       "description": "Bitwarden mobile apps (Password Manager and Authenticator) for Android.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/bitwarden/android",
-      "stargazersCount": 8588,
+      "stargazersCount": 8589,
       "forksCount": 947,
       "language": "Kotlin",
       "topics": [
@@ -3527,7 +3527,7 @@
         "kotlin"
       ],
       "releasesUrl": "https://api.github.com/repos/bitwarden/android/releases{/id}",
-      "updatedAt": "2026-03-21T11:31:49Z",
+      "updatedAt": "2026-03-21T14:48:29Z",
       "createdAt": "2016-04-30T16:43:17Z",
       "latestReleaseDate": "2026-03-19T18:26:41Z",
       "releaseRecency": 1,
@@ -3615,7 +3615,7 @@
         "tachiyomi"
       ],
       "releasesUrl": "https://api.github.com/repos/jobobby04/TachiyomiSY/releases{/id}",
-      "updatedAt": "2026-03-21T12:38:57Z",
+      "updatedAt": "2026-03-21T14:42:40Z",
       "createdAt": "2020-03-30T04:00:35Z",
       "latestReleaseDate": "2025-05-11T19:36:26Z",
       "releaseRecency": 313,
@@ -3722,8 +3722,8 @@
       "updatedAt": "2026-03-21T01:29:27Z",
       "createdAt": "2021-10-17T10:03:14Z",
       "latestReleaseDate": "2026-03-07T14:22:39Z",
-      "releaseRecency": 13,
-      "releaseRecencyText": "Released 13 days ago",
+      "releaseRecency": 14,
+      "releaseRecencyText": "Released 14 days ago",
       "trendingScore": 83.92
     },
     {
@@ -3750,7 +3750,7 @@
       "latestReleaseDate": "2025-10-18T08:05:50Z",
       "releaseRecency": 154,
       "releaseRecencyText": "Released 154 days ago",
-      "trendingScore": 83.5
+      "trendingScore": 83.47
     },
     {
       "id": 571702700,
@@ -3787,7 +3787,7 @@
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/ankidroid/Anki-Android",
       "stargazersCount": 10897,
-      "forksCount": 2739,
+      "forksCount": 2740,
       "language": "Kotlin",
       "topics": [
         "android",
@@ -3805,7 +3805,7 @@
       "latestReleaseDate": "2026-01-10T22:52:31Z",
       "releaseRecency": 69,
       "releaseRecencyText": "Released 69 days ago",
-      "trendingScore": 83.34
+      "trendingScore": 83.33
     },
     {
       "id": 743013512,
@@ -3818,17 +3818,17 @@
       "description": "Simple-ish app using Shizuku to install APKs on-device with advanced options",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/zacharee/InstallWithOptions",
-      "stargazersCount": 2675,
+      "stargazersCount": 2676,
       "forksCount": 123,
       "language": "Kotlin",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/zacharee/InstallWithOptions/releases{/id}",
-      "updatedAt": "2026-03-21T11:08:49Z",
+      "updatedAt": "2026-03-21T14:42:57Z",
       "createdAt": "2024-01-14T03:25:36Z",
       "latestReleaseDate": "2026-03-14T18:38:31Z",
       "releaseRecency": 6,
       "releaseRecencyText": "Released 6 days ago",
-      "trendingScore": 83.13
+      "trendingScore": 83.15
     },
     {
       "id": 226883777,
@@ -3841,8 +3841,8 @@
       "description": "All in one emulator on Android!",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/Swordfish90/Lemuroid",
-      "stargazersCount": 3727,
-      "forksCount": 260,
+      "stargazersCount": 3729,
+      "forksCount": 261,
       "language": "Kotlin",
       "topics": [
         "android",
@@ -3866,7 +3866,7 @@
         "snes"
       ],
       "releasesUrl": "https://api.github.com/repos/Swordfish90/Lemuroid/releases{/id}",
-      "updatedAt": "2026-03-21T13:25:40Z",
+      "updatedAt": "2026-03-21T14:44:27Z",
       "createdAt": "2019-12-09T13:55:34Z",
       "latestReleaseDate": "2024-10-22T17:04:08Z",
       "releaseRecency": 514,
@@ -3912,7 +3912,7 @@
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/HeliBorg/HeliBoard",
       "stargazersCount": 4875,
-      "forksCount": 257,
+      "forksCount": 258,
       "language": "Java",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/HeliBorg/HeliBoard/releases{/id}",
@@ -3974,7 +3974,7 @@
       "description": "Contains many tools to control android system via shizuku.",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/legendsayantan/ShizuTools",
-      "stargazersCount": 2118,
+      "stargazersCount": 2120,
       "forksCount": 54,
       "language": "Kotlin",
       "topics": [
@@ -3997,12 +3997,12 @@
         "volume-control"
       ],
       "releasesUrl": "https://api.github.com/repos/legendsayantan/ShizuTools/releases{/id}",
-      "updatedAt": "2026-03-21T12:57:34Z",
+      "updatedAt": "2026-03-21T14:44:54Z",
       "createdAt": "2023-10-23T22:00:40Z",
       "latestReleaseDate": "2024-10-25T08:04:24Z",
       "releaseRecency": 512,
       "releaseRecencyText": "Released 512 days ago",
-      "trendingScore": 80.19
+      "trendingScore": 80.24
     },
     {
       "id": 502586319,
@@ -4044,7 +4044,7 @@
       "description": "Thunderbird for Android – Open Source Email App for Android (fka K-9 Mail)",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/thunderbird/thunderbird-android",
-      "stargazersCount": 13256,
+      "stargazersCount": 13258,
       "forksCount": 2711,
       "language": "Kotlin",
       "topics": [
@@ -4054,12 +4054,12 @@
         "mozilla"
       ],
       "releasesUrl": "https://api.github.com/repos/thunderbird/thunderbird-android/releases{/id}",
-      "updatedAt": "2026-03-21T12:42:23Z",
+      "updatedAt": "2026-03-21T14:39:13Z",
       "createdAt": "2011-02-04T02:40:00Z",
       "latestReleaseDate": "2026-03-17T04:10:30Z",
       "releaseRecency": 4,
       "releaseRecencyText": "Released 4 days ago",
-      "trendingScore": 79.99
+      "trendingScore": 80.0
     },
     {
       "id": 137497481,
@@ -4095,7 +4095,7 @@
       "latestReleaseDate": "2025-11-29T15:24:46Z",
       "releaseRecency": 111,
       "releaseRecencyText": "Released 111 days ago",
-      "trendingScore": 79.32
+      "trendingScore": 79.3
     },
     {
       "id": 175908029,
@@ -4227,7 +4227,7 @@
       "description": "Iconify lets you customize your Android 12+ device easily. Change icons, colors, shapes, and even the notification panel for a personalized look that suits your style.",
       "defaultBranch": "beta",
       "htmlUrl": "https://github.com/Mahmud0808/Iconify",
-      "stargazersCount": 2892,
+      "stargazersCount": 2893,
       "forksCount": 122,
       "language": "Kotlin",
       "topics": [
@@ -4238,12 +4238,12 @@
         "theme"
       ],
       "releasesUrl": "https://api.github.com/repos/Mahmud0808/Iconify/releases{/id}",
-      "updatedAt": "2026-03-21T00:43:19Z",
+      "updatedAt": "2026-03-21T14:24:24Z",
       "createdAt": "2022-08-27T09:19:06Z",
       "latestReleaseDate": "2025-03-02T13:32:49Z",
       "releaseRecency": 384,
       "releaseRecencyText": "Released 384 days ago",
-      "trendingScore": 76.42
+      "trendingScore": 76.44
     },
     {
       "id": 270683546,
@@ -4329,19 +4329,19 @@
       "description": "[Deprecated] Thanks for your support!",
       "defaultBranch": "feat/new_download",
       "htmlUrl": "https://github.com/YenalyLiew/Han1meViewer",
-      "stargazersCount": 3165,
+      "stargazersCount": 3167,
       "forksCount": 305,
       "language": "Kotlin",
       "topics": [
         "android"
       ],
       "releasesUrl": "https://api.github.com/repos/YenalyLiew/Han1meViewer/releases{/id}",
-      "updatedAt": "2026-03-21T11:26:27Z",
+      "updatedAt": "2026-03-21T14:44:30Z",
       "createdAt": "2022-08-12T10:34:37Z",
       "latestReleaseDate": "2024-10-21T11:57:21Z",
       "releaseRecency": 516,
       "releaseRecencyText": "Released 516 days ago",
-      "trendingScore": 76.06
+      "trendingScore": 76.09
     },
     {
       "id": 21833183,
@@ -4462,17 +4462,17 @@
       "description": "Iceraven Browser",
       "defaultBranch": "iceraven",
       "htmlUrl": "https://github.com/fork-maintainers/iceraven-browser",
-      "stargazersCount": 6081,
+      "stargazersCount": 6082,
       "forksCount": 253,
       "language": "Kotlin",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/fork-maintainers/iceraven-browser/releases{/id}",
-      "updatedAt": "2026-03-21T10:47:30Z",
+      "updatedAt": "2026-03-21T14:53:25Z",
       "createdAt": "2020-08-07T01:25:05Z",
       "latestReleaseDate": "2026-03-07T08:18:47Z",
       "releaseRecency": 14,
       "releaseRecencyText": "Released 14 days ago",
-      "trendingScore": 75.27
+      "trendingScore": 75.28
     },
     {
       "id": 673775957,
@@ -4516,7 +4516,7 @@
       "description": "Lightweight vault and password manager for Android, KeePassDX allows editing encrypted data in a single file in KeePass format and fill in the forms in a secure way.",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/Kunzisoft/KeePassDX",
-      "stargazersCount": 6493,
+      "stargazersCount": 6494,
       "forksCount": 353,
       "language": "Kotlin",
       "topics": [
@@ -4532,12 +4532,12 @@
         "vault"
       ],
       "releasesUrl": "https://api.github.com/repos/Kunzisoft/KeePassDX/releases{/id}",
-      "updatedAt": "2026-03-21T13:20:32Z",
+      "updatedAt": "2026-03-21T14:13:50Z",
       "createdAt": "2017-10-17T09:08:57Z",
       "latestReleaseDate": "2026-01-16T12:13:09Z",
       "releaseRecency": 64,
       "releaseRecencyText": "Released 64 days ago",
-      "trendingScore": 74.2
+      "trendingScore": 74.21
     },
     {
       "id": 66190491,
@@ -4574,7 +4574,7 @@
         "workmanager"
       ],
       "releasesUrl": "https://api.github.com/repos/rumboalla/apkupdater/releases{/id}",
-      "updatedAt": "2026-03-21T12:19:38Z",
+      "updatedAt": "2026-03-21T14:45:04Z",
       "createdAt": "2016-08-21T09:18:13Z",
       "latestReleaseDate": "2026-03-13T13:02:45Z",
       "releaseRecency": 8,
@@ -4748,7 +4748,7 @@
       "description": "Pixiv第三方Android客户端",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/CeuiLiSA/Pixiv-Shaft",
-      "stargazersCount": 6746,
+      "stargazersCount": 6747,
       "forksCount": 226,
       "language": "Java",
       "topics": [
@@ -4758,12 +4758,12 @@
         "pixiv"
       ],
       "releasesUrl": "https://api.github.com/repos/CeuiLiSA/Pixiv-Shaft/releases{/id}",
-      "updatedAt": "2026-03-21T12:27:51Z",
+      "updatedAt": "2026-03-21T13:50:24Z",
       "createdAt": "2019-04-01T09:59:09Z",
       "latestReleaseDate": "2026-03-15T11:58:46Z",
       "releaseRecency": 6,
       "releaseRecencyText": "Released 6 days ago",
-      "trendingScore": 72.99
+      "trendingScore": 73.0
     },
     {
       "id": 625818604,
@@ -4807,7 +4807,7 @@
         "kotlin-multiplatform"
       ],
       "releasesUrl": "https://api.github.com/repos/msasikanth/twine/releases{/id}",
-      "updatedAt": "2026-03-21T13:32:01Z",
+      "updatedAt": "2026-03-21T14:18:30Z",
       "createdAt": "2023-04-26T08:01:11Z",
       "latestReleaseDate": "2026-03-16T03:15:24Z",
       "releaseRecency": 5,
@@ -4853,8 +4853,8 @@
       "updatedAt": "2026-03-18T14:35:35Z",
       "createdAt": "2020-10-11T16:30:32Z",
       "latestReleaseDate": "2025-06-22T14:04:21Z",
-      "releaseRecency": 271,
-      "releaseRecencyText": "Released 271 days ago",
+      "releaseRecency": 272,
+      "releaseRecencyText": "Released 272 days ago",
       "trendingScore": 72.69
     },
     {
@@ -4980,7 +4980,7 @@
       "latestReleaseDate": "2026-02-03T13:07:17Z",
       "releaseRecency": 46,
       "releaseRecencyText": "Released 46 days ago",
-      "trendingScore": 71.17
+      "trendingScore": 71.16
     },
     {
       "id": 747412989,
@@ -5066,7 +5066,7 @@
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/ProtonVPN/android-app",
       "stargazersCount": 3414,
-      "forksCount": 449,
+      "forksCount": 450,
       "language": "Kotlin",
       "topics": [
         "android",
@@ -5082,8 +5082,8 @@
       "updatedAt": "2026-03-21T07:12:19Z",
       "createdAt": "2019-12-12T13:36:50Z",
       "latestReleaseDate": "2026-03-19T13:42:13Z",
-      "releaseRecency": 1,
-      "releaseRecencyText": "Released yesterday",
+      "releaseRecency": 2,
+      "releaseRecencyText": "Released 2 days ago",
       "trendingScore": 69.8
     },
     {
@@ -5252,7 +5252,7 @@
       "description": "Best Material You Design music player for Android",
       "defaultBranch": "dev",
       "htmlUrl": "https://github.com/RetroMusicPlayer/RetroMusicPlayer",
-      "stargazersCount": 5035,
+      "stargazersCount": 5034,
       "forksCount": 886,
       "language": "Kotlin",
       "topics": [
@@ -5268,12 +5268,12 @@
         "mvvm-architecture"
       ],
       "releasesUrl": "https://api.github.com/repos/RetroMusicPlayer/RetroMusicPlayer/releases{/id}",
-      "updatedAt": "2026-03-21T03:22:28Z",
+      "updatedAt": "2026-03-21T13:44:35Z",
       "createdAt": "2018-07-27T12:21:51Z",
       "latestReleaseDate": "2025-10-28T18:25:21Z",
       "releaseRecency": 143,
       "releaseRecencyText": "Released 143 days ago",
-      "trendingScore": 68.04
+      "trendingScore": 68.03
     },
     {
       "id": 525732824,
@@ -5316,17 +5316,17 @@
       "description": "使用Android原生开发的视频播放软件",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/yaoxieyoulei/mytv-android",
-      "stargazersCount": 1690,
+      "stargazersCount": 1693,
       "forksCount": 284,
       "language": "Kotlin",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/yaoxieyoulei/mytv-android/releases{/id}",
-      "updatedAt": "2026-03-21T12:13:48Z",
+      "updatedAt": "2026-03-21T14:20:23Z",
       "createdAt": "2024-04-10T12:35:58Z",
       "latestReleaseDate": "2024-12-08T03:41:58Z",
       "releaseRecency": 468,
       "releaseRecencyText": "Released 468 days ago",
-      "trendingScore": 67.61
+      "trendingScore": 67.69
     },
     {
       "id": 48688603,
@@ -5486,7 +5486,7 @@
       "latestReleaseDate": "2025-11-16T08:18:44Z",
       "releaseRecency": 125,
       "releaseRecencyText": "Released 125 days ago",
-      "trendingScore": 65.81
+      "trendingScore": 65.8
     },
     {
       "id": 604752123,
@@ -5513,8 +5513,8 @@
       "updatedAt": "2026-03-21T05:01:42Z",
       "createdAt": "2023-02-21T18:03:06Z",
       "latestReleaseDate": "2023-07-30T14:32:57Z",
-      "releaseRecency": 964,
-      "releaseRecencyText": "Released 964 days ago",
+      "releaseRecency": 965,
+      "releaseRecencyText": "Released 965 days ago",
       "trendingScore": 65.61
     },
     {
@@ -5529,7 +5529,7 @@
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/home-assistant/android",
       "stargazersCount": 3471,
-      "forksCount": 927,
+      "forksCount": 926,
       "language": "Kotlin",
       "topics": [
         "android",
@@ -5592,7 +5592,7 @@
       "description": "Share your VPN connection over hotspot or repeater! (root required)",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/Mygod/VPNHotspot",
-      "stargazersCount": 5494,
+      "stargazersCount": 5493,
       "forksCount": 484,
       "language": "Kotlin",
       "topics": [
@@ -5603,12 +5603,12 @@
         "wifi-direct"
       ],
       "releasesUrl": "https://api.github.com/repos/Mygod/VPNHotspot/releases{/id}",
-      "updatedAt": "2026-03-21T12:08:47Z",
+      "updatedAt": "2026-03-21T14:30:06Z",
       "createdAt": "2018-01-03T07:38:11Z",
       "latestReleaseDate": "2025-07-06T21:53:34Z",
       "releaseRecency": 257,
       "releaseRecencyText": "Released 257 days ago",
-      "trendingScore": 64.64
+      "trendingScore": 64.63
     },
     {
       "id": 549732978,
@@ -5682,7 +5682,7 @@
       "description": "Android Client for Jellyfin",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/jellyfin/jellyfin-android",
-      "stargazersCount": 2407,
+      "stargazersCount": 2408,
       "forksCount": 422,
       "language": "Kotlin",
       "topics": [
@@ -5692,12 +5692,12 @@
         "kotlin"
       ],
       "releasesUrl": "https://api.github.com/repos/jellyfin/jellyfin-android/releases{/id}",
-      "updatedAt": "2026-03-21T07:05:57Z",
+      "updatedAt": "2026-03-21T13:50:20Z",
       "createdAt": "2020-07-21T11:33:44Z",
       "latestReleaseDate": "2025-05-16T19:44:21Z",
       "releaseRecency": 308,
       "releaseRecencyText": "Released 308 days ago",
-      "trendingScore": 63.27
+      "trendingScore": 63.28
     },
     {
       "id": 597829630,
@@ -5718,8 +5718,8 @@
       "updatedAt": "2026-03-21T09:25:26Z",
       "createdAt": "2023-02-05T19:02:28Z",
       "latestReleaseDate": "2026-02-07T14:13:13Z",
-      "releaseRecency": 41,
-      "releaseRecencyText": "Released 41 days ago",
+      "releaseRecency": 42,
+      "releaseRecencyText": "Released 42 days ago",
       "trendingScore": 63.09
     },
     {
@@ -5733,7 +5733,7 @@
       "description": "DAVx⁵ is an open-source CalDAV/CardDAV suite and sync app for Android. You can also access your online files (WebDAV) with it.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/bitfireAT/davx5-ose",
-      "stargazersCount": 2477,
+      "stargazersCount": 2476,
       "forksCount": 115,
       "language": "Kotlin",
       "topics": [
@@ -5749,12 +5749,12 @@
         "webdav"
       ],
       "releasesUrl": "https://api.github.com/repos/bitfireAT/davx5-ose/releases{/id}",
-      "updatedAt": "2026-03-20T23:16:55Z",
+      "updatedAt": "2026-03-21T13:42:29Z",
       "createdAt": "2021-11-07T20:11:48Z",
       "latestReleaseDate": "2026-03-12T14:41:53Z",
-      "releaseRecency": 8,
-      "releaseRecencyText": "Released 8 days ago",
-      "trendingScore": 63.08
+      "releaseRecency": 9,
+      "releaseRecencyText": "Released 9 days ago",
+      "trendingScore": 63.07
     },
     {
       "id": 739620983,
@@ -5864,8 +5864,8 @@
       "updatedAt": "2026-03-20T18:40:15Z",
       "createdAt": "2022-07-18T17:42:03Z",
       "latestReleaseDate": "2025-09-21T14:45:14Z",
-      "releaseRecency": 180,
-      "releaseRecencyText": "Released 180 days ago",
+      "releaseRecency": 181,
+      "releaseRecencyText": "Released 181 days ago",
       "trendingScore": 61.27
     },
     {
@@ -5890,373 +5890,6 @@
       "releaseRecency": 181,
       "releaseRecencyText": "Released 181 days ago",
       "trendingScore": 61.09
-    },
-    {
-      "id": 485426757,
-      "name": "MMRL",
-      "fullName": "MMRLApp/MMRL",
-      "owner": {
-        "login": "MMRLApp",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/92388734?v=4"
-      },
-      "description": "A app for managing, sharing, and exploring Magisk modules across repositories",
-      "defaultBranch": "master",
-      "htmlUrl": "https://github.com/MMRLApp/MMRL",
-      "stargazersCount": 1909,
-      "forksCount": 193,
-      "language": "Kotlin",
-      "topics": [
-        "android",
-        "apatch",
-        "compose",
-        "kernelsu",
-        "kotlin",
-        "magisk",
-        "module-manager",
-        "repo"
-      ],
-      "releasesUrl": "https://api.github.com/repos/MMRLApp/MMRL/releases{/id}",
-      "updatedAt": "2026-03-21T01:25:05Z",
-      "createdAt": "2022-04-25T15:25:29Z",
-      "latestReleaseDate": "2026-03-08T22:24:34Z",
-      "releaseRecency": 12,
-      "releaseRecencyText": "Released 12 days ago",
-      "trendingScore": 60.79
-    },
-    {
-      "id": 31075682,
-      "name": "habitica-android",
-      "fullName": "HabitRPG/habitica-android",
-      "owner": {
-        "login": "HabitRPG",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/3834775?v=4"
-      },
-      "description": "Native Android app for Habitica",
-      "defaultBranch": "main",
-      "htmlUrl": "https://github.com/HabitRPG/habitica-android",
-      "stargazersCount": 1753,
-      "forksCount": 580,
-      "language": "Kotlin",
-      "topics": [
-        "android",
-        "android-studio",
-        "coroutines",
-        "habitica",
-        "hacktoberfest",
-        "java",
-        "kotlin",
-        "kotlin-android",
-        "realm",
-        "wearable",
-        "wearos"
-      ],
-      "releasesUrl": "https://api.github.com/repos/HabitRPG/habitica-android/releases{/id}",
-      "updatedAt": "2026-03-20T18:39:51Z",
-      "createdAt": "2015-02-20T17:21:05Z",
-      "latestReleaseDate": "2024-06-21T13:12:30Z",
-      "releaseRecency": 638,
-      "releaseRecencyText": "Released 638 days ago",
-      "trendingScore": 60.67
-    },
-    {
-      "id": 473181796,
-      "name": "worktool",
-      "fullName": "gallonyin/worktool",
-      "owner": {
-        "login": "gallonyin",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/20048224?v=4"
-      },
-      "description": "一款安全稳定的Android无障碍服务工具，支持控制企微/微信来运行的无人值守群管理企业微信机器人",
-      "defaultBranch": "master",
-      "htmlUrl": "https://github.com/gallonyin/worktool",
-      "stargazersCount": 2927,
-      "forksCount": 590,
-      "language": "Kotlin",
-      "topics": [],
-      "releasesUrl": "https://api.github.com/repos/gallonyin/worktool/releases{/id}",
-      "updatedAt": "2026-03-20T15:28:55Z",
-      "createdAt": "2022-03-23T12:39:09Z",
-      "latestReleaseDate": "2023-10-18T16:33:22Z",
-      "releaseRecency": 884,
-      "releaseRecencyText": "Released 884 days ago",
-      "trendingScore": 60.12
-    },
-    {
-      "id": 492611621,
-      "name": "Calendar",
-      "fullName": "FossifyOrg/Calendar",
-      "owner": {
-        "login": "FossifyOrg",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/152776864?v=4"
-      },
-      "description": "A simple calendar with events, customizable widgets and no ads.",
-      "defaultBranch": "main",
-      "htmlUrl": "https://github.com/FossifyOrg/Calendar",
-      "stargazersCount": 1824,
-      "forksCount": 162,
-      "language": "Kotlin",
-      "topics": [
-        "android",
-        "calendar",
-        "foss",
-        "kotlin",
-        "open-source"
-      ],
-      "releasesUrl": "https://api.github.com/repos/FossifyOrg/Calendar/releases{/id}",
-      "updatedAt": "2026-03-21T11:39:30Z",
-      "createdAt": "2022-05-15T21:47:59Z",
-      "latestReleaseDate": "2026-02-17T02:37:11Z",
-      "releaseRecency": 32,
-      "releaseRecencyText": "Released 32 days ago",
-      "trendingScore": 59.96
-    },
-    {
-      "id": 555295333,
-      "name": "flashdim",
-      "fullName": "cyb3rko/flashdim",
-      "owner": {
-        "login": "cyb3rko",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/46033730?v=4"
-      },
-      "description": "Modern flashlight app with dim functionality on Android 13+",
-      "defaultBranch": "main",
-      "htmlUrl": "https://github.com/cyb3rko/flashdim",
-      "stargazersCount": 1363,
-      "forksCount": 59,
-      "language": "Kotlin",
-      "topics": [
-        "android",
-        "android-app",
-        "android-application",
-        "brightness",
-        "brightness-control",
-        "brightness-level",
-        "flashlight",
-        "flashlight-app",
-        "flashlight-application",
-        "kotlin",
-        "material-design",
-        "material-you",
-        "material3",
-        "modern"
-      ],
-      "releasesUrl": "https://api.github.com/repos/cyb3rko/flashdim/releases{/id}",
-      "updatedAt": "2026-03-21T08:52:58Z",
-      "createdAt": "2022-10-21T09:53:33Z",
-      "latestReleaseDate": "2025-09-06T12:28:30Z",
-      "releaseRecency": 196,
-      "releaseRecencyText": "Released 196 days ago",
-      "trendingScore": 59.86
-    },
-    {
-      "id": 783998987,
-      "name": "SpamBlocker",
-      "fullName": "aj3423/SpamBlocker",
-      "owner": {
-        "login": "aj3423",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/4710875?v=4"
-      },
-      "description": "Android Call/SMS blocker.",
-      "defaultBranch": "master",
-      "htmlUrl": "https://github.com/aj3423/SpamBlocker",
-      "stargazersCount": 1413,
-      "forksCount": 66,
-      "language": "Kotlin",
-      "topics": [],
-      "releasesUrl": "https://api.github.com/repos/aj3423/SpamBlocker/releases{/id}",
-      "updatedAt": "2026-03-21T12:15:05Z",
-      "createdAt": "2024-04-09T01:36:48Z",
-      "latestReleaseDate": "2026-02-27T14:13:14Z",
-      "releaseRecency": 21,
-      "releaseRecencyText": "Released 21 days ago",
-      "trendingScore": 59.75
-    },
-    {
-      "id": 215154276,
-      "name": "Trail-Sense",
-      "fullName": "kylecorry31/Trail-Sense",
-      "owner": {
-        "login": "kylecorry31",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/5938560?v=4"
-      },
-      "description": "An Android app that uses your phone's sensors to assist with wilderness treks or survival situations.",
-      "defaultBranch": "main",
-      "htmlUrl": "https://github.com/kylecorry31/Trail-Sense",
-      "stargazersCount": 2552,
-      "forksCount": 143,
-      "language": "Kotlin",
-      "topics": [
-        "altimeter",
-        "android",
-        "astronomy",
-        "backpacking",
-        "barometer",
-        "camping",
-        "compass",
-        "gps",
-        "hiking",
-        "kotlin",
-        "maps",
-        "navigation",
-        "offline",
-        "privacy",
-        "sensors",
-        "survival",
-        "survival-situations",
-        "weather",
-        "weather-forecasting",
-        "wilderness"
-      ],
-      "releasesUrl": "https://api.github.com/repos/kylecorry31/Trail-Sense/releases{/id}",
-      "updatedAt": "2026-03-21T10:12:50Z",
-      "createdAt": "2019-10-14T22:10:03Z",
-      "latestReleaseDate": "2026-02-20T18:58:12Z",
-      "releaseRecency": 28,
-      "releaseRecencyText": "Released 28 days ago",
-      "trendingScore": 59.73
-    },
-    {
-      "id": 78869127,
-      "name": "Android",
-      "fullName": "duckduckgo/Android",
-      "owner": {
-        "login": "duckduckgo",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/342708?v=4"
-      },
-      "description": "DuckDuckGo Android App",
-      "defaultBranch": "develop",
-      "htmlUrl": "https://github.com/duckduckgo/Android",
-      "stargazersCount": 4596,
-      "forksCount": 1298,
-      "language": "Kotlin",
-      "topics": [
-        "android",
-        "duckduckgo",
-        "duckduckgo-android",
-        "hacktoberfest",
-        "translations"
-      ],
-      "releasesUrl": "https://api.github.com/repos/duckduckgo/Android/releases{/id}",
-      "updatedAt": "2026-03-20T21:57:10Z",
-      "createdAt": "2017-01-13T17:11:25Z",
-      "latestReleaseDate": "2026-03-16T12:05:08Z",
-      "releaseRecency": 5,
-      "releaseRecencyText": "Released 5 days ago",
-      "trendingScore": 59.41
-    },
-    {
-      "id": 182704531,
-      "name": "Neko",
-      "fullName": "nekomangaorg/Neko",
-      "owner": {
-        "login": "nekomangaorg",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/69533283?v=4"
-      },
-      "description": "Unofficial MangaDex Reader for Android 7+",
-      "defaultBranch": "main",
-      "htmlUrl": "https://github.com/nekomangaorg/Neko",
-      "stargazersCount": 2701,
-      "forksCount": 130,
-      "language": "Kotlin",
-      "topics": [
-        "android",
-        "j2k",
-        "komga",
-        "kotlin",
-        "manga",
-        "manga-downloader",
-        "manga-reader",
-        "mangadex",
-        "mangadex-downloader",
-        "mangadownloader",
-        "mangareader",
-        "mihon",
-        "neko",
-        "tachiyomi",
-        "tachiyomi-app"
-      ],
-      "releasesUrl": "https://api.github.com/repos/nekomangaorg/Neko/releases{/id}",
-      "updatedAt": "2026-03-21T13:40:41Z",
-      "createdAt": "2019-04-22T09:06:52Z",
-      "latestReleaseDate": "2026-03-19T23:58:44Z",
-      "releaseRecency": 1,
-      "releaseRecencyText": "Released yesterday",
-      "trendingScore": 59.39
-    },
-    {
-      "id": 26061231,
-      "name": "Android-Iconics",
-      "fullName": "mikepenz/Android-Iconics",
-      "owner": {
-        "login": "mikepenz",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/1476232?v=4"
-      },
-      "description": "Android-Iconics - Use any icon font, or vector (.svg) as drawable in your application.",
-      "defaultBranch": "develop",
-      "htmlUrl": "https://github.com/mikepenz/Android-Iconics",
-      "stargazersCount": 5272,
-      "forksCount": 617,
-      "language": "Kotlin",
-      "topics": [
-        "android",
-        "android-compose",
-        "android-development",
-        "android-icon",
-        "android-library",
-        "compose",
-        "fontawesome",
-        "foundation-icons",
-        "google-material",
-        "google-material-icons",
-        "icon-font",
-        "java",
-        "material",
-        "material-components",
-        "material-design",
-        "material-icons",
-        "material-ui",
-        "meteocons",
-        "mikepenz",
-        "weather-icons"
-      ],
-      "releasesUrl": "https://api.github.com/repos/mikepenz/Android-Iconics/releases{/id}",
-      "updatedAt": "2026-03-21T11:08:18Z",
-      "createdAt": "2014-11-01T19:43:56Z",
-      "latestReleaseDate": "2025-11-15T17:24:41Z",
-      "releaseRecency": 125,
-      "releaseRecencyText": "Released 125 days ago",
-      "trendingScore": 59.36
-    },
-    {
-      "id": 147043230,
-      "name": "etchdroid",
-      "fullName": "etchdroid/etchdroid",
-      "owner": {
-        "login": "etchdroid",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/46251814?v=4"
-      },
-      "description": "An application to write OS images to USB drives, on Android, no root required.",
-      "defaultBranch": "main",
-      "htmlUrl": "https://github.com/etchdroid/etchdroid",
-      "stargazersCount": 2882,
-      "forksCount": 205,
-      "language": "Kotlin",
-      "topics": [
-        "android",
-        "gnu-linux",
-        "iso",
-        "kotlin",
-        "linux",
-        "mass-storage-device",
-        "usb"
-      ],
-      "releasesUrl": "https://api.github.com/repos/etchdroid/etchdroid/releases{/id}",
-      "updatedAt": "2026-03-21T02:28:38Z",
-      "createdAt": "2018-09-02T00:49:40Z",
-      "latestReleaseDate": "2023-02-26T19:11:39Z",
-      "releaseRecency": 1118,
-      "releaseRecencyText": "Released 1118 days ago",
-      "trendingScore": 58.91
     }
   ]
 }
