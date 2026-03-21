@@ -26,15 +26,12 @@ cached-data/
 3. If tokens are shared (same underlying user), the budget is split evenly across categories
 4. For each category × platform (12 combos), checks if cached JSON is fresh (<23h)
 5. If stale, queries GitHub Search API with platform-specific topics/languages/keywords
-6. Filters repos that have **real releases with platform installers** via two methods:
-   - **Extension matching**: Direct installer files (`.apk`, `.exe`, `.dmg`, `.deb`, etc.)
-   - **Keyword matching**: Generic archives (`.zip`, `.tar.gz`) with platform keywords in the filename (e.g. `myapp-macos-arm64.zip`, `myapp-win-x64.tar.gz`)
+6. Filters repos that have **real releases with platform installers** — only dedicated installer formats count (no generic archives like `.zip` or `.tar.gz`)
 7. Repos with NSFW/inappropriate topics or descriptions are excluded via `BLOCKED_TOPICS`
 8. Verifies ALL candidates — no artificial caps. Stops gracefully when per-platform budget is exhausted or rate limit drops below `RATE_LIMIT_FLOOR` (50)
 9. Never saves 0-repo results; never overwrites good cached data with poor results
-10. Waits 65s between platforms for search API rate limit (30 req/min) to reset
-11. Saves results to `cached-data/{category}/{platform}.json`
-12. GitHub Actions commits and pushes changes
+10. Saves results to `cached-data/{category}/{platform}.json`
+11. GitHub Actions commits and pushes changes
 
 ### Token Strategy
 - 3 GitHub Classic PATs (scope: `public_repo`), each from a **separate GitHub account**
@@ -59,8 +56,9 @@ cached-data/
 - `verify_installers()` stops when per-platform budget is exhausted (not just global floor)
 
 **Search API throttling:**
-- 65-second pause between platforms within a category to let the 30 req/min limit reset
-- Only pauses if the previous platform actually ran searches (cached platforms skip it)
+- Sliding window rate limiter (`_acquire_search_slot()`) tracks timestamps of all search API calls
+- Automatically pauses when approaching 28 calls per 60-second window (GitHub allows 30, 2 left as buffer)
+- Pacing is per-call — no blunt inter-platform pauses needed; search calls are spaced automatically
 - `_update_rate_info()` ignores search API headers to prevent core rate tracking pollution
 
 **Safety caps:**
@@ -77,17 +75,11 @@ cached-data/
 
 Each platform has: topics, installer file extensions, scoring keywords (high/medium/low), primary/secondary languages, and frameworks. See `PLATFORMS` dict.
 
-**Installer detection** uses two layers:
-1. **Extension matching** — dedicated installer files:
-   - Android: `.apk`, `.aab`
-   - Windows: `.msi`, `.exe`, `.msix`
-   - macOS: `.dmg`, `.pkg`, `.app.zip`
-   - Linux: `.appimage`, `.deb`, `.rpm`
-2. **Keyword matching** — generic archives (`.zip`, `.tar.gz`, `.tar.xz`, `.tar.bz2`, `.7z`) with platform keywords in the filename:
-   - Android: `android`
-   - Windows: `win64`, `win32`, `windows`, `-win-`, etc.
-   - macOS: `macos`, `darwin`, `osx`, `-mac-`, etc.
-   - Linux: `linux`, `-linux-`, etc.
+**Installer detection** — only dedicated installer file extensions count (generic archives like `.zip`/`.tar.gz` are ignored):
+- Android: `.apk`, `.aab`
+- Windows: `.msi`, `.exe`, `.msix`
+- macOS: `.dmg`, `.pkg`
+- Linux: `.appimage`, `.deb`, `.rpm`
 
 ### Content Filtering
 
@@ -113,6 +105,8 @@ All search queries include `fork:true` to discover forked repositories with plat
 | `CACHE_VALIDITY_HOURS` | 23 | Cache TTL |
 | `MAX_CONCURRENT_REQUESTS` | 25 | HTTP concurrency (core API) |
 | `MAX_SEARCH_CONCURRENT` | 5 | Search API concurrency |
+| `SEARCH_RATE_LIMIT` | 28 | Max search calls per 60s window (GitHub allows 30) |
+| `SEARCH_RATE_WINDOW` | 60 | Sliding window in seconds |
 | `RELEASE_CHECK_BATCH` | 40 | Repos verified per batch |
 | `REQUEST_TIMEOUT` | 20 | Per-request timeout (seconds) |
 | `MAX_RETRIES` | 3 | Per-request retry limit |
@@ -168,6 +162,6 @@ Each `{platform}.json`:
 - Python 3.11, no type-checking or linting configured
 - No tests beyond `validate_releases.py`
 - Each category creates its own `GitHubClient` — release cache is per-client, shared across platforms within the same category
-- Platforms are processed sequentially within each category (with 65s search rate limit pause between)
-- Typical runtime: 15-25 minutes with 3 dedicated tokens
+- Platforms are processed sequentially within each category (search API pacing handled by sliding window rate limiter)
+- Typical runtime: 10-20 minutes with 3 dedicated tokens
 - The `_check_assets()` helper inside `get_latest_stable_release()` detects installers for ALL platforms in one pass, so cross-platform repos benefit all platforms from a single release check

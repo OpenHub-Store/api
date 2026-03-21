@@ -18,7 +18,7 @@ Each category is fetched across 4 platforms:
 |---|---|---|
 | **Android** | `.apk`, `.aab` | Kotlin, Java |
 | **Windows** | `.exe`, `.msi`, `.msix` | C#, C++, Rust |
-| **macOS** | `.dmg`, `.pkg`, `.app.zip` | Swift, Objective-C |
+| **macOS** | `.dmg`, `.pkg` | Swift, Objective-C |
 | **Linux** | `.AppImage`, `.deb`, `.rpm` | C++, Rust, C |
 
 ## Requirements
@@ -160,9 +160,9 @@ If the workflow fails, it automatically creates a GitHub issue labeled `automati
 ### Rate limit strategy
 
 - Each category uses its own token with an independent 5,000 req/hr budget
-- Search API rate limits (30/min) are tracked separately from core API limits
+- Search API rate limits (30/min) are paced by a sliding window rate limiter (28 calls per 60s window)
 - Release verification results are cached across platforms within the same category
-- Platforms are processed sequentially to avoid rate-limit thrashing
+- Platforms are processed sequentially; search API pacing is automatic
 
 ## Project Structure
 
