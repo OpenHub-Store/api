@@ -920,16 +920,26 @@ async def fetch_topic(
 
     specs = []
 
-    # 1) Topic-based searches: cross topic categories with platform topics
-    #    e.g. "topic:privacy topic:android" — most relevant results
-    for topic in topics[:8]:  # top 8 topics to avoid too many queries
+    # Strategy: fewer, broader queries to stay within search rate limits.
+    # Each query uses OR to combine multiple category topics, reducing total
+    # search API calls from ~78 to ~18 per topic×platform.
+
+    # 1) Batch category topics into groups of 4, cross with platform topics
+    #    e.g. "(topic:terminal OR topic:developer-tools OR topic:cli OR topic:ide)"
+    #         AND "(topic:android OR topic:android-app)"
+    #    Using AND between groups (implicit) so results must match BOTH category AND platform.
+    #    Note: search_repos() prepends "fork:true" automatically.
+    topic_batches = [topics[i:i+4] for i in range(0, min(len(topics), 12), 4)]
+    for batch in topic_batches:
         base = f"stars:>10 archived:false pushed:>={one_year}"
+        cat_or = " OR ".join(f"topic:{t}" for t in batch)
+        plat_or = " OR ".join(f"topic:{t}" for t in platform_topics[:2])
         specs.append({
-            "query": _build_query(base, topics=[topic] + platform_topics[:2]),
+            "query": f"{base} ({cat_or}) ({plat_or})",
             "sort": "stars", "pages": 3, "weight": 1.5,
         })
 
-    # 2) Keyword in description/name + platform topic
+    # 2) Keywords in name/description + platform topic (top 3 keywords)
     for kw in keywords[:3]:
         base = f"stars:>20 archived:false pushed:>={one_year}"
         specs.append({
@@ -937,22 +947,25 @@ async def fetch_topic(
             "sort": "stars", "pages": 3, "weight": 1.2,
         })
 
-    # 3) Topic + primary language (catches repos without platform topic)
-    for topic in topics[:5]:
-        for lang in all_langs[:2]:
-            base = f"stars:>20 archived:false pushed:>={one_year}"
-            specs.append({
-                "query": _build_query(base, topics=[topic], language=lang),
-                "sort": "stars", "pages": 3, "weight": 1.0,
-            })
-
-    # 4) Broader: topic only, high stars (platform-agnostic gems)
-    for topic in topics[:5]:
-        base = f"stars:>500 archived:false pushed:>={two_years}"
+    # 3) All category topics combined + primary language (catches repos without platform topic)
+    #    Single query per language instead of per-batch to reduce total API calls.
+    cat_lang_or = " OR ".join(f"topic:{t}" for t in topics[:8])
+    for lang in all_langs[:2]:
+        base = f"stars:>20 archived:false pushed:>={one_year}"
         specs.append({
-            "query": _build_query(base, topics=[topic]),
-            "sort": "stars", "pages": 3, "weight": 0.8,
+            "query": f"{base} ({cat_lang_or}) language:{lang}",
+            "sort": "stars", "pages": 2, "weight": 1.0,
         })
+
+    # 4) Broader: all category topics combined, high stars (platform-agnostic)
+    cat_all_or = " OR ".join(f"topic:{t}" for t in topics[:8])
+    base = f"stars:>500 archived:false pushed:>={two_years}"
+    specs.append({
+        "query": f"{base} ({cat_all_or})",
+        "sort": "stars", "pages": 2, "weight": 0.8,
+    })
+
+    print(f"  {len(specs)} search specs ({sum(s.get('pages', 3) for s in specs)} API calls)")
 
     candidates = await _collect_candidates(
         client, specs, platform, seen, compute_velocity=False, min_score=0,
