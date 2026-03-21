@@ -897,22 +897,21 @@ TOPIC_CATEGORIES = {
 }
 
 
-async def fetch_topic(
+async def search_topic_candidates(
     client: GitHubClient,
-    platform: str,
     topic_name: str,
     topic_config: Dict,
-    budget: Optional[int] = None,
-) -> List[Dict]:
-    """Fetch repos matching a topic category for a platform."""
+) -> List[RepoCandidate]:
+    """Search GitHub for repos matching a topic category (platform-agnostic).
+
+    Returns unverified candidates — call verify_installers() per platform.
+    """
     print(f"\n{'='*60}")
-    print(f"TOPIC: {topic_name.upper()} — {platform.upper()}")
+    print(f"TOPIC SEARCH: {topic_name.upper()} (all platforms)")
     print(f"{'='*60}")
 
     topics = topic_config["topics"]
     keywords = topic_config["keywords"]
-    platform_topics = PLATFORMS[platform]["topics"]
-    all_langs = PLATFORMS[platform]["languages"]["primary"] + PLATFORMS[platform]["languages"]["secondary"]
     seen: Set[str] = set()
 
     one_year = (datetime.utcnow() - timedelta(days=365)).strftime("%Y-%m-%d")
@@ -920,45 +919,38 @@ async def fetch_topic(
 
     specs = []
 
-    # Strategy: fewer, broader queries to stay within search rate limits.
-    # Each query uses OR to combine multiple category topics, reducing total
-    # search API calls from ~78 to ~18 per topic×platform.
+    # Strategy: search by CATEGORY TOPICS ONLY — do NOT cross with platform topics.
+    # Almost no repos tag themselves with both "terminal" AND "windows".
+    # Platform filtering happens at the installer-verification step (checks for
+    # .apk, .exe, .dmg, .deb etc. in release assets), which runs per-platform.
 
-    # 1) Batch category topics into groups of 4, cross with platform topics
-    #    e.g. "(topic:terminal OR topic:developer-tools OR topic:cli OR topic:ide)"
-    #         AND "(topic:android OR topic:android-app)"
-    #    Using AND between groups (implicit) so results must match BOTH category AND platform.
-    #    Note: search_repos() prepends "fork:true" automatically.
+    # 1) Batch category topics into groups of 4, sorted by stars
     topic_batches = [topics[i:i+4] for i in range(0, min(len(topics), 12), 4)]
     for batch in topic_batches:
-        base = f"stars:>10 archived:false pushed:>={one_year}"
+        base = f"stars:>50 archived:false pushed:>={one_year}"
         cat_or = " OR ".join(f"topic:{t}" for t in batch)
-        plat_or = " OR ".join(f"topic:{t}" for t in platform_topics[:2])
         specs.append({
-            "query": f"{base} ({cat_or}) ({plat_or})",
+            "query": f"{base} ({cat_or})",
             "sort": "stars", "pages": 3, "weight": 1.5,
         })
 
-    # 2) Keywords in name/description + platform topic (top 3 keywords)
+    # 2) Keywords in name/description
     for kw in keywords[:3]:
-        base = f"stars:>20 archived:false pushed:>={one_year}"
+        base = f"stars:>100 archived:false pushed:>={one_year}"
         specs.append({
-            "query": _build_query(base, topics=platform_topics[:2], description_kw=kw),
-            "sort": "stars", "pages": 3, "weight": 1.2,
+            "query": f"{base} {kw} in:name,description",
+            "sort": "stars", "pages": 2, "weight": 1.2,
         })
 
-    # 3) All category topics combined + primary language (catches repos without platform topic)
-    #    Single query per language instead of per-batch to reduce total API calls.
-    cat_lang_or = " OR ".join(f"topic:{t}" for t in topics[:8])
-    for lang in all_langs[:2]:
-        base = f"stars:>20 archived:false pushed:>={one_year}"
-        specs.append({
-            "query": f"{base} ({cat_lang_or}) language:{lang}",
-            "sort": "stars", "pages": 2, "weight": 1.0,
-        })
-
-    # 4) Broader: all category topics combined, high stars (platform-agnostic)
+    # 3) All category topics combined, lower star threshold, recently updated
     cat_all_or = " OR ".join(f"topic:{t}" for t in topics[:8])
+    base = f"stars:>20 archived:false pushed:>={one_year}"
+    specs.append({
+        "query": f"{base} ({cat_all_or})",
+        "sort": "updated", "pages": 3, "weight": 1.0,
+    })
+
+    # 4) Broader: high stars, wider time window (catches established projects)
     base = f"stars:>500 archived:false pushed:>={two_years}"
     specs.append({
         "query": f"{base} ({cat_all_or})",
@@ -967,46 +959,110 @@ async def fetch_topic(
 
     print(f"  {len(specs)} search specs ({sum(s.get('pages', 3) for s in specs)} API calls)")
 
+    # Use "android" as dummy platform for make_candidate scoring — score is
+    # recalculated in verify_installers anyway, and we just need dedup here.
     candidates = await _collect_candidates(
-        client, specs, platform, seen, compute_velocity=False, min_score=0,
+        client, specs, "android", seen, compute_velocity=False, min_score=0,
     )
     print(f"  {len(candidates)} candidates from {len(seen)} unique repos")
+    candidates.sort(key=lambda c: c.stars, reverse=True)
+    return candidates
 
-    # Sort by score (platform relevance) then stars
-    candidates.sort(key=lambda c: (c.score, c.stars), reverse=True)
-    verified = await verify_installers(client, candidates, platform, need_release_date=True, budget=budget)
 
+async def verify_topic_for_platform(
+    client: GitHubClient,
+    candidates: List[RepoCandidate],
+    platform: str,
+    topic_name: str,
+    budget: Optional[int] = None,
+) -> List[Dict]:
+    """Verify which candidates have installers for a specific platform."""
+    print(f"\n  --- {topic_name}/{platform}: verifying {len(candidates)} candidates ---")
+    verified = await verify_installers(
+        client, candidates, platform, need_release_date=True, budget=budget,
+    )
     verified.sort(key=lambda c: (c.score, c.stars), reverse=True)
     print(f"  ✓ {len(verified)} {topic_name} repos verified for {platform}")
     return [r.to_summary("topic") for r in verified]
 
 
 async def process_topics(client: GitHubClient, timestamp: str):
-    """Process all 5 topic categories across all platforms."""
+    """Process all 5 topic categories across all platforms.
+
+    Optimization: search queries are platform-agnostic, so we search ONCE per
+    topic and then verify installers per-platform. This saves ~75% of search
+    API calls compared to searching per topic×platform.
+    """
     print(f"\n{'#'*70}")
     print(f"# TOPICS (5 categories × {len(PLATFORMS)} platforms)")
     print(f"{'#'*70}")
 
+    # ─── Rate limit check ─────────────────────────────────────────────────
+    data, _ = await client.get("https://api.github.com/rate_limit")
+    if data:
+        core = data.get("resources", {}).get("core", {})
+        search = data.get("resources", {}).get("search", {})
+        print(f"  Rate limit — core: {core.get('remaining', '?')}/{core.get('limit', '?')}, "
+              f"search: {search.get('remaining', '?')}/{search.get('limit', '?')}")
+        remaining = core.get("remaining", 0)
+        if remaining < 500:
+            print(f"  ⚠ WARNING: Low core rate limit ({remaining}) — results may be incomplete")
+        search_remaining = search.get("remaining", 0)
+        if search_remaining < 5:
+            print(f"  ⚠ WARNING: Search rate limit nearly exhausted ({search_remaining})")
+
     num_topics = len(TOPIC_CATEGORIES)
     num_platforms = len(PLATFORMS)
-    total_slots = num_topics * num_platforms
+    # Budget slots: 1 search + N platform verifications per topic
+    total_verify_slots = num_topics * num_platforms
+
+    # Track results for final summary
+    results_summary: Dict[str, Dict[str, int]] = {}
 
     for topic_idx, (topic_name, topic_config) in enumerate(TOPIC_CATEGORIES.items()):
         print(f"\n--- Topic {topic_idx + 1}/{num_topics}: {topic_name} ---")
+        results_summary[topic_name] = {}
 
-        for platform_idx, platform in enumerate(PLATFORMS.keys()):
-            slot = topic_idx * num_platforms + platform_idx
-            slots_remaining = total_slots - slot
-            budget = max((client._rate_remaining - RATE_LIMIT_FLOOR) // slots_remaining, 50)
-
+        # Check which platforms still need data
+        platforms_needed = []
+        for platform in PLATFORMS.keys():
             cached = load_cache(f"topics/{topic_name}", platform)
             if cached:
-                continue
+                # Count existing cached repos for summary
+                existing = _load_existing_count(f"topics/{topic_name}", platform)
+                results_summary[topic_name][platform] = existing
+                print(f"  {platform}: cached ({existing} repos)")
+            else:
+                platforms_needed.append(platform)
 
-            repos = await fetch_topic(client, platform, topic_name, topic_config, budget)
+        if not platforms_needed:
+            print(f"  All platforms cached — skipping")
+            continue
+
+        # Search once for this topic (platform-agnostic)
+        candidates = await search_topic_candidates(client, topic_name, topic_config)
+
+        if not candidates:
+            print(f"  ⚠ 0 candidates found — skipping all platforms")
+            for platform in platforms_needed:
+                existing = _load_existing_count(f"topics/{topic_name}", platform)
+                results_summary[topic_name][platform] = existing
+                print(f"    {platform}: existing cache has {existing} repos")
+            continue
+
+        # Verify installers per platform using the shared candidate list
+        for platform_idx, platform in enumerate(platforms_needed):
+            verify_slot = topic_idx * num_platforms + platform_idx
+            slots_remaining = max(total_verify_slots - verify_slot, 1)
+            budget = max((client._rate_remaining - RATE_LIMIT_FLOOR) // slots_remaining, 50)
+
+            repos = await verify_topic_for_platform(
+                client, candidates, platform, topic_name, budget,
+            )
 
             if len(repos) == 0:
                 existing = _load_existing_count(f"topics/{topic_name}", platform)
+                results_summary[topic_name][platform] = existing
                 print(f"  ⚠ 0 repos fetched — skipping save (existing cache: {existing} repos)")
                 continue
 
@@ -1015,10 +1071,50 @@ async def process_topics(client: GitHubClient, timestamp: str):
             if len(repos) < min_threshold:
                 existing = _load_existing_count(f"topics/{topic_name}", platform)
                 if existing >= min_threshold:
+                    results_summary[topic_name][platform] = existing
                     print(f"  ⚠ Only {len(repos)} repos fetched but cache has {existing} — keeping cached data")
                     continue
 
             save_data(f"topics/{topic_name}", platform, repos, timestamp)
+            results_summary[topic_name][platform] = len(repos)
+
+    # ─── Final summary ────────────────────────────────────────────────────
+    print(f"\n{'='*70}")
+    print(f"TOPICS SUMMARY")
+    print(f"{'='*70}")
+
+    # Header
+    platforms_list = list(PLATFORMS.keys())
+    header = f"  {'topic':<16}" + "".join(f"{p:>10}" for p in platforms_list) + f"{'total':>10}"
+    print(header)
+    print(f"  {'-'*16}" + "".join(f"{'-'*10}" for _ in platforms_list) + f"{'-'*10}")
+
+    grand_total = 0
+    for topic_name in TOPIC_CATEGORIES:
+        counts = results_summary.get(topic_name, {})
+        row = f"  {topic_name:<16}"
+        topic_total = 0
+        for p in platforms_list:
+            c = counts.get(p, 0)
+            topic_total += c
+            row += f"{c:>10}"
+        row += f"{topic_total:>10}"
+        grand_total += topic_total
+        print(row)
+
+    print(f"  {'-'*16}" + "".join(f"{'-'*10}" for _ in platforms_list) + f"{'-'*10}")
+    print(f"  {'TOTAL':<16}" + "".join(
+        f"{sum(results_summary.get(t, {}).get(p, 0) for t in TOPIC_CATEGORIES):>10}"
+        for p in platforms_list
+    ) + f"{grand_total:>10}")
+
+    # Rate limit after
+    data, _ = await client.get("https://api.github.com/rate_limit")
+    if data:
+        core = data.get("resources", {}).get("core", {})
+        search = data.get("resources", {}).get("search", {})
+        print(f"\n  Rate limit remaining — core: {core.get('remaining', '?')}/{core.get('limit', '?')}, "
+              f"search: {search.get('remaining', '?')}/{search.get('limit', '?')}")
 
 
 # ─── Cache I/O ─────────────────────────────────────────────────────────────────
