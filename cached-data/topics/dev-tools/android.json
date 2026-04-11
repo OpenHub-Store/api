@@ -1,8 +1,8 @@
 {
   "category": "topics/dev-tools",
   "platform": "android",
-  "lastUpdated": "2026-04-10T04:52:39.953551Z",
-  "totalCount": 8,
+  "lastUpdated": "2026-04-11T04:26:55.949236Z",
+  "totalCount": 9,
   "repositories": [
     {
       "id": 44804216,
@@ -15,8 +15,8 @@
       "description": "Termux - a terminal emulator application for Android OS extendible by variety of packages.",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/termux/termux-app",
-      "stargazersCount": 53141,
-      "forksCount": 6341,
+      "stargazersCount": 53183,
+      "forksCount": 6345,
       "language": "Java",
       "topics": [
         "android",
@@ -26,11 +26,41 @@
         "termux"
       ],
       "releasesUrl": "https://api.github.com/repos/termux/termux-app/releases{/id}",
-      "updatedAt": "2026-04-10T04:52:05Z",
+      "updatedAt": "2026-04-11T03:29:55Z",
       "createdAt": "2015-10-23T09:42:46Z",
       "latestReleaseDate": "2025-05-22T22:47:26Z",
-      "releaseRecency": 322,
-      "releaseRecencyText": "Released 322 days ago"
+      "releaseRecency": 323,
+      "releaseRecencyText": "Released 323 days ago"
+    },
+    {
+      "id": 1104751416,
+      "name": "morphe-manager",
+      "fullName": "MorpheApp/morphe-manager",
+      "owner": {
+        "login": "MorpheApp",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/246280111?v=4"
+      },
+      "description": "From the developers that brought you the greatest modded YouTube apps, comes Morphe - the powerful app modification tool that puts you in control",
+      "defaultBranch": "main",
+      "htmlUrl": "https://github.com/MorpheApp/morphe-manager",
+      "stargazersCount": 3918,
+      "forksCount": 60,
+      "language": "Kotlin",
+      "topics": [
+        "android",
+        "apk",
+        "app",
+        "morphe",
+        "patcher",
+        "patches",
+        "youtube"
+      ],
+      "releasesUrl": "https://api.github.com/repos/MorpheApp/morphe-manager/releases{/id}",
+      "updatedAt": "2026-04-11T04:23:46Z",
+      "createdAt": "2025-11-26T16:29:57Z",
+      "latestReleaseDate": "2026-04-08T10:38:05Z",
+      "releaseRecency": 2,
+      "releaseRecencyText": "Released 2 days ago"
     },
     {
       "id": 32483164,
@@ -43,7 +73,7 @@
       "description": "a cross-platform, terminal-based music player, audio engine, metadata indexer, and server in c++",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/clangen/musikcube",
-      "stargazersCount": 4738,
+      "stargazersCount": 4739,
       "forksCount": 319,
       "language": "C++",
       "topics": [
@@ -62,11 +92,11 @@
         "wasapi"
       ],
       "releasesUrl": "https://api.github.com/repos/clangen/musikcube/releases{/id}",
-      "updatedAt": "2026-04-08T17:55:09Z",
+      "updatedAt": "2026-04-10T05:56:04Z",
       "createdAt": "2015-03-18T20:41:57Z",
       "latestReleaseDate": "2025-09-21T07:16:59Z",
-      "releaseRecency": 200,
-      "releaseRecencyText": "Released 200 days ago"
+      "releaseRecency": 201,
+      "releaseRecencyText": "Released 201 days ago"
     },
     {
       "id": 880108124,
@@ -79,7 +109,7 @@
       "description": "An android git client",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/catpuppyapp/PuppyGit",
-      "stargazersCount": 743,
+      "stargazersCount": 744,
       "forksCount": 133,
       "language": "Kotlin",
       "topics": [
@@ -92,11 +122,11 @@
         "obsidian-sync"
       ],
       "releasesUrl": "https://api.github.com/repos/catpuppyapp/PuppyGit/releases{/id}",
-      "updatedAt": "2026-04-10T04:18:25Z",
+      "updatedAt": "2026-04-11T00:50:06Z",
       "createdAt": "2024-10-29T06:02:22Z",
       "latestReleaseDate": "2026-03-25T13:03:08Z",
-      "releaseRecency": 15,
-      "releaseRecencyText": "Released 15 days ago"
+      "releaseRecency": 16,
+      "releaseRecencyText": "Released 16 days ago"
     },
     {
       "id": 812362660,
@@ -109,7 +139,7 @@
       "description": "Mobile Git client for syncing a repository between remote and a local directory",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/ViscousPot/GitSync",
-      "stargazersCount": 1601,
+      "stargazersCount": 1605,
       "forksCount": 137,
       "language": "Dart",
       "topics": [
@@ -119,11 +149,11 @@
         "sync"
       ],
       "releasesUrl": "https://api.github.com/repos/ViscousPot/GitSync/releases{/id}",
-      "updatedAt": "2026-04-09T20:38:33Z",
+      "updatedAt": "2026-04-10T21:46:48Z",
       "createdAt": "2024-06-08T17:10:16Z",
       "latestReleaseDate": "2026-04-08T21:32:32Z",
-      "releaseRecency": 1,
-      "releaseRecencyText": "Released yesterday"
+      "releaseRecency": 2,
+      "releaseRecencyText": "Released 2 days ago"
     },
     {
       "id": 893684207,
@@ -136,8 +166,8 @@
       "description": "Termix is a web-based server management platform with SSH terminal, tunneling, and file editing capabilities.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/Termix-SSH/Termix",
-      "stargazersCount": 12154,
-      "forksCount": 488,
+      "stargazersCount": 12169,
+      "forksCount": 491,
       "language": "TypeScript",
       "topics": [
         "docker",
@@ -148,11 +178,11 @@
         "termix"
       ],
       "releasesUrl": "https://api.github.com/repos/Termix-SSH/Termix/releases{/id}",
-      "updatedAt": "2026-04-10T02:47:53Z",
+      "updatedAt": "2026-04-11T04:07:38Z",
       "createdAt": "2024-11-25T02:46:36Z",
       "latestReleaseDate": "2026-03-15T01:12:01Z",
-      "releaseRecency": 26,
-      "releaseRecencyText": "Released 26 days ago"
+      "releaseRecency": 27,
+      "releaseRecencyText": "Released 27 days ago"
     },
     {
       "id": 741230168,
@@ -165,16 +195,16 @@
       "description": "Generate images of code and terminal output 📸",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/charmbracelet/freeze",
-      "stargazersCount": 4440,
+      "stargazersCount": 4445,
       "forksCount": 90,
       "language": "Go",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/charmbracelet/freeze/releases{/id}",
-      "updatedAt": "2026-04-10T04:43:01Z",
+      "updatedAt": "2026-04-11T02:59:51Z",
       "createdAt": "2024-01-10T00:51:47Z",
       "latestReleaseDate": "2025-04-01T23:42:28Z",
-      "releaseRecency": 373,
-      "releaseRecencyText": "Released 373 days ago"
+      "releaseRecency": 374,
+      "releaseRecencyText": "Released 374 days ago"
     },
     {
       "id": 376492865,
@@ -202,11 +232,11 @@
         "wrk"
       ],
       "releasesUrl": "https://api.github.com/repos/six-ddc/plow/releases{/id}",
-      "updatedAt": "2026-04-09T19:32:02Z",
+      "updatedAt": "2026-04-10T13:05:19Z",
       "createdAt": "2021-06-13T09:10:43Z",
       "latestReleaseDate": "2024-12-24T03:32:38Z",
-      "releaseRecency": 472,
-      "releaseRecencyText": "Released 472 days ago"
+      "releaseRecency": 473,
+      "releaseRecencyText": "Released 473 days ago"
     },
     {
       "id": 656839452,
@@ -219,16 +249,16 @@
       "description": "Send emails from your terminal 📬",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/charmbracelet/pop",
-      "stargazersCount": 2812,
+      "stargazersCount": 2814,
       "forksCount": 68,
       "language": "Go",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/charmbracelet/pop/releases{/id}",
-      "updatedAt": "2026-04-09T20:39:12Z",
+      "updatedAt": "2026-04-11T00:25:18Z",
       "createdAt": "2023-06-21T18:45:38Z",
       "latestReleaseDate": "2023-08-01T12:41:42Z",
-      "releaseRecency": 982,
-      "releaseRecencyText": "Released 982 days ago"
+      "releaseRecency": 983,
+      "releaseRecencyText": "Released 983 days ago"
     }
   ]
 }
