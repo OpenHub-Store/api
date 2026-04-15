@@ -1,9 +1,40 @@
 {
   "category": "trending",
   "platform": "macos",
-  "lastUpdated": "2026-04-14T04:50:30.511205Z",
-  "totalCount": 143,
+  "lastUpdated": "2026-04-15T04:50:51.292850Z",
+  "totalCount": 145,
   "repositories": [
+    {
+      "id": 1103012935,
+      "name": "openclaw",
+      "fullName": "openclaw/openclaw",
+      "owner": {
+        "login": "openclaw",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/252820863?v=4"
+      },
+      "description": "Your own personal AI assistant. Any OS. Any Platform. The lobster way. 🦞 ",
+      "defaultBranch": "main",
+      "htmlUrl": "https://github.com/openclaw/openclaw",
+      "stargazersCount": 357540,
+      "forksCount": 72625,
+      "language": "TypeScript",
+      "topics": [
+        "ai",
+        "assistant",
+        "crustacean",
+        "molty",
+        "openclaw",
+        "own-your-data",
+        "personal"
+      ],
+      "releasesUrl": "https://api.github.com/repos/openclaw/openclaw/releases{/id}",
+      "updatedAt": "2026-04-15T04:50:58Z",
+      "createdAt": "2025-11-24T10:16:47Z",
+      "latestReleaseDate": "2026-04-14T13:03:29Z",
+      "releaseRecency": 0,
+      "releaseRecencyText": "Released today",
+      "trendingScore": 50714.89
+    },
     {
       "id": 1130564872,
       "name": "worldmonitor",
@@ -15,8 +46,8 @@
       "description": "Real-time global intelligence dashboard. AI-powered news aggregation, geopolitical monitoring, and infrastructure tracking in a unified situational awareness interface",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/koala73/worldmonitor",
-      "stargazersCount": 48163,
-      "forksCount": 7861,
+      "stargazersCount": 48327,
+      "forksCount": 7888,
       "language": "TypeScript",
       "topics": [
         "ai",
@@ -30,12 +61,12 @@
         "situation"
       ],
       "releasesUrl": "https://api.github.com/repos/koala73/worldmonitor/releases{/id}",
-      "updatedAt": "2026-04-14T04:52:10Z",
+      "updatedAt": "2026-04-15T04:40:07Z",
       "createdAt": "2026-01-08T17:26:06Z",
       "latestReleaseDate": "2026-03-01T23:34:08Z",
-      "releaseRecency": 43,
-      "releaseRecencyText": "Released 43 days ago",
-      "trendingScore": 10139.58
+      "releaseRecency": 44,
+      "releaseRecencyText": "Released 44 days ago",
+      "trendingScore": 10068.12
     },
     {
       "id": 975734319,
@@ -48,17 +79,60 @@
       "description": "The open source coding agent.",
       "defaultBranch": "dev",
       "htmlUrl": "https://github.com/anomalyco/opencode",
-      "stargazersCount": 142767,
-      "forksCount": 16064,
+      "stargazersCount": 143367,
+      "forksCount": 16154,
       "language": "TypeScript",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/anomalyco/opencode/releases{/id}",
-      "updatedAt": "2026-04-14T04:51:35Z",
+      "updatedAt": "2026-04-15T04:52:35Z",
       "createdAt": "2025-04-30T20:08:00Z",
-      "latestReleaseDate": "2026-04-10T01:00:36Z",
-      "releaseRecency": 4,
-      "releaseRecencyText": "Released 4 days ago",
-      "trendingScore": 8205.0
+      "latestReleaseDate": "2026-04-15T04:25:45Z",
+      "releaseRecency": 0,
+      "releaseRecencyText": "Released today",
+      "trendingScore": 8215.87
+    },
+    {
+      "id": 1204908370,
+      "name": "PureMac",
+      "fullName": "momenbasel/PureMac",
+      "owner": {
+        "login": "momenbasel",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/8724766?v=4"
+      },
+      "description": "Free, open-source macOS cleaner. CleanMyMac alternative with zero telemetry. Native SwiftUI, scheduled auto-cleaning, Xcode/Homebrew/system cache cleanup. MIT licensed.",
+      "defaultBranch": "main",
+      "htmlUrl": "https://github.com/momenbasel/PureMac",
+      "stargazersCount": 1548,
+      "forksCount": 95,
+      "language": "Swift",
+      "topics": [
+        "cache-cleaner",
+        "cleanmymac",
+        "cleanup",
+        "disk-cleaner",
+        "disk-space",
+        "homebrew",
+        "mac-utility",
+        "macos",
+        "macos-app",
+        "macos-cleaner",
+        "macosx",
+        "native",
+        "oss",
+        "osx",
+        "privacy",
+        "swift",
+        "swiftui",
+        "system-cleaner",
+        "xcode-cleaner"
+      ],
+      "releasesUrl": "https://api.github.com/repos/momenbasel/PureMac/releases{/id}",
+      "updatedAt": "2026-04-15T04:44:39Z",
+      "createdAt": "2026-04-08T12:59:29Z",
+      "latestReleaseDate": "2026-04-15T02:35:27Z",
+      "releaseRecency": 0,
+      "releaseRecencyText": "Released today",
+      "trendingScore": 5224.0
     },
     {
       "id": 965415649,
@@ -71,17 +145,17 @@
       "description": "Lightweight coding agent that runs in your terminal",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/openai/codex",
-      "stargazersCount": 75102,
-      "forksCount": 10629,
+      "stargazersCount": 75329,
+      "forksCount": 10675,
       "language": "Rust",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/openai/codex/releases{/id}",
-      "updatedAt": "2026-04-14T04:49:45Z",
+      "updatedAt": "2026-04-15T04:47:49Z",
       "createdAt": "2025-04-13T05:37:54Z",
       "latestReleaseDate": "2026-04-11T02:53:49Z",
-      "releaseRecency": 3,
-      "releaseRecencyText": "Released 3 days ago",
-      "trendingScore": 4121.18
+      "releaseRecency": 4,
+      "releaseRecencyText": "Released 4 days ago",
+      "trendingScore": 4122.34
     },
     {
       "id": 1144115288,
@@ -94,8 +168,8 @@
       "description": "Ghostty-based macOS terminal with vertical tabs and notifications for AI coding agents",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/manaflow-ai/cmux",
-      "stargazersCount": 13978,
-      "forksCount": 1022,
+      "stargazersCount": 14174,
+      "forksCount": 1032,
       "language": "Swift",
       "topics": [
         "amp",
@@ -108,12 +182,12 @@
         "tmux"
       ],
       "releasesUrl": "https://api.github.com/repos/manaflow-ai/cmux/releases{/id}",
-      "updatedAt": "2026-04-14T04:45:55Z",
+      "updatedAt": "2026-04-15T04:50:03Z",
       "createdAt": "2026-01-28T10:03:24Z",
       "latestReleaseDate": "2026-04-06T10:02:40Z",
-      "releaseRecency": 7,
-      "releaseRecencyText": "Released 7 days ago",
-      "trendingScore": 3747.47
+      "releaseRecency": 8,
+      "releaseRecencyText": "Released 8 days ago",
+      "trendingScore": 3750.0
     },
     {
       "id": 1031912724,
@@ -126,8 +200,8 @@
       "description": "A cross-platform desktop All-in-One assistant tool for Claude Code, Codex, OpenCode, openclaw & Gemini CLI.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/farion1231/cc-switch",
-      "stargazersCount": 44224,
-      "forksCount": 2791,
+      "stargazersCount": 44869,
+      "forksCount": 2838,
       "language": "Rust",
       "topics": [
         "ai-tools",
@@ -150,12 +224,12 @@
         "wsl-support"
       ],
       "releasesUrl": "https://api.github.com/repos/farion1231/cc-switch/releases{/id}",
-      "updatedAt": "2026-04-14T04:48:57Z",
+      "updatedAt": "2026-04-15T04:50:22Z",
       "createdAt": "2025-08-04T14:16:16Z",
       "latestReleaseDate": "2026-04-10T16:14:18Z",
-      "releaseRecency": 3,
-      "releaseRecencyText": "Released 3 days ago",
-      "trendingScore": 3525.84
+      "releaseRecency": 4,
+      "releaseRecencyText": "Released 4 days ago",
+      "trendingScore": 3562.96
     },
     {
       "id": 658928958,
@@ -168,8 +242,8 @@
       "description": "Get up and running with Kimi-K2.5, GLM-5, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/ollama/ollama",
-      "stargazersCount": 168886,
-      "forksCount": 15575,
+      "stargazersCount": 169023,
+      "forksCount": 15589,
       "language": "Go",
       "topics": [
         "deepseek",
@@ -189,12 +263,12 @@
         "qwen"
       ],
       "releasesUrl": "https://api.github.com/repos/ollama/ollama/releases{/id}",
-      "updatedAt": "2026-04-14T04:49:59Z",
+      "updatedAt": "2026-04-15T04:49:54Z",
       "createdAt": "2023-06-26T19:39:32Z",
       "latestReleaseDate": "2026-04-13T23:33:00Z",
-      "releaseRecency": 0,
-      "releaseRecencyText": "Released today",
-      "trendingScore": 3305.01
+      "releaseRecency": 1,
+      "releaseRecencyText": "Released yesterday",
+      "trendingScore": 3304.46
     },
     {
       "id": 721767116,
@@ -207,8 +281,8 @@
       "description": "A modern GUI client based on Tauri, designed to run in Windows, macOS and Linux for tailored proxy experience",
       "defaultBranch": "dev",
       "htmlUrl": "https://github.com/clash-verge-rev/clash-verge-rev",
-      "stargazersCount": 110392,
-      "forksCount": 8026,
+      "stargazersCount": 110688,
+      "forksCount": 8044,
       "language": "TypeScript",
       "topics": [
         "clash",
@@ -221,12 +295,12 @@
         "windows"
       ],
       "releasesUrl": "https://api.github.com/repos/clash-verge-rev/clash-verge-rev/releases{/id}",
-      "updatedAt": "2026-04-14T04:37:37Z",
+      "updatedAt": "2026-04-15T04:40:25Z",
       "createdAt": "2023-11-21T18:24:03Z",
       "latestReleaseDate": "2026-03-21T16:16:55Z",
-      "releaseRecency": 23,
-      "releaseRecencyText": "Released 23 days ago",
-      "trendingScore": 2530.13
+      "releaseRecency": 24,
+      "releaseRecencyText": "Released 24 days ago",
+      "trendingScore": 2534.01
     },
     {
       "id": 1187219063,
@@ -239,17 +313,17 @@
       "description": "100% private on-device voice models for speech-to-text and meeting transcription on macOS",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/matthartman/ghost-pepper",
-      "stargazersCount": 2097,
-      "forksCount": 107,
+      "stargazersCount": 2174,
+      "forksCount": 111,
       "language": "Swift",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/matthartman/ghost-pepper/releases{/id}",
-      "updatedAt": "2026-04-14T03:44:48Z",
+      "updatedAt": "2026-04-15T04:46:45Z",
       "createdAt": "2026-03-20T13:28:49Z",
-      "latestReleaseDate": "2026-04-14T03:33:23Z",
+      "latestReleaseDate": "2026-04-14T19:58:57Z",
       "releaseRecency": 0,
       "releaseRecencyText": "Released today",
-      "trendingScore": 1767.5
+      "trendingScore": 1759.2
     },
     {
       "id": 993475914,
@@ -262,17 +336,17 @@
       "description": "A tool for creating and running Linux containers using lightweight virtual machines on a Mac. It is written in Swift, and optimized for Apple silicon. ",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/apple/container",
-      "stargazersCount": 25895,
-      "forksCount": 726,
+      "stargazersCount": 25917,
+      "forksCount": 727,
       "language": "Swift",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/apple/container/releases{/id}",
-      "updatedAt": "2026-04-14T04:51:29Z",
+      "updatedAt": "2026-04-15T00:52:30Z",
       "createdAt": "2025-05-30T21:26:05Z",
       "latestReleaseDate": "2026-03-31T21:44:05Z",
-      "releaseRecency": 13,
-      "releaseRecencyText": "Released 13 days ago",
-      "trendingScore": 1646.62
+      "releaseRecency": 14,
+      "releaseRecencyText": "Released 14 days ago",
+      "trendingScore": 1642.89
     },
     {
       "id": 643445235,
@@ -285,7 +359,7 @@
       "description": "The ultimate space for work and life — to find, build, and collaborate with agent teammates that grow with you. We are taking agent harness to the next level — enabling multi-agent collaboration, effortless agent team design, and introducing agents as the unit of work interaction.",
       "defaultBranch": "canary",
       "htmlUrl": "https://github.com/lobehub/lobehub",
-      "stargazersCount": 75155,
+      "stargazersCount": 75190,
       "forksCount": 14915,
       "language": "TypeScript",
       "topics": [
@@ -303,12 +377,12 @@
         "openai"
       ],
       "releasesUrl": "https://api.github.com/repos/lobehub/lobehub/releases{/id}",
-      "updatedAt": "2026-04-14T04:51:16Z",
+      "updatedAt": "2026-04-15T04:29:50Z",
       "createdAt": "2023-05-21T07:19:12Z",
       "latestReleaseDate": "2026-04-10T09:51:47Z",
-      "releaseRecency": 3,
-      "releaseRecencyText": "Released 3 days ago",
-      "trendingScore": 1420.7
+      "releaseRecency": 4,
+      "releaseRecencyText": "Released 4 days ago",
+      "trendingScore": 1420.02
     },
     {
       "id": 619959033,
@@ -321,20 +395,20 @@
       "description": "GPT4All: Run Local LLMs on Any Device. Open-source and available for commercial use.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/nomic-ai/gpt4all",
-      "stargazersCount": 77335,
-      "forksCount": 8339,
+      "stargazersCount": 77339,
+      "forksCount": 8338,
       "language": "C++",
       "topics": [
         "ai-chat",
         "llm-inference"
       ],
       "releasesUrl": "https://api.github.com/repos/nomic-ai/gpt4all/releases{/id}",
-      "updatedAt": "2026-04-14T03:45:57Z",
+      "updatedAt": "2026-04-15T03:20:49Z",
       "createdAt": "2023-03-27T18:49:32Z",
       "latestReleaseDate": "2025-02-25T00:41:39Z",
-      "releaseRecency": 413,
-      "releaseRecencyText": "Released 413 days ago",
-      "trendingScore": 1395.67
+      "releaseRecency": 414,
+      "releaseRecencyText": "Released 414 days ago",
+      "trendingScore": 1394.49
     },
     {
       "id": 1137026567,
@@ -347,7 +421,7 @@
       "description": "FineTune, a macOS menu bar app for per-app volume control, multi-device output, audio routing, and 10-band EQ. Free and open-source alternative to SoundSource.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/ronitsingh10/FineTune",
-      "stargazersCount": 5625,
+      "stargazersCount": 5651,
       "forksCount": 180,
       "language": "Swift",
       "topics": [
@@ -368,12 +442,12 @@
         "volume-mixer"
       ],
       "releasesUrl": "https://api.github.com/repos/ronitsingh10/FineTune/releases{/id}",
-      "updatedAt": "2026-04-14T04:20:08Z",
+      "updatedAt": "2026-04-15T04:36:52Z",
       "createdAt": "2026-01-18T19:29:15Z",
       "latestReleaseDate": "2026-04-08T22:23:15Z",
-      "releaseRecency": 5,
-      "releaseRecencyText": "Released 5 days ago",
-      "trendingScore": 1381.53
+      "releaseRecency": 6,
+      "releaseRecencyText": "Released 6 days ago",
+      "trendingScore": 1372.19
     },
     {
       "id": 819554665,
@@ -386,17 +460,17 @@
       "description": "Run frontier AI locally.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/exo-explore/exo",
-      "stargazersCount": 43567,
-      "forksCount": 3015,
+      "stargazersCount": 43603,
+      "forksCount": 3021,
       "language": "Python",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/exo-explore/exo/releases{/id}",
-      "updatedAt": "2026-04-14T04:04:57Z",
+      "updatedAt": "2026-04-15T03:44:35Z",
       "createdAt": "2024-06-24T18:36:22Z",
       "latestReleaseDate": "2026-03-27T01:17:37Z",
-      "releaseRecency": 18,
-      "releaseRecencyText": "Released 18 days ago",
-      "trendingScore": 1324.22
+      "releaseRecency": 19,
+      "releaseRecencyText": "Released 19 days ago",
+      "trendingScore": 1323.31
     },
     {
       "id": 594155488,
@@ -409,8 +483,8 @@
       "description": "#1 PDF Application on GitHub that lets you edit PDFs on any device anywhere",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/Stirling-Tools/Stirling-PDF",
-      "stargazersCount": 76705,
-      "forksCount": 6628,
+      "stargazersCount": 76753,
+      "forksCount": 6643,
       "language": "TypeScript",
       "topics": [
         "docker",
@@ -427,12 +501,12 @@
         "pdfmerger"
       ],
       "releasesUrl": "https://api.github.com/repos/Stirling-Tools/Stirling-PDF/releases{/id}",
-      "updatedAt": "2026-04-14T04:32:29Z",
+      "updatedAt": "2026-04-15T04:40:51Z",
       "createdAt": "2023-01-27T18:22:42Z",
       "latestReleaseDate": "2026-04-04T09:32:15Z",
-      "releaseRecency": 9,
-      "releaseRecencyText": "Released 9 days ago",
-      "trendingScore": 1308.96
+      "releaseRecency": 10,
+      "releaseRecencyText": "Released 10 days ago",
+      "trendingScore": 1308.66
     },
     {
       "id": 578822531,
@@ -445,8 +519,8 @@
       "description": "An open-source cross-platform alternative to AirDrop",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/localsend/localsend",
-      "stargazersCount": 78175,
-      "forksCount": 4174,
+      "stargazersCount": 78226,
+      "forksCount": 4179,
       "language": "Dart",
       "topics": [
         "dart",
@@ -455,12 +529,12 @@
         "flutter-apps"
       ],
       "releasesUrl": "https://api.github.com/repos/localsend/localsend/releases{/id}",
-      "updatedAt": "2026-04-14T03:57:00Z",
+      "updatedAt": "2026-04-15T04:24:40Z",
       "createdAt": "2022-12-16T00:46:07Z",
       "latestReleaseDate": "2025-02-20T01:23:55Z",
-      "releaseRecency": 418,
-      "releaseRecencyText": "Released 418 days ago",
-      "trendingScore": 1295.83
+      "releaseRecency": 419,
+      "releaseRecencyText": "Released 419 days ago",
+      "trendingScore": 1295.61
     },
     {
       "id": 805155266,
@@ -473,8 +547,8 @@
       "description": "AI productivity studio with smart chat, autonomous agents, and 300+ assistants. Unified access to frontier LLMs",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/CherryHQ/cherry-studio",
-      "stargazersCount": 43446,
-      "forksCount": 4078,
+      "stargazersCount": 43507,
+      "forksCount": 4082,
       "language": "TypeScript",
       "topics": [
         "agency-agents",
@@ -489,12 +563,12 @@
         "vibe-coding"
       ],
       "releasesUrl": "https://api.github.com/repos/CherryHQ/cherry-studio/releases{/id}",
-      "updatedAt": "2026-04-14T04:51:14Z",
+      "updatedAt": "2026-04-15T04:49:48Z",
       "createdAt": "2024-05-24T01:56:26Z",
       "latestReleaseDate": "2026-03-27T13:02:49Z",
-      "releaseRecency": 17,
-      "releaseRecencyText": "Released 17 days ago",
-      "trendingScore": 1259.3
+      "releaseRecency": 18,
+      "releaseRecencyText": "Released 18 days ago",
+      "trendingScore": 1259.25
     },
     {
       "id": 299354207,
@@ -507,8 +581,8 @@
       "description": "An open-source remote desktop application designed for self-hosting, as an alternative to TeamViewer.",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/rustdesk/rustdesk",
-      "stargazersCount": 111159,
-      "forksCount": 16637,
+      "stargazersCount": 111237,
+      "forksCount": 16652,
       "language": "Rust",
       "topics": [
         "android",
@@ -532,12 +606,12 @@
         "windows"
       ],
       "releasesUrl": "https://api.github.com/repos/rustdesk/rustdesk/releases{/id}",
-      "updatedAt": "2026-04-14T04:38:09Z",
+      "updatedAt": "2026-04-15T04:50:38Z",
       "createdAt": "2020-09-28T15:36:08Z",
       "latestReleaseDate": "2026-03-05T05:05:30Z",
-      "releaseRecency": 39,
-      "releaseRecencyText": "Released 39 days ago",
-      "trendingScore": 1114.95
+      "releaseRecency": 40,
+      "releaseRecencyText": "Released 40 days ago",
+      "trendingScore": 1115.18
     },
     {
       "id": 1169471651,
@@ -550,17 +624,17 @@
       "description": "A meeting note-taker that talks back.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/yazinsai/OpenOats",
-      "stargazersCount": 2272,
-      "forksCount": 212,
+      "stargazersCount": 2280,
+      "forksCount": 215,
       "language": "Swift",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/yazinsai/OpenOats/releases{/id}",
-      "updatedAt": "2026-04-14T02:15:40Z",
+      "updatedAt": "2026-04-15T03:54:10Z",
       "createdAt": "2026-02-28T18:31:38Z",
       "latestReleaseDate": "2026-04-14T02:23:00Z",
-      "releaseRecency": 0,
-      "releaseRecencyText": "Released today",
-      "trendingScore": 1048.73
+      "releaseRecency": 1,
+      "releaseRecencyText": "Released yesterday",
+      "trendingScore": 1029.33
     },
     {
       "id": 519859998,
@@ -573,8 +647,8 @@
       "description": "There can be more than Notion and Miro. AFFiNE(pronounced [ə‘fain]) is a next-gen knowledge base that brings planning, sorting and creating all together. Privacy first, open-source, customizable and ready to use. ",
       "defaultBranch": "canary",
       "htmlUrl": "https://github.com/toeverything/AFFiNE",
-      "stargazersCount": 67241,
-      "forksCount": 4747,
+      "stargazersCount": 67270,
+      "forksCount": 4749,
       "language": "TypeScript",
       "topics": [
         "app",
@@ -597,12 +671,12 @@
         "workspace"
       ],
       "releasesUrl": "https://api.github.com/repos/toeverything/AFFiNE/releases{/id}",
-      "updatedAt": "2026-04-14T04:40:46Z",
+      "updatedAt": "2026-04-15T04:18:15Z",
       "createdAt": "2022-07-31T18:45:21Z",
       "latestReleaseDate": "2026-02-25T03:11:57Z",
-      "releaseRecency": 48,
-      "releaseRecencyText": "Released 48 days ago",
-      "trendingScore": 995.69
+      "releaseRecency": 49,
+      "releaseRecencyText": "Released 49 days ago",
+      "trendingScore": 995.38
     },
     {
       "id": 1185528404,
@@ -615,8 +689,8 @@
       "description": "Your AI agent skills, finally organized. A macOS app to browse, edit, and manage skills across Claude Code, Cursor, Codex, Windsurf, and Amp.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/Shpigford/chops",
-      "stargazersCount": 1206,
-      "forksCount": 73,
+      "stargazersCount": 1212,
+      "forksCount": 74,
       "language": "Swift",
       "topics": [
         "agents",
@@ -626,12 +700,12 @@
         "swiftui"
       ],
       "releasesUrl": "https://api.github.com/repos/Shpigford/chops/releases{/id}",
-      "updatedAt": "2026-04-13T15:20:59Z",
+      "updatedAt": "2026-04-15T04:29:00Z",
       "createdAt": "2026-03-18T17:17:12Z",
       "latestReleaseDate": "2026-04-03T11:06:53Z",
-      "releaseRecency": 10,
-      "releaseRecencyText": "Released 10 days ago",
-      "trendingScore": 979.69
+      "releaseRecency": 11,
+      "releaseRecencyText": "Released 11 days ago",
+      "trendingScore": 949.78
     },
     {
       "id": 1152691112,
@@ -644,7 +718,7 @@
       "description": "Textream is a free macOS teleprompter app for streamers, interviewers, and presenters. It highlights your script in real-time as you speak, displayed in a beautiful Dynamic Island overlay. With extensible features.",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/f/textream",
-      "stargazersCount": 2656,
+      "stargazersCount": 2678,
       "forksCount": 169,
       "language": "Swift",
       "topics": [
@@ -653,12 +727,12 @@
         "streaming"
       ],
       "releasesUrl": "https://api.github.com/repos/f/textream/releases{/id}",
-      "updatedAt": "2026-04-14T03:41:56Z",
+      "updatedAt": "2026-04-15T03:44:52Z",
       "createdAt": "2026-02-08T09:20:05Z",
       "latestReleaseDate": "2026-02-27T20:26:13Z",
-      "releaseRecency": 45,
-      "releaseRecencyText": "Released 45 days ago",
-      "trendingScore": 862.0
+      "releaseRecency": 46,
+      "releaseRecencyText": "Released 46 days ago",
+      "trendingScore": 856.0
     },
     {
       "id": 1117208510,
@@ -671,7 +745,7 @@
       "description": "A powerful cross-platform port management tool for developers. Monitor ports, manage Kubernetes port forwards, integrate Cloudflare Tunnels, and kill processes with one click.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/productdevbook/port-killer",
-      "stargazersCount": 4713,
+      "stargazersCount": 4728,
       "forksCount": 177,
       "language": "Swift",
       "topics": [
@@ -687,12 +761,12 @@
         "windows"
       ],
       "releasesUrl": "https://api.github.com/repos/productdevbook/port-killer/releases{/id}",
-      "updatedAt": "2026-04-14T01:49:45Z",
+      "updatedAt": "2026-04-15T04:29:23Z",
       "createdAt": "2025-12-16T01:44:50Z",
       "latestReleaseDate": "2026-02-16T14:18:49Z",
-      "releaseRecency": 56,
-      "releaseRecencyText": "Released 56 days ago",
-      "trendingScore": 858.1
+      "releaseRecency": 57,
+      "releaseRecencyText": "Released 57 days ago",
+      "trendingScore": 854.0
     },
     {
       "id": 340547520,
@@ -705,8 +779,8 @@
       "description": "Code at the speed of thought – Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/zed-industries/zed",
-      "stargazersCount": 79069,
-      "forksCount": 7815,
+      "stargazersCount": 79131,
+      "forksCount": 7840,
       "language": "Rust",
       "topics": [
         "gpui",
@@ -715,12 +789,12 @@
         "zed"
       ],
       "releasesUrl": "https://api.github.com/repos/zed-industries/zed/releases{/id}",
-      "updatedAt": "2026-04-14T04:50:51Z",
+      "updatedAt": "2026-04-15T04:42:33Z",
       "createdAt": "2021-02-20T03:01:06Z",
       "latestReleaseDate": "2026-04-10T02:04:10Z",
-      "releaseRecency": 4,
-      "releaseRecencyText": "Released 4 days ago",
-      "trendingScore": 847.61
+      "releaseRecency": 5,
+      "releaseRecencyText": "Released 5 days ago",
+      "trendingScore": 847.82
     },
     {
       "id": 199570071,
@@ -733,8 +807,8 @@
       "description": "A GUI client for Windows, Linux and macOS, support Xray and sing-box and others",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/2dust/v2rayN",
-      "stargazersCount": 101939,
-      "forksCount": 14593,
+      "stargazersCount": 102068,
+      "forksCount": 14603,
       "language": "C#",
       "topics": [
         "proxy",
@@ -750,12 +824,12 @@
         "xtls"
       ],
       "releasesUrl": "https://api.github.com/repos/2dust/v2rayN/releases{/id}",
-      "updatedAt": "2026-04-14T04:43:10Z",
+      "updatedAt": "2026-04-15T04:48:13Z",
       "createdAt": "2019-07-30T03:47:24Z",
       "latestReleaseDate": "2026-04-04T13:48:56Z",
-      "releaseRecency": 9,
-      "releaseRecencyText": "Released 9 days ago",
-      "trendingScore": 835.16
+      "releaseRecency": 10,
+      "releaseRecencyText": "Released 10 days ago",
+      "trendingScore": 835.87
     },
     {
       "id": 615869301,
@@ -768,8 +842,8 @@
       "description": "LocalAI is the open-source AI engine. Run any model - LLMs, vision, voice, image, video - on any hardware. No GPU required.",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/mudler/LocalAI",
-      "stargazersCount": 45375,
-      "forksCount": 3947,
+      "stargazersCount": 45406,
+      "forksCount": 3953,
       "language": "Go",
       "topics": [
         "agents",
@@ -792,12 +866,12 @@
         "tts"
       ],
       "releasesUrl": "https://api.github.com/repos/mudler/LocalAI/releases{/id}",
-      "updatedAt": "2026-04-14T04:51:32Z",
+      "updatedAt": "2026-04-15T04:18:17Z",
       "createdAt": "2023-03-18T22:58:02Z",
       "latestReleaseDate": "2026-04-06T23:05:27Z",
-      "releaseRecency": 7,
-      "releaseRecencyText": "Released 7 days ago",
-      "trendingScore": 808.82
+      "releaseRecency": 8,
+      "releaseRecencyText": "Released 8 days ago",
+      "trendingScore": 808.66
     },
     {
       "id": 377496562,
@@ -810,8 +884,8 @@
       "description": "Bring projects, wikis, and teams together with AI. AppFlowy is the AI collaborative workspace where you achieve more without losing control of your data. The leading open source Notion alternative.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/AppFlowy-IO/AppFlowy",
-      "stargazersCount": 69650,
-      "forksCount": 5115,
+      "stargazersCount": 69673,
+      "forksCount": 5118,
       "language": "Dart",
       "topics": [
         "blog",
@@ -828,12 +902,12 @@
         "wiki"
       ],
       "releasesUrl": "https://api.github.com/repos/AppFlowy-IO/AppFlowy/releases{/id}",
-      "updatedAt": "2026-04-14T03:56:46Z",
+      "updatedAt": "2026-04-15T03:11:09Z",
       "createdAt": "2021-06-16T12:56:48Z",
       "latestReleaseDate": "2026-04-08T01:36:22Z",
-      "releaseRecency": 6,
-      "releaseRecencyText": "Released 6 days ago",
-      "trendingScore": 790.58
+      "releaseRecency": 7,
+      "releaseRecencyText": "Released 7 days ago",
+      "trendingScore": 790.39
     },
     {
       "id": 1122347787,
@@ -846,7 +920,7 @@
       "description": "Stop juggling AI accounts. Quotio is a beautiful native macOS menu bar app that unifies your Claude, Gemini, OpenAI, Qwen, and Antigravity subscriptions – with real-time quota tracking and smart auto-failover for AI coding tools like Claude Code, OpenCode, and Droid.",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/nguyenphutrong/quotio",
-      "stargazersCount": 4232,
+      "stargazersCount": 4236,
       "forksCount": 263,
       "language": "Swift",
       "topics": [
@@ -856,44 +930,12 @@
         "quota-monitor"
       ],
       "releasesUrl": "https://api.github.com/repos/nguyenphutrong/quotio/releases{/id}",
-      "updatedAt": "2026-04-14T02:37:28Z",
+      "updatedAt": "2026-04-15T02:30:01Z",
       "createdAt": "2025-12-24T14:42:00Z",
       "latestReleaseDate": "2026-04-06T12:47:45Z",
-      "releaseRecency": 7,
-      "releaseRecencyText": "Released 7 days ago",
-      "trendingScore": 789.45
-    },
-    {
-      "id": 1177370245,
-      "name": "blitz-mac",
-      "fullName": "blitzdotdev/blitz-mac",
-      "owner": {
-        "login": "blitzdotdev",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/259449558?v=4"
-      },
-      "description": "Native macOS App Store Connect tool with MCP. Submit iOS apps to App Store with AI agents ",
-      "defaultBranch": "master",
-      "htmlUrl": "https://github.com/blitzdotdev/blitz-mac",
-      "stargazersCount": 1318,
-      "forksCount": 104,
-      "language": "Swift",
-      "topics": [
-        "app-store-analytics",
-        "app-store-connect",
-        "app-store-connect-api",
-        "app-store-connect-cli",
-        "app-store-connect-client",
-        "ios",
-        "ios-app",
-        "macos-app"
-      ],
-      "releasesUrl": "https://api.github.com/repos/blitzdotdev/blitz-mac/releases{/id}",
-      "updatedAt": "2026-04-13T20:08:28Z",
-      "createdAt": "2026-03-10T00:52:18Z",
-      "latestReleaseDate": "2026-04-06T13:52:44Z",
-      "releaseRecency": 7,
-      "releaseRecencyText": "Released 7 days ago",
-      "trendingScore": 773.14
+      "releaseRecency": 8,
+      "releaseRecencyText": "Released 8 days ago",
+      "trendingScore": 783.24
     },
     {
       "id": 551376520,
@@ -906,8 +948,8 @@
       "description": "🤱🏻 Turn any webpage into a desktop app with one command.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/tw93/Pake",
-      "stargazersCount": 47747,
-      "forksCount": 9517,
+      "stargazersCount": 47776,
+      "forksCount": 9518,
       "language": "Rust",
       "topics": [
         "chatgpt",
@@ -925,12 +967,44 @@
         "youtube"
       ],
       "releasesUrl": "https://api.github.com/repos/tw93/Pake/releases{/id}",
-      "updatedAt": "2026-04-14T04:06:38Z",
+      "updatedAt": "2026-04-15T03:46:50Z",
       "createdAt": "2022-10-14T09:32:57Z",
       "latestReleaseDate": "2026-03-27T03:18:33Z",
-      "releaseRecency": 18,
-      "releaseRecencyText": "Released 18 days ago",
-      "trendingScore": 768.8
+      "releaseRecency": 19,
+      "releaseRecencyText": "Released 19 days ago",
+      "trendingScore": 768.67
+    },
+    {
+      "id": 1177370245,
+      "name": "blitz-mac",
+      "fullName": "blitzdotdev/blitz-mac",
+      "owner": {
+        "login": "blitzdotdev",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/259449558?v=4"
+      },
+      "description": "Native macOS App Store Connect tool with MCP. Submit iOS apps to App Store with AI agents ",
+      "defaultBranch": "master",
+      "htmlUrl": "https://github.com/blitzdotdev/blitz-mac",
+      "stargazersCount": 1321,
+      "forksCount": 105,
+      "language": "Swift",
+      "topics": [
+        "app-store-analytics",
+        "app-store-connect",
+        "app-store-connect-api",
+        "app-store-connect-cli",
+        "app-store-connect-client",
+        "ios",
+        "ios-app",
+        "macos-app"
+      ],
+      "releasesUrl": "https://api.github.com/repos/blitzdotdev/blitz-mac/releases{/id}",
+      "updatedAt": "2026-04-14T15:24:16Z",
+      "createdAt": "2026-03-10T00:52:18Z",
+      "latestReleaseDate": "2026-04-06T13:52:44Z",
+      "releaseRecency": 8,
+      "releaseRecencyText": "Released 8 days ago",
+      "trendingScore": 753.89
     },
     {
       "id": 1023406764,
@@ -943,17 +1017,17 @@
       "description": "Use your Mac trackpad as a weighing scale",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/KrishKrosh/TrackWeight",
-      "stargazersCount": 8865,
-      "forksCount": 385,
+      "stargazersCount": 8893,
+      "forksCount": 387,
       "language": "Swift",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/KrishKrosh/TrackWeight/releases{/id}",
-      "updatedAt": "2026-04-13T20:29:43Z",
+      "updatedAt": "2026-04-15T03:53:28Z",
       "createdAt": "2025-07-21T05:55:02Z",
       "latestReleaseDate": "2025-07-27T02:30:54Z",
-      "releaseRecency": 261,
-      "releaseRecencyText": "Released 261 days ago",
-      "trendingScore": 682.54
+      "releaseRecency": 262,
+      "releaseRecencyText": "Released 262 days ago",
+      "trendingScore": 682.14
     },
     {
       "id": 323048702,
@@ -966,8 +1040,8 @@
       "description": "Financial data platform for analysts, quants and AI agents.",
       "defaultBranch": "develop",
       "htmlUrl": "https://github.com/OpenBB-finance/OpenBB",
-      "stargazersCount": 65843,
-      "forksCount": 6546,
+      "stargazersCount": 65894,
+      "forksCount": 6560,
       "language": "Python",
       "topics": [
         "ai",
@@ -985,12 +1059,12 @@
         "stocks"
       ],
       "releasesUrl": "https://api.github.com/repos/OpenBB-finance/OpenBB/releases{/id}",
-      "updatedAt": "2026-04-14T04:37:40Z",
+      "updatedAt": "2026-04-15T04:49:36Z",
       "createdAt": "2020-12-20T10:46:38Z",
       "latestReleaseDate": "2026-02-09T21:19:39Z",
-      "releaseRecency": 63,
-      "releaseRecencyText": "Released 63 days ago",
-      "trendingScore": 678.79
+      "releaseRecency": 64,
+      "releaseRecencyText": "Released 64 days ago",
+      "trendingScore": 678.97
     },
     {
       "id": 542284380,
@@ -1003,8 +1077,8 @@
       "description": "Opensource IDE For Exploring and Testing API's (lightweight alternative to Postman/Insomnia)",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/usebruno/bruno",
-      "stargazersCount": 42884,
-      "forksCount": 2303,
+      "stargazersCount": 42915,
+      "forksCount": 2305,
       "language": "JavaScript",
       "topics": [
         "api-client",
@@ -1023,12 +1097,12 @@
         "testing-tools"
       ],
       "releasesUrl": "https://api.github.com/repos/usebruno/bruno/releases{/id}",
-      "updatedAt": "2026-04-14T04:20:11Z",
+      "updatedAt": "2026-04-15T04:49:40Z",
       "createdAt": "2022-09-27T20:51:45Z",
       "latestReleaseDate": "2026-04-03T14:50:45Z",
-      "releaseRecency": 10,
-      "releaseRecencyText": "Released 10 days ago",
-      "trendingScore": 662.81
+      "releaseRecency": 11,
+      "releaseRecencyText": "Released 11 days ago",
+      "trendingScore": 662.78
     },
     {
       "id": 519577891,
@@ -1041,8 +1115,8 @@
       "description": "🆙 Upscayl - #1 Free and Open Source AI Image Upscaler for Linux, MacOS and Windows.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/upscayl/upscayl",
-      "stargazersCount": 44577,
-      "forksCount": 2173,
+      "stargazersCount": 44595,
+      "forksCount": 2174,
       "language": "TypeScript",
       "topics": [
         "ai",
@@ -1058,35 +1132,12 @@
         "upscayl"
       ],
       "releasesUrl": "https://api.github.com/repos/upscayl/upscayl/releases{/id}",
-      "updatedAt": "2026-04-14T04:30:09Z",
+      "updatedAt": "2026-04-15T04:01:27Z",
       "createdAt": "2022-07-30T17:19:20Z",
       "latestReleaseDate": "2024-12-25T13:44:34Z",
-      "releaseRecency": 474,
-      "releaseRecencyText": "Released 474 days ago",
-      "trendingScore": 661.94
-    },
-    {
-      "id": 1141375692,
-      "name": "dorso",
-      "fullName": "tldev/dorso",
-      "owner": {
-        "login": "tldev",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/4693583?v=4"
-      },
-      "description": "A macOS app that blurs your screen when you slouch.",
-      "defaultBranch": "main",
-      "htmlUrl": "https://github.com/tldev/dorso",
-      "stargazersCount": 2328,
-      "forksCount": 62,
-      "language": "Swift",
-      "topics": [],
-      "releasesUrl": "https://api.github.com/repos/tldev/dorso/releases{/id}",
-      "updatedAt": "2026-04-14T02:57:46Z",
-      "createdAt": "2026-01-24T18:40:06Z",
-      "latestReleaseDate": "2026-03-16T21:46:25Z",
-      "releaseRecency": 28,
-      "releaseRecencyText": "Released 28 days ago",
-      "trendingScore": 609.37
+      "releaseRecency": 475,
+      "releaseRecencyText": "Released 475 days ago",
+      "trendingScore": 661.71
     },
     {
       "id": 1062234789,
@@ -1099,7 +1150,7 @@
       "description": "The automatic work journal. Privately turns your screen into a timeline of what you actually accomplished. Open-source and local-first.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/JerryZLiu/Dayflow",
-      "stargazersCount": 5930,
+      "stargazersCount": 5936,
       "forksCount": 308,
       "language": "Swift",
       "topics": [
@@ -1117,12 +1168,35 @@
         "timeline"
       ],
       "releasesUrl": "https://api.github.com/repos/JerryZLiu/Dayflow/releases{/id}",
-      "updatedAt": "2026-04-14T03:49:10Z",
+      "updatedAt": "2026-04-14T19:25:41Z",
       "createdAt": "2025-09-23T01:58:21Z",
       "latestReleaseDate": "2026-04-09T13:53:46Z",
-      "releaseRecency": 4,
-      "releaseRecencyText": "Released 4 days ago",
-      "trendingScore": 606.24
+      "releaseRecency": 5,
+      "releaseRecencyText": "Released 5 days ago",
+      "trendingScore": 603.96
+    },
+    {
+      "id": 1141375692,
+      "name": "dorso",
+      "fullName": "tldev/dorso",
+      "owner": {
+        "login": "tldev",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/4693583?v=4"
+      },
+      "description": "A macOS app that blurs your screen when you slouch.",
+      "defaultBranch": "main",
+      "htmlUrl": "https://github.com/tldev/dorso",
+      "stargazersCount": 2328,
+      "forksCount": 62,
+      "language": "Swift",
+      "topics": [],
+      "releasesUrl": "https://api.github.com/repos/tldev/dorso/releases{/id}",
+      "updatedAt": "2026-04-15T04:41:32Z",
+      "createdAt": "2026-01-24T18:40:06Z",
+      "latestReleaseDate": "2026-03-16T21:46:25Z",
+      "releaseRecency": 29,
+      "releaseRecencyText": "Released 29 days ago",
+      "trendingScore": 602.0
     },
     {
       "id": 311683390,
@@ -1135,7 +1209,7 @@
       "description": "🔍 A Hex Editor for Reverse Engineers, Programmers and people who value their retinas when working at 3 AM.",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/WerWolv/ImHex",
-      "stargazersCount": 53144,
+      "stargazersCount": 53147,
       "forksCount": 2358,
       "language": "C++",
       "topics": [
@@ -1161,12 +1235,12 @@
         "windows"
       ],
       "releasesUrl": "https://api.github.com/repos/WerWolv/ImHex/releases{/id}",
-      "updatedAt": "2026-04-14T03:01:48Z",
+      "updatedAt": "2026-04-14T20:59:57Z",
       "createdAt": "2020-11-10T14:27:00Z",
       "latestReleaseDate": "2025-12-21T18:57:18Z",
-      "releaseRecency": 113,
-      "releaseRecencyText": "Released 113 days ago",
-      "trendingScore": 560.81
+      "releaseRecency": 114,
+      "releaseRecencyText": "Released 114 days ago",
+      "trendingScore": 560.57
     },
     {
       "id": 338719962,
@@ -1179,8 +1253,8 @@
       "description": "🎧 Open source music streaming app! Available for both desktop & mobile!",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/KRTirtho/spotube",
-      "stargazersCount": 45546,
-      "forksCount": 2041,
+      "stargazersCount": 45563,
+      "forksCount": 2043,
       "language": "Dart",
       "topics": [
         "android",
@@ -1198,12 +1272,12 @@
         "youtube"
       ],
       "releasesUrl": "https://api.github.com/repos/KRTirtho/spotube/releases{/id}",
-      "updatedAt": "2026-04-14T03:06:37Z",
+      "updatedAt": "2026-04-15T02:33:08Z",
       "createdAt": "2021-02-14T03:17:58Z",
       "latestReleaseDate": "2026-02-24T13:15:09Z",
-      "releaseRecency": 48,
-      "releaseRecencyText": "Released 48 days ago",
-      "trendingScore": 493.25
+      "releaseRecency": 49,
+      "releaseRecencyText": "Released 49 days ago",
+      "trendingScore": 493.17
     },
     {
       "id": 1158734451,
@@ -1216,17 +1290,17 @@
       "description": "Free and open source alternative to Wispr Flow / Superwhisper / Monologue / etc",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/zachlatta/freeflow",
-      "stargazersCount": 1259,
-      "forksCount": 89,
+      "stargazersCount": 1280,
+      "forksCount": 90,
       "language": "Swift",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/zachlatta/freeflow/releases{/id}",
-      "updatedAt": "2026-04-14T04:44:59Z",
+      "updatedAt": "2026-04-15T02:29:51Z",
       "createdAt": "2026-02-15T20:47:25Z",
-      "latestReleaseDate": "2026-04-13T23:18:50Z",
+      "latestReleaseDate": "2026-04-14T23:22:25Z",
       "releaseRecency": 0,
       "releaseRecencyText": "Released today",
-      "trendingScore": 457.75
+      "trendingScore": 457.38
     },
     {
       "id": 1039587768,
@@ -1239,8 +1313,8 @@
       "description": "Own your AI. The native macOS harness for AI agents -- any model, persistent memory, autonomous execution, cryptographic identity. Built in Swift. Fully offline. Open source.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/osaurus-ai/osaurus",
-      "stargazersCount": 4942,
-      "forksCount": 242,
+      "stargazersCount": 4952,
+      "forksCount": 244,
       "language": "Swift",
       "topics": [
         "anthropic",
@@ -1255,12 +1329,12 @@
         "swift"
       ],
       "releasesUrl": "https://api.github.com/repos/osaurus-ai/osaurus/releases{/id}",
-      "updatedAt": "2026-04-14T02:59:58Z",
+      "updatedAt": "2026-04-15T00:32:04Z",
       "createdAt": "2025-08-17T15:05:39Z",
-      "latestReleaseDate": "2026-04-14T02:59:15Z",
+      "latestReleaseDate": "2026-04-14T17:30:11Z",
       "releaseRecency": 0,
       "releaseRecencyText": "Released today",
-      "trendingScore": 441.56
+      "trendingScore": 440.67
     },
     {
       "id": 291438522,
@@ -1273,8 +1347,8 @@
       "description": "A privacy-first, self-hosted, fully open source personal knowledge management software, written in typescript and golang.",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/siyuan-note/siyuan",
-      "stargazersCount": 42601,
-      "forksCount": 2668,
+      "stargazersCount": 42627,
+      "forksCount": 2672,
       "language": "TypeScript",
       "topics": [
         "anki",
@@ -1298,12 +1372,12 @@
         "webdav"
       ],
       "releasesUrl": "https://api.github.com/repos/siyuan-note/siyuan/releases{/id}",
-      "updatedAt": "2026-04-14T04:38:26Z",
+      "updatedAt": "2026-04-15T03:54:49Z",
       "createdAt": "2020-08-30T09:21:35Z",
-      "latestReleaseDate": "2026-04-02T09:17:28Z",
-      "releaseRecency": 11,
-      "releaseRecencyText": "Released 11 days ago",
-      "trendingScore": 415.21
+      "latestReleaseDate": "2026-04-14T09:01:27Z",
+      "releaseRecency": 0,
+      "releaseRecencyText": "Released today",
+      "trendingScore": 415.27
     },
     {
       "id": 77213120,
@@ -1316,7 +1390,7 @@
       "description": "A terminal for a more modern age",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/Eugeny/tabby",
-      "stargazersCount": 70345,
+      "stargazersCount": 70378,
       "forksCount": 3956,
       "language": "TypeScript",
       "topics": [
@@ -1327,12 +1401,12 @@
         "terminal-emulators"
       ],
       "releasesUrl": "https://api.github.com/repos/Eugeny/tabby/releases{/id}",
-      "updatedAt": "2026-04-14T03:42:04Z",
+      "updatedAt": "2026-04-15T04:37:47Z",
       "createdAt": "2016-12-23T09:06:10Z",
       "latestReleaseDate": "2026-01-14T06:55:33Z",
-      "releaseRecency": 89,
-      "releaseRecencyText": "Released 89 days ago",
-      "trendingScore": 414.04
+      "releaseRecency": 90,
+      "releaseRecencyText": "Released 90 days ago",
+      "trendingScore": 414.11
     },
     {
       "id": 202367615,
@@ -1345,8 +1419,8 @@
       "description": "一个基于 Electron 的音乐软件",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/lyswhut/lx-music-desktop",
-      "stargazersCount": 50220,
-      "forksCount": 6737,
+      "stargazersCount": 50240,
+      "forksCount": 6740,
       "language": "TypeScript",
       "topics": [
         "electron",
@@ -1355,11 +1429,11 @@
         "vue"
       ],
       "releasesUrl": "https://api.github.com/repos/lyswhut/lx-music-desktop/releases{/id}",
-      "updatedAt": "2026-04-14T04:32:20Z",
+      "updatedAt": "2026-04-15T03:32:39Z",
       "createdAt": "2019-08-14T14:31:08Z",
       "latestReleaseDate": "2026-02-16T13:33:15Z",
-      "releaseRecency": 56,
-      "releaseRecencyText": "Released 56 days ago",
+      "releaseRecency": 57,
+      "releaseRecencyText": "Released 57 days ago",
       "trendingScore": 412.65
     },
     {
@@ -1373,7 +1447,7 @@
       "description": "Native macOS client for every database",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/TableProApp/TablePro",
-      "stargazersCount": 1997,
+      "stargazersCount": 2009,
       "forksCount": 133,
       "language": "Swift",
       "topics": [
@@ -1395,12 +1469,12 @@
         "tableplus"
       ],
       "releasesUrl": "https://api.github.com/repos/TableProApp/TablePro/releases{/id}",
-      "updatedAt": "2026-04-14T04:51:14Z",
+      "updatedAt": "2026-04-15T04:33:43Z",
       "createdAt": "2025-12-17T01:01:38Z",
-      "latestReleaseDate": "2026-04-13T18:53:34Z",
+      "latestReleaseDate": "2026-04-14T06:46:35Z",
       "releaseRecency": 0,
       "releaseRecencyText": "Released today",
-      "trendingScore": 408.47
+      "trendingScore": 407.65
     },
     {
       "id": 266231149,
@@ -1413,8 +1487,8 @@
       "description": "A privacy-first, open-source platform for knowledge management and collaboration. Download link:  http://github.com/logseq/logseq/releases. roadmap: https://discuss.logseq.com/t/logseq-product-roadmap/34267",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/logseq/logseq",
-      "stargazersCount": 42111,
-      "forksCount": 2559,
+      "stargazersCount": 42134,
+      "forksCount": 2563,
       "language": "Clojure",
       "topics": [
         "clojure",
@@ -1430,12 +1504,12 @@
         "pkm"
       ],
       "releasesUrl": "https://api.github.com/repos/logseq/logseq/releases{/id}",
-      "updatedAt": "2026-04-14T03:18:10Z",
+      "updatedAt": "2026-04-15T04:14:46Z",
       "createdAt": "2020-05-23T00:06:06Z",
       "latestReleaseDate": "2025-12-01T12:33:43Z",
-      "releaseRecency": 133,
-      "releaseRecencyText": "Released 133 days ago",
-      "trendingScore": 391.37
+      "releaseRecency": 134,
+      "releaseRecencyText": "Released 134 days ago",
+      "trendingScore": 391.4
     },
     {
       "id": 468515960,
@@ -1448,8 +1522,8 @@
       "description": "📝 CodeEdit App for macOS – Elevate your code editing experience. Open source, free forever.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/CodeEditApp/CodeEdit",
-      "stargazersCount": 22786,
-      "forksCount": 1156,
+      "stargazersCount": 22791,
+      "forksCount": 1158,
       "language": "Swift",
       "topics": [
         "app",
@@ -1469,12 +1543,12 @@
         "xcode"
       ],
       "releasesUrl": "https://api.github.com/repos/CodeEditApp/CodeEdit/releases{/id}",
-      "updatedAt": "2026-04-14T02:58:18Z",
+      "updatedAt": "2026-04-15T04:14:46Z",
       "createdAt": "2022-03-10T21:28:14Z",
       "latestReleaseDate": "2025-08-26T20:35:39Z",
-      "releaseRecency": 230,
-      "releaseRecencyText": "Released 230 days ago",
-      "trendingScore": 379.83
+      "releaseRecency": 231,
+      "releaseRecencyText": "Released 231 days ago",
+      "trendingScore": 379.69
     },
     {
       "id": 11180687,
@@ -1487,7 +1561,7 @@
       "description": "The world’s fastest framework for building websites.",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/gohugoio/hugo",
-      "stargazersCount": 87579,
+      "stargazersCount": 87600,
       "forksCount": 8242,
       "language": "Go",
       "topics": [
@@ -1500,12 +1574,12 @@
         "static-site-generator"
       ],
       "releasesUrl": "https://api.github.com/repos/gohugoio/hugo/releases{/id}",
-      "updatedAt": "2026-04-14T04:52:15Z",
+      "updatedAt": "2026-04-15T04:36:55Z",
       "createdAt": "2013-07-04T15:26:26Z",
       "latestReleaseDate": "2026-04-08T14:23:31Z",
-      "releaseRecency": 5,
-      "releaseRecencyText": "Released 5 days ago",
-      "trendingScore": 375.39
+      "releaseRecency": 6,
+      "releaseRecencyText": "Released 6 days ago",
+      "trendingScore": 375.4
     },
     {
       "id": 92443980,
@@ -1518,8 +1592,8 @@
       "description": "Official electron build of draw.io",
       "defaultBranch": "dev",
       "htmlUrl": "https://github.com/jgraph/drawio-desktop",
-      "stargazersCount": 60407,
-      "forksCount": 5649,
+      "stargazersCount": 60437,
+      "forksCount": 5648,
       "language": "JavaScript",
       "topics": [
         "diagram-editor",
@@ -1528,12 +1602,12 @@
         "javascript-applications"
       ],
       "releasesUrl": "https://api.github.com/repos/jgraph/drawio-desktop/releases{/id}",
-      "updatedAt": "2026-04-14T04:34:14Z",
+      "updatedAt": "2026-04-15T03:30:36Z",
       "createdAt": "2017-05-25T20:58:42Z",
       "latestReleaseDate": "2026-03-26T23:56:45Z",
-      "releaseRecency": 18,
-      "releaseRecencyText": "Released 18 days ago",
-      "trendingScore": 372.31
+      "releaseRecency": 19,
+      "releaseRecencyText": "Released 19 days ago",
+      "trendingScore": 372.38
     },
     {
       "id": 110446844,
@@ -1546,8 +1620,8 @@
       "description": "📝A simple and elegant markdown editor, available for Linux, macOS and Windows.",
       "defaultBranch": "develop",
       "htmlUrl": "https://github.com/marktext/marktext",
-      "stargazersCount": 55189,
-      "forksCount": 4102,
+      "stargazersCount": 55230,
+      "forksCount": 4105,
       "language": "JavaScript",
       "topics": [
         "dark-mode",
@@ -1569,12 +1643,12 @@
         "windows"
       ],
       "releasesUrl": "https://api.github.com/repos/marktext/marktext/releases{/id}",
-      "updatedAt": "2026-04-14T04:36:07Z",
+      "updatedAt": "2026-04-15T03:09:21Z",
       "createdAt": "2017-11-12T16:05:25Z",
       "latestReleaseDate": "2022-03-07T18:12:02Z",
-      "releaseRecency": 1498,
-      "releaseRecencyText": "Released 1498 days ago",
-      "trendingScore": 372.07
+      "releaseRecency": 1499,
+      "releaseRecencyText": "Released 1499 days ago",
+      "trendingScore": 372.22
     },
     {
       "id": 212613049,
@@ -1587,8 +1661,8 @@
       "description": "GitHub’s official command line tool",
       "defaultBranch": "trunk",
       "htmlUrl": "https://github.com/cli/cli",
-      "stargazersCount": 43802,
-      "forksCount": 8253,
+      "stargazersCount": 43829,
+      "forksCount": 8259,
       "language": "Go",
       "topics": [
         "cli",
@@ -1597,12 +1671,12 @@
         "golang"
       ],
       "releasesUrl": "https://api.github.com/repos/cli/cli/releases{/id}",
-      "updatedAt": "2026-04-14T04:12:08Z",
+      "updatedAt": "2026-04-15T04:01:56Z",
       "createdAt": "2019-10-03T15:24:53Z",
       "latestReleaseDate": "2026-03-26T14:22:43Z",
-      "releaseRecency": 18,
-      "releaseRecencyText": "Released 18 days ago",
-      "trendingScore": 367.47
+      "releaseRecency": 19,
+      "releaseRecencyText": "Released 19 days ago",
+      "trendingScore": 367.54
     },
     {
       "id": 51980455,
@@ -1615,8 +1689,8 @@
       "description": "A cross-platform, OpenGL terminal emulator.",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/alacritty/alacritty",
-      "stargazersCount": 63415,
-      "forksCount": 3414,
+      "stargazersCount": 63423,
+      "forksCount": 3416,
       "language": "Rust",
       "topics": [
         "bsd",
@@ -1631,12 +1705,35 @@
         "windows"
       ],
       "releasesUrl": "https://api.github.com/repos/alacritty/alacritty/releases{/id}",
-      "updatedAt": "2026-04-14T04:21:03Z",
+      "updatedAt": "2026-04-15T03:46:50Z",
       "createdAt": "2016-02-18T05:02:30Z",
       "latestReleaseDate": "2026-04-06T19:24:18Z",
-      "releaseRecency": 7,
-      "releaseRecencyText": "Released 7 days ago",
-      "trendingScore": 366.14
+      "releaseRecency": 8,
+      "releaseRecencyText": "Released 8 days ago",
+      "trendingScore": 366.09
+    },
+    {
+      "id": 1112693338,
+      "name": "claude-island",
+      "fullName": "farouqaldori/claude-island",
+      "owner": {
+        "login": "farouqaldori",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/16778033?v=4"
+      },
+      "description": "Claude Code notifications without the context switch. A minimal, always-present session manager for macOS.",
+      "defaultBranch": "main",
+      "htmlUrl": "https://github.com/farouqaldori/claude-island",
+      "stargazersCount": 2032,
+      "forksCount": 292,
+      "language": "Swift",
+      "topics": [],
+      "releasesUrl": "https://api.github.com/repos/farouqaldori/claude-island/releases{/id}",
+      "updatedAt": "2026-04-15T04:50:07Z",
+      "createdAt": "2025-12-09T01:16:59Z",
+      "latestReleaseDate": "2026-04-15T00:56:54Z",
+      "releaseRecency": 0,
+      "releaseRecencyText": "Released today",
+      "trendingScore": 340.0
     },
     {
       "id": 1145384119,
@@ -1649,7 +1746,7 @@
       "description": "The macOS screen recorder for the rest of us - always free and open source with a native look and feel  📺",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/jsattler/BetterCapture",
-      "stargazersCount": 1137,
+      "stargazersCount": 1140,
       "forksCount": 39,
       "language": "Swift",
       "topics": [
@@ -1664,35 +1761,12 @@
         "utility"
       ],
       "releasesUrl": "https://api.github.com/repos/jsattler/BetterCapture/releases{/id}",
-      "updatedAt": "2026-04-13T18:22:53Z",
+      "updatedAt": "2026-04-15T03:28:27Z",
       "createdAt": "2026-01-29T18:40:15Z",
       "latestReleaseDate": "2026-03-28T22:32:24Z",
-      "releaseRecency": 16,
-      "releaseRecencyText": "Released 16 days ago",
-      "trendingScore": 339.3
-    },
-    {
-      "id": 1112693338,
-      "name": "claude-island",
-      "fullName": "farouqaldori/claude-island",
-      "owner": {
-        "login": "farouqaldori",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/16778033?v=4"
-      },
-      "description": "Claude Code notifications without the context switch. A minimal, always-present session manager for macOS.",
-      "defaultBranch": "main",
-      "htmlUrl": "https://github.com/farouqaldori/claude-island",
-      "stargazersCount": 1997,
-      "forksCount": 287,
-      "language": "Swift",
-      "topics": [],
-      "releasesUrl": "https://api.github.com/repos/farouqaldori/claude-island/releases{/id}",
-      "updatedAt": "2026-04-14T04:51:42Z",
-      "createdAt": "2025-12-09T01:16:59Z",
-      "latestReleaseDate": "2026-04-12T16:03:01Z",
-      "releaseRecency": 1,
-      "releaseRecencyText": "Released yesterday",
-      "trendingScore": 336.98
+      "releaseRecency": 17,
+      "releaseRecencyText": "Released 17 days ago",
+      "trendingScore": 336.0
     },
     {
       "id": 189285554,
@@ -1705,8 +1779,8 @@
       "description": "macOS system monitor in your menu bar",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/exelban/stats",
-      "stargazersCount": 37901,
-      "forksCount": 1255,
+      "stargazersCount": 37938,
+      "forksCount": 1256,
       "language": "Swift",
       "topics": [
         "battery",
@@ -1725,12 +1799,12 @@
         "temperature"
       ],
       "releasesUrl": "https://api.github.com/repos/exelban/stats/releases{/id}",
-      "updatedAt": "2026-04-14T04:28:08Z",
+      "updatedAt": "2026-04-15T04:52:42Z",
       "createdAt": "2019-05-29T19:24:56Z",
       "latestReleaseDate": "2026-04-12T11:41:45Z",
-      "releaseRecency": 1,
-      "releaseRecencyText": "Released yesterday",
-      "trendingScore": 333.88
+      "releaseRecency": 2,
+      "releaseRecencyText": "Released 2 days ago",
+      "trendingScore": 334.05
     },
     {
       "id": 79162682,
@@ -1743,8 +1817,8 @@
       "description": "Joplin - the privacy-focused note taking app with sync capabilities for Windows, macOS, Linux, Android and iOS.",
       "defaultBranch": "dev",
       "htmlUrl": "https://github.com/laurent22/joplin",
-      "stargazersCount": 54344,
-      "forksCount": 6058,
+      "stargazersCount": 54355,
+      "forksCount": 6059,
       "language": "TypeScript",
       "topics": [
         "android",
@@ -1764,12 +1838,12 @@
         "webdav"
       ],
       "releasesUrl": "https://api.github.com/repos/laurent22/joplin/releases{/id}",
-      "updatedAt": "2026-04-14T03:14:42Z",
+      "updatedAt": "2026-04-15T02:30:50Z",
       "createdAt": "2017-01-16T21:49:41Z",
       "latestReleaseDate": "2026-02-25T21:19:11Z",
-      "releaseRecency": 47,
-      "releaseRecencyText": "Released 47 days ago",
-      "trendingScore": 325.13
+      "releaseRecency": 48,
+      "releaseRecencyText": "Released 48 days ago",
+      "trendingScore": 325.1
     },
     {
       "id": 13233158,
@@ -1782,8 +1856,8 @@
       "description": "OBS Studio - Free and open source software for live streaming and screen recording",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/obsproject/obs-studio",
-      "stargazersCount": 71595,
-      "forksCount": 9142,
+      "stargazersCount": 71634,
+      "forksCount": 9147,
       "language": "C",
       "topics": [
         "c",
@@ -1799,12 +1873,12 @@
         "youtube-live"
       ],
       "releasesUrl": "https://api.github.com/repos/obsproject/obs-studio/releases{/id}",
-      "updatedAt": "2026-04-14T04:40:48Z",
+      "updatedAt": "2026-04-15T03:38:33Z",
       "createdAt": "2013-10-01T02:40:31Z",
       "latestReleaseDate": "2026-04-02T19:54:40Z",
-      "releaseRecency": 11,
-      "releaseRecencyText": "Released 11 days ago",
-      "trendingScore": 312.78
+      "releaseRecency": 12,
+      "releaseRecencyText": "Released 12 days ago",
+      "trendingScore": 312.88
     },
     {
       "id": 76838017,
@@ -1817,8 +1891,8 @@
       "description": "The modern video player for macOS.",
       "defaultBranch": "develop",
       "htmlUrl": "https://github.com/iina/iina",
-      "stargazersCount": 44413,
-      "forksCount": 2794,
+      "stargazersCount": 44427,
+      "forksCount": 2795,
       "language": "Swift",
       "topics": [
         "hacktoberfest",
@@ -1829,12 +1903,35 @@
         "video-player"
       ],
       "releasesUrl": "https://api.github.com/repos/iina/iina/releases{/id}",
-      "updatedAt": "2026-04-14T04:39:02Z",
+      "updatedAt": "2026-04-15T02:56:00Z",
       "createdAt": "2016-12-19T07:18:45Z",
       "latestReleaseDate": "2025-09-25T13:35:01Z",
-      "releaseRecency": 200,
-      "releaseRecencyText": "Released 200 days ago",
+      "releaseRecency": 201,
+      "releaseRecencyText": "Released 201 days ago",
       "trendingScore": 299.1
+    },
+    {
+      "id": 717960955,
+      "name": "Pearcleaner",
+      "fullName": "alienator88/Pearcleaner",
+      "owner": {
+        "login": "alienator88",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/6263626?v=4"
+      },
+      "description": "A free, source-available and fair-code licensed mac app cleaner",
+      "defaultBranch": "main",
+      "htmlUrl": "https://github.com/alienator88/Pearcleaner",
+      "stargazersCount": 12339,
+      "forksCount": 294,
+      "language": "Swift",
+      "topics": [],
+      "releasesUrl": "https://api.github.com/repos/alienator88/Pearcleaner/releases{/id}",
+      "updatedAt": "2026-04-15T03:25:14Z",
+      "createdAt": "2023-11-13T03:55:50Z",
+      "latestReleaseDate": "2025-11-26T23:18:50Z",
+      "releaseRecency": 139,
+      "releaseRecencyText": "Released 139 days ago",
+      "trendingScore": 295.16
     },
     {
       "id": 181042062,
@@ -1847,7 +1944,7 @@
       "description": "Virtual machines for iOS and macOS",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/utmapp/UTM",
-      "stargazersCount": 33654,
+      "stargazersCount": 33671,
       "forksCount": 1688,
       "language": "Swift",
       "topics": [
@@ -1862,35 +1959,12 @@
         "vm"
       ],
       "releasesUrl": "https://api.github.com/repos/utmapp/UTM/releases{/id}",
-      "updatedAt": "2026-04-14T04:28:30Z",
+      "updatedAt": "2026-04-15T02:53:16Z",
       "createdAt": "2019-04-12T16:09:24Z",
       "latestReleaseDate": "2026-01-03T17:51:54Z",
-      "releaseRecency": 100,
-      "releaseRecencyText": "Released 100 days ago",
-      "trendingScore": 295.13
-    },
-    {
-      "id": 717960955,
-      "name": "Pearcleaner",
-      "fullName": "alienator88/Pearcleaner",
-      "owner": {
-        "login": "alienator88",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/6263626?v=4"
-      },
-      "description": "A free, source-available and fair-code licensed mac app cleaner",
-      "defaultBranch": "main",
-      "htmlUrl": "https://github.com/alienator88/Pearcleaner",
-      "stargazersCount": 12317,
-      "forksCount": 294,
-      "language": "Swift",
-      "topics": [],
-      "releasesUrl": "https://api.github.com/repos/alienator88/Pearcleaner/releases{/id}",
-      "updatedAt": "2026-04-14T03:22:34Z",
-      "createdAt": "2023-11-13T03:55:50Z",
-      "latestReleaseDate": "2025-11-26T23:18:50Z",
-      "releaseRecency": 138,
-      "releaseRecencyText": "Released 138 days ago",
-      "trendingScore": 294.98
+      "releaseRecency": 101,
+      "releaseRecencyText": "Released 101 days ago",
+      "trendingScore": 295.16
     },
     {
       "id": 49609581,
@@ -1903,8 +1977,8 @@
       "description": "PowerShell for every system!",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/PowerShell/PowerShell",
-      "stargazersCount": 52422,
-      "forksCount": 8264,
+      "stargazersCount": 52439,
+      "forksCount": 8263,
       "language": "C#",
       "topics": [
         "command-line",
@@ -1917,12 +1991,12 @@
         "windows"
       ],
       "releasesUrl": "https://api.github.com/repos/PowerShell/PowerShell/releases{/id}",
-      "updatedAt": "2026-04-14T04:34:16Z",
+      "updatedAt": "2026-04-15T04:00:14Z",
       "createdAt": "2016-01-13T23:41:35Z",
       "latestReleaseDate": "2026-03-18T18:49:57Z",
-      "releaseRecency": 26,
-      "releaseRecencyText": "Released 26 days ago",
-      "trendingScore": 289.11
+      "releaseRecency": 27,
+      "releaseRecencyText": "Released 27 days ago",
+      "trendingScore": 289.12
     },
     {
       "id": 837073921,
@@ -1935,17 +2009,17 @@
       "description": "TheBoringNotch: Not so boring notch That Rocks 🎸🎶",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/TheBoredTeam/boring.notch",
-      "stargazersCount": 8240,
-      "forksCount": 615,
+      "stargazersCount": 8309,
+      "forksCount": 617,
       "language": "Swift",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/TheBoredTeam/boring.notch/releases{/id}",
-      "updatedAt": "2026-04-14T03:58:57Z",
+      "updatedAt": "2026-04-15T03:28:42Z",
       "createdAt": "2024-08-02T06:48:39Z",
       "latestReleaseDate": "2025-11-24T08:07:43Z",
-      "releaseRecency": 140,
-      "releaseRecencyText": "Released 140 days ago",
-      "trendingScore": 282.24
+      "releaseRecency": 141,
+      "releaseRecencyText": "Released 141 days ago",
+      "trendingScore": 284.03
     },
     {
       "id": 53238813,
@@ -1958,8 +2032,8 @@
       "description": "🍺 The missing package manager for macOS (or Linux)",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/Homebrew/brew",
-      "stargazersCount": 47510,
-      "forksCount": 11083,
+      "stargazersCount": 47530,
+      "forksCount": 11080,
       "language": "Ruby",
       "topics": [
         "brew",
@@ -1969,12 +2043,12 @@
         "ruby"
       ],
       "releasesUrl": "https://api.github.com/repos/Homebrew/brew/releases{/id}",
-      "updatedAt": "2026-04-14T03:08:18Z",
+      "updatedAt": "2026-04-15T03:46:42Z",
       "createdAt": "2016-03-06T05:08:38Z",
       "latestReleaseDate": "2026-04-13T14:04:16Z",
-      "releaseRecency": 0,
-      "releaseRecencyText": "Released today",
-      "trendingScore": 269.51
+      "releaseRecency": 1,
+      "releaseRecencyText": "Released yesterday",
+      "trendingScore": 269.55
     },
     {
       "id": 1069446208,
@@ -1987,8 +2061,8 @@
       "description": "Native macOS menu bar app to use your Claude Code & ChatGPT subscriptions with AI coding tools - no API keys needed",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/automazeio/vibeproxy",
-      "stargazersCount": 2371,
-      "forksCount": 164,
+      "stargazersCount": 2379,
+      "forksCount": 165,
       "language": "Swift",
       "topics": [
         "claude-code",
@@ -1999,12 +2073,12 @@
         "gpt-5-codex"
       ],
       "releasesUrl": "https://api.github.com/repos/automazeio/vibeproxy/releases{/id}",
-      "updatedAt": "2026-04-14T04:22:51Z",
+      "updatedAt": "2026-04-15T02:50:09Z",
       "createdAt": "2025-10-04T00:36:21Z",
       "latestReleaseDate": "2026-04-12T00:21:03Z",
-      "releaseRecency": 2,
-      "releaseRecencyText": "Released 2 days ago",
-      "trendingScore": 266.98
+      "releaseRecency": 3,
+      "releaseRecencyText": "Released 3 days ago",
+      "trendingScore": 266.53
     },
     {
       "id": 860035177,
@@ -2018,7 +2092,7 @@
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/github/CopilotForXcode",
       "stargazersCount": 5984,
-      "forksCount": 1821,
+      "forksCount": 1825,
       "language": "Swift",
       "topics": [
         "ai-assistant",
@@ -2032,12 +2106,12 @@
         "xcode"
       ],
       "releasesUrl": "https://api.github.com/repos/github/CopilotForXcode/releases{/id}",
-      "updatedAt": "2026-04-14T02:14:09Z",
+      "updatedAt": "2026-04-15T01:57:11Z",
       "createdAt": "2024-09-19T17:48:15Z",
       "latestReleaseDate": "2026-02-05T02:46:29Z",
-      "releaseRecency": 68,
-      "releaseRecencyText": "Released 68 days ago",
-      "trendingScore": 263.6
+      "releaseRecency": 69,
+      "releaseRecencyText": "Released 69 days ago",
+      "trendingScore": 263.23
     },
     {
       "id": 44662669,
@@ -2050,7 +2124,7 @@
       "description": "Free universal database tool and SQL client",
       "defaultBranch": "devel",
       "htmlUrl": "https://github.com/dbeaver/dbeaver",
-      "stargazersCount": 49558,
+      "stargazersCount": 49577,
       "forksCount": 4114,
       "language": "Java",
       "topics": [
@@ -2074,12 +2148,12 @@
         "sqlserver"
       ],
       "releasesUrl": "https://api.github.com/repos/dbeaver/dbeaver/releases{/id}",
-      "updatedAt": "2026-04-14T01:58:10Z",
+      "updatedAt": "2026-04-15T04:44:34Z",
       "createdAt": "2015-10-21T08:26:28Z",
       "latestReleaseDate": "2026-04-05T17:50:44Z",
-      "releaseRecency": 8,
-      "releaseRecencyText": "Released 8 days ago",
-      "trendingScore": 258.99
+      "releaseRecency": 9,
+      "releaseRecencyText": "Released 9 days ago",
+      "trendingScore": 259.02
     },
     {
       "id": 62367558,
@@ -2092,7 +2166,7 @@
       "description": "A terminal built on web technologies",
       "defaultBranch": "canary",
       "htmlUrl": "https://github.com/vercel/hyper",
-      "stargazersCount": 44608,
+      "stargazersCount": 44612,
       "forksCount": 3551,
       "language": "TypeScript",
       "topics": [
@@ -2107,12 +2181,12 @@
         "terminal-emulators"
       ],
       "releasesUrl": "https://api.github.com/repos/vercel/hyper/releases{/id}",
-      "updatedAt": "2026-04-14T03:19:03Z",
+      "updatedAt": "2026-04-15T01:38:46Z",
       "createdAt": "2016-07-01T06:01:21Z",
       "latestReleaseDate": "2023-01-08T00:56:10Z",
-      "releaseRecency": 1192,
-      "releaseRecencyText": "Released 1192 days ago",
-      "trendingScore": 258.69
+      "releaseRecency": 1193,
+      "releaseRecencyText": "Released 1193 days ago",
+      "trendingScore": 258.65
     },
     {
       "id": 1113585865,
@@ -2125,17 +2199,17 @@
       "description": "MacOptimizer is a system optimization tool designed specifically for macOS, featuring a modern SwiftUI interface with eight core functional modules:",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/ddlmanus/MacOptimizer",
-      "stargazersCount": 1434,
-      "forksCount": 99,
+      "stargazersCount": 1437,
+      "forksCount": 98,
       "language": "Swift",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/ddlmanus/MacOptimizer/releases{/id}",
-      "updatedAt": "2026-04-13T10:51:38Z",
+      "updatedAt": "2026-04-15T02:18:03Z",
       "createdAt": "2025-12-10T07:19:12Z",
       "latestReleaseDate": "2026-01-25T05:27:32Z",
-      "releaseRecency": 78,
-      "releaseRecencyText": "Released 78 days ago",
-      "trendingScore": 257.29
+      "releaseRecency": 79,
+      "releaseRecencyText": "Released 79 days ago",
+      "trendingScore": 255.92
     },
     {
       "id": 193162629,
@@ -2148,17 +2222,17 @@
       "description": "Move and resize windows on macOS with keyboard shortcuts and snap areas",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/rxhanson/Rectangle",
-      "stargazersCount": 28803,
-      "forksCount": 914,
+      "stargazersCount": 28819,
+      "forksCount": 915,
       "language": "Swift",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/rxhanson/Rectangle/releases{/id}",
-      "updatedAt": "2026-04-14T04:27:01Z",
+      "updatedAt": "2026-04-15T04:17:56Z",
       "createdAt": "2019-06-21T21:34:53Z",
       "latestReleaseDate": "2026-04-02T17:12:41Z",
-      "releaseRecency": 11,
-      "releaseRecencyText": "Released 11 days ago",
-      "trendingScore": 251.54
+      "releaseRecency": 12,
+      "releaseRecencyText": "Released 12 days ago",
+      "trendingScore": 251.57
     },
     {
       "id": 1124106079,
@@ -2171,17 +2245,17 @@
       "description": "Keyboard & Mouse Stats for macOS/Windows",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/debugtheworldbot/keyStats",
-      "stargazersCount": 1222,
+      "stargazersCount": 1224,
       "forksCount": 41,
       "language": "Swift",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/debugtheworldbot/keyStats/releases{/id}",
-      "updatedAt": "2026-04-14T03:11:33Z",
+      "updatedAt": "2026-04-15T02:17:30Z",
       "createdAt": "2025-12-28T10:51:54Z",
       "latestReleaseDate": "2026-04-10T14:35:49Z",
-      "releaseRecency": 3,
-      "releaseRecencyText": "Released 3 days ago",
-      "trendingScore": 250.57
+      "releaseRecency": 4,
+      "releaseRecencyText": "Released 4 days ago",
+      "trendingScore": 248.79
     },
     {
       "id": 103784142,
@@ -2194,7 +2268,7 @@
       "description": "🖥 Control your display's brightness & volume on your Mac as if it was a native Apple Display. Use Apple Keyboard keys or custom shortcuts. Shows the native macOS OSDs.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/MonitorControl/MonitorControl",
-      "stargazersCount": 32933,
+      "stargazersCount": 32950,
       "forksCount": 949,
       "language": "Swift",
       "topics": [
@@ -2218,12 +2292,12 @@
         "xcode"
       ],
       "releasesUrl": "https://api.github.com/repos/MonitorControl/MonitorControl/releases{/id}",
-      "updatedAt": "2026-04-14T03:32:36Z",
+      "updatedAt": "2026-04-15T04:38:56Z",
       "createdAt": "2017-09-16T21:13:40Z",
       "latestReleaseDate": "2024-10-04T10:56:14Z",
-      "releaseRecency": 556,
-      "releaseRecencyText": "Released 556 days ago",
-      "trendingScore": 248.37
+      "releaseRecency": 557,
+      "releaseRecencyText": "Released 557 days ago",
+      "trendingScore": 248.41
     },
     {
       "id": 789761983,
@@ -2236,17 +2310,40 @@
       "description": "A lightweight screen recorder based on ScreenCapture Kit for macOS / 基于 ScreenCapture Kit 的轻量化多功能 macOS 录屏工具",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/lihaoyun6/QuickRecorder",
-      "stargazersCount": 8161,
-      "forksCount": 462,
+      "stargazersCount": 8173,
+      "forksCount": 461,
       "language": "Swift",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/lihaoyun6/QuickRecorder/releases{/id}",
-      "updatedAt": "2026-04-14T03:45:31Z",
+      "updatedAt": "2026-04-15T02:11:01Z",
       "createdAt": "2024-04-21T13:45:19Z",
       "latestReleaseDate": "2025-06-11T07:45:22Z",
-      "releaseRecency": 306,
-      "releaseRecencyText": "Released 306 days ago",
-      "trendingScore": 246.07
+      "releaseRecency": 307,
+      "releaseRecencyText": "Released 307 days ago",
+      "trendingScore": 246.09
+    },
+    {
+      "id": 1116347226,
+      "name": "macUSB",
+      "fullName": "Kruszoneq/macUSB",
+      "owner": {
+        "login": "Kruszoneq",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/83231322?v=4"
+      },
+      "description": "Download. Flash. Boot. The all-in-one macOS USB creator",
+      "defaultBranch": "main",
+      "htmlUrl": "https://github.com/Kruszoneq/macUSB",
+      "stargazersCount": 1332,
+      "forksCount": 71,
+      "language": "Swift",
+      "topics": [],
+      "releasesUrl": "https://api.github.com/repos/Kruszoneq/macUSB/releases{/id}",
+      "updatedAt": "2026-04-15T02:48:55Z",
+      "createdAt": "2025-12-14T17:22:24Z",
+      "latestReleaseDate": "2026-04-08T23:04:00Z",
+      "releaseRecency": 6,
+      "releaseRecencyText": "Released 6 days ago",
+      "trendingScore": 240.17
     },
     {
       "id": 566323731,
@@ -2259,7 +2356,7 @@
       "description": "一个简洁优雅的词典翻译 macOS App。开箱即用，支持离线 OCR 识别，支持有道词典，🍎 苹果系统词典，🍎 苹果系统翻译，OpenAI，Gemini，DeepL，Google，Bing，腾讯，百度，阿里，小牛，彩云和火山翻译。A concise and elegant Dictionary and Translator macOS App for looking up words and translating text. ",
       "defaultBranch": "dev",
       "htmlUrl": "https://github.com/tisfeng/Easydict",
-      "stargazersCount": 12826,
+      "stargazersCount": 12841,
       "forksCount": 632,
       "language": "Swift",
       "topics": [
@@ -2280,35 +2377,12 @@
         "youdao"
       ],
       "releasesUrl": "https://api.github.com/repos/tisfeng/Easydict/releases{/id}",
-      "updatedAt": "2026-04-14T03:25:46Z",
+      "updatedAt": "2026-04-15T04:49:16Z",
       "createdAt": "2022-11-15T12:41:53Z",
       "latestReleaseDate": "2026-04-06T09:48:50Z",
-      "releaseRecency": 7,
-      "releaseRecencyText": "Released 7 days ago",
-      "trendingScore": 240.04
-    },
-    {
-      "id": 1116347226,
-      "name": "macUSB",
-      "fullName": "Kruszoneq/macUSB",
-      "owner": {
-        "login": "Kruszoneq",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/83231322?v=4"
-      },
-      "description": "Download. Flash. Boot. The all-in-one macOS USB creator",
-      "defaultBranch": "main",
-      "htmlUrl": "https://github.com/Kruszoneq/macUSB",
-      "stargazersCount": 1302,
-      "forksCount": 69,
-      "language": "Swift",
-      "topics": [],
-      "releasesUrl": "https://api.github.com/repos/Kruszoneq/macUSB/releases{/id}",
-      "updatedAt": "2026-04-14T04:38:05Z",
-      "createdAt": "2025-12-14T17:22:24Z",
-      "latestReleaseDate": "2026-04-08T23:04:00Z",
-      "releaseRecency": 5,
-      "releaseRecencyText": "Released 5 days ago",
-      "trendingScore": 237.0
+      "releaseRecency": 8,
+      "releaseRecencyText": "Released 8 days ago",
+      "trendingScore": 240.12
     },
     {
       "id": 1116497402,
@@ -2321,17 +2395,17 @@
       "description": "Native space switching on macOS with no animation",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/jurplel/InstantSpaceSwitcher",
-      "stargazersCount": 1286,
+      "stargazersCount": 1306,
       "forksCount": 36,
       "language": "Swift",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/jurplel/InstantSpaceSwitcher/releases{/id}",
-      "updatedAt": "2026-04-14T03:02:24Z",
+      "updatedAt": "2026-04-15T04:30:43Z",
       "createdAt": "2025-12-15T00:44:31Z",
       "latestReleaseDate": "2026-04-10T09:12:08Z",
-      "releaseRecency": 3,
-      "releaseRecencyText": "Released 3 days ago",
-      "trendingScore": 234.33
+      "releaseRecency": 4,
+      "releaseRecencyText": "Released 4 days ago",
+      "trendingScore": 235.87
     },
     {
       "id": 875661263,
@@ -2344,8 +2418,8 @@
       "description": "Voice-to-text app for macOS to transcribe what you say to text almost instantly",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/Beingpax/VoiceInk",
-      "stargazersCount": 4572,
-      "forksCount": 620,
+      "stargazersCount": 4587,
+      "forksCount": 626,
       "language": "Swift",
       "topics": [
         "macos",
@@ -2353,12 +2427,12 @@
         "swift"
       ],
       "releasesUrl": "https://api.github.com/repos/Beingpax/VoiceInk/releases{/id}",
-      "updatedAt": "2026-04-14T01:33:29Z",
+      "updatedAt": "2026-04-15T02:19:17Z",
       "createdAt": "2024-10-20T15:11:17Z",
       "latestReleaseDate": "2026-04-10T16:07:41Z",
-      "releaseRecency": 3,
-      "releaseRecencyText": "Released 3 days ago",
-      "trendingScore": 207.33
+      "releaseRecency": 4,
+      "releaseRecencyText": "Released 4 days ago",
+      "trendingScore": 207.57
     },
     {
       "id": 1061327311,
@@ -2371,17 +2445,17 @@
       "description": "FluidVoice - Fastest macOS Offline Dictation app - Voice to Text fully Local. One ⭐ takes us a long way :)) ",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/altic-dev/FluidVoice",
-      "stargazersCount": 1775,
-      "forksCount": 107,
+      "stargazersCount": 1822,
+      "forksCount": 110,
       "language": "Swift",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/altic-dev/FluidVoice/releases{/id}",
-      "updatedAt": "2026-04-14T03:50:52Z",
+      "updatedAt": "2026-04-15T04:50:29Z",
       "createdAt": "2025-09-21T17:35:02Z",
       "latestReleaseDate": "2026-04-08T18:07:01Z",
-      "releaseRecency": 5,
-      "releaseRecencyText": "Released 5 days ago",
-      "trendingScore": 194.02
+      "releaseRecency": 6,
+      "releaseRecencyText": "Released 6 days ago",
+      "trendingScore": 197.76
     },
     {
       "id": 674388699,
@@ -2394,7 +2468,7 @@
       "description": "User-friendly GUI macOS application for Homebrew Casks",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/milanvarady/Applite",
-      "stargazersCount": 6599,
+      "stargazersCount": 6604,
       "forksCount": 169,
       "language": "Swift",
       "topics": [
@@ -2406,12 +2480,12 @@
         "swiftui"
       ],
       "releasesUrl": "https://api.github.com/repos/milanvarady/Applite/releases{/id}",
-      "updatedAt": "2026-04-14T04:36:47Z",
+      "updatedAt": "2026-04-14T22:33:15Z",
       "createdAt": "2023-08-03T20:35:19Z",
       "latestReleaseDate": "2025-05-10T16:59:26Z",
-      "releaseRecency": 338,
-      "releaseRecencyText": "Released 338 days ago",
-      "trendingScore": 192.13
+      "releaseRecency": 339,
+      "releaseRecencyText": "Released 339 days ago",
+      "trendingScore": 192.09
     },
     {
       "id": 972353148,
@@ -2424,17 +2498,17 @@
       "description": "Switch and track your input sources with ease ✨",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/runjuu/InputSourcePro",
-      "stargazersCount": 3025,
+      "stargazersCount": 3032,
       "forksCount": 106,
       "language": "Swift",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/runjuu/InputSourcePro/releases{/id}",
-      "updatedAt": "2026-04-14T02:53:29Z",
+      "updatedAt": "2026-04-15T04:17:01Z",
       "createdAt": "2025-04-25T00:09:07Z",
       "latestReleaseDate": "2026-01-18T19:50:12Z",
-      "releaseRecency": 85,
-      "releaseRecencyText": "Released 85 days ago",
-      "trendingScore": 186.9
+      "releaseRecency": 86,
+      "releaseRecencyText": "Released 86 days ago",
+      "trendingScore": 186.82
     },
     {
       "id": 578685027,
@@ -2447,7 +2521,7 @@
       "description": "Run Stable Diffusion on Mac natively",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/MochiDiffusion/MochiDiffusion",
-      "stargazersCount": 7870,
+      "stargazersCount": 7871,
       "forksCount": 363,
       "language": "Swift",
       "topics": [
@@ -2462,12 +2536,12 @@
         "swiftui"
       ],
       "releasesUrl": "https://api.github.com/repos/MochiDiffusion/MochiDiffusion/releases{/id}",
-      "updatedAt": "2026-04-14T03:48:09Z",
+      "updatedAt": "2026-04-14T07:46:17Z",
       "createdAt": "2022-12-15T16:30:56Z",
       "latestReleaseDate": "2026-02-28T18:28:27Z",
-      "releaseRecency": 44,
-      "releaseRecencyText": "Released 44 days ago",
-      "trendingScore": 183.55
+      "releaseRecency": 45,
+      "releaseRecencyText": "Released 45 days ago",
+      "trendingScore": 183.46
     },
     {
       "id": 1035210905,
@@ -2480,17 +2554,17 @@
       "description": "Less noise, more browsing.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/the-ora/browser",
-      "stargazersCount": 2053,
+      "stargazersCount": 2054,
       "forksCount": 78,
       "language": "Swift",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/the-ora/browser/releases{/id}",
-      "updatedAt": "2026-04-14T03:23:56Z",
+      "updatedAt": "2026-04-15T03:52:00Z",
       "createdAt": "2025-08-09T22:25:31Z",
       "latestReleaseDate": "2026-04-07T08:37:08Z",
-      "releaseRecency": 6,
-      "releaseRecencyText": "Released 6 days ago",
-      "trendingScore": 182.23
+      "releaseRecency": 7,
+      "releaseRecencyText": "Released 7 days ago",
+      "trendingScore": 181.65
     },
     {
       "id": 511961615,
@@ -2503,17 +2577,17 @@
       "description": "Community fork of PlayCover",
       "defaultBranch": "develop",
       "htmlUrl": "https://github.com/PlayCover/PlayCover",
-      "stargazersCount": 11098,
-      "forksCount": 906,
+      "stargazersCount": 11102,
+      "forksCount": 907,
       "language": "Swift",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/PlayCover/PlayCover/releases{/id}",
-      "updatedAt": "2026-04-14T01:48:25Z",
+      "updatedAt": "2026-04-15T01:49:48Z",
       "createdAt": "2022-07-08T16:38:11Z",
       "latestReleaseDate": "2024-09-02T05:03:28Z",
-      "releaseRecency": 588,
-      "releaseRecencyText": "Released 588 days ago",
-      "trendingScore": 177.43
+      "releaseRecency": 589,
+      "releaseRecencyText": "Released 589 days ago",
+      "trendingScore": 177.37
     },
     {
       "id": 1030561901,
@@ -2526,17 +2600,17 @@
       "description": "A new browser, not owned by Atlassian.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/nook-browser/Nook",
-      "stargazersCount": 1870,
+      "stargazersCount": 1869,
       "forksCount": 70,
       "language": "Swift",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/nook-browser/Nook/releases{/id}",
-      "updatedAt": "2026-04-13T18:34:20Z",
+      "updatedAt": "2026-04-14T14:40:59Z",
       "createdAt": "2025-08-01T21:25:52Z",
       "latestReleaseDate": "2026-03-02T19:18:05Z",
-      "releaseRecency": 42,
-      "releaseRecencyText": "Released 42 days ago",
-      "trendingScore": 162.67
+      "releaseRecency": 43,
+      "releaseRecencyText": "Released 43 days ago",
+      "trendingScore": 162.02
     },
     {
       "id": 809906907,
@@ -2549,17 +2623,17 @@
       "description": "Window peeking, alt-tab and other enhancements for macOS",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/ejbills/DockDoor",
-      "stargazersCount": 4424,
-      "forksCount": 129,
+      "stargazersCount": 4455,
+      "forksCount": 130,
       "language": "Swift",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/ejbills/DockDoor/releases{/id}",
-      "updatedAt": "2026-04-14T03:42:39Z",
+      "updatedAt": "2026-04-15T04:41:43Z",
       "createdAt": "2024-06-03T17:18:17Z",
       "latestReleaseDate": "2026-04-06T12:59:28Z",
-      "releaseRecency": 7,
-      "releaseRecencyText": "Released 7 days ago",
-      "trendingScore": 150.31
+      "releaseRecency": 8,
+      "releaseRecencyText": "Released 8 days ago",
+      "trendingScore": 151.03
     },
     {
       "id": 571770,
@@ -2572,8 +2646,8 @@
       "description": "Universal markup converter",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/jgm/pandoc",
-      "stargazersCount": 43342,
-      "forksCount": 3811,
+      "stargazersCount": 43387,
+      "forksCount": 3812,
       "language": "Haskell",
       "topics": [
         "commonmark",
@@ -2587,12 +2661,12 @@
         "publishing"
       ],
       "releasesUrl": "https://api.github.com/repos/jgm/pandoc/releases{/id}",
-      "updatedAt": "2026-04-14T04:41:39Z",
+      "updatedAt": "2026-04-15T04:52:06Z",
       "createdAt": "2010-03-20T20:34:23Z",
       "latestReleaseDate": "2026-03-19T13:01:03Z",
-      "releaseRecency": 25,
-      "releaseRecencyText": "Released 25 days ago",
-      "trendingScore": 147.72
+      "releaseRecency": 26,
+      "releaseRecencyText": "Released 26 days ago",
+      "trendingScore": 147.85
     },
     {
       "id": 480592980,
@@ -2605,7 +2679,7 @@
       "description": "Virtualize macOS 12 and later on Apple Silicon, VirtualBuddy is a virtual machine GUI for macOS M1, M2, M3, M4",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/insidegui/VirtualBuddy",
-      "stargazersCount": 7869,
+      "stargazersCount": 7873,
       "forksCount": 224,
       "language": "Swift",
       "topics": [
@@ -2613,12 +2687,12 @@
         "virtual-machine"
       ],
       "releasesUrl": "https://api.github.com/repos/insidegui/VirtualBuddy/releases{/id}",
-      "updatedAt": "2026-04-14T03:22:29Z",
+      "updatedAt": "2026-04-15T00:49:09Z",
       "createdAt": "2022-04-12T00:07:35Z",
       "latestReleaseDate": "2025-09-14T13:09:54Z",
-      "releaseRecency": 211,
-      "releaseRecencyText": "Released 211 days ago",
-      "trendingScore": 139.57
+      "releaseRecency": 212,
+      "releaseRecencyText": "Released 212 days ago",
+      "trendingScore": 139.55
     },
     {
       "id": 881419205,
@@ -2631,17 +2705,17 @@
       "description": "macOS Adobe apps download & installer",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/X1a0He/Adobe-Downloader",
-      "stargazersCount": 2995,
+      "stargazersCount": 2996,
       "forksCount": 138,
       "language": "Swift",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/X1a0He/Adobe-Downloader/releases{/id}",
-      "updatedAt": "2026-04-14T02:01:45Z",
+      "updatedAt": "2026-04-14T18:26:14Z",
       "createdAt": "2024-10-31T14:35:05Z",
       "latestReleaseDate": "2025-12-26T05:19:10Z",
-      "releaseRecency": 108,
-      "releaseRecencyText": "Released 108 days ago",
-      "trendingScore": 133.23
+      "releaseRecency": 109,
+      "releaseRecencyText": "Released 109 days ago",
+      "trendingScore": 133.06
     },
     {
       "id": 923148820,
@@ -2654,8 +2728,8 @@
       "description": "VOICE → WORDS",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/kitlangton/Hex",
-      "stargazersCount": 1605,
-      "forksCount": 122,
+      "stargazersCount": 1611,
+      "forksCount": 123,
       "language": "Swift",
       "topics": [
         "composable-architecture",
@@ -2666,12 +2740,12 @@
         "whisper"
       ],
       "releasesUrl": "https://api.github.com/repos/kitlangton/Hex/releases{/id}",
-      "updatedAt": "2026-04-13T22:14:35Z",
+      "updatedAt": "2026-04-15T03:36:25Z",
       "createdAt": "2025-01-27T18:13:31Z",
       "latestReleaseDate": "2026-03-26T19:15:44Z",
-      "releaseRecency": 18,
-      "releaseRecencyText": "Released 18 days ago",
-      "trendingScore": 126.79
+      "releaseRecency": 19,
+      "releaseRecencyText": "Released 19 days ago",
+      "trendingScore": 126.9
     },
     {
       "id": 35732214,
@@ -2684,8 +2758,8 @@
       "description": "A tool to enforce Swift style and conventions.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/realm/SwiftLint",
-      "stargazersCount": 19520,
-      "forksCount": 2294,
+      "stargazersCount": 19522,
+      "forksCount": 2293,
       "language": "Swift",
       "topics": [
         "code-quality",
@@ -2696,12 +2770,12 @@
         "swift"
       ],
       "releasesUrl": "https://api.github.com/repos/realm/SwiftLint/releases{/id}",
-      "updatedAt": "2026-04-14T03:29:03Z",
+      "updatedAt": "2026-04-14T06:38:09Z",
       "createdAt": "2015-05-16T16:59:31Z",
       "latestReleaseDate": "2026-01-26T21:06:17Z",
-      "releaseRecency": 77,
-      "releaseRecencyText": "Released 77 days ago",
-      "trendingScore": 121.97
+      "releaseRecency": 78,
+      "releaseRecencyText": "Released 78 days ago",
+      "trendingScore": 121.95
     },
     {
       "id": 433619938,
@@ -2714,7 +2788,7 @@
       "description": "⚙️ All-in-One menu bar app, hide 💻MacBook Pro's notch, dark mode, AirPods, Shortcuts",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/jacklandrin/OnlySwitch",
-      "stargazersCount": 5613,
+      "stargazersCount": 5617,
       "forksCount": 231,
       "language": "Swift",
       "topics": [
@@ -2737,12 +2811,12 @@
         "widgets"
       ],
       "releasesUrl": "https://api.github.com/repos/jacklandrin/OnlySwitch/releases{/id}",
-      "updatedAt": "2026-04-14T02:11:15Z",
+      "updatedAt": "2026-04-15T01:29:34Z",
       "createdAt": "2021-11-30T23:33:09Z",
       "latestReleaseDate": "2026-03-29T19:11:22Z",
-      "releaseRecency": 15,
-      "releaseRecencyText": "Released 15 days ago",
-      "trendingScore": 118.38
+      "releaseRecency": 16,
+      "releaseRecencyText": "Released 16 days ago",
+      "trendingScore": 118.39
     },
     {
       "id": 1011137032,
@@ -2755,7 +2829,7 @@
       "description": "A cosy home for your LLMs.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/ggml-org/LlamaBarn",
-      "stargazersCount": 1145,
+      "stargazersCount": 1149,
       "forksCount": 57,
       "language": "Swift",
       "topics": [
@@ -2766,11 +2840,11 @@
         "swift"
       ],
       "releasesUrl": "https://api.github.com/repos/ggml-org/LlamaBarn/releases{/id}",
-      "updatedAt": "2026-04-13T22:44:14Z",
+      "updatedAt": "2026-04-14T22:31:26Z",
       "createdAt": "2025-06-30T11:05:34Z",
       "latestReleaseDate": "2026-04-03T15:37:22Z",
-      "releaseRecency": 10,
-      "releaseRecencyText": "Released 10 days ago",
+      "releaseRecency": 11,
+      "releaseRecencyText": "Released 11 days ago",
       "trendingScore": 113.79
     },
     {
@@ -2784,7 +2858,7 @@
       "description": "App that shows how full the International Space Station's urine tank is in real time, available for macOS (menu bar), iOS, watchOS and visionOS",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/Jaennaet/pISSStream",
-      "stargazersCount": 1909,
+      "stargazersCount": 1913,
       "forksCount": 31,
       "language": "Swift",
       "topics": [
@@ -2798,11 +2872,11 @@
         "watchos"
       ],
       "releasesUrl": "https://api.github.com/repos/Jaennaet/pISSStream/releases{/id}",
-      "updatedAt": "2026-04-10T11:46:45Z",
+      "updatedAt": "2026-04-15T04:24:41Z",
       "createdAt": "2024-12-18T16:20:56Z",
       "latestReleaseDate": "2025-05-17T21:02:59Z",
-      "releaseRecency": 331,
-      "releaseRecencyText": "Released 331 days ago",
+      "releaseRecency": 332,
+      "releaseRecencyText": "Released 332 days ago",
       "trendingScore": 111.38
     },
     {
@@ -2816,8 +2890,8 @@
       "description": "An offline macOS music player",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/kushalpandya/Petrichor",
-      "stargazersCount": 1407,
-      "forksCount": 53,
+      "stargazersCount": 1408,
+      "forksCount": 54,
       "language": "Swift",
       "topics": [
         "audio-player",
@@ -2831,12 +2905,12 @@
         "ogg-vorbis"
       ],
       "releasesUrl": "https://api.github.com/repos/kushalpandya/Petrichor/releases{/id}",
-      "updatedAt": "2026-04-13T22:25:12Z",
+      "updatedAt": "2026-04-14T13:20:09Z",
       "createdAt": "2025-04-20T00:38:01Z",
       "latestReleaseDate": "2026-03-23T21:36:56Z",
-      "releaseRecency": 21,
-      "releaseRecencyText": "Released 21 days ago",
-      "trendingScore": 110.38
+      "releaseRecency": 22,
+      "releaseRecencyText": "Released 22 days ago",
+      "trendingScore": 110.22
     },
     {
       "id": 513077635,
@@ -2857,9 +2931,9 @@
       "updatedAt": "2026-04-13T15:37:01Z",
       "createdAt": "2022-07-12T09:23:14Z",
       "latestReleaseDate": "2025-10-22T07:12:16Z",
-      "releaseRecency": 173,
-      "releaseRecencyText": "Released 173 days ago",
-      "trendingScore": 110.18
+      "releaseRecency": 174,
+      "releaseRecencyText": "Released 174 days ago",
+      "trendingScore": 110.12
     },
     {
       "id": 597609111,
@@ -2872,8 +2946,8 @@
       "description": "Just like TextEdit on Mac but dedicated to Markdown.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/MarkEdit-app/MarkEdit",
-      "stargazersCount": 4166,
-      "forksCount": 166,
+      "stargazersCount": 4172,
+      "forksCount": 167,
       "language": "Swift",
       "topics": [
         "codemirror",
@@ -2887,12 +2961,12 @@
         "typescript"
       ],
       "releasesUrl": "https://api.github.com/repos/MarkEdit-app/MarkEdit/releases{/id}",
-      "updatedAt": "2026-04-14T04:37:18Z",
+      "updatedAt": "2026-04-15T01:24:45Z",
       "createdAt": "2023-02-05T03:51:15Z",
       "latestReleaseDate": "2026-04-09T14:39:04Z",
-      "releaseRecency": 4,
-      "releaseRecencyText": "Released 4 days ago",
-      "trendingScore": 107.58
+      "releaseRecency": 5,
+      "releaseRecencyText": "Released 5 days ago",
+      "trendingScore": 107.62
     },
     {
       "id": 253461233,
@@ -2905,7 +2979,7 @@
       "description": "⛷ Lightweight Markdown app to help you write great sentences.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/tw93/MiaoYan",
-      "stargazersCount": 8029,
+      "stargazersCount": 8038,
       "forksCount": 463,
       "language": "Swift",
       "topics": [
@@ -2918,12 +2992,12 @@
         "swift"
       ],
       "releasesUrl": "https://api.github.com/repos/tw93/MiaoYan/releases{/id}",
-      "updatedAt": "2026-04-13T14:10:32Z",
+      "updatedAt": "2026-04-15T02:47:32Z",
       "createdAt": "2020-04-06T10:12:33Z",
       "latestReleaseDate": "2026-04-12T03:01:12Z",
-      "releaseRecency": 2,
-      "releaseRecencyText": "Released 2 days ago",
-      "trendingScore": 107.06
+      "releaseRecency": 3,
+      "releaseRecencyText": "Released 3 days ago",
+      "trendingScore": 107.11
     },
     {
       "id": 25050844,
@@ -2949,9 +3023,9 @@
       "updatedAt": "2026-04-13T08:04:31Z",
       "createdAt": "2014-10-10T19:54:55Z",
       "latestReleaseDate": "2024-09-09T14:53:24Z",
-      "releaseRecency": 581,
-      "releaseRecencyText": "Released 581 days ago",
-      "trendingScore": 103.61
+      "releaseRecency": 582,
+      "releaseRecencyText": "Released 582 days ago",
+      "trendingScore": 103.59
     },
     {
       "id": 103010090,
@@ -2964,17 +3038,17 @@
       "description": "LuLu is the free open-source macOS firewall",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/objective-see/LuLu",
-      "stargazersCount": 12368,
+      "stargazersCount": 12377,
       "forksCount": 561,
       "language": "Objective-C",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/objective-see/LuLu/releases{/id}",
-      "updatedAt": "2026-04-14T01:59:57Z",
+      "updatedAt": "2026-04-15T02:06:07Z",
       "createdAt": "2017-09-10T06:56:23Z",
       "latestReleaseDate": "2026-03-17T17:47:40Z",
-      "releaseRecency": 27,
-      "releaseRecencyText": "Released 27 days ago",
-      "trendingScore": 98.85
+      "releaseRecency": 28,
+      "releaseRecencyText": "Released 28 days ago",
+      "trendingScore": 98.88
     },
     {
       "id": 881723326,
@@ -2987,8 +3061,8 @@
       "description": "Dynamic Island for macOS",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/Ebullioscopic/Atoll",
-      "stargazersCount": 1716,
-      "forksCount": 107,
+      "stargazersCount": 1728,
+      "forksCount": 108,
       "language": "Swift",
       "topics": [
         "dynamicisland",
@@ -2997,12 +3071,12 @@
         "macos"
       ],
       "releasesUrl": "https://api.github.com/repos/Ebullioscopic/Atoll/releases{/id}",
-      "updatedAt": "2026-04-14T03:41:15Z",
+      "updatedAt": "2026-04-15T04:49:20Z",
       "createdAt": "2024-11-01T05:06:09Z",
       "latestReleaseDate": "2026-03-21T18:40:14Z",
-      "releaseRecency": 23,
-      "releaseRecencyText": "Released 23 days ago",
-      "trendingScore": 97.0
+      "releaseRecency": 24,
+      "releaseRecencyText": "Released 24 days ago",
+      "trendingScore": 97.33
     },
     {
       "id": 375653778,
@@ -3015,7 +3089,7 @@
       "description": "The mouse and trackpad utility for Mac.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/linearmouse/linearmouse",
-      "stargazersCount": 5881,
+      "stargazersCount": 5903,
       "forksCount": 120,
       "language": "Swift",
       "topics": [
@@ -3030,12 +3104,12 @@
         "utility"
       ],
       "releasesUrl": "https://api.github.com/repos/linearmouse/linearmouse/releases{/id}",
-      "updatedAt": "2026-04-14T04:12:57Z",
+      "updatedAt": "2026-04-15T04:02:38Z",
       "createdAt": "2021-06-10T10:09:21Z",
       "latestReleaseDate": "2026-03-09T15:42:25Z",
-      "releaseRecency": 35,
-      "releaseRecencyText": "Released 35 days ago",
-      "trendingScore": 96.53
+      "releaseRecency": 36,
+      "releaseRecencyText": "Released 36 days ago",
+      "trendingScore": 96.74
     },
     {
       "id": 240818838,
@@ -3048,17 +3122,17 @@
       "description": "Menubar Tool to set Charge Limits and Prolong Battery Lifespan",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/AppHouseKitchen/AlDente-Battery_Care_and_Monitoring",
-      "stargazersCount": 9017,
+      "stargazersCount": 9019,
       "forksCount": 330,
       "language": "Swift",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/AppHouseKitchen/AlDente-Battery_Care_and_Monitoring/releases{/id}",
-      "updatedAt": "2026-04-14T03:35:47Z",
+      "updatedAt": "2026-04-14T13:43:43Z",
       "createdAt": "2020-02-16T02:24:34Z",
       "latestReleaseDate": "2026-04-13T09:44:35Z",
-      "releaseRecency": 0,
-      "releaseRecencyText": "Released today",
-      "trendingScore": 96.19
+      "releaseRecency": 1,
+      "releaseRecencyText": "Released yesterday",
+      "trendingScore": 96.17
     },
     {
       "id": 139616172,
@@ -3071,7 +3145,7 @@
       "description": "Intelligent adaptive brightness for your external monitors",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/alin23/Lunar",
-      "stargazersCount": 5518,
+      "stargazersCount": 5521,
       "forksCount": 138,
       "language": "Swift",
       "topics": [
@@ -3091,11 +3165,11 @@
         "xdr"
       ],
       "releasesUrl": "https://api.github.com/repos/alin23/Lunar/releases{/id}",
-      "updatedAt": "2026-04-13T12:09:29Z",
+      "updatedAt": "2026-04-14T23:41:46Z",
       "createdAt": "2018-07-03T17:23:54Z",
       "latestReleaseDate": "2026-04-11T10:13:21Z",
-      "releaseRecency": 2,
-      "releaseRecencyText": "Released 2 days ago",
+      "releaseRecency": 3,
+      "releaseRecencyText": "Released 3 days ago",
       "trendingScore": 92.85
     },
     {
@@ -3109,7 +3183,7 @@
       "description": ":package: Mac App Store command-line interface",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/mas-cli/mas",
-      "stargazersCount": 12094,
+      "stargazersCount": 12096,
       "forksCount": 289,
       "language": "Swift",
       "topics": [
@@ -3122,12 +3196,12 @@
         "software-update"
       ],
       "releasesUrl": "https://api.github.com/repos/mas-cli/mas/releases{/id}",
-      "updatedAt": "2026-04-14T03:54:54Z",
+      "updatedAt": "2026-04-14T07:14:01Z",
       "createdAt": "2015-08-02T20:43:12Z",
       "latestReleaseDate": "2026-03-10T14:29:20Z",
-      "releaseRecency": 34,
-      "releaseRecencyText": "Released 34 days ago",
-      "trendingScore": 89.91
+      "releaseRecency": 35,
+      "releaseRecencyText": "Released 35 days ago",
+      "trendingScore": 89.9
     },
     {
       "id": 509050256,
@@ -3140,17 +3214,17 @@
       "description": "A Mac utility that automatically downloads macOS Firmwares / Installers.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/ninxsoft/Mist",
-      "stargazersCount": 4791,
+      "stargazersCount": 4796,
       "forksCount": 208,
       "language": "Swift",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/ninxsoft/Mist/releases{/id}",
-      "updatedAt": "2026-04-13T17:56:01Z",
+      "updatedAt": "2026-04-14T23:30:39Z",
       "createdAt": "2022-06-30T11:21:57Z",
       "latestReleaseDate": "2025-09-23T11:37:14Z",
-      "releaseRecency": 202,
-      "releaseRecencyText": "Released 202 days ago",
-      "trendingScore": 89.28
+      "releaseRecency": 203,
+      "releaseRecencyText": "Released 203 days ago",
+      "trendingScore": 89.31
     },
     {
       "id": 262013713,
@@ -3164,7 +3238,7 @@
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/leits/MeetingBar",
       "stargazersCount": 5185,
-      "forksCount": 256,
+      "forksCount": 259,
       "language": "Swift",
       "topics": [
         "apple",
@@ -3180,12 +3254,12 @@
         "zoom"
       ],
       "releasesUrl": "https://api.github.com/repos/leits/MeetingBar/releases{/id}",
-      "updatedAt": "2026-04-13T08:09:34Z",
+      "updatedAt": "2026-04-14T11:05:55Z",
       "createdAt": "2020-05-07T09:58:08Z",
       "latestReleaseDate": "2025-06-13T15:33:21Z",
-      "releaseRecency": 304,
-      "releaseRecencyText": "Released 304 days ago",
-      "trendingScore": 85.85
+      "releaseRecency": 305,
+      "releaseRecencyText": "Released 305 days ago",
+      "trendingScore": 85.83
     },
     {
       "id": 755969344,
@@ -3198,17 +3272,17 @@
       "description": "Get the battery usage of all your devices on your Mac and put them on the Dock / Menu Bar / Widget! && 在Mac上获取你所有设备的电量信息并显示在Dock / 状态栏 / 小组件上!",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/lihaoyun6/AirBattery",
-      "stargazersCount": 2753,
+      "stargazersCount": 2754,
       "forksCount": 103,
       "language": "Swift",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/lihaoyun6/AirBattery/releases{/id}",
-      "updatedAt": "2026-04-13T08:48:58Z",
+      "updatedAt": "2026-04-15T02:32:15Z",
       "createdAt": "2024-02-11T16:05:32Z",
       "latestReleaseDate": "2025-06-10T02:23:37Z",
-      "releaseRecency": 308,
-      "releaseRecencyText": "Released 308 days ago",
-      "trendingScore": 85.52
+      "releaseRecency": 309,
+      "releaseRecencyText": "Released 309 days ago",
+      "trendingScore": 85.46
     },
     {
       "id": 325284147,
@@ -3221,7 +3295,7 @@
       "description": "An open-source colour picker app for macOS",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/superhighfives/pika",
-      "stargazersCount": 2407,
+      "stargazersCount": 2410,
       "forksCount": 75,
       "language": "Swift",
       "topics": [
@@ -3232,12 +3306,12 @@
         "xcode"
       ],
       "releasesUrl": "https://api.github.com/repos/superhighfives/pika/releases{/id}",
-      "updatedAt": "2026-04-14T01:58:13Z",
+      "updatedAt": "2026-04-15T04:34:31Z",
       "createdAt": "2020-12-29T12:42:47Z",
       "latestReleaseDate": "2026-04-14T02:12:59Z",
-      "releaseRecency": 0,
-      "releaseRecencyText": "Released today",
-      "trendingScore": 84.93
+      "releaseRecency": 1,
+      "releaseRecencyText": "Released yesterday",
+      "trendingScore": 84.95
     },
     {
       "id": 617648055,
@@ -3250,7 +3324,7 @@
       "description": "Configure Gatekeeper, remove apps from quarantine and self-sign apps",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/alienator88/Sentinel",
-      "stargazersCount": 1555,
+      "stargazersCount": 1561,
       "forksCount": 45,
       "language": "Swift",
       "topics": [
@@ -3265,12 +3339,12 @@
         "swiftui"
       ],
       "releasesUrl": "https://api.github.com/repos/alienator88/Sentinel/releases{/id}",
-      "updatedAt": "2026-04-13T22:12:31Z",
+      "updatedAt": "2026-04-15T04:17:03Z",
       "createdAt": "2023-03-22T20:24:06Z",
       "latestReleaseDate": "2025-11-24T20:28:07Z",
-      "releaseRecency": 140,
-      "releaseRecencyText": "Released 140 days ago",
-      "trendingScore": 81.82
+      "releaseRecency": 141,
+      "releaseRecencyText": "Released 141 days ago",
+      "trendingScore": 81.9
     },
     {
       "id": 34222505,
@@ -3300,9 +3374,9 @@
       "updatedAt": "2026-04-14T00:20:25Z",
       "createdAt": "2015-04-19T20:09:26Z",
       "latestReleaseDate": "2024-06-07T16:49:11Z",
-      "releaseRecency": 675,
-      "releaseRecencyText": "Released 675 days ago",
-      "trendingScore": 81.59
+      "releaseRecency": 676,
+      "releaseRecencyText": "Released 676 days ago",
+      "trendingScore": 81.58
     },
     {
       "id": 614452756,
@@ -3315,7 +3389,7 @@
       "description": "\"The missing ProcMon for macOS\": Mac Monitor records Endpoint Security events and displays them for analysis.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/Brandon7CC/mac-monitor",
-      "stargazersCount": 1287,
+      "stargazersCount": 1288,
       "forksCount": 65,
       "language": "Swift",
       "topics": [
@@ -3325,11 +3399,11 @@
         "swiftui"
       ],
       "releasesUrl": "https://api.github.com/repos/Brandon7CC/mac-monitor/releases{/id}",
-      "updatedAt": "2026-04-13T19:01:02Z",
+      "updatedAt": "2026-04-14T18:47:03Z",
       "createdAt": "2023-03-15T16:00:55Z",
       "latestReleaseDate": "2025-11-22T06:21:53Z",
-      "releaseRecency": 142,
-      "releaseRecencyText": "Released 142 days ago",
+      "releaseRecency": 143,
+      "releaseRecencyText": "Released 143 days ago",
       "trendingScore": 80.88
     },
     {
@@ -3343,7 +3417,7 @@
       "description": "macOS  System-wide Audio Equalizer & Volume Mixer  🎧",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/bitgapp/eqMac",
-      "stargazersCount": 6574,
+      "stargazersCount": 6577,
       "forksCount": 355,
       "language": "Swift",
       "topics": [
@@ -3364,11 +3438,11 @@
         "volume-mixer"
       ],
       "releasesUrl": "https://api.github.com/repos/bitgapp/eqMac/releases{/id}",
-      "updatedAt": "2026-04-14T03:57:37Z",
+      "updatedAt": "2026-04-14T19:53:55Z",
       "createdAt": "2017-07-23T12:04:10Z",
       "latestReleaseDate": "2026-04-10T21:55:52Z",
-      "releaseRecency": 3,
-      "releaseRecencyText": "Released 3 days ago",
+      "releaseRecency": 4,
+      "releaseRecencyText": "Released 4 days ago",
       "trendingScore": 79.27
     },
     {
@@ -3382,7 +3456,7 @@
       "description": "Lightweight Plain-Text Editor for macOS",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/coteditor/CotEditor",
-      "stargazersCount": 7809,
+      "stargazersCount": 7814,
       "forksCount": 483,
       "language": "Swift",
       "topics": [
@@ -3396,12 +3470,12 @@
         "texteditor"
       ],
       "releasesUrl": "https://api.github.com/repos/coteditor/CotEditor/releases{/id}",
-      "updatedAt": "2026-04-14T03:03:21Z",
+      "updatedAt": "2026-04-15T04:25:10Z",
       "createdAt": "2013-04-05T14:51:28Z",
       "latestReleaseDate": "2026-03-23T00:10:08Z",
-      "releaseRecency": 22,
-      "releaseRecencyText": "Released 22 days ago",
-      "trendingScore": 76.84
+      "releaseRecency": 23,
+      "releaseRecencyText": "Released 23 days ago",
+      "trendingScore": 76.85
     },
     {
       "id": 420566979,
@@ -3414,7 +3488,7 @@
       "description": "🌇 🌃  Create dynamic wallpapers for macOS.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/rlxone/Equinox",
-      "stargazersCount": 1894,
+      "stargazersCount": 1897,
       "forksCount": 64,
       "language": "Swift",
       "topics": [
@@ -3428,12 +3502,12 @@
         "wallpaper"
       ],
       "releasesUrl": "https://api.github.com/repos/rlxone/Equinox/releases{/id}",
-      "updatedAt": "2026-04-13T19:39:50Z",
+      "updatedAt": "2026-04-14T23:41:53Z",
       "createdAt": "2021-10-24T02:16:18Z",
       "latestReleaseDate": "2026-03-26T17:27:06Z",
-      "releaseRecency": 18,
-      "releaseRecencyText": "Released 18 days ago",
-      "trendingScore": 75.2
+      "releaseRecency": 19,
+      "releaseRecencyText": "Released 19 days ago",
+      "trendingScore": 75.22
     },
     {
       "id": 82684956,
@@ -3446,7 +3520,7 @@
       "description": "A small utility app for macOS that makes sure you know about all the latest updates to the apps you use.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/mangerlahn/Latest",
-      "stargazersCount": 4552,
+      "stargazersCount": 4556,
       "forksCount": 133,
       "language": "Swift",
       "topics": [
@@ -3457,12 +3531,12 @@
         "updater"
       ],
       "releasesUrl": "https://api.github.com/repos/mangerlahn/Latest/releases{/id}",
-      "updatedAt": "2026-04-14T04:42:47Z",
+      "updatedAt": "2026-04-15T04:13:06Z",
       "createdAt": "2017-02-21T13:49:32Z",
       "latestReleaseDate": "2025-06-12T21:28:23Z",
-      "releaseRecency": 305,
-      "releaseRecencyText": "Released 305 days ago",
-      "trendingScore": 74.27
+      "releaseRecency": 306,
+      "releaseRecencyText": "Released 306 days ago",
+      "trendingScore": 74.29
     },
     {
       "id": 738101551,
@@ -3475,7 +3549,7 @@
       "description": "A compact lunar calendar for your macOS menu bar.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/LunarBar-app/LunarBar",
-      "stargazersCount": 1382,
+      "stargazersCount": 1383,
       "forksCount": 64,
       "language": "Swift",
       "topics": [
@@ -3487,12 +3561,12 @@
         "swift"
       ],
       "releasesUrl": "https://api.github.com/repos/LunarBar-app/LunarBar/releases{/id}",
-      "updatedAt": "2026-04-13T11:35:26Z",
+      "updatedAt": "2026-04-14T23:42:16Z",
       "createdAt": "2024-01-02T12:29:18Z",
       "latestReleaseDate": "2026-03-22T11:20:38Z",
-      "releaseRecency": 22,
-      "releaseRecencyText": "Released 22 days ago",
-      "trendingScore": 73.22
+      "releaseRecency": 23,
+      "releaseRecencyText": "Released 23 days ago",
+      "trendingScore": 73.21
     },
     {
       "id": 582248876,
@@ -3505,7 +3579,7 @@
       "description": "Excalidraw app for mac. Powered by pure SwiftUI.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/chocoford/ExcalidrawZ",
-      "stargazersCount": 1106,
+      "stargazersCount": 1108,
       "forksCount": 55,
       "language": "Swift",
       "topics": [
@@ -3516,12 +3590,12 @@
         "swiftui"
       ],
       "releasesUrl": "https://api.github.com/repos/chocoford/ExcalidrawZ/releases{/id}",
-      "updatedAt": "2026-04-13T20:13:53Z",
+      "updatedAt": "2026-04-14T16:09:56Z",
       "createdAt": "2022-12-26T08:04:46Z",
       "latestReleaseDate": "2026-01-19T13:19:06Z",
-      "releaseRecency": 84,
-      "releaseRecencyText": "Released 84 days ago",
-      "trendingScore": 72.37
+      "releaseRecency": 85,
+      "releaseRecencyText": "Released 85 days ago",
+      "trendingScore": 72.39
     },
     {
       "id": 818508220,
@@ -3542,9 +3616,9 @@
       "updatedAt": "2026-04-12T09:02:14Z",
       "createdAt": "2024-06-22T03:13:56Z",
       "latestReleaseDate": "2024-06-22T03:46:27Z",
-      "releaseRecency": 661,
-      "releaseRecencyText": "Released 661 days ago",
-      "trendingScore": 67.5
+      "releaseRecency": 662,
+      "releaseRecencyText": "Released 662 days ago",
+      "trendingScore": 67.42
     },
     {
       "id": 345094038,
@@ -3557,7 +3631,7 @@
       "description": "A SwiftUI based macOS GUI for rsync.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/rsyncOSX/RsyncUI",
-      "stargazersCount": 1388,
+      "stargazersCount": 1391,
       "forksCount": 27,
       "language": "Swift",
       "topics": [
@@ -3569,12 +3643,12 @@
         "swiftui"
       ],
       "releasesUrl": "https://api.github.com/repos/rsyncOSX/RsyncUI/releases{/id}",
-      "updatedAt": "2026-04-13T00:14:22Z",
+      "updatedAt": "2026-04-14T23:47:09Z",
       "createdAt": "2021-03-06T12:57:13Z",
       "latestReleaseDate": "2026-03-20T17:49:07Z",
-      "releaseRecency": 24,
-      "releaseRecencyText": "Released 24 days ago",
-      "trendingScore": 60.89
+      "releaseRecency": 25,
+      "releaseRecencyText": "Released 25 days ago",
+      "trendingScore": 60.92
     },
     {
       "id": 60985120,
@@ -3587,7 +3661,7 @@
       "description": "Official frugal and native macOS Syncthing application bundle",
       "defaultBranch": "v2",
       "htmlUrl": "https://github.com/syncthing/syncthing-macos",
-      "stargazersCount": 3604,
+      "stargazersCount": 3607,
       "forksCount": 188,
       "language": "Objective-C",
       "topics": [
@@ -3612,12 +3686,12 @@
         "syncthing"
       ],
       "releasesUrl": "https://api.github.com/repos/syncthing/syncthing-macos/releases{/id}",
-      "updatedAt": "2026-04-14T04:11:31Z",
+      "updatedAt": "2026-04-14T23:41:43Z",
       "createdAt": "2016-06-12T19:22:10Z",
       "latestReleaseDate": "2026-02-23T10:31:24Z",
-      "releaseRecency": 49,
-      "releaseRecencyText": "Released 49 days ago",
-      "trendingScore": 60.07
+      "releaseRecency": 50,
+      "releaseRecencyText": "Released 50 days ago",
+      "trendingScore": 60.08
     },
     {
       "id": 282309256,
@@ -3630,17 +3704,17 @@
       "description": "Invert scroll direction for physical scroll wheels while maintaining \"Natural\" scrolling for trackpads on MacOS",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/ther0n/UnnaturalScrollWheels",
-      "stargazersCount": 4021,
-      "forksCount": 86,
+      "stargazersCount": 4024,
+      "forksCount": 87,
       "language": "Swift",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/ther0n/UnnaturalScrollWheels/releases{/id}",
-      "updatedAt": "2026-04-13T14:12:45Z",
+      "updatedAt": "2026-04-14T17:49:39Z",
       "createdAt": "2020-07-24T20:22:34Z",
       "latestReleaseDate": "2026-04-03T16:51:20Z",
-      "releaseRecency": 10,
-      "releaseRecencyText": "Released 10 days ago",
-      "trendingScore": 58.5
+      "releaseRecency": 11,
+      "releaseRecencyText": "Released 11 days ago",
+      "trendingScore": 58.51
     },
     {
       "id": 152491432,
@@ -3674,12 +3748,12 @@
         "wireguard"
       ],
       "releasesUrl": "https://api.github.com/repos/partout-io/passepartout/releases{/id}",
-      "updatedAt": "2026-04-14T00:21:21Z",
+      "updatedAt": "2026-04-14T21:09:04Z",
       "createdAt": "2018-10-10T21:20:52Z",
       "latestReleaseDate": "2026-04-12T14:59:42Z",
-      "releaseRecency": 1,
-      "releaseRecencyText": "Released yesterday",
-      "trendingScore": 57.31
+      "releaseRecency": 2,
+      "releaseRecencyText": "Released 2 days ago",
+      "trendingScore": 57.3
     },
     {
       "id": 125547624,
@@ -3714,9 +3788,9 @@
       "updatedAt": "2026-04-14T01:07:31Z",
       "createdAt": "2018-03-16T17:17:30Z",
       "latestReleaseDate": "2020-11-20T02:01:16Z",
-      "releaseRecency": 1971,
-      "releaseRecencyText": "Released 1971 days ago",
-      "trendingScore": 57.11
+      "releaseRecency": 1972,
+      "releaseRecencyText": "Released 1972 days ago",
+      "trendingScore": 57.1
     },
     {
       "id": 514940897,
@@ -3729,7 +3803,7 @@
       "description": "Clipboard optimizer for macOS",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/FuzzyIdeas/Clop",
-      "stargazersCount": 1496,
+      "stargazersCount": 1497,
       "forksCount": 59,
       "language": "Swift",
       "topics": [
@@ -3740,11 +3814,11 @@
         "pngquant"
       ],
       "releasesUrl": "https://api.github.com/repos/FuzzyIdeas/Clop/releases{/id}",
-      "updatedAt": "2026-04-13T03:16:52Z",
+      "updatedAt": "2026-04-14T23:41:55Z",
       "createdAt": "2022-07-17T19:49:29Z",
       "latestReleaseDate": "2026-02-19T12:25:45Z",
-      "releaseRecency": 53,
-      "releaseRecencyText": "Released 53 days ago",
+      "releaseRecency": 54,
+      "releaseRecencyText": "Released 54 days ago",
       "trendingScore": 53.9
     },
     {
@@ -3758,7 +3832,7 @@
       "description": ":keyboard: The missing keyboard shortcut utility for macOS",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/zenangst/KeyboardCowboy",
-      "stargazersCount": 2115,
+      "stargazersCount": 2116,
       "forksCount": 38,
       "language": "Swift",
       "topics": [
@@ -3767,11 +3841,11 @@
         "macos-application"
       ],
       "releasesUrl": "https://api.github.com/repos/zenangst/KeyboardCowboy/releases{/id}",
-      "updatedAt": "2026-04-10T06:47:13Z",
+      "updatedAt": "2026-04-14T12:41:21Z",
       "createdAt": "2020-09-02T17:17:22Z",
       "latestReleaseDate": "2025-12-13T20:42:33Z",
-      "releaseRecency": 121,
-      "releaseRecencyText": "Released 121 days ago",
+      "releaseRecency": 122,
+      "releaseRecencyText": "Released 122 days ago",
       "trendingScore": 52.64
     },
     {
@@ -3799,9 +3873,9 @@
       "updatedAt": "2026-04-10T22:05:07Z",
       "createdAt": "2020-05-19T22:01:29Z",
       "latestReleaseDate": "2026-02-06T21:22:44Z",
-      "releaseRecency": 66,
-      "releaseRecencyText": "Released 66 days ago",
-      "trendingScore": 50.94
+      "releaseRecency": 67,
+      "releaseRecencyText": "Released 67 days ago",
+      "trendingScore": 50.93
     },
     {
       "id": 661651510,
@@ -3814,16 +3888,16 @@
       "description": null,
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/pcccccc/AngelLive",
-      "stargazersCount": 1761,
+      "stargazersCount": 1763,
       "forksCount": 79,
       "language": "Swift",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/pcccccc/AngelLive/releases{/id}",
-      "updatedAt": "2026-04-13T21:48:24Z",
+      "updatedAt": "2026-04-15T03:57:22Z",
       "createdAt": "2023-07-03T10:48:19Z",
       "latestReleaseDate": "2026-02-06T07:46:24Z",
-      "releaseRecency": 66,
-      "releaseRecencyText": "Released 66 days ago",
+      "releaseRecency": 67,
+      "releaseRecencyText": "Released 67 days ago",
       "trendingScore": 50.7
     },
     {
@@ -3837,8 +3911,8 @@
       "description": "This application gives Mac users in enterprise environments control over the administration of their machines by elevating their access level to administrator privileges on macOS. Users can set a timeframe in the application's settings to perform specific tasks, such as installing or uninstalling applications.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/SAP/macOS-enterprise-privileges",
-      "stargazersCount": 1884,
-      "forksCount": 173,
+      "stargazersCount": 1923,
+      "forksCount": 174,
       "language": "Objective-C",
       "topics": [
         "macos",
@@ -3846,12 +3920,12 @@
         "privileges"
       ],
       "releasesUrl": "https://api.github.com/repos/SAP/macOS-enterprise-privileges/releases{/id}",
-      "updatedAt": "2026-04-13T13:29:40Z",
+      "updatedAt": "2026-04-15T03:40:17Z",
       "createdAt": "2018-06-27T19:43:51Z",
       "latestReleaseDate": "2026-03-30T09:41:01Z",
-      "releaseRecency": 14,
-      "releaseRecencyText": "Released 14 days ago",
-      "trendingScore": 45.23
+      "releaseRecency": 15,
+      "releaseRecencyText": "Released 15 days ago",
+      "trendingScore": 45.5
     },
     {
       "id": 3777210,
@@ -3864,17 +3938,17 @@
       "description": "【鼠鬚管】Rime for macOS",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/rime/squirrel",
-      "stargazersCount": 5862,
+      "stargazersCount": 5867,
       "forksCount": 476,
       "language": "Swift",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/rime/squirrel/releases{/id}",
-      "updatedAt": "2026-04-13T17:11:08Z",
+      "updatedAt": "2026-04-15T03:36:49Z",
       "createdAt": "2012-03-20T16:17:18Z",
       "latestReleaseDate": "2026-01-14T00:24:56Z",
-      "releaseRecency": 90,
-      "releaseRecencyText": "Released 90 days ago",
-      "trendingScore": 42.82
+      "releaseRecency": 91,
+      "releaseRecencyText": "Released 91 days ago",
+      "trendingScore": 42.84
     },
     {
       "id": 2928534,
@@ -3887,17 +3961,17 @@
       "description": "A fast and clever hex editor for macOS",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/HexFiend/HexFiend",
-      "stargazersCount": 5835,
+      "stargazersCount": 5837,
       "forksCount": 447,
       "language": "Objective-C",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/HexFiend/HexFiend/releases{/id}",
-      "updatedAt": "2026-04-14T03:48:34Z",
+      "updatedAt": "2026-04-14T19:26:16Z",
       "createdAt": "2011-12-06T22:24:36Z",
       "latestReleaseDate": "2025-03-16T12:57:36Z",
-      "releaseRecency": 393,
-      "releaseRecencyText": "Released 393 days ago",
-      "trendingScore": 42.26
+      "releaseRecency": 394,
+      "releaseRecencyText": "Released 394 days ago",
+      "trendingScore": 42.27
     },
     {
       "id": 62392794,
@@ -3910,7 +3984,7 @@
       "description": "Native client of TinyPNG on macOS",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/kyleduo/TinyPNG4Mac",
-      "stargazersCount": 3971,
+      "stargazersCount": 3972,
       "forksCount": 289,
       "language": "Swift",
       "topics": [
@@ -3920,11 +3994,11 @@
         "tinypng4mac"
       ],
       "releasesUrl": "https://api.github.com/repos/kyleduo/TinyPNG4Mac/releases{/id}",
-      "updatedAt": "2026-04-13T16:51:11Z",
+      "updatedAt": "2026-04-14T05:40:12Z",
       "createdAt": "2016-07-01T12:52:11Z",
       "latestReleaseDate": "2025-12-04T15:28:16Z",
-      "releaseRecency": 130,
-      "releaseRecencyText": "Released 130 days ago",
+      "releaseRecency": 131,
+      "releaseRecencyText": "Released 131 days ago",
       "trendingScore": 42.23
     },
     {
@@ -3958,8 +4032,8 @@
       "updatedAt": "2026-03-30T07:09:13Z",
       "createdAt": "2020-07-04T07:01:45Z",
       "latestReleaseDate": "2026-02-11T03:25:15Z",
-      "releaseRecency": 62,
-      "releaseRecencyText": "Released 62 days ago",
+      "releaseRecency": 63,
+      "releaseRecencyText": "Released 63 days ago",
       "trendingScore": 40.02
     },
     {
@@ -3987,8 +4061,8 @@
       "updatedAt": "2026-04-12T15:28:52Z",
       "createdAt": "2020-05-30T07:09:55Z",
       "latestReleaseDate": "2024-08-01T06:44:44Z",
-      "releaseRecency": 620,
-      "releaseRecencyText": "Released 620 days ago",
+      "releaseRecency": 621,
+      "releaseRecencyText": "Released 621 days ago",
       "trendingScore": 39.51
     },
     {
@@ -4002,7 +4076,7 @@
       "description": "Vienna is a free and open-source RSS/Atom/JSON feed newsreader for macOS.",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/ViennaRSS/vienna-rss",
-      "stargazersCount": 1965,
+      "stargazersCount": 1966,
       "forksCount": 233,
       "language": "Objective-C",
       "topics": [
@@ -4012,11 +4086,11 @@
         "rss-reader"
       ],
       "releasesUrl": "https://api.github.com/repos/ViennaRSS/vienna-rss/releases{/id}",
-      "updatedAt": "2026-04-12T00:05:02Z",
+      "updatedAt": "2026-04-14T06:36:33Z",
       "createdAt": "2011-08-28T21:24:35Z",
       "latestReleaseDate": "2026-03-16T11:50:59Z",
-      "releaseRecency": 28,
-      "releaseRecencyText": "Released 28 days ago",
+      "releaseRecency": 29,
+      "releaseRecencyText": "Released 29 days ago",
       "trendingScore": 39.36
     },
     {
@@ -4041,11 +4115,11 @@
         "memory-hacking"
       ],
       "releasesUrl": "https://api.github.com/repos/zorgiepoo/Bit-Slicer/releases{/id}",
-      "updatedAt": "2026-04-13T03:18:02Z",
+      "updatedAt": "2026-04-14T22:26:35Z",
       "createdAt": "2013-09-01T04:23:30Z",
       "latestReleaseDate": "2026-03-16T03:38:10Z",
-      "releaseRecency": 29,
-      "releaseRecencyText": "Released 29 days ago",
+      "releaseRecency": 30,
+      "releaseRecencyText": "Released 30 days ago",
       "trendingScore": 36.59
     },
     {
@@ -4059,16 +4133,16 @@
       "description": "Managed software installation for macOS —",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/munki/munki",
-      "stargazersCount": 3393,
+      "stargazersCount": 3395,
       "forksCount": 365,
       "language": "Swift",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/munki/munki/releases{/id}",
-      "updatedAt": "2026-04-13T20:01:29Z",
+      "updatedAt": "2026-04-14T17:28:23Z",
       "createdAt": "2014-09-19T06:51:32Z",
       "latestReleaseDate": "2026-03-18T21:08:42Z",
-      "releaseRecency": 26,
-      "releaseRecencyText": "Released 26 days ago",
+      "releaseRecency": 27,
+      "releaseRecencyText": "Released 27 days ago",
       "trendingScore": 36.07
     },
     {
@@ -4082,16 +4156,16 @@
       "description": "This package allows macOS Finder to display thumbnails, static QuickLook previews, cover art and metadata for most types of video files.",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/Marginal/QuickLookVideo",
-      "stargazersCount": 3376,
+      "stargazersCount": 3377,
       "forksCount": 116,
       "language": "Swift",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/Marginal/QuickLookVideo/releases{/id}",
-      "updatedAt": "2026-04-13T22:20:23Z",
+      "updatedAt": "2026-04-15T01:46:19Z",
       "createdAt": "2014-07-16T17:31:33Z",
       "latestReleaseDate": "2026-03-18T23:45:35Z",
-      "releaseRecency": 26,
-      "releaseRecencyText": "Released 26 days ago",
+      "releaseRecency": 27,
+      "releaseRecencyText": "Released 27 days ago",
       "trendingScore": 35.74
     },
     {
@@ -4105,17 +4179,17 @@
       "description": "A tool for encouraging the installation of macOS security updates.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/macadmins/nudge",
-      "stargazersCount": 1245,
+      "stargazersCount": 1246,
       "forksCount": 202,
       "language": "Swift",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/macadmins/nudge/releases{/id}",
-      "updatedAt": "2026-04-12T19:02:52Z",
+      "updatedAt": "2026-04-14T17:47:23Z",
       "createdAt": "2021-02-03T00:02:01Z",
       "latestReleaseDate": "2026-03-30T16:24:15Z",
-      "releaseRecency": 14,
-      "releaseRecencyText": "Released 14 days ago",
-      "trendingScore": 33.13
+      "releaseRecency": 15,
+      "releaseRecencyText": "Released 15 days ago",
+      "trendingScore": 33.14
     },
     {
       "id": 39261898,
@@ -4136,8 +4210,8 @@
       "updatedAt": "2026-04-13T18:42:55Z",
       "createdAt": "2015-07-17T15:45:13Z",
       "latestReleaseDate": "2026-03-28T12:08:16Z",
-      "releaseRecency": 16,
-      "releaseRecencyText": "Released 16 days ago",
+      "releaseRecency": 17,
+      "releaseRecencyText": "Released 17 days ago",
       "trendingScore": 32.32
     },
     {
@@ -4159,9 +4233,9 @@
       "updatedAt": "2026-04-07T13:54:30Z",
       "createdAt": "2014-08-17T20:07:25Z",
       "latestReleaseDate": "2026-03-30T16:01:14Z",
-      "releaseRecency": 14,
-      "releaseRecencyText": "Released 14 days ago",
-      "trendingScore": 27.34
+      "releaseRecency": 15,
+      "releaseRecencyText": "Released 15 days ago",
+      "trendingScore": 27.33
     },
     {
       "id": 982221847,
@@ -4191,9 +4265,9 @@
       "updatedAt": "2026-04-14T00:40:54Z",
       "createdAt": "2025-05-12T14:52:39Z",
       "latestReleaseDate": "2026-03-01T16:44:25Z",
-      "releaseRecency": 43,
-      "releaseRecencyText": "Released 43 days ago",
-      "trendingScore": 27.02
+      "releaseRecency": 44,
+      "releaseRecencyText": "Released 44 days ago",
+      "trendingScore": 26.97
     },
     {
       "id": 358078,
@@ -4206,17 +4280,17 @@
       "description": "Quicksilver Project Source",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/quicksilver/Quicksilver",
-      "stargazersCount": 2887,
+      "stargazersCount": 2888,
       "forksCount": 289,
       "language": "Objective-C",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/quicksilver/Quicksilver/releases{/id}",
-      "updatedAt": "2026-04-10T15:06:42Z",
+      "updatedAt": "2026-04-14T07:01:20Z",
       "createdAt": "2009-11-02T14:55:23Z",
       "latestReleaseDate": "2026-03-30T19:40:50Z",
-      "releaseRecency": 14,
-      "releaseRecencyText": "Released 14 days ago",
-      "trendingScore": 25.61
+      "releaseRecency": 15,
+      "releaseRecencyText": "Released 15 days ago",
+      "trendingScore": 25.62
     },
     {
       "id": 140830988,
@@ -4246,9 +4320,9 @@
       "updatedAt": "2026-04-12T08:53:33Z",
       "createdAt": "2018-07-13T10:03:26Z",
       "latestReleaseDate": "2025-12-24T13:12:44Z",
-      "releaseRecency": 110,
-      "releaseRecencyText": "Released 110 days ago",
-      "trendingScore": 25.54
+      "releaseRecency": 111,
+      "releaseRecencyText": "Released 111 days ago",
+      "trendingScore": 25.53
     },
     {
       "id": 60247340,
@@ -4269,8 +4343,8 @@
       "updatedAt": "2026-04-13T02:50:05Z",
       "createdAt": "2016-06-02T08:41:49Z",
       "latestReleaseDate": "2025-09-09T02:27:18Z",
-      "releaseRecency": 217,
-      "releaseRecencyText": "Released 217 days ago",
+      "releaseRecency": 218,
+      "releaseRecencyText": "Released 218 days ago",
       "trendingScore": 22.32
     },
     {
@@ -4292,8 +4366,8 @@
       "updatedAt": "2026-04-07T15:57:31Z",
       "createdAt": "2011-07-17T03:38:59Z",
       "latestReleaseDate": "2024-02-09T02:22:03Z",
-      "releaseRecency": 795,
-      "releaseRecencyText": "Released 795 days ago",
+      "releaseRecency": 796,
+      "releaseRecencyText": "Released 796 days ago",
       "trendingScore": 21.76
     },
     {
@@ -4315,8 +4389,8 @@
       "updatedAt": "2026-03-16T04:53:57Z",
       "createdAt": "2015-01-31T04:48:49Z",
       "latestReleaseDate": "2024-12-23T15:41:51Z",
-      "releaseRecency": 476,
-      "releaseRecencyText": "Released 476 days ago",
+      "releaseRecency": 477,
+      "releaseRecencyText": "Released 477 days ago",
       "trendingScore": 19.89
     }
   ]
