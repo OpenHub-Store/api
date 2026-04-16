@@ -16,6 +16,11 @@ from datetime import datetime, timedelta, timezone
 from typing import List, Dict, Optional, Tuple, Set
 from dataclasses import dataclass, field
 
+try:
+    from db_writer import save_to_postgres
+except ImportError:
+    save_to_postgres = None
+
 # ─── Configuration ────────────────────────────────────────────────────────────
 
 # Per-category tokens (3 classic PATs, one per category).
@@ -1170,6 +1175,10 @@ def save_data(category: str, platform: str, repos: List[Dict], timestamp: str):
     with open(path, "w", encoding="utf-8") as f:
         json.dump(out, f, indent=2, ensure_ascii=False)
     print(f"  ✓ Saved {len(repos)} repos → {path}")
+
+    # Write to Postgres (if DATABASE_URL is set)
+    if save_to_postgres is not None:
+        save_to_postgres(category, platform, repos)
 
 
 # ─── Main orchestrator ─────────────────────────────────────────────────────────
