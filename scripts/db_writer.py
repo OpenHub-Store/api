@@ -49,8 +49,9 @@ def save_to_postgres(category: str, platform: str, repos: List[Dict]):
                 if category in ("trending", "new-releases", "most-popular"):
                     _update_categories(cur, category, platform, repos)
                 else:
-                    # Topic bucket (privacy, media, etc.)
-                    _update_topic_bucket(cur, category, platform, repos)
+                    # Topic bucket (privacy, media, etc.) — strip "topics/" prefix
+                    bucket = category.removeprefix("topics/")
+                    _update_topic_bucket(cur, bucket, platform, repos)
 
         print(f"  ✓ Postgres: upserted {len(repos)} repos for {category}/{platform}")
     except Exception as e:
