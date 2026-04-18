@@ -150,6 +150,7 @@ class ReleaseInfo:
     has_release: bool = False
     published_at: Optional[str] = None
     has_installers: Dict[str, bool] = field(default_factory=dict)  # platform -> bool
+    total_downloads: int = 0  # sum of asset.download_count for latest release
 
 
 @dataclass
@@ -173,6 +174,7 @@ class RepoCandidate:
     has_installers: bool = False
     recent_stars_velocity: float = 0.0
     latest_release_date: Optional[str] = None
+    download_count: int = 0
 
     def to_summary(self, category: str = "trending") -> Dict:
         base = {
@@ -190,6 +192,7 @@ class RepoCandidate:
             "releasesUrl": self.releases_url,
             "updatedAt": self.updated_at,
             "createdAt": self.created_at,
+            "downloadCount": self.download_count,
         }
 
         if self.latest_release_date:
@@ -397,7 +400,9 @@ class GitHubClient:
         if data and not data.get("draft") and not data.get("prerelease"):
             info.has_release = True
             info.published_at = data.get("published_at")
-            _check_assets(data.get("assets", []))
+            assets = data.get("assets", [])
+            _check_assets(assets)
+            info.total_downloads = sum(a.get("download_count", 0) or 0 for a in assets)
             self.release_cache[full_name] = info
             return info
 
@@ -411,7 +416,9 @@ class GitHubClient:
                 if not release.get("draft") and not release.get("prerelease"):
                     info.has_release = True
                     info.published_at = release.get("published_at")
-                    _check_assets(release.get("assets", []))
+                    assets = release.get("assets", [])
+                    _check_assets(assets)
+                    info.total_downloads = sum(a.get("download_count", 0) or 0 for a in assets)
                     break
 
         self.release_cache[full_name] = info
@@ -556,6 +563,7 @@ async def verify_installers(
                 return None
 
         candidate.has_installers = True
+        candidate.download_count = info.total_downloads
         if need_release_date:
             candidate.latest_release_date = info.published_at
         return candidate

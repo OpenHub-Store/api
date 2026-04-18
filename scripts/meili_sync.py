@@ -105,7 +105,8 @@ def fetch_all_repos():
             cur.execute("""
                 SELECT id, full_name, owner, name, owner_avatar_url,
                        description, default_branch, html_url, stars, forks,
-                       language, latest_release_date, latest_release_tag,
+                       language, topics, latest_release_date, latest_release_tag,
+                       download_count,
                        has_installers_android, has_installers_windows,
                        has_installers_macos, has_installers_linux,
                        trending_score, popularity_score
@@ -130,8 +131,10 @@ def repo_to_meili_doc(row):
         "stars": row["stars"],
         "forks": row["forks"],
         "language": row["language"],
+        "topics": row["topics"] if row["topics"] else [],
         "latest_release_date": row["latest_release_date"].isoformat() if row["latest_release_date"] else None,
         "latest_release_tag": row["latest_release_tag"],
+        "download_count": row["download_count"] or 0,
         "has_installers_android": row["has_installers_android"],
         "has_installers_windows": row["has_installers_windows"],
         "has_installers_macos": row["has_installers_macos"],

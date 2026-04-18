@@ -80,14 +80,14 @@ def _upsert_repo(cur, repo: Dict, platform: str):
             topics, latest_release_date, latest_release_tag,
             has_installers_android, has_installers_windows,
             has_installers_macos, has_installers_linux,
-            trending_score, popularity_score,
+            download_count, trending_score, popularity_score,
             created_at_gh, updated_at_gh, indexed_at
         ) VALUES (
             %(id)s, %(full_name)s, %(owner)s, %(name)s, %(avatar)s, %(description)s,
             %(default_branch)s, %(html_url)s, %(stars)s, %(forks)s, %(language)s,
             %(topics)s, %(release_date)s, NULL,
             %(android)s, %(windows)s, %(macos)s, %(linux)s,
-            %(trending_score)s, %(popularity_score)s,
+            %(download_count)s, %(trending_score)s, %(popularity_score)s,
             %(created_at)s, %(updated_at)s, NOW()
         )
         ON CONFLICT (id) DO UPDATE SET
@@ -110,7 +110,8 @@ def _upsert_repo(cur, repo: Dict, platform: str):
             has_installers_android = repos.has_installers_android OR EXCLUDED.has_installers_android,
             has_installers_windows = repos.has_installers_windows OR EXCLUDED.has_installers_windows,
             has_installers_macos = repos.has_installers_macos OR EXCLUDED.has_installers_macos,
-            has_installers_linux = repos.has_installers_linux OR EXCLUDED.has_installers_linux
+            has_installers_linux = repos.has_installers_linux OR EXCLUDED.has_installers_linux,
+            download_count = GREATEST(EXCLUDED.download_count, repos.download_count)
     """, {
         "id": repo_id,
         "full_name": repo.get("fullName"),
@@ -125,6 +126,7 @@ def _upsert_repo(cur, repo: Dict, platform: str):
         "language": repo.get("language"),
         "topics": repo.get("topics", []),
         "release_date": repo.get("latestReleaseDate"),
+        "download_count": repo.get("downloadCount", 0),
         "android": platform_flags["has_installers_android"],
         "windows": platform_flags["has_installers_windows"],
         "macos": platform_flags["has_installers_macos"],
