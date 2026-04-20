@@ -150,7 +150,7 @@ class ReleaseInfo:
     has_release: bool = False
     published_at: Optional[str] = None
     has_installers: Dict[str, bool] = field(default_factory=dict)  # platform -> bool
-    total_downloads: int = 0  # sum of asset.download_count for latest release
+    total_downloads: int = 0  # sum of asset.download_count across ALL releases
 
 
 @dataclass
@@ -395,31 +395,31 @@ class GitHubClient:
                         info.has_installers[platform] = True
                         break
 
-        # Try /releases/latest first (one API call)
-        data, err = await self.get(f"https://api.github.com/repos/{full_name}/releases/latest")
-        if data and not data.get("draft") and not data.get("prerelease"):
-            info.has_release = True
-            info.published_at = data.get("published_at")
-            assets = data.get("assets", [])
-            _check_assets(assets)
-            info.total_downloads = sum(a.get("download_count", 0) or 0 for a in assets)
-            self.release_cache[full_name] = info
-            return info
-
-        # Fallback: search recent releases
+        # Fetch up to 100 releases. One call replaces the old /releases/latest +
+        # /releases fallback. We use the first non-draft non-prerelease for
+        # published_at / platform detection (same behavior as before), but sum
+        # total_downloads across EVERY release's assets so the count matches
+        # what shields.io shows. Repos with >100 releases still undercount —
+        # rare enough to live with; follow Link: next if that becomes a problem.
         data, err = await self.get(
             f"https://api.github.com/repos/{full_name}/releases",
-            params={"per_page": 5},
+            params={"per_page": 100},
         )
         if data and isinstance(data, list):
+            total_downloads = 0
             for release in data:
-                if not release.get("draft") and not release.get("prerelease"):
-                    info.has_release = True
-                    info.published_at = release.get("published_at")
-                    assets = release.get("assets", [])
-                    _check_assets(assets)
-                    info.total_downloads = sum(a.get("download_count", 0) or 0 for a in assets)
-                    break
+                for asset in release.get("assets", []):
+                    total_downloads += asset.get("download_count", 0) or 0
+            info.total_downloads = total_downloads
+
+            latest = next(
+                (r for r in data if not r.get("draft") and not r.get("prerelease")),
+                None,
+            )
+            if latest:
+                info.has_release = True
+                info.published_at = latest.get("published_at")
+                _check_assets(latest.get("assets", []))
 
         self.release_cache[full_name] = info
         return info
