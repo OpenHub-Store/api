@@ -11,10 +11,19 @@ import os
 import sys
 import json
 import re
+import socket
 import time
 import itertools
 import urllib.request
 import urllib.error
+
+# urllib's per-call timeout argument doesn't always cover DNS / TCP handshake
+# edge cases. A process-wide default guarantees no call ever hangs forever.
+socket.setdefaulttimeout(25)
+
+# Hard cap on pages per repo so one pathological repo can't stall the backfill.
+# 30 pages = 3000 releases — safely above any app-store-relevant megaproject.
+MAX_PAGES_PER_REPO = 30
 
 try:
     import psycopg2
@@ -89,7 +98,7 @@ def get_total_downloads(full_name):
     url = f"https://api.github.com/repos/{full_name}/releases?per_page=100"
     total = 0
     pages = 0
-    while url:
+    while url and pages < MAX_PAGES_PER_REPO:
         releases, next_url = github_request(url)
         if not releases or not isinstance(releases, list):
             break
@@ -102,7 +111,14 @@ def get_total_downloads(full_name):
 
 
 def backfill():
-    conn = psycopg2.connect(DATABASE_URL)
+    conn = psycopg2.connect(DATABASE_URL, connect_timeout=10)
+    # Explicit timeouts per Postgres session so a wedged connection doesn't stall
+    # the whole backfill if the network flakes mid-UPDATE.
+    with conn.cursor() as cur:
+        cur.execute("SET statement_timeout = '10s'")
+        cur.execute("SET idle_in_transaction_session_timeout = '30s'")
+    conn.commit()
+
     meili_updates = []
 
     try:
@@ -111,12 +127,14 @@ def backfill():
             repos = cur.fetchall()
 
         print(f"Backfilling download counts for {len(repos)} repos "
-              f"(tokens: {len(GH_TOKENS)})...")
+              f"(tokens: {len(GH_TOKENS)})...", flush=True)
         updated = 0
         total_pages = 0
 
         for repo in repos:
+            t0 = time.time()
             downloads, pages = get_total_downloads(repo["full_name"])
+            elapsed = time.time() - t0
             total_pages += pages
 
             with conn:
@@ -129,9 +147,15 @@ def backfill():
             meili_updates.append({"id": repo["id"], "download_count": downloads})
 
             updated += 1
+            # Per-repo line when a single repo takes more than 5s — surfaces
+            # stalls in real time instead of waiting for the 25-repo boundary.
+            if elapsed > 5.0:
+                print(f"  [slow] {repo['full_name']}: {pages} pages, {elapsed:.1f}s, "
+                      f"{downloads:,} downloads", flush=True)
+
             if updated % 25 == 0:
                 print(f"  {updated}/{len(repos)} repos updated "
-                      f"({total_pages} pages fetched so far)...")
+                      f"({total_pages} pages fetched so far)...", flush=True)
                 if meili_updates:
                     meili_sync(meili_updates)
                     meili_updates = []
@@ -142,7 +166,7 @@ def backfill():
             meili_sync(meili_updates)
 
         print(f"\nDone! Updated {updated} repos with download counts "
-              f"({total_pages} total pages fetched).")
+              f"({total_pages} total pages fetched).", flush=True)
 
     finally:
         conn.close()
