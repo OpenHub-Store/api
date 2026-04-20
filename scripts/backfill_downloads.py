@@ -12,10 +12,11 @@ import sys
 import json
 import re
 import socket
+import threading
 import time
-import itertools
 import urllib.request
 import urllib.error
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 # urllib's per-call timeout argument doesn't always cover DNS / TCP handshake
 # edge cases. A process-wide default guarantees no call ever hangs forever.
@@ -24,6 +25,15 @@ socket.setdefaulttimeout(25)
 # Hard cap on pages per repo so one pathological repo can't stall the backfill.
 # 30 pages = 3000 releases — safely above any app-store-relevant megaproject.
 MAX_PAGES_PER_REPO = 30
+
+# Per-worker thread-local storage (Postgres connection + assigned token).
+_local = threading.local()
+
+# Shared state guarded by this lock (progress counters + Meili batch).
+_lock = threading.Lock()
+_updated = 0
+_total_pages = 0
+_meili_batch = []
 
 try:
     import psycopg2
@@ -51,8 +61,6 @@ if not GH_TOKENS:
     if solo:
         GH_TOKENS = [solo]
 
-_token_cycle = itertools.cycle(GH_TOKENS) if GH_TOKENS else None
-
 LINK_NEXT_RE = re.compile(r'<([^>]+)>;\s*rel="next"')
 
 
@@ -64,19 +72,24 @@ def parse_next_link(link_header):
     return m.group(1) if m else None
 
 
-def github_request(url):
-    """Single GET with rate-limit awareness. Returns (body, next_url) or (None, None)."""
+def github_request(url, token):
+    """Single GET with rate-limit awareness. Returns (body, next_url) or (None, None).
+
+    Token is the per-worker token, not a rotation — so one worker hitting its
+    token's limit sleeps that worker only, the other three keep going.
+    """
     req = urllib.request.Request(url)
     req.add_header("Accept", "application/vnd.github+json")
-    if _token_cycle:
-        req.add_header("Authorization", f"token {next(_token_cycle)}")
+    if token:
+        req.add_header("Authorization", f"token {token}")
     try:
         with urllib.request.urlopen(req, timeout=20) as resp:
             remaining = resp.headers.get("X-RateLimit-Remaining", "?")
             if remaining != "?" and int(remaining) < 5:
                 reset = int(resp.headers.get("X-RateLimit-Reset", "0"))
                 wait = max(reset - int(time.time()), 1)
-                print(f"  Token low ({remaining} left), sleeping {wait}s...")
+                print(f"  [worker {threading.current_thread().name}] token low "
+                      f"({remaining} left), sleeping {wait}s...", flush=True)
                 time.sleep(wait + 1)
             body = json.loads(resp.read())
             next_url = parse_next_link(resp.headers.get("Link"))
@@ -85,21 +98,22 @@ def github_request(url):
         if e.code == 403:
             reset = int(e.headers.get("X-RateLimit-Reset", "0"))
             wait = max(reset - int(time.time()), 10)
-            print(f"  Rate limited, sleeping {wait}s...")
+            print(f"  [worker {threading.current_thread().name}] 403 rate-limited, "
+                  f"sleeping {wait}s...", flush=True)
             time.sleep(wait + 1)
-            return github_request(url)
+            return github_request(url, token)
         return None, None
     except Exception:
         return None, None
 
 
-def get_total_downloads(full_name):
+def get_total_downloads(full_name, token):
     """Sum download_count across every asset of every release, following pagination."""
     url = f"https://api.github.com/repos/{full_name}/releases?per_page=100"
     total = 0
     pages = 0
     while url and pages < MAX_PAGES_PER_REPO:
-        releases, next_url = github_request(url)
+        releases, next_url = github_request(url, token)
         if not releases or not isinstance(releases, list):
             break
         pages += 1
@@ -110,66 +124,110 @@ def get_total_downloads(full_name):
     return total, pages
 
 
-def backfill():
-    conn = psycopg2.connect(DATABASE_URL, connect_timeout=10)
-    # Explicit timeouts per Postgres session so a wedged connection doesn't stall
-    # the whole backfill if the network flakes mid-UPDATE.
-    with conn.cursor() as cur:
+def _init_worker(worker_idx):
+    """Give this thread its dedicated token + Postgres connection."""
+    _local.token = GH_TOKENS[worker_idx % len(GH_TOKENS)]
+    _local.conn = psycopg2.connect(DATABASE_URL, connect_timeout=10)
+    with _local.conn.cursor() as cur:
         cur.execute("SET statement_timeout = '10s'")
         cur.execute("SET idle_in_transaction_session_timeout = '30s'")
-    conn.commit()
+    _local.conn.commit()
 
-    meili_updates = []
 
+def _close_worker():
+    if hasattr(_local, "conn"):
+        _local.conn.close()
+
+
+def _process_repo(repo, total_repos):
+    global _updated, _total_pages, _meili_batch
+    t0 = time.time()
+    downloads, pages = get_total_downloads(repo["full_name"], _local.token)
+    elapsed = time.time() - t0
+
+    with _local.conn:
+        with _local.conn.cursor() as cur:
+            cur.execute(
+                "UPDATE repos SET download_count = %s WHERE id = %s",
+                (downloads, repo["id"])
+            )
+
+    # Shared progress + Meili batch under lock.
+    flush = None
+    with _lock:
+        _updated += 1
+        _total_pages += pages
+        _meili_batch.append({"id": repo["id"], "download_count": downloads})
+        current = _updated
+        pages_so_far = _total_pages
+        if current % 25 == 0:
+            flush = _meili_batch
+            _meili_batch = []
+
+    if elapsed > 5.0:
+        print(f"  [slow] {repo['full_name']}: {pages} pages, {elapsed:.1f}s, "
+              f"{downloads:,} downloads", flush=True)
+
+    if current % 25 == 0:
+        print(f"  {current}/{total_repos} repos updated "
+              f"({pages_so_far} pages fetched so far)...", flush=True)
+        if flush:
+            meili_sync(flush)
+
+    # Gentle pacing per worker — with 4 workers this yields ~13 req/s aggregate,
+    # well under GitHub's secondary abuse threshold.
+    time.sleep(0.3)
+
+
+def backfill():
+    # Workers each own a token + PG connection. Fewer workers than tokens is
+    # fine (leaves the extras unused); more workers than tokens would share.
+    worker_count = len(GH_TOKENS)
+
+    # Load the repo list on the main thread using a short-lived connection.
+    bootstrap = psycopg2.connect(DATABASE_URL, connect_timeout=10)
     try:
-        with conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor) as cur:
+        with bootstrap.cursor(cursor_factory=psycopg2.extras.RealDictCursor) as cur:
             cur.execute("SELECT id, full_name FROM repos ORDER BY stars DESC")
             repos = cur.fetchall()
-
-        print(f"Backfilling download counts for {len(repos)} repos "
-              f"(tokens: {len(GH_TOKENS)})...", flush=True)
-        updated = 0
-        total_pages = 0
-
-        for repo in repos:
-            t0 = time.time()
-            downloads, pages = get_total_downloads(repo["full_name"])
-            elapsed = time.time() - t0
-            total_pages += pages
-
-            with conn:
-                with conn.cursor() as cur:
-                    cur.execute(
-                        "UPDATE repos SET download_count = %s WHERE id = %s",
-                        (downloads, repo["id"])
-                    )
-
-            meili_updates.append({"id": repo["id"], "download_count": downloads})
-
-            updated += 1
-            # Per-repo line when a single repo takes more than 5s — surfaces
-            # stalls in real time instead of waiting for the 25-repo boundary.
-            if elapsed > 5.0:
-                print(f"  [slow] {repo['full_name']}: {pages} pages, {elapsed:.1f}s, "
-                      f"{downloads:,} downloads", flush=True)
-
-            if updated % 25 == 0:
-                print(f"  {updated}/{len(repos)} repos updated "
-                      f"({total_pages} pages fetched so far)...", flush=True)
-                if meili_updates:
-                    meili_sync(meili_updates)
-                    meili_updates = []
-
-            time.sleep(0.3)
-
-        if meili_updates:
-            meili_sync(meili_updates)
-
-        print(f"\nDone! Updated {updated} repos with download counts "
-              f"({total_pages} total pages fetched).", flush=True)
-
     finally:
-        conn.close()
+        bootstrap.close()
+
+    print(f"Backfilling download counts for {len(repos)} repos "
+          f"({worker_count} parallel workers, 1 token each)...", flush=True)
+
+    # ThreadPoolExecutor with a deterministic initializer so each worker
+    # gets exactly one token by its index in the pool.
+    worker_idx_counter = {"i": 0}
+    idx_lock = threading.Lock()
+
+    def init():
+        with idx_lock:
+            i = worker_idx_counter["i"]
+            worker_idx_counter["i"] += 1
+        _init_worker(i)
+
+    with ThreadPoolExecutor(max_workers=worker_count, initializer=init) as ex:
+        futures = [ex.submit(_process_repo, r, len(repos)) for r in repos]
+        for f in as_completed(futures):
+            # Surface any exception so it doesn't silently swallow failures.
+            try:
+                f.result()
+            except Exception as e:
+                print(f"  [error] worker failed: {e}", flush=True)
+
+    # Final Meili flush for whatever's left in the shared batch.
+    with _lock:
+        if _meili_batch:
+            final = _meili_batch
+            _meili_batch = []
+        else:
+            final = None
+    if final:
+        meili_sync(final)
+
+    print(f"\nDone! Updated {_updated} repos with download counts "
+          f"({_total_pages} total pages fetched).", flush=True)
 
 
 def meili_sync(docs):
