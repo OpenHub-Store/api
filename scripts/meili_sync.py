@@ -75,9 +75,13 @@ def configure_index():
         "latest_release_date",
         "trending_score",
         "popularity_score",
+        "search_score",
     ])
 
-    # Ranking rules
+    # Ranking rules — search_score is the unified behavioral score (stars + CTR +
+    # install success + freshness) computed hourly by SignalAggregationWorker.
+    # It replaces the static stars:desc tie-breaker so clicks/installs actually
+    # influence ordering.
     meili_request("PUT", f"/indexes/{INDEX_NAME}/settings/ranking-rules", [
         "words",
         "typo",
@@ -85,7 +89,7 @@ def configure_index():
         "attribute",
         "sort",
         "exactness",
-        "stars:desc",
+        "search_score:desc",
     ])
 
     # Typo tolerance
@@ -109,7 +113,7 @@ def fetch_all_repos():
                        download_count,
                        has_installers_android, has_installers_windows,
                        has_installers_macos, has_installers_linux,
-                       trending_score, popularity_score
+                       trending_score, popularity_score, search_score
                 FROM repos
             """)
             return cur.fetchall()
@@ -141,6 +145,7 @@ def repo_to_meili_doc(row):
         "has_installers_linux": row["has_installers_linux"],
         "trending_score": row["trending_score"],
         "popularity_score": row["popularity_score"],
+        "search_score": row["search_score"],
     }
 
 
