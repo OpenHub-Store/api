@@ -217,6 +217,7 @@ def backfill():
                 print(f"  [error] worker failed: {e}", flush=True)
 
     # Final Meili flush for whatever's left in the shared batch.
+    global _meili_batch
     with _lock:
         if _meili_batch:
             final = _meili_batch
