@@ -6,12 +6,22 @@ Typical runtime: 5-15 minutes (down from 60+ minutes).
 """
 
 import os
+import re
 import sys
 import json
 import asyncio
 import aiohttp
 import time
 import collections
+
+_LINK_NEXT_RE = re.compile(r'<([^>]+)>;\s*rel="next"')
+
+
+def _parse_next_link(link_header):
+    if not link_header:
+        return None
+    m = _LINK_NEXT_RE.search(link_header)
+    return m.group(1) if m else None
 from datetime import datetime, timedelta, timezone
 from typing import List, Dict, Optional, Tuple, Set
 from dataclasses import dataclass, field
@@ -299,8 +309,14 @@ class GitHubClient:
                     await asyncio.sleep(wait)
             self._search_call_times.append(time.time())
 
-    async def get(self, url: str, params: Optional[Dict] = None) -> Tuple[Optional[Dict], Optional[str]]:
-        """GET with retry, rate-limit handling, and concurrency control."""
+    async def get(self, url: str, params: Optional[Dict] = None,
+                  with_link: bool = False):
+        """GET with retry, rate-limit handling, and concurrency control.
+
+        Default returns (data, err). With with_link=True, returns
+        (data, err, next_url) where next_url is the rel=next URL from the
+        Link header, or None — used for paginating releases.
+        """
         if "/search/" in url:
             await self._acquire_search_slot()
         async with self._sem:
@@ -312,7 +328,10 @@ class GitHubClient:
                         self._update_rate_info(resp.headers, url)
 
                         if resp.status == 200:
-                            return await resp.json(), None
+                            data = await resp.json()
+                            if with_link:
+                                return data, None, _parse_next_link(resp.headers.get("Link"))
+                            return data, None
 
                         if resp.status in (403, 429):
                             retry_after = resp.headers.get("Retry-After")
@@ -320,26 +339,26 @@ class GitHubClient:
                             if attempt < MAX_RETRIES - 1:
                                 await asyncio.sleep(wait)
                                 continue
-                            return None, "Rate limited"
+                            return (None, "Rate limited", None) if with_link else (None, "Rate limited")
 
                         if 500 <= resp.status < 600 and attempt < MAX_RETRIES - 1:
                             await asyncio.sleep(2 ** attempt)
                             continue
 
-                        return None, f"HTTP {resp.status}"
+                        return (None, f"HTTP {resp.status}", None) if with_link else (None, f"HTTP {resp.status}")
 
                 except asyncio.TimeoutError:
                     if attempt < MAX_RETRIES - 1:
                         await asyncio.sleep(2 ** attempt)
                         continue
-                    return None, "Timeout"
+                    return (None, "Timeout", None) if with_link else (None, "Timeout")
                 except Exception as e:
                     if attempt < MAX_RETRIES - 1:
                         await asyncio.sleep(2 ** attempt)
                         continue
-                    return None, str(e)
+                    return (None, str(e), None) if with_link else (None, str(e))
 
-            return None, "Max retries exceeded"
+            return (None, "Max retries exceeded", None) if with_link else (None, "Max retries exceeded")
 
     async def search_repos(self, query: str, sort: str = "stars", order: str = "desc",
                            pages: int = 3) -> List[Dict]:
@@ -395,31 +414,34 @@ class GitHubClient:
                         info.has_installers[platform] = True
                         break
 
-        # Fetch up to 100 releases. One call replaces the old /releases/latest +
-        # /releases fallback. We use the first non-draft non-prerelease for
-        # published_at / platform detection (same behavior as before), but sum
-        # total_downloads across EVERY release's assets so the count matches
-        # what shields.io shows. Repos with >100 releases still undercount —
-        # rare enough to live with; follow Link: next if that becomes a problem.
-        data, err = await self.get(
-            f"https://api.github.com/repos/{full_name}/releases",
-            params={"per_page": 100},
-        )
-        if data and isinstance(data, list):
-            total_downloads = 0
+        # Paginate /releases following the Link: next header so total_downloads
+        # aggregates every release's every asset — matches shields.io's total.
+        # First page also gives us the freshest release for published_at and
+        # platform detection.
+        url = f"https://api.github.com/repos/{full_name}/releases"
+        params = {"per_page": 100}
+        total_downloads = 0
+        latest = None
+        while url:
+            data, err, next_url = await self.get(url, params=params, with_link=True)
+            if not data or not isinstance(data, list):
+                break
             for release in data:
                 for asset in release.get("assets", []):
                     total_downloads += asset.get("download_count", 0) or 0
-            info.total_downloads = total_downloads
+            if latest is None:
+                latest = next(
+                    (r for r in data if not r.get("draft") and not r.get("prerelease")),
+                    None,
+                )
+            url = next_url
+            params = None  # next_url already carries per_page + page
 
-            latest = next(
-                (r for r in data if not r.get("draft") and not r.get("prerelease")),
-                None,
-            )
-            if latest:
-                info.has_release = True
-                info.published_at = latest.get("published_at")
-                _check_assets(latest.get("assets", []))
+        info.total_downloads = total_downloads
+        if latest:
+            info.has_release = True
+            info.published_at = latest.get("published_at")
+            _check_assets(latest.get("assets", []))
 
         self.release_cache[full_name] = info
         return info
