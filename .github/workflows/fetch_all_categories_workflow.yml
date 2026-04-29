@@ -68,7 +68,7 @@ jobs:
     needs: check-rate-limit
     if: needs.check-rate-limit.outputs.can_proceed == 'true'
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 180
     permissions:
       contents: write
 
