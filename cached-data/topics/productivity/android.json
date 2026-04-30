@@ -1,9 +1,38 @@
 {
   "category": "topics/productivity",
   "platform": "android",
-  "lastUpdated": "2026-04-29T16:25:48.236965Z",
-  "totalCount": 15,
+  "lastUpdated": "2026-04-30T05:36:00.259642Z",
+  "totalCount": 21,
   "repositories": [
+    {
+      "id": 857694796,
+      "name": "Prism-File-Explorer",
+      "fullName": "Raival-e/Prism-File-Explorer",
+      "owner": {
+        "login": "Raival-e",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/81700082?v=4"
+      },
+      "description": "A modern, feature-rich, and lightweight file manager for Android, built entirely with Kotlin and Jetpack Compose.",
+      "defaultBranch": "master",
+      "htmlUrl": "https://github.com/Raival-e/Prism-File-Explorer",
+      "stargazersCount": 1246,
+      "forksCount": 76,
+      "language": "Kotlin",
+      "topics": [
+        "android",
+        "fileexplorer",
+        "jetpack-compose",
+        "kotlin",
+        "material-ui"
+      ],
+      "releasesUrl": "https://api.github.com/repos/Raival-e/Prism-File-Explorer/releases{/id}",
+      "updatedAt": "2026-04-30T01:46:56Z",
+      "createdAt": "2024-09-15T11:08:12Z",
+      "downloadCount": 39652,
+      "latestReleaseDate": "2025-09-12T13:45:11Z",
+      "releaseRecency": 229,
+      "releaseRecencyText": "Released 229 days ago"
+    },
     {
       "id": 135088590,
       "name": "MaterialFiles",
@@ -15,7 +44,7 @@
       "description": "Material Design file manager for Android",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/zhanghai/MaterialFiles",
-      "stargazersCount": 8229,
+      "stargazersCount": 8230,
       "forksCount": 612,
       "language": "Kotlin",
       "topics": [
@@ -27,12 +56,12 @@
         "material-design"
       ],
       "releasesUrl": "https://api.github.com/repos/zhanghai/MaterialFiles/releases{/id}",
-      "updatedAt": "2026-04-29T10:33:35Z",
+      "updatedAt": "2026-04-30T01:10:16Z",
       "createdAt": "2018-05-27T23:22:03Z",
-      "downloadCount": 196388,
+      "downloadCount": 196477,
       "latestReleaseDate": "2024-06-30T05:17:48Z",
-      "releaseRecency": 668,
-      "releaseRecencyText": "Released 668 days ago"
+      "releaseRecency": 669,
+      "releaseRecencyText": "Released 669 days ago"
     },
     {
       "id": 491202920,
@@ -70,7 +99,7 @@
       "releasesUrl": "https://api.github.com/repos/mhss1/MyBrain/releases{/id}",
       "updatedAt": "2026-04-29T14:44:57Z",
       "createdAt": "2022-05-11T17:06:31Z",
-      "downloadCount": 14998,
+      "downloadCount": 15003,
       "latestReleaseDate": "2026-03-19T17:14:42Z",
       "releaseRecency": 41,
       "releaseRecencyText": "Released 41 days ago"
@@ -105,10 +134,40 @@
       "releasesUrl": "https://api.github.com/repos/TeamAmaze/AmazeFileManager/releases{/id}",
       "updatedAt": "2026-04-29T08:10:07Z",
       "createdAt": "2014-07-14T19:47:53Z",
-      "downloadCount": 325676,
+      "downloadCount": 325726,
       "latestReleaseDate": "2025-12-28T16:30:17Z",
       "releaseRecency": 122,
       "releaseRecencyText": "Released 122 days ago"
+    },
+    {
+      "id": 525732824,
+      "name": "spmp",
+      "fullName": "sayaka-sh/spmp",
+      "owner": {
+        "login": "sayaka-sh",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/44363049?v=4"
+      },
+      "description": "Note: Mostly non-functional, see README --- A YouTube Music client with a focus on customisation of colours and song metadata. Built with Compose Multiplatform for Android and desktop.",
+      "defaultBranch": "main",
+      "htmlUrl": "https://github.com/sayaka-sh/spmp",
+      "stargazersCount": 1442,
+      "forksCount": 55,
+      "language": "Kotlin",
+      "topics": [
+        "compose",
+        "compose-multiplatform",
+        "jetpack-compose",
+        "kotlin-multiplatform",
+        "music-player",
+        "youtube-music"
+      ],
+      "releasesUrl": "https://api.github.com/repos/sayaka-sh/spmp/releases{/id}",
+      "updatedAt": "2026-04-27T04:47:32Z",
+      "createdAt": "2022-08-17T10:00:47Z",
+      "downloadCount": 96425,
+      "latestReleaseDate": "2024-10-25T17:56:05Z",
+      "releaseRecency": 551,
+      "releaseRecencyText": "Released 551 days ago"
     },
     {
       "id": 80837945,
@@ -140,8 +199,8 @@
       "createdAt": "2017-02-03T14:48:34Z",
       "downloadCount": 10070,
       "latestReleaseDate": "2026-01-29T18:22:04Z",
-      "releaseRecency": 89,
-      "releaseRecencyText": "Released 89 days ago"
+      "releaseRecency": 90,
+      "releaseRecencyText": "Released 90 days ago"
     },
     {
       "id": 15120144,
@@ -175,10 +234,10 @@
       "releasesUrl": "https://api.github.com/repos/federicoiosue/Omni-Notes/releases{/id}",
       "updatedAt": "2026-04-27T16:10:34Z",
       "createdAt": "2013-12-11T21:59:18Z",
-      "downloadCount": 7044,
+      "downloadCount": 7046,
       "latestReleaseDate": "2023-12-16T22:45:41Z",
-      "releaseRecency": 864,
-      "releaseRecencyText": "Released 864 days ago"
+      "releaseRecency": 865,
+      "releaseRecencyText": "Released 865 days ago"
     },
     {
       "id": 262751629,
@@ -204,10 +263,39 @@
       "releasesUrl": "https://api.github.com/repos/OmGodse/Notally/releases{/id}",
       "updatedAt": "2026-04-29T04:42:53Z",
       "createdAt": "2020-05-10T09:22:25Z",
-      "downloadCount": 23265,
+      "downloadCount": 23271,
       "latestReleaseDate": "2025-02-25T10:16:56Z",
       "releaseRecency": 428,
       "releaseRecencyText": "Released 428 days ago"
+    },
+    {
+      "id": 496918131,
+      "name": "File-Manager",
+      "fullName": "FossifyOrg/File-Manager",
+      "owner": {
+        "login": "FossifyOrg",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/152776864?v=4"
+      },
+      "description": "Easy app for managing your files without ads, respecting your privacy & security",
+      "defaultBranch": "main",
+      "htmlUrl": "https://github.com/FossifyOrg/File-Manager",
+      "stargazersCount": 1527,
+      "forksCount": 97,
+      "language": "Kotlin",
+      "topics": [
+        "android",
+        "file-manager",
+        "foss",
+        "kotlin",
+        "open-source"
+      ],
+      "releasesUrl": "https://api.github.com/repos/FossifyOrg/File-Manager/releases{/id}",
+      "updatedAt": "2026-04-29T14:28:27Z",
+      "createdAt": "2022-05-27T08:26:08Z",
+      "downloadCount": 74416,
+      "latestReleaseDate": "2026-02-17T02:35:26Z",
+      "releaseRecency": 72,
+      "releaseRecencyText": "Released 72 days ago"
     },
     {
       "id": 107244490,
@@ -236,9 +324,9 @@
         "vault"
       ],
       "releasesUrl": "https://api.github.com/repos/Kunzisoft/KeePassDX/releases{/id}",
-      "updatedAt": "2026-04-29T14:10:24Z",
+      "updatedAt": "2026-04-30T00:50:26Z",
       "createdAt": "2017-10-17T09:08:57Z",
-      "downloadCount": 253995,
+      "downloadCount": 254082,
       "latestReleaseDate": "2026-04-01T14:56:27Z",
       "releaseRecency": 28,
       "releaseRecencyText": "Released 28 days ago"
@@ -276,7 +364,7 @@
       "releasesUrl": "https://api.github.com/repos/saber-notes/saber/releases{/id}",
       "updatedAt": "2026-04-29T10:38:17Z",
       "createdAt": "2022-07-22T03:39:01Z",
-      "downloadCount": 119643,
+      "downloadCount": 119679,
       "latestReleaseDate": "2026-04-16T16:44:01Z",
       "releaseRecency": 13,
       "releaseRecencyText": "Released 13 days ago"
@@ -309,7 +397,7 @@
       "releasesUrl": "https://api.github.com/repos/newhinton/Round-Sync/releases{/id}",
       "updatedAt": "2026-04-29T16:10:13Z",
       "createdAt": "2020-07-23T19:09:48Z",
-      "downloadCount": 50562,
+      "downloadCount": 50585,
       "latestReleaseDate": "2024-09-10T10:40:00Z",
       "releaseRecency": 596,
       "releaseRecencyText": "Released 596 days ago"
@@ -325,7 +413,7 @@
       "description": "🎨 Powerful, minimalistic, cross-platform, opensource note-taking app",
       "defaultBranch": "develop",
       "htmlUrl": "https://github.com/LinwoodDev/Butterfly",
-      "stargazersCount": 1832,
+      "stargazersCount": 1833,
       "forksCount": 135,
       "language": "Dart",
       "topics": [
@@ -350,9 +438,9 @@
         "writing"
       ],
       "releasesUrl": "https://api.github.com/repos/LinwoodDev/Butterfly/releases{/id}",
-      "updatedAt": "2026-04-29T15:08:34Z",
+      "updatedAt": "2026-04-30T04:58:09Z",
       "createdAt": "2020-12-21T08:47:28Z",
-      "downloadCount": 156172,
+      "downloadCount": 156236,
       "latestReleaseDate": "2026-04-26T11:45:25Z",
       "releaseRecency": 3,
       "releaseRecencyText": "Released 3 days ago"
@@ -368,7 +456,7 @@
       "description": "Text editor - Notes & ToDo (for Android) - Markdown, todo.txt, plaintext, math, ..",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/gsantner/markor",
-      "stargazersCount": 5477,
+      "stargazersCount": 5480,
       "forksCount": 471,
       "language": "Java",
       "topics": [
@@ -394,12 +482,50 @@
         "zim-wiki"
       ],
       "releasesUrl": "https://api.github.com/repos/gsantner/markor/releases{/id}",
-      "updatedAt": "2026-04-29T16:12:22Z",
+      "updatedAt": "2026-04-30T00:49:47Z",
       "createdAt": "2017-08-26T00:08:35Z",
-      "downloadCount": 109554,
+      "downloadCount": 109635,
       "latestReleaseDate": "2026-03-19T08:27:29Z",
       "releaseRecency": 41,
       "releaseRecencyText": "Released 41 days ago"
+    },
+    {
+      "id": 529395099,
+      "name": "quillpad",
+      "fullName": "quillpad/quillpad",
+      "owner": {
+        "login": "quillpad",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/118094128?v=4"
+      },
+      "description": "Take beautiful markdown notes and stay organized with task lists.",
+      "defaultBranch": "master",
+      "htmlUrl": "https://github.com/quillpad/quillpad",
+      "stargazersCount": 1307,
+      "forksCount": 110,
+      "language": "Kotlin",
+      "topics": [
+        "evernote",
+        "google-keep",
+        "joplin",
+        "keep",
+        "knowledge-management",
+        "markdown",
+        "nextcloud-notes",
+        "note-taking",
+        "notepad",
+        "notes",
+        "notes-app",
+        "privacy",
+        "tasks",
+        "todo-list"
+      ],
+      "releasesUrl": "https://api.github.com/repos/quillpad/quillpad/releases{/id}",
+      "updatedAt": "2026-04-28T08:19:57Z",
+      "createdAt": "2022-08-26T20:23:44Z",
+      "downloadCount": 43334,
+      "latestReleaseDate": "2026-02-24T04:29:29Z",
+      "releaseRecency": 65,
+      "releaseRecencyText": "Released 65 days ago"
     },
     {
       "id": 78243781,
@@ -412,8 +538,8 @@
       "description": "Super Productivity is an advanced todo list app with integrated Timeboxing and time tracking capabilities. It also comes with integrations for Jira, GitLab, GitHub and Open Project.",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/super-productivity/super-productivity",
-      "stargazersCount": 18910,
-      "forksCount": 1640,
+      "stargazersCount": 18925,
+      "forksCount": 1641,
       "language": "TypeScript",
       "topics": [
         "android",
@@ -438,12 +564,12 @@
         "windows"
       ],
       "releasesUrl": "https://api.github.com/repos/super-productivity/super-productivity/releases{/id}",
-      "updatedAt": "2026-04-29T17:14:49Z",
+      "updatedAt": "2026-04-30T05:40:44Z",
       "createdAt": "2017-01-06T22:30:58Z",
-      "downloadCount": 1255766,
+      "downloadCount": 1256486,
       "latestReleaseDate": "2026-04-25T21:49:53Z",
-      "releaseRecency": 3,
-      "releaseRecencyText": "Released 3 days ago"
+      "releaseRecency": 4,
+      "releaseRecencyText": "Released 4 days ago"
     },
     {
       "id": 838659679,
@@ -456,8 +582,8 @@
       "description": "A cross-platform Markdown AI note-taking software.",
       "defaultBranch": "dev",
       "htmlUrl": "https://github.com/codexu/note-gen",
-      "stargazersCount": 11475,
-      "forksCount": 851,
+      "stargazersCount": 11565,
+      "forksCount": 856,
       "language": "TypeScript",
       "topics": [
         "agent",
@@ -473,12 +599,12 @@
         "webdav"
       ],
       "releasesUrl": "https://api.github.com/repos/codexu/note-gen/releases{/id}",
-      "updatedAt": "2026-04-29T17:20:56Z",
+      "updatedAt": "2026-04-30T05:40:40Z",
       "createdAt": "2024-08-06T05:20:16Z",
-      "downloadCount": 143088,
+      "downloadCount": 143307,
       "latestReleaseDate": "2026-04-16T00:29:17Z",
-      "releaseRecency": 13,
-      "releaseRecencyText": "Released 13 days ago"
+      "releaseRecency": 14,
+      "releaseRecencyText": "Released 14 days ago"
     },
     {
       "id": 165047811,
@@ -509,10 +635,76 @@
       "releasesUrl": "https://api.github.com/repos/GitJournal/GitJournal/releases{/id}",
       "updatedAt": "2026-04-29T12:59:13Z",
       "createdAt": "2019-01-10T11:27:18Z",
-      "downloadCount": 4952,
+      "downloadCount": 4953,
       "latestReleaseDate": "2021-09-15T14:11:31Z",
       "releaseRecency": 1687,
       "releaseRecencyText": "Released 1687 days ago"
+    },
+    {
+      "id": 933052538,
+      "name": "SpeedyNote",
+      "fullName": "alpha-liu-01/SpeedyNote",
+      "owner": {
+        "login": "alpha-liu-01",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/116528196?v=4"
+      },
+      "description": "A simple note app with good performance and PDF import support",
+      "defaultBranch": "main",
+      "htmlUrl": "https://github.com/alpha-liu-01/SpeedyNote",
+      "stargazersCount": 1200,
+      "forksCount": 62,
+      "language": "C++",
+      "topics": [],
+      "releasesUrl": "https://api.github.com/repos/alpha-liu-01/SpeedyNote/releases{/id}",
+      "updatedAt": "2026-04-29T16:56:46Z",
+      "createdAt": "2025-02-15T03:17:58Z",
+      "downloadCount": 4739,
+      "latestReleaseDate": "2026-04-22T05:10:39Z",
+      "releaseRecency": 8,
+      "releaseRecencyText": "Released 8 days ago"
+    },
+    {
+      "id": 353775942,
+      "name": "notesnook",
+      "fullName": "streetwriters/notesnook",
+      "owner": {
+        "login": "streetwriters",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/63662537?v=4"
+      },
+      "description": "A fully open source & end-to-end encrypted note taking alternative to Evernote.",
+      "defaultBranch": "master",
+      "htmlUrl": "https://github.com/streetwriters/notesnook",
+      "stargazersCount": 13985,
+      "forksCount": 944,
+      "language": "TypeScript",
+      "topics": [
+        "asp-net-core",
+        "dotnet-core",
+        "electron",
+        "foss",
+        "hacktoberfest",
+        "note-managment",
+        "note-taking",
+        "note-taking-app",
+        "notebook",
+        "notes",
+        "notes-app",
+        "open-source",
+        "opensource",
+        "privacy",
+        "productivity",
+        "react",
+        "react-native",
+        "reactjs",
+        "self-hosted"
+      ],
+      "releasesUrl": "https://api.github.com/repos/streetwriters/notesnook/releases{/id}",
+      "updatedAt": "2026-04-30T05:38:12Z",
+      "createdAt": "2021-04-01T17:25:54Z",
+      "downloadCount": 6538448,
+      "latestReleaseDate": "2026-04-30T04:46:42Z",
+      "releaseRecency": 0,
+      "releaseRecencyText": "Released today"
     },
     {
       "id": 877230294,
@@ -525,7 +717,7 @@
       "description": "An open-source, self-hosted personal AI note tool prioritizing privacy, built using TypeScript .",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/blinkospace/blinko",
-      "stargazersCount": 10143,
+      "stargazersCount": 10145,
       "forksCount": 714,
       "language": "TypeScript",
       "topics": [
@@ -539,12 +731,12 @@
         "self-hosted"
       ],
       "releasesUrl": "https://api.github.com/repos/blinkospace/blinko/releases{/id}",
-      "updatedAt": "2026-04-29T12:58:52Z",
+      "updatedAt": "2026-04-30T01:20:31Z",
       "createdAt": "2024-10-23T10:04:59Z",
-      "downloadCount": 25790,
+      "downloadCount": 25818,
       "latestReleaseDate": "2026-04-12T02:16:09Z",
-      "releaseRecency": 17,
-      "releaseRecencyText": "Released 17 days ago"
+      "releaseRecency": 18,
+      "releaseRecencyText": "Released 18 days ago"
     }
   ]
 }
