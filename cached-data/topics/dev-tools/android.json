@@ -1,8 +1,8 @@
 {
   "category": "topics/dev-tools",
   "platform": "android",
-  "lastUpdated": "2026-05-07T05:37:46.442267Z",
-  "totalCount": 7,
+  "lastUpdated": "2026-05-08T05:09:53.719897Z",
+  "totalCount": 6,
   "repositories": [
     {
       "id": 44804216,
@@ -15,8 +15,8 @@
       "description": "Termux - a terminal emulator application for Android OS extendible by variety of packages.",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/termux/termux-app",
-      "stargazersCount": 54520,
-      "forksCount": 6527,
+      "stargazersCount": 54579,
+      "forksCount": 6529,
       "language": "Java",
       "topics": [
         "android",
@@ -26,12 +26,12 @@
         "termux"
       ],
       "releasesUrl": "https://api.github.com/repos/termux/termux-app/releases{/id}",
-      "updatedAt": "2026-05-07T06:02:08Z",
+      "updatedAt": "2026-05-08T05:50:51Z",
       "createdAt": "2015-10-23T09:42:46Z",
-      "downloadCount": 8453573,
+      "downloadCount": 8466954,
       "latestReleaseDate": "2025-05-22T22:47:26Z",
-      "releaseRecency": 349,
-      "releaseRecencyText": "Released 349 days ago"
+      "releaseRecency": 350,
+      "releaseRecencyText": "Released 350 days ago"
     },
     {
       "id": 32483164,
@@ -65,41 +65,10 @@
       "releasesUrl": "https://api.github.com/repos/clangen/musikcube/releases{/id}",
       "updatedAt": "2026-05-06T18:04:57Z",
       "createdAt": "2015-03-18T20:41:57Z",
-      "downloadCount": 140844,
+      "downloadCount": 140901,
       "latestReleaseDate": "2025-09-21T07:16:59Z",
-      "releaseRecency": 227,
-      "releaseRecencyText": "Released 227 days ago"
-    },
-    {
-      "id": 880108124,
-      "name": "PuppyGit",
-      "fullName": "catpuppyapp/PuppyGit",
-      "owner": {
-        "login": "catpuppyapp",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/186668786?v=4"
-      },
-      "description": "An android git client",
-      "defaultBranch": "main",
-      "htmlUrl": "https://github.com/catpuppyapp/PuppyGit",
-      "stargazersCount": 778,
-      "forksCount": 135,
-      "language": "Kotlin",
-      "topics": [
-        "android-git-client",
-        "android-obsidian-git",
-        "git-client",
-        "git-gui",
-        "markor-sync",
-        "obsidian",
-        "obsidian-sync"
-      ],
-      "releasesUrl": "https://api.github.com/repos/catpuppyapp/PuppyGit/releases{/id}",
-      "updatedAt": "2026-05-06T18:39:48Z",
-      "createdAt": "2024-10-29T06:02:22Z",
-      "downloadCount": 12985,
-      "latestReleaseDate": "2026-04-12T10:24:34Z",
-      "releaseRecency": 24,
-      "releaseRecencyText": "Released 24 days ago"
+      "releaseRecency": 228,
+      "releaseRecencyText": "Released 228 days ago"
     },
     {
       "id": 812362660,
@@ -112,8 +81,8 @@
       "description": "Mobile Git client for syncing a repository between remote and a local directory",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/ViscousPot/GitSync",
-      "stargazersCount": 1757,
-      "forksCount": 144,
+      "stargazersCount": 1760,
+      "forksCount": 145,
       "language": "Dart",
       "topics": [
         "git",
@@ -122,12 +91,12 @@
         "sync"
       ],
       "releasesUrl": "https://api.github.com/repos/ViscousPot/GitSync/releases{/id}",
-      "updatedAt": "2026-05-07T06:12:24Z",
+      "updatedAt": "2026-05-08T03:53:52Z",
       "createdAt": "2024-06-08T17:10:16Z",
-      "downloadCount": 9121,
+      "downloadCount": 9192,
       "latestReleaseDate": "2026-04-30T23:46:12Z",
-      "releaseRecency": 6,
-      "releaseRecencyText": "Released 6 days ago"
+      "releaseRecency": 7,
+      "releaseRecencyText": "Released 7 days ago"
     },
     {
       "id": 741230168,
@@ -140,17 +109,17 @@
       "description": "Generate images of code and terminal output 📸",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/charmbracelet/freeze",
-      "stargazersCount": 4536,
+      "stargazersCount": 4542,
       "forksCount": 90,
       "language": "Go",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/charmbracelet/freeze/releases{/id}",
-      "updatedAt": "2026-05-07T02:03:05Z",
+      "updatedAt": "2026-05-08T05:51:36Z",
       "createdAt": "2024-01-10T00:51:47Z",
-      "downloadCount": 34612,
+      "downloadCount": 34704,
       "latestReleaseDate": "2025-04-01T23:42:28Z",
-      "releaseRecency": 400,
-      "releaseRecencyText": "Released 400 days ago"
+      "releaseRecency": 401,
+      "releaseRecencyText": "Released 401 days ago"
     },
     {
       "id": 376492865,
@@ -163,7 +132,7 @@
       "description": "A high-performance HTTP benchmarking tool that includes a real-time web UI and terminal display",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/six-ddc/plow",
-      "stargazersCount": 4410,
+      "stargazersCount": 4454,
       "forksCount": 151,
       "language": "Go",
       "topics": [
@@ -178,12 +147,12 @@
         "wrk"
       ],
       "releasesUrl": "https://api.github.com/repos/six-ddc/plow/releases{/id}",
-      "updatedAt": "2026-05-07T04:15:40Z",
+      "updatedAt": "2026-05-08T02:05:13Z",
       "createdAt": "2021-06-13T09:10:43Z",
-      "downloadCount": 86105,
+      "downloadCount": 86246,
       "latestReleaseDate": "2026-04-28T15:23:01Z",
-      "releaseRecency": 8,
-      "releaseRecencyText": "Released 8 days ago"
+      "releaseRecency": 9,
+      "releaseRecencyText": "Released 9 days ago"
     },
     {
       "id": 656839452,
@@ -196,17 +165,17 @@
       "description": "Send emails from your terminal 📬",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/charmbracelet/pop",
-      "stargazersCount": 2837,
+      "stargazersCount": 2838,
       "forksCount": 69,
       "language": "Go",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/charmbracelet/pop/releases{/id}",
-      "updatedAt": "2026-05-06T18:58:20Z",
+      "updatedAt": "2026-05-08T00:40:34Z",
       "createdAt": "2023-06-21T18:45:38Z",
-      "downloadCount": 12593,
+      "downloadCount": 12626,
       "latestReleaseDate": "2026-04-28T14:17:49Z",
-      "releaseRecency": 8,
-      "releaseRecencyText": "Released 8 days ago"
+      "releaseRecency": 9,
+      "releaseRecencyText": "Released 9 days ago"
     }
   ]
 }
