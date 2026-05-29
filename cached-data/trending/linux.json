@@ -1,8 +1,8 @@
 {
   "category": "trending",
   "platform": "linux",
-  "lastUpdated": "2026-05-27T06:35:28.259946Z",
-  "totalCount": 172,
+  "lastUpdated": "2026-05-29T06:21:30.806814Z",
+  "totalCount": 174,
   "repositories": [
     {
       "id": 1139971460,
@@ -15,8 +15,8 @@
       "description": "CLI proxy that reduces LLM token consumption by 60-90% on common dev commands. Single Rust binary, zero dependencies",
       "defaultBranch": "develop",
       "htmlUrl": "https://github.com/rtk-ai/rtk",
-      "stargazersCount": 54761,
-      "forksCount": 3362,
+      "stargazersCount": 55904,
+      "forksCount": 3418,
       "language": "Rust",
       "topics": [
         "agentic-coding",
@@ -34,37 +34,13 @@
         "token-optimization"
       ],
       "releasesUrl": "https://api.github.com/repos/rtk-ai/rtk/releases{/id}",
-      "updatedAt": "2026-05-27T06:44:21Z",
+      "updatedAt": "2026-05-29T06:29:55Z",
       "createdAt": "2026-01-22T16:54:16Z",
-      "downloadCount": 712454,
+      "downloadCount": 745514,
       "latestReleaseDate": "2026-05-24T15:42:11Z",
-      "releaseRecency": 2,
-      "releaseRecencyText": "Released 2 days ago",
-      "trendingScore": 8848.42
-    },
-    {
-      "id": 1235834494,
-      "name": "OrcaSlicer-bambulab",
-      "fullName": "FULU-Foundation/OrcaSlicer-bambulab",
-      "owner": {
-        "login": "FULU-Foundation",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/223959643?v=4"
-      },
-      "description": null,
-      "defaultBranch": "main",
-      "htmlUrl": "https://github.com/FULU-Foundation/OrcaSlicer-bambulab",
-      "stargazersCount": 6566,
-      "forksCount": 5063,
-      "language": "C++",
-      "topics": [],
-      "releasesUrl": "https://api.github.com/repos/FULU-Foundation/OrcaSlicer-bambulab/releases{/id}",
-      "updatedAt": "2026-05-27T06:44:59Z",
-      "createdAt": "2026-05-11T17:44:55Z",
-      "downloadCount": 16567,
-      "latestReleaseDate": "2026-05-12T18:15:30Z",
-      "releaseRecency": 14,
-      "releaseRecencyText": "Released 14 days ago",
-      "trendingScore": 8770.67
+      "releaseRecency": 4,
+      "releaseRecencyText": "Released 4 days ago",
+      "trendingScore": 8889.65
     },
     {
       "id": 975734319,
@@ -77,18 +53,18 @@
       "description": "The open source coding agent.",
       "defaultBranch": "dev",
       "htmlUrl": "https://github.com/anomalyco/opencode",
-      "stargazersCount": 165860,
-      "forksCount": 19715,
+      "stargazersCount": 166808,
+      "forksCount": 19874,
       "language": "TypeScript",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/anomalyco/opencode/releases{/id}",
-      "updatedAt": "2026-05-27T06:45:54Z",
+      "updatedAt": "2026-05-29T06:28:26Z",
       "createdAt": "2025-04-30T20:08:00Z",
-      "downloadCount": 50373678,
-      "latestReleaseDate": "2026-05-27T04:01:13Z",
+      "downloadCount": 51565546,
+      "latestReleaseDate": "2026-05-28T19:34:49Z",
       "releaseRecency": 0,
       "releaseRecencyText": "Released today",
-      "trendingScore": 8483.89
+      "trendingScore": 8488.96
     },
     {
       "id": 1130564872,
@@ -101,8 +77,8 @@
       "description": "Real-time global intelligence dashboard. AI-powered news aggregation, geopolitical monitoring, and infrastructure tracking in a unified situational awareness interface",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/koala73/worldmonitor",
-      "stargazersCount": 54963,
-      "forksCount": 8840,
+      "stargazersCount": 55061,
+      "forksCount": 8861,
       "language": "TypeScript",
       "topics": [
         "ai",
@@ -116,13 +92,37 @@
         "situation"
       ],
       "releasesUrl": "https://api.github.com/repos/koala73/worldmonitor/releases{/id}",
-      "updatedAt": "2026-05-27T06:39:35Z",
+      "updatedAt": "2026-05-29T06:19:36Z",
       "createdAt": "2026-01-08T17:26:06Z",
-      "downloadCount": 205775,
+      "downloadCount": 206461,
       "latestReleaseDate": "2026-03-01T23:34:08Z",
-      "releaseRecency": 86,
-      "releaseRecencyText": "Released 86 days ago",
-      "trendingScore": 7965.65
+      "releaseRecency": 88,
+      "releaseRecencyText": "Released 88 days ago",
+      "trendingScore": 7865.86
+    },
+    {
+      "id": 1235834494,
+      "name": "OrcaSlicer-bambulab",
+      "fullName": "FULU-Foundation/OrcaSlicer-bambulab",
+      "owner": {
+        "login": "FULU-Foundation",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/223959643?v=4"
+      },
+      "description": null,
+      "defaultBranch": "main",
+      "htmlUrl": "https://github.com/FULU-Foundation/OrcaSlicer-bambulab",
+      "stargazersCount": 6624,
+      "forksCount": 5082,
+      "language": "C++",
+      "topics": [],
+      "releasesUrl": "https://api.github.com/repos/FULU-Foundation/OrcaSlicer-bambulab/releases{/id}",
+      "updatedAt": "2026-05-29T06:01:40Z",
+      "createdAt": "2026-05-11T17:44:55Z",
+      "downloadCount": 17109,
+      "latestReleaseDate": "2026-05-12T18:15:30Z",
+      "releaseRecency": 16,
+      "releaseRecencyText": "Released 16 days ago",
+      "trendingScore": 7808.94
     },
     {
       "id": 1161163182,
@@ -135,18 +135,18 @@
       "description": "Your Personal AI super intelligence. Private, Simple and extremely powerful.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/tinyhumansai/openhuman",
-      "stargazersCount": 28536,
-      "forksCount": 2664,
+      "stargazersCount": 29355,
+      "forksCount": 2772,
       "language": "Rust",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/tinyhumansai/openhuman/releases{/id}",
-      "updatedAt": "2026-05-27T06:43:52Z",
+      "updatedAt": "2026-05-29T06:30:40Z",
       "createdAt": "2026-02-18T20:01:27Z",
-      "downloadCount": 647751,
-      "latestReleaseDate": "2026-05-19T07:17:46Z",
-      "releaseRecency": 7,
-      "releaseRecencyText": "Released 7 days ago",
-      "trendingScore": 5899.71
+      "downloadCount": 714692,
+      "latestReleaseDate": "2026-05-27T16:47:46Z",
+      "releaseRecency": 1,
+      "releaseRecencyText": "Released yesterday",
+      "trendingScore": 5946.3
     },
     {
       "id": 1031912724,
@@ -159,8 +159,8 @@
       "description": "A cross-platform desktop All-in-One assistant for Claude Code, Codex, OpenCode, OpenClaw, Gemini CLI & Hermes Agent. Only official website: ccswitch.io",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/farion1231/cc-switch",
-      "stargazersCount": 82089,
-      "forksCount": 5340,
+      "stargazersCount": 84037,
+      "forksCount": 5472,
       "language": "Rust",
       "topics": [
         "ai-tools",
@@ -185,13 +185,13 @@
         "wsl-support"
       ],
       "releasesUrl": "https://api.github.com/repos/farion1231/cc-switch/releases{/id}",
-      "updatedAt": "2026-05-27T06:44:12Z",
+      "updatedAt": "2026-05-29T06:31:34Z",
       "createdAt": "2025-08-04T14:16:16Z",
-      "downloadCount": 6036062,
+      "downloadCount": 6276527,
       "latestReleaseDate": "2026-05-16T03:42:43Z",
-      "releaseRecency": 11,
-      "releaseRecencyText": "Released 11 days ago",
-      "trendingScore": 5595.36
+      "releaseRecency": 13,
+      "releaseRecencyText": "Released 13 days ago",
+      "trendingScore": 5689.06
     },
     {
       "id": 1166139870,
@@ -204,8 +204,8 @@
       "description": "Open-source Agent Operating System",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/RightNow-AI/openfang",
-      "stargazersCount": 17660,
-      "forksCount": 2251,
+      "stargazersCount": 17673,
+      "forksCount": 2250,
       "language": "Rust",
       "topics": [
         "agent-framework",
@@ -218,13 +218,13 @@
         "rust"
       ],
       "releasesUrl": "https://api.github.com/repos/RightNow-AI/openfang/releases{/id}",
-      "updatedAt": "2026-05-27T06:43:30Z",
+      "updatedAt": "2026-05-29T06:22:07Z",
       "createdAt": "2026-02-24T23:12:38Z",
-      "downloadCount": 61688,
+      "downloadCount": 62379,
       "latestReleaseDate": "2026-05-12T18:42:42Z",
-      "releaseRecency": 14,
-      "releaseRecencyText": "Released 14 days ago",
-      "trendingScore": 3897.32
+      "releaseRecency": 16,
+      "releaseRecencyText": "Released 16 days ago",
+      "trendingScore": 3816.65
     },
     {
       "id": 1104535633,
@@ -237,21 +237,21 @@
       "description": "Professional Antigravity Account Manager & Switcher. One-click seamless account switching for Antigravity Tools. Built with Tauri v2 + React (Rust).专业的 Antigravity 账号管理与切换工具。为 Antigravity 提供一键无缝账号切换功能。",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/lbjlaq/Antigravity-Manager",
-      "stargazersCount": 29436,
-      "forksCount": 3198,
+      "stargazersCount": 29468,
+      "forksCount": 3200,
       "language": "Rust",
       "topics": [
         "account-manager",
         "antigravity"
       ],
       "releasesUrl": "https://api.github.com/repos/lbjlaq/Antigravity-Manager/releases{/id}",
-      "updatedAt": "2026-05-27T06:41:12Z",
+      "updatedAt": "2026-05-29T06:20:44Z",
       "createdAt": "2025-11-26T10:47:13Z",
-      "downloadCount": 1423511,
+      "downloadCount": 1435784,
       "latestReleaseDate": "2026-05-20T16:48:41Z",
-      "releaseRecency": 6,
-      "releaseRecencyText": "Released 6 days ago",
-      "trendingScore": 3268.6
+      "releaseRecency": 8,
+      "releaseRecencyText": "Released 8 days ago",
+      "trendingScore": 3236.55
     },
     {
       "id": 721767116,
@@ -264,8 +264,8 @@
       "description": "A modern GUI client based on Tauri, designed to run in Windows, macOS and Linux for tailored proxy experience",
       "defaultBranch": "dev",
       "htmlUrl": "https://github.com/clash-verge-rev/clash-verge-rev",
-      "stargazersCount": 121190,
-      "forksCount": 8826,
+      "stargazersCount": 121650,
+      "forksCount": 8859,
       "language": "TypeScript",
       "topics": [
         "clash",
@@ -278,13 +278,13 @@
         "windows"
       ],
       "releasesUrl": "https://api.github.com/repos/clash-verge-rev/clash-verge-rev/releases{/id}",
-      "updatedAt": "2026-05-27T06:45:41Z",
+      "updatedAt": "2026-05-29T06:31:10Z",
       "createdAt": "2023-11-21T18:24:03Z",
-      "downloadCount": 28941500,
+      "downloadCount": 29474156,
       "latestReleaseDate": "2026-05-20T07:01:22Z",
-      "releaseRecency": 6,
-      "releaseRecencyText": "Released 6 days ago",
-      "trendingScore": 2655.18
+      "releaseRecency": 8,
+      "releaseRecencyText": "Released 8 days ago",
+      "trendingScore": 2659.44
     },
     {
       "id": 1206553433,
@@ -297,8 +297,8 @@
       "description": "Instant, Concurrent, Secure & Lightweight Sandbox for AI Agents.",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/TencentCloud/CubeSandbox",
-      "stargazersCount": 5962,
-      "forksCount": 460,
+      "stargazersCount": 5995,
+      "forksCount": 466,
       "language": "Rust",
       "topics": [
         "agents",
@@ -306,13 +306,13 @@
         "sandbox"
       ],
       "releasesUrl": "https://api.github.com/repos/TencentCloud/CubeSandbox/releases{/id}",
-      "updatedAt": "2026-05-27T06:36:25Z",
+      "updatedAt": "2026-05-29T05:48:42Z",
       "createdAt": "2026-04-10T03:00:31Z",
-      "downloadCount": 2653,
+      "downloadCount": 2772,
       "latestReleaseDate": "2026-05-18T08:13:00Z",
-      "releaseRecency": 8,
-      "releaseRecencyText": "Released 8 days ago",
-      "trendingScore": 2553.02
+      "releaseRecency": 10,
+      "releaseRecencyText": "Released 10 days ago",
+      "trendingScore": 2462.94
     },
     {
       "id": 753490180,
@@ -325,8 +325,8 @@
       "description": "Daytona is a Secure and Elastic Infrastructure for Running AI-Generated Code",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/daytonaio/daytona",
-      "stargazersCount": 72452,
-      "forksCount": 5586,
+      "stargazersCount": 72499,
+      "forksCount": 5606,
       "language": "TypeScript",
       "topics": [
         "agentic-workflow",
@@ -339,13 +339,13 @@
         "developer-tools"
       ],
       "releasesUrl": "https://api.github.com/repos/daytonaio/daytona/releases{/id}",
-      "updatedAt": "2026-05-27T06:35:15Z",
+      "updatedAt": "2026-05-29T06:14:35Z",
       "createdAt": "2024-02-06T08:21:20Z",
-      "downloadCount": 32661,
+      "downloadCount": 33752,
       "latestReleaseDate": "2026-05-26T10:17:15Z",
-      "releaseRecency": 0,
-      "releaseRecencyText": "Released today",
-      "trendingScore": 1725.05
+      "releaseRecency": 2,
+      "releaseRecencyText": "Released 2 days ago",
+      "trendingScore": 1722.07
     },
     {
       "id": 1002125012,
@@ -358,8 +358,8 @@
       "description": "Get 10X more out of Claude Code, Codex or any coding agent",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/BloopAI/vibe-kanban",
-      "stargazersCount": 26542,
-      "forksCount": 2779,
+      "stargazersCount": 26575,
+      "forksCount": 2787,
       "language": "Rust",
       "topics": [
         "agent",
@@ -369,13 +369,13 @@
         "task-manager"
       ],
       "releasesUrl": "https://api.github.com/repos/BloopAI/vibe-kanban/releases{/id}",
-      "updatedAt": "2026-05-27T06:17:19Z",
+      "updatedAt": "2026-05-29T06:31:04Z",
       "createdAt": "2025-06-14T19:10:21Z",
-      "downloadCount": 7694,
+      "downloadCount": 7955,
       "latestReleaseDate": "2026-04-24T09:46:55Z",
-      "releaseRecency": 32,
-      "releaseRecencyText": "Released 32 days ago",
-      "trendingScore": 1550.22
+      "releaseRecency": 34,
+      "releaseRecencyText": "Released 34 days ago",
+      "trendingScore": 1543.3
     },
     {
       "id": 1135492298,
@@ -388,8 +388,8 @@
       "description": " 🚀 通用 AI IDE 账号管理工具：支持 Antigravity / Codex / GitHub Copilot / Windsurf / Kiro / Cursor / Gemini-cli / CodeBuddy，多账号切换、配额监控、自动唤醒与多开实例管理。 🚀 Universal AI IDE account manager for Antigravity / Codex / GitHub Copilot / Windsurf / Kiro / Cursor / Gemini-cli / CodeBuddy, with multi-account switching, quota monitoring, wake-up automation, and multi-insta",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/jlcodes99/cockpit-tools",
-      "stargazersCount": 9368,
-      "forksCount": 863,
+      "stargazersCount": 9605,
+      "forksCount": 890,
       "language": "Rust",
       "topics": [
         "account-manager",
@@ -403,13 +403,13 @@
         "windsurf"
       ],
       "releasesUrl": "https://api.github.com/repos/jlcodes99/cockpit-tools/releases{/id}",
-      "updatedAt": "2026-05-27T06:33:40Z",
+      "updatedAt": "2026-05-29T06:22:00Z",
       "createdAt": "2026-01-16T07:09:32Z",
-      "downloadCount": 2930200,
+      "downloadCount": 3038210,
       "latestReleaseDate": "2026-05-27T04:09:51Z",
-      "releaseRecency": 0,
-      "releaseRecencyText": "Released today",
-      "trendingScore": 1457.23
+      "releaseRecency": 2,
+      "releaseRecencyText": "Released 2 days ago",
+      "trendingScore": 1471.3
     },
     {
       "id": 846698999,
@@ -422,8 +422,8 @@
       "description": "an open source, extensible AI agent that goes beyond code suggestions - install, execute, edit, and test with any LLM",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/aaif-goose/goose",
-      "stargazersCount": 45924,
-      "forksCount": 4734,
+      "stargazersCount": 46003,
+      "forksCount": 4753,
       "language": "Rust",
       "topics": [
         "acp",
@@ -432,13 +432,13 @@
         "mcp"
       ],
       "releasesUrl": "https://api.github.com/repos/aaif-goose/goose/releases{/id}",
-      "updatedAt": "2026-05-27T04:52:08Z",
+      "updatedAt": "2026-05-29T06:10:40Z",
       "createdAt": "2024-08-23T19:03:36Z",
-      "downloadCount": 1104513,
-      "latestReleaseDate": "2026-05-22T00:42:05Z",
-      "releaseRecency": 5,
-      "releaseRecencyText": "Released 5 days ago",
-      "trendingScore": 1448.89
+      "downloadCount": 1106355,
+      "latestReleaseDate": "2026-05-27T23:53:04Z",
+      "releaseRecency": 1,
+      "releaseRecencyText": "Released yesterday",
+      "trendingScore": 1446.89
     },
     {
       "id": 643445235,
@@ -451,8 +451,8 @@
       "description": "🤯 LobeHub is your Chief Agent Operator, organizing your agents into 7×24 operations by hiring, scheduling, and reporting on your entire AI team.",
       "defaultBranch": "canary",
       "htmlUrl": "https://github.com/lobehub/lobehub",
-      "stargazersCount": 77771,
-      "forksCount": 15294,
+      "stargazersCount": 77904,
+      "forksCount": 15324,
       "language": "TypeScript",
       "topics": [
         "agent",
@@ -472,13 +472,13 @@
         "skills"
       ],
       "releasesUrl": "https://api.github.com/repos/lobehub/lobehub/releases{/id}",
-      "updatedAt": "2026-05-27T06:43:37Z",
+      "updatedAt": "2026-05-29T06:17:20Z",
       "createdAt": "2023-05-21T07:19:12Z",
-      "downloadCount": 2552383,
-      "latestReleaseDate": "2026-05-18T04:44:53Z",
-      "releaseRecency": 9,
-      "releaseRecencyText": "Released 9 days ago",
-      "trendingScore": 1412.73
+      "downloadCount": 2556271,
+      "latestReleaseDate": "2026-05-29T01:55:40Z",
+      "releaseRecency": 0,
+      "releaseRecencyText": "Released today",
+      "trendingScore": 1412.58
     },
     {
       "id": 1166129534,
@@ -491,18 +491,18 @@
       "description": "OpenShell is the safe, private runtime for autonomous AI agents.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/NVIDIA/OpenShell",
-      "stargazersCount": 6270,
-      "forksCount": 754,
+      "stargazersCount": 6311,
+      "forksCount": 770,
       "language": "Rust",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/NVIDIA/OpenShell/releases{/id}",
-      "updatedAt": "2026-05-27T03:11:52Z",
+      "updatedAt": "2026-05-29T04:06:35Z",
       "createdAt": "2026-02-24T22:52:22Z",
-      "downloadCount": 365924,
-      "latestReleaseDate": "2026-05-26T15:32:41Z",
+      "downloadCount": 392545,
+      "latestReleaseDate": "2026-05-28T15:32:57Z",
       "releaseRecency": 0,
       "releaseRecencyText": "Released today",
-      "trendingScore": 1394.02
+      "trendingScore": 1373.2
     },
     {
       "id": 578822531,
@@ -515,8 +515,8 @@
       "description": "An open-source cross-platform alternative to AirDrop",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/localsend/localsend",
-      "stargazersCount": 82165,
-      "forksCount": 4437,
+      "stargazersCount": 82320,
+      "forksCount": 4449,
       "language": "Dart",
       "topics": [
         "dart",
@@ -525,13 +525,13 @@
         "flutter-apps"
       ],
       "releasesUrl": "https://api.github.com/repos/localsend/localsend/releases{/id}",
-      "updatedAt": "2026-05-27T06:28:39Z",
+      "updatedAt": "2026-05-29T06:30:15Z",
       "createdAt": "2022-12-16T00:46:07Z",
-      "downloadCount": 10857277,
+      "downloadCount": 10899933,
       "latestReleaseDate": "2025-02-20T01:23:55Z",
-      "releaseRecency": 461,
-      "releaseRecencyText": "Released 461 days ago",
-      "trendingScore": 1315.28
+      "releaseRecency": 463,
+      "releaseRecencyText": "Released 463 days ago",
+      "trendingScore": 1315.67
     },
     {
       "id": 594155488,
@@ -544,8 +544,8 @@
       "description": "#1 PDF Application on GitHub that lets you edit PDFs on any device anywhere",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/Stirling-Tools/Stirling-PDF",
-      "stargazersCount": 79636,
-      "forksCount": 6981,
+      "stargazersCount": 79790,
+      "forksCount": 6989,
       "language": "TypeScript",
       "topics": [
         "docker",
@@ -563,13 +563,13 @@
         "self-hosted"
       ],
       "releasesUrl": "https://api.github.com/repos/Stirling-Tools/Stirling-PDF/releases{/id}",
-      "updatedAt": "2026-05-27T06:37:48Z",
+      "updatedAt": "2026-05-29T06:26:04Z",
       "createdAt": "2023-01-27T18:22:42Z",
-      "downloadCount": 1797655,
+      "downloadCount": 1804139,
       "latestReleaseDate": "2026-05-19T10:52:27Z",
-      "releaseRecency": 7,
-      "releaseRecencyText": "Released 7 days ago",
-      "trendingScore": 1310.88
+      "releaseRecency": 9,
+      "releaseRecencyText": "Released 9 days ago",
+      "trendingScore": 1311.26
     },
     {
       "id": 805155266,
@@ -582,8 +582,8 @@
       "description": "AI productivity studio with smart chat, autonomous agents, and 300+ assistants. Unified access to frontier LLMs",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/CherryHQ/cherry-studio",
-      "stargazersCount": 46384,
-      "forksCount": 4403,
+      "stargazersCount": 46524,
+      "forksCount": 4418,
       "language": "TypeScript",
       "topics": [
         "agent-skills",
@@ -598,13 +598,13 @@
         "vibe-coding"
       ],
       "releasesUrl": "https://api.github.com/repos/CherryHQ/cherry-studio/releases{/id}",
-      "updatedAt": "2026-05-27T06:16:33Z",
+      "updatedAt": "2026-05-29T06:30:36Z",
       "createdAt": "2024-05-24T01:56:26Z",
-      "downloadCount": 19910004,
-      "latestReleaseDate": "2026-05-15T14:05:58Z",
-      "releaseRecency": 11,
-      "releaseRecencyText": "Released 11 days ago",
-      "trendingScore": 1265.59
+      "downloadCount": 20103425,
+      "latestReleaseDate": "2026-05-28T16:00:55Z",
+      "releaseRecency": 0,
+      "releaseRecencyText": "Released today",
+      "trendingScore": 1265.96
     },
     {
       "id": 299354207,
@@ -617,8 +617,8 @@
       "description": "An open-source remote desktop application designed for self-hosting, as an alternative to TeamViewer.",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/rustdesk/rustdesk",
-      "stargazersCount": 115010,
-      "forksCount": 17335,
+      "stargazersCount": 115145,
+      "forksCount": 17363,
       "language": "Rust",
       "topics": [
         "android",
@@ -642,13 +642,42 @@
         "windows"
       ],
       "releasesUrl": "https://api.github.com/repos/rustdesk/rustdesk/releases{/id}",
-      "updatedAt": "2026-05-27T06:29:09Z",
+      "updatedAt": "2026-05-29T06:12:00Z",
       "createdAt": "2020-09-28T15:36:08Z",
-      "downloadCount": 56773990,
+      "downloadCount": 56990197,
       "latestReleaseDate": "2026-03-05T05:05:30Z",
-      "releaseRecency": 83,
-      "releaseRecencyText": "Released 83 days ago",
-      "trendingScore": 1149.36
+      "releaseRecency": 85,
+      "releaseRecencyText": "Released 85 days ago",
+      "trendingScore": 1149.59
+    },
+    {
+      "id": 931888694,
+      "name": "Handy",
+      "fullName": "cjpais/Handy",
+      "owner": {
+        "login": "cjpais",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/1559480?v=4"
+      },
+      "description": "A free, open source, and extensible speech-to-text application that works completely offline.",
+      "defaultBranch": "main",
+      "htmlUrl": "https://github.com/cjpais/Handy",
+      "stargazersCount": 22630,
+      "forksCount": 1883,
+      "language": "Rust",
+      "topics": [
+        "accessibility",
+        "cross-platform",
+        "speech-to-text",
+        "tauri-v2"
+      ],
+      "releasesUrl": "https://api.github.com/repos/cjpais/Handy/releases{/id}",
+      "updatedAt": "2026-05-29T06:31:47Z",
+      "createdAt": "2025-02-13T02:42:29Z",
+      "downloadCount": 2180885,
+      "latestReleaseDate": "2026-04-28T00:20:07Z",
+      "releaseRecency": 31,
+      "releaseRecencyText": "Released 31 days ago",
+      "trendingScore": 990.98
     },
     {
       "id": 519859998,
@@ -661,8 +690,8 @@
       "description": "There can be more than Notion and Miro. AFFiNE(pronounced [ə‘fain]) is a next-gen knowledge base that brings planning, sorting and creating all together. Privacy first, open-source, customizable and ready to use. ",
       "defaultBranch": "canary",
       "htmlUrl": "https://github.com/toeverything/AFFiNE",
-      "stargazersCount": 68793,
-      "forksCount": 4885,
+      "stargazersCount": 68853,
+      "forksCount": 4891,
       "language": "TypeScript",
       "topics": [
         "app",
@@ -685,42 +714,13 @@
         "workspace"
       ],
       "releasesUrl": "https://api.github.com/repos/toeverything/AFFiNE/releases{/id}",
-      "updatedAt": "2026-05-27T06:21:52Z",
+      "updatedAt": "2026-05-29T06:30:15Z",
       "createdAt": "2022-07-31T18:45:21Z",
-      "downloadCount": 6341937,
+      "downloadCount": 6368837,
       "latestReleaseDate": "2026-02-25T03:11:57Z",
-      "releaseRecency": 91,
-      "releaseRecencyText": "Released 91 days ago",
-      "trendingScore": 987.28
-    },
-    {
-      "id": 931888694,
-      "name": "Handy",
-      "fullName": "cjpais/Handy",
-      "owner": {
-        "login": "cjpais",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/1559480?v=4"
-      },
-      "description": "A free, open source, and extensible speech-to-text application that works completely offline.",
-      "defaultBranch": "main",
-      "htmlUrl": "https://github.com/cjpais/Handy",
-      "stargazersCount": 22433,
-      "forksCount": 1861,
-      "language": "Rust",
-      "topics": [
-        "accessibility",
-        "cross-platform",
-        "speech-to-text",
-        "tauri-v2"
-      ],
-      "releasesUrl": "https://api.github.com/repos/cjpais/Handy/releases{/id}",
-      "updatedAt": "2026-05-27T06:22:55Z",
-      "createdAt": "2025-02-13T02:42:29Z",
-      "downloadCount": 2141931,
-      "latestReleaseDate": "2026-04-28T00:20:07Z",
-      "releaseRecency": 29,
-      "releaseRecencyText": "Released 29 days ago",
-      "trendingScore": 986.68
+      "releaseRecency": 93,
+      "releaseRecencyText": "Released 93 days ago",
+      "trendingScore": 986.73
     },
     {
       "id": 199570071,
@@ -733,8 +733,8 @@
       "description": "A GUI client for Windows, Linux and macOS, support Xray and sing-box and others",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/2dust/v2rayN",
-      "stargazersCount": 106962,
-      "forksCount": 15143,
+      "stargazersCount": 107177,
+      "forksCount": 15158,
       "language": "C#",
       "topics": [
         "proxy",
@@ -750,13 +750,13 @@
         "xtls"
       ],
       "releasesUrl": "https://api.github.com/repos/2dust/v2rayN/releases{/id}",
-      "updatedAt": "2026-05-27T06:44:08Z",
+      "updatedAt": "2026-05-29T06:26:20Z",
       "createdAt": "2019-07-30T03:47:24Z",
-      "downloadCount": 57620514,
+      "downloadCount": 57796770,
       "latestReleaseDate": "2026-05-21T09:27:36Z",
-      "releaseRecency": 5,
-      "releaseRecencyText": "Released 5 days ago",
-      "trendingScore": 861.1
+      "releaseRecency": 7,
+      "releaseRecencyText": "Released 7 days ago",
+      "trendingScore": 862.13
     },
     {
       "id": 377496562,
@@ -769,8 +769,8 @@
       "description": "Bring projects, wikis, and teams together with AI. AppFlowy is the AI collaborative workspace where you achieve more without losing control of your data. The leading open source Notion alternative.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/AppFlowy-IO/AppFlowy",
-      "stargazersCount": 71326,
-      "forksCount": 5330,
+      "stargazersCount": 71409,
+      "forksCount": 5345,
       "language": "Dart",
       "topics": [
         "blog",
@@ -787,13 +787,13 @@
         "wiki"
       ],
       "releasesUrl": "https://api.github.com/repos/AppFlowy-IO/AppFlowy/releases{/id}",
-      "updatedAt": "2026-05-27T06:29:34Z",
+      "updatedAt": "2026-05-29T06:31:35Z",
       "createdAt": "2021-06-16T12:56:48Z",
-      "downloadCount": 5087128,
+      "downloadCount": 5110902,
       "latestReleaseDate": "2026-05-27T02:51:17Z",
-      "releaseRecency": 0,
-      "releaseRecencyText": "Released today",
-      "trendingScore": 790.32
+      "releaseRecency": 2,
+      "releaseRecencyText": "Released 2 days ago",
+      "trendingScore": 790.36
     },
     {
       "id": 551376520,
@@ -806,8 +806,8 @@
       "description": "🤱🏻 Turn any webpage into a desktop app with one command.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/tw93/Pake",
-      "stargazersCount": 49300,
-      "forksCount": 9962,
+      "stargazersCount": 49484,
+      "forksCount": 10005,
       "language": "Rust",
       "topics": [
         "chatgpt",
@@ -825,13 +825,13 @@
         "youtube"
       ],
       "releasesUrl": "https://api.github.com/repos/tw93/Pake/releases{/id}",
-      "updatedAt": "2026-05-27T06:45:06Z",
+      "updatedAt": "2026-05-29T06:14:08Z",
       "createdAt": "2022-10-14T09:32:57Z",
-      "downloadCount": 529094,
+      "downloadCount": 529839,
       "latestReleaseDate": "2026-05-25T01:05:01Z",
-      "releaseRecency": 2,
-      "releaseRecencyText": "Released 2 days ago",
-      "trendingScore": 782.97
+      "releaseRecency": 4,
+      "releaseRecencyText": "Released 4 days ago",
+      "trendingScore": 784.62
     },
     {
       "id": 663900193,
@@ -844,8 +844,8 @@
       "description": "💥 Blazing fast terminal file manager written in Rust, based on async I/O.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/sxyazi/yazi",
-      "stargazersCount": 38524,
-      "forksCount": 883,
+      "stargazersCount": 38716,
+      "forksCount": 884,
       "language": "Rust",
       "topics": [
         "android",
@@ -869,13 +869,13 @@
         "windows"
       ],
       "releasesUrl": "https://api.github.com/repos/sxyazi/yazi/releases{/id}",
-      "updatedAt": "2026-05-27T06:16:30Z",
+      "updatedAt": "2026-05-29T06:31:20Z",
       "createdAt": "2023-07-08T11:45:55Z",
-      "downloadCount": 427224,
+      "downloadCount": 431190,
       "latestReleaseDate": "2026-05-05T18:30:21Z",
-      "releaseRecency": 21,
-      "releaseRecencyText": "Released 21 days ago",
-      "trendingScore": 771.7
+      "releaseRecency": 23,
+      "releaseRecencyText": "Released 23 days ago",
+      "trendingScore": 773.95
     },
     {
       "id": 542284380,
@@ -888,8 +888,8 @@
       "description": "Opensource IDE For Exploring and Testing API's (lightweight alternative to Postman/Insomnia)",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/usebruno/bruno",
-      "stargazersCount": 44477,
-      "forksCount": 2513,
+      "stargazersCount": 44548,
+      "forksCount": 2522,
       "language": "JavaScript",
       "topics": [
         "api-client",
@@ -908,13 +908,13 @@
         "testing-tools"
       ],
       "releasesUrl": "https://api.github.com/repos/usebruno/bruno/releases{/id}",
-      "updatedAt": "2026-05-27T06:36:36Z",
+      "updatedAt": "2026-05-29T06:23:26Z",
       "createdAt": "2022-09-27T20:51:45Z",
-      "downloadCount": 49850585,
+      "downloadCount": 50357020,
       "latestReleaseDate": "2026-05-26T17:00:33Z",
-      "releaseRecency": 0,
-      "releaseRecencyText": "Released today",
-      "trendingScore": 665.33
+      "releaseRecency": 2,
+      "releaseRecencyText": "Released 2 days ago",
+      "trendingScore": 665.39
     },
     {
       "id": 519577891,
@@ -927,8 +927,8 @@
       "description": "🆙 Upscayl - #1 Free and Open Source AI Image Upscaler for Linux, MacOS and Windows.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/upscayl/upscayl",
-      "stargazersCount": 45547,
-      "forksCount": 2236,
+      "stargazersCount": 45594,
+      "forksCount": 2239,
       "language": "TypeScript",
       "topics": [
         "ai",
@@ -944,13 +944,13 @@
         "upscayl"
       ],
       "releasesUrl": "https://api.github.com/repos/upscayl/upscayl/releases{/id}",
-      "updatedAt": "2026-05-27T06:23:33Z",
+      "updatedAt": "2026-05-29T06:12:36Z",
       "createdAt": "2022-07-30T17:19:20Z",
-      "downloadCount": 75406631,
+      "downloadCount": 75534400,
       "latestReleaseDate": "2024-12-25T13:44:34Z",
-      "releaseRecency": 517,
-      "releaseRecencyText": "Released 517 days ago",
-      "trendingScore": 655.54
+      "releaseRecency": 519,
+      "releaseRecencyText": "Released 519 days ago",
+      "trendingScore": 655.27
     },
     {
       "id": 172953845,
@@ -963,8 +963,8 @@
       "description": "VS Code in the browser",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/coder/code-server",
-      "stargazersCount": 77734,
-      "forksCount": 6683,
+      "stargazersCount": 77755,
+      "forksCount": 6684,
       "language": "TypeScript",
       "topics": [
         "browser-ide",
@@ -976,13 +976,13 @@
         "vscode-remote"
       ],
       "releasesUrl": "https://api.github.com/repos/coder/code-server/releases{/id}",
-      "updatedAt": "2026-05-27T06:20:04Z",
+      "updatedAt": "2026-05-29T03:25:23Z",
       "createdAt": "2019-02-27T16:50:41Z",
-      "downloadCount": 11362442,
-      "latestReleaseDate": "2026-05-20T22:54:10Z",
-      "releaseRecency": 6,
-      "releaseRecencyText": "Released 6 days ago",
-      "trendingScore": 587.78
+      "downloadCount": 11401767,
+      "latestReleaseDate": "2026-05-28T23:59:00Z",
+      "releaseRecency": 0,
+      "releaseRecencyText": "Released today",
+      "trendingScore": 587.5
     },
     {
       "id": 519895363,
@@ -995,8 +995,8 @@
       "description": "Comfortably monitor your Internet traffic 🕵️‍♂️",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/GyulyVGC/sniffnet",
-      "stargazersCount": 37803,
-      "forksCount": 1535,
+      "stargazersCount": 37826,
+      "forksCount": 1539,
       "language": "Rust",
       "topics": [
         "application",
@@ -1020,13 +1020,13 @@
         "windows"
       ],
       "releasesUrl": "https://api.github.com/repos/GyulyVGC/sniffnet/releases{/id}",
-      "updatedAt": "2026-05-27T06:25:03Z",
+      "updatedAt": "2026-05-29T06:21:35Z",
       "createdAt": "2022-07-31T21:55:56Z",
-      "downloadCount": 390703,
+      "downloadCount": 391643,
       "latestReleaseDate": "2026-04-14T10:37:18Z",
-      "releaseRecency": 42,
-      "releaseRecencyText": "Released 42 days ago",
-      "trendingScore": 571.98
+      "releaseRecency": 44,
+      "releaseRecencyText": "Released 44 days ago",
+      "trendingScore": 571.53
     },
     {
       "id": 311683390,
@@ -1039,8 +1039,8 @@
       "description": "🔍 A Hex Editor for Reverse Engineers, Programmers and people who value their retinas when working at 3 AM.",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/WerWolv/ImHex",
-      "stargazersCount": 53691,
-      "forksCount": 2390,
+      "stargazersCount": 53706,
+      "forksCount": 2392,
       "language": "C++",
       "topics": [
         "analyzer",
@@ -1065,13 +1065,13 @@
         "windows"
       ],
       "releasesUrl": "https://api.github.com/repos/WerWolv/ImHex/releases{/id}",
-      "updatedAt": "2026-05-27T03:50:12Z",
+      "updatedAt": "2026-05-29T05:06:20Z",
       "createdAt": "2020-11-10T14:27:00Z",
-      "downloadCount": 1166140,
+      "downloadCount": 1171403,
       "latestReleaseDate": "2025-12-21T18:57:18Z",
-      "releaseRecency": 156,
-      "releaseRecencyText": "Released 156 days ago",
-      "trendingScore": 570.81
+      "releaseRecency": 158,
+      "releaseRecencyText": "Released 158 days ago",
+      "trendingScore": 570.43
     },
     {
       "id": 1027461827,
@@ -1084,8 +1084,8 @@
       "description": "A focused launcher for your desktop - native, fast, extensible",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/vicinaehq/vicinae",
-      "stargazersCount": 7800,
-      "forksCount": 204,
+      "stargazersCount": 7832,
+      "forksCount": 206,
       "language": "C++",
       "topics": [
         "app-launcher",
@@ -1099,13 +1099,13 @@
         "react"
       ],
       "releasesUrl": "https://api.github.com/repos/vicinaehq/vicinae/releases{/id}",
-      "updatedAt": "2026-05-27T06:22:44Z",
+      "updatedAt": "2026-05-29T05:05:22Z",
       "createdAt": "2025-07-28T03:49:03Z",
-      "downloadCount": 96177,
+      "downloadCount": 97576,
       "latestReleaseDate": "2026-05-26T21:48:12Z",
-      "releaseRecency": 0,
-      "releaseRecencyText": "Released today",
-      "trendingScore": 556.85
+      "releaseRecency": 2,
+      "releaseRecencyText": "Released 2 days ago",
+      "trendingScore": 555.57
     },
     {
       "id": 338719962,
@@ -1118,8 +1118,8 @@
       "description": "🎧 Open source music streaming app! Available for both desktop & mobile!",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/KRTirtho/spotube",
-      "stargazersCount": 46556,
-      "forksCount": 2107,
+      "stargazersCount": 46600,
+      "forksCount": 2111,
       "language": "Dart",
       "topics": [
         "android",
@@ -1137,13 +1137,13 @@
         "youtube"
       ],
       "releasesUrl": "https://api.github.com/repos/KRTirtho/spotube/releases{/id}",
-      "updatedAt": "2026-05-27T06:23:04Z",
+      "updatedAt": "2026-05-29T06:22:32Z",
       "createdAt": "2021-02-14T03:17:58Z",
-      "downloadCount": 4970716,
+      "downloadCount": 4976376,
       "latestReleaseDate": "2026-02-24T13:15:09Z",
-      "releaseRecency": 91,
-      "releaseRecencyText": "Released 91 days ago",
-      "trendingScore": 492.95
+      "releaseRecency": 93,
+      "releaseRecencyText": "Released 93 days ago",
+      "trendingScore": 492.9
     },
     {
       "id": 438803890,
@@ -1156,8 +1156,8 @@
       "description": "Self-hosted game stream host for Moonlight.",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/LizardByte/Sunshine",
-      "stargazersCount": 37362,
-      "forksCount": 1955,
+      "stargazersCount": 37420,
+      "forksCount": 1957,
       "language": "C++",
       "topics": [
         "cpp",
@@ -1179,13 +1179,13 @@
         "winget-pkg"
       ],
       "releasesUrl": "https://api.github.com/repos/LizardByte/Sunshine/releases{/id}",
-      "updatedAt": "2026-05-27T05:55:13Z",
+      "updatedAt": "2026-05-29T06:22:53Z",
       "createdAt": "2021-12-15T23:38:57Z",
-      "downloadCount": 5305905,
+      "downloadCount": 5340852,
       "latestReleaseDate": "2026-05-16T18:37:51Z",
-      "releaseRecency": 10,
-      "releaseRecencyText": "Released 10 days ago",
-      "trendingScore": 476.41
+      "releaseRecency": 12,
+      "releaseRecencyText": "Released 12 days ago",
+      "trendingScore": 476.55
     },
     {
       "id": 410749029,
@@ -1198,8 +1198,8 @@
       "description": "Spacedrive is an open source cross-platform file explorer, powered by a virtual distributed filesystem written in Rust.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/spacedriveapp/spacedrive",
-      "stargazersCount": 38119,
-      "forksCount": 1284,
+      "stargazersCount": 38135,
+      "forksCount": 1287,
       "language": "Rust",
       "topics": [
         "cross-platform",
@@ -1212,13 +1212,13 @@
         "typescript"
       ],
       "releasesUrl": "https://api.github.com/repos/spacedriveapp/spacedrive/releases{/id}",
-      "updatedAt": "2026-05-27T05:50:57Z",
+      "updatedAt": "2026-05-29T05:37:18Z",
       "createdAt": "2021-09-27T05:09:04Z",
-      "downloadCount": 714122,
+      "downloadCount": 715207,
       "latestReleaseDate": "2025-03-24T14:16:59Z",
-      "releaseRecency": 428,
-      "releaseRecencyText": "Released 428 days ago",
-      "trendingScore": 475.67
+      "releaseRecency": 430,
+      "releaseRecencyText": "Released 430 days ago",
+      "trendingScore": 475.33
     },
     {
       "id": 16408992,
@@ -1231,8 +1231,8 @@
       "description": "Vim-fork focused on extensibility and usability",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/neovim/neovim",
-      "stargazersCount": 99855,
-      "forksCount": 6903,
+      "stargazersCount": 99917,
+      "forksCount": 6911,
       "language": "Vim Script",
       "topics": [
         "api",
@@ -1244,13 +1244,13 @@
         "vim"
       ],
       "releasesUrl": "https://api.github.com/repos/neovim/neovim/releases{/id}",
-      "updatedAt": "2026-05-27T06:20:57Z",
+      "updatedAt": "2026-05-29T06:03:02Z",
       "createdAt": "2014-01-31T13:39:22Z",
-      "downloadCount": 11938294,
+      "downloadCount": 11965835,
       "latestReleaseDate": "2026-04-22T15:03:59Z",
-      "releaseRecency": 34,
-      "releaseRecencyText": "Released 34 days ago",
-      "trendingScore": 444.0
+      "releaseRecency": 36,
+      "releaseRecencyText": "Released 36 days ago",
+      "trendingScore": 444.08
     },
     {
       "id": 268424739,
@@ -1263,8 +1263,8 @@
       "description": "A post-modern modal text editor.",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/helix-editor/helix",
-      "stargazersCount": 44514,
-      "forksCount": 3493,
+      "stargazersCount": 44555,
+      "forksCount": 3496,
       "language": "Rust",
       "topics": [
         "kakoune",
@@ -1273,13 +1273,13 @@
         "vim"
       ],
       "releasesUrl": "https://api.github.com/repos/helix-editor/helix/releases{/id}",
-      "updatedAt": "2026-05-27T06:13:34Z",
+      "updatedAt": "2026-05-29T05:20:02Z",
       "createdAt": "2020-06-01T04:26:56Z",
-      "downloadCount": 596695,
+      "downloadCount": 598666,
       "latestReleaseDate": "2025-07-18T15:13:19Z",
-      "releaseRecency": 312,
-      "releaseRecencyText": "Released 312 days ago",
-      "trendingScore": 423.26
+      "releaseRecency": 314,
+      "releaseRecencyText": "Released 314 days ago",
+      "trendingScore": 423.27
     },
     {
       "id": 291438522,
@@ -1292,8 +1292,8 @@
       "description": "A privacy-first, self-hosted, fully open source personal knowledge management software, written in typescript and golang.",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/siyuan-note/siyuan",
-      "stargazersCount": 44147,
-      "forksCount": 2813,
+      "stargazersCount": 44182,
+      "forksCount": 2817,
       "language": "TypeScript",
       "topics": [
         "anki",
@@ -1317,13 +1317,13 @@
         "webdav"
       ],
       "releasesUrl": "https://api.github.com/repos/siyuan-note/siyuan/releases{/id}",
-      "updatedAt": "2026-05-27T06:45:25Z",
+      "updatedAt": "2026-05-29T06:08:02Z",
       "createdAt": "2020-08-30T09:21:35Z",
-      "downloadCount": 2565727,
+      "downloadCount": 2574574,
       "latestReleaseDate": "2026-04-21T06:22:00Z",
-      "releaseRecency": 36,
-      "releaseRecencyText": "Released 36 days ago",
-      "trendingScore": 421.45
+      "releaseRecency": 38,
+      "releaseRecencyText": "Released 38 days ago",
+      "trendingScore": 421.38
     },
     {
       "id": 77213120,
@@ -1336,8 +1336,8 @@
       "description": "A terminal for a more modern age",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/Eugeny/tabby",
-      "stargazersCount": 71654,
-      "forksCount": 4029,
+      "stargazersCount": 71722,
+      "forksCount": 4032,
       "language": "TypeScript",
       "topics": [
         "serial",
@@ -1347,13 +1347,13 @@
         "terminal-emulators"
       ],
       "releasesUrl": "https://api.github.com/repos/Eugeny/tabby/releases{/id}",
-      "updatedAt": "2026-05-27T06:10:36Z",
+      "updatedAt": "2026-05-29T05:34:50Z",
       "createdAt": "2016-12-23T09:06:10Z",
-      "downloadCount": 19278852,
+      "downloadCount": 19295692,
       "latestReleaseDate": "2026-05-17T15:19:21Z",
-      "releaseRecency": 9,
-      "releaseRecencyText": "Released 9 days ago",
-      "trendingScore": 416.47
+      "releaseRecency": 11,
+      "releaseRecencyText": "Released 11 days ago",
+      "trendingScore": 416.63
     },
     {
       "id": 130464961,
@@ -1366,8 +1366,8 @@
       "description": "A cat(1) clone with wings.",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/sharkdp/bat",
-      "stargazersCount": 59045,
-      "forksCount": 1566,
+      "stargazersCount": 59068,
+      "forksCount": 1567,
       "language": "Rust",
       "topics": [
         "cli",
@@ -1380,13 +1380,13 @@
         "tool"
       ],
       "releasesUrl": "https://api.github.com/repos/sharkdp/bat/releases{/id}",
-      "updatedAt": "2026-05-27T06:17:22Z",
+      "updatedAt": "2026-05-29T06:01:53Z",
       "createdAt": "2018-04-21T10:52:23Z",
-      "downloadCount": 2869090,
+      "downloadCount": 2884180,
       "latestReleaseDate": "2025-12-02T20:48:10Z",
-      "releaseRecency": 175,
-      "releaseRecencyText": "Released 175 days ago",
-      "trendingScore": 415.36
+      "releaseRecency": 177,
+      "releaseRecencyText": "Released 177 days ago",
+      "trendingScore": 415.24
     },
     {
       "id": 202367615,
@@ -1399,8 +1399,8 @@
       "description": "一个基于 Electron 的音乐软件",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/lyswhut/lx-music-desktop",
-      "stargazersCount": 51213,
-      "forksCount": 6835,
+      "stargazersCount": 51262,
+      "forksCount": 6838,
       "language": "TypeScript",
       "topics": [
         "electron",
@@ -1409,13 +1409,13 @@
         "vue"
       ],
       "releasesUrl": "https://api.github.com/repos/lyswhut/lx-music-desktop/releases{/id}",
-      "updatedAt": "2026-05-27T06:37:14Z",
+      "updatedAt": "2026-05-29T05:20:16Z",
       "createdAt": "2019-08-14T14:31:08Z",
-      "downloadCount": 39113435,
+      "downloadCount": 39179443,
       "latestReleaseDate": "2026-05-01T05:35:34Z",
-      "releaseRecency": 26,
-      "releaseRecencyText": "Released 26 days ago",
-      "trendingScore": 413.51
+      "releaseRecency": 28,
+      "releaseRecencyText": "Released 28 days ago",
+      "trendingScore": 413.57
     },
     {
       "id": 130688011,
@@ -1428,7 +1428,7 @@
       "description": "A lightning-fast search engine API bringing AI-powered hybrid search to your sites and applications.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/meilisearch/meilisearch",
-      "stargazersCount": 57757,
+      "stargazersCount": 57815,
       "forksCount": 2553,
       "language": "Rust",
       "topics": [
@@ -1454,13 +1454,13 @@
         "vectors"
       ],
       "releasesUrl": "https://api.github.com/repos/meilisearch/meilisearch/releases{/id}",
-      "updatedAt": "2026-05-27T04:35:03Z",
+      "updatedAt": "2026-05-29T06:16:14Z",
       "createdAt": "2018-04-23T11:45:28Z",
-      "downloadCount": 740145,
-      "latestReleaseDate": "2026-05-26T08:38:12Z",
+      "downloadCount": 743528,
+      "latestReleaseDate": "2026-05-28T15:24:33Z",
       "releaseRecency": 0,
       "releaseRecencyText": "Released today",
-      "trendingScore": 406.91
+      "trendingScore": 407.04
     },
     {
       "id": 437245741,
@@ -1473,7 +1473,7 @@
       "description": "A modern replacement for Redis and Memcached",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/dragonflydb/dragonfly",
-      "stargazersCount": 30564,
+      "stargazersCount": 30570,
       "forksCount": 1180,
       "language": "C++",
       "topics": [
@@ -1494,13 +1494,13 @@
         "vector-search"
       ],
       "releasesUrl": "https://api.github.com/repos/dragonflydb/dragonfly/releases{/id}",
-      "updatedAt": "2026-05-27T06:43:25Z",
+      "updatedAt": "2026-05-29T06:10:06Z",
       "createdAt": "2021-12-11T10:00:42Z",
-      "downloadCount": 545131,
+      "downloadCount": 546021,
       "latestReleaseDate": "2026-04-28T08:01:45Z",
-      "releaseRecency": 28,
-      "releaseRecencyText": "Released 28 days ago",
-      "trendingScore": 391.71
+      "releaseRecency": 30,
+      "releaseRecencyText": "Released 30 days ago",
+      "trendingScore": 391.32
     },
     {
       "id": 11180687,
@@ -1513,8 +1513,8 @@
       "description": "The world’s fastest framework for building websites.",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/gohugoio/hugo",
-      "stargazersCount": 88266,
-      "forksCount": 8268,
+      "stargazersCount": 88303,
+      "forksCount": 8269,
       "language": "Go",
       "topics": [
         "blog-engine",
@@ -1526,10 +1526,10 @@
         "static-site-generator"
       ],
       "releasesUrl": "https://api.github.com/repos/gohugoio/hugo/releases{/id}",
-      "updatedAt": "2026-05-27T06:28:11Z",
+      "updatedAt": "2026-05-29T06:24:37Z",
       "createdAt": "2013-07-04T15:26:26Z",
-      "downloadCount": 85527978,
-      "latestReleaseDate": "2026-05-26T14:16:07Z",
+      "downloadCount": 85731401,
+      "latestReleaseDate": "2026-05-28T18:06:06Z",
       "releaseRecency": 0,
       "releaseRecencyText": "Released today",
       "trendingScore": 380.88
@@ -1545,8 +1545,8 @@
       "description": "Open Source Continuous File Synchronization",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/syncthing/syncthing",
-      "stargazersCount": 84604,
-      "forksCount": 5219,
+      "stargazersCount": 84714,
+      "forksCount": 5225,
       "language": "Go",
       "topics": [
         "go",
@@ -1555,13 +1555,13 @@
         "synchronization"
       ],
       "releasesUrl": "https://api.github.com/repos/syncthing/syncthing/releases{/id}",
-      "updatedAt": "2026-05-27T06:41:55Z",
+      "updatedAt": "2026-05-29T06:14:21Z",
       "createdAt": "2013-11-26T09:48:21Z",
-      "downloadCount": 107610209,
+      "downloadCount": 107677097,
       "latestReleaseDate": "2026-05-12T06:46:04Z",
-      "releaseRecency": 15,
-      "releaseRecencyText": "Released 15 days ago",
-      "trendingScore": 376.74
+      "releaseRecency": 16,
+      "releaseRecencyText": "Released 16 days ago",
+      "trendingScore": 377.06
     },
     {
       "id": 110446844,
@@ -1574,8 +1574,8 @@
       "description": "📝A simple and elegant markdown editor, available for Linux, macOS and Windows.",
       "defaultBranch": "develop",
       "htmlUrl": "https://github.com/marktext/marktext",
-      "stargazersCount": 56498,
-      "forksCount": 4241,
+      "stargazersCount": 56594,
+      "forksCount": 4253,
       "language": "TypeScript",
       "topics": [
         "dark-mode",
@@ -1594,13 +1594,13 @@
         "windows"
       ],
       "releasesUrl": "https://api.github.com/repos/marktext/marktext/releases{/id}",
-      "updatedAt": "2026-05-27T06:38:43Z",
+      "updatedAt": "2026-05-29T06:22:27Z",
       "createdAt": "2017-11-12T16:05:25Z",
-      "downloadCount": 2711532,
-      "latestReleaseDate": "2022-03-07T18:12:02Z",
-      "releaseRecency": 1541,
-      "releaseRecencyText": "Released 1541 days ago",
-      "trendingScore": 374.52
+      "downloadCount": 2722007,
+      "latestReleaseDate": "2026-05-28T14:03:02Z",
+      "releaseRecency": 0,
+      "releaseRecencyText": "Released today",
+      "trendingScore": 374.9
     },
     {
       "id": 133251103,
@@ -1613,8 +1613,8 @@
       "description": "A tool for exploring each layer in a docker image",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/wagoodman/dive",
-      "stargazersCount": 53987,
-      "forksCount": 1995,
+      "stargazersCount": 54026,
+      "forksCount": 1994,
       "language": "Go",
       "topics": [
         "cli",
@@ -1625,13 +1625,13 @@
         "tui"
       ],
       "releasesUrl": "https://api.github.com/repos/wagoodman/dive/releases{/id}",
-      "updatedAt": "2026-05-26T22:39:17Z",
+      "updatedAt": "2026-05-29T06:21:27Z",
       "createdAt": "2018-05-13T15:44:01Z",
-      "downloadCount": 2093406,
+      "downloadCount": 2097549,
       "latestReleaseDate": "2025-03-29T15:29:08Z",
-      "releaseRecency": 423,
-      "releaseRecencyText": "Released 423 days ago",
-      "trendingScore": 373.88
+      "releaseRecency": 425,
+      "releaseRecencyText": "Released 425 days ago",
+      "trendingScore": 373.9
     },
     {
       "id": 212613049,
@@ -1644,8 +1644,8 @@
       "description": "GitHub’s official command line tool",
       "defaultBranch": "trunk",
       "htmlUrl": "https://github.com/cli/cli",
-      "stargazersCount": 44570,
-      "forksCount": 8489,
+      "stargazersCount": 44623,
+      "forksCount": 8501,
       "language": "Go",
       "topics": [
         "cli",
@@ -1654,13 +1654,13 @@
         "golang"
       ],
       "releasesUrl": "https://api.github.com/repos/cli/cli/releases{/id}",
-      "updatedAt": "2026-05-27T06:42:22Z",
+      "updatedAt": "2026-05-29T06:16:51Z",
       "createdAt": "2019-10-03T15:24:53Z",
-      "downloadCount": 94840515,
-      "latestReleaseDate": "2026-04-28T11:42:05Z",
-      "releaseRecency": 28,
-      "releaseRecencyText": "Released 28 days ago",
-      "trendingScore": 373.28
+      "downloadCount": 95391179,
+      "latestReleaseDate": "2026-05-27T17:47:48Z",
+      "releaseRecency": 1,
+      "releaseRecencyText": "Released yesterday",
+      "trendingScore": 373.42
     },
     {
       "id": 92443980,
@@ -1673,8 +1673,8 @@
       "description": "Official electron build of draw.io",
       "defaultBranch": "dev",
       "htmlUrl": "https://github.com/jgraph/drawio-desktop",
-      "stargazersCount": 61316,
-      "forksCount": 5677,
+      "stargazersCount": 61364,
+      "forksCount": 5682,
       "language": "JavaScript",
       "topics": [
         "diagram-editor",
@@ -1683,13 +1683,13 @@
         "javascript-applications"
       ],
       "releasesUrl": "https://api.github.com/repos/jgraph/drawio-desktop/releases{/id}",
-      "updatedAt": "2026-05-27T06:25:00Z",
+      "updatedAt": "2026-05-29T06:23:44Z",
       "createdAt": "2017-05-25T20:58:42Z",
-      "downloadCount": 125266232,
-      "latestReleaseDate": "2026-05-18T15:35:59Z",
-      "releaseRecency": 8,
-      "releaseRecencyText": "Released 8 days ago",
-      "trendingScore": 372.97
+      "downloadCount": 125613325,
+      "latestReleaseDate": "2026-05-27T17:35:46Z",
+      "releaseRecency": 1,
+      "releaseRecencyText": "Released yesterday",
+      "trendingScore": 373.03
     },
     {
       "id": 29207621,
@@ -1702,8 +1702,8 @@
       "description": "Fast and extensible multi-platform HTTP/1-2-3 web server with automatic HTTPS",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/caddyserver/caddy",
-      "stargazersCount": 72755,
-      "forksCount": 4753,
+      "stargazersCount": 72812,
+      "forksCount": 4761,
       "language": "Go",
       "topics": [
         "acme",
@@ -1723,13 +1723,13 @@
         "web-server"
       ],
       "releasesUrl": "https://api.github.com/repos/caddyserver/caddy/releases{/id}",
-      "updatedAt": "2026-05-27T06:44:11Z",
+      "updatedAt": "2026-05-29T05:22:40Z",
       "createdAt": "2015-01-13T19:45:03Z",
-      "downloadCount": 9431160,
+      "downloadCount": 9473650,
       "latestReleaseDate": "2026-05-12T15:18:58Z",
-      "releaseRecency": 14,
-      "releaseRecencyText": "Released 14 days ago",
-      "trendingScore": 365.54
+      "releaseRecency": 16,
+      "releaseRecencyText": "Released 16 days ago",
+      "trendingScore": 365.65
     },
     {
       "id": 53631945,
@@ -1742,8 +1742,8 @@
       "description": "ripgrep recursively searches directories for a regex pattern while respecting your gitignore",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/BurntSushi/ripgrep",
-      "stargazersCount": 64248,
-      "forksCount": 2578,
+      "stargazersCount": 64355,
+      "forksCount": 2581,
       "language": "Rust",
       "topics": [
         "cli",
@@ -1758,13 +1758,13 @@
         "search"
       ],
       "releasesUrl": "https://api.github.com/repos/BurntSushi/ripgrep/releases{/id}",
-      "updatedAt": "2026-05-27T06:38:13Z",
+      "updatedAt": "2026-05-29T05:26:44Z",
       "createdAt": "2016-03-11T02:02:33Z",
-      "downloadCount": 28648971,
+      "downloadCount": 28999945,
       "latestReleaseDate": "2025-10-22T13:00:26Z",
-      "releaseRecency": 216,
-      "releaseRecencyText": "Released 216 days ago",
-      "trendingScore": 360.59
+      "releaseRecency": 218,
+      "releaseRecencyText": "Released 218 days ago",
+      "trendingScore": 360.97
     },
     {
       "id": 245166720,
@@ -1777,7 +1777,7 @@
       "description": "A smarter cd command. Supports all major shells.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/ajeetdsouza/zoxide",
-      "stargazersCount": 36895,
+      "stargazersCount": 36949,
       "forksCount": 822,
       "language": "Rust",
       "topics": [
@@ -1803,13 +1803,13 @@
         "zsh"
       ],
       "releasesUrl": "https://api.github.com/repos/ajeetdsouza/zoxide/releases{/id}",
-      "updatedAt": "2026-05-27T04:17:22Z",
+      "updatedAt": "2026-05-29T05:59:01Z",
       "createdAt": "2020-03-05T13:11:40Z",
-      "downloadCount": 1613743,
+      "downloadCount": 1620194,
       "latestReleaseDate": "2026-01-31T07:48:49Z",
-      "releaseRecency": 115,
-      "releaseRecencyText": "Released 115 days ago",
-      "trendingScore": 340.64
+      "releaseRecency": 117,
+      "releaseRecencyText": "Released 117 days ago",
+      "trendingScore": 340.83
     },
     {
       "id": 13233158,
@@ -1822,8 +1822,8 @@
       "description": "OBS Studio - Free and open source software for live streaming and screen recording",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/obsproject/obs-studio",
-      "stargazersCount": 72722,
-      "forksCount": 9288,
+      "stargazersCount": 72772,
+      "forksCount": 9297,
       "language": "C",
       "topics": [
         "c",
@@ -1839,13 +1839,13 @@
         "youtube-live"
       ],
       "releasesUrl": "https://api.github.com/repos/obsproject/obs-studio/releases{/id}",
-      "updatedAt": "2026-05-27T06:15:05Z",
+      "updatedAt": "2026-05-29T06:27:13Z",
       "createdAt": "2013-10-01T02:40:31Z",
-      "downloadCount": 100813061,
+      "downloadCount": 100835186,
       "latestReleaseDate": "2026-04-21T20:10:35Z",
-      "releaseRecency": 35,
-      "releaseRecencyText": "Released 35 days ago",
-      "trendingScore": 326.75
+      "releaseRecency": 37,
+      "releaseRecencyText": "Released 37 days ago",
+      "trendingScore": 326.83
     },
     {
       "id": 79162682,
@@ -1858,8 +1858,8 @@
       "description": "Joplin - the privacy-focused note taking app with sync capabilities for Windows, macOS, Linux, Android and iOS.",
       "defaultBranch": "dev",
       "htmlUrl": "https://github.com/laurent22/joplin",
-      "stargazersCount": 54979,
-      "forksCount": 6127,
+      "stargazersCount": 55003,
+      "forksCount": 6129,
       "language": "TypeScript",
       "topics": [
         "android",
@@ -1882,13 +1882,13 @@
         "webdav"
       ],
       "releasesUrl": "https://api.github.com/repos/laurent22/joplin/releases{/id}",
-      "updatedAt": "2026-05-27T04:01:17Z",
+      "updatedAt": "2026-05-29T05:35:54Z",
       "createdAt": "2017-01-16T21:49:41Z",
-      "downloadCount": 15338526,
+      "downloadCount": 15366848,
       "latestReleaseDate": "2026-05-19T22:12:04Z",
-      "releaseRecency": 7,
-      "releaseRecencyText": "Released 7 days ago",
-      "trendingScore": 324.8
+      "releaseRecency": 9,
+      "releaseRecencyText": "Released 9 days ago",
+      "trendingScore": 324.75
     },
     {
       "id": 268163609,
@@ -1901,8 +1901,8 @@
       "description": "Qdrant - High-performance, massive-scale Vector Database and Vector Search Engine for the next generation of AI. Also available in the cloud https://cloud.qdrant.io/",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/qdrant/qdrant",
-      "stargazersCount": 31589,
-      "forksCount": 2296,
+      "stargazersCount": 31647,
+      "forksCount": 2301,
       "language": "Rust",
       "topics": [
         "ai-search",
@@ -1927,13 +1927,13 @@
         "vector-search-engine"
       ],
       "releasesUrl": "https://api.github.com/repos/qdrant/qdrant/releases{/id}",
-      "updatedAt": "2026-05-27T06:35:11Z",
+      "updatedAt": "2026-05-29T05:39:04Z",
       "createdAt": "2020-05-30T21:37:01Z",
-      "downloadCount": 705565,
+      "downloadCount": 709773,
       "latestReleaseDate": "2026-05-22T12:31:50Z",
-      "releaseRecency": 4,
-      "releaseRecencyText": "Released 4 days ago",
-      "trendingScore": 304.88
+      "releaseRecency": 6,
+      "releaseRecencyText": "Released 6 days ago",
+      "trendingScore": 305.15
     },
     {
       "id": 907990001,
@@ -1946,8 +1946,8 @@
       "description": "Terminal based IDE & text editor: easy, powerful and fast",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/sinelaw/fresh",
-      "stargazersCount": 7313,
-      "forksCount": 250,
+      "stargazersCount": 7335,
+      "forksCount": 253,
       "language": "Rust",
       "topics": [
         "ide",
@@ -1955,13 +1955,13 @@
         "text-editor"
       ],
       "releasesUrl": "https://api.github.com/repos/sinelaw/fresh/releases{/id}",
-      "updatedAt": "2026-05-27T06:29:17Z",
+      "updatedAt": "2026-05-29T05:28:44Z",
       "createdAt": "2024-12-24T19:50:15Z",
-      "downloadCount": 226497,
-      "latestReleaseDate": "2026-05-26T14:08:53Z",
+      "downloadCount": 229504,
+      "latestReleaseDate": "2026-05-28T20:52:41Z",
       "releaseRecency": 0,
       "releaseRecencyText": "Released today",
-      "trendingScore": 298.36
+      "trendingScore": 298.12
     },
     {
       "id": 716838500,
@@ -1974,8 +1974,8 @@
       "description": "Clash Nyanpasu～(∠・ω< )⌒☆​",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/libnyanpasu/clash-nyanpasu",
-      "stargazersCount": 13000,
-      "forksCount": 789,
+      "stargazersCount": 13004,
+      "forksCount": 788,
       "language": "Rust",
       "topics": [
         "clash",
@@ -1990,13 +1990,13 @@
         "tauri-app"
       ],
       "releasesUrl": "https://api.github.com/repos/libnyanpasu/clash-nyanpasu/releases{/id}",
-      "updatedAt": "2026-05-27T05:55:47Z",
+      "updatedAt": "2026-05-29T06:26:40Z",
       "createdAt": "2023-11-10T01:25:55Z",
-      "downloadCount": 2967025,
+      "downloadCount": 2976087,
       "latestReleaseDate": "2024-09-07T16:48:05Z",
-      "releaseRecency": 626,
-      "releaseRecencyText": "Released 626 days ago",
-      "trendingScore": 295.87
+      "releaseRecency": 628,
+      "releaseRecencyText": "Released 628 days ago",
+      "trendingScore": 295.36
     },
     {
       "id": 49609581,
@@ -2009,8 +2009,8 @@
       "description": "PowerShell for every system!",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/PowerShell/PowerShell",
-      "stargazersCount": 53618,
-      "forksCount": 8318,
+      "stargazersCount": 53670,
+      "forksCount": 8322,
       "language": "C#",
       "topics": [
         "command-line",
@@ -2023,13 +2023,13 @@
         "windows"
       ],
       "releasesUrl": "https://api.github.com/repos/PowerShell/PowerShell/releases{/id}",
-      "updatedAt": "2026-05-27T06:42:11Z",
+      "updatedAt": "2026-05-29T06:17:27Z",
       "createdAt": "2016-01-13T23:41:35Z",
-      "downloadCount": 126588761,
+      "downloadCount": 127055979,
       "latestReleaseDate": "2026-05-21T20:48:27Z",
-      "releaseRecency": 5,
-      "releaseRecencyText": "Released 5 days ago",
-      "trendingScore": 292.24
+      "releaseRecency": 7,
+      "releaseRecencyText": "Released 7 days ago",
+      "trendingScore": 292.37
     },
     {
       "id": 60246359,
@@ -2042,8 +2042,8 @@
       "description": "ClickHouse® is a real-time analytics database management system",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/ClickHouse/ClickHouse",
-      "stargazersCount": 47637,
-      "forksCount": 8428,
+      "stargazersCount": 47675,
+      "forksCount": 8436,
       "language": "C++",
       "topics": [
         "ai",
@@ -2065,13 +2065,13 @@
         "sql"
       ],
       "releasesUrl": "https://api.github.com/repos/ClickHouse/ClickHouse/releases{/id}",
-      "updatedAt": "2026-05-27T06:21:54Z",
+      "updatedAt": "2026-05-29T06:15:32Z",
       "createdAt": "2016-06-02T08:28:18Z",
-      "downloadCount": 11873573,
+      "downloadCount": 11885086,
       "latestReleaseDate": "2026-05-22T19:24:41Z",
-      "releaseRecency": 4,
-      "releaseRecencyText": "Released 4 days ago",
-      "trendingScore": 277.38
+      "releaseRecency": 6,
+      "releaseRecencyText": "Released 6 days ago",
+      "trendingScore": 277.45
     },
     {
       "id": 90793418,
@@ -2084,8 +2084,8 @@
       "description": "A simple, fast and user-friendly alternative to 'find'",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/sharkdp/fd",
-      "stargazersCount": 43118,
-      "forksCount": 1066,
+      "stargazersCount": 43147,
+      "forksCount": 1069,
       "language": "Rust",
       "topics": [
         "cli",
@@ -2099,13 +2099,13 @@
         "tool"
       ],
       "releasesUrl": "https://api.github.com/repos/sharkdp/fd/releases{/id}",
-      "updatedAt": "2026-05-27T05:46:39Z",
+      "updatedAt": "2026-05-29T04:39:54Z",
       "createdAt": "2017-05-09T21:27:10Z",
-      "downloadCount": 5640615,
+      "downloadCount": 5681591,
       "latestReleaseDate": "2026-03-10T07:33:26Z",
-      "releaseRecency": 77,
-      "releaseRecencyText": "Released 77 days ago",
-      "trendingScore": 277.0
+      "releaseRecency": 79,
+      "releaseRecencyText": "Released 79 days ago",
+      "trendingScore": 277.02
     },
     {
       "id": 120425779,
@@ -2118,7 +2118,7 @@
       "description": "Lightning-fast and Powerful Code Editor written in Rust",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/lapce/lapce",
-      "stargazersCount": 38474,
+      "stargazersCount": 38476,
       "forksCount": 1283,
       "language": "Rust",
       "topics": [
@@ -2129,13 +2129,13 @@
         "vim"
       ],
       "releasesUrl": "https://api.github.com/repos/lapce/lapce/releases{/id}",
-      "updatedAt": "2026-05-27T06:43:06Z",
+      "updatedAt": "2026-05-29T00:08:40Z",
       "createdAt": "2018-02-06T08:41:06Z",
-      "downloadCount": 641573,
+      "downloadCount": 643437,
       "latestReleaseDate": "2026-01-21T21:44:37Z",
-      "releaseRecency": 125,
-      "releaseRecencyText": "Released 125 days ago",
-      "trendingScore": 269.87
+      "releaseRecency": 127,
+      "releaseRecencyText": "Released 127 days ago",
+      "trendingScore": 269.72
     },
     {
       "id": 17803236,
@@ -2148,8 +2148,8 @@
       "description": "\"rsync for cloud storage\" - Google Drive, S3, Dropbox, Backblaze B2, One Drive, Swift, Hubic, Wasabi, Google Cloud Storage, Azure Blob, Azure Files, Yandex Files",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/rclone/rclone",
-      "stargazersCount": 57412,
-      "forksCount": 5106,
+      "stargazersCount": 57452,
+      "forksCount": 5114,
       "language": "Go",
       "topics": [
         "azure-blob",
@@ -2174,13 +2174,13 @@
         "webdav"
       ],
       "releasesUrl": "https://api.github.com/repos/rclone/rclone/releases{/id}",
-      "updatedAt": "2026-05-27T06:27:33Z",
+      "updatedAt": "2026-05-29T05:29:26Z",
       "createdAt": "2014-03-16T16:19:57Z",
-      "downloadCount": 8002080,
+      "downloadCount": 8028556,
       "latestReleaseDate": "2026-05-23T10:12:31Z",
-      "releaseRecency": 3,
-      "releaseRecencyText": "Released 3 days ago",
-      "trendingScore": 263.8
+      "releaseRecency": 5,
+      "releaseRecencyText": "Released 5 days ago",
+      "trendingScore": 263.86
     },
     {
       "id": 193305104,
@@ -2193,21 +2193,21 @@
       "description": "Android real-time display control software",
       "defaultBranch": "dev",
       "htmlUrl": "https://github.com/barry-ran/QtScrcpy",
-      "stargazersCount": 29635,
-      "forksCount": 3550,
+      "stargazersCount": 29655,
+      "forksCount": 3549,
       "language": "C++",
       "topics": [
         "android",
         "qt"
       ],
       "releasesUrl": "https://api.github.com/repos/barry-ran/QtScrcpy/releases{/id}",
-      "updatedAt": "2026-05-27T06:16:32Z",
+      "updatedAt": "2026-05-29T06:02:44Z",
       "createdAt": "2019-06-23T04:12:17Z",
-      "downloadCount": 791153,
+      "downloadCount": 792523,
       "latestReleaseDate": "2025-11-06T00:14:41Z",
-      "releaseRecency": 202,
-      "releaseRecencyText": "Released 202 days ago",
-      "trendingScore": 262.27
+      "releaseRecency": 204,
+      "releaseRecencyText": "Released 204 days ago",
+      "trendingScore": 262.24
     },
     {
       "id": 193526915,
@@ -2220,8 +2220,8 @@
       "description": "A syntax-highlighting pager for git, diff, grep, rg --json, and blame output",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/dandavison/delta",
-      "stargazersCount": 30938,
-      "forksCount": 536,
+      "stargazersCount": 30972,
+      "forksCount": 537,
       "language": "Rust",
       "topics": [
         "color-themes",
@@ -2234,13 +2234,13 @@
         "syntax-highlighter"
       ],
       "releasesUrl": "https://api.github.com/repos/dandavison/delta/releases{/id}",
-      "updatedAt": "2026-05-27T03:34:04Z",
+      "updatedAt": "2026-05-29T05:22:00Z",
       "createdAt": "2019-06-24T15:00:13Z",
-      "downloadCount": 1562400,
+      "downloadCount": 1579748,
       "latestReleaseDate": "2026-03-28T19:50:29Z",
-      "releaseRecency": 59,
-      "releaseRecencyText": "Released 59 days ago",
-      "trendingScore": 260.76
+      "releaseRecency": 61,
+      "releaseRecencyText": "Released 61 days ago",
+      "trendingScore": 260.84
     },
     {
       "id": 44662669,
@@ -2253,8 +2253,8 @@
       "description": "Free universal database tool and SQL client",
       "defaultBranch": "devel",
       "htmlUrl": "https://github.com/dbeaver/dbeaver",
-      "stargazersCount": 50251,
-      "forksCount": 4198,
+      "stargazersCount": 50290,
+      "forksCount": 4200,
       "language": "Java",
       "topics": [
         "ai",
@@ -2277,13 +2277,13 @@
         "sqlserver"
       ],
       "releasesUrl": "https://api.github.com/repos/dbeaver/dbeaver/releases{/id}",
-      "updatedAt": "2026-05-27T06:03:58Z",
+      "updatedAt": "2026-05-29T06:30:11Z",
       "createdAt": "2015-10-21T08:26:28Z",
-      "downloadCount": 37940007,
+      "downloadCount": 38063719,
       "latestReleaseDate": "2026-05-17T17:22:32Z",
-      "releaseRecency": 9,
-      "releaseRecencyText": "Released 9 days ago",
-      "trendingScore": 260.7
+      "releaseRecency": 11,
+      "releaseRecencyText": "Released 11 days ago",
+      "trendingScore": 260.76
     },
     {
       "id": 62367558,
@@ -2296,8 +2296,8 @@
       "description": "A terminal built on web technologies",
       "defaultBranch": "canary",
       "htmlUrl": "https://github.com/vercel/hyper",
-      "stargazersCount": 44598,
-      "forksCount": 3560,
+      "stargazersCount": 44603,
+      "forksCount": 3562,
       "language": "TypeScript",
       "topics": [
         "css",
@@ -2311,13 +2311,13 @@
         "terminal-emulators"
       ],
       "releasesUrl": "https://api.github.com/repos/vercel/hyper/releases{/id}",
-      "updatedAt": "2026-05-27T06:26:27Z",
+      "updatedAt": "2026-05-29T05:12:39Z",
       "createdAt": "2016-07-01T06:01:21Z",
-      "downloadCount": 56160044,
+      "downloadCount": 56172884,
       "latestReleaseDate": "2023-01-08T00:56:10Z",
-      "releaseRecency": 1235,
-      "releaseRecencyText": "Released 1235 days ago",
-      "trendingScore": 255.6
+      "releaseRecency": 1237,
+      "releaseRecencyText": "Released 1237 days ago",
+      "trendingScore": 255.49
     },
     {
       "id": 698328708,
@@ -2330,8 +2330,8 @@
       "description": "A simple, decentralized mesh VPN with WireGuard support.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/EasyTier/EasyTier",
-      "stargazersCount": 11577,
-      "forksCount": 1152,
+      "stargazersCount": 11622,
+      "forksCount": 1157,
       "language": "Rust",
       "topics": [
         "nat-traversal",
@@ -2342,13 +2342,13 @@
         "zerotier"
       ],
       "releasesUrl": "https://api.github.com/repos/EasyTier/EasyTier/releases{/id}",
-      "updatedAt": "2026-05-27T05:46:48Z",
+      "updatedAt": "2026-05-29T05:27:06Z",
       "createdAt": "2023-09-29T17:03:53Z",
-      "downloadCount": 1039666,
+      "downloadCount": 1045479,
       "latestReleaseDate": "2026-05-12T15:25:14Z",
-      "releaseRecency": 14,
-      "releaseRecencyText": "Released 14 days ago",
-      "trendingScore": 254.7
+      "releaseRecency": 16,
+      "releaseRecencyText": "Released 16 days ago",
+      "trendingScore": 255.14
     },
     {
       "id": 384520418,
@@ -2361,8 +2361,8 @@
       "description": "《明日方舟》小助手，全日常一键长草！| A one-click tool for the daily tasks of Arknights, supporting all clients.",
       "defaultBranch": "dev-v2",
       "htmlUrl": "https://github.com/MaaAssistantArknights/MaaAssistantArknights",
-      "stargazersCount": 21223,
-      "forksCount": 2643,
+      "stargazersCount": 21253,
+      "forksCount": 2644,
       "language": "C++",
       "topics": [
         "arknights",
@@ -2370,13 +2370,13 @@
         "maa"
       ],
       "releasesUrl": "https://api.github.com/repos/MaaAssistantArknights/MaaAssistantArknights/releases{/id}",
-      "updatedAt": "2026-05-27T05:47:51Z",
+      "updatedAt": "2026-05-29T06:28:03Z",
       "createdAt": "2021-07-09T18:26:38Z",
-      "downloadCount": 9212810,
+      "downloadCount": 9224669,
       "latestReleaseDate": "2026-05-24T20:39:10Z",
-      "releaseRecency": 2,
-      "releaseRecencyText": "Released 2 days ago",
-      "trendingScore": 254.19
+      "releaseRecency": 4,
+      "releaseRecencyText": "Released 4 days ago",
+      "trendingScore": 254.26
     },
     {
       "id": 973688295,
@@ -2389,8 +2389,8 @@
       "description": "Per-process network monitoring for your terminal with deep packet inspection. Cross-platform, sandboxed.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/domcyrus/rustnet",
-      "stargazersCount": 4059,
-      "forksCount": 183,
+      "stargazersCount": 4111,
+      "forksCount": 185,
       "language": "Rust",
       "topics": [
         "cli",
@@ -2412,13 +2412,13 @@
         "windows"
       ],
       "releasesUrl": "https://api.github.com/repos/domcyrus/rustnet/releases{/id}",
-      "updatedAt": "2026-05-27T05:45:43Z",
+      "updatedAt": "2026-05-29T06:04:57Z",
       "createdAt": "2025-04-27T14:29:47Z",
-      "downloadCount": 12931,
+      "downloadCount": 13394,
       "latestReleaseDate": "2026-05-05T17:06:44Z",
-      "releaseRecency": 21,
-      "releaseRecencyText": "Released 21 days ago",
-      "trendingScore": 246.04
+      "releaseRecency": 23,
+      "releaseRecencyText": "Released 23 days ago",
+      "trendingScore": 247.63
     },
     {
       "id": 963223041,
@@ -2431,8 +2431,8 @@
       "description": "ML-powered manga translator, written in Rust.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/mayocream/koharu",
-      "stargazersCount": 4476,
-      "forksCount": 244,
+      "stargazersCount": 4488,
+      "forksCount": 249,
       "language": "Rust",
       "topics": [
         "computer-vision",
@@ -2447,13 +2447,13 @@
         "translation"
       ],
       "releasesUrl": "https://api.github.com/repos/mayocream/koharu/releases{/id}",
-      "updatedAt": "2026-05-27T06:30:07Z",
+      "updatedAt": "2026-05-29T02:59:49Z",
       "createdAt": "2025-04-09T10:52:34Z",
-      "downloadCount": 114621,
+      "downloadCount": 118040,
       "latestReleaseDate": "2026-05-23T00:30:00Z",
-      "releaseRecency": 4,
-      "releaseRecencyText": "Released 4 days ago",
-      "trendingScore": 235.28
+      "releaseRecency": 6,
+      "releaseRecencyText": "Released 6 days ago",
+      "trendingScore": 234.81
     },
     {
       "id": 90902132,
@@ -2466,7 +2466,7 @@
       "description": "Powerful yet simple to use screenshot software :desktop_computer: :camera_flash:",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/flameshot-org/flameshot",
-      "stargazersCount": 29968,
+      "stargazersCount": 29982,
       "forksCount": 1933,
       "language": "C++",
       "topics": [
@@ -2481,13 +2481,13 @@
         "screenshot"
       ],
       "releasesUrl": "https://api.github.com/repos/flameshot-org/flameshot/releases{/id}",
-      "updatedAt": "2026-05-27T02:27:22Z",
+      "updatedAt": "2026-05-29T05:59:06Z",
       "createdAt": "2017-05-10T19:44:51Z",
-      "downloadCount": 3068647,
+      "downloadCount": 3075289,
       "latestReleaseDate": "2025-10-28T22:50:45Z",
-      "releaseRecency": 210,
-      "releaseRecencyText": "Released 210 days ago",
-      "trendingScore": 225.46
+      "releaseRecency": 212,
+      "releaseRecencyText": "Released 212 days ago",
+      "trendingScore": 225.43
     },
     {
       "id": 806618581,
@@ -2500,7 +2500,7 @@
       "description": "A beautiful, private, local-first personal finance tracker. Investments, net worth, spending, and simulations.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/wealthfolio/wealthfolio",
-      "stargazersCount": 7484,
+      "stargazersCount": 7500,
       "forksCount": 500,
       "language": "Rust",
       "topics": [
@@ -2510,13 +2510,13 @@
         "tauri-app"
       ],
       "releasesUrl": "https://api.github.com/repos/wealthfolio/wealthfolio/releases{/id}",
-      "updatedAt": "2026-05-26T22:38:23Z",
+      "updatedAt": "2026-05-29T03:48:37Z",
       "createdAt": "2024-05-27T14:44:18Z",
-      "downloadCount": 60647,
+      "downloadCount": 60951,
       "latestReleaseDate": "2026-05-15T12:46:44Z",
-      "releaseRecency": 11,
-      "releaseRecencyText": "Released 11 days ago",
-      "trendingScore": 221.32
+      "releaseRecency": 13,
+      "releaseRecencyText": "Released 13 days ago",
+      "trendingScore": 221.2
     },
     {
       "id": 514553345,
@@ -2529,8 +2529,8 @@
       "description": "G-code generator for 3D printers (Bambu, Prusa, Voron, VzBot, RatRig, Creality, etc.)",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/OrcaSlicer/OrcaSlicer",
-      "stargazersCount": 14332,
-      "forksCount": 2520,
+      "stargazersCount": 14374,
+      "forksCount": 2534,
       "language": "C++",
       "topics": [
         "3d-printer",
@@ -2541,13 +2541,13 @@
         "slicer"
       ],
       "releasesUrl": "https://api.github.com/repos/OrcaSlicer/OrcaSlicer/releases{/id}",
-      "updatedAt": "2026-05-27T06:24:56Z",
+      "updatedAt": "2026-05-29T06:32:05Z",
       "createdAt": "2022-07-16T11:01:21Z",
-      "downloadCount": 7698241,
+      "downloadCount": 7725186,
       "latestReleaseDate": "2026-03-23T13:08:14Z",
-      "releaseRecency": 64,
-      "releaseRecencyText": "Released 64 days ago",
-      "trendingScore": 219.29
+      "releaseRecency": 66,
+      "releaseRecencyText": "Released 66 days ago",
+      "trendingScore": 219.6
     },
     {
       "id": 857898245,
@@ -2560,7 +2560,7 @@
       "description": "A very fast, portable and hackable fuzzy finder.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/alexpasmantier/television",
-      "stargazersCount": 5927,
+      "stargazersCount": 5934,
       "forksCount": 176,
       "language": "Rust",
       "topics": [
@@ -2579,13 +2579,13 @@
         "tv"
       ],
       "releasesUrl": "https://api.github.com/repos/alexpasmantier/television/releases{/id}",
-      "updatedAt": "2026-05-27T06:31:43Z",
+      "updatedAt": "2026-05-29T03:17:55Z",
       "createdAt": "2024-09-15T22:16:18Z",
-      "downloadCount": 64878,
+      "downloadCount": 65355,
       "latestReleaseDate": "2026-05-12T21:46:26Z",
-      "releaseRecency": 14,
-      "releaseRecencyText": "Released 14 days ago",
-      "trendingScore": 207.81
+      "releaseRecency": 16,
+      "releaseRecencyText": "Released 16 days ago",
+      "trendingScore": 207.42
     },
     {
       "id": 120568143,
@@ -2598,8 +2598,8 @@
       "description": "A GPU-accelerated cross-platform terminal emulator and multiplexer written by @wez and implemented in Rust",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/wezterm/wezterm",
-      "stargazersCount": 26288,
-      "forksCount": 1458,
+      "stargazersCount": 26330,
+      "forksCount": 1462,
       "language": "Rust",
       "topics": [
         "rust",
@@ -2610,13 +2610,13 @@
         "terminal-emulators"
       ],
       "releasesUrl": "https://api.github.com/repos/wezterm/wezterm/releases{/id}",
-      "updatedAt": "2026-05-27T03:26:01Z",
+      "updatedAt": "2026-05-29T05:19:48Z",
       "createdAt": "2018-02-07T05:35:46Z",
-      "downloadCount": 1331463,
+      "downloadCount": 1337171,
       "latestReleaseDate": "2024-02-03T18:32:26Z",
-      "releaseRecency": 843,
-      "releaseRecencyText": "Released 843 days ago",
-      "trendingScore": 201.46
+      "releaseRecency": 845,
+      "releaseRecencyText": "Released 845 days ago",
+      "trendingScore": 201.62
     },
     {
       "id": 117356231,
@@ -2629,7 +2629,7 @@
       "description": "A command-line benchmarking tool",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/sharkdp/hyperfine",
-      "stargazersCount": 28170,
+      "stargazersCount": 28183,
       "forksCount": 483,
       "language": "Rust",
       "topics": [
@@ -2641,13 +2641,13 @@
         "tool"
       ],
       "releasesUrl": "https://api.github.com/repos/sharkdp/hyperfine/releases{/id}",
-      "updatedAt": "2026-05-27T06:20:53Z",
+      "updatedAt": "2026-05-28T22:00:22Z",
       "createdAt": "2018-01-13T15:49:54Z",
-      "downloadCount": 1861979,
+      "downloadCount": 1868423,
       "latestReleaseDate": "2025-11-18T08:38:43Z",
-      "releaseRecency": 189,
-      "releaseRecencyText": "Released 189 days ago",
-      "trendingScore": 200.42
+      "releaseRecency": 191,
+      "releaseRecencyText": "Released 191 days ago",
+      "trendingScore": 200.38
     },
     {
       "id": 290243101,
@@ -2660,8 +2660,8 @@
       "description": "Hurl, run and test HTTP requests with plain text.",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/Orange-OpenSource/hurl",
-      "stargazersCount": 18942,
-      "forksCount": 726,
+      "stargazersCount": 18957,
+      "forksCount": 727,
       "language": "Rust",
       "topics": [
         "api-testing",
@@ -2674,13 +2674,13 @@
         "testing-tools"
       ],
       "releasesUrl": "https://api.github.com/repos/Orange-OpenSource/hurl/releases{/id}",
-      "updatedAt": "2026-05-27T06:05:37Z",
+      "updatedAt": "2026-05-29T05:42:20Z",
       "createdAt": "2020-08-25T14:50:56Z",
-      "downloadCount": 3487247,
+      "downloadCount": 3508502,
       "latestReleaseDate": "2026-04-29T09:12:39Z",
-      "releaseRecency": 27,
-      "releaseRecencyText": "Released 27 days ago",
-      "trendingScore": 196.4
+      "releaseRecency": 29,
+      "releaseRecencyText": "Released 29 days ago",
+      "trendingScore": 196.37
     },
     {
       "id": 767183985,
@@ -2693,18 +2693,18 @@
       "description": "An open-source 3DS emulator project based on Citra.",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/azahar-emu/azahar",
-      "stargazersCount": 7292,
-      "forksCount": 503,
+      "stargazersCount": 7308,
+      "forksCount": 505,
       "language": "C++",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/azahar-emu/azahar/releases{/id}",
-      "updatedAt": "2026-05-27T04:58:24Z",
+      "updatedAt": "2026-05-29T06:13:50Z",
       "createdAt": "2024-03-04T21:08:59Z",
-      "downloadCount": 6018471,
+      "downloadCount": 6049820,
       "latestReleaseDate": "2026-05-14T15:33:04Z",
-      "releaseRecency": 12,
-      "releaseRecencyText": "Released 12 days ago",
-      "trendingScore": 195.38
+      "releaseRecency": 14,
+      "releaseRecencyText": "Released 14 days ago",
+      "trendingScore": 195.34
     },
     {
       "id": 553135896,
@@ -2717,8 +2717,8 @@
       "description": "A custom launcher for Minecraft that allows you to easily manage multiple installations of Minecraft at once (Fork of MultiMC)",
       "defaultBranch": "develop",
       "htmlUrl": "https://github.com/PrismLauncher/PrismLauncher",
-      "stargazersCount": 9451,
-      "forksCount": 1332,
+      "stargazersCount": 9464,
+      "forksCount": 1340,
       "language": "C++",
       "topics": [
         "cpp",
@@ -2736,13 +2736,13 @@
         "quiltmc"
       ],
       "releasesUrl": "https://api.github.com/repos/PrismLauncher/PrismLauncher/releases{/id}",
-      "updatedAt": "2026-05-26T23:54:19Z",
+      "updatedAt": "2026-05-29T03:56:31Z",
       "createdAt": "2022-10-17T19:18:14Z",
-      "downloadCount": 9591852,
+      "downloadCount": 9630223,
       "latestReleaseDate": "2026-04-12T18:23:03Z",
-      "releaseRecency": 44,
-      "releaseRecencyText": "Released 44 days ago",
-      "trendingScore": 191.52
+      "releaseRecency": 46,
+      "releaseRecencyText": "Released 46 days ago",
+      "trendingScore": 191.5
     },
     {
       "id": 52729242,
@@ -2755,8 +2755,8 @@
       "description": "KeePassXC is a cross-platform community-driven port of the Windows application “KeePass Password Safe”.",
       "defaultBranch": "develop",
       "htmlUrl": "https://github.com/keepassxreboot/keepassxc",
-      "stargazersCount": 27352,
-      "forksCount": 1802,
+      "stargazersCount": 27380,
+      "forksCount": 1804,
       "language": "C++",
       "topics": [
         "cross-platform",
@@ -2773,13 +2773,13 @@
         "yubikey"
       ],
       "releasesUrl": "https://api.github.com/repos/keepassxreboot/keepassxc/releases{/id}",
-      "updatedAt": "2026-05-27T06:33:49Z",
+      "updatedAt": "2026-05-29T05:25:16Z",
       "createdAt": "2016-02-28T15:52:40Z",
-      "downloadCount": 19442322,
+      "downloadCount": 19471600,
       "latestReleaseDate": "2026-03-10T01:16:42Z",
-      "releaseRecency": 78,
-      "releaseRecencyText": "Released 78 days ago",
-      "trendingScore": 186.27
+      "releaseRecency": 80,
+      "releaseRecencyText": "Released 80 days ago",
+      "trendingScore": 186.34
     },
     {
       "id": 224468265,
@@ -2792,8 +2792,8 @@
       "description": "A cross-platform, reimplementation of Notepad++",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/dail8859/NotepadNext",
-      "stargazersCount": 14186,
-      "forksCount": 875,
+      "stargazersCount": 14194,
+      "forksCount": 876,
       "language": "C++",
       "topics": [
         "desktop",
@@ -2806,13 +2806,13 @@
         "qt6"
       ],
       "releasesUrl": "https://api.github.com/repos/dail8859/NotepadNext/releases{/id}",
-      "updatedAt": "2026-05-27T00:59:52Z",
+      "updatedAt": "2026-05-29T05:45:13Z",
       "createdAt": "2019-11-27T16:06:10Z",
-      "downloadCount": 529012,
+      "downloadCount": 530106,
       "latestReleaseDate": "2026-04-27T22:48:45Z",
-      "releaseRecency": 29,
-      "releaseRecencyText": "Released 29 days ago",
-      "trendingScore": 185.61
+      "releaseRecency": 31,
+      "releaseRecencyText": "Released 31 days ago",
+      "trendingScore": 185.58
     },
     {
       "id": 660776503,
@@ -2825,8 +2825,8 @@
       "description": "Simple, Elastic-quality search for Postgres",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/paradedb/paradedb",
-      "stargazersCount": 8848,
-      "forksCount": 389,
+      "stargazersCount": 8862,
+      "forksCount": 391,
       "language": "Rust",
       "topics": [
         "aggregations",
@@ -2845,13 +2845,13 @@
         "sql"
       ],
       "releasesUrl": "https://api.github.com/repos/paradedb/paradedb/releases{/id}",
-      "updatedAt": "2026-05-27T02:19:22Z",
+      "updatedAt": "2026-05-29T04:16:51Z",
       "createdAt": "2023-06-30T20:21:47Z",
-      "downloadCount": 174682,
-      "latestReleaseDate": "2026-05-06T00:10:13Z",
-      "releaseRecency": 21,
-      "releaseRecencyText": "Released 21 days ago",
-      "trendingScore": 182.79
+      "downloadCount": 175506,
+      "latestReleaseDate": "2026-05-28T01:32:01Z",
+      "releaseRecency": 1,
+      "releaseRecencyText": "Released yesterday",
+      "trendingScore": 182.74
     },
     {
       "id": 754327435,
@@ -2864,8 +2864,8 @@
       "description": "Cross-platform GUI proxy utility (Empowered by sing-box)",
       "defaultBranch": "dev",
       "htmlUrl": "https://github.com/throneproj/Throne",
-      "stargazersCount": 5827,
-      "forksCount": 308,
+      "stargazersCount": 5864,
+      "forksCount": 311,
       "language": "C++",
       "topics": [
         "anytls",
@@ -2884,13 +2884,13 @@
         "xhttp"
       ],
       "releasesUrl": "https://api.github.com/repos/throneproj/Throne/releases{/id}",
-      "updatedAt": "2026-05-27T06:36:22Z",
+      "updatedAt": "2026-05-29T05:53:03Z",
       "createdAt": "2024-02-07T20:43:12Z",
-      "downloadCount": 912294,
+      "downloadCount": 923634,
       "latestReleaseDate": "2026-05-21T10:40:05Z",
-      "releaseRecency": 5,
-      "releaseRecencyText": "Released 5 days ago",
-      "trendingScore": 178.9
+      "releaseRecency": 7,
+      "releaseRecencyText": "Released 7 days ago",
+      "trendingScore": 179.45
     },
     {
       "id": 84901543,
@@ -2903,21 +2903,21 @@
       "description": "[Unofficial] qBittorrent Enhanced, based on qBittorrent",
       "defaultBranch": "v5_1_x",
       "htmlUrl": "https://github.com/c0re100/qBittorrent-Enhanced-Edition",
-      "stargazersCount": 25847,
-      "forksCount": 1425,
+      "stargazersCount": 25869,
+      "forksCount": 1426,
       "language": "C++",
       "topics": [
         "bittorrent",
         "bittorrent-client"
       ],
       "releasesUrl": "https://api.github.com/repos/c0re100/qBittorrent-Enhanced-Edition/releases{/id}",
-      "updatedAt": "2026-05-27T06:23:48Z",
+      "updatedAt": "2026-05-29T06:18:13Z",
       "createdAt": "2017-03-14T03:30:46Z",
-      "downloadCount": 8688533,
+      "downloadCount": 8703395,
       "latestReleaseDate": "2025-11-15T16:20:39Z",
-      "releaseRecency": 192,
-      "releaseRecencyText": "Released 192 days ago",
-      "trendingScore": 169.81
+      "releaseRecency": 194,
+      "releaseRecencyText": "Released 194 days ago",
+      "trendingScore": 169.84
     },
     {
       "id": 5736080,
@@ -2930,8 +2930,8 @@
       "description": "Official source code of FreeCAD, a free and opensource multiplatform 3D parametric modeler.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/FreeCAD/FreeCAD",
-      "stargazersCount": 31174,
-      "forksCount": 5600,
+      "stargazersCount": 31202,
+      "forksCount": 5606,
       "language": "C++",
       "topics": [
         "3d",
@@ -2950,13 +2950,13 @@
         "windows"
       ],
       "releasesUrl": "https://api.github.com/repos/FreeCAD/FreeCAD/releases{/id}",
-      "updatedAt": "2026-05-27T06:42:37Z",
+      "updatedAt": "2026-05-29T06:11:38Z",
       "createdAt": "2012-09-09T08:25:02Z",
-      "downloadCount": 27148813,
+      "downloadCount": 27194113,
       "latestReleaseDate": "2026-04-14T22:22:12Z",
-      "releaseRecency": 42,
-      "releaseRecencyText": "Released 42 days ago",
-      "trendingScore": 164.52
+      "releaseRecency": 44,
+      "releaseRecencyText": "Released 44 days ago",
+      "trendingScore": 164.58
     },
     {
       "id": 3351871,
@@ -2969,8 +2969,8 @@
       "description": "qBittorrent BitTorrent client",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/qbittorrent/qBittorrent",
-      "stargazersCount": 37774,
-      "forksCount": 4697,
+      "stargazersCount": 37822,
+      "forksCount": 4702,
       "language": "C++",
       "topics": [
         "bittorrent",
@@ -2981,13 +2981,13 @@
         "torrent-client"
       ],
       "releasesUrl": "https://api.github.com/repos/qbittorrent/qBittorrent/releases{/id}",
-      "updatedAt": "2026-05-27T06:20:26Z",
+      "updatedAt": "2026-05-29T05:29:30Z",
       "createdAt": "2012-02-04T09:37:46Z",
-      "downloadCount": 49517,
+      "downloadCount": 54328,
       "latestReleaseDate": "2026-05-25T23:21:39Z",
-      "releaseRecency": 1,
-      "releaseRecencyText": "Released yesterday",
-      "trendingScore": 160.59
+      "releaseRecency": 3,
+      "releaseRecencyText": "Released 3 days ago",
+      "trendingScore": 160.72
     },
     {
       "id": 192025001,
@@ -3000,7 +3000,7 @@
       "description": ":star: Linux / Windows / macOS 跨平台 V2Ray 客户端 | 支持 VMess / VLESS / SSR / Trojan / Trojan-Go / NaiveProxy / HTTP / HTTPS / SOCKS5 | 使用 C++ / Qt 开发 | 可拓展插件式设计 :star:",
       "defaultBranch": "dev",
       "htmlUrl": "https://github.com/Qv2ray/Qv2ray",
-      "stargazersCount": 16961,
+      "stargazersCount": 16959,
       "forksCount": 3195,
       "language": "C++",
       "topics": [
@@ -3020,45 +3020,13 @@
         "v2ray"
       ],
       "releasesUrl": "https://api.github.com/repos/Qv2ray/Qv2ray/releases{/id}",
-      "updatedAt": "2026-05-27T01:22:15Z",
+      "updatedAt": "2026-05-29T03:31:40Z",
       "createdAt": "2019-06-15T01:51:08Z",
-      "downloadCount": 2082989,
+      "downloadCount": 2083369,
       "latestReleaseDate": "2021-08-17T03:06:20Z",
-      "releaseRecency": 1744,
-      "releaseRecencyText": "Released 1744 days ago",
-      "trendingScore": 157.66
-    },
-    {
-      "id": 527719753,
-      "name": "Cemu",
-      "fullName": "cemu-project/Cemu",
-      "owner": {
-        "login": "cemu-project",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/40145098?v=4"
-      },
-      "description": "Cemu - Wii U emulator",
-      "defaultBranch": "main",
-      "htmlUrl": "https://github.com/cemu-project/Cemu",
-      "stargazersCount": 9389,
-      "forksCount": 841,
-      "language": "C++",
-      "topics": [
-        "cemu",
-        "cemu-emulator",
-        "cpp",
-        "emulation",
-        "emulator",
-        "nintendo",
-        "wiiu"
-      ],
-      "releasesUrl": "https://api.github.com/repos/cemu-project/Cemu/releases{/id}",
-      "updatedAt": "2026-05-26T20:10:39Z",
-      "createdAt": "2022-08-22T20:19:02Z",
-      "downloadCount": 10089036,
-      "latestReleaseDate": "2025-02-06T13:18:18Z",
-      "releaseRecency": 474,
-      "releaseRecencyText": "Released 474 days ago",
-      "trendingScore": 152.77
+      "releaseRecency": 1746,
+      "releaseRecencyText": "Released 1746 days ago",
+      "trendingScore": 157.54
     },
     {
       "id": 205326947,
@@ -3071,8 +3039,8 @@
       "description": "A Privacy-first, Cross-platform Text Expander written in Rust",
       "defaultBranch": "dev",
       "htmlUrl": "https://github.com/espanso/espanso",
-      "stargazersCount": 13868,
-      "forksCount": 408,
+      "stargazersCount": 13880,
+      "forksCount": 411,
       "language": "Rust",
       "topics": [
         "espanso",
@@ -3085,13 +3053,45 @@
         "windows"
       ],
       "releasesUrl": "https://api.github.com/repos/espanso/espanso/releases{/id}",
-      "updatedAt": "2026-05-27T04:39:59Z",
+      "updatedAt": "2026-05-29T06:02:47Z",
       "createdAt": "2019-08-30T07:16:58Z",
-      "downloadCount": 674823,
+      "downloadCount": 676864,
       "latestReleaseDate": "2025-10-11T16:35:49Z",
-      "releaseRecency": 227,
-      "releaseRecencyText": "Released 227 days ago",
-      "trendingScore": 152.7
+      "releaseRecency": 229,
+      "releaseRecencyText": "Released 229 days ago",
+      "trendingScore": 152.71
+    },
+    {
+      "id": 527719753,
+      "name": "Cemu",
+      "fullName": "cemu-project/Cemu",
+      "owner": {
+        "login": "cemu-project",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/40145098?v=4"
+      },
+      "description": "Cemu - Wii U emulator",
+      "defaultBranch": "main",
+      "htmlUrl": "https://github.com/cemu-project/Cemu",
+      "stargazersCount": 9396,
+      "forksCount": 843,
+      "language": "C++",
+      "topics": [
+        "cemu",
+        "cemu-emulator",
+        "cpp",
+        "emulation",
+        "emulator",
+        "nintendo",
+        "wiiu"
+      ],
+      "releasesUrl": "https://api.github.com/repos/cemu-project/Cemu/releases{/id}",
+      "updatedAt": "2026-05-29T04:22:10Z",
+      "createdAt": "2022-08-22T20:19:02Z",
+      "downloadCount": 10105828,
+      "latestReleaseDate": "2025-02-06T13:18:18Z",
+      "releaseRecency": 476,
+      "releaseRecencyText": "Released 476 days ago",
+      "trendingScore": 152.67
     },
     {
       "id": 449091292,
@@ -3104,7 +3104,7 @@
       "description": "PRQL is a modern language for transforming data — a simple, powerful, pipelined SQL replacement",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/PRQL/prql",
-      "stargazersCount": 10838,
+      "stargazersCount": 10841,
       "forksCount": 257,
       "language": "Rust",
       "topics": [
@@ -3113,13 +3113,13 @@
         "sql"
       ],
       "releasesUrl": "https://api.github.com/repos/PRQL/prql/releases{/id}",
-      "updatedAt": "2026-05-26T15:43:58Z",
+      "updatedAt": "2026-05-28T19:09:09Z",
       "createdAt": "2022-01-18T00:37:55Z",
-      "downloadCount": 45196,
+      "downloadCount": 45333,
       "latestReleaseDate": "2026-04-27T21:15:42Z",
-      "releaseRecency": 29,
-      "releaseRecencyText": "Released 29 days ago",
-      "trendingScore": 152.33
+      "releaseRecency": 31,
+      "releaseRecencyText": "Released 31 days ago",
+      "trendingScore": 152.19
     },
     {
       "id": 571770,
@@ -3132,8 +3132,8 @@
       "description": "Universal markup converter",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/jgm/pandoc",
-      "stargazersCount": 44372,
-      "forksCount": 3867,
+      "stargazersCount": 44425,
+      "forksCount": 3872,
       "language": "Haskell",
       "topics": [
         "commonmark",
@@ -3147,13 +3147,13 @@
         "publishing"
       ],
       "releasesUrl": "https://api.github.com/repos/jgm/pandoc/releases{/id}",
-      "updatedAt": "2026-05-27T04:35:40Z",
+      "updatedAt": "2026-05-29T05:54:57Z",
       "createdAt": "2010-03-20T20:34:23Z",
-      "downloadCount": 42080440,
+      "downloadCount": 42179922,
       "latestReleaseDate": "2026-03-19T13:01:03Z",
-      "releaseRecency": 68,
-      "releaseRecencyText": "Released 68 days ago",
-      "trendingScore": 150.13
+      "releaseRecency": 70,
+      "releaseRecencyText": "Released 70 days ago",
+      "trendingScore": 150.26
     },
     {
       "id": 131449222,
@@ -3166,8 +3166,8 @@
       "description": "GameStream client for PCs (Windows, Mac, Linux, and Steam Link)",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/moonlight-stream/moonlight-qt",
-      "stargazersCount": 17305,
-      "forksCount": 1084,
+      "stargazersCount": 17334,
+      "forksCount": 1086,
       "language": "C++",
       "topics": [
         "gamestream",
@@ -3181,13 +3181,13 @@
         "windows-app"
       ],
       "releasesUrl": "https://api.github.com/repos/moonlight-stream/moonlight-qt/releases{/id}",
-      "updatedAt": "2026-05-27T06:15:34Z",
+      "updatedAt": "2026-05-29T06:24:53Z",
       "createdAt": "2018-04-28T22:41:42Z",
-      "downloadCount": 10054611,
+      "downloadCount": 10077398,
       "latestReleaseDate": "2024-09-17T03:56:03Z",
-      "releaseRecency": 617,
-      "releaseRecencyText": "Released 617 days ago",
-      "trendingScore": 149.32
+      "releaseRecency": 619,
+      "releaseRecencyText": "Released 619 days ago",
+      "trendingScore": 149.44
     },
     {
       "id": 122758193,
@@ -3200,8 +3200,8 @@
       "description": "A machine learning-based video super resolution and frame interpolation framework. Est. Hack the Valley II, 2018.",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/k4yt3x/video2x",
-      "stargazersCount": 20021,
-      "forksCount": 1744,
+      "stargazersCount": 20038,
+      "forksCount": 1746,
       "language": "C++",
       "topics": [
         "anime4k",
@@ -3216,13 +3216,13 @@
         "vulkan"
       ],
       "releasesUrl": "https://api.github.com/repos/k4yt3x/video2x/releases{/id}",
-      "updatedAt": "2026-05-27T05:06:40Z",
+      "updatedAt": "2026-05-29T06:02:45Z",
       "createdAt": "2018-02-24T16:34:41Z",
-      "downloadCount": 1089335,
+      "downloadCount": 1091370,
       "latestReleaseDate": "2025-01-24T23:33:33Z",
-      "releaseRecency": 487,
-      "releaseRecencyText": "Released 487 days ago",
-      "trendingScore": 148.9
+      "releaseRecency": 489,
+      "releaseRecencyText": "Released 489 days ago",
+      "trendingScore": 148.92
     },
     {
       "id": 372193147,
@@ -3235,8 +3235,8 @@
       "description": "A highly customizable Changelog Generator that follows Conventional Commit specifications ⛰️ ",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/orhun/git-cliff",
-      "stargazersCount": 11893,
-      "forksCount": 297,
+      "stargazersCount": 11899,
+      "forksCount": 298,
       "language": "Rust",
       "topics": [
         "changelog",
@@ -3254,13 +3254,13 @@
         "semver"
       ],
       "releasesUrl": "https://api.github.com/repos/orhun/git-cliff/releases{/id}",
-      "updatedAt": "2026-05-27T00:11:19Z",
+      "updatedAt": "2026-05-29T02:25:34Z",
       "createdAt": "2021-05-30T11:11:58Z",
-      "downloadCount": 1811123,
+      "downloadCount": 1827555,
       "latestReleaseDate": "2026-04-26T10:17:56Z",
-      "releaseRecency": 30,
-      "releaseRecencyText": "Released 30 days ago",
-      "trendingScore": 146.55
+      "releaseRecency": 32,
+      "releaseRecencyText": "Released 32 days ago",
+      "trendingScore": 146.47
     },
     {
       "id": 226408450,
@@ -3273,8 +3273,8 @@
       "description": "No Nonsense Neovim Client in Rust",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/neovide/neovide",
-      "stargazersCount": 15014,
-      "forksCount": 617,
+      "stargazersCount": 15019,
+      "forksCount": 616,
       "language": "Rust",
       "topics": [
         "gpu",
@@ -3284,13 +3284,13 @@
         "skia"
       ],
       "releasesUrl": "https://api.github.com/repos/neovide/neovide/releases{/id}",
-      "updatedAt": "2026-05-27T01:24:27Z",
+      "updatedAt": "2026-05-29T05:48:13Z",
       "createdAt": "2019-12-06T20:51:39Z",
-      "downloadCount": 476200,
+      "downloadCount": 477239,
       "latestReleaseDate": "2026-04-14T19:42:12Z",
-      "releaseRecency": 42,
-      "releaseRecencyText": "Released 42 days ago",
-      "trendingScore": 143.08
+      "releaseRecency": 44,
+      "releaseRecencyText": "Released 44 days ago",
+      "trendingScore": 143.01
     },
     {
       "id": 722835690,
@@ -3303,7 +3303,7 @@
       "description": "A cross-platform bilibili toolbox. 跨平台哔哩哔哩工具箱，支持下载视频、番剧等等各类资源",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/btjawa/BiliTools",
-      "stargazersCount": 5148,
+      "stargazersCount": 5152,
       "forksCount": 338,
       "language": "Rust",
       "topics": [
@@ -3315,13 +3315,13 @@
         "vue"
       ],
       "releasesUrl": "https://api.github.com/repos/btjawa/BiliTools/releases{/id}",
-      "updatedAt": "2026-05-27T06:16:11Z",
+      "updatedAt": "2026-05-28T12:17:17Z",
       "createdAt": "2023-11-24T04:16:37Z",
-      "downloadCount": 293766,
+      "downloadCount": 295206,
       "latestReleaseDate": "2025-12-21T08:55:40Z",
-      "releaseRecency": 156,
-      "releaseRecencyText": "Released 156 days ago",
-      "trendingScore": 140.52
+      "releaseRecency": 158,
+      "releaseRecencyText": "Released 158 days ago",
+      "trendingScore": 140.37
     },
     {
       "id": 25135037,
@@ -3334,8 +3334,8 @@
       "description": "Share a single keyboard and mouse between multiple computers.",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/deskflow/deskflow",
-      "stargazersCount": 26062,
-      "forksCount": 4601,
+      "stargazersCount": 26121,
+      "forksCount": 4608,
       "language": "C++",
       "topics": [
         "keyboard",
@@ -3345,13 +3345,13 @@
         "network"
       ],
       "releasesUrl": "https://api.github.com/repos/deskflow/deskflow/releases{/id}",
-      "updatedAt": "2026-05-27T06:10:25Z",
+      "updatedAt": "2026-05-29T06:31:09Z",
       "createdAt": "2014-10-12T23:18:57Z",
-      "downloadCount": 412411,
+      "downloadCount": 415505,
       "latestReleaseDate": "2026-02-16T13:37:47Z",
-      "releaseRecency": 99,
-      "releaseRecencyText": "Released 99 days ago",
-      "trendingScore": 138.82
+      "releaseRecency": 101,
+      "releaseRecencyText": "Released 101 days ago",
+      "trendingScore": 139.04
     },
     {
       "id": 104732438,
@@ -3364,7 +3364,7 @@
       "description": "Free and Open Source Reverse Engineering Platform powered by rizin",
       "defaultBranch": "dev",
       "htmlUrl": "https://github.com/rizinorg/cutter",
-      "stargazersCount": 18892,
+      "stargazersCount": 18898,
       "forksCount": 1364,
       "language": "C++",
       "topics": [
@@ -3375,13 +3375,13 @@
         "security"
       ],
       "releasesUrl": "https://api.github.com/repos/rizinorg/cutter/releases{/id}",
-      "updatedAt": "2026-05-27T06:26:32Z",
+      "updatedAt": "2026-05-29T06:22:40Z",
       "createdAt": "2017-09-25T09:50:51Z",
-      "downloadCount": 958045,
+      "downloadCount": 959000,
       "latestReleaseDate": "2025-05-11T14:58:19Z",
-      "releaseRecency": 380,
-      "releaseRecencyText": "Released 380 days ago",
-      "trendingScore": 137.38
+      "releaseRecency": 382,
+      "releaseRecencyText": "Released 382 days ago",
+      "trendingScore": 137.34
     },
     {
       "id": 19416551,
@@ -3394,7 +3394,7 @@
       "description": "Official home of the DB Browser for SQLite (DB4S) project. Previously known as \"SQLite Database Browser\" and \"Database Browser for SQLite\". Website at: ",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/sqlitebrowser/sqlitebrowser",
-      "stargazersCount": 24082,
+      "stargazersCount": 24091,
       "forksCount": 2338,
       "language": "C++",
       "topics": [
@@ -3407,12 +3407,12 @@
         "sqlitebrowser"
       ],
       "releasesUrl": "https://api.github.com/repos/sqlitebrowser/sqlitebrowser/releases{/id}",
-      "updatedAt": "2026-05-27T04:28:43Z",
+      "updatedAt": "2026-05-29T05:26:47Z",
       "createdAt": "2014-05-04T01:54:44Z",
-      "downloadCount": 14327267,
+      "downloadCount": 14358188,
       "latestReleaseDate": "2024-10-16T08:42:55Z",
-      "releaseRecency": 587,
-      "releaseRecencyText": "Released 587 days ago",
+      "releaseRecency": 589,
+      "releaseRecencyText": "Released 589 days ago",
       "trendingScore": 137.31
     },
     {
@@ -3426,7 +3426,7 @@
       "description": "Yet another cross-platform graphical process/system monitor.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/ClementTsang/bottom",
-      "stargazersCount": 13367,
+      "stargazersCount": 13374,
       "forksCount": 340,
       "language": "Rust",
       "topics": [
@@ -3441,13 +3441,13 @@
         "tui"
       ],
       "releasesUrl": "https://api.github.com/repos/ClementTsang/bottom/releases{/id}",
-      "updatedAt": "2026-05-27T06:17:25Z",
+      "updatedAt": "2026-05-29T06:04:41Z",
       "createdAt": "2019-08-28T23:43:30Z",
-      "downloadCount": 557984,
+      "downloadCount": 559033,
       "latestReleaseDate": "2026-01-01T00:15:15Z",
-      "releaseRecency": 146,
-      "releaseRecencyText": "Released 146 days ago",
-      "trendingScore": 136.54
+      "releaseRecency": 148,
+      "releaseRecencyText": "Released 148 days ago",
+      "trendingScore": 136.51
     },
     {
       "id": 158927812,
@@ -3460,7 +3460,7 @@
       "description": "The next gen ls command",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/lsd-rs/lsd",
-      "stargazersCount": 16041,
+      "stargazersCount": 16044,
       "forksCount": 500,
       "language": "Rust",
       "topics": [
@@ -3472,13 +3472,13 @@
         "rust"
       ],
       "releasesUrl": "https://api.github.com/repos/lsd-rs/lsd/releases{/id}",
-      "updatedAt": "2026-05-27T04:15:53Z",
+      "updatedAt": "2026-05-28T23:54:38Z",
       "createdAt": "2018-11-24T11:04:12Z",
-      "downloadCount": 551402,
+      "downloadCount": 552216,
       "latestReleaseDate": "2025-10-12T08:31:53Z",
-      "releaseRecency": 226,
-      "releaseRecencyText": "Released 226 days ago",
-      "trendingScore": 133.09
+      "releaseRecency": 228,
+      "releaseRecencyText": "Released 228 days ago",
+      "trendingScore": 133.02
     },
     {
       "id": 397618589,
@@ -3491,7 +3491,7 @@
       "description": "阿里云盘 WebDAV 服务",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/messense/aliyundrive-webdav",
-      "stargazersCount": 9785,
+      "stargazersCount": 9782,
       "forksCount": 1079,
       "language": "Rust",
       "topics": [
@@ -3502,13 +3502,13 @@
         "webdav-server"
       ],
       "releasesUrl": "https://api.github.com/repos/messense/aliyundrive-webdav/releases{/id}",
-      "updatedAt": "2026-05-27T04:23:51Z",
+      "updatedAt": "2026-05-27T13:39:11Z",
       "createdAt": "2021-08-18T13:53:39Z",
-      "downloadCount": 1554615,
+      "downloadCount": 1554703,
       "latestReleaseDate": "2023-10-02T02:13:44Z",
-      "releaseRecency": 968,
-      "releaseRecencyText": "Released 968 days ago",
-      "trendingScore": 128.34
+      "releaseRecency": 970,
+      "releaseRecencyText": "Released 970 days ago",
+      "trendingScore": 128.18
     },
     {
       "id": 372536760,
@@ -3521,7 +3521,7 @@
       "description": "The Fastest Distributed Database for Transactional, Analytical, and  AI Workloads.",
       "defaultBranch": "develop",
       "htmlUrl": "https://github.com/oceanbase/oceanbase",
-      "stargazersCount": 10130,
+      "stargazersCount": 10136,
       "forksCount": 1895,
       "language": "C++",
       "topics": [
@@ -3547,13 +3547,13 @@
         "vectors"
       ],
       "releasesUrl": "https://api.github.com/repos/oceanbase/oceanbase/releases{/id}",
-      "updatedAt": "2026-05-26T16:44:38Z",
+      "updatedAt": "2026-05-29T06:03:53Z",
       "createdAt": "2021-05-31T14:36:17Z",
-      "downloadCount": 22791,
+      "downloadCount": 22854,
       "latestReleaseDate": "2026-05-08T06:26:44Z",
-      "releaseRecency": 19,
-      "releaseRecencyText": "Released 19 days ago",
-      "trendingScore": 127.26
+      "releaseRecency": 21,
+      "releaseRecencyText": "Released 21 days ago",
+      "trendingScore": 127.2
     },
     {
       "id": 22394357,
@@ -3566,7 +3566,7 @@
       "description": "SQL powered operating system instrumentation, monitoring, and analytics.",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/osquery/osquery",
-      "stargazersCount": 23272,
+      "stargazersCount": 23276,
       "forksCount": 2569,
       "language": "C++",
       "topics": [
@@ -3577,13 +3577,13 @@
         "sql"
       ],
       "releasesUrl": "https://api.github.com/repos/osquery/osquery/releases{/id}",
-      "updatedAt": "2026-05-27T05:29:14Z",
+      "updatedAt": "2026-05-29T03:38:27Z",
       "createdAt": "2014-07-29T20:27:33Z",
-      "downloadCount": 3376678,
+      "downloadCount": 3379571,
       "latestReleaseDate": "2026-04-25T20:33:09Z",
-      "releaseRecency": 31,
-      "releaseRecencyText": "Released 31 days ago",
-      "trendingScore": 123.77
+      "releaseRecency": 33,
+      "releaseRecencyText": "Released 33 days ago",
+      "trendingScore": 123.73
     },
     {
       "id": 427166323,
@@ -3596,8 +3596,8 @@
       "description": "Video stabilization using gyroscope data",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/gyroflow/gyroflow",
-      "stargazersCount": 8807,
-      "forksCount": 426,
+      "stargazersCount": 8864,
+      "forksCount": 431,
       "language": "Rust",
       "topics": [
         "fpv",
@@ -3614,13 +3614,13 @@
         "video-processing"
       ],
       "releasesUrl": "https://api.github.com/repos/gyroflow/gyroflow/releases{/id}",
-      "updatedAt": "2026-05-27T06:45:33Z",
+      "updatedAt": "2026-05-29T04:54:17Z",
       "createdAt": "2021-11-11T22:55:00Z",
-      "downloadCount": 1079373,
+      "downloadCount": 1082679,
       "latestReleaseDate": "2025-09-04T14:41:37Z",
-      "releaseRecency": 264,
-      "releaseRecencyText": "Released 264 days ago",
-      "trendingScore": 122.3
+      "releaseRecency": 266,
+      "releaseRecencyText": "Released 266 days ago",
+      "trendingScore": 122.86
     },
     {
       "id": 114187903,
@@ -3633,7 +3633,7 @@
       "description": "FoundationDB - the open source, distributed, transactional key-value store",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/apple/foundationdb",
-      "stargazersCount": 16347,
+      "stargazersCount": 16354,
       "forksCount": 1504,
       "language": "C++",
       "topics": [
@@ -3644,13 +3644,13 @@
         "transactional"
       ],
       "releasesUrl": "https://api.github.com/repos/apple/foundationdb/releases{/id}",
-      "updatedAt": "2026-05-27T05:49:17Z",
+      "updatedAt": "2026-05-29T06:09:59Z",
       "createdAt": "2017-12-14T01:40:42Z",
-      "downloadCount": 16140538,
+      "downloadCount": 16189325,
       "latestReleaseDate": "2025-07-02T21:17:10Z",
-      "releaseRecency": 328,
-      "releaseRecencyText": "Released 328 days ago",
-      "trendingScore": 121.94
+      "releaseRecency": 330,
+      "releaseRecencyText": "Released 330 days ago",
+      "trendingScore": 121.92
     },
     {
       "id": 546129875,
@@ -3663,8 +3663,8 @@
       "description": "A hardware-accelerated GPU terminal emulator focusing to run in desktops and browsers.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/raphamorim/rio",
-      "stargazersCount": 6855,
-      "forksCount": 286,
+      "stargazersCount": 6857,
+      "forksCount": 287,
       "language": "Rust",
       "topics": [
         "gpu-acceleration",
@@ -3680,13 +3680,13 @@
         "wgpu"
       ],
       "releasesUrl": "https://api.github.com/repos/raphamorim/rio/releases{/id}",
-      "updatedAt": "2026-05-26T14:43:51Z",
+      "updatedAt": "2026-05-28T19:26:01Z",
       "createdAt": "2022-10-05T15:18:41Z",
-      "downloadCount": 172704,
+      "downloadCount": 173775,
       "latestReleaseDate": "2026-05-20T09:05:28Z",
-      "releaseRecency": 6,
-      "releaseRecencyText": "Released 6 days ago",
-      "trendingScore": 121.16
+      "releaseRecency": 8,
+      "releaseRecencyText": "Released 8 days ago",
+      "trendingScore": 121.04
     },
     {
       "id": 474961035,
@@ -3699,7 +3699,7 @@
       "description": "A network diagnostic tool ",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/fujiapple852/trippy",
-      "stargazersCount": 6886,
+      "stargazersCount": 6889,
       "forksCount": 225,
       "language": "Rust",
       "topics": [
@@ -3725,13 +3725,13 @@
         "windows"
       ],
       "releasesUrl": "https://api.github.com/repos/fujiapple852/trippy/releases{/id}",
-      "updatedAt": "2026-05-27T04:06:16Z",
+      "updatedAt": "2026-05-29T03:36:55Z",
       "createdAt": "2022-03-28T10:56:29Z",
-      "downloadCount": 66261,
+      "downloadCount": 66424,
       "latestReleaseDate": "2025-05-05T12:35:13Z",
-      "releaseRecency": 386,
-      "releaseRecencyText": "Released 386 days ago",
-      "trendingScore": 118.61
+      "releaseRecency": 388,
+      "releaseRecencyText": "Released 388 days ago",
+      "trendingScore": 118.53
     },
     {
       "id": 418377492,
@@ -3744,8 +3744,8 @@
       "description": "Chromium fork named after radioactive element No. 90. Source code and Linux releases. Windows/MacOS/ARM builds served in different repos, links are towards the top of the README.md.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/Alex313031/thorium",
-      "stargazersCount": 7170,
-      "forksCount": 257,
+      "stargazersCount": 7178,
+      "forksCount": 258,
       "language": "C++",
       "topics": [
         "aes",
@@ -3770,13 +3770,13 @@
         "webbrowser"
       ],
       "releasesUrl": "https://api.github.com/repos/Alex313031/thorium/releases{/id}",
-      "updatedAt": "2026-05-27T05:23:25Z",
+      "updatedAt": "2026-05-29T04:55:18Z",
       "createdAt": "2021-10-18T06:46:34Z",
-      "downloadCount": 560744,
+      "downloadCount": 561587,
       "latestReleaseDate": "2026-02-18T03:11:23Z",
-      "releaseRecency": 98,
-      "releaseRecencyText": "Released 98 days ago",
-      "trendingScore": 117.31
+      "releaseRecency": 100,
+      "releaseRecencyText": "Released 100 days ago",
+      "trendingScore": 117.3
     },
     {
       "id": 267374872,
@@ -3794,13 +3794,13 @@
       "language": "Rust",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/jpochyla/psst/releases{/id}",
-      "updatedAt": "2026-05-25T14:24:16Z",
+      "updatedAt": "2026-05-28T21:54:21Z",
       "createdAt": "2020-05-27T16:46:58Z",
-      "downloadCount": 1653,
+      "downloadCount": 1794,
       "latestReleaseDate": "2025-06-28T14:34:37Z",
-      "releaseRecency": 332,
-      "releaseRecencyText": "Released 332 days ago",
-      "trendingScore": 113.86
+      "releaseRecency": 334,
+      "releaseRecencyText": "Released 334 days ago",
+      "trendingScore": 113.78
     },
     {
       "id": 260432296,
@@ -3813,7 +3813,7 @@
       "description": "Use your tablet as graphic tablet/touch screen on your computer.",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/H-M-H/Weylus",
-      "stargazersCount": 9235,
+      "stargazersCount": 9241,
       "forksCount": 368,
       "language": "Rust",
       "topics": [
@@ -3839,13 +3839,13 @@
         "xdg-desktop-portal"
       ],
       "releasesUrl": "https://api.github.com/repos/H-M-H/Weylus/releases{/id}",
-      "updatedAt": "2026-05-27T02:16:54Z",
+      "updatedAt": "2026-05-29T06:15:07Z",
       "createdAt": "2020-05-01T10:25:33Z",
-      "downloadCount": 189887,
+      "downloadCount": 190423,
       "latestReleaseDate": "2021-10-31T08:27:10Z",
-      "releaseRecency": 1668,
-      "releaseRecencyText": "Released 1668 days ago",
-      "trendingScore": 113.35
+      "releaseRecency": 1670,
+      "releaseRecencyText": "Released 1670 days ago",
+      "trendingScore": 113.33
     },
     {
       "id": 32921736,
@@ -3858,8 +3858,8 @@
       "description": "Audio Editor                                     ",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/audacity/audacity",
-      "stargazersCount": 17051,
-      "forksCount": 2556,
+      "stargazersCount": 17061,
+      "forksCount": 2557,
       "language": "C++",
       "topics": [
         "audio",
@@ -3869,13 +3869,13 @@
         "wxwidgets-applications"
       ],
       "releasesUrl": "https://api.github.com/repos/audacity/audacity/releases{/id}",
-      "updatedAt": "2026-05-26T23:17:29Z",
+      "updatedAt": "2026-05-29T06:23:07Z",
       "createdAt": "2015-03-26T10:46:17Z",
-      "downloadCount": 96982155,
+      "downloadCount": 97079711,
       "latestReleaseDate": "2025-12-11T19:48:17Z",
-      "releaseRecency": 166,
-      "releaseRecencyText": "Released 166 days ago",
-      "trendingScore": 111.6
+      "releaseRecency": 168,
+      "releaseRecencyText": "Released 168 days ago",
+      "trendingScore": 111.61
     },
     {
       "id": 299354666,
@@ -3888,8 +3888,8 @@
       "description": "RustDesk Server Program",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/rustdesk/rustdesk-server",
-      "stargazersCount": 9855,
-      "forksCount": 2359,
+      "stargazersCount": 9865,
+      "forksCount": 2362,
       "language": "Rust",
       "topics": [
         "remote-access",
@@ -3898,13 +3898,13 @@
         "tauri"
       ],
       "releasesUrl": "https://api.github.com/repos/rustdesk/rustdesk-server/releases{/id}",
-      "updatedAt": "2026-05-27T06:06:08Z",
+      "updatedAt": "2026-05-29T05:33:54Z",
       "createdAt": "2020-09-28T15:37:59Z",
-      "downloadCount": 1251549,
+      "downloadCount": 1253609,
       "latestReleaseDate": "2026-01-12T05:38:30Z",
-      "releaseRecency": 135,
-      "releaseRecencyText": "Released 135 days ago",
-      "trendingScore": 111.4
+      "releaseRecency": 137,
+      "releaseRecencyText": "Released 137 days ago",
+      "trendingScore": 111.41
     },
     {
       "id": 302827809,
@@ -3917,8 +3917,8 @@
       "description": "Data Agent Ready Warehouse : One for  Analytics, Search, AI, Python Sandbox.  — rebuilt from scratch. Unified architecture on your S3.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/databendlabs/databend",
-      "stargazersCount": 9300,
-      "forksCount": 874,
+      "stargazersCount": 9302,
+      "forksCount": 876,
       "language": "Rust",
       "topics": [
         "ai",
@@ -3937,13 +3937,13 @@
         "vector-search"
       ],
       "releasesUrl": "https://api.github.com/repos/databendlabs/databend/releases{/id}",
-      "updatedAt": "2026-05-27T05:33:06Z",
+      "updatedAt": "2026-05-28T11:26:06Z",
       "createdAt": "2020-10-10T06:04:42Z",
-      "downloadCount": 371650,
+      "downloadCount": 372210,
       "latestReleaseDate": "2026-04-17T08:01:42Z",
-      "releaseRecency": 39,
-      "releaseRecencyText": "Released 39 days ago",
-      "trendingScore": 106.51
+      "releaseRecency": 41,
+      "releaseRecencyText": "Released 41 days ago",
+      "trendingScore": 106.44
     },
     {
       "id": 224908244,
@@ -3956,8 +3956,8 @@
       "description": "WasmEdge is a lightweight, high-performance, and extensible WebAssembly runtime for cloud native, edge, and decentralized applications. It powers serverless apps, embedded functions, microservices, smart contracts, and IoT devices.",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/WasmEdge/WasmEdge",
-      "stargazersCount": 10612,
-      "forksCount": 1060,
+      "stargazersCount": 10615,
+      "forksCount": 1061,
       "language": "C++",
       "topics": [
         "artificial-intelligence",
@@ -3977,13 +3977,13 @@
         "webassembly"
       ],
       "releasesUrl": "https://api.github.com/repos/WasmEdge/WasmEdge/releases{/id}",
-      "updatedAt": "2026-05-27T06:29:09Z",
+      "updatedAt": "2026-05-28T16:45:37Z",
       "createdAt": "2019-11-29T19:00:17Z",
-      "downloadCount": 3276551,
+      "downloadCount": 3279465,
       "latestReleaseDate": "2026-05-18T11:15:28Z",
-      "releaseRecency": 8,
-      "releaseRecencyText": "Released 8 days ago",
-      "trendingScore": 105.55
+      "releaseRecency": 10,
+      "releaseRecencyText": "Released 10 days ago",
+      "trendingScore": 105.5
     },
     {
       "id": 252325835,
@@ -3996,7 +3996,7 @@
       "description": "Open Video Downloader - A cross-platform GUI for youtube-dl made in Rust with Tauri and Vue + Typescript.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/jely2002/youtube-dl-gui",
-      "stargazersCount": 8303,
+      "stargazersCount": 8320,
       "forksCount": 615,
       "language": "Rust",
       "topics": [
@@ -4011,13 +4011,13 @@
         "ytdl"
       ],
       "releasesUrl": "https://api.github.com/repos/jely2002/youtube-dl-gui/releases{/id}",
-      "updatedAt": "2026-05-27T05:48:49Z",
+      "updatedAt": "2026-05-29T04:55:09Z",
       "createdAt": "2020-04-02T01:27:59Z",
-      "downloadCount": 3974241,
+      "downloadCount": 3982250,
       "latestReleaseDate": "2026-03-30T22:03:09Z",
-      "releaseRecency": 57,
-      "releaseRecencyText": "Released 57 days ago",
-      "trendingScore": 101.94
+      "releaseRecency": 59,
+      "releaseRecencyText": "Released 59 days ago",
+      "trendingScore": 102.02
     },
     {
       "id": 148829497,
@@ -4030,8 +4030,8 @@
       "description": "Command-line Git information tool",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/o2sh/onefetch",
-      "stargazersCount": 11860,
-      "forksCount": 313,
+      "stargazersCount": 11865,
+      "forksCount": 314,
       "language": "Rust",
       "topics": [
         "cli",
@@ -4042,13 +4042,13 @@
         "tool"
       ],
       "releasesUrl": "https://api.github.com/repos/o2sh/onefetch/releases{/id}",
-      "updatedAt": "2026-05-27T03:20:27Z",
+      "updatedAt": "2026-05-28T12:07:28Z",
       "createdAt": "2018-09-14T18:51:00Z",
-      "downloadCount": 70203,
+      "downloadCount": 70313,
       "latestReleaseDate": "2026-03-19T10:22:47Z",
-      "releaseRecency": 68,
-      "releaseRecencyText": "Released 68 days ago",
-      "trendingScore": 100.38
+      "releaseRecency": 70,
+      "releaseRecencyText": "Released 70 days ago",
+      "trendingScore": 100.36
     },
     {
       "id": 305089628,
@@ -4061,8 +4061,8 @@
       "description": "Open-source telemetry dashboard. Supports UART, BLE, MQTT, Modbus, CAN Bus and more. ",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/Serial-Studio/Serial-Studio",
-      "stargazersCount": 6940,
-      "forksCount": 1046,
+      "stargazersCount": 6949,
+      "forksCount": 1047,
       "language": "C++",
       "topics": [
         "arduino",
@@ -4081,13 +4081,13 @@
         "serial-studio"
       ],
       "releasesUrl": "https://api.github.com/repos/Serial-Studio/Serial-Studio/releases{/id}",
-      "updatedAt": "2026-05-27T03:44:27Z",
+      "updatedAt": "2026-05-29T04:28:48Z",
       "createdAt": "2020-10-18T11:49:02Z",
-      "downloadCount": 121995,
+      "downloadCount": 122515,
       "latestReleaseDate": "2026-03-30T11:55:27Z",
-      "releaseRecency": 57,
-      "releaseRecencyText": "Released 57 days ago",
-      "trendingScore": 99.84
+      "releaseRecency": 59,
+      "releaseRecencyText": "Released 59 days ago",
+      "trendingScore": 99.86
     },
     {
       "id": 207245092,
@@ -4100,7 +4100,7 @@
       "description": "Fast PlayStation 1 emulator for x86-64/AArch32/AArch64/RV64",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/stenzek/duckstation",
-      "stargazersCount": 10203,
+      "stargazersCount": 10205,
       "forksCount": 913,
       "language": "C++",
       "topics": [
@@ -4117,13 +4117,13 @@
         "vulkan"
       ],
       "releasesUrl": "https://api.github.com/repos/stenzek/duckstation/releases{/id}",
-      "updatedAt": "2026-05-27T04:38:40Z",
+      "updatedAt": "2026-05-28T11:09:02Z",
       "createdAt": "2019-09-09T07:00:39Z",
-      "downloadCount": 3229070,
+      "downloadCount": 3256539,
       "latestReleaseDate": "2026-05-10T03:21:19Z",
-      "releaseRecency": 17,
-      "releaseRecencyText": "Released 17 days ago",
-      "trendingScore": 99.26
+      "releaseRecency": 19,
+      "releaseRecencyText": "Released 19 days ago",
+      "trendingScore": 99.2
     },
     {
       "id": 537233603,
@@ -4136,8 +4136,8 @@
       "description": "Modular, contributor-friendly and blazing-fast implementation of the Ethereum protocol, in Rust",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/paradigmxyz/reth",
-      "stargazersCount": 5585,
-      "forksCount": 2458,
+      "stargazersCount": 5589,
+      "forksCount": 2463,
       "language": "Rust",
       "topics": [
         "blockchain",
@@ -4150,13 +4150,13 @@
         "rust"
       ],
       "releasesUrl": "https://api.github.com/repos/paradigmxyz/reth/releases{/id}",
-      "updatedAt": "2026-05-26T23:08:36Z",
+      "updatedAt": "2026-05-29T02:30:45Z",
       "createdAt": "2022-09-15T23:05:57Z",
-      "downloadCount": 206679,
+      "downloadCount": 207659,
       "latestReleaseDate": "2026-04-30T08:06:01Z",
-      "releaseRecency": 26,
-      "releaseRecencyText": "Released 26 days ago",
-      "trendingScore": 98.8
+      "releaseRecency": 28,
+      "releaseRecencyText": "Released 28 days ago",
+      "trendingScore": 98.74
     },
     {
       "id": 18348651,
@@ -4169,8 +4169,8 @@
       "description": "An open source re-implementation of RollerCoaster Tycoon 2 🎢",
       "defaultBranch": "develop",
       "htmlUrl": "https://github.com/OpenRCT2/OpenRCT2",
-      "stargazersCount": 15659,
-      "forksCount": 1795,
+      "stargazersCount": 15667,
+      "forksCount": 1797,
       "language": "C++",
       "topics": [
         "c-plus-plus",
@@ -4193,12 +4193,12 @@
         "windows"
       ],
       "releasesUrl": "https://api.github.com/repos/OpenRCT2/OpenRCT2/releases{/id}",
-      "updatedAt": "2026-05-27T04:53:02Z",
+      "updatedAt": "2026-05-29T05:51:28Z",
       "createdAt": "2014-04-01T23:32:25Z",
-      "downloadCount": 2970743,
+      "downloadCount": 2975790,
       "latestReleaseDate": "2026-05-17T10:30:23Z",
-      "releaseRecency": 9,
-      "releaseRecencyText": "Released 9 days ago",
+      "releaseRecency": 11,
+      "releaseRecencyText": "Released 11 days ago",
       "trendingScore": 98.57
     },
     {
@@ -4212,8 +4212,8 @@
       "description": "Open3D: A Modern Library for 3D Data Processing",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/isl-org/Open3D",
-      "stargazersCount": 13622,
-      "forksCount": 2567,
+      "stargazersCount": 13630,
+      "forksCount": 2568,
       "language": "C++",
       "topics": [
         "3d",
@@ -4238,13 +4238,13 @@
         "visualization"
       ],
       "releasesUrl": "https://api.github.com/repos/isl-org/Open3D/releases{/id}",
-      "updatedAt": "2026-05-27T05:58:28Z",
+      "updatedAt": "2026-05-29T06:28:45Z",
       "createdAt": "2016-12-02T16:40:38Z",
-      "downloadCount": 765794,
+      "downloadCount": 767405,
       "latestReleaseDate": "2025-01-08T07:31:27Z",
-      "releaseRecency": 503,
-      "releaseRecencyText": "Released 503 days ago",
-      "trendingScore": 96.69
+      "releaseRecency": 505,
+      "releaseRecencyText": "Released 505 days ago",
+      "trendingScore": 96.7
     },
     {
       "id": 125563061,
@@ -4257,18 +4257,52 @@
       "description": "A more intuitive version of du in rust",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/bootandy/dust",
-      "stargazersCount": 11742,
-      "forksCount": 269,
+      "stargazersCount": 11754,
+      "forksCount": 270,
       "language": "Rust",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/bootandy/dust/releases{/id}",
-      "updatedAt": "2026-05-27T06:17:20Z",
+      "updatedAt": "2026-05-29T05:51:51Z",
       "createdAt": "2018-03-16T19:49:52Z",
-      "downloadCount": 806379,
+      "downloadCount": 808560,
       "latestReleaseDate": "2026-01-08T23:19:31Z",
-      "releaseRecency": 138,
-      "releaseRecencyText": "Released 138 days ago",
-      "trendingScore": 94.46
+      "releaseRecency": 140,
+      "releaseRecencyText": "Released 140 days ago",
+      "trendingScore": 94.49
+    },
+    {
+      "id": 549714010,
+      "name": "topgrade",
+      "fullName": "topgrade-rs/topgrade",
+      "owner": {
+        "login": "topgrade-rs",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/115571740?v=4"
+      },
+      "description": "Upgrade all the things",
+      "defaultBranch": "main",
+      "htmlUrl": "https://github.com/topgrade-rs/topgrade",
+      "stargazersCount": 4116,
+      "forksCount": 245,
+      "language": "Rust",
+      "topics": [
+        "cli",
+        "hacktoberfest",
+        "linux",
+        "macos",
+        "package-management",
+        "package-manager",
+        "rust",
+        "unix",
+        "windows"
+      ],
+      "releasesUrl": "https://api.github.com/repos/topgrade-rs/topgrade/releases{/id}",
+      "updatedAt": "2026-05-29T06:29:05Z",
+      "createdAt": "2022-10-11T16:06:52Z",
+      "downloadCount": 301547,
+      "latestReleaseDate": "2026-05-20T08:10:31Z",
+      "releaseRecency": 8,
+      "releaseRecencyText": "Released 8 days ago",
+      "trendingScore": 92.13
     },
     {
       "id": 167828165,
@@ -4281,7 +4315,7 @@
       "description": ":computer: C++ Functional Terminal User Interface. :heart:",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/ArthurSonzogni/FTXUI",
-      "stargazersCount": 10189,
+      "stargazersCount": 10193,
       "forksCount": 589,
       "language": "C++",
       "topics": [
@@ -4299,47 +4333,13 @@
         "xterm"
       ],
       "releasesUrl": "https://api.github.com/repos/ArthurSonzogni/FTXUI/releases{/id}",
-      "updatedAt": "2026-05-26T21:19:53Z",
+      "updatedAt": "2026-05-29T01:42:14Z",
       "createdAt": "2019-01-27T16:06:20Z",
-      "downloadCount": 35340,
+      "downloadCount": 35820,
       "latestReleaseDate": "2025-05-07T20:49:44Z",
-      "releaseRecency": 384,
-      "releaseRecencyText": "Released 384 days ago",
-      "trendingScore": 92.15
-    },
-    {
-      "id": 549714010,
-      "name": "topgrade",
-      "fullName": "topgrade-rs/topgrade",
-      "owner": {
-        "login": "topgrade-rs",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/115571740?v=4"
-      },
-      "description": "Upgrade all the things",
-      "defaultBranch": "main",
-      "htmlUrl": "https://github.com/topgrade-rs/topgrade",
-      "stargazersCount": 4104,
-      "forksCount": 244,
-      "language": "Rust",
-      "topics": [
-        "cli",
-        "hacktoberfest",
-        "linux",
-        "macos",
-        "package-management",
-        "package-manager",
-        "rust",
-        "unix",
-        "windows"
-      ],
-      "releasesUrl": "https://api.github.com/repos/topgrade-rs/topgrade/releases{/id}",
-      "updatedAt": "2026-05-27T01:59:09Z",
-      "createdAt": "2022-10-11T16:06:52Z",
-      "downloadCount": 300248,
-      "latestReleaseDate": "2026-05-20T08:10:31Z",
-      "releaseRecency": 6,
-      "releaseRecencyText": "Released 6 days ago",
-      "trendingScore": 92.04
+      "releaseRecency": 386,
+      "releaseRecencyText": "Released 386 days ago",
+      "trendingScore": 92.12
     },
     {
       "id": 294521053,
@@ -4352,8 +4352,8 @@
       "description": "Friendly and fast tool for sending HTTP requests",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/ducaale/xh",
-      "stargazersCount": 7831,
-      "forksCount": 127,
+      "stargazersCount": 7835,
+      "forksCount": 128,
       "language": "Rust",
       "topics": [
         "api-testing",
@@ -4364,13 +4364,13 @@
         "terminal"
       ],
       "releasesUrl": "https://api.github.com/repos/ducaale/xh/releases{/id}",
-      "updatedAt": "2026-05-26T15:35:23Z",
+      "updatedAt": "2026-05-29T03:12:54Z",
       "createdAt": "2020-09-10T20:58:13Z",
-      "downloadCount": 473198,
+      "downloadCount": 476044,
       "latestReleaseDate": "2025-12-16T22:10:55Z",
-      "releaseRecency": 161,
-      "releaseRecencyText": "Released 161 days ago",
-      "trendingScore": 91.15
+      "releaseRecency": 163,
+      "releaseRecencyText": "Released 163 days ago",
+      "trendingScore": 91.12
     },
     {
       "id": 156294298,
@@ -4383,7 +4383,7 @@
       "description": "A command-line hex viewer",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/sharkdp/hexyl",
-      "stargazersCount": 10137,
+      "stargazersCount": 10140,
       "forksCount": 262,
       "language": "Rust",
       "topics": [
@@ -4394,13 +4394,13 @@
         "tool"
       ],
       "releasesUrl": "https://api.github.com/repos/sharkdp/hexyl/releases{/id}",
-      "updatedAt": "2026-05-26T08:41:49Z",
+      "updatedAt": "2026-05-28T08:10:53Z",
       "createdAt": "2018-11-05T22:53:35Z",
-      "downloadCount": 132907,
+      "downloadCount": 133303,
       "latestReleaseDate": "2026-02-14T12:56:31Z",
-      "releaseRecency": 101,
-      "releaseRecencyText": "Released 101 days ago",
-      "trendingScore": 89.48
+      "releaseRecency": 103,
+      "releaseRecencyText": "Released 103 days ago",
+      "trendingScore": 89.45
     },
     {
       "id": 495863734,
@@ -4413,7 +4413,7 @@
       "description": "Readyset is a MySQL and Postgres wire-compatible caching layer that sits in front of existing databases to speed up queries and horizontally scale read throughput. Under the hood, ReadySet caches the results of cached select statements and incrementally updates these results over time as the underlying data changes.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/readysettech/readyset",
-      "stargazersCount": 5231,
+      "stargazersCount": 5232,
       "forksCount": 159,
       "language": "Rust",
       "topics": [
@@ -4433,13 +4433,13 @@
         "streaming-data"
       ],
       "releasesUrl": "https://api.github.com/repos/readysettech/readyset/releases{/id}",
-      "updatedAt": "2026-05-26T22:34:20Z",
+      "updatedAt": "2026-05-29T05:21:09Z",
       "createdAt": "2022-05-24T14:39:20Z",
-      "downloadCount": 1915,
-      "latestReleaseDate": "2026-04-23T23:20:27Z",
-      "releaseRecency": 33,
-      "releaseRecencyText": "Released 33 days ago",
-      "trendingScore": 87.51
+      "downloadCount": 1932,
+      "latestReleaseDate": "2026-05-28T21:31:39Z",
+      "releaseRecency": 0,
+      "releaseRecencyText": "Released today",
+      "trendingScore": 87.43
     },
     {
       "id": 11986447,
@@ -4452,7 +4452,7 @@
       "description": "Xournal++ is a handwriting notetaking software with PDF annotation support. Written in C++ with GTK3, supporting Linux (e.g. Ubuntu, Debian, Arch, SUSE), macOS and Windows 10. Supports pen input from devices such as Wacom Tablets.",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/xournalpp/xournalpp",
-      "stargazersCount": 14790,
+      "stargazersCount": 14796,
       "forksCount": 1062,
       "language": "C++",
       "topics": [
@@ -4466,13 +4466,13 @@
         "pen"
       ],
       "releasesUrl": "https://api.github.com/repos/xournalpp/xournalpp/releases{/id}",
-      "updatedAt": "2026-05-27T06:21:11Z",
+      "updatedAt": "2026-05-29T06:30:52Z",
       "createdAt": "2013-08-08T20:58:27Z",
-      "downloadCount": 1472573,
+      "downloadCount": 1475153,
       "latestReleaseDate": "2026-03-29T09:35:04Z",
-      "releaseRecency": 58,
-      "releaseRecencyText": "Released 58 days ago",
-      "trendingScore": 87.29
+      "releaseRecency": 60,
+      "releaseRecencyText": "Released 60 days ago",
+      "trendingScore": 87.28
     },
     {
       "id": 4118776,
@@ -4485,7 +4485,7 @@
       "description": "cross-platform (Qt), open-source (GPLv3) video editor",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/mltframework/shotcut",
-      "stargazersCount": 14020,
+      "stargazersCount": 14034,
       "forksCount": 1370,
       "language": "C++",
       "topics": [
@@ -4496,13 +4496,13 @@
         "video-editor"
       ],
       "releasesUrl": "https://api.github.com/repos/mltframework/shotcut/releases{/id}",
-      "updatedAt": "2026-05-27T03:19:19Z",
+      "updatedAt": "2026-05-29T04:55:08Z",
       "createdAt": "2012-04-23T22:37:04Z",
-      "downloadCount": 21589181,
+      "downloadCount": 21594827,
       "latestReleaseDate": "2026-04-30T20:05:23Z",
-      "releaseRecency": 26,
-      "releaseRecencyText": "Released 26 days ago",
-      "trendingScore": 86.49
+      "releaseRecency": 28,
+      "releaseRecencyText": "Released 28 days ago",
+      "trendingScore": 86.52
     },
     {
       "id": 4454793,
@@ -4515,7 +4515,7 @@
       "description": "MuseScore is an open source and free music notation software. For support, contribution, bug reports, visit MuseScore.org. Fork and make pull requests!",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/musescore/MuseScore",
-      "stargazersCount": 14638,
+      "stargazersCount": 14644,
       "forksCount": 3168,
       "language": "C++",
       "topics": [
@@ -4529,12 +4529,12 @@
         "sheetmusic"
       ],
       "releasesUrl": "https://api.github.com/repos/musescore/MuseScore/releases{/id}",
-      "updatedAt": "2026-05-27T06:23:57Z",
+      "updatedAt": "2026-05-29T06:02:17Z",
       "createdAt": "2012-05-26T12:46:33Z",
-      "downloadCount": 14697186,
+      "downloadCount": 14733113,
       "latestReleaseDate": "2026-05-26T12:51:13Z",
-      "releaseRecency": 0,
-      "releaseRecencyText": "Released today",
+      "releaseRecency": 2,
+      "releaseRecencyText": "Released 2 days ago",
       "trendingScore": 85.26
     },
     {
@@ -4562,11 +4562,11 @@
       "releasesUrl": "https://api.github.com/repos/amber-lang/amber/releases{/id}",
       "updatedAt": "2026-05-27T03:07:14Z",
       "createdAt": "2022-07-20T19:15:54Z",
-      "downloadCount": 16997,
+      "downloadCount": 17028,
       "latestReleaseDate": "2026-04-27T20:04:06Z",
-      "releaseRecency": 29,
-      "releaseRecencyText": "Released 29 days ago",
-      "trendingScore": 82.98
+      "releaseRecency": 31,
+      "releaseRecencyText": "Released 31 days ago",
+      "trendingScore": 82.89
     },
     {
       "id": 271154586,
@@ -4579,21 +4579,21 @@
       "description": "Cross-Platform SDR Software",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/AlexandreRouma/SDRPlusPlus",
-      "stargazersCount": 5962,
-      "forksCount": 821,
+      "stargazersCount": 5969,
+      "forksCount": 823,
       "language": "C++",
       "topics": [
         "cross-platform",
         "sdr"
       ],
       "releasesUrl": "https://api.github.com/repos/AlexandreRouma/SDRPlusPlus/releases{/id}",
-      "updatedAt": "2026-05-26T14:03:51Z",
+      "updatedAt": "2026-05-29T02:52:11Z",
       "createdAt": "2020-06-10T02:12:59Z",
-      "downloadCount": 257179,
+      "downloadCount": 259021,
       "latestReleaseDate": "2022-11-22T07:27:11Z",
-      "releaseRecency": 1281,
-      "releaseRecencyText": "Released 1281 days ago",
-      "trendingScore": 82.77
+      "releaseRecency": 1283,
+      "releaseRecencyText": "Released 1283 days ago",
+      "trendingScore": 82.79
     },
     {
       "id": 143324737,
@@ -4606,7 +4606,7 @@
       "description": "Diablo build for modern operating systems",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/diasurgical/DevilutionX",
-      "stargazersCount": 9518,
+      "stargazersCount": 9523,
       "forksCount": 978,
       "language": "C++",
       "topics": [
@@ -4619,13 +4619,13 @@
         "homebrew"
       ],
       "releasesUrl": "https://api.github.com/repos/diasurgical/DevilutionX/releases{/id}",
-      "updatedAt": "2026-05-27T04:28:16Z",
+      "updatedAt": "2026-05-28T22:40:55Z",
       "createdAt": "2018-08-02T17:19:01Z",
-      "downloadCount": 514146,
+      "downloadCount": 515101,
       "latestReleaseDate": "2025-10-30T17:00:17Z",
-      "releaseRecency": 208,
-      "releaseRecencyText": "Released 208 days ago",
-      "trendingScore": 82.7
+      "releaseRecency": 210,
+      "releaseRecencyText": "Released 210 days ago",
+      "trendingScore": 82.69
     },
     {
       "id": 15379620,
@@ -4638,8 +4638,8 @@
       "description": "PCSX2 - The Playstation 2 Emulator",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/PCSX2/pcsx2",
-      "stargazersCount": 14897,
-      "forksCount": 1977,
+      "stargazersCount": 14899,
+      "forksCount": 1981,
       "language": "C++",
       "topics": [
         "cpp",
@@ -4649,13 +4649,13 @@
         "ps2"
       ],
       "releasesUrl": "https://api.github.com/repos/PCSX2/pcsx2/releases{/id}",
-      "updatedAt": "2026-05-27T05:00:13Z",
+      "updatedAt": "2026-05-29T03:04:28Z",
       "createdAt": "2013-12-22T17:56:48Z",
-      "downloadCount": 59842384,
+      "downloadCount": 59929317,
       "latestReleaseDate": "2026-01-28T17:40:45Z",
-      "releaseRecency": 118,
-      "releaseRecencyText": "Released 118 days ago",
-      "trendingScore": 81.65
+      "releaseRecency": 120,
+      "releaseRecencyText": "Released 120 days ago",
+      "trendingScore": 81.63
     },
     {
       "id": 188601229,
@@ -4668,8 +4668,8 @@
       "description": "LÖVE is an awesome 2D game framework for Lua.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/love2d/love",
-      "stargazersCount": 8358,
-      "forksCount": 604,
+      "stargazersCount": 8360,
+      "forksCount": 603,
       "language": "C++",
       "topics": [
         "game-development",
@@ -4679,13 +4679,13 @@
         "luajit"
       ],
       "releasesUrl": "https://api.github.com/repos/love2d/love/releases{/id}",
-      "updatedAt": "2026-05-27T06:28:07Z",
+      "updatedAt": "2026-05-28T16:37:39Z",
       "createdAt": "2019-05-25T18:43:48Z",
-      "downloadCount": 1247746,
+      "downloadCount": 1249466,
       "latestReleaseDate": "2023-12-03T13:39:06Z",
-      "releaseRecency": 905,
-      "releaseRecencyText": "Released 905 days ago",
-      "trendingScore": 81.35
+      "releaseRecency": 907,
+      "releaseRecencyText": "Released 907 days ago",
+      "trendingScore": 81.31
     },
     {
       "id": 7711472,
@@ -4698,7 +4698,7 @@
       "description": "Offline documentation browser inspired by Dash",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/zealdocs/zeal",
-      "stargazersCount": 12646,
+      "stargazersCount": 12647,
       "forksCount": 828,
       "language": "C++",
       "topics": [
@@ -4716,13 +4716,13 @@
         "zeal"
       ],
       "releasesUrl": "https://api.github.com/repos/zealdocs/zeal/releases{/id}",
-      "updatedAt": "2026-05-26T23:48:52Z",
+      "updatedAt": "2026-05-28T15:41:07Z",
       "createdAt": "2013-01-20T01:50:30Z",
-      "downloadCount": 727747,
+      "downloadCount": 728652,
       "latestReleaseDate": "2026-04-04T23:56:32Z",
-      "releaseRecency": 52,
-      "releaseRecencyText": "Released 52 days ago",
-      "trendingScore": 79.88
+      "releaseRecency": 54,
+      "releaseRecencyText": "Released 54 days ago",
+      "trendingScore": 79.86
     },
     {
       "id": 304892612,
@@ -4735,7 +4735,7 @@
       "description": "Linux GPU Configuration And Monitoring Tool",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/ilya-zlobintsev/LACT",
-      "stargazersCount": 4844,
+      "stargazersCount": 4859,
       "forksCount": 125,
       "language": "Rust",
       "topics": [
@@ -4747,13 +4747,13 @@
         "rust"
       ],
       "releasesUrl": "https://api.github.com/repos/ilya-zlobintsev/LACT/releases{/id}",
-      "updatedAt": "2026-05-27T04:37:55Z",
+      "updatedAt": "2026-05-28T14:59:05Z",
       "createdAt": "2020-10-17T14:11:55Z",
-      "downloadCount": 149951,
+      "downloadCount": 150692,
       "latestReleaseDate": "2026-04-25T17:46:06Z",
-      "releaseRecency": 31,
-      "releaseRecencyText": "Released 31 days ago",
-      "trendingScore": 79.33
+      "releaseRecency": 33,
+      "releaseRecencyText": "Released 33 days ago",
+      "trendingScore": 79.43
     },
     {
       "id": 98831796,
@@ -4766,7 +4766,7 @@
       "description": "Cross-platform AirDrop. File transfer between Android, iOS, Linux, macOS, and Windows over ad hoc WiFi. No network infrastructure required, just two devices with WiFi chips (and optionally Bluetooth) in close range.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/spieglt/FlyingCarpet",
-      "stargazersCount": 5172,
+      "stargazersCount": 5171,
       "forksCount": 250,
       "language": "Rust",
       "topics": [
@@ -4787,13 +4787,13 @@
         "wireless"
       ],
       "releasesUrl": "https://api.github.com/repos/spieglt/FlyingCarpet/releases{/id}",
-      "updatedAt": "2026-05-26T19:53:56Z",
+      "updatedAt": "2026-05-29T02:02:19Z",
       "createdAt": "2017-07-30T23:59:30Z",
-      "downloadCount": 43523,
+      "downloadCount": 43593,
       "latestReleaseDate": "2026-01-03T16:01:50Z",
-      "releaseRecency": 143,
-      "releaseRecencyText": "Released 143 days ago",
-      "trendingScore": 76.1
+      "releaseRecency": 145,
+      "releaseRecencyText": "Released 145 days ago",
+      "trendingScore": 76.08
     },
     {
       "id": 6486826,
@@ -4806,8 +4806,8 @@
       "description": "A PSP emulator for Android, Windows, Mac, Linux and iOS, written in C++. Want to contribute? Join us on Discord at https://discord.gg/5NJB6dD or just send pull requests / issues.",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/hrydgard/ppsspp",
-      "stargazersCount": 13860,
-      "forksCount": 2501,
+      "stargazersCount": 13872,
+      "forksCount": 2500,
       "language": "C++",
       "topics": [
         "emulators",
@@ -4815,13 +4815,13 @@
         "psp"
       ],
       "releasesUrl": "https://api.github.com/repos/hrydgard/ppsspp/releases{/id}",
-      "updatedAt": "2026-05-27T05:06:03Z",
+      "updatedAt": "2026-05-29T05:16:43Z",
       "createdAt": "2012-11-01T08:41:48Z",
-      "downloadCount": 455909,
+      "downloadCount": 457280,
       "latestReleaseDate": "2026-05-16T12:35:08Z",
-      "releaseRecency": 10,
-      "releaseRecencyText": "Released 10 days ago",
-      "trendingScore": 75.95
+      "releaseRecency": 12,
+      "releaseRecencyText": "Released 12 days ago",
+      "trendingScore": 75.98
     },
     {
       "id": 125722945,
@@ -4834,17 +4834,17 @@
       "description": "Helper application for Linux distributions serving as a kind of \"entry point\" for running and integrating AppImages",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/TheAssassin/AppImageLauncher",
-      "stargazersCount": 8024,
+      "stargazersCount": 8028,
       "forksCount": 339,
       "language": "C++",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/TheAssassin/AppImageLauncher/releases{/id}",
-      "updatedAt": "2026-05-27T01:18:02Z",
+      "updatedAt": "2026-05-29T05:20:36Z",
       "createdAt": "2018-03-18T12:32:33Z",
-      "downloadCount": 1253839,
+      "downloadCount": 1255131,
       "latestReleaseDate": "2025-10-28T22:35:32Z",
-      "releaseRecency": 210,
-      "releaseRecencyText": "Released 210 days ago",
+      "releaseRecency": 212,
+      "releaseRecencyText": "Released 212 days ago",
       "trendingScore": 73.65
     },
     {
@@ -4858,7 +4858,7 @@
       "description": "The Linux perf GUI for performance analysis.",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/KDAB/hotspot",
-      "stargazersCount": 5064,
+      "stargazersCount": 5065,
       "forksCount": 285,
       "language": "C++",
       "topics": [
@@ -4873,13 +4873,13 @@
         "qt"
       ],
       "releasesUrl": "https://api.github.com/repos/KDAB/hotspot/releases{/id}",
-      "updatedAt": "2026-05-25T08:35:34Z",
+      "updatedAt": "2026-05-28T08:44:14Z",
       "createdAt": "2016-12-20T17:38:04Z",
-      "downloadCount": 277381,
+      "downloadCount": 277471,
       "latestReleaseDate": "2026-02-27T18:45:12Z",
-      "releaseRecency": 88,
-      "releaseRecencyText": "Released 88 days ago",
-      "trendingScore": 73.41
+      "releaseRecency": 90,
+      "releaseRecencyText": "Released 90 days ago",
+      "trendingScore": 73.4
     },
     {
       "id": 1418150,
@@ -4892,8 +4892,8 @@
       "description": "Flexible level editor",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/mapeditor/tiled",
-      "stargazersCount": 12593,
-      "forksCount": 1922,
+      "stargazersCount": 12602,
+      "forksCount": 1924,
       "language": "C++",
       "topics": [
         "c-plus-plus",
@@ -4912,13 +4912,13 @@
         "tilesets"
       ],
       "releasesUrl": "https://api.github.com/repos/mapeditor/tiled/releases{/id}",
-      "updatedAt": "2026-05-26T23:55:36Z",
+      "updatedAt": "2026-05-28T15:03:32Z",
       "createdAt": "2011-02-27T15:18:22Z",
-      "downloadCount": 1039120,
-      "latestReleaseDate": "2026-03-25T12:33:12Z",
-      "releaseRecency": 62,
-      "releaseRecencyText": "Released 62 days ago",
-      "trendingScore": 73.24
+      "downloadCount": 1040313,
+      "latestReleaseDate": "2026-05-27T15:17:56Z",
+      "releaseRecency": 1,
+      "releaseRecencyText": "Released yesterday",
+      "trendingScore": 73.26
     },
     {
       "id": 15778896,
@@ -4931,8 +4931,8 @@
       "description": "Cross-platform music production software",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/LMMS/lmms",
-      "stargazersCount": 9939,
-      "forksCount": 1192,
+      "stargazersCount": 9942,
+      "forksCount": 1194,
       "language": "C++",
       "topics": [
         "daw",
@@ -4942,13 +4942,13 @@
         "songs"
       ],
       "releasesUrl": "https://api.github.com/repos/LMMS/lmms/releases{/id}",
-      "updatedAt": "2026-05-27T05:22:08Z",
+      "updatedAt": "2026-05-29T05:29:48Z",
       "createdAt": "2014-01-09T20:43:43Z",
-      "downloadCount": 14162492,
+      "downloadCount": 14170064,
       "latestReleaseDate": "2020-07-04T12:35:12Z",
-      "releaseRecency": 2152,
-      "releaseRecencyText": "Released 2152 days ago",
-      "trendingScore": 71.98
+      "releaseRecency": 2154,
+      "releaseRecencyText": "Released 2154 days ago",
+      "trendingScore": 71.97
     },
     {
       "id": 18719856,
@@ -4961,7 +4961,7 @@
       "description": "Stellarium is a free GPL software which renders realistic skies in real time with OpenGL. It is available for Linux/Unix, Windows and macOS. With Stellarium, you really see what you can see with your eyes, binoculars or a small telescope.",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/Stellarium/stellarium",
-      "stargazersCount": 9630,
+      "stargazersCount": 9637,
       "forksCount": 1002,
       "language": "C++",
       "topics": [
@@ -4978,13 +4978,13 @@
         "universe"
       ],
       "releasesUrl": "https://api.github.com/repos/Stellarium/stellarium/releases{/id}",
-      "updatedAt": "2026-05-27T00:50:56Z",
+      "updatedAt": "2026-05-29T04:18:20Z",
       "createdAt": "2014-04-13T02:41:56Z",
-      "downloadCount": 12625115,
+      "downloadCount": 12632180,
       "latestReleaseDate": "2026-04-05T12:38:27Z",
-      "releaseRecency": 51,
-      "releaseRecencyText": "Released 51 days ago",
-      "trendingScore": 71.51
+      "releaseRecency": 53,
+      "releaseRecencyText": "Released 53 days ago",
+      "trendingScore": 71.52
     },
     {
       "id": 6930489,
@@ -4997,17 +4997,17 @@
       "description": "Watches files and records, or triggers actions, when they change. ",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/facebook/watchman",
-      "stargazersCount": 13592,
+      "stargazersCount": 13597,
       "forksCount": 1060,
       "language": "C++",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/facebook/watchman/releases{/id}",
-      "updatedAt": "2026-05-26T22:36:00Z",
+      "updatedAt": "2026-05-28T16:34:31Z",
       "createdAt": "2012-11-29T23:35:52Z",
-      "downloadCount": 896590,
+      "downloadCount": 898088,
       "latestReleaseDate": "2026-05-25T15:05:24Z",
-      "releaseRecency": 1,
-      "releaseRecencyText": "Released yesterday",
+      "releaseRecency": 3,
+      "releaseRecencyText": "Released 3 days ago",
       "trendingScore": 71.18
     },
     {
@@ -5021,8 +5021,8 @@
       "description": "OpenSCAD - The Programmers Solid 3D CAD Modeller  ",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/openscad/openscad",
-      "stargazersCount": 9468,
-      "forksCount": 1528,
+      "stargazersCount": 9482,
+      "forksCount": 1529,
       "language": "C++",
       "topics": [
         "3d",
@@ -5042,13 +5042,13 @@
         "windows"
       ],
       "releasesUrl": "https://api.github.com/repos/openscad/openscad/releases{/id}",
-      "updatedAt": "2026-05-27T06:21:44Z",
+      "updatedAt": "2026-05-28T14:40:47Z",
       "createdAt": "2010-11-03T20:25:33Z",
-      "downloadCount": 22843,
+      "downloadCount": 22970,
       "latestReleaseDate": "2021-02-07T00:14:34Z",
-      "releaseRecency": 1935,
-      "releaseRecencyText": "Released 1935 days ago",
-      "trendingScore": 69.32
+      "releaseRecency": 1937,
+      "releaseRecencyText": "Released 1937 days ago",
+      "trendingScore": 69.36
     },
     {
       "id": 330355479,
@@ -5061,7 +5061,7 @@
       "description": "第三方B站客户端，目前可以运行在PC全平台、PSVita、PS4 、Xbox 和 Nintendo Switch上",
       "defaultBranch": "yoga",
       "htmlUrl": "https://github.com/xfangfang/wiliwili",
-      "stargazersCount": 5163,
+      "stargazersCount": 5171,
       "forksCount": 233,
       "language": "C++",
       "topics": [
@@ -5077,13 +5077,13 @@
         "xbox"
       ],
       "releasesUrl": "https://api.github.com/repos/xfangfang/wiliwili/releases{/id}",
-      "updatedAt": "2026-05-26T10:23:35Z",
+      "updatedAt": "2026-05-29T00:47:31Z",
       "createdAt": "2021-01-17T09:27:58Z",
-      "downloadCount": 501964,
+      "downloadCount": 503179,
       "latestReleaseDate": "2026-04-25T07:39:58Z",
-      "releaseRecency": 31,
-      "releaseRecencyText": "Released 31 days ago",
-      "trendingScore": 68.82
+      "releaseRecency": 33,
+      "releaseRecencyText": "Released 33 days ago",
+      "trendingScore": 68.85
     },
     {
       "id": 68546136,
@@ -5109,13 +5109,13 @@
         "windows"
       ],
       "releasesUrl": "https://api.github.com/repos/watchexec/watchexec/releases{/id}",
-      "updatedAt": "2026-05-26T15:40:50Z",
+      "updatedAt": "2026-05-28T21:32:55Z",
       "createdAt": "2016-09-18T20:41:31Z",
-      "downloadCount": 3013543,
+      "downloadCount": 3040219,
       "latestReleaseDate": "2026-03-30T06:34:36Z",
-      "releaseRecency": 58,
-      "releaseRecencyText": "Released 58 days ago",
-      "trendingScore": 67.58
+      "releaseRecency": 60,
+      "releaseRecencyText": "Released 60 days ago",
+      "trendingScore": 67.56
     },
     {
       "id": 2269868,
@@ -5128,7 +5128,7 @@
       "description": "Record and Replay Framework",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/rr-debugger/rr",
-      "stargazersCount": 10507,
+      "stargazersCount": 10524,
       "forksCount": 659,
       "language": "C++",
       "topics": [
@@ -5138,13 +5138,47 @@
         "reverse-execution"
       ],
       "releasesUrl": "https://api.github.com/repos/rr-debugger/rr/releases{/id}",
-      "updatedAt": "2026-05-26T15:46:58Z",
+      "updatedAt": "2026-05-28T14:29:02Z",
       "createdAt": "2011-08-25T18:59:32Z",
-      "downloadCount": 59016,
+      "downloadCount": 59132,
       "latestReleaseDate": "2025-02-13T10:43:29Z",
-      "releaseRecency": 467,
-      "releaseRecencyText": "Released 467 days ago",
-      "trendingScore": 67.0
+      "releaseRecency": 469,
+      "releaseRecencyText": "Released 469 days ago",
+      "trendingScore": 67.05
+    },
+    {
+      "id": 117740918,
+      "name": "azul",
+      "fullName": "fschutt/azul",
+      "owner": {
+        "login": "fschutt",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/12084016?v=4"
+      },
+      "description": "Desktop GUI Framework",
+      "defaultBranch": "master",
+      "htmlUrl": "https://github.com/fschutt/azul",
+      "stargazersCount": 6102,
+      "forksCount": 222,
+      "language": "Rust",
+      "topics": [
+        "c",
+        "cpp",
+        "desktop",
+        "desktop-gui-framework",
+        "gui",
+        "gui-framework",
+        "gui-library",
+        "opengl",
+        "rust"
+      ],
+      "releasesUrl": "https://api.github.com/repos/fschutt/azul/releases{/id}",
+      "updatedAt": "2026-05-28T18:24:45Z",
+      "createdAt": "2018-01-16T20:57:07Z",
+      "downloadCount": 2542,
+      "latestReleaseDate": "2026-05-28T08:18:05Z",
+      "releaseRecency": 0,
+      "releaseRecencyText": "Released today",
+      "trendingScore": 66.96
     },
     {
       "id": 189867161,
@@ -5157,7 +5191,7 @@
       "description": "A command-line tool to generate, analyze, convert and manipulate colors",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/sharkdp/pastel",
-      "stargazersCount": 6382,
+      "stargazersCount": 6385,
       "forksCount": 125,
       "language": "Rust",
       "topics": [
@@ -5171,13 +5205,13 @@
         "tool"
       ],
       "releasesUrl": "https://api.github.com/repos/sharkdp/pastel/releases{/id}",
-      "updatedAt": "2026-05-27T04:36:12Z",
+      "updatedAt": "2026-05-28T04:50:27Z",
       "createdAt": "2019-06-02T16:04:32Z",
-      "downloadCount": 80718,
+      "downloadCount": 80831,
       "latestReleaseDate": "2026-02-14T13:02:18Z",
-      "releaseRecency": 101,
-      "releaseRecencyText": "Released 101 days ago",
-      "trendingScore": 66.05
+      "releaseRecency": 103,
+      "releaseRecencyText": "Released 103 days ago",
+      "trendingScore": 66.04
     },
     {
       "id": 32231207,
@@ -5190,8 +5224,8 @@
       "description": "Space exploration, trading, and combat game.",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/endless-sky/endless-sky",
-      "stargazersCount": 7346,
-      "forksCount": 1262,
+      "stargazersCount": 7354,
+      "forksCount": 1263,
       "language": "C++",
       "topics": [
         "2d-game",
@@ -5216,13 +5250,13 @@
         "top-down"
       ],
       "releasesUrl": "https://api.github.com/repos/endless-sky/endless-sky/releases{/id}",
-      "updatedAt": "2026-05-27T01:27:50Z",
+      "updatedAt": "2026-05-29T04:21:08Z",
       "createdAt": "2015-03-14T20:44:39Z",
-      "downloadCount": 218208,
+      "downloadCount": 218362,
       "latestReleaseDate": "2025-10-25T20:13:08Z",
-      "releaseRecency": 213,
-      "releaseRecencyText": "Released 213 days ago",
-      "trendingScore": 63.91
+      "releaseRecency": 215,
+      "releaseRecencyText": "Released 215 days ago",
+      "trendingScore": 63.93
     },
     {
       "id": 295195550,
@@ -5235,18 +5269,18 @@
       "description": "Modern VNC Server and client, web based and secure",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/kasmtech/KasmVNC",
-      "stargazersCount": 4974,
-      "forksCount": 429,
+      "stargazersCount": 4980,
+      "forksCount": 430,
       "language": "C++",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/kasmtech/KasmVNC/releases{/id}",
-      "updatedAt": "2026-05-26T13:46:12Z",
+      "updatedAt": "2026-05-29T05:57:15Z",
       "createdAt": "2020-09-13T16:50:40Z",
-      "downloadCount": 351098,
+      "downloadCount": 353383,
       "latestReleaseDate": "2025-10-22T18:47:14Z",
-      "releaseRecency": 216,
-      "releaseRecencyText": "Released 216 days ago",
-      "trendingScore": 63.8
+      "releaseRecency": 218,
+      "releaseRecencyText": "Released 218 days ago",
+      "trendingScore": 63.82
     },
     {
       "id": 7331227,
@@ -5259,7 +5293,7 @@
       "description": "Light-weight system monitor for X, Wayland, and other things, too",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/brndnmtthws/conky",
-      "stargazersCount": 8349,
+      "stargazersCount": 8352,
       "forksCount": 656,
       "language": "C++",
       "topics": [
@@ -5273,12 +5307,12 @@
         "wayland"
       ],
       "releasesUrl": "https://api.github.com/repos/brndnmtthws/conky/releases{/id}",
-      "updatedAt": "2026-05-26T20:33:36Z",
+      "updatedAt": "2026-05-28T23:18:12Z",
       "createdAt": "2012-12-26T19:50:17Z",
-      "downloadCount": 86359,
+      "downloadCount": 86449,
       "latestReleaseDate": "2026-05-17T15:20:59Z",
-      "releaseRecency": 9,
-      "releaseRecencyText": "Released 9 days ago",
+      "releaseRecency": 11,
+      "releaseRecencyText": "Released 11 days ago",
       "trendingScore": 62.08
     },
     {
@@ -5292,8 +5326,8 @@
       "description": "LibreCAD is a cross-platform 2D CAD program. It can read DXF/DWG, and write DXF/DWG/PDF/SVG files. It supports point/line/circle/ellipse/parabola/hyperbola/spline primitives. The GUI is highly customizable, and has dozens of translations.",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/LibreCAD/LibreCAD",
-      "stargazersCount": 5904,
-      "forksCount": 1216,
+      "stargazersCount": 5910,
+      "forksCount": 1217,
       "language": "C++",
       "topics": [
         "2d",
@@ -5304,13 +5338,13 @@
         "qt"
       ],
       "releasesUrl": "https://api.github.com/repos/LibreCAD/LibreCAD/releases{/id}",
-      "updatedAt": "2026-05-26T13:42:43Z",
+      "updatedAt": "2026-05-29T05:46:48Z",
       "createdAt": "2011-04-10T22:41:47Z",
-      "downloadCount": 2805704,
+      "downloadCount": 2815995,
       "latestReleaseDate": "2026-05-02T03:06:33Z",
-      "releaseRecency": 25,
-      "releaseRecencyText": "Released 25 days ago",
-      "trendingScore": 61.37
+      "releaseRecency": 27,
+      "releaseRecencyText": "Released 27 days ago",
+      "trendingScore": 61.39
     },
     {
       "id": 167957539,
@@ -5323,8 +5357,8 @@
       "description": "A modern replacement for ps written in Rust",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/dalance/procs",
-      "stargazersCount": 6060,
-      "forksCount": 142,
+      "stargazersCount": 6061,
+      "forksCount": 143,
       "language": "Rust",
       "topics": [
         "cli",
@@ -5332,13 +5366,37 @@
         "rust"
       ],
       "releasesUrl": "https://api.github.com/repos/dalance/procs/releases{/id}",
-      "updatedAt": "2026-05-27T04:16:56Z",
+      "updatedAt": "2026-05-28T10:37:53Z",
       "createdAt": "2019-01-28T12:19:23Z",
-      "downloadCount": 160279,
+      "downloadCount": 160795,
       "latestReleaseDate": "2026-02-27T03:09:29Z",
-      "releaseRecency": 89,
-      "releaseRecencyText": "Released 89 days ago",
-      "trendingScore": 61.31
+      "releaseRecency": 91,
+      "releaseRecencyText": "Released 91 days ago",
+      "trendingScore": 61.28
+    },
+    {
+      "id": 250207810,
+      "name": "obs-multi-rtmp",
+      "fullName": "sorayuki/obs-multi-rtmp",
+      "owner": {
+        "login": "sorayuki",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/16860691?v=4"
+      },
+      "description": "OBS複数サイト同時配信プラグイン",
+      "defaultBranch": "master",
+      "htmlUrl": "https://github.com/sorayuki/obs-multi-rtmp",
+      "stargazersCount": 4876,
+      "forksCount": 626,
+      "language": "C++",
+      "topics": [],
+      "releasesUrl": "https://api.github.com/repos/sorayuki/obs-multi-rtmp/releases{/id}",
+      "updatedAt": "2026-05-29T03:03:18Z",
+      "createdAt": "2020-03-26T08:58:30Z",
+      "downloadCount": 4415556,
+      "latestReleaseDate": "2025-10-25T13:51:38Z",
+      "releaseRecency": 215,
+      "releaseRecencyText": "Released 215 days ago",
+      "trendingScore": 59.27
     },
     {
       "id": 12847818,
@@ -5351,18 +5409,18 @@
       "description": "Sigil is a multi-platform EPUB ebook editor",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/Sigil-Ebook/Sigil",
-      "stargazersCount": 6798,
-      "forksCount": 615,
+      "stargazersCount": 6804,
+      "forksCount": 614,
       "language": "C++",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/Sigil-Ebook/Sigil/releases{/id}",
-      "updatedAt": "2026-05-26T03:25:33Z",
+      "updatedAt": "2026-05-28T23:11:31Z",
       "createdAt": "2013-09-15T15:41:20Z",
-      "downloadCount": 3502212,
+      "downloadCount": 3505963,
       "latestReleaseDate": "2026-03-19T21:10:52Z",
-      "releaseRecency": 68,
-      "releaseRecencyText": "Released 68 days ago",
-      "trendingScore": 57.33
+      "releaseRecency": 70,
+      "releaseRecencyText": "Released 70 days ago",
+      "trendingScore": 57.34
     },
     {
       "id": 15926180,
@@ -5382,11 +5440,11 @@
       "releasesUrl": "https://api.github.com/repos/draios/sysdig/releases{/id}",
       "updatedAt": "2026-05-26T19:53:52Z",
       "createdAt": "2014-01-15T05:45:17Z",
-      "downloadCount": 35453,
+      "downloadCount": 35559,
       "latestReleaseDate": "2026-01-29T12:17:41Z",
-      "releaseRecency": 117,
-      "releaseRecencyText": "Released 117 days ago",
-      "trendingScore": 56.54
+      "releaseRecency": 119,
+      "releaseRecencyText": "Released 119 days ago",
+      "trendingScore": 56.53
     },
     {
       "id": 27436491,
@@ -5399,7 +5457,7 @@
       "description": "QOwnNotes is a plain-text file notepad and todo-list manager with Markdown support and Nextcloud / ownCloud integration.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/pbek/QOwnNotes",
-      "stargazersCount": 5768,
+      "stargazersCount": 5771,
       "forksCount": 493,
       "language": "C++",
       "topics": [
@@ -5425,12 +5483,12 @@
         "second-brain"
       ],
       "releasesUrl": "https://api.github.com/repos/pbek/QOwnNotes/releases{/id}",
-      "updatedAt": "2026-05-26T21:21:21Z",
+      "updatedAt": "2026-05-28T10:27:25Z",
       "createdAt": "2014-12-02T14:38:05Z",
-      "downloadCount": 1196034,
+      "downloadCount": 1198361,
       "latestReleaseDate": "2026-05-26T19:58:48Z",
-      "releaseRecency": 0,
-      "releaseRecencyText": "Released today",
+      "releaseRecency": 2,
+      "releaseRecencyText": "Released 2 days ago",
       "trendingScore": 55.51
     },
     {
@@ -5444,8 +5502,8 @@
       "description": "Open-source engine for Heroes of Might and Magic III",
       "defaultBranch": "develop",
       "htmlUrl": "https://github.com/vcmi/vcmi",
-      "stargazersCount": 5659,
-      "forksCount": 613,
+      "stargazersCount": 5662,
+      "forksCount": 612,
       "language": "C++",
       "topics": [
         "android",
@@ -5460,12 +5518,12 @@
         "windows"
       ],
       "releasesUrl": "https://api.github.com/repos/vcmi/vcmi/releases{/id}",
-      "updatedAt": "2026-05-26T13:57:01Z",
+      "updatedAt": "2026-05-29T04:41:23Z",
       "createdAt": "2014-04-06T13:42:23Z",
-      "downloadCount": 353089,
+      "downloadCount": 354219,
       "latestReleaseDate": "2026-05-20T15:21:09Z",
-      "releaseRecency": 6,
-      "releaseRecencyText": "Released 6 days ago",
+      "releaseRecency": 8,
+      "releaseRecencyText": "Released 8 days ago",
       "trendingScore": 53.53
     },
     {
@@ -5479,7 +5537,7 @@
       "description": "Console-based GLSL Sandbox for 2D/3D shaders",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/patriciogonzalezvivo/glslViewer",
-      "stargazersCount": 5265,
+      "stargazersCount": 5267,
       "forksCount": 367,
       "language": "C++",
       "topics": [
@@ -5504,12 +5562,12 @@
         "webgl"
       ],
       "releasesUrl": "https://api.github.com/repos/patriciogonzalezvivo/glslViewer/releases{/id}",
-      "updatedAt": "2026-05-26T13:14:56Z",
+      "updatedAt": "2026-05-28T11:49:24Z",
       "createdAt": "2014-11-25T16:42:44Z",
-      "downloadCount": 17232,
+      "downloadCount": 17239,
       "latestReleaseDate": "2026-02-07T12:55:32Z",
-      "releaseRecency": 108,
-      "releaseRecencyText": "Released 108 days ago",
+      "releaseRecency": 110,
+      "releaseRecencyText": "Released 110 days ago",
       "trendingScore": 53.07
     },
     {
@@ -5523,8 +5581,8 @@
       "description": "Synchronous multiroom audio player",
       "defaultBranch": "develop",
       "htmlUrl": "https://github.com/snapcast/snapcast",
-      "stargazersCount": 7665,
-      "forksCount": 535,
+      "stargazersCount": 7666,
+      "forksCount": 536,
       "language": "C++",
       "topics": [
         "audio",
@@ -5537,13 +5595,13 @@
         "synchronous"
       ],
       "releasesUrl": "https://api.github.com/repos/snapcast/snapcast/releases{/id}",
-      "updatedAt": "2026-05-27T01:30:53Z",
+      "updatedAt": "2026-05-28T13:12:10Z",
       "createdAt": "2015-01-02T07:26:32Z",
-      "downloadCount": 269664,
+      "downloadCount": 269783,
       "latestReleaseDate": "2026-03-10T14:35:52Z",
-      "releaseRecency": 77,
-      "releaseRecencyText": "Released 77 days ago",
-      "trendingScore": 52.83
+      "releaseRecency": 79,
+      "releaseRecencyText": "Released 79 days ago",
+      "trendingScore": 52.82
     },
     {
       "id": 119111364,
@@ -5556,8 +5614,8 @@
       "description": "Experimental PlayStation Vita emulator",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/Vita3K/Vita3K",
-      "stargazersCount": 5312,
-      "forksCount": 523,
+      "stargazersCount": 5327,
+      "forksCount": 525,
       "language": "C++",
       "topics": [
         "cpp",
@@ -5570,13 +5628,13 @@
         "vita"
       ],
       "releasesUrl": "https://api.github.com/repos/Vita3K/Vita3K/releases{/id}",
-      "updatedAt": "2026-05-27T04:56:05Z",
+      "updatedAt": "2026-05-29T04:50:21Z",
       "createdAt": "2018-01-26T22:45:05Z",
-      "downloadCount": 7967,
-      "latestReleaseDate": "2026-05-26T19:36:28Z",
+      "downloadCount": 8283,
+      "latestReleaseDate": "2026-05-28T17:51:24Z",
       "releaseRecency": 0,
       "releaseRecencyText": "Released today",
-      "trendingScore": 50.92
+      "trendingScore": 51.0
     },
     {
       "id": 119006816,
@@ -5589,8 +5647,8 @@
       "description": ":tomato: Simple and visually-pleasing Pomodoro timer",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/Splode/pomotroid",
-      "stargazersCount": 5234,
-      "forksCount": 450,
+      "stargazersCount": 5237,
+      "forksCount": 449,
       "language": "Rust",
       "topics": [
         "pomodoro",
@@ -5603,12 +5661,12 @@
         "time-management"
       ],
       "releasesUrl": "https://api.github.com/repos/Splode/pomotroid/releases{/id}",
-      "updatedAt": "2026-05-27T01:28:22Z",
+      "updatedAt": "2026-05-28T23:41:56Z",
       "createdAt": "2018-01-26T04:47:51Z",
-      "downloadCount": 346480,
+      "downloadCount": 347137,
       "latestReleaseDate": "2026-05-11T16:59:27Z",
-      "releaseRecency": 15,
-      "releaseRecencyText": "Released 15 days ago",
+      "releaseRecency": 17,
+      "releaseRecencyText": "Released 17 days ago",
       "trendingScore": 50.4
     },
     {
@@ -5622,8 +5680,8 @@
       "description": "Library for conversion between Traditional and Simplified Chinese",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/BYVoid/OpenCC",
-      "stargazersCount": 9710,
-      "forksCount": 1050,
+      "stargazersCount": 9719,
+      "forksCount": 1051,
       "language": "C++",
       "topics": [
         "chinese",
@@ -5633,13 +5691,13 @@
         "traditional-chinese"
       ],
       "releasesUrl": "https://api.github.com/repos/BYVoid/OpenCC/releases{/id}",
-      "updatedAt": "2026-05-27T00:26:18Z",
+      "updatedAt": "2026-05-29T05:39:37Z",
       "createdAt": "2010-07-15T13:02:03Z",
-      "downloadCount": 3611,
+      "downloadCount": 3698,
       "latestReleaseDate": "2026-05-09T21:22:21Z",
-      "releaseRecency": 17,
-      "releaseRecencyText": "Released 17 days ago",
-      "trendingScore": 49.52
+      "releaseRecency": 19,
+      "releaseRecencyText": "Released 19 days ago",
+      "trendingScore": 49.54
     },
     {
       "id": 73027304,
@@ -5652,8 +5710,8 @@
       "description": "The open source mesh processing system",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/cnr-isti-vclab/meshlab",
-      "stargazersCount": 5701,
-      "forksCount": 897,
+      "stargazersCount": 5703,
+      "forksCount": 899,
       "language": "C++",
       "topics": [
         "3d",
@@ -5670,13 +5728,13 @@
         "triangle-mesh"
       ],
       "releasesUrl": "https://api.github.com/repos/cnr-isti-vclab/meshlab/releases{/id}",
-      "updatedAt": "2026-05-27T05:12:14Z",
+      "updatedAt": "2026-05-28T07:08:46Z",
       "createdAt": "2016-11-07T00:03:21Z",
-      "downloadCount": 3730447,
+      "downloadCount": 3736286,
       "latestReleaseDate": "2025-07-22T06:48:34Z",
-      "releaseRecency": 309,
-      "releaseRecencyText": "Released 309 days ago",
-      "trendingScore": 48.69
+      "releaseRecency": 310,
+      "releaseRecencyText": "Released 310 days ago",
+      "trendingScore": 48.68
     },
     {
       "id": 27358084,
@@ -5689,17 +5747,17 @@
       "description": "High-performance proxy for MySQL and PostgreSQL",
       "defaultBranch": "v3.0",
       "htmlUrl": "https://github.com/sysown/proxysql",
-      "stargazersCount": 6820,
+      "stargazersCount": 6823,
       "forksCount": 1071,
       "language": "C++",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/sysown/proxysql/releases{/id}",
-      "updatedAt": "2026-05-27T01:45:52Z",
+      "updatedAt": "2026-05-28T13:26:22Z",
       "createdAt": "2014-12-01T01:58:26Z",
-      "downloadCount": 4507110,
+      "downloadCount": 4508777,
       "latestReleaseDate": "2026-04-26T08:57:08Z",
-      "releaseRecency": 30,
-      "releaseRecencyText": "Released 30 days ago",
+      "releaseRecency": 32,
+      "releaseRecencyText": "Released 32 days ago",
       "trendingScore": 48.51
     },
     {
@@ -5713,7 +5771,7 @@
       "description": "AliSQL is a MySQL branch originated from Alibaba Group. Fetch document from Release Notes at bottom.",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/alibaba/AliSQL",
-      "stargazersCount": 5812,
+      "stargazersCount": 5813,
       "forksCount": 893,
       "language": "C++",
       "topics": [
@@ -5724,13 +5782,13 @@
         "vector"
       ],
       "releasesUrl": "https://api.github.com/repos/alibaba/AliSQL/releases{/id}",
-      "updatedAt": "2026-05-26T02:32:33Z",
+      "updatedAt": "2026-05-28T14:07:58Z",
       "createdAt": "2016-07-27T08:05:00Z",
-      "downloadCount": 441,
+      "downloadCount": 443,
       "latestReleaseDate": "2026-01-20T13:24:11Z",
-      "releaseRecency": 126,
-      "releaseRecencyText": "Released 126 days ago",
-      "trendingScore": 48.38
+      "releaseRecency": 128,
+      "releaseRecencyText": "Released 128 days ago",
+      "trendingScore": 48.37
     },
     {
       "id": 52909975,
@@ -5743,7 +5801,7 @@
       "description": "The Time Series Visualization Tool that you deserve.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/PlotJuggler/PlotJuggler",
-      "stargazersCount": 5918,
+      "stargazersCount": 5923,
       "forksCount": 793,
       "language": "C++",
       "topics": [
@@ -5762,13 +5820,13 @@
         "visualize-data"
       ],
       "releasesUrl": "https://api.github.com/repos/PlotJuggler/PlotJuggler/releases{/id}",
-      "updatedAt": "2026-05-27T02:11:56Z",
+      "updatedAt": "2026-05-29T06:01:07Z",
       "createdAt": "2016-03-01T21:05:42Z",
-      "downloadCount": 100988,
+      "downloadCount": 101223,
       "latestReleaseDate": "2026-05-11T12:54:36Z",
-      "releaseRecency": 15,
-      "releaseRecencyText": "Released 15 days ago",
-      "trendingScore": 47.66
+      "releaseRecency": 17,
+      "releaseRecencyText": "Released 17 days ago",
+      "trendingScore": 47.67
     },
     {
       "id": 119048105,
@@ -5781,7 +5839,7 @@
       "description": "Find files with SQL-like queries",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/jhspetersson/fselect",
-      "stargazersCount": 4448,
+      "stargazersCount": 4449,
       "forksCount": 87,
       "language": "Rust",
       "topics": [
@@ -5799,13 +5857,13 @@
         "utility"
       ],
       "releasesUrl": "https://api.github.com/repos/jhspetersson/fselect/releases{/id}",
-      "updatedAt": "2026-05-26T17:07:42Z",
+      "updatedAt": "2026-05-27T12:56:46Z",
       "createdAt": "2018-01-26T12:17:59Z",
-      "downloadCount": 23888,
+      "downloadCount": 23939,
       "latestReleaseDate": "2026-04-10T11:19:05Z",
-      "releaseRecency": 46,
-      "releaseRecencyText": "Released 46 days ago",
-      "trendingScore": 45.24
+      "releaseRecency": 48,
+      "releaseRecencyText": "Released 48 days ago",
+      "trendingScore": 45.23
     },
     {
       "id": 18067829,
@@ -5818,7 +5876,7 @@
       "description": "a featureful union filesystem",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/trapexit/mergerfs",
-      "stargazersCount": 5652,
+      "stargazersCount": 5658,
       "forksCount": 218,
       "language": "C++",
       "topics": [
@@ -5840,13 +5898,13 @@
         "xattr"
       ],
       "releasesUrl": "https://api.github.com/repos/trapexit/mergerfs/releases{/id}",
-      "updatedAt": "2026-05-27T02:03:46Z",
+      "updatedAt": "2026-05-29T06:05:08Z",
       "createdAt": "2014-03-24T15:43:21Z",
-      "downloadCount": 982328,
+      "downloadCount": 984054,
       "latestReleaseDate": "2026-05-08T15:28:26Z",
-      "releaseRecency": 18,
-      "releaseRecencyText": "Released 18 days ago",
-      "trendingScore": 41.43
+      "releaseRecency": 20,
+      "releaseRecencyText": "Released 20 days ago",
+      "trendingScore": 41.44
     },
     {
       "id": 982221847,
@@ -5859,7 +5917,7 @@
       "description": "AetherLink is a cross-platform AI assistant application that supports multiple mainstream AI models (OpenAI, Google Gemini, Anthropic Claude, Grok, etc.). Built with React, TypeScript, and Capacitor, it delivers a seamless conversational experience. Key features include customizable model configurations, multi-topic chat management, AI reasoning vi",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/1600822305/AetherLink",
-      "stargazersCount": 290,
+      "stargazersCount": 292,
       "forksCount": 34,
       "language": "TypeScript",
       "topics": [
@@ -5873,13 +5931,13 @@
         "tauri"
       ],
       "releasesUrl": "https://api.github.com/repos/1600822305/AetherLink/releases{/id}",
-      "updatedAt": "2026-05-26T12:03:17Z",
+      "updatedAt": "2026-05-29T03:01:57Z",
       "createdAt": "2025-05-12T14:52:39Z",
-      "downloadCount": 2577,
+      "downloadCount": 2591,
       "latestReleaseDate": "2026-03-01T16:44:25Z",
-      "releaseRecency": 86,
-      "releaseRecencyText": "Released 86 days ago",
-      "trendingScore": 25.3
+      "releaseRecency": 88,
+      "releaseRecencyText": "Released 88 days ago",
+      "trendingScore": 25.33
     }
   ]
 }
