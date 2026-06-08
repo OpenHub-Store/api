@@ -1,9 +1,74 @@
 {
   "category": "topics/media",
   "platform": "windows",
-  "lastUpdated": "2026-06-07T06:37:37.541423Z",
-  "totalCount": 55,
+  "lastUpdated": "2026-06-08T06:53:18.569181Z",
+  "totalCount": 69,
   "repositories": [
+    {
+      "id": 783330609,
+      "name": "Youamp",
+      "fullName": "siper/Youamp",
+      "owner": {
+        "login": "siper",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/1479676?v=4"
+      },
+      "description": "Material You kotlin multiplatform player for subsonic music stream servers ",
+      "defaultBranch": "master",
+      "htmlUrl": "https://github.com/siper/Youamp",
+      "stargazersCount": 265,
+      "forksCount": 14,
+      "language": "Kotlin",
+      "topics": [
+        "airsonic",
+        "android",
+        "compose-multiplatform",
+        "jetpack-compose",
+        "kmp",
+        "kmp-app",
+        "material-design",
+        "multiplatform",
+        "music-player",
+        "subsonic"
+      ],
+      "releasesUrl": "https://api.github.com/repos/siper/Youamp/releases{/id}",
+      "updatedAt": "2026-06-02T04:37:18Z",
+      "createdAt": "2024-04-07T15:39:05Z",
+      "downloadCount": 2879,
+      "latestReleaseDate": "2026-02-22T05:12:17Z",
+      "releaseRecency": 106,
+      "releaseRecencyText": "Released 106 days ago"
+    },
+    {
+      "id": 1207521722,
+      "name": "LynMusic",
+      "fullName": "wesley666/LynMusic",
+      "owner": {
+        "login": "wesley666",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/30249648?v=4"
+      },
+      "description": "A cross-platform local music player for Windows, Linux,  Android, iOS, and macOS.",
+      "defaultBranch": "main",
+      "htmlUrl": "https://github.com/wesley666/LynMusic",
+      "stargazersCount": 203,
+      "forksCount": 20,
+      "language": "Kotlin",
+      "topics": [
+        "android",
+        "compose-multiplatform",
+        "compose-ui",
+        "macos",
+        "music",
+        "player",
+        "winodws"
+      ],
+      "releasesUrl": "https://api.github.com/repos/wesley666/LynMusic/releases{/id}",
+      "updatedAt": "2026-06-07T20:58:14Z",
+      "createdAt": "2026-04-11T03:31:36Z",
+      "downloadCount": 4943,
+      "latestReleaseDate": "2026-05-17T18:45:35Z",
+      "releaseRecency": 21,
+      "releaseRecencyText": "Released 21 days ago"
+    },
     {
       "id": 606369386,
       "name": "musicpod",
@@ -15,7 +80,7 @@
       "description": "Music, radio, television and podcast player for Ubuntu, MacOs and maybe soon Android",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/ubuntu-flutter-community/musicpod",
-      "stargazersCount": 642,
+      "stargazersCount": 643,
       "forksCount": 76,
       "language": "Dart",
       "topics": [
@@ -35,12 +100,12 @@
         "ubuntu"
       ],
       "releasesUrl": "https://api.github.com/repos/ubuntu-flutter-community/musicpod/releases{/id}",
-      "updatedAt": "2026-06-07T07:22:06Z",
+      "updatedAt": "2026-06-08T07:12:35Z",
       "createdAt": "2023-02-25T09:25:24Z",
-      "downloadCount": 16279,
+      "downloadCount": 16287,
       "latestReleaseDate": "2026-04-03T23:04:00Z",
-      "releaseRecency": 64,
-      "releaseRecencyText": "Released 64 days ago"
+      "releaseRecency": 65,
+      "releaseRecencyText": "Released 65 days ago"
     },
     {
       "id": 600800971,
@@ -53,7 +118,7 @@
       "description": "A Beautiful and Feature-rich Music & Video Player with Youtube Support, Built in Flutter",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/namidaco/namida",
-      "stargazersCount": 5695,
+      "stargazersCount": 5700,
       "forksCount": 307,
       "language": "Dart",
       "topics": [
@@ -79,12 +144,12 @@
         "youtube"
       ],
       "releasesUrl": "https://api.github.com/repos/namidaco/namida/releases{/id}",
-      "updatedAt": "2026-06-07T05:46:10Z",
+      "updatedAt": "2026-06-08T05:14:46Z",
       "createdAt": "2023-02-12T16:36:03Z",
-      "downloadCount": 579667,
+      "downloadCount": 581272,
       "latestReleaseDate": "2026-04-18T15:01:33Z",
-      "releaseRecency": 49,
-      "releaseRecencyText": "Released 49 days ago"
+      "releaseRecency": 50,
+      "releaseRecencyText": "Released 50 days ago"
     },
     {
       "id": 24413103,
@@ -116,12 +181,12 @@
         "vulkan"
       ],
       "releasesUrl": "https://api.github.com/repos/zaps166/QMPlay2/releases{/id}",
-      "updatedAt": "2026-06-06T14:37:25Z",
+      "updatedAt": "2026-06-07T22:18:05Z",
       "createdAt": "2014-09-24T11:56:50Z",
-      "downloadCount": 709422,
+      "downloadCount": 709607,
       "latestReleaseDate": "2025-09-11T19:27:21Z",
-      "releaseRecency": 268,
-      "releaseRecencyText": "Released 268 days ago"
+      "releaseRecency": 269,
+      "releaseRecencyText": "Released 269 days ago"
     },
     {
       "id": 696575257,
@@ -141,10 +206,10 @@
       "releasesUrl": "https://api.github.com/repos/pure-music/PureMusic/releases{/id}",
       "updatedAt": "2026-06-06T08:04:56Z",
       "createdAt": "2023-09-26T02:53:20Z",
-      "downloadCount": 35364,
+      "downloadCount": 35386,
       "latestReleaseDate": "2026-05-26T09:36:04Z",
-      "releaseRecency": 11,
-      "releaseRecencyText": "Released 11 days ago"
+      "releaseRecency": 12,
+      "releaseRecencyText": "Released 12 days ago"
     },
     {
       "id": 892080011,
@@ -171,10 +236,54 @@
       "releasesUrl": "https://api.github.com/repos/nini22P/iris/releases{/id}",
       "updatedAt": "2026-05-28T07:07:15Z",
       "createdAt": "2024-11-21T13:27:50Z",
-      "downloadCount": 19288,
+      "downloadCount": 19300,
       "latestReleaseDate": "2025-11-01T08:40:22Z",
-      "releaseRecency": 217,
-      "releaseRecencyText": "Released 217 days ago"
+      "releaseRecency": 218,
+      "releaseRecencyText": "Released 218 days ago"
+    },
+    {
+      "id": 774580896,
+      "name": "Classipod",
+      "fullName": "adeeteya/Classipod",
+      "owner": {
+        "login": "adeeteya",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/62930521?v=4"
+      },
+      "description": "A local music player app designed to capture the nostalgic essence of the iconic iPod Classic.",
+      "defaultBranch": "master",
+      "htmlUrl": "https://github.com/adeeteya/Classipod",
+      "stargazersCount": 269,
+      "forksCount": 21,
+      "language": "Dart",
+      "topics": [
+        "android",
+        "android-app",
+        "android-application",
+        "android-development",
+        "collaborate",
+        "emulator",
+        "flutter",
+        "flutter-app",
+        "flutter-apps",
+        "flutter-examples",
+        "github-pages",
+        "hacktoberfest",
+        "hacktoberfest-accepted",
+        "ipod-classic",
+        "ipod-music",
+        "music",
+        "music-player",
+        "music-player-application",
+        "riverpod",
+        "simulator"
+      ],
+      "releasesUrl": "https://api.github.com/repos/adeeteya/Classipod/releases{/id}",
+      "updatedAt": "2026-06-07T15:12:06Z",
+      "createdAt": "2024-03-19T19:54:43Z",
+      "downloadCount": 9948,
+      "latestReleaseDate": "2025-10-26T00:53:49Z",
+      "releaseRecency": 225,
+      "releaseRecencyText": "Released 225 days ago"
     },
     {
       "id": 4591214,
@@ -188,7 +297,7 @@
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/UniversalMediaServer/UniversalMediaServer",
       "stargazersCount": 2623,
-      "forksCount": 519,
+      "forksCount": 518,
       "language": "Java",
       "topics": [
         "angular",
@@ -204,10 +313,10 @@
       "releasesUrl": "https://api.github.com/repos/UniversalMediaServer/UniversalMediaServer/releases{/id}",
       "updatedAt": "2026-06-06T20:47:03Z",
       "createdAt": "2012-06-07T22:23:22Z",
-      "downloadCount": 1440411,
+      "downloadCount": 1443820,
       "latestReleaseDate": "2026-06-01T23:14:29Z",
-      "releaseRecency": 5,
-      "releaseRecencyText": "Released 5 days ago"
+      "releaseRecency": 6,
+      "releaseRecencyText": "Released 6 days ago"
     },
     {
       "id": 585961455,
@@ -220,8 +329,8 @@
       "description": "🎵 A cross-platform music player with Jellyfin / Navidrome / Emby media server support, word-by-word lyrics, desktop & taskbar lyrics, cloud music drive, local library management, audio spectrum visualization and mobile-friendly UI. 简约的跨平台音乐播放器，支持逐字歌词、桌面歌词、任务栏歌词、云盘音乐、本地音乐管理及流媒体播放",
       "defaultBranch": "dev",
       "htmlUrl": "https://github.com/SPlayer-Dev/SPlayer",
-      "stargazersCount": 7204,
-      "forksCount": 1164,
+      "stargazersCount": 7209,
+      "forksCount": 1166,
       "language": "TypeScript",
       "topics": [
         "cross-platform",
@@ -243,12 +352,12 @@
         "vue3"
       ],
       "releasesUrl": "https://api.github.com/repos/SPlayer-Dev/SPlayer/releases{/id}",
-      "updatedAt": "2026-06-07T06:41:21Z",
+      "updatedAt": "2026-06-08T04:23:25Z",
       "createdAt": "2023-01-06T15:05:33Z",
-      "downloadCount": 1287284,
+      "downloadCount": 1291023,
       "latestReleaseDate": "2026-06-05T08:54:15Z",
-      "releaseRecency": 1,
-      "releaseRecencyText": "Released yesterday"
+      "releaseRecency": 2,
+      "releaseRecencyText": "Released 2 days ago"
     },
     {
       "id": 334485392,
@@ -261,8 +370,8 @@
       "description": "Cross-platform video downloader — sniff and grab m3u8/HLS streams, Bilibili, YouTube and more. Desktop + Docker + 🦞.",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/caorushizi/mediago",
-      "stargazersCount": 8997,
-      "forksCount": 790,
+      "stargazersCount": 8999,
+      "forksCount": 791,
       "language": "TypeScript",
       "topics": [
         "bilibili",
@@ -276,12 +385,12 @@
         "youtube"
       ],
       "releasesUrl": "https://api.github.com/repos/caorushizi/mediago/releases{/id}",
-      "updatedAt": "2026-06-07T04:03:45Z",
+      "updatedAt": "2026-06-07T17:01:35Z",
       "createdAt": "2021-01-30T18:39:00Z",
-      "downloadCount": 1540885,
+      "downloadCount": 1543034,
       "latestReleaseDate": "2026-04-21T16:38:05Z",
-      "releaseRecency": 46,
-      "releaseRecencyText": "Released 46 days ago"
+      "releaseRecency": 47,
+      "releaseRecencyText": "Released 47 days ago"
     },
     {
       "id": 1155787322,
@@ -294,8 +403,8 @@
       "description": "Open-source desktop app for downloading, organizing and studying media. Native cross-platform (Tauri + Rust + Svelte). PDF/EPUB reader with focus mode, timestamped notes and spaced repetition. Media downloads via yt-dlp (1.800+ sites). Extensible plugin system.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/tonhowtf/omniget",
-      "stargazersCount": 5500,
-      "forksCount": 426,
+      "stargazersCount": 5538,
+      "forksCount": 434,
       "language": "Svelte",
       "topics": [
         "bilibili-downloader",
@@ -320,12 +429,12 @@
         "yt-dlp"
       ],
       "releasesUrl": "https://api.github.com/repos/tonhowtf/omniget/releases{/id}",
-      "updatedAt": "2026-06-07T06:30:36Z",
+      "updatedAt": "2026-06-08T07:27:15Z",
       "createdAt": "2026-02-11T22:44:56Z",
-      "downloadCount": 92715,
+      "downloadCount": 94358,
       "latestReleaseDate": "2026-05-20T22:35:55Z",
-      "releaseRecency": 17,
-      "releaseRecencyText": "Released 17 days ago"
+      "releaseRecency": 18,
+      "releaseRecencyText": "Released 18 days ago"
     },
     {
       "id": 155110271,
@@ -352,10 +461,10 @@
       "releasesUrl": "https://api.github.com/repos/nilbuild/pennywise/releases{/id}",
       "updatedAt": "2026-06-05T05:57:43Z",
       "createdAt": "2018-10-28T20:01:19Z",
-      "downloadCount": 258823,
+      "downloadCount": 258854,
       "latestReleaseDate": "2019-06-29T05:38:49Z",
-      "releaseRecency": 2535,
-      "releaseRecencyText": "Released 2535 days ago"
+      "releaseRecency": 2536,
+      "releaseRecencyText": "Released 2536 days ago"
     },
     {
       "id": 31598574,
@@ -368,8 +477,8 @@
       "description": "🎵 A simple, clean and cross-platform music player",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/martpie/museeks",
-      "stargazersCount": 2118,
-      "forksCount": 227,
+      "stargazersCount": 2119,
+      "forksCount": 228,
       "language": "TypeScript",
       "topics": [
         "cross-platform",
@@ -380,12 +489,12 @@
         "react"
       ],
       "releasesUrl": "https://api.github.com/repos/martpie/museeks/releases{/id}",
-      "updatedAt": "2026-06-06T21:13:27Z",
+      "updatedAt": "2026-06-07T20:40:53Z",
       "createdAt": "2015-03-03T13:01:31Z",
-      "downloadCount": 844720,
+      "downloadCount": 845420,
       "latestReleaseDate": "2026-02-19T11:38:24Z",
-      "releaseRecency": 107,
-      "releaseRecencyText": "Released 107 days ago"
+      "releaseRecency": 108,
+      "releaseRecencyText": "Released 108 days ago"
     },
     {
       "id": 262680908,
@@ -416,10 +525,10 @@
       "releasesUrl": "https://api.github.com/repos/zhiyiYo/Groove/releases{/id}",
       "updatedAt": "2026-05-27T08:16:46Z",
       "createdAt": "2020-05-10T00:02:32Z",
-      "downloadCount": 1073,
+      "downloadCount": 1087,
       "latestReleaseDate": "2025-02-22T16:06:28Z",
-      "releaseRecency": 469,
-      "releaseRecencyText": "Released 469 days ago"
+      "releaseRecency": 470,
+      "releaseRecencyText": "Released 470 days ago"
     },
     {
       "id": 23480519,
@@ -432,7 +541,7 @@
       "description": "🎶 Cross-platform music player",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/exaile/exaile",
-      "stargazersCount": 390,
+      "stargazersCount": 389,
       "forksCount": 87,
       "language": "Python",
       "topics": [
@@ -443,12 +552,12 @@
         "python"
       ],
       "releasesUrl": "https://api.github.com/repos/exaile/exaile/releases{/id}",
-      "updatedAt": "2026-06-07T04:01:13Z",
+      "updatedAt": "2026-06-08T03:01:15Z",
       "createdAt": "2014-08-29T23:26:55Z",
-      "downloadCount": 54324,
+      "downloadCount": 54335,
       "latestReleaseDate": "2026-03-30T09:11:59Z",
-      "releaseRecency": 68,
-      "releaseRecencyText": "Released 68 days ago"
+      "releaseRecency": 69,
+      "releaseRecencyText": "Released 69 days ago"
     },
     {
       "id": 492203893,
@@ -461,7 +570,7 @@
       "description": "A cross-platform music player made with Typescript",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/Geoxor/Amethyst",
-      "stargazersCount": 306,
+      "stargazersCount": 307,
       "forksCount": 43,
       "language": "Vue",
       "topics": [
@@ -478,12 +587,145 @@
         "vue"
       ],
       "releasesUrl": "https://api.github.com/repos/Geoxor/Amethyst/releases{/id}",
-      "updatedAt": "2026-06-05T12:23:57Z",
+      "updatedAt": "2026-06-08T05:09:15Z",
       "createdAt": "2022-05-14T12:02:23Z",
-      "downloadCount": 177197,
+      "downloadCount": 177284,
       "latestReleaseDate": "2026-01-06T09:05:15Z",
-      "releaseRecency": 151,
-      "releaseRecencyText": "Released 151 days ago"
+      "releaseRecency": 152,
+      "releaseRecencyText": "Released 152 days ago"
+    },
+    {
+      "id": 1138110218,
+      "name": "astra",
+      "fullName": "Boof2015/astra",
+      "owner": {
+        "login": "Boof2015",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/75185879?v=4"
+      },
+      "description": "Audiophile music player with gapless playback, parametric EQ, AutoEQ import, and real-time DSP visualizers",
+      "defaultBranch": "dev",
+      "htmlUrl": "https://github.com/Boof2015/astra",
+      "stargazersCount": 265,
+      "forksCount": 13,
+      "language": "TypeScript",
+      "topics": [
+        "audio",
+        "audio-player",
+        "audiophile",
+        "cross-platform",
+        "electron",
+        "music",
+        "music-player",
+        "typescript"
+      ],
+      "releasesUrl": "https://api.github.com/repos/Boof2015/astra/releases{/id}",
+      "updatedAt": "2026-06-08T05:14:23Z",
+      "createdAt": "2026-01-20T08:58:20Z",
+      "downloadCount": 3311,
+      "latestReleaseDate": "2026-05-18T19:36:25Z",
+      "releaseRecency": 20,
+      "releaseRecencyText": "Released 20 days ago"
+    },
+    {
+      "id": 422222887,
+      "name": "LoveLiveMusicPlayer",
+      "fullName": "LoveLiveMusicPlayer/LoveLiveMusicPlayer",
+      "owner": {
+        "login": "LoveLiveMusicPlayer",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/125131296?v=4"
+      },
+      "description": "[ラブライブ] A LoveLiver Music Player",
+      "defaultBranch": "master",
+      "htmlUrl": "https://github.com/LoveLiveMusicPlayer/LoveLiveMusicPlayer",
+      "stargazersCount": 197,
+      "forksCount": 10,
+      "language": "JavaScript",
+      "topics": [
+        "cross-platform",
+        "desktop",
+        "free",
+        "llmp",
+        "lovelive",
+        "music",
+        "music-player",
+        "music-player-application",
+        "player",
+        "reactjs"
+      ],
+      "releasesUrl": "https://api.github.com/repos/LoveLiveMusicPlayer/LoveLiveMusicPlayer/releases{/id}",
+      "updatedAt": "2026-05-21T03:39:28Z",
+      "createdAt": "2021-10-28T13:50:33Z",
+      "downloadCount": 5156,
+      "latestReleaseDate": "2025-07-19T04:55:15Z",
+      "releaseRecency": 324,
+      "releaseRecencyText": "Released 324 days ago"
+    },
+    {
+      "id": 1133143247,
+      "name": "parachord",
+      "fullName": "Parachord/parachord",
+      "owner": {
+        "login": "Parachord",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/257339139?v=4"
+      },
+      "description": "Multi-source music player with cross-platform resolver support. The conceptual spawn of Tomahawk.",
+      "defaultBranch": "main",
+      "htmlUrl": "https://github.com/Parachord/parachord",
+      "stargazersCount": 178,
+      "forksCount": 15,
+      "language": "JavaScript",
+      "topics": [],
+      "releasesUrl": "https://api.github.com/repos/Parachord/parachord/releases{/id}",
+      "updatedAt": "2026-06-05T14:46:54Z",
+      "createdAt": "2026-01-13T00:10:49Z",
+      "downloadCount": 8597,
+      "latestReleaseDate": "2026-05-27T12:24:46Z",
+      "releaseRecency": 11,
+      "releaseRecencyText": "Released 11 days ago"
+    },
+    {
+      "id": 713595157,
+      "name": "jammer",
+      "fullName": "jooapa/jammer",
+      "owner": {
+        "login": "jooapa",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/37744313?v=4"
+      },
+      "description": "light-weight CLI music player with Soundcloud, Youtube, Rss, Midi Support for Win & Linux",
+      "defaultBranch": "main",
+      "htmlUrl": "https://github.com/jooapa/jammer",
+      "stargazersCount": 158,
+      "forksCount": 7,
+      "language": "C#",
+      "topics": [
+        "audio",
+        "audio-player",
+        "cli",
+        "cross-platform",
+        "dotnet",
+        "linux",
+        "midi-player",
+        "mp3",
+        "mp3-player",
+        "music",
+        "music-player",
+        "player",
+        "rss",
+        "soundcloud",
+        "soundcloud-downloader",
+        "tui",
+        "windows",
+        "youtube",
+        "youtube-dl",
+        "youtube-downloader"
+      ],
+      "releasesUrl": "https://api.github.com/repos/jooapa/jammer/releases{/id}",
+      "updatedAt": "2026-05-29T01:43:38Z",
+      "createdAt": "2023-11-02T20:59:10Z",
+      "downloadCount": 3167,
+      "latestReleaseDate": "2026-01-18T21:04:37Z",
+      "releaseRecency": 140,
+      "releaseRecencyText": "Released 140 days ago"
     },
     {
       "id": 91570348,
@@ -496,17 +738,17 @@
       "description": "Media Player Classic",
       "defaultBranch": "develop",
       "htmlUrl": "https://github.com/clsid2/mpc-hc",
-      "stargazersCount": 14984,
+      "stargazersCount": 14987,
       "forksCount": 611,
       "language": "C++",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/clsid2/mpc-hc/releases{/id}",
-      "updatedAt": "2026-06-07T07:25:48Z",
+      "updatedAt": "2026-06-07T21:54:07Z",
       "createdAt": "2017-05-17T11:47:34Z",
-      "downloadCount": 17655941,
+      "downloadCount": 17668910,
       "latestReleaseDate": "2026-06-04T16:31:56Z",
-      "releaseRecency": 2,
-      "releaseRecencyText": "Released 2 days ago"
+      "releaseRecency": 3,
+      "releaseRecencyText": "Released 3 days ago"
     },
     {
       "id": 10289758,
@@ -519,17 +761,17 @@
       "description": "LAV Filters - Open-Source DirectShow Media Splitter and Decoders",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/Nevcairiel/LAVFilters",
-      "stargazersCount": 8928,
+      "stargazersCount": 8927,
       "forksCount": 829,
       "language": "C++",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/Nevcairiel/LAVFilters/releases{/id}",
-      "updatedAt": "2026-06-07T05:16:25Z",
+      "updatedAt": "2026-06-08T04:58:38Z",
       "createdAt": "2013-05-25T20:59:11Z",
-      "downloadCount": 22843986,
+      "downloadCount": 22848611,
       "latestReleaseDate": "2026-01-12T09:56:20Z",
-      "releaseRecency": 145,
-      "releaseRecencyText": "Released 145 days ago"
+      "releaseRecency": 146,
+      "releaseRecencyText": "Released 146 days ago"
     },
     {
       "id": 330576649,
@@ -542,17 +784,17 @@
       "description": "Media Downloader is a Qt/C++ front end to yt-dlp, youtube-dl, gallery-dl, lux, you-get, svtplay-dl, aria2c, wget and safari books..",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/mhogomchungu/media-downloader",
-      "stargazersCount": 4587,
+      "stargazersCount": 4590,
       "forksCount": 311,
       "language": "C++",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/mhogomchungu/media-downloader/releases{/id}",
-      "updatedAt": "2026-06-07T00:57:16Z",
+      "updatedAt": "2026-06-08T03:02:34Z",
       "createdAt": "2021-01-18T06:36:04Z",
-      "downloadCount": 532381,
+      "downloadCount": 533030,
       "latestReleaseDate": "2026-05-18T06:18:53Z",
-      "releaseRecency": 20,
-      "releaseRecencyText": "Released 20 days ago"
+      "releaseRecency": 21,
+      "releaseRecencyText": "Released 21 days ago"
     },
     {
       "id": 14979312,
@@ -565,7 +807,7 @@
       "description": ":tangerine: Clementine Music Player",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/clementine-player/Clementine",
-      "stargazersCount": 4211,
+      "stargazersCount": 4210,
       "forksCount": 725,
       "language": "C++",
       "topics": [
@@ -577,12 +819,12 @@
         "windows"
       ],
       "releasesUrl": "https://api.github.com/repos/clementine-player/Clementine/releases{/id}",
-      "updatedAt": "2026-06-06T21:13:24Z",
+      "updatedAt": "2026-06-07T08:01:52Z",
       "createdAt": "2013-12-06T09:55:15Z",
-      "downloadCount": 3407975,
+      "downloadCount": 3408271,
       "latestReleaseDate": "2026-05-23T17:14:54Z",
-      "releaseRecency": 14,
-      "releaseRecencyText": "Released 14 days ago"
+      "releaseRecency": 15,
+      "releaseRecencyText": "Released 15 days ago"
     },
     {
       "id": 754190568,
@@ -595,7 +837,7 @@
       "description": "The Discord music status that works with any media player",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/ungive/discord-music-presence",
-      "stargazersCount": 3075,
+      "stargazersCount": 3080,
       "forksCount": 118,
       "language": "C++",
       "topics": [
@@ -618,12 +860,12 @@
         "windows"
       ],
       "releasesUrl": "https://api.github.com/repos/ungive/discord-music-presence/releases{/id}",
-      "updatedAt": "2026-06-07T04:23:20Z",
+      "updatedAt": "2026-06-08T05:16:49Z",
       "createdAt": "2024-02-07T15:20:17Z",
-      "downloadCount": 379262,
+      "downloadCount": 380081,
       "latestReleaseDate": "2025-12-26T18:54:19Z",
-      "releaseRecency": 162,
-      "releaseRecencyText": "Released 162 days ago"
+      "releaseRecency": 163,
+      "releaseRecencyText": "Released 163 days ago"
     },
     {
       "id": 19000603,
@@ -636,17 +878,17 @@
       "description": "A media packaging and development framework for VOD and Live DASH and HLS applications, supporting Common Encryption for Widevine and other DRM Systems.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/shaka-project/shaka-packager",
-      "stargazersCount": 2525,
+      "stargazersCount": 2524,
       "forksCount": 564,
       "language": "C++",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/shaka-project/shaka-packager/releases{/id}",
-      "updatedAt": "2026-06-06T19:49:27Z",
+      "updatedAt": "2026-06-08T00:08:59Z",
       "createdAt": "2014-04-21T17:34:50Z",
-      "downloadCount": 1035204,
+      "downloadCount": 1036159,
       "latestReleaseDate": "2026-04-09T20:56:07Z",
-      "releaseRecency": 58,
-      "releaseRecencyText": "Released 58 days ago"
+      "releaseRecency": 59,
+      "releaseRecencyText": "Released 59 days ago"
     },
     {
       "id": 211858553,
@@ -659,7 +901,7 @@
       "description": "The home of Raspberry Pi Imager, a user-friendly tool for creating bootable media for Raspberry Pi devices.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/raspberrypi/rpi-imager",
-      "stargazersCount": 2501,
+      "stargazersCount": 2502,
       "forksCount": 424,
       "language": "C++",
       "topics": [
@@ -678,12 +920,12 @@
         "raspberrypi4"
       ],
       "releasesUrl": "https://api.github.com/repos/raspberrypi/rpi-imager/releases{/id}",
-      "updatedAt": "2026-06-07T02:32:50Z",
+      "updatedAt": "2026-06-07T10:29:14Z",
       "createdAt": "2019-09-30T12:49:05Z",
-      "downloadCount": 2430750,
+      "downloadCount": 2435167,
       "latestReleaseDate": "2026-04-08T16:02:10Z",
-      "releaseRecency": 59,
-      "releaseRecencyText": "Released 59 days ago"
+      "releaseRecency": 60,
+      "releaseRecencyText": "Released 60 days ago"
     },
     {
       "id": 35213370,
@@ -696,8 +938,8 @@
       "description": "TTKMusicPlayer imitates Kugou UI, the music player uses of qmmp core library based on Qt for windows and linux.",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/Greedysky/TTKMusicPlayer",
-      "stargazersCount": 2433,
-      "forksCount": 433,
+      "stargazersCount": 2434,
+      "forksCount": 434,
       "language": "C++",
       "topics": [
         "amiga",
@@ -709,12 +951,12 @@
         "spectrum"
       ],
       "releasesUrl": "https://api.github.com/repos/Greedysky/TTKMusicPlayer/releases{/id}",
-      "updatedAt": "2026-06-07T03:05:10Z",
+      "updatedAt": "2026-06-08T03:13:55Z",
       "createdAt": "2015-05-07T10:15:14Z",
-      "downloadCount": 55860,
+      "downloadCount": 55874,
       "latestReleaseDate": "2026-02-12T02:51:52Z",
-      "releaseRecency": 115,
-      "releaseRecencyText": "Released 115 days ago"
+      "releaseRecency": 116,
+      "releaseRecencyText": "Released 116 days ago"
     },
     {
       "id": 302477133,
@@ -727,7 +969,7 @@
       "description": "An mpv-based video player for studying Japanese",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/ripose-jp/Memento",
-      "stargazersCount": 1439,
+      "stargazersCount": 1437,
       "forksCount": 60,
       "language": "C++",
       "topics": [
@@ -740,12 +982,12 @@
         "yomitan"
       ],
       "releasesUrl": "https://api.github.com/repos/ripose-jp/Memento/releases{/id}",
-      "updatedAt": "2026-06-07T01:46:54Z",
+      "updatedAt": "2026-06-08T02:37:05Z",
       "createdAt": "2020-10-08T22:38:20Z",
-      "downloadCount": 38910,
+      "downloadCount": 38952,
       "latestReleaseDate": "2026-01-31T22:55:14Z",
-      "releaseRecency": 126,
-      "releaseRecencyText": "Released 126 days ago"
+      "releaseRecency": 127,
+      "releaseRecencyText": "Released 127 days ago"
     },
     {
       "id": 58723373,
@@ -772,10 +1014,10 @@
       "releasesUrl": "https://api.github.com/repos/FedoraQt/MediaWriter/releases{/id}",
       "updatedAt": "2026-06-06T16:12:28Z",
       "createdAt": "2016-05-13T09:26:16Z",
-      "downloadCount": 1495910,
+      "downloadCount": 1498385,
       "latestReleaseDate": "2026-04-10T06:22:40Z",
-      "releaseRecency": 58,
-      "releaseRecencyText": "Released 58 days ago"
+      "releaseRecency": 59,
+      "releaseRecencyText": "Released 59 days ago"
     },
     {
       "id": 1004116404,
@@ -799,12 +1041,69 @@
         "rust"
       ],
       "releasesUrl": "https://api.github.com/repos/xiaobaimc/myune_music/releases{/id}",
-      "updatedAt": "2026-06-01T22:20:21Z",
+      "updatedAt": "2026-06-07T17:20:13Z",
       "createdAt": "2025-06-18T06:27:47Z",
-      "downloadCount": 16200,
+      "downloadCount": 16327,
       "latestReleaseDate": "2026-05-16T07:26:22Z",
-      "releaseRecency": 22,
-      "releaseRecencyText": "Released 22 days ago"
+      "releaseRecency": 23,
+      "releaseRecencyText": "Released 23 days ago"
+    },
+    {
+      "id": 1036785844,
+      "name": "Linx-Music",
+      "fullName": "GerryDush/Linx-Music",
+      "owner": {
+        "login": "GerryDush",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/115096454?v=4"
+      },
+      "description": "Local & private cloud music player (Flutter), supports MP3/M4A/WAV/FLAC, LRC & TTML lyrics, with Apple Music–style lyrics page. Future features: lyrics editing, MV playback, WebDav. Official site: https://lzf.geddy.cn/  本地&私有云音乐播放器（Flutter开发），支持 MP3/M4A/WAV/FLAC、LRC & TTML 歌词，拥有 Apple Music 风格歌词页。未来支持歌词编辑、MV 播放、WebDav。官网：https://lzf.geddy.cn/",
+      "defaultBranch": "main",
+      "htmlUrl": "https://github.com/GerryDush/Linx-Music",
+      "stargazersCount": 185,
+      "forksCount": 13,
+      "language": "Dart",
+      "topics": [],
+      "releasesUrl": "https://api.github.com/repos/GerryDush/Linx-Music/releases{/id}",
+      "updatedAt": "2026-06-07T15:27:05Z",
+      "createdAt": "2025-08-12T15:23:07Z",
+      "downloadCount": 2082,
+      "latestReleaseDate": "2026-03-22T02:54:06Z",
+      "releaseRecency": 78,
+      "releaseRecencyText": "Released 78 days ago"
+    },
+    {
+      "id": 1784162,
+      "name": "nulloy",
+      "fullName": "nulloy/nulloy",
+      "owner": {
+        "login": "nulloy",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/5841192?v=4"
+      },
+      "description": "Music player with a waveform progress bar",
+      "defaultBranch": "master",
+      "htmlUrl": "https://github.com/nulloy/nulloy",
+      "stargazersCount": 184,
+      "forksCount": 21,
+      "language": "C++",
+      "topics": [
+        "gstreamer",
+        "linux",
+        "macos",
+        "music-player",
+        "qml",
+        "qt5",
+        "taglib",
+        "vlc",
+        "waveform",
+        "windows"
+      ],
+      "releasesUrl": "https://api.github.com/repos/nulloy/nulloy/releases{/id}",
+      "updatedAt": "2026-06-06T22:19:48Z",
+      "createdAt": "2011-05-22T15:26:06Z",
+      "downloadCount": 68279,
+      "latestReleaseDate": "2024-06-08T15:25:37Z",
+      "releaseRecency": 729,
+      "releaseRecencyText": "Released 729 days ago"
     },
     {
       "id": 468576001,
@@ -817,7 +1116,7 @@
       "description": "An elegant music player built using Electron and React. Inspired from Oto Music for Android by Piyush Mamidwar.",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/Sandakan/Nora",
-      "stargazersCount": 1123,
+      "stargazersCount": 1126,
       "forksCount": 53,
       "language": "TypeScript",
       "topics": [
@@ -829,12 +1128,12 @@
         "reactjs"
       ],
       "releasesUrl": "https://api.github.com/repos/Sandakan/Nora/releases{/id}",
-      "updatedAt": "2026-06-06T21:13:54Z",
+      "updatedAt": "2026-06-08T02:20:03Z",
       "createdAt": "2022-03-11T02:08:39Z",
-      "downloadCount": 287079,
+      "downloadCount": 287859,
       "latestReleaseDate": "2025-03-29T11:40:31Z",
-      "releaseRecency": 434,
-      "releaseRecencyText": "Released 434 days ago"
+      "releaseRecency": 435,
+      "releaseRecencyText": "Released 435 days ago"
     },
     {
       "id": 188700274,
@@ -847,7 +1146,7 @@
       "description": "Portable file server with accelerated resumable uploads, dedup, WebDAV, SFTP, FTP, TFTP, zeroconf, media indexer, thumbnails++ all in one file",
       "defaultBranch": "hovudstraum",
       "htmlUrl": "https://github.com/9001/copyparty",
-      "stargazersCount": 45137,
+      "stargazersCount": 45153,
       "forksCount": 1840,
       "language": "Python",
       "topics": [
@@ -861,12 +1160,12 @@
         "webdav-server"
       ],
       "releasesUrl": "https://api.github.com/repos/9001/copyparty/releases{/id}",
-      "updatedAt": "2026-06-07T06:33:17Z",
+      "updatedAt": "2026-06-08T07:12:22Z",
       "createdAt": "2019-05-26T15:28:33Z",
-      "downloadCount": 483897,
+      "downloadCount": 484411,
       "latestReleaseDate": "2026-05-26T19:28:14Z",
-      "releaseRecency": 11,
-      "releaseRecencyText": "Released 11 days ago"
+      "releaseRecency": 12,
+      "releaseRecencyText": "Released 12 days ago"
     },
     {
       "id": 182306991,
@@ -879,8 +1178,8 @@
       "description": "Pear 🍐 is extension for music player",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/pear-devs/pear-desktop",
-      "stargazersCount": 31877,
-      "forksCount": 1818,
+      "stargazersCount": 31887,
+      "forksCount": 1819,
       "language": "TypeScript",
       "topics": [
         "desktop-app",
@@ -896,12 +1195,12 @@
         "windows"
       ],
       "releasesUrl": "https://api.github.com/repos/pear-devs/pear-desktop/releases{/id}",
-      "updatedAt": "2026-06-07T05:37:10Z",
+      "updatedAt": "2026-06-08T07:36:56Z",
       "createdAt": "2019-04-19T18:14:40Z",
-      "downloadCount": 17758528,
+      "downloadCount": 17782169,
       "latestReleaseDate": "2025-09-07T09:01:26Z",
-      "releaseRecency": 272,
-      "releaseRecencyText": "Released 272 days ago"
+      "releaseRecency": 273,
+      "releaseRecencyText": "Released 273 days ago"
     },
     {
       "id": 68968979,
@@ -914,8 +1213,8 @@
       "description": "Streaming music player that finds free music for you",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/nukeop/nuclear",
-      "stargazersCount": 17744,
-      "forksCount": 1284,
+      "stargazersCount": 17747,
+      "forksCount": 1283,
       "language": "TypeScript",
       "topics": [
         "agent",
@@ -936,12 +1235,12 @@
         "windows"
       ],
       "releasesUrl": "https://api.github.com/repos/nukeop/nuclear/releases{/id}",
-      "updatedAt": "2026-06-07T01:49:02Z",
+      "updatedAt": "2026-06-08T07:23:03Z",
       "createdAt": "2016-09-22T22:58:21Z",
-      "downloadCount": 233595,
-      "latestReleaseDate": "2026-06-01T22:20:52Z",
-      "releaseRecency": 5,
-      "releaseRecencyText": "Released 5 days ago"
+      "downloadCount": 237265,
+      "latestReleaseDate": "2026-06-07T09:49:17Z",
+      "releaseRecency": 0,
+      "releaseRecencyText": "Released today"
     },
     {
       "id": 710867462,
@@ -954,8 +1253,8 @@
       "description": "一个第三方音乐播放器、本地服务、桌面歌词、音乐下载、远程控制",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/algerkong/AlgerMusicPlayer",
-      "stargazersCount": 15674,
-      "forksCount": 1272,
+      "stargazersCount": 15697,
+      "forksCount": 1274,
       "language": "Vue",
       "topics": [
         "alger",
@@ -963,12 +1262,12 @@
         "music-player"
       ],
       "releasesUrl": "https://api.github.com/repos/algerkong/AlgerMusicPlayer/releases{/id}",
-      "updatedAt": "2026-06-07T06:46:38Z",
+      "updatedAt": "2026-06-08T07:45:20Z",
       "createdAt": "2023-10-27T15:52:55Z",
-      "downloadCount": 2536321,
+      "downloadCount": 2544134,
       "latestReleaseDate": "2026-03-22T14:55:27Z",
-      "releaseRecency": 76,
-      "releaseRecencyText": "Released 76 days ago"
+      "releaseRecency": 77,
+      "releaseRecencyText": "Released 77 days ago"
     },
     {
       "id": 517572452,
@@ -981,8 +1280,8 @@
       "description": "A modern self-hosted music player.",
       "defaultBranch": "development",
       "htmlUrl": "https://github.com/jeffvli/feishin",
-      "stargazersCount": 8694,
-      "forksCount": 426,
+      "stargazersCount": 8713,
+      "forksCount": 427,
       "language": "TypeScript",
       "topics": [
         "jellyfin",
@@ -993,12 +1292,12 @@
         "subsonic-client"
       ],
       "releasesUrl": "https://api.github.com/repos/jeffvli/feishin/releases{/id}",
-      "updatedAt": "2026-06-07T05:30:37Z",
+      "updatedAt": "2026-06-08T06:29:59Z",
       "createdAt": "2022-07-25T08:02:56Z",
-      "downloadCount": 3483932,
+      "downloadCount": 3498877,
       "latestReleaseDate": "2026-06-03T08:34:11Z",
-      "releaseRecency": 3,
-      "releaseRecencyText": "Released 3 days ago"
+      "releaseRecency": 4,
+      "releaseRecencyText": "Released 4 days ago"
     },
     {
       "id": 31169720,
@@ -1011,7 +1310,7 @@
       "description": "A Python based monitoring and tracking tool for Plex Media Server.",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/Tautulli/Tautulli",
-      "stargazersCount": 6509,
+      "stargazersCount": 6510,
       "forksCount": 624,
       "language": "Python",
       "topics": [
@@ -1026,12 +1325,12 @@
         "tautulli"
       ],
       "releasesUrl": "https://api.github.com/repos/Tautulli/Tautulli/releases{/id}",
-      "updatedAt": "2026-06-06T21:26:08Z",
+      "updatedAt": "2026-06-08T03:43:10Z",
       "createdAt": "2015-02-22T16:36:06Z",
-      "downloadCount": 572310,
+      "downloadCount": 572487,
       "latestReleaseDate": "2026-05-05T01:34:39Z",
-      "releaseRecency": 33,
-      "releaseRecencyText": "Released 33 days ago"
+      "releaseRecency": 34,
+      "releaseRecencyText": "Released 34 days ago"
     },
     {
       "id": 101537172,
@@ -1044,7 +1343,7 @@
       "description": "🎞 mpv.net is a media player for Windows with a modern GUI.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/mpvnet-player/mpv.net",
-      "stargazersCount": 5107,
+      "stargazersCount": 5108,
       "forksCount": 208,
       "language": "C#",
       "topics": [
@@ -1069,12 +1368,12 @@
         "yt-dlp"
       ],
       "releasesUrl": "https://api.github.com/repos/mpvnet-player/mpv.net/releases{/id}",
-      "updatedAt": "2026-06-07T06:36:48Z",
+      "updatedAt": "2026-06-08T06:09:21Z",
       "createdAt": "2017-08-27T07:36:32Z",
-      "downloadCount": 540260,
+      "downloadCount": 540652,
       "latestReleaseDate": "2026-01-09T05:24:41Z",
-      "releaseRecency": 149,
-      "releaseRecencyText": "Released 149 days ago"
+      "releaseRecency": 150,
+      "releaseRecencyText": "Released 150 days ago"
     },
     {
       "id": 708618207,
@@ -1087,7 +1386,7 @@
       "description": "Open-source media server with a web interface and desktop app for anime and manga.",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/5rahim/seanime",
-      "stargazersCount": 3690,
+      "stargazersCount": 3693,
       "forksCount": 263,
       "language": "Go",
       "topics": [
@@ -1108,12 +1407,12 @@
         "self-hosted"
       ],
       "releasesUrl": "https://api.github.com/repos/5rahim/seanime/releases{/id}",
-      "updatedAt": "2026-06-07T06:29:27Z",
+      "updatedAt": "2026-06-08T01:57:09Z",
       "createdAt": "2023-10-23T03:05:04Z",
-      "downloadCount": 3861038,
-      "latestReleaseDate": "2026-05-24T13:26:50Z",
-      "releaseRecency": 13,
-      "releaseRecencyText": "Released 13 days ago"
+      "downloadCount": 3885212,
+      "latestReleaseDate": "2026-06-07T17:21:42Z",
+      "releaseRecency": 0,
+      "releaseRecencyText": "Released today"
     },
     {
       "id": 51886700,
@@ -1126,7 +1425,7 @@
       "description": "The music player of today! :city_sunrise:",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/Taiko2k/Tauon",
-      "stargazersCount": 2674,
+      "stargazersCount": 2675,
       "forksCount": 125,
       "language": "Python",
       "topics": [
@@ -1145,12 +1444,12 @@
         "windows"
       ],
       "releasesUrl": "https://api.github.com/repos/Taiko2k/Tauon/releases{/id}",
-      "updatedAt": "2026-06-07T01:46:54Z",
+      "updatedAt": "2026-06-07T21:23:15Z",
       "createdAt": "2016-02-17T02:11:56Z",
-      "downloadCount": 77599,
+      "downloadCount": 77747,
       "latestReleaseDate": "2026-05-29T03:41:06Z",
-      "releaseRecency": 9,
-      "releaseRecencyText": "Released 9 days ago"
+      "releaseRecency": 10,
+      "releaseRecencyText": "Released 10 days ago"
     },
     {
       "id": 4732425,
@@ -1163,17 +1462,17 @@
       "description": "Client/server to synchronize media playback on mpv/VLC/MPC-HC/MPC-BE on many computers",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/Syncplay/syncplay",
-      "stargazersCount": 2608,
+      "stargazersCount": 2606,
       "forksCount": 252,
       "language": "Python",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/Syncplay/syncplay/releases{/id}",
-      "updatedAt": "2026-06-05T14:38:47Z",
+      "updatedAt": "2026-06-07T15:08:36Z",
       "createdAt": "2012-06-20T22:49:36Z",
-      "downloadCount": 906916,
+      "downloadCount": 907349,
       "latestReleaseDate": "2026-02-19T21:46:02Z",
-      "releaseRecency": 107,
-      "releaseRecencyText": "Released 107 days ago"
+      "releaseRecency": 108,
+      "releaseRecencyText": "Released 108 days ago"
     },
     {
       "id": 1165453205,
@@ -1186,8 +1485,8 @@
       "description": "cliamp - Terminal music player inspired by winamp ",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/bjarneo/cliamp",
-      "stargazersCount": 2443,
-      "forksCount": 130,
+      "stargazersCount": 2449,
+      "forksCount": 131,
       "language": "Go",
       "topics": [
         "cliamp",
@@ -1211,12 +1510,12 @@
         "yt-dlp"
       ],
       "releasesUrl": "https://api.github.com/repos/bjarneo/cliamp/releases{/id}",
-      "updatedAt": "2026-06-07T03:39:49Z",
+      "updatedAt": "2026-06-08T05:51:56Z",
       "createdAt": "2026-02-24T07:18:59Z",
-      "downloadCount": 24544,
+      "downloadCount": 24674,
       "latestReleaseDate": "2026-06-04T18:18:04Z",
-      "releaseRecency": 2,
-      "releaseRecencyText": "Released 2 days ago"
+      "releaseRecency": 3,
+      "releaseRecencyText": "Released 3 days ago"
     },
     {
       "id": 287959531,
@@ -1229,7 +1528,7 @@
       "description": " A simple,high performance and secure live media server in pure Rust (RTMP[cluster]/RTSP/WebRTC[whip/whep]/HTTP-FLV/HLS).🦀",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/harlanc/xiu",
-      "stargazersCount": 2293,
+      "stargazersCount": 2295,
       "forksCount": 235,
       "language": "Rust",
       "topics": [
@@ -1255,12 +1554,12 @@
         "xiu"
       ],
       "releasesUrl": "https://api.github.com/repos/harlanc/xiu/releases{/id}",
-      "updatedAt": "2026-06-03T05:49:13Z",
+      "updatedAt": "2026-06-08T03:14:34Z",
       "createdAt": "2020-08-16T14:27:42Z",
-      "downloadCount": 2866,
+      "downloadCount": 2867,
       "latestReleaseDate": "2024-08-11T01:09:25Z",
-      "releaseRecency": 665,
-      "releaseRecencyText": "Released 665 days ago"
+      "releaseRecency": 666,
+      "releaseRecencyText": "Released 666 days ago"
     },
     {
       "id": 63281131,
@@ -1280,10 +1579,10 @@
       "releasesUrl": "https://api.github.com/repos/digimezzo/dopamine-windows/releases{/id}",
       "updatedAt": "2026-06-02T20:07:27Z",
       "createdAt": "2016-07-13T21:34:42Z",
-      "downloadCount": 51877,
+      "downloadCount": 51896,
       "latestReleaseDate": "2024-08-11T05:15:28Z",
-      "releaseRecency": 665,
-      "releaseRecencyText": "Released 665 days ago"
+      "releaseRecency": 666,
+      "releaseRecencyText": "Released 666 days ago"
     },
     {
       "id": 427882074,
@@ -1310,10 +1609,10 @@
       "releasesUrl": "https://api.github.com/repos/swingmx/swingmusic/releases{/id}",
       "updatedAt": "2026-06-07T01:36:42Z",
       "createdAt": "2021-11-14T09:05:18Z",
-      "downloadCount": 30597,
+      "downloadCount": 30641,
       "latestReleaseDate": "2026-01-18T18:28:16Z",
-      "releaseRecency": 139,
-      "releaseRecencyText": "Released 139 days ago"
+      "releaseRecency": 140,
+      "releaseRecencyText": "Released 140 days ago"
     },
     {
       "id": 269846860,
@@ -1333,10 +1632,10 @@
       "releasesUrl": "https://api.github.com/repos/vexorian/dizquetv/releases{/id}",
       "updatedAt": "2026-06-06T10:24:03Z",
       "createdAt": "2020-06-06T02:49:40Z",
-      "downloadCount": 31131,
+      "downloadCount": 31143,
       "latestReleaseDate": "2025-12-15T05:29:14Z",
-      "releaseRecency": 174,
-      "releaseRecencyText": "Released 174 days ago"
+      "releaseRecency": 175,
+      "releaseRecencyText": "Released 175 days ago"
     },
     {
       "id": 32232341,
@@ -1349,7 +1648,7 @@
       "description": "Music player and music library manager for Linux, Windows, and macOS",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/quodlibet/quodlibet",
-      "stargazersCount": 1733,
+      "stargazersCount": 1734,
       "forksCount": 254,
       "language": "Python",
       "topics": [
@@ -1359,12 +1658,43 @@
         "python"
       ],
       "releasesUrl": "https://api.github.com/repos/quodlibet/quodlibet/releases{/id}",
-      "updatedAt": "2026-06-06T21:13:27Z",
+      "updatedAt": "2026-06-07T13:18:31Z",
       "createdAt": "2015-03-14T21:16:31Z",
-      "downloadCount": 443548,
+      "downloadCount": 443597,
       "latestReleaseDate": "2025-05-31T15:12:41Z",
-      "releaseRecency": 371,
-      "releaseRecencyText": "Released 371 days ago"
+      "releaseRecency": 372,
+      "releaseRecencyText": "Released 372 days ago"
+    },
+    {
+      "id": 1071031551,
+      "name": "kopuz",
+      "fullName": "Kopuz-org/kopuz",
+      "owner": {
+        "login": "Kopuz-org",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/283358886?v=4"
+      },
+      "description": "Your next music player",
+      "defaultBranch": "master",
+      "htmlUrl": "https://github.com/Kopuz-org/kopuz",
+      "stargazersCount": 1402,
+      "forksCount": 59,
+      "language": "Rust",
+      "topics": [
+        "dioxus",
+        "jellyfin",
+        "music",
+        "music-player",
+        "rust",
+        "subsonic",
+        "tailwind"
+      ],
+      "releasesUrl": "https://api.github.com/repos/Kopuz-org/kopuz/releases{/id}",
+      "updatedAt": "2026-06-08T07:40:58Z",
+      "createdAt": "2025-10-06T19:13:18Z",
+      "downloadCount": 6036,
+      "latestReleaseDate": "2026-06-07T16:08:28Z",
+      "releaseRecency": 0,
+      "releaseRecencyText": "Released today"
     },
     {
       "id": 126831020,
@@ -1377,7 +1707,7 @@
       "description": "MPV-EASY Player - An easy to use, modern video player based on mpv （一个基于MPV,易于使用,现代化的视频播放器）",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/422658476/MPV-EASY-Player",
-      "stargazersCount": 1370,
+      "stargazersCount": 1373,
       "forksCount": 65,
       "language": "Lua",
       "topics": [
@@ -1403,43 +1733,12 @@
         "windows"
       ],
       "releasesUrl": "https://api.github.com/repos/422658476/MPV-EASY-Player/releases{/id}",
-      "updatedAt": "2026-06-06T18:30:38Z",
+      "updatedAt": "2026-06-07T23:59:46Z",
       "createdAt": "2018-03-26T13:12:40Z",
-      "downloadCount": 3003,
+      "downloadCount": 3030,
       "latestReleaseDate": "2026-05-03T05:40:02Z",
-      "releaseRecency": 35,
-      "releaseRecencyText": "Released 35 days ago"
-    },
-    {
-      "id": 1071031551,
-      "name": "kopuz",
-      "fullName": "Kopuz-org/kopuz",
-      "owner": {
-        "login": "Kopuz-org",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/283358886?v=4"
-      },
-      "description": "Your next music player",
-      "defaultBranch": "master",
-      "htmlUrl": "https://github.com/Kopuz-org/kopuz",
-      "stargazersCount": 1325,
-      "forksCount": 58,
-      "language": "Rust",
-      "topics": [
-        "dioxus",
-        "jellyfin",
-        "music",
-        "music-player",
-        "rust",
-        "subsonic",
-        "tailwind"
-      ],
-      "releasesUrl": "https://api.github.com/repos/Kopuz-org/kopuz/releases{/id}",
-      "updatedAt": "2026-06-06T18:13:53Z",
-      "createdAt": "2025-10-06T19:13:18Z",
-      "downloadCount": 5612,
-      "latestReleaseDate": "2026-05-23T18:22:53Z",
-      "releaseRecency": 14,
-      "releaseRecencyText": "Released 14 days ago"
+      "releaseRecency": 36,
+      "releaseRecencyText": "Released 36 days ago"
     },
     {
       "id": 448146826,
@@ -1473,10 +1772,10 @@
       "releasesUrl": "https://api.github.com/repos/tanshuai/alphabiz/releases{/id}",
       "updatedAt": "2026-06-06T09:50:05Z",
       "createdAt": "2022-01-15T00:46:27Z",
-      "downloadCount": 341261,
+      "downloadCount": 341273,
       "latestReleaseDate": "2024-09-13T06:32:31Z",
-      "releaseRecency": 632,
-      "releaseRecencyText": "Released 632 days ago"
+      "releaseRecency": 633,
+      "releaseRecencyText": "Released 633 days ago"
     },
     {
       "id": 1091873942,
@@ -1515,12 +1814,12 @@
         "web-server"
       ],
       "releasesUrl": "https://api.github.com/repos/asdfghj1237890/HoloCubic-AIO-Enhanced/releases{/id}",
-      "updatedAt": "2026-06-06T14:32:51Z",
+      "updatedAt": "2026-06-07T20:40:40Z",
       "createdAt": "2025-11-07T16:41:57Z",
       "downloadCount": 12,
-      "latestReleaseDate": "2026-05-09T12:25:06Z",
-      "releaseRecency": 28,
-      "releaseRecencyText": "Released 28 days ago"
+      "latestReleaseDate": "2026-06-07T20:44:32Z",
+      "releaseRecency": 0,
+      "releaseRecencyText": "Released today"
     },
     {
       "id": 826280820,
@@ -1540,10 +1839,10 @@
       "releasesUrl": "https://api.github.com/repos/Losses/rune/releases{/id}",
       "updatedAt": "2026-06-01T11:08:15Z",
       "createdAt": "2024-07-09T12:01:46Z",
-      "downloadCount": 13121,
+      "downloadCount": 13150,
       "latestReleaseDate": "2025-10-11T01:45:11Z",
-      "releaseRecency": 239,
-      "releaseRecencyText": "Released 239 days ago"
+      "releaseRecency": 240,
+      "releaseRecencyText": "Released 240 days ago"
     },
     {
       "id": 528107459,
@@ -1581,10 +1880,10 @@
       "releasesUrl": "https://api.github.com/repos/basharovV/musicat/releases{/id}",
       "updatedAt": "2026-06-06T21:13:56Z",
       "createdAt": "2022-08-23T18:00:49Z",
-      "downloadCount": 5749,
+      "downloadCount": 5763,
       "latestReleaseDate": "2026-04-05T15:34:01Z",
-      "releaseRecency": 62,
-      "releaseRecencyText": "Released 62 days ago"
+      "releaseRecency": 63,
+      "releaseRecencyText": "Released 63 days ago"
     },
     {
       "id": 80358021,
@@ -1613,10 +1912,10 @@
       "releasesUrl": "https://api.github.com/repos/icidasset/diffuse/releases{/id}",
       "updatedAt": "2026-06-05T20:13:16Z",
       "createdAt": "2017-01-29T16:49:25Z",
-      "downloadCount": 31251,
+      "downloadCount": 31261,
       "latestReleaseDate": "2025-02-17T16:10:37Z",
-      "releaseRecency": 474,
-      "releaseRecencyText": "Released 474 days ago"
+      "releaseRecency": 475,
+      "releaseRecencyText": "Released 475 days ago"
     },
     {
       "id": 676230189,
@@ -1629,7 +1928,7 @@
       "description": "a music player forked from YesPlayMusic。高颜值的第三方网易云播放器，支持 Windows / macOS / Linux :electron/Docker:",
       "defaultBranch": "dev",
       "htmlUrl": "https://github.com/Sherlockouo/music",
-      "stargazersCount": 687,
+      "stargazersCount": 688,
       "forksCount": 57,
       "language": "TypeScript",
       "topics": [
@@ -1644,12 +1943,12 @@
         "unm"
       ],
       "releasesUrl": "https://api.github.com/repos/Sherlockouo/music/releases{/id}",
-      "updatedAt": "2026-06-07T06:28:39Z",
+      "updatedAt": "2026-06-08T06:34:29Z",
       "createdAt": "2023-08-08T18:13:49Z",
-      "downloadCount": 32487,
+      "downloadCount": 32539,
       "latestReleaseDate": "2026-05-13T08:18:54Z",
-      "releaseRecency": 24,
-      "releaseRecencyText": "Released 24 days ago"
+      "releaseRecency": 25,
+      "releaseRecencyText": "Released 25 days ago"
     },
     {
       "id": 826815138,
@@ -1673,10 +1972,10 @@
       "releasesUrl": "https://api.github.com/repos/hummingbird-player/hummingbird/releases{/id}",
       "updatedAt": "2026-06-07T05:15:26Z",
       "createdAt": "2024-07-10T12:36:41Z",
-      "downloadCount": 1018,
+      "downloadCount": 1024,
       "latestReleaseDate": "2026-04-13T17:50:07Z",
-      "releaseRecency": 54,
-      "releaseRecencyText": "Released 54 days ago"
+      "releaseRecency": 55,
+      "releaseRecencyText": "Released 55 days ago"
     },
     {
       "id": 1129465041,
@@ -1689,7 +1988,7 @@
       "description": "An open-source music player for your local library featuring synchronized lyrics, themes, and plugins.",
       "defaultBranch": "master",
       "htmlUrl": "https://github.com/dupitydumb/Audion",
-      "stargazersCount": 455,
+      "stargazersCount": 457,
       "forksCount": 20,
       "language": "Svelte",
       "topics": [
@@ -1701,12 +2000,12 @@
         "tauri"
       ],
       "releasesUrl": "https://api.github.com/repos/dupitydumb/Audion/releases{/id}",
-      "updatedAt": "2026-06-06T21:14:16Z",
+      "updatedAt": "2026-06-07T14:09:55Z",
       "createdAt": "2026-01-07T06:06:07Z",
-      "downloadCount": 17677,
+      "downloadCount": 17207,
       "latestReleaseDate": "2026-06-03T03:42:42Z",
-      "releaseRecency": 4,
-      "releaseRecencyText": "Released 4 days ago"
+      "releaseRecency": 5,
+      "releaseRecencyText": "Released 5 days ago"
     },
     {
       "id": 1157600927,
@@ -1719,7 +2018,7 @@
       "description": "A powerful Terminal User Interface (TUI) music player for YouTube Music",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/involvex/youtube-music-cli",
-      "stargazersCount": 322,
+      "stargazersCount": 324,
       "forksCount": 18,
       "language": "TypeScript",
       "topics": [
@@ -1730,12 +2029,12 @@
         "youtube-music-client"
       ],
       "releasesUrl": "https://api.github.com/repos/involvex/youtube-music-cli/releases{/id}",
-      "updatedAt": "2026-06-06T23:53:24Z",
+      "updatedAt": "2026-06-08T06:42:19Z",
       "createdAt": "2026-02-14T02:46:01Z",
-      "downloadCount": 1288,
+      "downloadCount": 1312,
       "latestReleaseDate": "2026-06-06T19:55:43Z",
-      "releaseRecency": 0,
-      "releaseRecencyText": "Released today"
+      "releaseRecency": 1,
+      "releaseRecencyText": "Released yesterday"
     },
     {
       "id": 387292838,
@@ -1748,17 +2047,17 @@
       "description": "Ampcast music player",
       "defaultBranch": "main",
       "htmlUrl": "https://github.com/rekkyrosso/ampcast",
-      "stargazersCount": 313,
+      "stargazersCount": 314,
       "forksCount": 17,
       "language": "TypeScript",
       "topics": [],
       "releasesUrl": "https://api.github.com/repos/rekkyrosso/ampcast/releases{/id}",
-      "updatedAt": "2026-06-06T20:42:53Z",
+      "updatedAt": "2026-06-07T14:58:10Z",
       "createdAt": "2021-07-19T00:04:53Z",
-      "downloadCount": 35378,
+      "downloadCount": 35497,
       "latestReleaseDate": "2026-05-17T22:21:51Z",
-      "releaseRecency": 20,
-      "releaseRecencyText": "Released 20 days ago"
+      "releaseRecency": 21,
+      "releaseRecencyText": "Released 21 days ago"
     },
     {
       "id": 899512548,
@@ -1778,10 +2077,156 @@
       "releasesUrl": "https://api.github.com/repos/NB-Group/NB_Music/releases{/id}",
       "updatedAt": "2026-04-23T05:17:49Z",
       "createdAt": "2024-12-06T12:23:26Z",
-      "downloadCount": 65089,
+      "downloadCount": 65177,
       "latestReleaseDate": "2025-10-08T11:37:32Z",
-      "releaseRecency": 241,
-      "releaseRecencyText": "Released 241 days ago"
+      "releaseRecency": 242,
+      "releaseRecencyText": "Released 242 days ago"
+    },
+    {
+      "id": 1160059994,
+      "name": "Snowify",
+      "fullName": "nyakuoff/Snowify",
+      "owner": {
+        "login": "nyakuoff",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/88291924?v=4"
+      },
+      "description": "A desktop music player built with Electron that streams audio from YouTube Music. Clean UI, no accounts, no ads.",
+      "defaultBranch": "main",
+      "htmlUrl": "https://github.com/nyakuoff/Snowify",
+      "stargazersCount": 259,
+      "forksCount": 13,
+      "language": "JavaScript",
+      "topics": [
+        "desktop",
+        "electron",
+        "music",
+        "music-player"
+      ],
+      "releasesUrl": "https://api.github.com/repos/nyakuoff/Snowify/releases{/id}",
+      "updatedAt": "2026-06-07T22:29:08Z",
+      "createdAt": "2026-02-17T13:51:27Z",
+      "downloadCount": 32020,
+      "latestReleaseDate": "2026-03-24T08:48:49Z",
+      "releaseRecency": 75,
+      "releaseRecencyText": "Released 75 days ago"
+    },
+    {
+      "id": 1130663984,
+      "name": "shellbeats",
+      "fullName": "lalo-space/shellbeats",
+      "owner": {
+        "login": "lalo-space",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/61689946?v=4"
+      },
+      "description": "CLI music player for Linux/Mac. Stream YouTube audio and mp3 download. Minimal, fast, keyboard driven.",
+      "defaultBranch": "main",
+      "htmlUrl": "https://github.com/lalo-space/shellbeats",
+      "stargazersCount": 236,
+      "forksCount": 35,
+      "language": "C",
+      "topics": [
+        "linux",
+        "music",
+        "music-player",
+        "terminal",
+        "youtube"
+      ],
+      "releasesUrl": "https://api.github.com/repos/lalo-space/shellbeats/releases{/id}",
+      "updatedAt": "2026-06-03T13:26:34Z",
+      "createdAt": "2026-01-08T20:38:48Z",
+      "downloadCount": 193,
+      "latestReleaseDate": "2026-04-08T13:49:58Z",
+      "releaseRecency": 60,
+      "releaseRecencyText": "Released 60 days ago"
+    },
+    {
+      "id": 93924660,
+      "name": "ScriptPlayer",
+      "fullName": "FredTungsten/ScriptPlayer",
+      "owner": {
+        "login": "FredTungsten",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/28461114?v=4"
+      },
+      "description": "ScriptPlayer is a video player that controls the Handy and lots of other toys in sync with videos.",
+      "defaultBranch": "master",
+      "htmlUrl": "https://github.com/FredTungsten/ScriptPlayer",
+      "stargazersCount": 223,
+      "forksCount": 82,
+      "language": "C#",
+      "topics": [
+        "sync",
+        "teledildonics",
+        "toys",
+        "video-player",
+        "videos"
+      ],
+      "releasesUrl": "https://api.github.com/repos/FredTungsten/ScriptPlayer/releases{/id}",
+      "updatedAt": "2026-05-31T18:18:07Z",
+      "createdAt": "2017-06-10T07:57:24Z",
+      "downloadCount": 161250,
+      "latestReleaseDate": "2024-05-29T04:41:29Z",
+      "releaseRecency": 740,
+      "releaseRecencyText": "Released 740 days ago"
+    },
+    {
+      "id": 133570423,
+      "name": "OnlyM",
+      "fullName": "AntonyCorbett/OnlyM",
+      "owner": {
+        "login": "AntonyCorbett",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/24551146?v=4"
+      },
+      "description": "Simple Media Player (audio, video and images) for use in meetings.",
+      "defaultBranch": "master",
+      "htmlUrl": "https://github.com/AntonyCorbett/OnlyM",
+      "stargazersCount": 195,
+      "forksCount": 49,
+      "language": "C#",
+      "topics": [
+        "windows",
+        "wpf"
+      ],
+      "releasesUrl": "https://api.github.com/repos/AntonyCorbett/OnlyM/releases{/id}",
+      "updatedAt": "2026-06-05T03:17:13Z",
+      "createdAt": "2018-05-15T20:35:41Z",
+      "downloadCount": 212894,
+      "latestReleaseDate": "2026-05-07T12:31:20Z",
+      "releaseRecency": 31,
+      "releaseRecencyText": "Released 31 days ago"
+    },
+    {
+      "id": 196778665,
+      "name": "music-caster",
+      "fullName": "elibroftw/music-caster",
+      "owner": {
+        "login": "elibroftw",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/21298211?v=4"
+      },
+      "description": "Music Caster is a modern music player with the ability to cast audio files, system audio, and URLs to Google Chromecasts, Google Home/Nest Minis, etc.",
+      "defaultBranch": "master",
+      "htmlUrl": "https://github.com/elibroftw/music-caster",
+      "stargazersCount": 172,
+      "forksCount": 18,
+      "language": "Python",
+      "topics": [
+        "casting",
+        "chromecast",
+        "google-home",
+        "gui",
+        "media-player",
+        "music-files",
+        "music-player",
+        "pysimplegui",
+        "vlc",
+        "web-gui"
+      ],
+      "releasesUrl": "https://api.github.com/repos/elibroftw/music-caster/releases{/id}",
+      "updatedAt": "2026-06-06T02:57:47Z",
+      "createdAt": "2019-07-14T00:40:43Z",
+      "downloadCount": 493531,
+      "latestReleaseDate": "2026-06-03T18:57:31Z",
+      "releaseRecency": 4,
+      "releaseRecencyText": "Released 4 days ago"
     }
   ]
 }
