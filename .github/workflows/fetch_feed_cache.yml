@@ -1,0 +1,44 @@
+name: Publish Feed Offline Cache
+
+# Mirrors GET /v1/feed to static JSON for the client's backend-down
+# waterfall. Runs every 3 hours to match the backend's feed-snapshot
+# rebuild cadence, so the offline copy never trails the live feed by more
+# than one refresh window. No GitHub API calls, no tokens — just curls the
+# anonymous public endpoint and commits the result.
+on:
+  schedule:
+    - cron: '15 */3 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: feed-cache
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Fetch feed → cached-data/feed/*.json
+        run: python3 scripts/fetch_feed_cache.py
+
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet cached-data/feed/; then
+            echo "No feed changes — nothing to commit."
+            exit 0
+          fi
+          git add cached-data/feed/
+          git commit -m "feed cache: refresh offline mirror ($(date -u +%Y-%m-%dT%H:%MZ))"
+          git push
